@@ -1,0 +1,15 @@
+{
+    "map_name": "PONR-Dark Waters",
+    "map_path": "map_files/darkwaters-ponr",
+    "map_file": "darkwaters-ponr.dmm",
+	"traits": [{"Up": 1}, {"Up": 1, "Down": -1}, {"Down": -1}],
+	"minetype": null,
+	"space_empty_levels": 0,
+	"space_ruin_levels": 0,
+	"shuttles": {
+	    "cargo": "cargo_rogue",
+	    "ferry": "ferry_fancy",
+	    "whiteship": "whiteship_box",
+	    "emergency": "emergency_rogue"
+    }
+}

@@ -200,19 +200,31 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	name = "crown of Heartfelt"
 	icon_state = "vcrown"
 	item_state = "vcrown"
+	w_class = WEIGHT_CLASS_HUGE
 	body_parts_covered = null
 	slot_flags = ITEM_SLOT_HEAD
 	dynamic_hair_suffix = null
-	resistance_flags = FIRE_PROOF
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+
+/obj/item/clothing/head/roguetown/crownred/Initialize()
+	. = ..()
+	var/datum/game_mode/warfare/W = SSticker.mode
+	W.redcrown = src
 
 /obj/item/clothing/head/roguetown/crownblu
 	name = "crown of the Grenzelhofts"
 	icon_state = "vcrown_blu"
 	item_state = "vcrown_blu"
+	w_class = WEIGHT_CLASS_HUGE
 	body_parts_covered = null
 	slot_flags = ITEM_SLOT_HEAD
 	dynamic_hair_suffix = null
-	resistance_flags = FIRE_PROOF
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+
+/obj/item/clothing/head/roguetown/crownblu/Initialize()
+	. = ..()
+	var/datum/game_mode/warfare/W = SSticker.mode
+	W.blucrown = src
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/iron/vampire
 	icon_state = "vunder"
@@ -609,7 +621,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	var/datum/antagonist/vampirelord/lord = user.mind.has_antag_datum(/datum/antagonist/vampirelord)
 	if(user.mind.special_role != "Vampire Lord")
 		return
-	var/choice = input(user,"What to do?", "ROGUETOWN") as anything in useoptions|null
+	var/choice = input(user,"What to do?", "WARMONGERS") as anything in useoptions|null
 	switch(choice)
 		if("Grow Power")
 			if(lord.vamplevel == 4)
@@ -630,7 +642,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 					return
 				if(do_after(user, 100))
 					lord.handle_vitae(-500)
-					var/naming = input(user, "Select a name for the amulet.", "ROGUETOWN") as text|null
+					var/naming = input(user, "Select a name for the amulet.", "WARMONGERS") as text|null
 					var/obj/item/clothing/neck/roguetown/portalamulet/P = new(src.loc)
 					if(naming)
 						P.name = naming
@@ -758,7 +770,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		if(!unlocked)
 			to_chat(user, "I have yet to regain this aspect of my power!")
 			return
-		var/choice = input(user,"What to do?", "ROGUETOWN") as anything in useoptions|null
+		var/choice = input(user,"What to do?", "WARMONGERS") as anything in useoptions|null
 		switch(choice)
 			if("Create Death Knight")
 				if(alert(user, "Create a Death Knight? Cost:5000","","Yes","No") == "Yes")
@@ -1132,7 +1144,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		var/area/A = V
 		if(!A.hidden)
 			filtered += A
-	var/area/thearea  = input("Area to jump to", "ROGUETOWN") as null|anything in filtered
+	var/area/thearea  = input("Area to jump to", "WARMONGERS") as null|anything in filtered
 
 	if(!thearea)
 		return

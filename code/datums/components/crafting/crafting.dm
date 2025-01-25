@@ -182,9 +182,6 @@
 	if(!R.TurfCheck(user, T))
 		to_chat(user, "<span class='warning'>I can't craft here.</span>")
 		return
-	if(istype(T, /turf/open/water))
-		to_chat(user, "<span class='warning'>I can't craft here.</span>")
-		return
 	if(isturf(R.result))
 		for(var/obj/structure/fluff/traveltile/TT in range(7, user))
 			to_chat(user, "<span class='warning'>I can't craft here.</span>")
@@ -279,7 +276,7 @@
 					if(user.mind && R.skillcraft)
 						if(isliving(user))
 							var/mob/living/L = user
-							var/amt2raise = L.STAINT
+							var/amt2raise = L.STAINT + 3
 							if(R.craftdiff > 0) //difficult recipe
 								amt2raise += (R.craftdiff * 6)
 							if(amt2raise > 0)

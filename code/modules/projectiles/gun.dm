@@ -153,7 +153,6 @@
 	return TRUE
 
 /obj/item/gun/proc/shoot_with_empty_chamber(mob/living/user as mob|obj)
-	to_chat(user, "<span class='danger'>*click*</span>")
 	playsound(src, dry_fire_sound, 30, TRUE)
 
 
@@ -164,7 +163,7 @@
 	if(suppressed)
 		playsound(user, suppressed_sound, suppressed_volume, vary_fire_sound, ignore_walls = FALSE)
 	else
-		playsound(user, fire_sound, fire_sound_volume, vary_fire_sound)
+		playsound(user, pick(fire_sound), fire_sound_volume, vary_fire_sound)
 		if(message)
 /*			if(pointblank)
 				user.visible_message("<span class='danger'>[user] shoots [src] point blank at [pbtarget]!</span>", \
@@ -220,7 +219,8 @@
 		return
 
 	if(user?.used_intent.arc_check())
-		target = get_turf(target)
+		if(SSticker.warfare_ready_to_die) // Dumb and stupid check for not allowing people to shoot past barriers of fairness.
+			target = get_turf(target)
 
 	//Exclude lasertag guns from the TRAIT_CLUMSY check.
 	if(clumsy_check)

@@ -1,0 +1,26 @@
+Draftee
+Partisan
+Dragoon
+Cuirassier
+Chasseur
+Grenadier
+Skirmisher
+Sapper
+Artillerist
+Adjutant-major
+Sergeant-major
+Sergeant
+Quartermaster
+Corporal-Sir
+Corporal
+Lieutenant
+Militant-Major
+Kapitain
+Second Lieutenant
+Major
+Brigadier General
+Divisional General
+Corps General
+Army General
+Lord of Heartfelt
+Lord of Grenzelhoft

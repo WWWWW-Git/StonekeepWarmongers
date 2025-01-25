@@ -17,6 +17,9 @@
 	var/maximum_possible_slots = 999
 	var/total_slots_occupied = 0
 	var/min_pq = -100
+	var/max_pq = -100
+
+	var/reinforcements_wave = 9 // a way to unlock classes by time, or something. if 0 it means playable at all times
 
 	var/horse = FALSE
 	var/vampcompat = TRUE
@@ -42,9 +45,6 @@
 
 	//sleep(1)
 	//testing("[H] spawn troch")
-	var/obj/item/flashlight/flare/torch/T = new()
-	T.spark_act()
-	H.put_in_hands(T, forced = TRUE)
 
 	var/turf/TU = get_turf(H)
 	if(TU)
@@ -70,6 +70,7 @@
 /datum/advclass/proc/check_requirements(mob/living/carbon/human/H)
 
 	var/list/local_allowed_sexes = list()
+	var/datum/game_mode/warfare/W = SSticker.mode
 	if(length(allowed_sexes))
 		local_allowed_sexes |= allowed_sexes
 
@@ -82,15 +83,16 @@
 	if(length(allowed_ages) && !(H.age in allowed_ages))
 		return FALSE
 
-	if(maximum_possible_slots > -1)
-		if(total_slots_occupied >= maximum_possible_slots)
-			return FALSE
-
 	if(min_pq != -100) // If someone sets this we actually do the check.
 		if(!(get_playerquality(H.client.ckey) >= min_pq))
 			return FALSE
+	
+	if(max_pq != -100) // If someone sets this we actually do the check.
+		if(!(get_playerquality(H.client.ckey) <= max_pq))
+			return FALSE
 
-	if(prob(pickprob))
+	if(W.reinforcementwave >= reinforcements_wave)
+		testing("Reinforcement wave bigger or equal to required ([W.reinforcementwave] >= [reinforcements_wave])")
 		return TRUE
 
 // Basically the handler has a chance to plus up a class, heres a generic proc you can override to handle behavior related to it.

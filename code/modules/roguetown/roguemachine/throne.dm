@@ -52,6 +52,7 @@
 	can_buckle = 1
 	pixel_x = -32
 	max_integrity = 999999
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	buckle_lying = FALSE
 
 /obj/structure/throne/post_buckle_mob(mob/living/M)
@@ -63,6 +64,8 @@
 	var/mob/living/carbon/human/H = M
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
+		if(C.crownbearer == H)
+			return // Gets rid of people farming triumphs
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
 				if(istype(H.head, /obj/item/clothing/head/roguetown/crownblu))

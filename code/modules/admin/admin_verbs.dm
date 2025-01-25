@@ -94,6 +94,8 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/cmd_admin_check_player_exp, /* shows players by playtime */
 	/client/proc/toggle_combo_hud, // toggle display of the combination pizza antag and taco sci/med/eng hud
 	/client/proc/toggle_AI_interact, /*toggle admin ability to interact with machines as an AI*/
+	/client/proc/join_as_martyr,
+	/client/proc/forceaspect,
 	/datum/admins/proc/open_shuttlepanel, /* Opens shuttle manipulator UI */
 	/client/proc/deadchat,
 	/client/proc/toggleprayers,
@@ -142,6 +144,12 @@ GLOBAL_PROTECT(admin_verbs_server)
 	/datum/admins/proc/startnow,
 	/datum/admins/proc/readynow,
 	/datum/admins/proc/reinforcementsnow,
+	/datum/admins/proc/settechlevel,
+	/datum/admins/proc/oneteammode,
+	/datum/admins/proc/deathmatch,
+	/datum/admins/proc/readoutlords,
+	/datum/admins/proc/recallcrown,
+	/datum/admins/proc/teleport2crown,
 	/datum/admins/proc/forcemode,
 	/datum/admins/proc/restart,
 	/datum/admins/proc/end_round,
@@ -246,7 +254,13 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/client/proc/toggle_random_events,
 	/datum/admins/proc/startnow,
 	/datum/admins/proc/readynow,
+	/datum/admins/proc/settechlevel,
+	/datum/admins/proc/oneteammode,
+	/datum/admins/proc/deathmatch,
 	/datum/admins/proc/reinforcementsnow,
+	/datum/admins/proc/readoutlords,
+	/datum/admins/proc/recallcrown,
+	/datum/admins/proc/teleport2crown,
 	/datum/admins/proc/restart,
 	/datum/admins/proc/delay,
 	/datum/admins/proc/toggleaban,
@@ -533,13 +547,17 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	set name = "Drop Bomb"
 	set desc = ""
 
-	var/list/choices = list("Small Bomb (1, 2, 3, 3)", "Medium Bomb (2, 3, 4, 4)", "Big Bomb (3, 5, 7, 5)", "Maxcap", "Custom Bomb")
+	var/list/choices = list("Roguebomb","Small Bomb (1, 2, 3, 3)", "Medium Bomb (2, 3, 4, 4)", "Big Bomb (3, 5, 7, 5)", "Maxcap", "Custom Bomb")
 	var/choice = input("What size explosion would you like to produce? NOTE: You can do all this rapidly and in an IC manner (using cruise missiles!) with the Config/Launch Supplypod verb. WARNING: These ignore the maxcap") as null|anything in choices
 	var/turf/epicenter = mob.loc
 
 	switch(choice)
 		if(null)
 			return 0
+		if("Roguebomb")
+			var/obj/item/bomb/B = new(epicenter)
+			B.light()
+			B.explode(TRUE)
 		if("Small Bomb (1, 2, 3, 3)")
 			explosion(epicenter, 1, 2, 3, 3, TRUE, TRUE)
 		if("Medium Bomb (2, 3, 4, 4)")
@@ -784,11 +802,66 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 	log_admin("[key_name(usr)] has [AI_Interact ? "activated" : "deactivated"] Admin AI Interact")
 	message_admins("[key_name_admin(usr)] has [AI_Interact ? "activated" : "deactivated"] their AI interaction")
+ 
+/client/proc/forceaspect()
+	set category = "GameMaster"
+	set name = "Force Aspect"
+	if(!holder)
+		return
+
+	var/list/possibilities = list()
+	for(var/thing in subtypesof(/datum/round_aspect))//Populate possible aspects list.
+		var/datum/round_aspect/A = thing
+		possibilities += A
+	var/chosen = input(usr, "Choose", "WARMONGERS") as null|anything in possibilities
+	if(chosen)
+		SSticker.round_aspect = new chosen
+		SSticker.forcing_aspect = TRUE
+		SSticker.round_aspect.apply()
+
+/client/proc/join_as_martyr()
+	set category = "GameMaster"
+	set name = "Join as the Alien Observer"
+	if(!holder)
+		return
+
+	var/mob/living/carbon/human/species/human/northern/H = new()
+	H.color = "#000000"
+	H.real_name = "OMEGA-[rand(1,9999)]"
+	H.gender = MALE
+	H.facial_hairstyle = "Shaved"
+	H.hairstyle = "Skinhead"
+	H.obscure_species = TRUE
+
+	H.update_hair()
+	H.update_body()
+	H.update_body_parts()
+	H.update_mutations_overlay()
+
+	var/mob/adminmob = src.mob
+	H.ckey = src.ckey
+	if( isobserver(adminmob) )
+		qdel(adminmob)
+
+	H.STASTR = 20
+	H.STASPD = 20
+	H.STACON = 20
+	H.STAEND = 20
+
+	to_chat(H, "<span class='info'>This is a role for scaring people IC and kidnapping griefers and shit.</span>")
+
+	ADD_TRAIT(H, TRAIT_ABDUCTOR_TRAINING, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ABDUCTOR_SCIENTIST_TRAINING, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
+	var/obj/item/implant/abductor/beamplant = new /obj/item/implant/abductor(H)
+	beamplant.implant(H)
+	for(var/obj/effect/landmark/abductor/LM in GLOB.landmarks_list)
+		H.forceMove(LM.loc)
+		break
 
 /client/proc/end_party()
 	set category = "GameMaster"
-	set name = "EndPlaytest"
-	set hidden = 1
+	set name = "MakeFinalRound"
 	if(!holder)
 		return
 	if(!SSticker.end_party)

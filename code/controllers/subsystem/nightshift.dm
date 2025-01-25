@@ -25,6 +25,7 @@ SUBSYSTEM_DEF(nightshift)
 	if(!CONFIG_GET(flag/enable_night_shifts))
 		can_fire = FALSE
 	current_tod = settod()
+	update_nightshift()
 	return ..()
 
 /datum/controller/subsystem/nightshift/fire(resumed = FALSE)
@@ -84,5 +85,3 @@ SUBSYSTEM_DEF(nightshift)
 			return ..()
 		if(HAS_TRAIT(src, TRAIT_NOSLEEP))
 			return ..()
-		if(tiredness >= 100)
-			apply_status_effect(/datum/status_effect/debuff/sleepytime)

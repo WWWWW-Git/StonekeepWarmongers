@@ -1,5 +1,5 @@
 #define LINKIFY_READY(string, value) "<a href='byond://?src=[REF(src)];ready=[value]'>[string]</a>"
-GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
+GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 
 /mob/dead/new_player
 	var/ready = 0
@@ -48,17 +48,13 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 	set name = "Say"
 	set category = "IC"
 	set hidden = 1
-
-#ifdef MATURESERVER
-
+	
 	if(message)
 		if(client)
 			if(GLOB.ooc_allowed)
 				client.ooc(message)
 			else
 				client.lobbyooc(message)
-
-#endif
 
 /mob/dead/new_player/prepare_huds()
 	return
@@ -208,9 +204,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 				timetojoin = 0
 		if(SSticker.round_start_time)
 			if(world.time < SSticker.round_start_time + timetojoin)
-				var/ttime = round((SSticker.round_start_time + timetojoin - world.time) / 10)
-				var/list/choicez = list("Not yet.", "You cannot join yet.", "It won't work yet.", "Please be patient.", "Try again later.", "Late-joining is not yet possible.")
-				to_chat(usr, "<span class='warning'>[pick(choicez)] ([ttime]).</span>")
+				var/list/choicez = list("Be patient.","Shit takes time.","FUCKING WAIT!")
+				to_chat(usr, "<span class='warning'>[pick(choicez)]</span>")
 				return
 
 		var/plevel = 0
@@ -270,18 +265,6 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 	if(href_list["votepollref"])
 		var/datum/poll_question/poll = locate(href_list["votepollref"]) in GLOB.polls
 		vote_on_poll_handler(poll, href_list)
-
-
-
-/mob/dead/new_player/verb/do_rp_prompt()
-	set name = "Lore Primer"
-	set category = "Memory"
-	var/list/dat = list()
-	dat += GLOB.roleplay_readme
-	if(dat)
-		var/datum/browser/popup = new(src, "Primer", "STONEKEEP", 460, 550)
-		popup.set_content(dat.Join())
-		popup.open()
 
 //When you cop out of the round (NB: this HAS A SLEEP FOR PLAYER INPUT IN IT)
 /mob/dead/new_player/proc/make_me_an_observer()
@@ -484,8 +467,6 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 		SSjob.SendToLateJoin(character)
 		testing("basedtest 7")
 //		if(!arrivals_docked)
-		var/atom/movable/screen/splash/Spl = new(character.client, TRUE)
-		Spl.Fade(TRUE)
 //			character.playsound_local(get_turf(character), 'sound/blank.ogg', 25)
 
 		character.update_parallax_teleport()
@@ -599,6 +580,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 					cat_name = "Heartfelts"
 				if (BLUES)
 					cat_name = "Grenzelhofts"
+				if (PEASANTS)
+					cat_name = "Filth"
 
 			dat += "<fieldset style='width: 185px; border: 2px solid [cat_color]; display: inline'>"
 			dat += "<legend align='center' style='font-weight: bold; color: [cat_color]'>[cat_name]</legend>"
@@ -639,7 +622,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 				dat += "</td><td valign='top'>"
 	dat += "</td></tr></table></center>"
 	dat += "</div></div>"
-	var/datum/browser/popup = new(src, "latechoices", "Choose Class", 720, 580)
+	var/datum/browser/popup = new(src, "latechoices", "Which side will you fight for?", 295, 620)
 	popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
 	popup.set_content(jointext(dat, ""))
 	popup.open(FALSE) // 0 is passed to open so that it doesn't use the onclose() proc
@@ -687,14 +670,11 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/Lore_Primer.txt"))
 	return
 
 /mob/living/carbon/human/after_creation()
-/* NO SEX
-#ifdef MATURESERVER
 	if(gender == MALE)
 		sexcon = new/datum/sex_controller/male(src)
 	else
 		sexcon = new/datum/sex_controller/female(src)
-#endif
-*/
+
 	if(dna?.species)
 		dna.species.after_creation(src)
 	roll_stats()

@@ -25,6 +25,7 @@
 	woundclass = BCLASS_STAB
 	flag = "bullet"
 	speed = 0.3
+	accuracy = 85 //Crossbows have higher accuracy
 
 /obj/item/ammo_casing/caseless/rogue/bolt/poison
 	name = "poison bolt"
@@ -270,21 +271,48 @@
 /obj/projectile/bullet/reusable/bullet
 	name = "lead ball"
 	desc = "A round lead shot, simple and spherical."
-	damage = 90
+	damage = 140
 	damage_type = BRUTE
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
-	range = 30
+	range = 50
 	jitter = 5
-	stun = 1
+	eyeblur = 3
+	immobilize = 1
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
 	woundclass = BCLASS_STAB
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
-	armor_penetration = 100
+	armor_penetration = 75
 	speed = 0.1
+	accuracy = 55
+
+/obj/projectile/bullet/reusable/bullet/wood
+	damage = 35
+	armor_penetration = 30
+
+/obj/projectile/bullet/reusable/bullet/iron
+	damage = 65
+	armor_penetration = 90
+
+/obj/projectile/bullet/fragment
+	name = "fragment"
+	desc = "Haha. You're not able to see this!"
+	damage = 10
+	damage_type = BRUTE
+	woundclass = BCLASS_STAB
+	range = 50
+	jitter = 5
+	eyeblur = 3
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "woodenball_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/cball/grapeshot
+	impact_effect_type = /obj/effect/temp_visual/impact_effect
+	flag = "bullet"
+	armor_penetration = 40
+	speed = 1.5
 
 /obj/item/ammo_casing/caseless/rogue/bullet
 	name = "lead ball"
@@ -298,6 +326,19 @@
 	max_integrity = 0
 	force = 20
 
+/obj/item/ammo_casing/caseless/rogue/bullet/iron
+	name = "iron ball"
+	desc = "A round iron shot, simple and spherical. Not as malleable as lead though."
+	projectile_type = /obj/projectile/bullet/reusable/bullet/iron
+
+/obj/item/ammo_casing/caseless/rogue/bullet/wood
+	name = "wooden ball"
+	desc = "A small wooden ball. You're the biggest fucking idiot I have ever heard of. But it does shatter when it's fired, so that's something."
+	icon_state = "woodenball"
+	pellets = 7
+	variance = 25
+	projectile_type = /obj/projectile/bullet/fragment
+
 /obj/projectile/bullet/reusable/cannonball
 	name = "large lead ball"
 	desc = "A round lead ball. Complex and still spherical."
@@ -306,33 +347,132 @@
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj" // No one sees it anyway. I think.
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/cball
-	range = 30
+	range = 999
 	jitter = 5
 	stun = 1
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 0
+	dismemberment = 300
+	spread = 0
 	woundclass = BCLASS_SMASH
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
+	hitscan = FALSE
 	armor_penetration = 100
-	speed = 0.4
+	speed = 0.8
 
-/obj/projectile/bullet/reusable/cannonball/on_hit(atom/target)
-	. = ..()
+/obj/projectile/bullet/reusable/cannonball/on_hit(atom/target,blocked = FALSE)
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
 		M.visible_message("<span class='danger'>[M] explodes into a shower of gibs!</span>")
 		M.gib()
-	explosion(target, light_impact_range = 2, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
+	explosion(get_turf(target), heavy_impact_range = 2, light_impact_range = 4, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
+	..(target, blocked)
 
 /obj/item/ammo_casing/caseless/rogue/cball
 	name = "large lead ball"
 	desc = "A round lead ball. Complex and still spherical."
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	projectile_type = /obj/projectile/bullet/reusable/cannonball
-	dropshrink = 0.5
 	icon_state = "cball"
 	caliber = "cannoball"
 	possible_item_intents = list(/datum/intent/use)
-	max_integrity = 0
+	max_integrity = 100
+	randomspread = 0
+	variance = 0
 	force = 20
+
+/obj/item/ammo_casing/caseless/rogue/cball/grapeshot
+	name = "berryshot"
+	desc = "A large pouch of smaller lead balls. Not as complex nor spherical."
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "rucksack"
+	pellets = 6
+	variance = 15
+	projectile_type = /obj/projectile/bullet/fragment
+
+//...............Kaizoku Content...............
+/obj/projectile/bullet/reusable/arrow/poison/fog
+	name = "fog arrow"
+	desc = "An arrow with it's tip drenched in a powerful sedative."
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "arrowfog_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow
+
+/obj/item/ammo_casing/caseless/rogue/arrow/poison/fog
+	name = "fog arrow"
+	desc = "An arrow with it's tip drenched in a powerful sedative."
+	projectile_type = /obj/projectile/bullet/reusable/arrow/poison/fog
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "arrow_fog"
+
+/obj/projectile/bullet/reusable/arrow/poison/fog/Initialize()
+	. = ..()
+	create_reagents(50, NO_REACT)
+
+/obj/projectile/bullet/reusable/arrow/poison/fog/on_hit(atom/target, blocked = FALSE)
+	if(iscarbon(target))
+		var/mob/living/carbon/M = target
+		if(blocked != 100) // not completely blocked
+			if(M.can_inject(null, FALSE, def_zone, piercing)) // Pass the hit zone to see if it can inject by whether it hit the head or the body.
+				..()
+				reagents.reaction(M, INJECT)
+				reagents.trans_to(M, reagents.total_volume)
+				return BULLET_ACT_HIT
+			else
+				blocked = 100
+				target.visible_message("<span class='danger'>\The [src] was deflected!</span>", \
+									   "<span class='danger'>My armor protected me against \the [src]!</span>")
+
+	..(target, blocked)
+	DISABLE_BITFIELD(reagents.flags, NO_REACT)
+	reagents.handle_reactions()
+	return BULLET_ACT_HIT
+
+/obj/projectile/bullet/reusable/arrow/poison/fog/Initialize()
+	. = ..()
+	reagents.add_reagent(/datum/reagent/fogblight, 5)
+
+/obj/item/ammo_casing/caseless/rogue/bolt/poison/fog
+	name = "fog bolt"
+	desc = "A bolt dipped with a potent sedative."
+	projectile_type = /obj/projectile/bullet/reusable/bolt/poison/fog
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "bolt_fog"
+
+/obj/projectile/bullet/reusable/bolt/poison/fog
+	name = "fog bolt"
+	desc = "A bolt dipped with a potent sedative."
+	damage = 35
+	damage_type = BRUTE
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "boltfogn_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt
+
+/obj/projectile/bullet/reusable/bolt/poison/fog/Initialize()
+	. = ..()
+	create_reagents(50, NO_REACT)
+
+/obj/projectile/bullet/reusable/bolt/poison/fog/on_hit(atom/target, blocked = FALSE)
+	if(iscarbon(target))
+		var/mob/living/carbon/M = target
+		if(blocked != 100) // not completely blocked
+			if(M.can_inject(null, FALSE, def_zone, piercing)) // Pass the hit zone to see if it can inject by whether it hit the head or the body.
+				..()
+				reagents.reaction(M, INJECT)
+				reagents.trans_to(M, reagents.total_volume)
+				return BULLET_ACT_HIT
+			else
+				blocked = 100
+				target.visible_message("<span class='danger'>\The [src] was deflected!</span>", \
+									   "<span class='danger'>My armor protected me against \the [src]!</span>")
+
+	..(target, blocked)
+	DISABLE_BITFIELD(reagents.flags, NO_REACT)
+	reagents.handle_reactions()
+	return BULLET_ACT_HIT
+
+/obj/projectile/bullet/reusable/bolt/poison/fog/Initialize()
+	. = ..()
+	reagents.add_reagent(/datum/reagent/fogblight, 5)	

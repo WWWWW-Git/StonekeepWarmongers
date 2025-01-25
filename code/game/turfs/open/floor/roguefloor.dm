@@ -160,13 +160,27 @@
 	landsound = 'sound/foley/jumpland/dirtland.wav'
 	slowdown = 2
 	smooth = SMOOTH_TRUE
-	canSmoothWith = list(/turf/open/floor/rogue/grass)
+	canSmoothWith = list(/turf/open/floor/rogue/grass,/turf/open/floor/rogue/dirt/sand)
 	neighborlay = "dirtedge"
 	var/muddy = FALSE
 	var/bloodiness = 20
 	var/obj/structure/closet/dirthole/holie
 	var/obj/machinery/crop/planted_crop
 	var/dirt_amt = 3
+
+/turf/open/floor/rogue/dirt/sand // Shut up.
+	name = "sand"
+	desc = "Precursor to glass, ancestor to rocks."
+	gender = PLURAL
+	icon_state = "sand"
+	smooth = SMOOTH_TRUE | SMOOTH_MORE
+	canSmoothWith = list(/turf/open/floor/rogue, /turf/closed/mineral, /turf/closed/wall/mineral)
+	neighborlay = "sandedge"
+
+/turf/open/floor/rogue/dirt/sand/Initialize()
+	dir = pick(GLOB.cardinals)
+	. = ..()
+
 /*
 /turf/open/floor/rogue/dirt/get_slowdown(mob/user)
 	var/returned = slowdown
@@ -769,6 +783,19 @@
 	clawfootstep = FOOTSTEP_WOOD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	landsound = 'sound/foley/jumpland/woodland.wav'
+
+/obj/structure/plank // better version of the plank that can be broken
+	name = "plank"
+	icon = 'icons/turf/roguefloor.dmi'
+	icon_state = "plank"
+	anchored = TRUE
+	density = FALSE
+	max_integrity = 35
+	layer = ABOVE_OPEN_TURF_LAYER
+	obj_flags = CAN_BE_HIT | BLOCK_Z_OUT_DOWN | BLOCK_Z_IN_UP
+
+/obj/structure/plank/h
+	icon_state = "plank2"
 
 /turf/open/floor/rogue/plank/h
 	icon_state = "plank2"

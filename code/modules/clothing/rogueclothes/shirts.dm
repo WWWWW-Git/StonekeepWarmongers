@@ -407,22 +407,29 @@
 	l_sleeve_status = SLEEVE_NORMAL
 	var/picked = FALSE
 	colorgrenz = TRUE
+	var/warfare = FALSE //whether to restrict colors to purple/blue only
+
+/obj/item/clothing/suit/roguetown/shirt/grenzelhoft/warfare
+	warfare = TRUE
 
 /obj/item/clothing/suit/roguetown/shirt/grenzelhoft/Initialize()
 	..()
 	if(!picked)
 		var/list/colors = list(
-		"PURPLE"="#865c9c",
-		"RED"="#933030",
-		"BROWN"="#685542",
-		"GREEN"="#79763f",
-		"BLUE"="#395480",
-		"YELLOW"="#b5b004",
-		"TEAL"="#249589",
-		"WHITE"="#ffffff",
-		"ORANGE"="#b86f0c",
-		"MAJENTA"="#962e5c")
-
+			"PURPLE"="#865c9c",
+			"RED"="#933030",
+			"BROWN"="#685542",
+			"GREEN"="#79763f",
+			"BLUE"="#395480",
+			"YELLOW"="#b5b004",
+			"TEAL"="#249589",
+			"WHITE"="#ffffff",
+			"ORANGE"="#b86f0c",
+			"MAJENTA"="#962e5c")
+		if(warfare)
+			colors = list(
+				"PURPLE"="#865c9c",
+				"BLUE"="#395480")
 		var/mob/living/carbon/human/L = loc
 		var/choice = input(L, "Choose a color.", "GRENZELHOFTIAN COLORPLEX") as anything in colors
 		var/playerchoice = colors[choice]
@@ -436,7 +443,9 @@
 				V.update_icon()
 		L.regenerate_icons()
 
-
+/obj/item/clothing/suit/roguetown/shirt/grenzelhoft/warfare/equipped(mob/user, slot)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
 
 /obj/item/clothing/suit/roguetown/shirt/grenzelhoft/update_icon()
 	cut_overlays()
@@ -446,3 +455,18 @@
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
+
+//..............Kaizoku Update...............
+/obj/item/clothing/suit/roguetown/shirt/looseshirt
+	name = "kimono jinbei"
+	desc = "A summer shirt that goes along with a tobi, used during the hot summers on Fog islands."
+	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	icon_state = "looseshirt"
+	item_state = "looseshirt"
+	boobed = TRUE
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS

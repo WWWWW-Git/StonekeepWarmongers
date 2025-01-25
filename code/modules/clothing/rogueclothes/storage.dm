@@ -51,6 +51,16 @@
 	new /obj/item/reagent_containers/food/snacks/grown/berries/rogue/poison(src)
 	new /obj/item/reagent_containers/food/snacks/grown/berries/rogue/poison(src)
 
+/obj/item/storage/belt/rogue/leather/bullet/PopulateContents()
+	new /obj/item/ammo_casing/caseless/rogue/bullet/wood(src)
+	new /obj/item/ammo_casing/caseless/rogue/bullet/wood(src)
+	new /obj/item/ammo_casing/caseless/rogue/bullet/wood(src)
+
+/obj/item/storage/belt/rogue/leather/medic/PopulateContents()
+	new /obj/item/sleepingbag(src)
+	new /obj/item/sleepingbag(src)
+	new /obj/item/sleepingbag(src)
+
 /obj/item/storage/belt/rogue/leather/plaquegold
 	name = "plaque belt"
 	icon_state = "goldplaque"
@@ -215,6 +225,66 @@
 		CP.rmb_show(user)
 		return TRUE
 
+/obj/item/rogue/musicpack
+	name = "musicpack device"
+	desc = "It goes on your back. Use your middle finger to reach into the hole to turn it on."
+	icon = 'icons/roguetown/clothing/storage.dmi'
+	icon_state = "musicbackpack"
+	item_state = "musicbackpack"
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK_L
+	resistance_flags = NONE
+	max_integrity = 300
+	equip_sound = 'sound/blank.ogg'
+	bloody_icon_state = "bodyblood"
+	var/datum/looping_sound/musloop/soundloop
+	var/curfile
+	var/playing = FALSE
+	var/curvol = 70
+	var/list/songs = list("The Knight's Song" = 'sound/music/jukeboxes/grenz_music1.ogg',
+	"Landsknecht und Würfel" = 'sound/music/jukeboxes/grenz_music2.ogg',
+	"Musketier Marsch" = 'sound/music/jukeboxes/grenz_music3.ogg')
+
+/obj/item/rogue/musicpack/heartfelt
+	songs = list("Faiāransā e no ōdo" = 'sound/music/jukeboxes/heart_music1.ogg',
+	"Shōri e no kōshin" = 'sound/music/jukeboxes/heart_music2.ogg',
+	"Shi ka haji ka" = 'sound/music/jukeboxes/heart_music3.ogg')
+
+/obj/item/rogue/musicpack/Initialize()
+	soundloop = new(list(src), FALSE)
+	. = ..()
+
+/obj/item/rogue/musicpack/attack_right(mob/user)
+	if(!user.ckey)
+		return
+	if(playing)
+		return
+	user.changeNext_move(CLICK_CD_MELEE)
+	var/selection = input(user, "Select a song.", "Music Device") as null|anything in songs
+	if(!selection)
+		return
+	if(!Adjacent(user))
+		return
+	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
+	playing = FALSE
+	soundloop.stop()
+	curfile = songs[selection]
+	update_icon()
+
+/obj/item/rogue/musicpack/MiddleClick(mob/user, params)
+	user.changeNext_move(CLICK_CD_MELEE)
+	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
+	if(!playing)
+		if(curfile)
+			playing = TRUE
+			soundloop.mid_sounds = list(curfile)
+			soundloop.cursound = null
+			soundloop.volume = curvol
+			soundloop.start()
+	else
+		playing = FALSE
+		soundloop.stop()
+	update_icon()
 
 /obj/item/storage/backpack/rogue/backpack
 	name = "backpack"
@@ -241,7 +311,7 @@
 /obj/item/storage/backpack/rogue/satchel/surgbag
 	name = "surgery bag"
 	desc = "Contains all the phreakish devices one needs to cut a person up."
-	slot_flags = null
+	slot_flags = ITEM_SLOT_BACK
 	item_state = "doctorbag"
 	icon_state = "doctorbag"
 	attack_verb = list("beats", "bludgeons")
@@ -265,3 +335,15 @@
 	new /obj/item/rogueweapon/surgery/cautery(src)
 	new /obj/item/natural/worms/leech/parasite(src)
 	new /obj/item/rogueweapon/surgery/hammer(src)
+
+//...............Kaizoku Update..............
+/obj/item/storage/belt/rogue/kaizoku/leather/daisho
+	name = "daisho belt"
+	desc = "A oil-boiled reinforced silk or leather belt used by Abyssariads for practicing Daisho."
+	icon_state = "daisho"
+	sellprice = 5
+	icon = 'icons/roguetown/clothing/belts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/belts.dmi'
+
+/obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
+	color = COLOR_ALMOST_BLACK	

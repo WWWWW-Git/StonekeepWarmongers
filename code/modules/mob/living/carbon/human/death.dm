@@ -31,19 +31,13 @@
 	if(stat == DEAD)
 		return
 
-	var/area/A = get_area(src)
-
-	if(client)
-		SSdroning.kill_droning(client)
-		SSdroning.kill_loop(client)
-		SSdroning.kill_rain(client)
-
 	if(mind)
-		if(!gibbed)
-			var/datum/antagonist/vampirelord/VD = mind.has_antag_datum(/datum/antagonist/vampirelord)
-			if(VD)
-				dust(just_ash=TRUE,drop_items=TRUE)
-				return
+		SSticker.deaths++
+		switch(warfare_faction)
+			if(RED_WARTEAM)
+				SSticker.heartfelt_deaths++
+			if(BLUE_WARTEAM)
+				SSticker.grenzelhoft_deaths++
 
 	/* No zombies in PvP.
 	if(!gibbed)
@@ -51,80 +45,63 @@
 			zombie_check()
 	*/
 
-	if(client || mind)
-		SSticker.deaths++
-
-	ghostize(FALSE)
+	if(HAS_TRAIT(src, TRAIT_JESTER))
+		playsound(src, 'sound/foley/honk.ogg', 75, FALSE, -3)
 
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 
-		if(SSjob.GetJob(job).type == /datum/job/roguetown/warfare/red/lord)
+		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warfare/red/lord))
 			testing("Red lord is dead!")
-			for(var/X in C.heartfelts)
-				var/mob/living/carbon/human/H = X
-				H.add_stress(/datum/stressevent/deadlord)
-		if(SSjob.GetJob(job).type == /datum/job/roguetown/warfare/blu/lord)
+			for(var/client/X in C.heartfelts)
+				var/mob/living/carbon/human/V = X.mob
+				to_chat(V, "<span class='red>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
+				V.playsound_local(get_turf(V), 'sound/music/fallenangel.ogg', 80, FALSE, pressure_affected = FALSE)
+				V.add_stress(/datum/stressevent/deadlord)
+		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warfare/blu/lord))
 			testing("Blue lord is dead!")
-			for(var/X in C.grenzels)
-				var/mob/living/carbon/human/H = X
-				H.add_stress(/datum/stressevent/deadlord)
+			for(var/client/X in C.grenzels)
+				var/mob/living/carbon/human/V = X.mob
+				to_chat(V, "<span class='red>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
+				V.playsound_local(get_turf(V), 'sound/music/fallenangel.ogg', 80, FALSE, pressure_affected = FALSE)
+				V.add_stress(/datum/stressevent/deadlord)
 
 	stop_sound_channel(CHANNEL_HEARTBEAT)
-	var/obj/item/organ/heart/H = getorganslot(ORGAN_SLOT_HEART)
-	if(H)
-		H.beat = BEAT_NONE
+	var/obj/item/organ/heart/HE = getorganslot(ORGAN_SLOT_HEART)
+	if(HE)
+		HE.beat = BEAT_NONE
 
-	if(!mob_timers["deathdied"])
-		mob_timers["deathdied"] = world.time
-		var/tris2take = 0
-		if(istype(A, /area/rogue/indoors/town/cell))
-			tris2take += -2
-//		else
-//			if(get_triumphs() > 0)
-//				tris2take += -1
-		if(H in SStreasury.bank_accounts)
-			for(var/obj/structure/roguemachine/camera/C in view(7, src))
-				var/area_name = A.name
-				var/texty = "<CENTER><B>Death of a Living Being</B><br>---<br></CENTER>"
-				texty += "[real_name] perished in front of face #[C.number] ([area_name]) at [station_time_timestamp("hh:mm")]."
-				SSroguemachine.death_queue += texty
-				break
+	if(!gibbed)
+		for(var/mob/living/carbon/human/HU in viewers(7, src))
+			if(HU != src && !HAS_TRAIT(HU, TRAIT_BLIND))
+				if(!HAS_TRAIT(HU, TRAIT_VILLAIN))
+					if(HU.dna?.species && dna?.species)
+						if(HU.dna.species.id == dna.species.id)
+							HU.add_stress(/datum/stressevent/viewdeath)
 
-		var/yeae = TRUE
-		if(buckled)
-			if(istype(buckled, /obj/structure/fluff/psycross))
-				if(real_name in GLOB.excommunicated_players)
-					yeae = FALSE
-					tris2take += -2
-				if(real_name in GLOB.outlawed_players)
-					yeae = FALSE
+	var/mob/dead/observer/rogue/G = ghostize()
 
-		if(job == "King" || job == "Queen")
-			for(var/mob/living/carbon/human/HU in GLOB.player_list)
-				if(!HU.stat)
-					if(is_in_roguetown(HU))
-						HU.playsound_local(get_turf(HU), 'sound/music/lorddeath.ogg', 80, FALSE, pressure_affected = FALSE)
+	if(G?.client)
+		SSdroning.kill_droning(G.client)
+		SSdroning.kill_loop(G.client)
+		SSdroning.kill_rain(G.client)
+		G.playsound_local(src, 'sound/misc/deth.ogg', 100)
 
-//		if(yeae)
-//			if(mind)
-//				if((mind.assigned_role == "Lord") || (mind.assigned_role == "Priest") || (mind.assigned_role == "Captain") || (mind.assigned_role == "Merchant"))
-//					addomen("importantdeath")
-
-		if(!gibbed && yeae)
-			for(var/mob/living/carbon/human/HU in viewers(7, src))
-				if(HU.marriedto == src)
-					HU.adjust_triumphs(-1)
-				if(HU != src && !HAS_TRAIT(HU, TRAIT_BLIND))
-					if(!HAS_TRAIT(HU, TRAIT_VILLAIN))
-						if(HU.dna?.species && dna?.species)
-							if(HU.dna.species.id == dna.species.id)
-								var/mob/living/carbon/D = HU
-								if(D.has_flaw(/datum/charflaw/addiction/maniac))
-									D.add_stress(/datum/stressevent/viewdeathmaniac)
-									D.sate_addiction()
-								else
-									D.add_stress(/datum/stressevent/viewdeath)
+		var/atom/movable/screen/gameover/hog/H = new()
+		var/list/iconstato = list(
+			"hog"=90,
+			"mortis"=50,
+			"ashbaby"=1 // warmongers is a serious game about the horrors of war
+		)
+		var/chosen = pickweight(iconstato)
+		H.icon_state = chosen
+		H.layer = SPLASHSCREEN_LAYER+0.5
+		G.client.screen += H
+		H.Fade()
+		to_chat(G, "<span class='notice'>You've died! Don't worry, this happens all the time. Press the button that looks like a skull on the left side of your screen to respawn.</span>")
+		mob_timers["lastdied"] = world.time
+		addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 30)
+		G.add_client_colour(/datum/client_colour/monochrome)
 
 	. = ..()
 
@@ -137,6 +114,9 @@
 			M.go_out()
 
 	dna.species.spec_death(gibbed, src)
+	
+	if(aspect_chosen(/datum/round_aspect/exploding))
+		gib(TRUE)
 
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)

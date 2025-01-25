@@ -1,4 +1,4 @@
-#define MUSIC_TAV list("Song 1" = 'sound/music/hellandback.ogg', "Song 2" = 'sound/music/nothingyoucando.ogg', "Song 3" = 'sound/music/lorddeath.ogg')
+#define MUSIC_TAV list("Memory Of Eora" = 'sound/music/jukeboxes/eora.ogg',"March Of Freemen" = 'sound/music/jukeboxes/marche.ogg',"Capital Of The World" = 'sound/music/jukeboxes/capital.ogg')
 
 /datum/looping_sound/musloop
 	mid_sounds = list()
@@ -26,7 +26,7 @@
 	desc = "A device more advanced due to the strides in technology. No longer made from wax and now uses ceramic disks with indents to make sound. This one is specially supplied to armies to listen to music to feel better about themselves."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "music0"
-	density = FALSE
+	density = TRUE
 	max_integrity = 0
 	anchored = FALSE
 	var/datum/looping_sound/musloop/soundloop
@@ -52,7 +52,7 @@
 	if(playing)
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
-	var/selection = input(user, "Select a song.", "Wax Device") as null|anything in music_tracks
+	var/selection = input(user, "Select a song.", "Music Device") as null|anything in music_tracks
 	if(!selection)
 		return
 	if(!Adjacent(user))

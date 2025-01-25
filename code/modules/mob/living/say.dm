@@ -99,8 +99,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		return
 
 	if(ic_blocked)
-		//The filter warning message shows the sanitized message though.
-		to_chat(src, "<span class='warning'>That message contained a word prohibited in IC chat! Consider reviewing the server rules.\n<span replaceRegex='show_filtered_ic_chat'>\"[message]\"</span></span>")
+		to_chat(src, "<span class='danger'>AAAAGH! MY HEAD HURTS FROM THE WORDS I TRIED TO UTTER!</span>")
+		src.adjustOrganLoss(ORGAN_SLOT_BRAIN, 40)
 		SSblackbox.record_feedback("tally", "ic_blocked_words", 1, lowertext(config.ic_filter_regex.match))
 		return
 
@@ -338,6 +338,10 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 				speech_bubble_recipients.Add(M.client)
 	var/image/I = image('icons/mob/talk.dmi', src, "[bubble_type][say_test(message)]", FLY_LAYER)
 	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
+
+	if(speech_sound)
+		playsound(I, speech_sound, 65, FALSE, -1)
+
 	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay), I, speech_bubble_recipients, 30)
 
 /mob/proc/binarycheck()

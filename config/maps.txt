@@ -13,8 +13,38 @@ Format:
 	votable (is this map votable)
 endmap
 
-map roguetown
+map bloodfort
 	default
+	voteweight 0.5
+	votable
+endmap
+
+map laststand
+	#voteweight 1.5
+	votable
+endmap
+
+map murderfield
+	#voteweight 1.5
+	votable
+endmap
+
+map darkwaters
+	#voteweight 1.5
+	votable
+endmap
+
+map darkwaters-ponr
+	#voteweight 1.5
+	votable
+endmap
+
+map foxhole
+	#voteweight 1.5
+	votable
+endmap
+
+map sandblasted
 	#voteweight 1.5
 	votable
 endmap

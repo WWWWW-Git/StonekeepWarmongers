@@ -116,6 +116,9 @@
 
 	var/arcshot = FALSE
 
+	var/accuracy = 65 //How likely the project will hit it's intended target area. Decreases over distance moved, increased from perception.
+	var/bonus_accuracy = 0 //bonus accuracy that cannot be affected by range drop off.
+
 /obj/projectile/proc/handle_drop()
 	return
 
@@ -126,6 +129,8 @@
 
 /obj/projectile/proc/Range()
 	range--
+	if(accuracy > 20) //so there is always a somewhat prevalent chance to hit the target, despite distance.
+		accuracy -= 10
 	if(range <= 0 && loc)
 		on_range()
 
@@ -160,8 +165,8 @@
 		hitx = target.pixel_x + p_x - 16
 		hity = target.pixel_y + p_y - 16
 	else
-		hitx = target.pixel_x + rand(-8, 8)
-		hity = target.pixel_y + rand(-8, 8)
+		hitx = target.pixel_x + rand(-19, 19)
+		hity = target.pixel_y + rand(-19, 19)
 
 	if(!nodamage && (damage_type == BRUTE || damage_type == BURN) && iswallturf(target_loca) && prob(75))
 		var/turf/closed/wall/W = target_loca
@@ -179,16 +184,16 @@
 
 	var/mob/living/L = target
 
-	if(blocked != 100) // not completely blocked
-		if(damage && L.blood_volume && damage_type == BRUTE)
-			var/splatter_dir = dir
-			if(starting)
-				splatter_dir = get_dir(starting, target_loca)
-			if(isalien(L))
-				new /obj/effect/temp_visual/dir_setting/bloodsplatter/xenosplatter(target_loca, splatter_dir)
-			else
-				new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir)
-			L.add_splatter_floor(target_loca)
+	if(damage && L.blood_volume && damage_type == BRUTE)
+		var/splatter_dir = dir
+		if(starting)
+			splatter_dir = get_dir(starting, target_loca)
+		if(isalien(L))
+			new /obj/effect/temp_visual/dir_setting/bloodsplatter/xenosplatter(target_loca, splatter_dir)
+		else
+			new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir)
+			flash_color(L, flash_color = "#FF0000", flash_time = 3 SECONDS)
+		L.add_splatter_floor(target_loca)
 
 	if(impact_effect_type && !hitscan)
 		new impact_effect_type(target_loca, hitx, hity)
@@ -401,6 +406,16 @@
 		var/matrix/M = new
 		M.Turn(Angle)
 		transform = M
+	if(muzzle_type)
+		var/atom/movable/thing = new muzzle_type
+		var/matrix/M = new
+		M.Turn(original_angle)
+		//thing.forceMove(get_step(firer, firer.dir))
+		thing.forceMove(firer.loc)
+		thing.transform = M
+		thing.color = color
+		thing.set_light(muzzle_flash_range, muzzle_flash_intensity, muzzle_flash_color_override? muzzle_flash_color_override : color)
+		QDEL_IN(thing, 3)
 	trajectory_ignore_forcemove = TRUE
 	forceMove(starting)
 	trajectory_ignore_forcemove = FALSE
@@ -679,7 +694,7 @@
 		var/tempref = REF(src)
 		for(var/datum/point/p in beam_segments)
 			generate_tracer_between_points(p, beam_segments[p], tracer_type, color, duration, hitscan_light_range, hitscan_light_color_override, hitscan_light_intensity, tempref)
-	if(muzzle_type && duration > 0)
+	if(muzzle_type)
 		var/datum/point/p = beam_segments[1]
 		var/atom/movable/thing = new muzzle_type
 		p.move_atom_to_src(thing)
@@ -688,7 +703,7 @@
 		thing.transform = M
 		thing.color = color
 		thing.set_light(muzzle_flash_range, muzzle_flash_intensity, muzzle_flash_color_override? muzzle_flash_color_override : color)
-		QDEL_IN(thing, duration)
+		QDEL_IN(thing, 3)
 	if(impacting && impact_type && duration > 0)
 		var/datum/point/p = beam_segments[beam_segments[beam_segments.len]]
 		var/atom/movable/thing = new impact_type

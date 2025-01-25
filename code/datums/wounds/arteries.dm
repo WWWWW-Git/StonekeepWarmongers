@@ -42,7 +42,7 @@
 	crit_message = "Blood sprays from %VICTIM's throat!"
 	whp = 100
 	sewn_whp = 25
-	bleed_rate = 50
+	bleed_rate = 60
 	sewn_bleed_rate = 0.5
 	woundpain = 60
 	sewn_woundpain = 30
@@ -51,6 +51,9 @@
 /datum/wound/artery/neck/on_mob_gain(mob/living/affected)
 	. = ..()
 	ADD_TRAIT(affected, TRAIT_GARGLE_SPEECH, "[type]")
+	affected.adjustOxyLoss(25)
+	if(HAS_TRAIT(affected, TRAIT_CRITICAL_WEAKNESS))
+		affected.death()
 
 /datum/wound/artery/neck/on_mob_loss(mob/living/affected)
 	. = ..()

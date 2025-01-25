@@ -10,7 +10,33 @@
 /obj/effect/temp_visual/dir_setting/bloodsplatter/Initialize(mapload, set_dir)
 	icon_state = "[splatter_type][rand(1, 6)]"
 	. = ..()
-	animate(src, alpha = 0, time = duration)
+	var/target_pixel_x = 0
+	var/target_pixel_y = 0
+	switch(set_dir)
+		if(NORTH)
+			target_pixel_y = 16
+		if(SOUTH)
+			target_pixel_y = -16
+			layer = ABOVE_MOB_LAYER
+		if(EAST)
+			target_pixel_x = 16
+		if(WEST)
+			target_pixel_x = -16
+		if(NORTHEAST)
+			target_pixel_x = 16
+			target_pixel_y = 16
+		if(NORTHWEST)
+			target_pixel_x = -16
+			target_pixel_y = 16
+		if(SOUTHEAST)
+			target_pixel_x = 16
+			target_pixel_y = -16
+			layer = ABOVE_MOB_LAYER
+		if(SOUTHWEST)
+			target_pixel_x = -16
+			target_pixel_y = -16
+			layer = ABOVE_MOB_LAYER
+	animate(src, pixel_x = target_pixel_x, pixel_y = target_pixel_y, alpha = 40, time = duration)
 /*
 /obj/effect/temp_visual/dir_setting/bloodsplatter/Initialize(mapload, set_dir)
 	if(set_dir in GLOB.diagonals)
@@ -226,6 +252,10 @@
 /obj/effect/temp_visual/decoy/fading/halfsecond
 	duration = 5
 
+/obj/effect/temp_visual/decoy/fading/blood
+	color = COLOR_RED
+	duration = 10
+
 /obj/effect/temp_visual/small_smoke
 	icon_state = "smoke"
 	duration = 50
@@ -323,11 +353,11 @@
 	icon_state = "explosion"
 	pixel_x = -32
 	pixel_y = -32
-	duration = 8
+	duration = 39
 
 /obj/effect/temp_visual/explosion/fast
 	icon_state = "explosionfast"
-	duration = 4
+	duration = 13
 
 /obj/effect/temp_visual/blob
 	name = "blob"

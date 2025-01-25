@@ -154,7 +154,7 @@
 //	if(mob.m_intent == MOVE_INTENT_RUN) //backpedal and strafe slowdown for quick intent
 	if(L.fixedeye || L.tempfixeye)
 		if(L.dir != direct)
-			add_delay += 2
+			//add_delay += 2
 			if(L.m_intent == MOVE_INTENT_RUN)
 				L.toggle_rogmove_intent(MOVE_INTENT_WALK)
 	else
@@ -218,10 +218,7 @@
 			to_chat(src, "<span class='warning'>I'm restrained! I can't move!</span>")
 			return TRUE
 		else
-//			return mob.resist_grab(1)
-			move_delay = world.time + 10
-			to_chat(src, "<span class='warning'>I can't move!</span>")
-			return TRUE
+			return mob.resist_grab(1)
 
 /**
   * Allows mobs to ignore density and phase through objects

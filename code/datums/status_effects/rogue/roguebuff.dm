@@ -44,7 +44,7 @@
 /datum/status_effect/buff/druqks
 	id = "druqks"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/druqks
-	effectedstats = list("endurance" = 3,"speed" = 3,"fortune" = -5)
+	effectedstats = list("endurance" = 3,"speed" = 3)
 	duration = 2 MINUTES
 
 /datum/status_effect/buff/druqks/on_apply()
@@ -82,7 +82,7 @@
 /datum/status_effect/buff/ozium
 	id = "ozium"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/druqks
-	effectedstats = list("speed" = -99)
+	effectedstats = list("speed" = -3, "strength" = 3)
 	duration = 2 MINUTES
 
 /datum/status_effect/buff/ozium/on_apply()
@@ -102,7 +102,7 @@
 /datum/status_effect/buff/moondust
 	id = "moondust"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/druqks
-	effectedstats = list("speed" = 3, "endurance" = 3)
+	effectedstats = list("speed" = 6, "constitution" = 3, "endurance"= -3)
 	duration = 2 MINUTES
 
 /datum/status_effect/buff/moondust/nextmove_modifier()
@@ -222,4 +222,26 @@
 /atom/movable/screen/alert/status_effect/buff/nocbuff
 	name = "Divine Knowledge"
 	desc = "<span class='nicegreen'>Divine knowledge flows through me.</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/inspired
+	id = "inspired"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/inspired
+	effectedstats = list("speed" = 3,"constitution" = 1,"endurance" = 1)
+	duration = 2 MINUTES
+
+/atom/movable/screen/alert/status_effect/buff/inspired
+	name = "Inspired"
+	desc = "<span class='nicegreen'>I'm inspired to fight!</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/inspired/great
+	id = "inspired_great"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/inspired/great
+	effectedstats = list("speed" = 4,"constitution" = 4,"endurance" = 4,"strength" = 2)
+	duration = 3 MINUTES
+
+/atom/movable/screen/alert/status_effect/buff/inspired/great
+	name = "Greatly Inspired"
+	desc = "<span class='nicegreen'>I feel very inspired to fight!</span>\n"
 	icon_state = "intelligence"

@@ -8,6 +8,20 @@
 						/obj/item/flashlight/flare/torch/metal,
 						/obj/item/flashlight/flare/torch/metal)
 
+/datum/anvil_recipe/tools/balls
+	name = "iron balls"
+	req_bar = /obj/item/ingot/iron
+	created_item = list(/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron,
+						/obj/item/ammo_casing/caseless/rogue/bullet/iron)
+
 /datum/anvil_recipe/tools/pan
 	name = "Frypan"
 	req_bar = /obj/item/ingot/iron
@@ -63,6 +77,12 @@
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
 	created_item = /obj/item/rogueweapon/hoe
+
+/datum/anvil_recipe/tools/thresher
+	name = "thresher (+2s)"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
+	created_item = /obj/item/rogueweapon/thresher
 
 /datum/anvil_recipe/tools/pitchfork
 	name = "pitchfork (+2s)"

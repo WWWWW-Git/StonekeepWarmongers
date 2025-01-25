@@ -244,10 +244,12 @@
 		to_chat(usr, "<span class='warning'>You do not have the rights to start a vote.</span>")
 		return
 
-	var/type = input("What kind of vote?") as null|anything in list("End Round", "Custom")
+	var/type = input("What kind of vote?") as null|anything in list("End Round", "Map",  "Custom")
 	switch(type)
 		if("End Round")
 			type = "endround"
+		if("Map")
+			type = "map"
 		if("Custom")
 			type = "custom"
 	SSvote.initiate_vote(type, usr.key)
@@ -529,7 +531,9 @@
 	if(marked_datum && istype(marked_datum, /atom))
 		dat += "<A href='?src=[REF(src)];[HrefToken()];dupe_marked_datum=1'>Duplicate Marked Datum</A><br>"
 
-	usr << browse(dat, "window=admin2;size=240x280")
+	var/datum/browser/popup = new(usr, "gamepanel", "Game Panel", 420, 420)
+	popup.set_content(dat)
+	popup.open()
 	return
 
 /////////////////////////////////////////////////////////////////////////////////////////////////admins2.dm merge
@@ -677,6 +681,50 @@
 
 	return 0
 
+/datum/admins/proc/oneteammode()
+	set category = "GameMaster"
+	set name = "One Team Mode"
+
+	if(SSticker.oneteammode)
+		SSticker.oneteammode = FALSE
+		to_chat(usr, "off")
+	else
+		SSticker.oneteammode = TRUE
+		to_chat(usr, "on")
+
+/datum/admins/proc/deathmatch()
+	set category = "GameMaster"
+	set name = "Deathmatch"
+
+	to_chat(usr, "DONT FORGET TO TURN ON ONE TEAM MODE TOO IDIOT")
+
+	if(SSticker.deathmatch)
+		SSticker.deathmatch = FALSE
+		to_chat(usr, "off")
+	else
+		SSticker.deathmatch = TRUE
+		to_chat(usr, "on")
+
+/datum/admins/proc/settechlevel()
+	set category = "GameMaster"
+	set name = "Set Techlevel"
+
+	if(SSticker.warfare_techlevel)
+		var/inss = input(usr, "Choose tech level (1 MUSKETS, 2 REPEATERS, 3 NO GUNS)", "WARMONGERS", "1") as anything in list("1","2","3")
+		if(inss)
+			switch(inss)
+				if("1")
+					SSticker.warfare_techlevel = 1
+				if("2")		
+					SSticker.warfare_techlevel = 2
+				if("3")
+					SSticker.warfare_techlevel = 3
+			SSblackbox.record_feedback("tally", "admin_verb", 1, "SetTechLevel") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+			log_admin("[usr.key] has set the tech level to [inss]")
+			return 1
+			
+	return 0
+
 /datum/admins/proc/reinforcementsnow()
 	set category = "Server"
 	set desc="Start the round RIGHT NOW"
@@ -691,6 +739,53 @@
 		to_chat(usr, "<font color='red'>Error: NO.</font>")
 
 	return 0
+
+/datum/admins/proc/readoutlords()
+	set category = "Debug"
+	set name = "Readout Lords"
+	var/datum/game_mode/warfare/W = SSticker.mode
+
+	if(W.blulord)
+		to_chat(usr, "blu lord found: [W.blulord.real_name]")
+	else
+		to_chat(usr, "blu lord not found")
+
+	if(W.redlord)
+		to_chat(usr, "red lord found: [W.redlord.real_name]")
+	else
+		to_chat(usr, "red lord not found")
+		
+/datum/admins/proc/recallcrown()
+	set category = "Debug"
+	set name = "Recall Crown"
+	var/datum/game_mode/warfare/W = SSticker.mode
+
+	var/pick = input(usr, "Which crown do you recall?", "WARMONGERS") as null|anything in list("Red","Blue")
+
+	if(!pick)
+		return
+	
+	if(pick == "Red")
+		W.redcrown.forceMove(get_turf(usr))
+		to_chat(usr, "Red crown moved succesfully.")
+	if(pick == "Blue")
+		W.blucrown.forceMove(get_turf(usr))
+		to_chat(usr, "Blue crown moved succesfully.")
+
+/datum/admins/proc/teleport2crown()
+	set category = "Debug"
+	set name = "TP2Crown"
+	var/datum/game_mode/warfare/W = SSticker.mode
+
+	var/pick = input(usr, "Which crown?", "WARMONGERS") as null|anything in list("Red","Blue")
+
+	if(!pick)
+		return
+	
+	if(pick == "Red")
+		usr.forceMove(W.redcrown.loc)
+	if(pick == "Blue")
+		usr.forceMove(W.blucrown.loc)
 
 /datum/admins/proc/forcemode()
 	set category = "Server"

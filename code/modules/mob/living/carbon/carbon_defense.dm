@@ -74,6 +74,19 @@
 	if(BP)
 		testing("projwound")
 		var/newdam = P.damage * (100-blocked)/100
+		if(istype(BP, /obj/item/bodypart/head))
+			to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
+			playsound(src, "headcrush", 100, vary = FALSE)
+			newdam = newdam * 2
+			var/obj/item/clothing/head/hed = head
+			if(hed)
+				transferItemToLoc(hed, get_step(src, turn(dir, 180)))
+				head = null
+				update_inv_head()
+			else
+				newdam = newdam * 5
+				new /obj/effect/temp_visual/decoy/fading/blood(get_turf(src))
+				death()
 		BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 		return TRUE
 
@@ -255,7 +268,7 @@
 			ContactContractDisease(D)
 	
 	if(!user.cmode)
-		var/try_to_fail = !istype(user.rmb_intent, /datum/rmb_intent/weak)
+		var/try_to_fail = FALSE
 		var/list/possible_steps = list()
 		for(var/datum/surgery_step/surgery_step as anything in GLOB.surgery_steps)
 			if(!surgery_step.name)
@@ -408,7 +421,11 @@
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
 	if(on_fire)
-		to_chat(M, "<span class='warning'>I can't put [p_them()] out with just my bare hands!</span>")
+		visible_message("<span class='notice'>[src] pats the flames on [M] to extinguish them.</span>")
+		fire_stacks -= 5
+		sleep(30)
+		if(fire_stacks <= 0)
+			ExtinguishMob(TRUE)
 		return
 
 //	if(!(mobility_flags & MOBILITY_STAND))

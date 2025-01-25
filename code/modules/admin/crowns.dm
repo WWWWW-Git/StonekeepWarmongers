@@ -1,11 +1,11 @@
-#define CROWNFILE "[global.config.directory]/crownwearers.txt"
 #define BYPASSFILE "[global.config.directory]/factionbypass.txt"
-
-GLOBAL_LIST(crownwearers)
-GLOBAL_PROTECT(crownwearers)
+#define BADMINFILE	"[global.config.directory]/badmin.txt"
 
 GLOBAL_LIST(factionbypassers)
 GLOBAL_PROTECT(factionbypassers)
+
+GLOBAL_LIST(badminners)
+GLOBAL_PROTECT(badminners)
 
 /proc/load_bypasslist() // Not to be mistaken by load_bypassage()
 	GLOB.factionbypassers = list()
@@ -24,22 +24,21 @@ GLOBAL_PROTECT(factionbypassers)
 		return FALSE
 	. = (ckey in GLOB.factionbypassers)
 
-/proc/load_crownlist()
-	GLOB.crownwearers = list()
-	for(var/line in world.file2list(CROWNFILE))
+/proc/load_badminlist()
+	GLOB.badminners = list()
+	for(var/line in world.file2list(BADMINFILE))
 		if(!line)
 			continue
 		if(findtextEx(line,"#",1,2))
 			continue
-		GLOB.crownwearers += ckey(line)
+		GLOB.badminners += ckey(line)
 
-	if(!GLOB.crownwearers.len)
-		GLOB.crownwearers = null
+	if(!GLOB.badminners.len)
+		GLOB.badminners = null
 
-/proc/check_crownlist(ckey)
-	if(!GLOB.crownwearers)
+/proc/check_badminlist(ckey)
+	if(!GLOB.badminners)
 		return FALSE
-	. = (ckey in GLOB.crownwearers)
+	. = (ckey in GLOB.badminners)
 
-#undef CROWNFILE
 #undef BYPASSFILE

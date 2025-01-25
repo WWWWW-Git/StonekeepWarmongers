@@ -107,14 +107,11 @@
 
 			// Time to do some picking, make sure we got things in the list we dealin with
 			if(local_insert_sortlist.len)
-				// Make sure we aren't going to attempt to pick more than what we even have avail
-				if(class_cat_alloc_attempts[SORT_CAT_KEY] > local_insert_sortlist.len)
-					testing("class cat alloc attempts is greater than sortlist")
-					class_cat_alloc_attempts[SORT_CAT_KEY] = local_insert_sortlist.len
-
+				
 				for(var/i in 1 to class_cat_alloc_attempts[SORT_CAT_KEY])
 					testing("[rolled_classes[local_insert_sortlist[i]]] equals zero")
 					rolled_classes[local_insert_sortlist[i]] = 0
+				
 
 				// We are plusboosting too
 				if(class_cat_plusboost_attempts && SORT_CAT_KEY in class_cat_plusboost_attempts)
@@ -187,9 +184,9 @@
 		return
 	//Opening tags and empty head
 	var/data = {"
+	<html>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<html>
 		<head>
 			<style>
 				@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
@@ -204,7 +201,7 @@
 	data += "<body>"
 
 	//Class href fill-in
-	data += "<div id='top_handwriting'> The stars align... </div>"
+	data += "<div id='top_handwriting'>What division would you fit best?</div>"
 	data += "<div id='class_select_box_div'>"
 	var/mob/living/carbon/human/H = linked_client.mob
 	if(!H.job)
@@ -267,9 +264,9 @@
 /datum/class_select_handler/proc/class_select_slop()
 
 	var/data = {"
+	<html>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<html>
 		<head>
 			<style>
 				@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
@@ -284,8 +281,8 @@
 				<span class="title_shit">Description:</span> <span class="post_title_shit">[cur_picked_class.tutorial]</span>
 			</div>
 				<div id='button_div'>
-					<a class='class_desc_YES_LINK' href='?src=\ref[src];yes_to_class_select=1;special_class=0;'>This is my background</a><br>
-					<a class='bottom_buttons' href='?src=\ref[src];no_to_class_select=1'>I reject this background</a>
+					<a class='class_desc_YES_LINK' href='?src=\ref[src];yes_to_class_select=1;special_class=0;'>This division suits me.</a><br>
+					<a class='bottom_buttons' href='?src=\ref[src];no_to_class_select=1'>I don't want to be this one.</a>
 				</div>
 			</div>
 		</body>

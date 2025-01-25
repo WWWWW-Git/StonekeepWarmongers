@@ -51,6 +51,19 @@
 	chargedrain = 0 //no drain to aim a gun
 	charging_slowdown = 4
 	warnoffset = 20
+	chargetime = 7
+
+/datum/intent/shoot/musket/rifle
+	chargedrain = 0 //no drain to aim a gun
+	charging_slowdown = 9
+	warnoffset = 20
+	chargetime = 4
+
+/datum/intent/shoot/musket/peter
+	chargedrain = 0 //no drain to aim a gun
+	charging_slowdown = 4
+	warnoffset = 20
+	chargetime = 4
 
 /datum/intent/shoot/musket/arc
 	name = "arc"
@@ -67,10 +80,11 @@
 		var/newtime = chargetime
 		//skill block
 		newtime = newtime + 18
-		newtime = newtime - (mastermob.mind.get_skill_level(/datum/skill/combat/flintlocks) * 3)
+		newtime = newtime - (mastermob.mind.get_skill_level(/datum/skill/combat/flintlocks) * 4)
 		//per block
 		newtime = newtime + 20
-		newtime = newtime - (mastermob.STAPER)
+		// Perception aint gonna help you with loading a musket, bud
+		//newtime = newtime - (mastermob.STAPER)
 		if(newtime > 0)
 			return newtime
 		else
@@ -125,8 +139,7 @@
 			..()
 		else
 			to_chat(user, "<span class='warning'>I need to cock the crossbow first.</span>")
-
-
+			
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(user.client)
 		if(user.client.chargedprog >= 100)
@@ -137,8 +150,15 @@
 		spread = 0
 	for(var/obj/item/ammo_casing/CB in get_ammo_list(FALSE, TRUE))
 		var/obj/projectile/BB = CB.BB
+		if(user.client)
+			if(user.client.chargedprog >= 100)
+				BB.accuracy += 15 //better accuracy for fully aiming
+		if(user.STAPER > 8)
+			BB.accuracy += (user.STAPER - 8) * 4 //each point of perception above 8 increases standard accuracy by 4.
+			BB.bonus_accuracy += (user.STAPER - 8) //Also, increases bonus accuracy by 1, which cannot fall off due to distance.
 		if(user.STAPER > 10)
 			BB.damage = BB.damage * (user.STAPER / 10)
+		BB.bonus_accuracy += (user.mind.get_skill_level(/datum/skill/combat/crossbows) * 3) //+3 accuracy per level in crossbows
 	cocked = FALSE
 	..()
 

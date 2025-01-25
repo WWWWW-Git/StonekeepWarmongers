@@ -181,19 +181,9 @@
 				return TRUE
 
 	if(m_intent == MOVE_INTENT_RUN && dir == get_dir(src, M))
+		var/bayoneted = FALSE
 		if(isliving(M))
 			var/mob/living/L = M
-			if(STACON > L.STACON)
-				if(STASTR > L.STASTR)
-					L.Knockdown(1)
-				else
-					Knockdown(1)
-			if(STACON < L.STACON)
-				Knockdown(30)
-			if(STACON == L.STACON)
-				L.Knockdown(1)
-				Knockdown(30)
-			Immobilize(30)
 			var/playsound = FALSE
 			if(apply_damage(15, BRUTE, "head", run_armor_check("head", "melee", damage = 20)))
 				playsound = TRUE
@@ -201,7 +191,20 @@
 				playsound = TRUE
 			if(playsound)
 				playsound(src, "genblunt", 100, TRUE)
-			visible_message("<span class='warning'>[src] charges into [L]!</span>", "<span class='warning'>I charge into [L]!</span>")
+			var/holdinggun = is_holding_item_of_type(/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock)
+			if(holdinggun && ishuman(L))
+				var/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/G = holdinggun
+				if(istype(a_intent, /datum/intent/dagger/thrust) && G.wielded == TRUE)
+					var/mob/living/carbon/human/H = L
+					var/obj/item/bodypart/chest = H.get_bodypart(BODY_ZONE_CHEST)
+					H.emote("agony")
+					H.apply_damage(30, BRUTE, BODY_ZONE_CHEST)
+					Immobilize(10)
+					H.Immobilize(20)
+					playsound(H, 'sound/combat/hits/bladed/genstab (3).ogg', 100, FALSE, -1)
+					chest.add_wound(/datum/wound/puncture, FALSE, FALSE)
+					bayoneted = TRUE
+			visible_message("<span class='warning'>[src] charges into [L][bayoneted ? " WITH A BAYONET" : ""]!</span>", "<span class='warning'>I charge into [L][bayoneted ? " WITH A BAYONET" : ""]!</span>")
 			return TRUE
 
 	//okay, so we didn't switch. but should we push?
@@ -1079,7 +1082,7 @@
 	. = TRUE
 
 	var/wrestling_diff = 0
-	var/resist_chance = 50
+	var/resist_chance = 60 // :)
 	var/mob/living/L = pulledby
 
 	if(mind)
@@ -1932,9 +1935,9 @@
 
 	var/_x = T.x-loc.x
 	var/_y = T.y-loc.y
-	if(_x > 7 || _x < -7)
+	if(_x > 9 || _x < -9)
 		return
-	if(_y > 7 || _y < -7)
+	if(_y > 9 || _y < -9)
 		return
 	hide_cone()
 	var/ttime = 10

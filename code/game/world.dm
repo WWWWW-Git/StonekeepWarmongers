@@ -66,12 +66,8 @@ GLOBAL_VAR(restart_counter)
 	load_nameban()
 
 	load_psychokiller()
-
-	load_crownlist()
 	load_bypasslist() // Not to be mistaken by load_bypassage().
-
 	load_bypassage()
-
 	load_patreons()
 
 //	GLOB.timezoneOffset = text2num(time2text(0,"hh")) * 36000
@@ -83,7 +79,12 @@ GLOBAL_VAR(restart_counter)
 		fdel(RESTART_COUNTER_PATH)
 
 	if(prob(1))
-		name = "WARMONGRELS"
+		if(prob(1))
+			name = "super pregnancy sex simulator ojh my gawd"
+		else
+			name = "WARMONGRELS"
+	else
+		name = "WARMONGERS"
 
 	if(NO_INIT_PARAMETER in params)
 		return
@@ -180,7 +181,6 @@ GLOBAL_VAR(restart_counter)
 	start_log(GLOB.tgui_log)
 	start_log(GLOB.character_list_log)
 
-	GLOB.changelog_hash = md5('html/changelog.html') //for telling if the changelog has changed recently
 	if(fexists(GLOB.config_error_log))
 		fcopy(GLOB.config_error_log, "[GLOB.log_directory]/config_error.log")
 		fdel(GLOB.config_error_log)
@@ -259,17 +259,15 @@ GLOBAL_VAR(restart_counter)
 //	else
 //	to_chat(world, "<span class='boldannounce'><b><u><a href='byond://winset?command=.reconnect'>CLICK TO RECONNECT</a></u></b></span>")
 
-	var/round_end_sound = pick('sound/roundend/knave.ogg',
-	'sound/roundend/twohours.ogg',
-	'sound/roundend/rest.ogg',
-	'sound/roundend/gather.ogg',
-	'sound/roundend/dwarfs.ogg')
+	var/round_end_sound = 'sound/warmongers.ogg'
+	var/quote = pick("When you see a rattlesnake poised to bite, you do not wait until he has struck to crush him.", "If the Grenzelhoft invaded the Zed's hell I would make at least a favorable reference to the devil in Royal Council House.", "Isn't it dreadful? Here we are, two officers of the Grenzelhoft general staff discussing how best to murder our commander-in-chief.", "I ask you, do you want total war? If necessary, do you want a war more total and radical than anything we can yet imagine?")
 	for(var/client/thing in GLOB.clients)
 		if(!thing)
 			continue
 		thing << sound(round_end_sound)
+		thing << quote
 
-	to_chat(world, "Please be patient as the server restarts. You will be automatically reconnected in about 60 seconds.")
+	to_chat(world, "<B>You will be reconnected in a few seconds.</B>")
 	Master.Shutdown()	//run SS shutdowns? rtchange
 
 	TgsReboot()
@@ -308,26 +306,24 @@ GLOBAL_VAR(restart_counter)
 	..()
 
 /world/proc/update_status()
+	var/datum/game_mode/warfare/W = SSticker.mode
 	var/s = ""
 	s += "<center><a href=\"https://discord.gg/stonekeep\">"
-#ifdef MATURESERVER
 	s += "<big><b>WARMONGERS</b></big></a><br>"
-	s += "<b>Immersive Dark Medieval Fantasy Musket Simulator<b><br>"
-	//s += "<b>Powerbottoms Welcome</b><br>"
-#else
-	s += "<big><b>ROGUEWORLD</b></big></a><br>"
-	s += "<b>Fantasy Computer Survival Game</b></center><br>"
-#endif
-//	s += "<img src=\"https://i.imgur.com/shj547T.jpg\"></a></center>"
+	s += "<b>Fantasy PvP Musket-based Team Shooter<b><br>"
+	s += "You've been <b>drafted</b>, fight for the crown.<br>"
 
-//	s += "! <b>UPDATE 4.4</b> 4/22/2022<br><br>"
-#ifdef MATURESERVER
 	s += "\["
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
-		s += "<b>GAME STATUS:</b> IN LOBBY"
+		s += "<b>GAME STATUS:</b> WAITING FOR MORE MANPOWER"
 	else
-		s += "<b>GAME STATUS:</b> PLAYING"
-#endif
+		s += "<b>GAME STATUS:</b> ON THE BATTLEFIELD"
+
+	if(W.warmode)
+		s += "<b>GAME MODE:</b> [W.warmode]"
+
+	s += "<img src=\"https://i.imgur.com/KZ83Zui.png\"></a></center>"
+	
 	status = s
 	return s
 /*

@@ -159,7 +159,7 @@
 /obj/item/clothing/suit/roguetown/armor/heartfelt/lord
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "coat of armor"
-	desc = "A lordly coat of armor."
+	desc = "A lordly coat of armor, made to be light and unrestrictive."
 	body_parts_covered = CHEST|GROIN|VITALS|LEGS|ARMS
 	icon_state = "heartfelt"
 	item_state = "heartfelt"
@@ -167,10 +167,10 @@
 	allowed_sex = list(MALE)
 	nodismemsleeves = TRUE
 	blocking_behavior = null
-	max_integrity = 150
+	max_integrity = 100
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
-	armor_class = ARMOR_CLASS_MEDIUM
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/suit/roguetown/armor/heartfelt/hand
 	slot_flags = ITEM_SLOT_ARMOR
@@ -408,6 +408,32 @@
 /obj/item/clothing/suit/roguetown/armor/leather/vest/black
 	color = "#3c3a38"
 
+/obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/equipped(mob/user, slot)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
+
+/obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/red
+	color = "#a32121"
+
+/obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
+	color = "#ffffff"
+	name = "officers coat"
+	desc = "A heavy dark coat worn by officers of the Grenzelhoft Imperiate, or anyone unlucky enough to get the clothes someone already probably died in."
+	icon_state = "grenzcoat"
+	item_state = "grenzcoat"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+
+/obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/black
+	color = "#3c3a38"
+
+/obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander/blue
+	color = "#ffffff"
+	name = "lords coat"
+	desc = "A heavy dark coat worn by Grenzelhoft commanders, decorated with epaulettes and various medals earned over the yils."
+	icon_state = "grenzcommcoat"
+	item_state = "grenzcommcoat"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+
 /obj/item/clothing/suit/roguetown/armor/workervest
 	name = "striped tunic"
 	desc = "A common tunic worn by just about anyone. Nothing special, but essential."
@@ -456,9 +482,9 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/orc
 	name = "orc mail"
-	icon_state = "marauder_armor_item"
+	icon_state = "marauder_armor"
 	item_state = "marauder_armor"
-	icon = 'icons/roguetown/mob/monster/orc.dmi'
+	icon = 'icons/roguetown/clothing/armor.dmi'
 	smeltresult = /obj/item/ingot/iron
 	allowed_race = list("orc")
 	armor = list("melee" = 70, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
@@ -471,8 +497,8 @@
 obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 	name = "Orc Marauder Chain Vest"
 	icon_state = "orc_chainvest"
-	item_state = "orc_chainvest_item"
-	icon = 'icons/roguetown/mob/monster/Orc.dmi'
+	item_state = "orc_chainvest"
+	icon = 'icons/roguetown/clothing/armor.dmi'
 	smeltresult = /obj/item/ingot/iron
 	allowed_race = list("orc")
 	armor = list("melee" = 50, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
@@ -494,6 +520,14 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 	boobed = TRUE
 	max_integrity = 400
 
+/obj/item/clothing/suit/roguetown/armor/plate/half/hussar
+	slot_flags = ITEM_SLOT_ARMOR
+	name = "hussar cuirass"
+	desc = "A cuirass belonging to a Grenzelhoftian Hussar. Such armor has two wings placed on its back, to add to its intimidation factor. The sight of a hundred Hussars is sometimes enough to turn the tide of battle."
+	icon_state = "hussarplate"
+	item_state = "hussarplate"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	max_integrity = 400
 
 /obj/item/clothing/suit/roguetown/armor/rare
 	icon = 'icons/roguetown/topadd/takyon/Racial_Armour.dmi'
@@ -608,3 +642,88 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 		AddComponent(/datum/component/squeak, list('sound/foley/footsteps/armor/fullplate (1).ogg',\
 													'sound/foley/footsteps/armor/fullplate (2).ogg',\
 													'sound/foley/footsteps/armor/fullplate (3).ogg'), 100)
+
+//..............Kaizoku Content.................
+/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad
+	name = "abyssariad kikko gusoku"
+	desc = "The Heartfelt design reforged in the ways of Fog Islands to better supply quick-moving zamurai cavalry, replacing the heavier and costier O-Yoroi lamellar."
+	body_parts_covered = CHEST|GROIN|VITALS|LEGS //does not protect the arms. Countering the Brigandine that protects the arms, but not legs.
+	icon_state = "kikkoabyssal"
+	item_state = "kikkoabyssal"
+	sellprice = 65 //not unique.
+
+/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad/heartfelt
+    color = CLOTHING_HEARTFELT
+
+/obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare
+	name = "yoroi hitatare"
+	desc = "A traditional Abyssariad padded robe with wide sleeves, made to be worn beneath armor. It is comfortable and thick, but not very protective compared to a ruankai, but can be used all the time without raising suspicion."
+	icon_state = "yoroihitatare"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	var/picked = FALSE
+
+/obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/heartfelt
+    color = CLOTHING_HEARTFELT
+
+/obj/item/clothing/suit/roguetown/armor/leather/hide/shozoku
+	name = "shozoku"
+	desc = "The main garment used by Ninjas and Kunoichis to blend into the night. Not viable during daylight, but it is easy to store anywhere, and any time."
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	icon_state = "shinobi"
+	item_state = "shinobi"
+	blocksound = SOFTHIT
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/tatami
+	name = "lamellae-tatami do"
+	desc = "a foldable, lightweight armor for convenient motion and manufacturing ease. \
+	It is made of rectangular steel lamellae sewn into chainmail and is a massforged armor. \
+	Considered the backbone of abyssariad military armor, often used below mirror-armor and o-yoroi."
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	icon_state = "laminartatami"
+
+/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/hand
+	name = "heartfelt kikko coat"
+	desc = "A coat of armor typicially worn by distinguished retainers of Heartfeltian nobles, using exotic silks adquired from Fog Island."
+	icon_state = "heartfelt_kikkocoat"
+	item_state = "heartfelt_kikkocoat"
+
+/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/hand/female
+	name = "heartfelt kikko dress"
+	desc = "A dress of armor typicially worn by distinguished retainers of Heartfeltian nobles, using exotic silks adquired from Fog Island."
+	icon_state = "heartfelt_kikkodress"
+	item_state = "heartfelt_kikkodress"	
+
+/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt
+	name = "heartfelt kikko gusoku"
+	desc = "A lordly protection in Heartfelt colors. Masterfully crafted coat of hexagon plates, for important nobility."
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	icon_state = "heartfelt_kikko"
+	item_state = "heartfelt_kikko"
+	allowed_sex = list(MALE,FEMALE)
+	color = CLOTHING_HEARTFELT
+
+/obj/item/clothing/suit/roguetown/armor/cuirass/sanmaido
+	name = "san mai-do"
+	desc = "A cheap cuirass with three main plates riveted together with cloth. Flexible and dynamic, integral for many poor footsoldiers"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	icon_state = "sanmaido"	
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/rattan //New armor; Iron-to-steel tier.
+	slot_flags = ITEM_SLOT_ARMOR
+	name = "rattan armor"
+	desc = "A flexible and durable full body coat made from oil-boiled rattan and layered iron wires. Used by LinYou Raiders, it can be easily repaired."
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	icon_state = "rattan"
+	item_state = "rattan"

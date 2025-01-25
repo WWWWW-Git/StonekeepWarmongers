@@ -34,6 +34,9 @@
 	if(name == "Unknown" || name == "Unknown Man" || name == "Unknown Woman")
 		obscure_name = TRUE
 
+	if(obscure_species)
+		race_name = "incomprehensible thing"
+
 	if(isobserver(user))
 		obscure_name = FALSE
 
@@ -46,7 +49,11 @@
 			used_name = real_name
 		if(job)
 			var/datum/job/J = SSjob.GetJob(job)
-			var/used_title = J.title
+			var/used_title
+			if(J)
+				used_title = J.title
+			else
+				used_title = "Ambusher"
 			if(gender == FEMALE && J.f_title)
 				used_title = J.f_title
 			if(used_title == "Adventurer")

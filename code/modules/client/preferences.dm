@@ -13,6 +13,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/muted = 0
 	var/last_ip
 	var/last_id
+	var/is_bordered = 0
 
 	//game-preferences
 	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change
@@ -137,7 +138,8 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	var/family = FAMILY_NONE
 
-	var/crt = TRUE
+	var/crt = FALSE
+	var/wnoise = TRUE
 
 
 /datum/preferences/New(client/C)
@@ -204,65 +206,28 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/used_title
 	switch(current_tab)
 		if (0) // Character Settings#
-			used_title = "Character Sheet"
+			used_title = "Draft Notice"
 
 			// Top-level menu table
+
 			dat += "<table style='width: 100%; line-height: 20px;'>"
+
+			usr << browse_rsc('icons/ss13_32.png', "ss13_32.png")
+			dat += "<div style='text-align:center;'>"
+			dat += "<a href='?_src_=prefs;preference=wisdom;task=menu'>"
+			dat += "<img class='ninetysskull' src='ss13_32.png'>"
+			dat += "</a>"
+			dat += "</div>"
+
 			// FIRST ROW
-			dat += "<tr>"
 			dat += "<td style='width:33%;text-align:left'>"
-			dat += "<a style='white-space:nowrap;' href='?_src_=prefs;preference=changeslot;'>Change Character</a>"
-			dat += "</td>"
-
-
-			dat += "<td style='width:33%;text-align:center'>"
-			if(SStriumphs.triumph_buys_enabled)
-				dat += "<a style='white-space:nowrap;' href='?_src_=prefs;preference=triumph_buy_menu'>Triumph Buy</a>"
+			dat += "<a href='?_src_=prefs;preference=changeslot;'>Falsify Yourself</a><br>"
+			dat += "<a href='?_src_=prefs;preference=playerquality;task=menu'><b>KARMA:</b></a> [get_playerquality(user.ckey, text = TRUE)]"
 			dat += "</td>"
 
 			dat += "<td style='width:33%;text-align:right'>"
-			dat += "<a href='?_src_=prefs;preference=keybinds;task=menu'>Keybinds</a>"
-			dat += "</td>"
-			dat += "</tr>"
-
-
-			// NEXT ROW
-			dat += "<tr>"
-			dat += "<td style='width:33%;text-align:left'>"
-			dat += "</td>"
-
-			dat += "<td style='width:33%;text-align:center'>"
-			dat += "<a href='?_src_=prefs;preference=job;task=menu'>Class Selection</a>"
-			dat += "</td>"
-
-			dat += "<td style='width:33%;text-align:right'>"
-			dat += "</td>"
-			dat += "</tr>"
-
-			// ANOTHA ROW
-			dat += "<tr style='padding-top: 0px;padding-bottom:0px'>"
-			dat += "<td style='width:33%;text-align:left'>"
-			dat += "</td>"
-
-			dat += "<td style='width:33%;text-align:center'>"
-			//dat += "<a href='?_src_=prefs;preference=antag;task=menu'>Villain Selection</a>"
-			dat += "</td>"
-
-			dat += "<td style='width:33%;text-align:right'>"
-			dat += "</td>"
-			dat += "</tr>"
-
-			// ANOTHER ROW HOLY SHIT WE FINALLY A GOD DAMN GRID NOW! WHOA!
-			dat += "<tr style='padding-top: 0px;padding-bottom:0px'>"
-			dat += "<td style='width:33%; text-align:left'>"
-			dat += "<a href='?_src_=prefs;preference=playerquality;task=menu'><b>PQ:</b></a> [get_playerquality(user.ckey, text = TRUE)]"
-			dat += "</td>"
-
-			dat += "<td style='width:33%;text-align:center'>"
-			dat += "<a href='?_src_=prefs;preference=triumphs;task=menu'><b>TRIUMPHS:</b></a> [user.get_triumphs() ? "\Roman [user.get_triumphs()]" : "None"]"
-			dat += "</td>"
-
-			dat += "<td style='width:33%;text-align:right'>"
+			dat += "<a href='?_src_=prefs;preference=keybinds;task=menu'>Keybinds</a><br>"
+			dat += "[user.get_triumphs() ? "\Roman [user.get_triumphs()]" : "NULLA"] <a><b>TRIUMPH(s)</b></a>"
 			dat += "</td>"
 
 			dat += "</table>"
@@ -272,8 +237,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<a href='?_src_=prefs;preference=trait;task=menu'>Configure Quirks</a><br></center>"
 				dat += "<center><b>Current Quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
 
-
-
 			// Encapsulating table
 			dat += "<table width = '100%'>"
 			// Only one Row
@@ -282,37 +245,37 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<td width=40% valign='top'>"
 
 // 			-----------START OF IDENT TABLE-----------
-			dat += "<h2>Identity</h2>"
+			dat += "<h2>Identification Card</h2>"
 			dat += "<table width='100%'><tr><td width='75%' valign='top'>"
 			if(is_banned_from(user.ckey, "Appearance"))
 				dat += "<b>Thou are banned from using custom names and appearances. Thou can continue to adjust thy characters, but thee will be randomised once thee joins the game.</b><br>"
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_NAME]'>Always Random Name: [(randomise[RANDOM_NAME]) ? "Yes" : "No"]</a>"
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_NAME_ANTAG]'>When Antagonist: [(randomise[RANDOM_NAME_ANTAG]) ? "Yes" : "No"]</a>"
-			dat += "<b>Name:</b> "
+			dat += "<b>NAME:</b> "
 			if(check_nameban(user.ckey))
 				dat += "<a href='?_src_=prefs;preference=name;task=input'>NAMEBANNED</a><BR>"
 			else
 				dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a> <a href='?_src_=prefs;preference=name;task=random'>\[R\]</a>"
 
 			dat += "<BR>"
-			dat += "<b>Race:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (!)"]<BR>"
+			dat += "<b>RACE:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (ᛣ)"]<BR>"
 //			dat += "<a href='?_src_=prefs;preference=species;task=random'>Random Species</A> "
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SPECIES]'>Always Random Species: [(randomise[RANDOM_SPECIES]) ? "Yes" : "No"]</A><br>"
 
 			if(!(AGENDER in pref_species.species_traits))
 				var/dispGender
 				if(gender == MALE)
-					dispGender = "Man"
+					dispGender = "M"
 				else if(gender == FEMALE)
-					dispGender = "Woman"
+					dispGender = "F"
 				else
-					dispGender = "Other"
-				dat += "<b>Sex:</b> <a href='?_src_=prefs;preference=gender'>[dispGender]</a><BR>"
+					dispGender = "O"
+				dat += "<b>SEX:</b> <a href='?_src_=prefs;preference=gender'>[dispGender]</a><BR>"
 				if(randomise[RANDOM_BODY] || randomise[RANDOM_BODY_ANTAG]) //doesn't work unless random body
 					dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_GENDER]'>Always Random Gender: [(randomise[RANDOM_GENDER]) ? "Yes" : "No"]</A>"
 					dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_GENDER_ANTAG]'>When Antagonist: [(randomise[RANDOM_GENDER_ANTAG]) ? "Yes" : "No"]</A>"
 
-			dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
+			dat += "<b>AGE:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
 
 //			dat += "<br><b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a>"
 //			if(randomise[RANDOM_BODY] || randomise[RANDOM_BODY_ANTAG]) //doesn't work unless random body
@@ -320,13 +283,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 //				dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_AGE_ANTAG]'>When Antagonist: [(randomise[RANDOM_AGE_ANTAG]) ? "Yes" : "No"]</A>"
 
 //			dat += "<b><a href='?_src_=prefs;preference=name;task=random'>Random Name</A></b><BR>"
-			dat += "<b>Flaw:</b> <a href='?_src_=prefs;preference=charflaw;task=input'>[charflaw]</a><BR>"
-			var/datum/faith/selected_faith = GLOB.faithlist[selected_patron?.associated_faith]
-			dat += "<b>Faith:</b> <a href='?_src_=prefs;preference=faith;task=input'>[selected_faith?.name || "FUCK!"]</a><BR>"
-			dat += "<b>Patron:</b> <a href='?_src_=prefs;preference=patron;task=input'>[selected_patron?.name || "FUCK!"]</a><BR>"
-//			dat += "<b>Family:</b> <a href='?_src_=prefs;preference=family'>Unknown</a><BR>" // Disabling until its working
-			dat += "<b>Dominance:</b> <a href='?_src_=prefs;preference=domhand'>[domhand == 1 ? "Left-handed" : "Right-handed"]</a><BR>"
-
+			dat += "<b>FLAW:</b> <a>IT DOESN'T MATTER</a><BR>"
+			dat += "<b>FAITH:</b> <a>THE GODS ARE DEAD</a><BR>"
+			dat += "<b>DOM. HAND:</b> <a href='?_src_=prefs;preference=domhand'>[domhand == 1 ? "LEFT" : "RIGHT"]</a><BR>"
 /*
 			dat += "<br><br><b>Special Names:</b><BR>"
 			var/old_group
@@ -353,7 +312,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<td width=20% valign='top'>"
 			// Rightmost column, 40% width
 			dat += "<td width=40% valign='top'>"
-			dat += "<h2>Body</h2>"
+			dat += "<h2>Appearance</h2>"
 //			dat += "<a href='?_src_=prefs;preference=all;task=random'>Random Body</A><BR>"
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_BODY]'>Always Random Body: [(randomise[RANDOM_BODY]) ? "Yes" : "No"]</A>"
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_BODY_ANTAG]'>When Antagonist: [(randomise[RANDOM_BODY_ANTAG]) ? "Yes" : "No"]</A><br>"
@@ -908,13 +867,20 @@ GLOBAL_LIST_EMPTY(chosen_names)
 //	dat += "<a href='?_src_=prefs;preference=reset_all'>Reset Setup</a>"
 		dat += "</center>"
 
+	usr << browse_rsc('icons/ss13_32.png', "ss13_32.png")
+	dat += "<div style='text-align:center;'>"
+	dat += "<a href='?_src_=prefs;preference=mongers;task=menu'>"
+	dat += "<img class='ninetysskull' src='ss13_32.png'>"
+	dat += "</a>"
+	dat += "</div>"
+
 
 	if(user.client.is_new_player())
 		dat = list("<center>REGISTER!</center>")
 
 	winshow(user, "stonekeep_prefwin", TRUE)
 	var/datum/browser/popup = new(user, "preferences_browser", "<div align='center'>[used_title]</div>", 700, 530)
-	popup.set_window_options("can_close=0")
+	popup.set_window_options("can_close=0;can_minimize=0;border=0;titlebar=0")
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
 	update_preview_icon()
@@ -1028,7 +994,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				HTML += "<font color=#a59461>[used_name]</font></td> <td> </td></tr>"
 				continue
 			if(get_playerquality(user.ckey) < job.min_pq)
-				HTML += "<font color=#a36c63>[used_name] (Min PQ: [job.min_pq])</font></td> <td> </td></tr>"
+				HTML += "<font color=#a36c63>[used_name] (Min KARMA: [job.min_pq])</font></td> <td> </td></tr>"
 				continue
 			if(length(job.allowed_ages) && !(user.client.prefs.age in job.allowed_ages))
 				HTML += "<font color=#a36c63>[used_name]</font></td> <td> </td></tr>"
@@ -1451,7 +1417,6 @@ Slots: [job.spawn_positions]</span>
 				SetChoices(user)
 		return 1
 
-
 	else if(href_list["preference"] == "trait")
 		switch(href_list["task"])
 			if("close")
@@ -1520,6 +1485,18 @@ Slots: [job.spawn_positions]</span>
 
 	else if(href_list["preference"] == "triumph_buy_menu")
 		SStriumphs.startup_triumphs_menu(user.client)
+
+	else if(href_list["preference"] == "mongers")
+		usr.playsound_local(usr, 'sound/warmongers.ogg', 65, FALSE)
+		sleep(2 SECONDS)
+		usr.playsound_local(usr, 'sound/becauseinwarpeopledie.ogg', 65, FALSE)
+
+	else if(href_list["preference"] == "wisdom")
+		var/list/randomtips = world.file2list("string/tips.txt")
+		var/m
+		m = pick(randomtips)
+		if(m)
+			to_chat(usr, "<span class='notice'>Make sure to remember: \"[html_encode(m)]\"</span>")
 
 	else if(href_list["preference"] == "keybinds")
 		switch(href_list["task"])
@@ -1901,7 +1878,7 @@ Slots: [job.spawn_positions]</span>
 							continue
 						crap += bla
 
-					var/result = input(user, "Select a race", "Roguetown") as null|anything in crap
+					var/result = input(user, "Select a race", "WARMONGERS") as null|anything in crap
 
 					if(result)
 						//var/newtype = GLOB.species_list[result]
@@ -1920,7 +1897,7 @@ Slots: [job.spawn_positions]</span>
 
 				if("charflaw")
 					var/list/coom = GLOB.character_flaws.Copy()
-					var/result = input(user, "Select a flaw", "Roguetown") as null|anything in coom
+					var/result = input(user, "Select a flaw", "WARMONGERS") as null|anything in coom
 					if(result)
 						if(result == "Love-Fiend")
 							if(!user.can_do_sex())
@@ -2350,7 +2327,7 @@ Slots: [job.spawn_positions]</span>
 								if(!name)
 									name = "Slot[i]"
 								choices[name] = i
-					var/choice = input(user, "CHOOSE A HERO","ROGUETOWN") as null|anything in choices
+					var/choice = input(user, "CHOOSE A WAR HERO","WARMONGERS") as null|anything in choices
 					if(choice)
 						choice = choices[choice]
 						if(!load_character(choice))
@@ -2407,10 +2384,7 @@ Slots: [job.spawn_positions]</span>
 			else if(firstspace == name_length)
 				real_name += "[pick(GLOB.last_names)]"
 
-	if(real_name in GLOB.chosen_names)
-		character.real_name = pref_species.random_name(gender)
-	else
-		character.real_name = real_name
+	character.real_name = real_name
 	character.name = character.real_name
 
 	character.gender = gender

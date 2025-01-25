@@ -44,6 +44,9 @@
 	return BULLET_ACT_HIT
 
 /mob/living/bullet_act(obj/projectile/P, def_zone = BODY_ZONE_CHEST)
+	if(!prob(P.accuracy + P.bonus_accuracy)) //if your accuracy check fails, you wont hit your intended target
+		def_zone = ran_zone(BODY_ZONE_CHEST, 65)//Hits a random part of the body, geared towards the chest
+		
 	var/armor = run_armor_check(def_zone, P.flag, "", "",P.armor_penetration, damage = P.damage)
 
 	next_attack_msg.Cut()
@@ -69,9 +72,6 @@
 	var/limb_hit = check_limb_hit(def_zone)//to get the correct message info.
 	if(limb_hit)
 		organ_hit_text = " in \the [parse_zone(limb_hit)]"
-	if(def_zone == BODY_ZONE_HEAD)
-		apply_damage(100, BRUTE, BODY_ZONE_HEAD)
-		playsound(src, "headcrush", 100, vary = FALSE)
 	if(P.hitsound && !nodmg)
 		var/volume = P.vol_by_damage()
 		playsound(loc, pick(P.hitsound), volume, TRUE, -1)

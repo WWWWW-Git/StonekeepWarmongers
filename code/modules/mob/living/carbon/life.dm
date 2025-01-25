@@ -130,9 +130,11 @@
 				if(painpercent >= 40)
 					if(prob(probby))
 						emote("painscream")
+						Jitter(10)
 						stuttering += 5
 					else
 						emote("painmoan")
+						Jitter(5)
 						stuttering += 5
 				else
 					if(painpercent >= 80)
@@ -850,8 +852,8 @@ GLOBAL_LIST_INIT(ballmer_windows_me_msg, list("Yo man, what if, we like, uh, put
 		if(chest.get_damage() >= chest.max_damage)
 			chest.cremation_progress += 999
 			if(chest.cremation_progress >= 19)
-		//		visible_message("<span class='warning'>[src]'s body crumbles into a pile of ash!</span>")
-		//		dust(TRUE, TRUE)
+				visible_message("<span class='warning'>[src]'s body crumbles into a pile of ash!</span>")
+				dust(TRUE, TRUE)
 				chest.skeletonized = TRUE
 				if(ishuman(src))
 					var/mob/living/carbon/human/H = src

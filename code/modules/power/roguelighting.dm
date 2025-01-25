@@ -20,6 +20,7 @@
 			new type(target)
 	mode = GLOB.tod
 	GLOB.sunlights += src
+	START_PROCESSING(SStodchange, src)
 	update()
 
 /obj/effect/sunlight/Destroy()
@@ -263,9 +264,9 @@
 						foundstab = TRUE
 						break
 				if(foundstab)
-					var/prob2spoil = 33
+					var/prob2spoil = 21
 					if(user.mind.get_skill_level(/datum/skill/craft/cooking))
-						prob2spoil = 1
+						prob2spoil = 0
 					user.visible_message("<span class='notice'>[user] starts to cook [W] over [src].</span>")
 					for(var/i in 1 to 6)
 						if(do_after(user, 30, target = src))
@@ -295,7 +296,7 @@
 		else
 			if(!on)
 				return
-		if (alert(usr, "Feed [W] to the fire?", "ROGUETOWN", "Yes", "No") != "Yes")
+		if (alert(usr, "Feed [W] to the fire?", "WARMONGERS", "Yes", "No") != "Yes")
 			return
 		qdel(W)
 		user.visible_message("<span class='warning'>[user] feeds [W] to [src].</span>")
@@ -769,6 +770,7 @@
 	fueluse = 15 MINUTES
 	bulb_colour = "#da5e21"
 	cookonme = TRUE
+	max_integrity = 20
 
 /obj/machinery/light/rogue/campfire/process()
 	..()

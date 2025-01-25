@@ -73,13 +73,19 @@
 			var/usedkey = ckey(key)
 			if(usedkey in GLOB.anonymize)
 				usedkey = get_fake_key(usedkey)
-			SEND_TEXT(world, "<span class='notice'>[usedkey] gets enlisted.</span>")
-			var/datum/game_mode/warfare/C = SSticker.mode
-			if(C.grenzels.len < C.heartfelts.len)
+			SEND_TEXT(world, "<span class='notice'>[usedkey] gets drafted.</span>")
+			if(SSticker.oneteammode)
 				client.warfare_faction = BLUE_WARTEAM
-				C.grenzels += src.client
-				to_chat(src, "You've been assigned to the blue team.")
-			else
-				client.warfare_faction = RED_WARTEAM
-				C.heartfelts += src.client
-				to_chat(src, "You've been assigned to the red team.")
+
+/mob/dead/new_player/proc/autobalance()
+	var/datum/game_mode/warfare/W = SSticker.mode
+
+	W.heartfelts -= src.client
+	W.grenzels -= src.client
+
+	if(W.grenzels.len < W.heartfelts.len)
+		client.warfare_faction = BLUE_WARTEAM
+		W.grenzels += src.client
+	else
+		client.warfare_faction = RED_WARTEAM
+		W.heartfelts += src.client

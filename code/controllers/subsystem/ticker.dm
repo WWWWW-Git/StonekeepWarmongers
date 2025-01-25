@@ -1,4 +1,4 @@
-#define ROUND_START_MUSIC_LIST "strings/round_start_sounds.txt"
+#define ROUND_START_MUSIC_LIST "string/round_start_sounds.txt"
 
 
 GLOBAL_VAR_INIT(round_timer, INITIAL_ROUND_TIMER)
@@ -19,12 +19,18 @@ SUBSYSTEM_DEF(ticker)
 
 	var/hide_mode = 0
 	var/datum/game_mode/mode = null
+	var/datum/round_aspect/round_aspect = null
+	var/forcing_aspect = FALSE
 
 	var/login_music							//music played in pregame lobby
 	var/round_end_sound						//music/jingle played when the world reboots
 	var/round_end_sound_sent = TRUE			//If all clients have loaded it
 
 	var/warfare_ready_to_die = FALSE		// If the barriers for fair play have been removed yet.
+	var/warfare_techlevel = 1						// 1 flintlocks. 2 repeaters. 3 not yet implemeneted lol
+
+	var/oneteammode = FALSE
+	var/deathmatch = FALSE
 
 	var/list/datum/mind/minds = list()		//The characters in the game. Used for objective tracking.
 
@@ -75,6 +81,10 @@ SUBSYSTEM_DEF(ticker)
 
 	//**ROUNDEND STATS**
 	var/deaths = 0			//total deaths in the round
+
+	var/heartfelt_deaths = 0
+	var/grenzelhoft_deaths = 0
+
 	var/blood_lost = 0
 	var/tri_gained = 0
 	var/tri_lost = 0
@@ -143,7 +153,7 @@ SUBSYSTEM_DEF(ticker)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
-	login_music = pick('sound/music/hellandback.ogg','sound/music/nothingyoucando.ogg')
+	login_music = pick('sound/music/dreadfulstench.ogg','sound/music/practiceofwar.ogg','sound/music/fallenangel.ogg')
 
 	if(!GLOB.syndicate_code_phrase)
 		GLOB.syndicate_code_phrase	= generate_code_phrase(return_list=TRUE)
@@ -232,6 +242,7 @@ SUBSYSTEM_DEF(ticker)
 				toggle_dooc(TRUE)
 				declare_completion(force_ending)
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
+			/*
 			if(firstvote)
 				if(world.time > round_start_time + time_until_vote)
 					SSvote.initiate_vote("endround", "The Gods")
@@ -241,6 +252,7 @@ SUBSYSTEM_DEF(ticker)
 			else
 				if(world.time > last_vote_time + time_until_vote)
 					SSvote.initiate_vote("endround", "The Gods")
+			*/
 
 /datum/controller/subsystem/ticker
 	var/last_bot_update = 0
@@ -313,6 +325,20 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker
 	var/isroguefight = FALSE
 	var/isrogueworld = FALSE
+
+/proc/aspect_chosen(datum/round_aspect/aspect)
+	if(istype(SSticker.round_aspect, aspect))
+		return TRUE
+
+/datum/controller/subsystem/ticker/proc/pickaspect()
+	if(!forcing_aspect)
+		var/list/possibilities = list()
+		for(var/thing in subtypesof(/datum/round_aspect))//Populate possible aspects list.
+			var/datum/round_aspect/A = thing
+			possibilities += A
+		var/chosen = pick(possibilities)
+		round_aspect = new chosen
+		round_aspect.apply()
 
 /datum/controller/subsystem/ticker/proc/setup()
 	message_admins("<span class='boldannounce'>Starting game...</span>")
@@ -457,19 +483,45 @@ SUBSYSTEM_DEF(ticker)
 //	SSshuttle.emergency.startTime = world.time
 //	SSshuttle.emergency.setTimer(ROUNDTIMERBOAT)
 
-	SSdbcore.SetRoundStart()
+	CHECK_TICK
 
-	message_admins("<span class='notice'><B>Welcome to [station_name()], enjoy your stay!</B></span>")
+	SSdbcore.SetRoundStart()
+	pickaspect()
+
+	if(end_party)
+		to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
+	if(oneteammode)
+		to_chat(world, "<span class='notice'><B>This time you can only play as the Grenzelhofts.</B></span>")
+	if(deathmatch)
+		to_chat(world, "<span class='notice'><B>It's a civil war! Grenzelhofts fight Grenzelhofts... Madness! KILL THEM ALL! DON'T LET THEM BECOME THE NEW KING! Heartfelts watch in awe and laughter, their enemy is hilarious!</B></span>")
+	to_chat(world, "<span class='notice'>♔ Praise the Crown! ♔</span>")
+	spawn(10)
+		to_chat(world, "<span class='notice'>This round's aspect is: [round_aspect.name]</span>")
+		to_chat(world, "<span class='info'>[round_aspect.description]</span>")
+
+	// handle setting the war mode for this round, this is retarded, but im too lazy to do it any other way
+	var/datum/game_mode/warfare/W = mode
+	if(findtext(SSmapping.config?.map_name, "PONR"))
+		W.warmode = GAMEMODE_PONR
+	if(findtext(SSmapping.config?.map_name, "LS"))
+		W.warmode = GAMEMODE_STAND
+	if(findtext(SSmapping.config?.map_name, "LD"))
+		W.warmode = GAMEMODE_LORD
+
+	CHECK_TICK
 
 	for(var/client/C in GLOB.clients)
-		if(C.mob == SSticker.rulermob)
-			C.mob.playsound_local(C.mob, 'sound/misc/royal_roundstart.ogg', 100, FALSE)
+		if(oneteammode || deathmatch)
+			C.warfare_faction = "Grenzelhofts"
+		if(end_party)
+			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
 		else
-			C.mob.playsound_local(C.mob, 'sound/misc/roundstart.ogg', 100, FALSE)
+			C.mob.playsound_local(C.mob, 'sound/vote_start.ogg', 70, FALSE)
 
 //	SEND_SOUND(world, sound('sound/misc/roundstart.ogg'))
 	current_state = GAME_STATE_PLAYING
 
+	CHECK_TICK
 
 	Master.SetRunLevel(RUNLEVEL_GAME)
 /*
@@ -479,7 +531,11 @@ SUBSYSTEM_DEF(ticker)
 			var/datum/holiday/holiday = SSevents.holidays[holidayname]
 			to_chat(world, "<h4>[holiday.greet()]</h4>")
 */
+
+	CHECK_TICK
+
 	PostSetup()
+	CHECK_TICK
 	log_game("GAME SETUP: postsetup success")
 
 	return TRUE
@@ -618,8 +674,8 @@ SUBSYSTEM_DEF(ticker)
 	if(selected_tip)
 		m = selected_tip
 	else
-		var/list/randomtips = world.file2list("strings/tips.txt")
-//		var/list/memetips = world.file2list("strings/sillytips.txt")
+		var/list/randomtips = world.file2list("string/tips.txt")
+//		var/list/memetips = world.file2list("string/sillytips.txt")
 //		if(randomtips.len && prob(95))
 		m = pick(randomtips)
 //		else if(memetips.len)
@@ -793,7 +849,7 @@ SUBSYSTEM_DEF(ticker)
 	if(mode)
 		GLOB.master_mode = mode
 	else
-		GLOB.master_mode = "extended"
+		GLOB.master_mode = "warmode"
 	log_game("Saved mode is '[GLOB.master_mode]'")
 
 /datum/controller/subsystem/ticker/proc/save_mode(the_mode)
@@ -863,15 +919,47 @@ SUBSYSTEM_DEF(ticker)
 	text2file(login_music, "data/last_round_lobby_music.txt")
 
 /datum/controller/subsystem/ticker/proc/ReadyToDie()
+	var/datum/game_mode/warfare/W = mode
 	if(!warfare_ready_to_die)
-		to_chat(world, "The barriers have fallen, it is your turn to die now.")
+		to_chat(world, pick("FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I'M NOT AFRAID TO DIE!"))
+		if(!(oneteammode || deathmatch))
+			W.reinforcements()
 		warfare_ready_to_die = TRUE
 		for(var/mob/M in GLOB.player_list)
-			SEND_SOUND(M, 'sound/music/tension2.ogg')
+			SEND_SOUND(M, 'sound/music/wolfintro.ogg')
 		for(var/obj/structure/warfarebarrier/WB in world)
 			qdel(WB)
 		for(var/obj/structure/warfarebarrier/red/WB in world)
 			qdel(WB)
+		for(var/obj/structure/warfarestatue/WS in world)
+			WS.begincountdown()	
+
+/proc/GetMainGunForWarfareHeartfelt()
+	switch(SSticker.warfare_techlevel)
+		if(1)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
+		if(2)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
+		if(3)
+			return null
+
+/proc/GetMainGunForWarfareGrenzelhoft()
+	switch(SSticker.warfare_techlevel)
+		if(1)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz
+		if(2)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
+		if(3)
+			return null
+
+/proc/GetSidearmForWarfare()
+	switch(SSticker.warfare_techlevel)
+		if(1)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+		if(2)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
+		if(3)
+			return null
 
 /datum/controller/subsystem/ticker/proc/SendReinforcements()
 	var/datum/game_mode/warfare/W = mode
@@ -883,35 +971,36 @@ SUBSYSTEM_DEF(ticker)
 	var/list/reinforcementinas = list()
 	switch(W.reinforcementwave)
 		if(1)
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
+			reinforcementinas += "/obj/item/bomb"
+			reinforcementinas += "/obj/item/bomb/fire/weak"
 		if(2)
 			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb"
-			reinforcementinas += "/obj/item/flint"
+			reinforcementinas += "/obj/item/bomb/fire/weak"
+			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/flint"
 		if(3)
-			reinforcementinas += "/obj/item/bomb"
+			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/flint"
+			reinforcementinas += "/obj/item/bomb/poison"
+			reinforcementinas += "/obj/item/bomb"
+			reinforcementinas += "/obj/item/bomb"
 		if(4)
 			reinforcementinas += "/obj/item/bomb/fire"
 			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/bomb/fire"
+			reinforcementinas += "/obj/item/bomb/poison"
+			reinforcementinas += "/obj/item/bomb/poison"
 		if(5)
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
-			reinforcementinas += "/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame"
-			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/bomb/fire"
+			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/flint"
-	to_chat(world, "Additional resources have been sent to both sides of this conflict.")
+			reinforcementinas += "/obj/item/bomb/smoke"
+			reinforcementinas += "/obj/item/bomb/poison"
+			reinforcementinas += "/obj/item/bomb/poison"
+			SSticker.warfare_techlevel = 2
+	to_chat(world, "<span class='info'>Reinforcements have arrived.</span>")
 	for(var/mob/M in GLOB.player_list)
-		SEND_SOUND(M, 'sound/music/tension2.ogg')
+		SEND_SOUND(M, 'sound/music/traitor.ogg')
 	for(var/i in reinforcementinas)
 		var/typepath = text2path(i)
 		new typepath(red.loc)

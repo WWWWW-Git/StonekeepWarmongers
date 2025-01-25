@@ -75,18 +75,6 @@
 		to_chat(src, "<span class='danger'>The Github URL is not set in the server configuration.</span>")
 	return
 
-/client/verb/changelog()
-	set name = "Changelog"
-	set category = "OOC"
-	set hidden = 1
-//	var/datum/asset/changelog = get_asset_datum(/datum/asset/simple/changelog)
-//	changelog.send(src)
-	src << browse('html/changelog.html', "window=changes;size=675x650")
-	if(prefs.lastchangelog != GLOB.changelog_hash)
-		prefs.lastchangelog = GLOB.changelog_hash
-		prefs.save_preferences()
-		winset(src, "infowindow.changelog", "font-style=;")
-
 /client/verb/hotkeys_help()
 	set name = "zHelp-Controls"
 	set category = "Options"
@@ -147,36 +135,13 @@ Hotkey-Mode: (hotkey-mode must be on)
 /client/verb/set_stretch()
 	set name = "IconScaling"
 	set category = "Options"
-	if(prefs)
-		if(prefs.crt == TRUE)
-			to_chat(src, "CRT mode is on.")
-			winset(src, "mapwindow.map", "zoom-mode=blur")
-			return
 	if(winget(src, "mapwindow.map", "zoom-mode") == "normal")
 		to_chat(src, "Pixel-perfect... OK")
 		winset(src, "mapwindow.map", "zoom-mode=distort")
 	else
 		to_chat(src, "Anti-aliased... OK")
 		winset(src, "mapwindow.map", "zoom-mode=normal")
-
-/client/verb/crtmode()
-	set category = "Options"
-	set name = "ToggleCRT"
-	if(!prefs)
-		return
-	if(prefs.crt == TRUE)
-		prefs.crt = FALSE
-		prefs.save_preferences()
-		to_chat(src, "CRT... OFF")
-		for(var/atom/movable/screen/scannies/S in screen)
-			S.alpha = 0
-	else
-		prefs.crt = TRUE
-		prefs.save_preferences()
-		to_chat(src, "CRT... ON")
-		for(var/atom/movable/screen/scannies/S in screen)
-			S.alpha = 100
-
+	
 /client/verb/changefps()
 	set category = "Options"
 	set name = "ChangeFPS"

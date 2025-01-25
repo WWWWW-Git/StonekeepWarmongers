@@ -1000,7 +1000,7 @@
 
 /atom/movable/screen/zone_sel
 	name = "damage zone"
-	icon_state = "m-zone_sel"
+	icon_state = "" //"m-zone_sel"
 	screen_loc = rogueui_targetdoll
 	var/overlay_icon = 'icons/mob/roguehud64.dmi'
 	var/static/list/hover_overlays_cache = list()
@@ -1015,10 +1015,6 @@
 	var/icon_x = text2num(PL["icon-x"])
 	var/icon_y = text2num(PL["icon-y"])
 	var/choice = get_zone_at(icon_x, icon_y)
-	if(ismob(hud.mymob))
-		var/mob/M = hud.mymob
-		if(M.gender == FEMALE)
-			choice = get_zone_at(icon_x, icon_y, FEMALE)
 	if (!choice)
 		return 1
 
@@ -1040,11 +1036,6 @@
 	var/icon_y = text2num(PL["icon-y"])
 	var/choice = get_zone_at(icon_x, icon_y)
 	choice = "m_[choice]"
-	if(ismob(hud.mymob))
-		var/mob/M = hud.mymob
-		if(M.gender == FEMALE)
-			choice = get_zone_at(icon_x, icon_y, FEMALE)
-			choice = "f_[choice]"
 
 	if(hovering == choice)
 		return
@@ -1334,8 +1325,6 @@
 	if(!hud?.mymob)
 		return
 
-	icon_state = "[hud.mymob.gender == "male" ? "m" : "f"]-zone_sel"
-
 	if(hud.mymob.stat != DEAD && ishuman(hud.mymob))
 		var/mob/living/carbon/human/H = hud.mymob
 		for(var/X in H.bodyparts)
@@ -1343,7 +1332,7 @@
 			if(BP.body_zone in H.get_missing_limbs())
 				continue
 			if(HAS_TRAIT(H, TRAIT_NOPAIN))
-				var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]-[BP.body_zone]")
+				var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "m-[BP.body_zone]")
 				limby.color = "#78a8ba"
 				. += limby
 				continue
@@ -1351,19 +1340,18 @@
 			if(damage > BP.max_damage)
 				damage = BP.max_damage
 			var/comparison = (damage/BP.max_damage)
-			. += mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]-[BP.body_zone]") //apply healthy limb
-			var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]w-[BP.body_zone]") //apply wounded overlay
+			. += mutable_appearance('icons/mob/roguehud64.dmi', "m-[BP.body_zone]") //apply healthy limb
+			var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "mw-[BP.body_zone]") //apply wounded overlay
 			limby.alpha = (comparison*255)*2
 			. += limby
 			if(BP.get_bleed_rate())
-				. += mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]-[BP.body_zone]-bleed") //apply healthy limb
+				. += mutable_appearance('icons/mob/roguehud64.dmi', "m-[BP.body_zone]-bleed") //apply healthy limb
 		for(var/X in H.get_missing_limbs())
-			var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "[H.gender == "male" ? "m" : "f"]-[X]") //missing limb
+			var/mutable_appearance/limby = mutable_appearance('icons/mob/roguehud64.dmi', "m-[X]") //missing limb
 			limby.color = "#2f002f"
 			. += limby
 
-	. += mutable_appearance(overlay_icon, "[hud.mymob.gender == "male" ? "m" : "f"]_[hud.mymob.zone_selected]")
-//	. += mutable_appearance(overlay_icon, "height_arrow[hud.mymob.aimheight]")
+	. += mutable_appearance(overlay_icon, "m_[hud.mymob.zone_selected]")
 
 /atom/movable/screen/zone_sel/alien
 	icon = 'icons/mob/screen_alien.dmi'
@@ -1487,7 +1475,6 @@
 
 /atom/movable/screen/splash
 	icon = 'icons/blank_title.png'
-	icon_state = ""
 	screen_loc = "1,1"
 	layer = SPLASHSCREEN_LAYER+1
 	plane = SPLASHSCREEN_PLANE
@@ -1496,7 +1483,7 @@
 
 /atom/movable/screen/splash/credits
 	icon = 'icons/fullblack.dmi'
-	icon_state = ""
+	icon_state = null
 	screen_loc = ui_backhudl
 	layer = SPLASHSCREEN_LAYER
 	fucme = FALSE
@@ -1525,10 +1512,10 @@
 	if(QDELETED(src))
 		return
 	if(out)
-		animate(src, alpha = 0, time = 30)
+		animate(src, alpha = 0, time = 30, flags = ANIMATION_PARALLEL)
 	else
 		alpha = 0
-		animate(src, alpha = 255, time = 30)
+		animate(src, alpha = 255, time = 30, flags = ANIMATION_PARALLEL)
 	if(qdel_after)
 		QDEL_IN(src, 30)
 
@@ -1560,6 +1547,9 @@
 /atom/movable/screen/gameover/hog
 	icon_state = "hog"
 	alpha = 0
+
+/atom/movable/screen/gameover/hog/baby
+	icon_state = "ashbaby"
 
 /atom/movable/screen/gameover/hog/Fade(out = FALSE, qdel_after = FALSE)
 	if(QDELETED(src))
@@ -1683,9 +1673,8 @@
 	if(ishuman(usr))
 		var/mob/living/carbon/human/M = usr
 		if(modifiers["left"])
-			if(M.charflaw)
-				to_chat(M, "*----*")
-				to_chat(M, "<span class='info'>[M.charflaw.desc]</span>")
+			to_chat(M, "*----*")
+			to_chat(M, "<span class='info'>I'm indifferent. I hate myself, here's all that's bugging me right now. Life sucks.</span>")
 			to_chat(M, "*--------*")
 			var/list/already_printed = list()
 			for(var/datum/stressevent/S in M.positive_stressors)
@@ -1725,15 +1714,16 @@
 			already_printed = list()
 			to_chat(M, "*--------*")
 		if(modifiers["right"])
-			if(M.get_triumphs() <= 0)
-				to_chat(M, "<span class='warning'>I haven't TRIUMPHED.</span>")
+			if(M.get_triumphs() < 2)
+				to_chat(M, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
 				return
-			if(alert("Do you want to remember a TRIUMPH?", "", "Yes", "No") == "Yes")
+			if(alert("FIGHT WITH ALL YOU GOT?!", "", "Yes", "No") == "Yes")
 				var/mob/living/carbon/V = M
 				if(V.add_stress(/datum/stressevent/triumph))
-					M.adjust_triumphs(-1)
-					M.playsound_local(M, 'sound/misc/notice (2).ogg', 100, FALSE)
-
+					M.adjust_triumphs(-2)
+					M.apply_status_effect(/datum/status_effect/buff/inspired)
+					M.playsound_local(M, 'sound/magic/inspire_02.ogg', 100, FALSE)
+					M.visible_message("<span class='info'>[M] looks more eager to fight!</span>", "<span class='notice'>I feel inspired to fight!</span>")
 
 /atom/movable/screen/rmbintent
 	name = "alt intents"
@@ -1912,7 +1902,7 @@
 	name = ""
 	screen_loc = "1,1"
 	mouse_opacity = 0
-	alpha = 150
+	alpha = 120
 //	layer = 20.5
 //	plane = 20
 	layer = 13
@@ -1925,7 +1915,7 @@
 	name = ""
 	screen_loc = ui_backhudl
 	mouse_opacity = 0
-	alpha = 0
+	alpha = 128
 	layer = 24
 	plane = 24
 	blend_mode = BLEND_MULTIPLY

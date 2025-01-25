@@ -200,14 +200,20 @@
 
 	log_game("The round has ended.")
 
-	to_chat(world, "<BR><BR><BR><span class='reallybig'>If there be any glory in war, let it rest on him.</span>")
+	to_chat(world, "<BR><BR><BR><span class='reallybig'>If there be any glory in war, let it rest on us.</span>")
 	get_end_reason()
+	SSvote.initiate_vote("map", "The God of War")
+
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		var/datum/game_mode/warfare/C = SSticker.mode
+		C.award_triumphs()
 
 	var/list/key_list = list()
 	for(var/client/C in GLOB.clients)
 		if(C.mob)
 			SSdroning.kill_droning(C)
-			C.mob.playsound_local(C.mob, 'sound/music/credits.ogg', 100, FALSE)
+			SSvote.interface(C) // FORCE them to vote.
+			C.mob.playsound_local(C.mob, 'sound/music/rainingdownofathousandsouls.ogg', 100, FALSE)
 		if(isliving(C.mob) && C.ckey)
 			key_list += C.ckey
 //	if(key_list.len)
@@ -302,15 +308,26 @@
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 		if(C.whowon)
-			end_reason = "The [C.whowon] win yet another conflict! Glory!"
+			end_reason = "The [C.whowon] win yet another conflict."
 
 	if(end_reason)
-		to_chat(world, "<span class='big bold'>[end_reason].</span>")
+		to_chat(world, "<span class='big bold'>[end_reason]</span>")
+		to_chat(world, pick("This battle was futile. This world is already gone. What I fought for was lost the day I took up arms. No salvation can come through this fight.","Only the dead may know the end of war.","We are going to have peace even if we have to fight for it.","War is heck.","The supreme art of war is to subdue the enemy without fighting, we have failed."))
 		if(istype(SSticker.mode, /datum/game_mode/warfare))
 			var/datum/game_mode/warfare/C = SSticker.mode
-			to_chat(world, "<span class='bold'>The one whom sat on the throne was the one and only [C.crownbearer.real_name] ([C.crownbearer.ckey])!</span>")
+			if(C.warmode != GAMEMODE_STAND && C.crownbearer)
+				to_chat(world, "<span class='info'>The one whom sat on the throne was the one and only [C.crownbearer.real_name] ([C.crownbearer.ckey])!</span>")
 	else
-		to_chat(world, "<span class='big bold'>Stalemate! Shame on both of you!</span>")
+		to_chat(world, "<span class='big bold'>STALEMATE. HOW SHAMEFUL.</span>")
+
+
+	/*
+	for(var/client/C in GLOB.clients)
+		if(end_reason)
+			C.showtext(end_reason)
+		else
+			C.showtext("STALEMATE. HOW SHAMEFUL.")
+	*/
 		
 /datum/controller/subsystem/ticker/proc/gamemode_report()
 	var/list/all_teams = list()
@@ -363,10 +380,10 @@
 	var/list/shit = list()
 	shit += "<br><span class='bold'>Δ--------------------Δ</span><br>"
 	shit += "<br><font color='#d4ff00'><span class='bold'>Weapons Shot:</span></font> [musketsshot]"
-	shit += "<br><font color='#9b6937'><span class='bold'>Deaths:</span></font> [deaths]"
+	shit += "<br><font color='#680000'><span class='bold'>Heartfelt Deaths:</span></font> [heartfelt_deaths]"
+	shit += "<br><font color='#001a68'><span class='bold'>Grenzelhoft Deaths:</span></font> [grenzelhoft_deaths]"
+	shit += "<br><font color='#000000'><span class='bold'>Total Deaths:</span></font> [deaths]"
 	shit += "<br><font color='#af2323'><span class='bold'>Blood spilt:</span></font> [round(blood_lost / 100, 1)]L"
-	shit += "<br><font color='#36959c'><span class='bold'>TRIUMPH(s) Awarded:</span></font> [tri_gained]"
-	shit += "<br><font color='#a02fa4'><span class='bold'>TRIUMPH(s) Stolen:</span></font> [tri_lost * -1]"
 //	if(cuckers.len)
 //		shit += "<br><font color='#4e488a'><span class='bold'>Adulterers:</span></font> "
 //		for(var/x in cuckers.len)

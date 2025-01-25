@@ -179,19 +179,6 @@ SUBSYSTEM_DEF(vote)
 				var/vote_power = 1
 				if(usr.client.holder)
 					vote_power += 5
-				if(ishuman(usr))
-					var/mob/living/carbon/H = usr
-					if(H.stat != DEAD)
-						vote_power += 3
-					if(H.job)
-						var/list/list_of_powerful = list("King", "Queen", "Priest", "Steward", "Hand")
-						if(H.job in list_of_powerful)
-							vote_power += 5
-						else
-							if(H.mind)
-								for(var/datum/antagonist/D in H.mind.antag_datums)
-									if(D.increase_votepwr)
-										vote_power += 3
 				choices[choices[vote]] += vote_power //check this
 				return vote
 	return 0
@@ -248,6 +235,8 @@ SUBSYSTEM_DEF(vote)
 		log_vote(text)
 		var/vp = CONFIG_GET(number/vote_period)
 		to_chat(world, "\n<font color='purple'><b>[text]</b>\nClick <a href='?src=[REF(src)]'>here</a> to place your vote.\nYou have [DisplayTimeText(vp)] to vote.</font>")
+		for(var/mob/M in GLOB.player_list)
+			M.playsound_local(M, 'sound/timestop.ogg', 75)
 		time_remaining = round(vp/10)
 //		for(var/c in GLOB.clients)
 //			var/client/C = c

@@ -62,6 +62,7 @@
 		ammo_list -= O
 		O.forceMove(user.loc)
 		user.put_in_hands(O)
+		playsound(get_turf(user), 'sound/foley/struggle.ogg', 100, FALSE, -2)
 		update_icon()
 		return TRUE
 
@@ -83,6 +84,13 @@
 		ammo_list += A
 	update_icon()
 
+/obj/item/quiver/arrows/fog/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/arrow/poison/fog/A = new()
+		ammo_list += A
+	update_icon()
+
 /obj/item/quiver/bolts/Initialize()
 	..()
 	for(var/i in 1 to max_storage)
@@ -90,9 +98,59 @@
 		ammo_list += A
 	update_icon()
 
+/obj/item/quiver/bullets
+	name = "ammunition pouch"
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "sack_rope"
+	item_state = "quiver"
+
+/obj/item/quiver/bullets/update_icon()
+	if(ammo_list.len)
+		icon_state = "sack_rope"
+	else
+		icon_state = "sack_rope"
+
 /obj/item/quiver/bullets/Initialize()
 	..()
 	for(var/i in 1 to max_storage)
 		var/obj/item/ammo_casing/caseless/rogue/bullet/A = new()
+		ammo_list += A
+	update_icon()
+
+/obj/item/quiver/ironbullets
+	name = "ammunition pouch"
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "sack_rope"
+	item_state = "quiver"
+
+/obj/item/quiver/ironbullets/update_icon()
+	if(ammo_list.len)
+		icon_state = "sack_rope"
+	else
+		icon_state = "sack_rope"
+
+/obj/item/quiver/ironbullets/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/bullet/iron/A = new()
+		ammo_list += A
+	update_icon()
+
+/obj/item/quiver/woodbullets
+	name = "ammunition pouch"
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "sack_rope"
+	item_state = "quiver"
+
+/obj/item/quiver/woodbullets/update_icon()
+	if(ammo_list.len)
+		icon_state = "sack_rope"
+	else
+		icon_state = "sack_rope"
+
+/obj/item/quiver/woodbullets/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/bullet/wood/A = new()
 		ammo_list += A
 	update_icon()

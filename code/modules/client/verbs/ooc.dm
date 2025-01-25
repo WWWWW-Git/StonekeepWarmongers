@@ -6,9 +6,27 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 /client/proc/getemojiforrank()
 	var/img = "normie"
 	if(check_bypasslist(ckey))
+		img = "zizo_wood"
+	if(holder)
+		img = "admin"
+		if(check_badminlist(ckey))
+			img = "badmin"
+	if(get_playerquality(ckey) <= -10)
 		img = "zizo"
 	if(ckey == "helloiamjesus")
-		img = "psydon"
+		if(holder)
+			img = "psydon"
+	return img
+
+/client/proc/getemojiforfaction()
+	var/img = "normie"
+	if(ishuman(mob))
+		var/mob/living/carbon/human/H = mob
+		switch(H.warfare_faction)
+			if(RED_WARTEAM)
+				img = "heartfelt"
+			if(BLUE_WARTEAM)
+				img = "skull"
 	return img
 
 /client/verb/ooc(msg as text)
@@ -28,10 +46,6 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 			return
 
 	if(blacklisted())
-		to_chat(src, "<span class='danger'>I can't use that.</span>")
-		return
-
-	if(get_playerquality(ckey) <= -5)
 		to_chat(src, "<span class='danger'>I can't use that.</span>")
 		return
 
@@ -93,9 +107,9 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	for(var/client/C in GLOB.clients)
 		var/real_key = C.holder ? "([key])" : ""
 		if(C.prefs.chat_toggles & CHAT_OOC)
-			msg_to_send = "[icon2html('icons/emoji.dmi',world,getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='[chat_color]'><span class='message linkify'>[msg]</span></font>"
+			msg_to_send = "\icon[icon('icons/emoji.dmi', getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='[chat_color]'><span class='message linkify'>[msg]</span></font>"
 			if(holder)
-				msg_to_send = "[icon2html('icons/emoji.dmi',world,getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='#4972bc'><span class='message linkify'>[msg]</span></font>"
+				msg_to_send = "\icon[icon('icons/emoji.dmi', getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='#4972bc'><span class='message linkify'>[msg]</span></font>"
 			to_chat(C, msg_to_send)
 
 //				if(!holder.fakekey || C.holder)
@@ -133,10 +147,6 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 			return
 
 	if(blacklisted())
-		to_chat(src, "<span class='danger'>I can't use that.</span>")
-		return
-
-	if(get_playerquality(ckey) <= -5)
 		to_chat(src, "<span class='danger'>I can't use that.</span>")
 		return
 
@@ -195,9 +205,9 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 			if(SSticker.current_state != GAME_STATE_FINISHED && !istype(C.mob, /mob/dead/new_player) && !C.holder)
 				continue
 
-			msg_to_send = "[icon2html('icons/emoji.dmi',world,getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='[chat_color]'><span class='message linkify'>[msg]</span></font>"
+			msg_to_send = "\icon[icon('icons/emoji.dmi', getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='[chat_color]'><span class='message linkify'>[msg]</span></font>"
 			if(holder)
-				msg_to_send = "[icon2html('icons/emoji.dmi',world,getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='#4972bc'><span class='message linkify'>[msg]</span></font>"
+				msg_to_send = "\icon[icon('icons/emoji.dmi', getemojiforrank())]<font color='[color2use]'><EM>[keyname][real_key]:</EM></font> <font color='#4972bc'><span class='message linkify'>[msg]</span></font>"
 
 			to_chat(C, msg_to_send)
 
@@ -316,6 +326,32 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	set name = "SilenceLobbyMusic"
 	set category = "Options"
 	stop_sound_channel(CHANNEL_LOBBYMUSIC)
+
+/client/verb/reloading()
+	set name = "RELOADING"
+	set category = "HELP"
+	var/contents
+
+	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
+	contents += "<center>Reloading a flintlock is easy!<BR>"
+	contents += "--------------</center><BR>"
+	contents += "Take a bullet from your ball pouch, if you have one (rclick), put in bullet (lclick), cock musket (rclick with hand not holding musket), middleclick musket to get ramrod, ram musket, middleclick to put back, click musket to wield, hold to aim and release to shoot, done you just killed a man! Good job! Oh, and for those new levershots? Just use the right click twice on 'em, load a bullet in the chamber. Really easy, really. The same for that small one."
+	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
+	popup.set_content(contents)
+	popup.open()
+
+/client/verb/medicating()
+	set name = "MEDICINE"
+	set category = "HELP"
+	var/contents
+
+	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
+	contents += "<center>Dr. Urist's Discount Medical School<BR>"
+	contents += "--------------</center><BR>"
+	contents += "While playing a medic it is good to know how to heal people. First, you spawn with a health potion and surgery tools. When you see an injured person feed them the potion and in the rare instance you don't have it prepared, use your surgery tools. A CRANKeR is a tool used to get you more drugs. Put in a limb and a bottle. Crank it by clicking it in your hand and then grab the potion you attached to it with MMB; which is now filled with cool new drugs! You can choose which drug to manufacture by using RMB. Oh yeah, it also gives the Lord a support point to redeem for new toys. Pretty cool."
+	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
+	popup.set_content(contents)
+	popup.open()
 
 /proc/CheckJoinDate(ckey)
 	var/list/http = world.Export("http://byond.com/members/[ckey]?format=text")

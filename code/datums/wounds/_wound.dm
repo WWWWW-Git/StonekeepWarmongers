@@ -135,6 +135,11 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 			return FALSE
 	return TRUE
 
+/datum/wound/proc/do_blood_effect()
+	var/splatter_dir = turn(owner.dir, 180)
+	var/turf/target_loca = get_turf(owner)
+	new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir)
+
 /// Returns whether or not this wound can be applied while this other wound is present
 /datum/wound/proc/can_stack_with(datum/wound/other)
 	return TRUE
@@ -159,6 +164,8 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 			affected.owner.next_attack_msg += " [message]"
 	if(!silent)
 		var/sounding = get_sound_effect(affected.owner, affected)
+		if(bleed_rate)
+			do_blood_effect()
 		if(sounding)
 			playsound(affected.owner, sounding, 100, vary = FALSE)
 	return TRUE
@@ -272,7 +279,7 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 		return FALSE
 	var/old_overlay = mob_overlay
 	mob_overlay = sewn_overlay
-	bleed_rate = sewn_bleed_rate
+	bleed_rate = 0
 	clotting_rate = sewn_clotting_rate
 	clotting_threshold = sewn_clotting_threshold
 	woundpain = sewn_woundpain
@@ -280,7 +287,7 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 	disabling = FALSE
 	can_sew = FALSE
 	sleep_healing = max(sleep_healing, 1)
-	passive_healing = max(passive_healing, 1)
+	passive_healing = 30
 	if(mob_overlay != old_overlay)
 		owner?.update_damage_overlays()
 	return TRUE
