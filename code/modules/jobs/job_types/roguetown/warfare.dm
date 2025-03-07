@@ -178,7 +178,7 @@
 	tutorial = "Heartfelt is under attack. Your men are demoralized and little is left. But not all is lost just yet, with supplies coming in from the Foglands you might be able to push the Grenzelhoft barbarians off this land."
 	department_flag = REDSS
 	flag = REDKING
-	min_pq = -10
+	min_pq = 0
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
@@ -324,13 +324,14 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = -1
-	reinforcements_wave = 2
+	reinforcements_wave = 1
 
 /datum/outfit/job/roguetown/redsamurai/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = /obj/item/clothing/under/roguetown/trou/tobi
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/heartfelt
 	armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad/heartfelt
+	backl = /obj/item/rogue/musicpack/heartfelt // Zamurai are mostly a unit only still trained because it boosts moral, they're a potent masculine figure in Heartfelt. Like lumberjacks!
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltl = /obj/item/rogueweapon/sword/short/wakizashi
@@ -378,7 +379,10 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/rattan
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	beltl = /obj/item/rogueweapon/battle/ono
+	if(H.dna.species.id == "dwarf")
+		beltl = /obj/item/rogueweapon/woodcut/pick
+	else
+		beltl = /obj/item/rogueweapon/battle/ono
 	beltr = GetSidearmForWarfare()
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	backl = /obj/item/storage/backpack/rogue/backpack
@@ -446,7 +450,6 @@
 		H.change_stat("strength", 2)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
-	ADD_TRAIT(H, TRAIT_FIRELANCER, TRAIT_GENERIC)
 
 //// HEARTFELT NINJA ////
 
@@ -550,6 +553,7 @@
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
+	min_pq = -5
 
 /datum/outfit/job/roguetown/redofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -661,7 +665,7 @@
 	tutorial = "A middle-class noble with aspirations for something greater. You've been given charge of a small detachment and sent directly into the meat grinder. You will either return to Grenzelhoft a conquerer, or not at all."
 	department_flag = BLUES
 	flag = BLUKING
-	min_pq = -10
+	min_pq = 0
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
@@ -811,7 +815,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = -1
-	reinforcements_wave = 2
+	reinforcements_wave = 1
 
 /datum/outfit/job/roguetown/bluzweihander/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -906,7 +910,10 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = GetSidearmForWarfare()
-	beltl = /obj/item/rogueweapon/woodcut/steel
+	if(H.dna.species.id == "dwarf")
+		beltl = /obj/item/rogueweapon/woodcut/pick
+	else
+		beltl = /obj/item/rogueweapon/woodcut/steel
 	backr = /obj/item/quiver/woodbullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
@@ -951,6 +958,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/jester
 	pants = /obj/item/clothing/under/roguetown/tights
 	armor = /obj/item/clothing/suit/roguetown/shirt/jester
+	backl = /obj/item/rogue/musicpack
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = /obj/item/rogue/caltrop/bombed
 	beltl = pick(/obj/item/rogueweapon/huntingknife/cleaver/combat, /obj/item/rogueweapon/sword/rapier)
@@ -1096,6 +1104,7 @@
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
+	min_pq = -5
 
 /datum/outfit/job/roguetown/bluofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()

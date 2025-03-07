@@ -7,6 +7,11 @@
 #define BLUE_WARTEAM "Grenzelhofts" // Grenzelhoft
 #define RED_WARTEAM "Heartfelts" // Heartfelt
 
+#define WARMONGERS_TECHLEVEL_FLINTLOCKS 1
+#define WARMONGERS_TECHLEVEL_COWBOY 2
+#define WARMONGERS_TECHLEVEL_NONE 3
+#define WARMONGERS_TECHLEVEL_AUTO 4 // this is a joke mostly
+
 #define GAMEMODE_PONR "Point of No Return"
 #define GAMEMODE_LORD "Lord Destruction"
 #define GAMEMODE_STAND "Last Stand"
@@ -152,7 +157,7 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 #define MAX_SHOE_BLOODINESS			100
 #define BLOODY_FOOTPRINT_BASE_ALPHA	150
 #define BLOOD_GAIN_PER_STEP			100
-#define BLOOD_LOSS_PER_STEP			5
+#define BLOOD_LOSS_PER_STEP			2
 #define BLOOD_LOSS_IN_SPREAD		20
 #define BLOOD_AMOUNT_PER_DECAL		20
 

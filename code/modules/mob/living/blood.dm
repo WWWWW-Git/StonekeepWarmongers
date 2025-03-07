@@ -128,15 +128,15 @@
 					blur_eyes(6)
 					to_chat(src, "<span class='warning'>I feel faint.</span>")
 				if(prob(3) && !IsUnconscious())
-					Unconscious(rand(5 SECONDS,10 SECONDS))
+					adjustOxyLoss(6)
 					to_chat(src, "<span class='warning'>I feel drained.</span>")
 				remove_status_effect(/datum/status_effect/debuff/bleedingworse)
 				remove_status_effect(/datum/status_effect/debuff/bleeding)
 				apply_status_effect(/datum/status_effect/debuff/bleedingworst)
 		if(blood_volume <= BLOOD_VOLUME_BAD)
-			adjustOxyLoss(1)
+			adjustOxyLoss(2)
 			if(blood_volume <= BLOOD_VOLUME_SURVIVE)
-				adjustOxyLoss(2)
+				adjustOxyLoss(4)
 	else
 		remove_status_effect(/datum/status_effect/debuff/bleeding)
 		remove_status_effect(/datum/status_effect/debuff/bleedingworse)
@@ -353,6 +353,12 @@
 		W.water_volume = 10
 		W.update_icon()
 		return
+
+	var/obj/structure/well/fountain/F = locate() in T
+	if(F)
+		new /obj/structure/well/fountain/bloody(T)
+		qdel(F)
+		return
 	new /obj/effect/decal/cleanable/blood/splatter(T, get_static_viruses())
 
 /mob/living/proc/add_drip_floor(turf/T, amt)
@@ -372,6 +378,11 @@
 			W.water_maximum = 10
 			W.water_volume = 10
 			W.update_icon()
+			return
+		var/obj/structure/well/fountain/F = locate() in T
+		if(F)
+			new /obj/structure/well/fountain/bloody(T)
+			qdel(F)
 			return
 	var/obj/effect/decal/cleanable/blood/puddle/P = locate() in T
 	if(P)

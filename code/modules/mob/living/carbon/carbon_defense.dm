@@ -78,14 +78,16 @@
 			to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
 			playsound(src, "headcrush", 100, vary = FALSE)
 			newdam = newdam * 2
-			var/obj/item/clothing/head/hed = head
+			var/obj/item/clothing/head/roguetown/hed = head
 			if(hed)
 				transferItemToLoc(hed, get_step(src, turn(dir, 180)))
+				hed.take_damage(45 + newdam / 2, BRUTE, "melee", 1)
 				head = null
 				update_inv_head()
 			else
 				newdam = newdam * 5
 				new /obj/effect/temp_visual/decoy/fading/blood(get_turf(src))
+				SEND_SOUND(src, 'sound/lobotomy.ogg')
 				death()
 		BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 		return TRUE

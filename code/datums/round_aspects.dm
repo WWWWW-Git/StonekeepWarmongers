@@ -19,7 +19,7 @@
 	description = "These levershots are the future!"
 
 /datum/round_aspect/futurewar/apply()
-	SSticker.warfare_techlevel = 2
+	SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
 
 /datum/round_aspect/nomood
 	name = "Moodless"
@@ -40,10 +40,6 @@
 /datum/round_aspect/noreloading
 	name = "God of War's Blessing"
 	description = "We are blessed!"
-	
-/datum/round_aspect/sexmongers
-	name = "SEXMONGERS"
-	description = "freeky...."
 
 /* People aren't ready for this.
 /datum/round_aspect/goblino
