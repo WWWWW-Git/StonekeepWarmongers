@@ -218,7 +218,7 @@
 	..()
 
 
-/mob/living/carbon/human/attacked_by(obj/item/I, mob/living/user)
+/mob/living/carbon/human/attacked_by(obj/item/I, mob/living/user) // user = attacker
 	if(!I || !user)
 		return 0
 
@@ -400,7 +400,7 @@
 		var/nodmg = FALSE
 		if(!apply_damage(damage, M.melee_damage_type, affecting, armor))
 			nodmg = TRUE
-			next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
+			next_attack_msg += " <span class='warning'>⛊ARMOR⛊</span>"
 		else
 			affecting.bodypart_attacked_by(M.a_intent.blade_class, damage - armor, M, dam_zone, crit_message = TRUE)
 		visible_message("<span class='danger'>\The [M] [pick(M.a_intent.attack_verb)] [src]![next_attack_msg.Join()]</span>", \
@@ -509,7 +509,7 @@
 //			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
 //				adjustEarDamage(30, 120)
 			Unconscious(20)							//short amount of time for follow up attacks against elusive enemies like wizards
-			Knockdown(200 - (bomb_armor * 1.6)) 	//between ~4 and ~20 seconds of knockdown depending on bomb armor
+			Knockdown(25)
 
 		if(EXPLODE_LIGHT)
 			brute_loss = 5
@@ -518,7 +518,7 @@
 //			damage_clothes(max(50 - bomb_armor, 0), BRUTE, "bomb")
 //			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
 //				adjustEarDamage(15,60)
-			Knockdown(160 - (bomb_armor * 1.6))		//100 bomb armor will prevent knockdown altogether
+			Knockdown(20)
 
 	take_overall_damage(brute_loss,burn_loss)
 

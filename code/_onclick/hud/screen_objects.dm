@@ -646,43 +646,43 @@
 
 	if(C.internal)
 		C.internal = null
-		to_chat(C, "<span class='notice'>I are no longer running on internals.</span>")
+		to_chat(C, "<span class='notice'>I am no longer running on internals.</span>")
 		icon_state = "internal0"
 	else
 		if(!C.getorganslot(ORGAN_SLOT_BREATHING_TUBE))
 			if(!istype(C.wear_mask, /obj/item/clothing/mask))
-				to_chat(C, "<span class='warning'>I are not wearing an internals mask!</span>")
+				to_chat(C, "<span class='warning'>I am not wearing an internals mask!</span>")
 				return 1
 			else
 				var/obj/item/clothing/mask/M = C.wear_mask
 				if(M.mask_adjusted) // if mask on face but pushed down
 					M.adjustmask(C) // adjust it back
 				if( !(M.clothing_flags & MASKINTERNALS) )
-					to_chat(C, "<span class='warning'>I are not wearing an internals mask!</span>")
+					to_chat(C, "<span class='warning'>I am not wearing an internals mask!</span>")
 					return
 
 		var/obj/item/I = C.is_holding_item_of_type(/obj/item/tank)
 		if(I)
-			to_chat(C, "<span class='notice'>I are now running on internals from [I] in your [C.get_held_index_name(C.get_held_index_of_item(I))].</span>")
+			to_chat(C, "<span class='notice'>I am now running on internals from [I] in your [C.get_held_index_name(C.get_held_index_of_item(I))].</span>")
 			C.internal = I
 		else if(ishuman(C))
 			var/mob/living/carbon/human/H = C
 			if(istype(H.s_store, /obj/item/tank))
-				to_chat(H, "<span class='notice'>I are now running on internals from [H.s_store] on your [H.wear_armor.name].</span>")
+				to_chat(H, "<span class='notice'>I am now running on internals from [H.s_store] on your [H.wear_armor.name].</span>")
 				H.internal = H.s_store
 			else if(istype(H.belt, /obj/item/tank))
-				to_chat(H, "<span class='notice'>I are now running on internals from [H.belt] on your belt.</span>")
+				to_chat(H, "<span class='notice'>I am now running on internals from [H.belt] on your belt.</span>")
 				H.internal = H.belt
 			else if(istype(H.l_store, /obj/item/tank))
-				to_chat(H, "<span class='notice'>I are now running on internals from [H.l_store] in your left pocket.</span>")
+				to_chat(H, "<span class='notice'>I am now running on internals from [H.l_store] in your left pocket.</span>")
 				H.internal = H.l_store
 			else if(istype(H.r_store, /obj/item/tank))
-				to_chat(H, "<span class='notice'>I are now running on internals from [H.r_store] in your right pocket.</span>")
+				to_chat(H, "<span class='notice'>I am now running on internals from [H.r_store] in your right pocket.</span>")
 				H.internal = H.r_store
 
 		//Separate so CO2 jetpacks are a little less cumbersome.
 		if(!C.internal && istype(C.back, /obj/item/tank))
-			to_chat(C, "<span class='notice'>I are now running on internals from [C.back] on your back.</span>")
+			to_chat(C, "<span class='notice'>I am now running on internals from [C.back] on your back.</span>")
 			C.internal = C.back
 
 		if(C.internal)
@@ -787,7 +787,7 @@
 	if(H.advsetup)
 		alpha = 0
 		icon = 'icons/mob/advsetup.dmi'
-		animate(src, alpha = 255, time = 30)
+		animate(src, alpha = 255, time = 15)
 
 /atom/movable/screen/advsetup/Click(location,control,params)
 	if(!hud)
@@ -1020,7 +1020,7 @@
 
 	if(PL["right"] && ishuman(hud.mymob))
 		var/mob/living/carbon/human/H = hud.mymob
-		return H.check_limb_for_injuries(H, choice = check_zone(choice))
+		return H.check_for_injuries(H)
 	else
 		return set_selected_zone(choice, usr)
 
@@ -1545,7 +1545,7 @@
 
 
 /atom/movable/screen/gameover/hog
-	icon_state = "hog"
+	icon_state = "mong"
 	alpha = 0
 
 /atom/movable/screen/gameover/hog/baby
@@ -1720,6 +1720,9 @@
 			if(alert("FIGHT WITH ALL YOU GOT?!", "", "Yes", "No") == "Yes")
 				var/mob/living/carbon/V = M
 				if(V.add_stress(/datum/stressevent/triumph))
+					if(M.get_triumphs() < 2)
+						to_chat(M, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
+						return
 					M.adjust_triumphs(-2)
 					M.apply_status_effect(/datum/status_effect/buff/inspired)
 					M.playsound_local(M, 'sound/magic/inspire_02.ogg', 100, FALSE)
@@ -1902,7 +1905,7 @@
 	name = ""
 	screen_loc = "1,1"
 	mouse_opacity = 0
-	alpha = 120
+	alpha = 75
 //	layer = 20.5
 //	plane = 20
 	layer = 13
@@ -1915,10 +1918,10 @@
 	name = ""
 	screen_loc = ui_backhudl
 	mouse_opacity = 0
-	alpha = 128
-	layer = 24
-	plane = 24
-	blend_mode = BLEND_MULTIPLY
+	alpha = 80
+	layer = 13
+	plane = 0
+	blend_mode = 3
 
 /atom/movable/screen/char_preview
 	name = "Me."

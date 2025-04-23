@@ -1815,6 +1815,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			log_combat(user, target, "attempted to punch")
 			return FALSE
 */
+
+		var/hit_area
 		var/selzone = accuracy_check(user.zone_selected, user, target, /datum/skill/combat/unarmed, user.used_intent)
 
 		var/obj/item/bodypart/affecting = target.get_bodypart(check_zone(selzone))
@@ -1822,6 +1824,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(!affecting)
 			to_chat(user, "<span class='warning'>Unfortunately, there's nothing there.</span>")
 			return 0
+		
+		hit_area = affecting.name
 
 		if(!target.lying_attack_check(user))
 			return 0
@@ -1840,7 +1844,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 		if(!target.apply_damage(damage, user.dna.species.attack_type, affecting, armor_block))
 			nodmg = TRUE
-			target.next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
+			target.next_attack_msg += " <span class='warning'>⛊ARMOR⛊</span>"
 		else
 			affecting.bodypart_attacked_by(user.used_intent.blade_class, damage, user, selzone, crit_message = TRUE)
 		log_combat(user, target, "punched")
@@ -1853,6 +1857,23 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					if(affecting.brute_dam > 0)
 						if(affecting.dismember())
 							playsound(get_turf(target), "desceration", 80, TRUE)
+
+			if(prob(damage/2 * user.STASTR/3))
+				switch(hit_area)
+					if(BODY_ZONE_HEAD)
+						var/hitcheck = rand(1,5)
+						if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(hitcheck * (selzone == BODY_ZONE_PRECISE_MOUTH ? 5 : 3) * user.STASTR/3))) //MUCH higher chance to knock out teeth if you aim for mouth
+							var/obj/item/bodypart/head/BPH = affecting
+							if(BPH.knock_out_teeth(get_dir(target, user), rand(1,5)))
+								target.visible_message("<span class='danger'>[target]'s teeth sail off in an arc!</span>", "<span class='userdanger'>[target]'s teeth sail off in an arc!</span>")
+						if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(damage/2 * hitcheck * user.STASTR/3)))
+							target.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
+							if(target.stat == CONSCIOUS)
+								target.visible_message("<span class='danger'>[target] is knocked senseless!</span>", "<span class='danger'>You're knocked senseless!</span>")
+								target.confused = max(target.confused, 20)
+								target.adjust_blurriness(10)
+							if(prob(10))
+								target.gain_trauma(/datum/brain_trauma/mild/concussion)
 
 /*		if(user == target)
 			target.visible_message("<span class='danger'>[user] [atk_verb]ed themself![target.next_attack_msg.Join()]</span>", COMBAT_MESSAGE_RANGE, user)
@@ -2040,7 +2061,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			var/nodmg = FALSE
 			if(!target.apply_damage(damage, user.dna.species.attack_type, affecting, armor_block))
 				nodmg = TRUE
-				target.next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
+				target.next_attack_msg += " <span class='warning'>⛊ARMOR⛊</span>"
 			else
 				if(affecting)
 					affecting.bodypart_attacked_by(BCLASS_BLUNT, damage, user, user.zone_selected, crit_message = TRUE)
@@ -2130,7 +2151,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		var/armor_block = target.run_armor_check(selzone, "melee", blade_dulling = BCLASS_BLUNT)
 		var/damage = user.get_punch_dmg()
 		if(!target.apply_damage(damage, user.dna.species.attack_type, affecting, armor_block))
-			target.next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
+			target.next_attack_msg += " <span class='warning'>⛊ARMOR⛊</span>"
 		else
 			affecting.bodypart_attacked_by(BCLASS_BLUNT, damage, user, selzone)
 		playsound(target, 'sound/combat/hits/kick/kick.ogg', 100, TRUE, -1)
@@ -2218,7 +2239,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		H.next_attack_msg.Cut()
 		if(!apply_damage(Iforce * weakness, I.damtype, def_zone, armor_block, H))
 			nodmg = TRUE
-			H.next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
+			H.next_attack_msg += " <span class='warning'>⛊ARMOR⛊</span>"
 			if(I)
 				I.take_damage(1, BRUTE, "melee")
 		if(!nodmg)
@@ -2276,17 +2297,21 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 		switch(hit_area)
 			if(BODY_ZONE_HEAD)
-				if(!I.get_sharpness() && armor_block < 50)
-//					if(prob(I.force))
-//						H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
-//						if(H.stat == CONSCIOUS)
-//							H.visible_message("<span class='danger'>[H] is knocked senseless!</span>", "<span class='danger'>You're knocked senseless!</span>")
-//							H.confused = max(H.confused, 20)
-//							H.adjust_blurriness(10)
-//						if(prob(10))
-//							H.gain_trauma(/datum/brain_trauma/mild/concussion)
-//					else
-//						H.adjustOrganLoss(ORGAN_SLOT_BRAIN, I.force * 0.2)
+				var/hitcheck = rand(1,5)
+				//to_chat(world, "[hitcheck * (selzone == BODY_ZONE_PRECISE_MOUTH ? 5 : 3) * user.STASTR/3]")
+				if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(hitcheck * (selzone == BODY_ZONE_PRECISE_MOUTH ? 5 : 3) * user.STASTR/3))) //MUCH higher chance to knock out teeth if you aim for mouth
+					var/obj/item/bodypart/head/BPH = affecting
+					//to_chat(world, "[BPH.knock_out_teeth(get_dir(H, user), rand(1,5))]")
+					if(BPH.knock_out_teeth(get_dir(H, user), rand(1,5)))
+						H.visible_message("<span class='danger'>[H]'s teeth sail off in an arc!</span>", "<span class='userdanger'>[H]'s teeth sail off in an arc!</span>")
+				if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(I.force/2 * user.STASTR/4)))
+					H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
+					if(H.stat == CONSCIOUS)
+						H.visible_message("<span class='danger'>[H] is knocked senseless!</span>", "<span class='danger'>You're knocked senseless!</span>")
+						H.confused = max(H.confused, 20)
+						H.adjust_blurriness(10)
+					if(prob(10))
+						H.gain_trauma(/datum/brain_trauma/mild/concussion)
 
 					if(H.mind && H.stat == CONSCIOUS && H != user && prob(I.force + ((100 - H.health) * 0.5))) // rev deconversion through blunt trauma.
 						var/datum/antagonist/rev/rev = H.mind.has_antag_datum(/datum/antagonist/rev)

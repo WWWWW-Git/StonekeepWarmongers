@@ -214,7 +214,12 @@
 		if(C.mob)
 			SSdroning.kill_droning(C)
 			SSvote.interface(C) // FORCE them to vote.
-			C.mob.playsound_local(C.mob, 'sound/music/rainingdownofathousandsouls.ogg', 100, FALSE)
+			if(aspect_chosen(/datum/round_aspect/halo))
+				C.mob.playsound_local(C.mob, 'sound/vo/halo/gameover.mp3', 100, FALSE)
+				sleep(10)
+				C.mob.playsound_local(C.mob, 'sound/vo/halo/blowmeaway.mp3', 100, FALSE)
+			else
+				C.mob.playsound_local(C.mob, 'sound/music/rainingdownofathousandsouls.ogg', 100, FALSE)
 		if(isliving(C.mob) && C.ckey)
 			key_list += C.ckey
 //	if(key_list.len)
@@ -309,7 +314,7 @@
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
 		if(C.whowon)
-			end_reason = "The [C.whowon] win yet another conflict."
+			end_reason = "The [C.whowon] win yet another battle."
 
 	if(end_reason)
 		to_chat(world, "<span class='big bold'>[end_reason]</span>")
@@ -319,7 +324,7 @@
 			if(C.warmode != GAMEMODE_STAND && C.crownbearer)
 				to_chat(world, "<span class='info'>The one whom sat on the throne was the one and only [C.crownbearer.real_name] ([C.crownbearer.ckey])!</span>")
 	else
-		to_chat(world, "<span class='big bold'>STALEMATE. HOW SHAMEFUL.</span>")
+		to_chat(world, "<span class='big bold'>STALEMATE. HOW SHAMEFUL.</span>") // used only for admin shit... yet
 
 
 	/*

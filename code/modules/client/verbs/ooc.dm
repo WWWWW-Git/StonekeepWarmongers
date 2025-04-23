@@ -27,6 +27,8 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 				img = "heartfelt"
 			if(BLUE_WARTEAM)
 				img = "skull"
+			else
+				img = "normie"
 	return img
 
 /client/verb/ooc(msg as text)
@@ -129,7 +131,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 //				else
 //					to_chat(C, "<span class='ooc'><EM>[keyname]:</EM> <span class='message linkify'>[msg]</span></span>")
 
-/client/proc/lobbyooc(msg as text)
+/client/proc/lobbyooc(msg as text) // broadcasts ONLY to people in lobby (but everyone if the game has finished)
 	set category = "OOC"
 	set name = "OOC"
 	set desc = "Talk with the other players."
@@ -353,6 +355,19 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	popup.set_content(contents)
 	popup.open()
 
+/client/verb/combat()
+	set name = "ADV. COMBAT"
+	set category = "HELP"
+	var/contents
+
+	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
+	contents += "<center>Drill Sergeant Cockbottom's Basic Combat Training<BR>"
+	contents += "--------------</center><BR>"
+	contents += "Headshots most of the time do not deal lethal damage. If you hit a headshot as an untrained marksman, you will only knock the person's helmet off and cause some blunt force trauma. This rarely results in death by itself. If the target is not wearing a helmet or any other kind of headwear they will die instantly and you'll feel accoomplished. Another way to kill your opponent is to bayonet charge them. Wield your barksteel, change to STAB intent and RUN into your opponent. If you ever happen to be in the situation where you are the person being charged, switch to SNEAK intent to suplex the weapon out of their hands."
+	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
+	popup.set_content(contents)
+	popup.open()
+
 /proc/CheckJoinDate(ckey)
 	var/list/http = world.Export("http://byond.com/members/[ckey]?format=text")
 	if(!http)
@@ -572,11 +587,51 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 	SSticker.show_roundend_report(src, TRUE)
 
+/client/verb/stalemate()
+	set name = "Propose STALEMATE"
+	set category = "Options"
+	set desc = ""
+
+	var/datum/game_mode/warfare/W = SSticker.mode
+	if(istype(W))
+		if(W.stalematecooldown >= world.time)
+			to_chat(src, "\n<font color='red'>It is too early for that, try again later.</font>")
+		else
+			W.stalematecooldown = world.time + 10 MINUTES
+			SSvote.initiate_vote("stalemate", "The God of War")
+
+/client/verb/accessibility()
+	set name = "Accessibility"
+	set category = "Options"
+	set desc = ""
+
+	if(!prefs)
+		return
+	if(prefs.visibility_accessibility == FALSE)
+		var/alerto = alert(src, "This toggle is used for disabling the screen effects of grain and CRT lines. If you disable this, the game may look like absolute dogshit in the visual department. Do you heed my warning, traveler?", "WARMONGERS", "Disable", "Keep it On")
+		if(alerto != "Disable")
+			to_chat(src, "AUTHENTIC MODE... PREVAILS")
+			return
+		prefs.visibility_accessibility = TRUE
+		prefs.save_preferences()
+		to_chat(src, "AUTHENTIC MODE... OFF")
+		for(var/atom/movable/screen/scannies/S in screen)
+			S.alpha = 0
+		for(var/atom/movable/screen/grain/S in screen)
+			S.alpha = 0
+	else
+		prefs.visibility_accessibility = FALSE
+		prefs.save_preferences()
+		to_chat(src, "AUTHENTIC MODE... ON")
+		for(var/atom/movable/screen/scannies/S in screen)
+			S.alpha = 80
+		for(var/atom/movable/screen/grain/S in screen)
+			S.alpha = 75
+
 /client/verb/fit_viewport()
 	set name = "Fit Viewport"
 	set category = "Options"
 	set desc = ""
-	set hidden = 1
 	if(!holder)
 		return
 	// Fetch aspect ratio

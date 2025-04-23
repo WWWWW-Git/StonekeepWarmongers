@@ -15,19 +15,20 @@
 
 	var/mob/redlord = null
 	var/obj/item/redcrown = null
-	var/red_bonus = 2
+	var/red_bonus = 2 // reinforcement points
 
 	var/mob/blulord = null
 	var/obj/item/blucrown = null
-	var/blu_bonus = 2
+	var/blu_bonus = 2 // reinforcement points
 
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
 
 	var/warfare_start_time = 5 // in minutes
 	var/warfare_reinforcement_time = 5 // in minutes
-
-	var/timedmatch = FALSE
+	
+	var/stalematecooldown // a cooldown before another stalemate can be held
+	
 	var/warmode = null
 
 	announce_span = "danger"
@@ -48,6 +49,13 @@
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
 				H.adjust_triumphs(1)
+
+/datum/game_mode/warfare/proc/do_war_end(var/mob/living/carbon/human/crownguy = null, var/team = null) // if you call this with zero arguments, its a stalemate.
+	whowon = team
+	SSticker.force_ending = TRUE
+	if(crownguy)
+		crownbearer = crownguy
+		crownguy.adjust_triumphs(5)
 
 /datum/game_mode/warfare/proc/begin_autobalance_loop()
 	set waitfor = 0

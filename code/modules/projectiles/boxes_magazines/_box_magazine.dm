@@ -158,7 +158,13 @@
 		ammo.forceMove(turf_mag)
 		stored_ammo -= ammo
 
+/obj/item/ammo_box/magazine/proc/delete_magazine()
+	for(var/obj/item/ammo in stored_ammo)
+		qdel(ammo)
+		stored_ammo -= ammo
+
 /obj/item/ammo_box/magazine/proc/complete_refill()
+	delete_magazine()
 	for(var/i = 1, i <= max_ammo, i++)
 		stored_ammo += new ammo_type(src)
 	update_icon()

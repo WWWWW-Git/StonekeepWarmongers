@@ -1,14 +1,3 @@
-#define WARMONGERS_SHIPPABLES		list("FIVE SMOKE BOMBS",\
-									"GAS BOMBS",\
-									"BOMBS",\
-									"FIRE BOMB",\
-									"WOODEN BALLS",\
-									"CROWN POINTER",\
-									"LEAD BALLS",\
-									"LARGE LEAD BALLS",\
-									"BOMBARDIER",\
-									"TETSUBISHI CALTROPS")
-
 /datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
 	var/obj/S = null
@@ -30,6 +19,7 @@
 
 		if(aspect_chosen(/datum/round_aspect/squishyhumans))
 			HU.STACON = 6
+			ADD_TRAIT(HU, TRAIT_BRITTLE, TRAIT_GENERIC)
 
 		if(aspect_chosen(/datum/round_aspect/kicking))
 			ADD_TRAIT(HU, TRAIT_NUTCRACKER, TRAIT_GENERIC)
@@ -51,12 +41,17 @@
 		switch(HU.warfare_faction)
 			if(RED_WARTEAM)
 				HU.speech_sound = 'sound/vo/speech_heartfelt.ogg'
+				HU.cmode_music = 'sound/music/combatheartfelt.ogg'
 			if(BLUE_WARTEAM)
 				HU.speech_sound = 'sound/vo/speech_grenzelhoft.ogg'
+				HU.cmode_music = 'sound/music/combatgrenzelhoft.ogg'
 		if(HAS_TRAIT(HU, TRAIT_NOBLE))
 			HU.speech_sound = 'sound/vo/speech_lord.ogg'
 
-// Captain Verbs
+// Lord Procs
+
+/proc/getlordtitle()
+	return pick("of Volfs", "the Tyrant", "the Idiot", "the Foolish", "the Bloody", "the Impaler", "the Discombobulater", "the Risktaker", "the Golden", "of Gold", "the Warmonger", "the Thief", "the Waterborn", "the Bloodborn", "the Barker", "the Volf", "the Predator", "of Predators", "the Stealthy", "the Sneaky", "the Destroyer", "the Ambusher", "the Bomber", "the Strategist", "of Strategy", "of Bombing", "of Ambushing", "the Racist", "the Hater of Elves", "the Suicidal", "the Buffoon", "the Baboon", "the Bear", "the Bringer of Death", "of Death", "the Ordinary", "the Boring", "the Peaceful", "the Negotiator", "the Actor", "the Funny", "the Jestful", "of Jesters", "of Heartfelt", "of Grenzelhoft", "of Life")
 
 /mob/living/carbon/human/proc/warfare_announce()
 	set name = "ANNOUNCE!"
@@ -103,27 +98,38 @@
 				continue
 			M.apply_status_effect(/datum/status_effect/buff/inspired)
 			to_chat(M, "<span class='alert'>I WILL DIE FOR THE LORD!</span>")
-			M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
+			if(aspect_chosen(/datum/round_aspect/halo))
+				M.playsound_local(M.loc, 'sound/vo/halo/hail2theking.mp3', 75)
+			else
+				M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
 
 /mob/living/carbon/human/proc/warfare_shop()
 	set name = "REDEEM SUPPORT POINTS"
 	set category = "LORD"
-	var/mob/living/carbon/human/H = usr
 	var/datum/game_mode/warfare/C = SSticker.mode
-	var/shoppin = input(usr, "URGENT BALOON AIRSHIP SHIPPING STRAIGHT FROM ENIGMA!", "BUY NOW!!!") as null|anything in WARMONGERS_SHIPPABLES
+	var/list/shippables = list()
+
+	for(var/s in subtypesof(/datum/warshippable))
+		var/datum/warshippable/WS = new s()
+		if(C.reinforcementwave >= WS.reinforcement)
+			shippables[WS.name] = WS
+
+	var/choice = input(src, "URGENT AIRSHIP SHIPPING STRAIGHT FROM ENIGMA!", "BUY NOW!!!") as null|anything in shippables
+	var/datum/warshippable/shoppin = shippables[choice]
 	if(!shoppin)
 		return
-	if(!do_after(H, 5 SECONDS, TRUE, H.loc))
+	if(!do_after(src, 5 SECONDS, TRUE, loc))
 		playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 		return
-	switch(H.warfare_faction)
+
+	switch(warfare_faction)
 		if(RED_WARTEAM)
 			if(C.red_bonus >= 1)
 				C.red_bonus--
 				playsound(loc, 'sound/misc/machinevomit.ogg', 100, FALSE, -1)
 			else
 				playsound(loc, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
-				to_chat(H, "<span class='info'>Insufficient points.</span>")
+				to_chat(src, "<span class='info'>Insufficient points.</span>")
 				return
 		if(BLUE_WARTEAM)
 			if(C.blu_bonus >= 1)
@@ -131,41 +137,12 @@
 				playsound(loc, 'sound/misc/machinevomit.ogg', 100, FALSE, -1)
 			else
 				playsound(loc, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
-				to_chat(H, "<span class='info'>Insufficient points.</span>")
+				to_chat(src, "<span class='info'>Insufficient points.</span>")
 				return
 	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
-	switch(shoppin)
-		if("FIVE SMOKE BOMBS")
-			new /obj/item/bomb/smoke(H.loc)
-			new /obj/item/bomb/smoke(H.loc)
-			new /obj/item/bomb/smoke(H.loc)
-			new /obj/item/bomb/smoke(H.loc)
-			new /obj/item/bomb/smoke(H.loc)
-		if("GAS BOMBS")
-			new /obj/item/bomb/poison(H.loc)
-			new /obj/item/bomb/poison(H.loc)
-		if("BOMBS")
-			new /obj/item/bomb(H.loc)
-			new /obj/item/bomb(H.loc)
-			new /obj/item/bomb(H.loc)
-		if("CROWN POINTER")
-			new /obj/item/pinpointer/crown(H.loc)
-		if("FIRE BOMB")
-			new /obj/item/bomb/fire(H.loc)
-		if("WOODEN BALLS")
-			new /obj/item/quiver/woodbullets(H.loc)
-		if("LEAD BALLS")
-			new /obj/item/quiver/bullets(H.loc)
-		if("LARGE LEAD BALLS")
-			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
-			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
-			new /obj/item/ammo_casing/caseless/rogue/cball(H.loc)
-		if("BOMBARDIER")
-			new /obj/structure/bombard(H.loc)
-		if("TETSUBISHI CALTROPS")
-			new /obj/item/rogue/caltrop(H.loc)
-			new /obj/item/rogue/caltrop(H.loc)
-			new /obj/item/rogue/caltrop(H.loc)
+
+	for(var/i in shoppin.items)
+		new i(get_turf(src))
 
 ///////////////////////////// RED ///////////////////////////////////////
 
@@ -188,7 +165,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	outfit = /datum/outfit/job/roguetown/redking
 
-/datum/job/roguetown/warfare/red/lord/after_spawn(mob/living/H, mob/M, latejoin)
+/datum/job/roguetown/warfare/red/lord/after_spawn(mob/living/carbon/human/H, mob/M, latejoin)
 	. = ..()
 	H.verbs += list(
 		/mob/living/carbon/human/proc/warfare_announce,
@@ -202,6 +179,21 @@
 
 	if(aspect_chosen(/datum/round_aspect/stronglords))
 		H.STASTR = 20
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6, TRUE)
+		ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
+
+	if(aspect_chosen(/datum/round_aspect/veteranlords))
+		H.change_stat("strength", 3)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
+		H.charflaw = new /datum/charflaw/noeyer()
+		if(!istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch))
+			qdel(H.wear_mask)
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/eyepatch, SLOT_WEAR_MASK)
+		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 
 /datum/outfit/job/roguetown/redking
 	name = "Heartfelt Lord"
@@ -222,6 +214,8 @@
 	cloak = /obj/item/clothing/cloak/heartfelt
 	if(SSmapping.config.map_name == "LD-Bloodfort")
 		head = /obj/item/clothing/head/roguetown/crownred
+	if(!(findtext(H.real_name, " of ") || findtext(H.real_name, " the ")))
+		H.change_name("[H.real_name] [getlordtitle()]")
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
@@ -263,9 +257,11 @@
 			ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
 		if(aspect_chosen(/datum/round_aspect/monkwarfare))
 			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
-		H.advsetup = 1
+		H.advsetup = TRUE
+		H.status_flags |= GODMODE
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
+		H.apply_status_effect(/datum/status_effect/incapacitating/stun)
 
 //// MUSKETEER ////
 
@@ -337,8 +333,6 @@
 	beltl = /obj/item/rogueweapon/sword/short/wakizashi
 	backr = /obj/item/rogueweapon/halberd/naginata
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
-	head = /obj/item/clothing/head/roguetown/heartfelt
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin
 	gloves = /obj/item/clothing/gloves/roguetown/leather/abyssal
 	mask = /obj/item/clothing/mask/rogue/kaizoku/menpo/steel/half
 	if(H.mind)
@@ -472,7 +466,7 @@
 	head = /obj/item/clothing/head/roguetown/shinobi_zukin
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	beltr = /obj/item/quiver/arrows/fog
+	beltr = /obj/item/quiver/arrows
 	beltl = /obj/item/rogueweapon/huntingknife/idagger/steel/tanto
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
@@ -492,12 +486,14 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
 		H.change_stat("speed", 2)
 		H.change_stat("endurance", 1)
+	H.cmode_music = 'sound/music/combatspecial.ogg'
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NINJA, TRAIT_GENERIC)
 
 //// RIFLEMEN ////
 
 /datum/advclass/red/riflemen //Forgoes head protection, physical stats, and weapon skills in exchange for better flintlock skills and more perception.
-	name = "Sharpshooter"
+	name = "Sharpbarker"
 	tutorial = "Far better trained compared to the common soldiery, and with a marksmans rifle as well. The only issue is lacking in melee combat even worse than Ashigaru."
 	outfit = /datum/outfit/job/roguetown/redriflemen
 	allowed_sexes = list(MALE, FEMALE)
@@ -538,8 +534,9 @@
 		H.change_stat("perception", 4)
 		H.change_stat("strength", -3)
 		H.change_stat("endurance", -4)
-		H.change_stat("speed", -1)
+		H.change_stat("speed", -2)
 		H.change_stat("constitution", -3)
+	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
 
 //// OFFICER ////
 
@@ -585,6 +582,8 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
+	H.cmode_music = 'sound/music/combatspecial.ogg'
+	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// MEDIC ////
 
@@ -607,7 +606,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho
+	belt = /obj/item/storage/belt/rogue/leather/medic
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
 	cloak = /obj/item/clothing/cloak/apron/cook/medical
@@ -621,8 +620,10 @@
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
 		H.change_stat("strength", -4)
+	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
 
 //// ELVEN SLAVE ////
 
@@ -674,7 +675,7 @@
 	)
 	outfit = /datum/outfit/job/roguetown/bluking
 
-/datum/job/roguetown/warfare/blu/lord/after_spawn(mob/living/H, mob/M, latejoin)
+/datum/job/roguetown/warfare/blu/lord/after_spawn(mob/living/carbon/human/H, mob/M, latejoin)
 	. = ..()
 	H.verbs += list(
 		/mob/living/carbon/human/proc/warfare_announce,
@@ -688,6 +689,21 @@
 
 	if(aspect_chosen(/datum/round_aspect/stronglords))
 		H.STASTR = 20
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6, TRUE)
+		ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
+
+	if(aspect_chosen(/datum/round_aspect/veteranlords))
+		H.change_stat("strength", 3)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
+		H.charflaw = new /datum/charflaw/noeyer()
+		if(!istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch))
+			qdel(H.wear_mask)
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/eyepatch, SLOT_WEAR_MASK)
+		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 
 /datum/outfit/job/roguetown/bluking
 	name = "Grenzelhoft Lord"
@@ -699,18 +715,21 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	backl = /obj/item/storage/backpack/rogue/satchel
+	backr = /obj/item/quiver/bullets
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander/blue
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltr = GetSidearmForWarfare()
-	beltl = /obj/item/quiver/bullets
+	beltl = /obj/item/rogueweapon/sword
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(SSmapping.config.map_name == "LD-Bloodfort")
 		cloak = /obj/item/clothing/cloak/lordcloak
 		head = /obj/item/clothing/head/roguetown/crownblu
 	else
 		head = /obj/item/clothing/head/roguetown/commander
+	if(!(findtext(H.real_name, " of ") || findtext(H.real_name, " the ")))
+		H.change_name("[H.real_name] [getlordtitle()]")
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
@@ -733,7 +752,7 @@
 
 /datum/job/roguetown/warfare/blu/soldier
 	title = "Grenzelhoft Infantry"
-	tutorial = "Yours is a just task, to expand the borders of the Grenzelhoft Imperiate, the lack of food in your belly and pay in your pocket is easily ignored by knowing you're doing your part, in the unending colossus that is Grenzelhoft. For the Empire! For the Emperor! For the One True God!"
+	tutorial = "Yours is a just task, to expand the borders of the Grenzelhoft Imperiate, the lack of food in your belly and pay in your pocket is easily ignored by knowing you're doing your part, in the unending colossus that is Grenzelhoft. For the Empire! For the KAISER! For the One True God!"
 	department_flag = BLUES
 	flag = SOLDIER
 	total_positions = 99
@@ -753,9 +772,11 @@
 		if(aspect_chosen(/datum/round_aspect/monkwarfare))
 			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
 		H.patron = GLOB.patronlist[/datum/patron/divine/psydon] // Grenzelhoft worships Psydon in lore. Why wouldn't they here?
-		H.advsetup = 1
+		H.advsetup = TRUE
+		H.status_flags |= GODMODE
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
+		H.apply_status_effect(/datum/status_effect/incapacitating/stun)
 
 //// MUSKETEER ////
 
@@ -975,6 +996,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/music, pick(1,2), TRUE)
 		H.change_stat("speed", 6)
+	H.cmode_music = 'sound/music/combatspecial.ogg'
 	ADD_TRAIT(H, TRAIT_JESTER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
@@ -1050,7 +1072,7 @@
 //// RIFLEMEN ////
 
 /datum/advclass/blu/riflemen
-	name = "Sharpshooter"
+	name = "Sharpbarker"
 	tutorial = "Marksmen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
 	outfit = /datum/outfit/job/roguetown/bluriflemen
 	allowed_sexes = list(MALE, FEMALE)
@@ -1089,8 +1111,9 @@
 		H.change_stat("perception", 2)
 		H.change_stat("strength", -3)
 		H.change_stat("endurance", -4)
-		H.change_stat("speed", -1)
+		H.change_stat("speed", -2)
 		H.change_stat("constitution", -3)
+	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
 
 //// OFFICER ////
 
@@ -1133,6 +1156,8 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
+	H.cmode_music = 'sound/music/combatspecial.ogg'
+	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// MEDIC ////
 
@@ -1155,7 +1180,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
-	belt = /obj/item/storage/belt/rogue/leather
+	belt = /obj/item/storage/belt/rogue/leather/medic
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
@@ -1170,8 +1195,10 @@
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
 		H.change_stat("strength", -4)
+	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
 
 //// ELVEN SLAVE ////
 

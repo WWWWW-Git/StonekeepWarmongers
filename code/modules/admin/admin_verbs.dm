@@ -146,7 +146,6 @@ GLOBAL_PROTECT(admin_verbs_server)
 	/datum/admins/proc/reinforcementsnow,
 	/datum/admins/proc/settechlevel,
 	/datum/admins/proc/oneteammode,
-	/datum/admins/proc/deathmatch,
 	/datum/admins/proc/readoutlords,
 	/datum/admins/proc/recallcrown,
 	/datum/admins/proc/teleport2crown,
@@ -256,7 +255,6 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/datum/admins/proc/readynow,
 	/datum/admins/proc/settechlevel,
 	/datum/admins/proc/oneteammode,
-	/datum/admins/proc/deathmatch,
 	/datum/admins/proc/reinforcementsnow,
 	/datum/admins/proc/readoutlords,
 	/datum/admins/proc/recallcrown,
@@ -377,14 +375,12 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Adminverbs") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
-/client/proc/set_context_menu_enabled(Enable as num)
+/client/proc/set_context_menu_enabled()
 	set category = "Admin"
 	set name = "Right-click Menu"
 	if(holder)
-		if(Enable)
-			show_popup_menus = TRUE
-		else
-			show_popup_menus = FALSE
+		show_popup_menus = !show_popup_menus
+		to_chat(src, "[show_popup_menus]")
 	else
 		show_popup_menus = FALSE
 
@@ -727,7 +723,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 	holder.deactivate()
 
-	to_chat(src, "<span class='interface'>I are now a normal player.</span>")
+	to_chat(src, "<span class='interface'>I am now a normal player.</span>")
 	log_admin("[src] deadmined themself.")
 	message_admins("[src] deadmined themself.")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Deadmin")

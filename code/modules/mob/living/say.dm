@@ -100,7 +100,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	if(ic_blocked)
 		to_chat(src, "<span class='danger'>AAAAGH! MY HEAD HURTS FROM THE WORDS I TRIED TO UTTER!</span>")
-		src.adjustOrganLoss(ORGAN_SLOT_BRAIN, 40)
+		adjustOrganLoss(ORGAN_SLOT_BRAIN, 40)
+		playsound_local(get_turf(src), 'sound/lobotomy.ogg', 60)
 		SSblackbox.record_feedback("tally", "ic_blocked_words", 1, lowertext(config.ic_filter_regex.match))
 		return
 
@@ -365,7 +366,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 /mob/living/proc/can_speak_vocal(message) //Check AFTER handling of xeno and ling channels
 	if(HAS_TRAIT(src, TRAIT_MUTE))
 		if(SSticker.current_state == GAME_STATE_FINISHED)
-			client.lobbyooc(message)
+			client.lobbyooc("[html_decode(message)]")
 		return FALSE
 
 	if(is_muzzled())

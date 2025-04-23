@@ -300,50 +300,30 @@
 	icon_state = "border"
 	passcrawl = FALSE
 
-/obj/structure/fluff/ponr
-	name = "Grenzelhofts Point of No Return"
-	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE HEARTFELTS TOUCH THIS! But if you're a Heartfelt... Eh, sure. Why not."
-	icon = 'icons/shamelessly_stolen.dmi'
-	icon_state = "destruct"
-	max_integrity = 999999
-	anchored = TRUE
-	climbable = FALSE
+/obj/structure/fluff/explodabarrel
+	name = "barkpowder barrel"
+	desc = "Uh oh."
+	icon = 'icons/roguetown/misc/structure.dmi'
+	icon_state = "explodabarrel"
 	density = TRUE
 	opacity = FALSE
-	var/team = BLUE_WARTEAM
+	anchored = FALSE
+	max_integrity = 150
+	w_class = WEIGHT_CLASS_BULKY
+	drag_slowdown = 2
 
-/obj/structure/fluff/ponr/attack_hand(mob/user)
-	. = ..()
-	var/mob/living/carbon/human/H
-	if(ishuman(user))
-		H = user
-	if(H.warfare_faction == team)
-		to_chat(H, "<span class='info'>This belongs to us.</span>")
-		return
-	if(!do_after(user, 10 SECONDS, TRUE, src))
-		return
-	switch(team)
-		if(BLUE_WARTEAM)
-			if(H.warfare_faction == RED_WARTEAM)
-				if(istype(SSticker.mode, /datum/game_mode/warfare))
-					var/datum/game_mode/warfare/C = SSticker.mode
-					C.whowon = RED_WARTEAM
-					C.crownbearer = H
-					SSticker.force_ending = TRUE
-					H.adjust_triumphs(5)
-		if(RED_WARTEAM)
-			if(H.warfare_faction == BLUE_WARTEAM)
-				if(istype(SSticker.mode, /datum/game_mode/warfare))
-					var/datum/game_mode/warfare/C = SSticker.mode
-					C.whowon = BLUE_WARTEAM
-					C.crownbearer = H
-					SSticker.force_ending = TRUE
-					H.adjust_triumphs(5)
+/obj/structure/fluff/explodabarrel/bullet_act(obj/projectile/P)
+	boom()
 
-/obj/structure/fluff/ponr/red
-	name = "Heartfelts Point of No Return"
-	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE GRENZELHOFTS TOUCH THIS! But if you're a Grenzelhoft... Eh, sure. Why not."
-	team = RED_WARTEAM
+/obj/structure/fluff/explodabarrel/fire_act(added, maxstacks)
+	boom()
+
+/obj/structure/fluff/explodabarrel/ex_act(severity, target)
+	boom()
+
+/obj/structure/fluff/explodabarrel/proc/boom()
+	explosion(get_turf(src), 0, 1, 5, flame_range = 3)
+	qdel(src)
 
 /obj/structure/fluff/standingflag
 	name = "standing flag"
@@ -1021,7 +1001,8 @@
 	..()
 
 /obj/structure/fluff/psycross
-	name = "pantheon cross"
+	name = "\improper ancient religious symbol"
+	desc = "Who is this for again?"
 	icon_state = "psycross"
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	break_sound = 'sound/combat/hits/onwood/destroyfurniture.ogg'
@@ -1067,6 +1048,11 @@
 	break_sound = null
 	attacked_sound = list("sound/combat/hits/onmetal/metalimpact (1).ogg", "sound/combat/hits/onmetal/metalimpact (2).ogg")
 	chance2hear = 66
+
+/obj/structure/fluff/psycross/evil
+	name = "\improper ancient religious symbol"
+	desc = "Who is this symbol praising again?"
+	icon_state = "invertedcross"
 
 /obj/structure/fluff/psycross/crafted
 	name = "wooden pantheon cross"

@@ -20,6 +20,7 @@
 /atom/movable/screen/ghost/orbit/Click()
 	var/mob/dead/observer/G = usr
 	G.follow()
+	
 //skull
 /atom/movable/screen/ghost/orbit/rogue
 	name = "AFTER LIFE"
@@ -38,7 +39,14 @@
 		if(G.isinhell)
 			return
 		if(G.client)
-			G.returntolobby()
+			G.playsound_local(get_turf(G), 'sound/magic/holyshield.ogg', 35)
+			animate(src, transform = matrix()*1.5, alpha = 0, time = 5) // looks cool
+			var/ttime = 10
+			if(aspect_chosen(/datum/round_aspect/drafted))
+				to_chat(G, "You will return to combat in 20 seconds.")
+				ttime = 20 SECONDS
+			spawn(ttime)
+				G.returntolobby()
 
 /atom/movable/screen/ghost/reenter_corpse
 	name = "Reenter corpse"

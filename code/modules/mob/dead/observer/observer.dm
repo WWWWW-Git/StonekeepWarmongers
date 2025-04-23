@@ -60,6 +60,12 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	var/datum/spawners_menu/spawners_menu
 	var/ghostize_time = 0
 
+/mob/dead/observer/Stat()
+	..()
+	stat("GRENZELHOFT CASUALTIES: [SSticker.grenzelhoft_deaths]")
+	stat("HEARTFELT CASUALTIES: [SSticker.heartfelt_deaths]")
+	stat("TOTAL: [SSticker.deaths]")
+
 /mob/dead/observer/rogue
 //	see_invisible = SEE_INVISIBLE_LIVING
 	sight = 0
@@ -392,8 +398,6 @@ Works together with spawning an observer, noted above.
 				return ..()
 			var/datum/antagonist/zombie/Z = mind.has_antag_datum(/datum/antagonist/zombie)
 			if(!Z.revived)
-				if(!(world.time % 5))
-					to_chat(src, "<span class='warning'>I'm preparing to walk again.</span>")
 				return
 	return ..()
 

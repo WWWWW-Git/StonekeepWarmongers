@@ -62,6 +62,9 @@
 // The normal route for first use of this list.
 /datum/class_select_handler/proc/initial_setup()
 	assemble_the_CLASSES()
+	if(aspect_chosen(/datum/round_aspect/drafted))
+		to_chat(world, "oh yeah baby")
+		SSrole_class_handler.finish_class_handler(linked_client.mob, pick(rolled_classes), src)
 	second_step()
 
 // The second step, aka we just want to make sure the resources are there and that the menu is being displayed
@@ -188,11 +191,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<head>
-			<style>
-				@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
-				@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
-				@import url("https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap");
-			</style>
 			<link rel='stylesheet' type='text/css' href='slop_menustyle2.css'>
 		</head>
 	"}
@@ -268,11 +266,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<head>
-			<style>
-				@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
-				@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
-				@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
-			</style>
 			<link rel='stylesheet' type='text/css' href='slop_menustyle2.css'>
 		</head>
 		<body>

@@ -32,7 +32,6 @@
 		TRAIT_NOPAIN,
 		TRAIT_NOBREATH,
 		TRAIT_TOXIMMUNE,
-		TRAIT_CHUNKYFINGERS,
 		TRAIT_NOSLEEP,
 		TRAIT_BASHDOORS,
 		TRAIT_SHOCKIMMUNE,
@@ -161,6 +160,7 @@
 	zombie.update_a_intents()
 	zombie.aggressive = TRUE
 	zombie.mode = AI_IDLE
+	owner.current.client.mouse_icon_prefix = "zombie"
 
 	var/obj/item/organ/eyes/eyes = new /obj/item/organ/eyes/night_vision/zombie
 	eyes.Insert(zombie, drop_if_replaced = FALSE)
@@ -283,7 +283,7 @@
 	if(blood_volume)
 		mob_timers["puke"] = world.time
 		vomit(1, blood = TRUE, stun = FALSE)
-	addtimer(CALLBACK(src, PROC_REF(wake_zombie)), 1 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(wake_zombie)), 2 SECONDS)
 	return zombie_antag
 
 /mob/living/carbon/human/proc/wake_zombie()

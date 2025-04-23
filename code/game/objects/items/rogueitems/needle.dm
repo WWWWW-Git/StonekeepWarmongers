@@ -28,8 +28,10 @@
 			. += "<span class='bold'>It has [stringamt] uses left.</span>"
 		else
 			. += "<span class='bold'>It has no uses left.</span>"
+	/*
 	else
 		. += "<span class='bold'>Can be used indefinitely.</span>"
+	*/
 
 /obj/item/needle/Initialize()
 	. = ..()
@@ -148,6 +150,8 @@
 			doctor.mind.adjust_experience(/datum/skill/misc/medicine, doctor.STAINT * 5)
 		use(1)
 		target_wound.sew_wound()
+		target_wound.heal_wound(20)
+		affecting.heal_damage(20)
 		if(patient == doctor)
 			doctor.visible_message("<span class='notice'>[doctor] sews \a [target_wound.name] on [doctor.p_them()]self.</span>", "<span class='notice'>I stitch \a [target_wound.name] on my [affecting].</span>")
 		else
@@ -168,6 +172,6 @@
 	anvilrepair = null
 
 /obj/item/needle/blessed
-	name = "blessed needle"
+	name = "needle"
 	desc = ""
 	infinite = TRUE

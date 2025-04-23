@@ -138,9 +138,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	var/family = FAMILY_NONE
 
-	var/crt = FALSE
-	var/wnoise = TRUE
-
+	var/visibility_accessibility = FALSE
 
 /datum/preferences/New(client/C)
 	parent = C
@@ -227,7 +225,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 			dat += "<td style='width:33%;text-align:right'>"
 			dat += "<a href='?_src_=prefs;preference=keybinds;task=menu'>Keybinds</a><br>"
-			dat += "[user.get_triumphs() ? "\Roman [user.get_triumphs()]" : "NULLA"] <a><b>TRIUMPH(s)</b></a>"
+			dat += "[user.get_triumphs() ? "[user.get_triumphs()]" : "NULLA"] <a href='?_src_=prefs;preference=showoff;'><b>TRIUMPH(s)</b></a>"
 			dat += "</td>"
 
 			dat += "</table>"
@@ -258,7 +256,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a> <a href='?_src_=prefs;preference=name;task=random'>\[R\]</a>"
 
 			dat += "<BR>"
-			dat += "<b>RACE:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (ᛣ)"]<BR>"
+			dat += "<b>RACE:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (&#5859)"]<BR>"
 //			dat += "<a href='?_src_=prefs;preference=species;task=random'>Random Species</A> "
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SPECIES]'>Always Random Species: [(randomise[RANDOM_SPECIES]) ? "Yes" : "No"]</A><br>"
 
@@ -879,7 +877,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 		dat = list("<center>REGISTER!</center>")
 
 	winshow(user, "stonekeep_prefwin", TRUE)
-	var/datum/browser/popup = new(user, "preferences_browser", "<div align='center'>[used_title]</div>", 700, 530)
+	var/datum/browser/popup = new(user, "preferences_browser", "<div align='center'>[used_title]</div>", 700, 550)
 	popup.set_window_options("can_close=0;can_minimize=0;border=0;titlebar=0")
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
@@ -1482,6 +1480,19 @@ Slots: [job.spawn_positions]</span>
 
 	else if(href_list["preference"] == "playerquality")
 		check_pq_menu(user.ckey)
+
+	else if(href_list["preference"] == "showoff")
+		var/chice = alert(usr, "Show off your TRIUMPHS?", "WARMONGERS","YES", "NO")
+		if(chice == "YES")
+			var/keyname = user.ckey
+			if(user.ckey in GLOB.anonymize)
+				keyname = get_fake_key(user.ckey)
+			for(var/client/C in GLOB.clients)
+				if(C.prefs.chat_toggles & CHAT_OOC)
+					if(SSticker.current_state != GAME_STATE_FINISHED && !istype(C.mob, /mob/dead/new_player) && !C.holder)
+						continue
+
+					to_chat(C, "<span class='info'><b>[keyname]</b> shows off their [SStriumphs.get_triumphs(user.ckey)] TRIUMPHs!</span>")
 
 	else if(href_list["preference"] == "triumph_buy_menu")
 		SStriumphs.startup_triumphs_menu(user.client)

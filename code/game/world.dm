@@ -264,8 +264,9 @@ GLOBAL_VAR(restart_counter)
 	for(var/client/thing in GLOB.clients)
 		if(!thing)
 			continue
+		thing.stop_sounds_rogue()
 		thing << sound(round_end_sound)
-		thing << quote
+		thing << "<span class='info'>[quote]</span>"
 
 	to_chat(world, "<B>You will be reconnected in a few seconds.</B>")
 	Master.Shutdown()	//run SS shutdowns? rtchange
@@ -310,19 +311,15 @@ GLOBAL_VAR(restart_counter)
 	var/s = ""
 	s += "<center><a href=\"https://discord.gg/stonekeep\">"
 	s += "<big><b>WARMONGERS</b></big></a><br>"
-	s += "<b>Fantasy PvP Musket-based Team Shooter<b><br>"
-	s += "You've been <b>drafted</b>, fight for the crown.<br>"
+	s += "<b>Fantasy PvP Musket-based Top-down Shooter<b><br>"
 
-	s += "\["
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
-		s += "<b>GAME STATUS:</b> WAITING FOR MORE MANPOWER"
+		s += "<b>GAME STATUS:</b> WAITING FOR MORE MANPOWER<br>"
 	else
-		s += "<b>GAME STATUS:</b> ON THE BATTLEFIELD"
+		s += "<b>GAME STATUS:</b> ON THE BATTLEFIELD<br>"
 
 	if(W.warmode)
-		s += "<b>GAME MODE:</b> [W.warmode]"
-
-	s += "<img src=\"https://i.imgur.com/KZ83Zui.png\"></a></center>"
+		s += "<b>GAME MODE:</b> [W.warmode]<br>"
 	
 	status = s
 	return s

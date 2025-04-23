@@ -1,5 +1,6 @@
 /mob/living/carbon/human/gib_animation()
-	new /obj/effect/temp_visual/gib_animation(loc, "gibbed-h")
+	var/obj/effect/temp_visual/gib_animation/GA = new(loc, "gibbed-h")
+	animate(GA, transform = matrix()*2, alpha = 0, time = 10)
 
 /mob/living/carbon/human/dust_animation()
 	new /obj/effect/temp_visual/dust_animation(loc, "dust-h")
@@ -39,31 +40,51 @@
 			if(BLUE_WARTEAM)
 				SSticker.grenzelhoft_deaths++
 
-	/* No zombies in PvP.
-	if(!gibbed)
-		if(!is_in_roguetown(src))
-			zombie_check()
-	*/
-
 	if(HAS_TRAIT(src, TRAIT_JESTER))
-		playsound(src, 'sound/foley/honk.ogg', 75, FALSE, -3)
+		if(aspect_chosen(/datum/round_aspect/halo))
+			playsound(src, 'sound/vo/halo/omg.mp3', 75, FALSE, 2)
+		else
+			playsound(src, 'sound/foley/honk.ogg', 75, FALSE, 2)
+	
+	if(HAS_TRAIT(src, TRAIT_NINJA))
+		new /obj/effect/particle_effect/smoke(get_turf(src))
+
+	var/obj/item/IT = get_item_by_slot(ITEM_SLOT_BACK_L)
+	if(istype(IT, /obj/item/rogue/musicpack))
+		var/obj/item/rogue/musicpack/MP = IT
+		MP.soundloop.stop()
 
 	if(istype(SSticker.mode, /datum/game_mode/warfare))
 		var/datum/game_mode/warfare/C = SSticker.mode
+
+		if(C.crownbearer == src)
+			C.crownbearer = null // stupid hack for PONR (ctf) gamemode
+			var/team = RED_WARTEAM
+			if(warfare_faction == RED_WARTEAM)
+				team = BLUE_WARTEAM
+			to_chat(world, "<span class='userdanger'>[uppertext(team)] FLAG DROPPED.</span>")
+			if(aspect_chosen(/datum/round_aspect/halo))
+				SEND_SOUND(world, 'sound/vo/halo/flag_drop.mp3')
 
 		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warfare/red/lord))
 			testing("Red lord is dead!")
 			for(var/client/X in C.heartfelts)
 				var/mob/living/carbon/human/V = X.mob
-				to_chat(V, "<span class='red>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
-				V.playsound_local(get_turf(V), 'sound/music/fallenangel.ogg', 80, FALSE, pressure_affected = FALSE)
+				to_chat(V, "<span class='red'>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
+				if(aspect_chosen(/datum/round_aspect/halo))
+					V.playsound_local(get_turf(V), 'sound/vo/halo/blowmeaway.mp3', 20, FALSE, pressure_affected = FALSE)
+				else
+					V.playsound_local(get_turf(V), 'sound/music/faceoff.ogg', 20, FALSE, pressure_affected = FALSE)
 				V.add_stress(/datum/stressevent/deadlord)
 		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warfare/blu/lord))
 			testing("Blue lord is dead!")
 			for(var/client/X in C.grenzels)
 				var/mob/living/carbon/human/V = X.mob
-				to_chat(V, "<span class='red>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
-				V.playsound_local(get_turf(V), 'sound/music/fallenangel.ogg', 80, FALSE, pressure_affected = FALSE)
+				to_chat(V, "<span class='red'>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>")
+				if(aspect_chosen(/datum/round_aspect/halo))
+					V.playsound_local(get_turf(V), 'sound/vo/halo/blowmeaway.mp3', 20, FALSE, pressure_affected = FALSE)
+				else
+					V.playsound_local(get_turf(V), 'sound/music/faceoff.ogg', 20, FALSE, pressure_affected = FALSE)
 				V.add_stress(/datum/stressevent/deadlord)
 
 	stop_sound_channel(CHANNEL_HEARTBEAT)
@@ -79,30 +100,6 @@
 						if(HU.dna.species.id == dna.species.id)
 							HU.add_stress(/datum/stressevent/viewdeath)
 
-	var/mob/dead/observer/rogue/G = ghostize()
-
-	if(G?.client)
-		SSdroning.kill_droning(G.client)
-		SSdroning.kill_loop(G.client)
-		SSdroning.kill_rain(G.client)
-		G.playsound_local(src, 'sound/misc/deth.ogg', 100)
-
-		var/atom/movable/screen/gameover/hog/H = new()
-		var/list/iconstato = list(
-			"hog"=90,
-			"mortis"=50,
-			"ashbaby"=1 // warmongers is a serious game about the horrors of war
-		)
-		var/chosen = pickweight(iconstato)
-		H.icon_state = chosen
-		H.layer = SPLASHSCREEN_LAYER+0.5
-		G.client.screen += H
-		H.Fade()
-		to_chat(G, "<span class='notice'>You've died! Don't worry, this happens all the time. Press the button that looks like a skull on the left side of your screen to respawn.</span>")
-		mob_timers["lastdied"] = world.time
-		addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 30)
-		G.add_client_colour(/datum/client_colour/monochrome)
-
 	. = ..()
 
 	dizziness = 0
@@ -117,12 +114,49 @@
 	
 	if(aspect_chosen(/datum/round_aspect/exploding))
 		gib(TRUE)
+	
+	if(aspect_chosen(/datum/round_aspect/whatthefuck))
+		gib(TRUE)
+		spawn(1 SECONDS)
+			new /mob/living/carbon/human/species/goblin/npc(get_turf(src))
+
+	if(aspect_chosen(/datum/round_aspect/attackofdead))
+		mind.add_antag_datum(/datum/antagonist/zombie)
+		spawn(10)
+			var/datum/antagonist/zombie/Z = mind.has_antag_datum(/datum/antagonist/zombie)
+			if(Z)
+				Z.wake_zombie()
+	else
+		var/mob/dead/observer/rogue/G = ghostize()
+
+		if(G?.client)
+			SSdroning.kill_droning(G.client)
+			SSdroning.kill_loop(G.client)
+			SSdroning.kill_rain(G.client)
+			G.playsound_local(src, 'sound/misc/deth.ogg', 75)
+			if(aspect_chosen(/datum/round_aspect/halo) && prob(45))
+				G.playsound_local(src, 'sound/vo/halo/copedie.mp3', 100)
+			else
+				G.playsound_local(src, 'sound/foley/death.ogg', 100)
+
+			var/atom/movable/screen/gameover/hog/H = new()
+			var/list/iconstato = list(
+				"mong"=99,
+				"ashbaby"=1 // warmongers is a serious game about the horrors of war
+			)
+			var/chosen = pickweight(iconstato)
+			H.icon_state = chosen
+			H.layer = SPLASHSCREEN_LAYER+0.5
+			H.alpha = 255
+			G.client.screen += H
+			G.client.showtext("CLICK SKULL TO RESPAWN.")
+			mob_timers["lastdied"] = world.time
+			addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 30)
+			G.add_client_colour(/datum/client_colour/monochrome)
 
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)
 		log_message("has died (BRUTE: [src.getBruteLoss()], BURN: [src.getFireLoss()], TOX: [src.getToxLoss()], OXY: [src.getOxyLoss()], CLONE: [src.getCloneLoss()])", LOG_ATTACK)
-	if(is_devil(src))
-		INVOKE_ASYNC(is_devil(src), TYPE_PROC_REF(/datum/antagonist/devil, beginResurrectionCheck), src)
 
 /mob/living/carbon/human/proc/zombie_check()
 	if(!mind)

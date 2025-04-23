@@ -197,6 +197,10 @@
 				if(istype(a_intent, /datum/intent/dagger/thrust) && G.wielded == TRUE)
 					var/mob/living/carbon/human/H = L
 					var/obj/item/bodypart/chest = H.get_bodypart(BODY_ZONE_CHEST)
+					if(H.rogue_sneaking)
+						dropItemToGround(G)
+						visible_message("<span class='warning'>[L] suplexes [src]'s bayonet charge and makes them drop their gun!")
+						return TRUE
 					H.emote("agony")
 					H.apply_damage(30, BRUTE, BODY_ZONE_CHEST)
 					Immobilize(10)
@@ -661,7 +665,7 @@
 	if(resting)
 		if(!IsKnockdown() && !IsStun() && !IsParalyzed())
 			src.visible_message("<span class='notice'>[src] stands up.</span>")
-			if(move_after(src, 20, target = src))
+			if(move_after(src, 10, target = src))
 				set_resting(FALSE, FALSE)
 				return TRUE
 		else
@@ -679,7 +683,7 @@
 	if(resting)
 		if(!IsKnockdown() && !IsStun() && !IsParalyzed())
 			src.visible_message("<span class='info'>[src] stands up.</span>")
-			if(move_after(src, 20, target = src))
+			if(move_after(src, 10, target = src))
 				set_resting(FALSE, FALSE)
 		else
 			src.visible_message("<span class='warning'>[src] tries to stand up.</span>")
@@ -1051,7 +1055,7 @@
 		client.charging = 0
 		client.chargedprog = 0
 		client.tcompare = null //so we don't shoot the attack off
-		client.mouse_pointer_icon = 'icons/effects/mousemice/human.dmi'
+		client.mouse_pointer_icon = file("icons/effects/mousemice/[client.mouse_icon_prefix].dmi")
 	if(used_intent)
 		used_intent.on_mouse_up()
 	if(mmb_intent)
@@ -1337,7 +1341,7 @@
 
 /mob/living/proc/can_use_guns(obj/item/G)//actually used for more than guns!
 	if(G.trigger_guard == TRIGGER_GUARD_NONE)
-		to_chat(src, "<span class='warning'>I are unable to fire this!</span>")
+		to_chat(src, "<span class='warning'>I am unable to fire this!</span>")
 		return FALSE
 	if(G.trigger_guard != TRIGGER_GUARD_ALLOW_ALL && !IsAdvancedToolUser())
 		to_chat(src, "<span class='warning'>I try to fire [G], but can't use the trigger!</span>")
@@ -1920,22 +1924,43 @@
 		return
 	changeNext_move(CLICK_CD_MELEE)
 
-	var/_x = T.x-loc.x
-	var/_y = T.y-loc.y
-	if(_x > 9 || _x < -9)
-		return
-	if(_y > 9 || _y < -9)
-		return
+	if(HAS_TRAIT(src, TRAIT_OFFICER))
+		var/_x = 0
+		var/_y = 0
+		switch(dir)
+			if(NORTH)
+				_y = 10
+			if(EAST)
+				_x = 10
+			if(SOUTH)
+				_y = -10
+			if(WEST)
+				_x = -10
+		client.change_view(world.view + 6)
+
+		var/ttime = 10
+		if(STAPER > 5)
+			ttime = 10 - (STAPER - 5)
+			if(ttime < 0)
+				ttime = 0
+		animate(client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, ttime)
+		hud_used?.show_hud(HUD_STYLE_NOHUD)
+	else
+		var/_x = T.x-loc.x
+		var/_y = T.y-loc.y
+		if(_x > 9 || _x < -9)
+			return
+		if(_y > 9 || _y < -9)
+			return
+		var/ttime = 10
+		if(STAPER > 5)
+			ttime = 10 - (STAPER - 5)
+			if(ttime < 0)
+				ttime = 0
+		animate(client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, ttime)
 	hide_cone()
-	var/ttime = 10
-	if(STAPER > 5)
-		ttime = 10 - (STAPER - 5)
-		if(ttime < 0)
-			ttime = 0
 	if(m_intent != MOVE_INTENT_SNEAK)
 		visible_message("<span class='info'>[src] looks into the distance.</span>")
-	animate(client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, ttime)
-//	RegisterSignal(src, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(stop_looking))
 	update_cone_show()
 
 /mob/proc/look_down(turf/T)
@@ -1981,4 +2006,7 @@
 		client.pixel_y = 0
 	reset_perspective()
 	update_cone_show()
+	regenerate_icons()
+	client?.change_view(CONFIG_GET(string/default_view))
+	hud_used?.show_hud(HUD_STYLE_STANDARD)
 //	UnregisterSignal(src, COMSIG_MOVABLE_PRE_MOVE)

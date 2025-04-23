@@ -227,7 +227,7 @@
 /datum/status_effect/buff/inspired
 	id = "inspired"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/inspired
-	effectedstats = list("speed" = 3,"constitution" = 1,"endurance" = 1)
+	effectedstats = list("speed" = 5,"constitution" = 3,"endurance" = 3,"strength" = 2)
 	duration = 2 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/inspired
@@ -238,10 +238,26 @@
 /datum/status_effect/buff/inspired/great
 	id = "inspired_great"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/inspired/great
-	effectedstats = list("speed" = 4,"constitution" = 4,"endurance" = 4,"strength" = 2)
+	effectedstats = list("speed" = 7,"constitution" = 6,"endurance" = 6,"strength" = 5)
 	duration = 3 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/inspired/great
 	name = "Greatly Inspired"
 	desc = "<span class='nicegreen'>I feel very inspired to fight!</span>\n"
 	icon_state = "intelligence"
+
+/datum/status_effect/buff/spawn_protection
+	id = "spawnprotect"
+	alert_type = null
+	duration = 250
+
+/datum/status_effect/buff/spawn_protection/on_apply()
+	owner.status_flags |= GODMODE
+	to_chat(owner, "<span class='info'>Spawn protection now active.</span>")
+	if(aspect_chosen(/datum/round_aspect/halo))
+		owner.playsound_local(src, 'sound/vo/halo/invincible.mp3', 100)
+	return ..()
+
+/datum/status_effect/buff/spawn_protection/on_remove()
+	owner.status_flags &= ~GODMODE
+	to_chat(owner, "<span class='info'>Your moment of spawn protection invulnerability has ended.</span>")
