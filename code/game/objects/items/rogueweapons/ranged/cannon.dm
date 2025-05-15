@@ -10,12 +10,15 @@
 	max_integrity = 9999
 	drag_slowdown = 1 // If it took so long it would be not really fun.
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
+	var/shootingdown = FALSE // if we are shooting one tile infront of us below (if its an open space)
 	var/obj/item/ammo_casing/caseless/rogue/cball/loaded
 
 /obj/structure/cannon/examine(mob/user)
 	. = ..()
 	if(loaded)
 		. += "<span class='info'>It is loaded.</span>"
+	if(shootingdown)
+		. += "<span class='info'>It will shoot the things below.</span>"
 
 /obj/structure/cannon/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
@@ -39,6 +42,13 @@
 			fire()
 	else
 		return ..()
+
+/obj/structure/cannon/attack_right(mob/user)
+	. = ..()
+	visible_message("<span class='info'>[user] begins tilting \the [src] to point down.</span>", "<span class='info'>I begin tilting \the [src] to point down a little...</span>")
+	if(do_after(user, 3  SECONDS, TRUE, src))
+		visible_message("<span class='info'>[user] tilted \the [src] to point down.</span>", "<span class='info'>I tilted \the [src] to point down a little.</span>")
+		shootingdown = TRUE
 
 /obj/structure/cannon/fire_act(added, maxstacks)
 	if(!loaded)
@@ -66,7 +76,16 @@
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("cannona_firea", src)
-	var/obj/projectile/fired_projectile = new loaded.projectile_type(get_turf(src))
+
+	var/turfina = get_turf(src)
+	if(shootingdown)
+		var/step = get_step(src, dir)
+		if(istype(step, /turf/open/transparent/openspace))
+			turfina = get_step_multiz(step, DOWN)
+		else
+			explosion(get_turf(src), heavy_impact_range = 4, light_impact_range = 6, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
+
+	var/obj/projectile/fired_projectile = new loaded.projectile_type(turfina)
 	fired_projectile.firer = src
 	fired_projectile.fired_from = src
 	fired_projectile.fire(dir2angle(dir))
@@ -119,6 +138,8 @@
 		var/oldy = y
 		var/newy = oldy + plusy
 		var/turf/epicenter = locate(x,newy,z)
+		if(istype(epicenter, /turf/open/transparent/openspace))
+			epicenter = get_step_multiz(epicenter, DOWN)
 
 		to_chat(user, "<span class='notice'>I try to look through the magnifying glass on \the [src].</span>")
 		if(do_after(user, 2 SECONDS, TRUE, src))
@@ -145,6 +166,18 @@
 				plusy = -agka
 		to_chat(user, "<span class='info'>New Target: [y + plusy] azirath</span>")
 		playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
+
+/obj/structure/bombard/fire_act(added, maxstacks)
+	if(!loaded)
+		return
+	playsound(src.loc, 'sound/items/firelight.ogg', 100)
+	fire()
+
+/obj/structure/bombard/spark_act()
+	if(!loaded)
+		return
+	playsound(src.loc, 'sound/items/firelight.ogg', 100)
+	fire()
 
 /obj/structure/bombard/attackby(obj/item/I, mob/user, params)
 	if(dir == WEST || dir == EAST)
@@ -196,6 +229,9 @@
 	var/newy = oldy + plusy
 
 	var/turf/epicenter = locate(x,newy,z)
+	if(istype(epicenter, /turf/open/transparent/openspace))
+		epicenter = get_step_multiz(epicenter, DOWN)
+
 	var/obj/effect/warning/G = new(epicenter)
 
 	spawn(5 SECONDS)
