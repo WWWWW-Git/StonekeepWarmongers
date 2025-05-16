@@ -2,5 +2,8 @@
   "private": true,
   "name": "common",
   "version": "0.1.0",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "common": "file:"
+  }
 }
