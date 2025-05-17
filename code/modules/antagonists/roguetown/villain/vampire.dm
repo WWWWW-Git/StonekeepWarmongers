@@ -384,7 +384,6 @@
 	mob_timers["becoming_vampire"] = world.time
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/mob/living/carbon/human, vampire_finalize)), 2 MINUTES)
 	to_chat(src, "<span class='danger'>I feel sick...</span>")
-	src.playsound_local(get_turf(src), 'sound/music/horror.ogg', 80, FALSE, pressure_affected = FALSE)
 	flash_fullscreen("redflash3")
 
 /mob/living/carbon/human/proc/vampire_finalize()

@@ -468,41 +468,45 @@
 
 	var/cocked = FALSE
 	var/lit = FALSE
-	var/range = 5
 	var/fuel_source = FALSE
+	var/range = 5
 	var/fuze = 30
 
 /obj/item/rogueweapon/spear/firelance/proc/ignite(mob/living/user)
 	if(lit)
-		to_chat(user, "<span class='warning'>The Firelance's fuse is already ignited and fierce as a bull.</span>")
+		to_chat(user, "<span class='warning'>The firelance's fuse is already ignited.</span>")
 		return
 
 	if(!fuel_source)
 		to_chat(user, "<span class='info'>There is none.</span>")
 		return
 
-	if(!cocked)
-		return
+	if(cocked)
+		to_chat(user, "<span class='info'>The firelance's fuze starts to rebel in sparking lights.</span>")
+		user.visible_message("<span class='warning'>[user] lights a firelance! FUCKING RUN!</span>","<span class='info'>I light the firelance.</span>")
+		playsound(get_turf(src), 'sound/items/firelight.ogg', 100)
 
-	to_chat(user, "<span class='info'>The firelance's fuze starts to rebel in sparking lights.</span>")
-	playsound(get_turf(src), 'sound/items/firelight.ogg', 100)
+		lit = TRUE
+		spawn(20)
+			if(lit)
+				playsound(get_turf(src),  pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'), 100)
+				flamefire(user)
+				fuel_source = FALSE
+				lit = FALSE
+				update_icon()
+	else
+		to_chat(user, "<span class='info'>The firelance's fuze starts to rebel in sparking lights.</span>")
+		user.visible_message("<span class='warning'>[user] lights a firelance! FUCKING RUN!</span>","<span class='info'>I light the firelance.</span>")
+		playsound(get_turf(src), 'sound/items/firelight.ogg', 100)
 
-	lit = TRUE
-	spawn(20) // 2 seconds
-		if(lit)
-			to_chat(user, "<span class='warning'>The fuze reaches the composite, building deadly pressure.</span>")
-			playsound(get_turf(src),'sound/items/fishing_plouf.ogg', rand(30,60), TRUE)
-	spawn(40) // 4 seconds
-		if(lit)
-			to_chat(user, "<span class='danger'>The firelance is about to release purifying death!</span>")
-			playsound(get_turf(src), 'sound/items/firelight.ogg', 100)
-	spawn(60) // 6 seconds
-		if(lit)
-			playsound(get_turf(src), 'sound/magic/fireball.ogg', 100)
-			flamefire(user)
-			fuel_source = FALSE
-			lit = FALSE
-			update_icon()
+		lit = TRUE
+		spawn(20)
+			if(lit)
+				playsound(get_turf(src), 'sound/misc/explode/meteor.ogg', 100)
+				projectilefire(user)
+				fuel_source = FALSE
+				lit = FALSE
+				update_icon()
 
 /obj/item/rogueweapon/spear/firelance/proc/flamefire(mob/living/user)
 	if(!user)
@@ -540,23 +544,40 @@
 						L.visible_message("<span class='danger'>[L] is engulfed in flames!</span>")
 						L.adjustFireLoss(rand(10, 20)) //Enough damage to ensure the player will move away.
 	cocked = FALSE
-	fuel_source = FALSE // Consume  fuel after use
+	QDEL_NULL(fuel_source)// Consume  fuel after use
 	update_icon()
 
-/obj/item/rogueweapon/spear/firelance/dropped(mob/living/user)
-	. = ..()
-	if(fuel_source)
-		visible_message("<span class='info'>[user] dropped the [usr] with its gourd's cap unsealed, hissing quietly, as it tells the tales of widowmaking by doing the obvious.</span>")
-		user.adjust_fire_stacks(3)
-		user.IgniteMob()
-		flamefire(user)
+/obj/item/rogueweapon/spear/firelance/proc/projectilefire(mob/living/user)
+	if(!user)
+		return
+
+	var/turf/start = get_turf(user) 	// VERY important. It determine user's position and firing direction. May remove it for handmade fuels.
+	if(!start)
+		return
+
+	for(var/mob/living/carbon/H in hearers(7, src))
+		shake_camera(H, 6, 5)
+		H.blur_eyes(4)
+		if(prob(30))
+			H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 45, FALSE)
+
+	var/obj/projectile/fired_projectile = new /obj/projectile/sanctiflux(start)
+	fired_projectile.firer = user
+	fired_projectile.fired_from = src
+	fired_projectile.fire(dir2angle(user.dir))
+	sleep(4)
+	new /obj/effect/particle_effect/smoke(get_turf(src))
+
+	cocked = FALSE
+	QDEL_NULL(fuel_source)
+	update_icon()
 
 /obj/item/rogueweapon/spear/firelance/attack_self(mob/living/user)
 	if(lit) // safeguard
 		return
 	else
 		if(cocked && !fuel_source)
-			to_chat(user, "<span class='info'>You open the blades, making it suitable for use. It only requires a gourd filled with fuel.</span>")
+			to_chat(user, "<span class='info'>You open the blades.</span>")
 			cocked = FALSE
 			update_icon()
 			return
@@ -591,21 +612,20 @@
 
 /obj/item/rogueweapon/spear/firelance/attackby(obj/item/I, mob/living/user)
 	if(!istype(I, /obj/item/sanctiflux))
-		to_chat(user, "<span class='warning'>[I] is not a valid fuel source!</span>")
 		return
 	else
 		if(fuel_source) // If it already has a fuel source, you can't insert a new one.
-			to_chat(user, "<span class='warning'>The Firelance already has a gourd on.</span>")
+			to_chat(user, "<span class='info'>The firelance already has a gourd on.</span>")
 			return
 		if(cocked)
-			to_chat(user, "<span class='warning'>I shoved the gourd against the steel blades, almost cracking it. I cannot put the gourd inside if the blades are on the way.</span>")
+			to_chat(user, "<span class='info'>I cannot put the gourd inside if the blades are on the way.</span>")
 			playsound(src,'sound/items/fishing_plouf.ogg', rand(30,60), TRUE)
 			return
 		if(!cocked)
 			fuel_source = TRUE
 			update_icon()
 			qdel(I)
-			to_chat(user, "<span class='info'>I press the gourd against the insertion hole. I just need to adjust the mechanisms so the automata within do the rest of the job.</span>")
+			to_chat(user, "<span class='info'>I press the gourd against the insertion hole.</span>")
 			..()
 
 /obj/item/rogueweapon/spear/firelance/spark_act()
@@ -615,19 +635,19 @@
 	ignite(usr)
 
 /obj/item/rogueweapon/spear/firelance/update_icon()
+	cut_overlays()
 	if(lit)
-		icon_state = "firelance_lit"
-	else
-		if(!cocked)
-			if(fuel_source)
-				icon_state = "firelance_oil"
-			else
-				icon_state = "firelance"
+		add_overlay(mutable_appearance('icons/roguetown/weapons/64.dmi', "firelance_overlay"))
+	if(!cocked)
+		if(fuel_source)
+			icon_state = "firelance_oil"
 		else
-			if(fuel_source)
-				icon_state = "firelance_cocked_oil"
-			else
-				icon_state = "firelance_cocked"
+			icon_state = "firelance"
+	else
+		if(fuel_source)
+			icon_state = "firelance_cocked_oil"
+		else
+			icon_state = "firelance_cocked"
 
 /obj/item/sanctiflux
 	name = "sanctiflux gourd"
@@ -659,9 +679,6 @@
 	return
 
 /obj/effect/oilspill/process()
-	for(var/mob/living/carbon/human/H in view(2, src)) 	// Sate pyromaniac addiction. I don't even know if that thing works, but anyway.
-		if(H.has_flaw(/datum/charflaw/addiction/pyromaniac))
-			H.sate_addiction()
 	life--
 	if(life <= 0)
 		qdel(src)

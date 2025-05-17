@@ -35,7 +35,14 @@
 	. = ..()
 	create_reagents(500)
 	START_PROCESSING(SSobj, src)
-
+	
+	alpha = 0
+	var/matrix/ARE = matrix()
+	ARE.Scale(0.8, 0.2)
+	transform = ARE
+	var/matrix/DO = matrix()
+	DO.Scale(1, 1)
+	animate(src, time = 3, alpha = 255, transform = DO, easing = SINE_EASING)
 
 /obj/effect/particle_effect/smoke/Destroy()
 	STOP_PROCESSING(SSobj, src)
