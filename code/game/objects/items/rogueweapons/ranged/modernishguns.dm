@@ -321,3 +321,47 @@
 	QDEL_NULL(chambered)
 	//new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.musketsshot++
+
+/obj/item/gun/grenadelauncher/granata
+	name = "blunderelauncher"
+	desc = "To fire and back. Load with bombs."
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon = 'icons/roguetown/weapons/64.dmi'
+	icon_state = "granata"
+	item_state = "musket"
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_BACK
+	max_grenades = 1
+
+/obj/item/gun/grenadelauncher/granata/examine(mob/user)
+	. = ..()
+	if(grenades.len)
+		. = "It is loaded."
+
+/obj/item/gun/grenadelauncher/granata/update_icon()
+	if(grenades.len)
+		icon_state = "granata_loaded"
+	else
+		icon_state = "granata"
+
+/obj/item/gun/grenadelauncher/granata/attackby(obj/item/I, mob/user, params)
+	if((istype(I, /obj/item/bomb)))
+		if(grenades.len < max_grenades)
+			if(!user.transferItemToLoc(I, src))
+				return
+			grenades += I
+			to_chat(user, "<span class='info'>I load \the [I] into \the [src].</info>")
+			playsound(user.loc, 'sound/foley/load_granata.ogg', 75, TRUE, -3)
+			update_icon()
+
+/obj/item/gun/grenadelauncher/granata/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
+	user.visible_message("<span class='danger'>[user] launches a bomb!</span>", \
+						"<span class='danger'>I launch a bomb!</span>")
+	var/obj/item/bomb/F = grenades[1] //Now with less copypasta!
+	grenades -= F
+	F.forceMove(user.loc)
+	F.throw_at(target, 30, 4, user, spin = TRUE)
+	F.lit = TRUE
+	playsound(user.loc, 'sound/combat/Ranged/muskshoot.ogg', 75, TRUE, -3)
+	update_icon()
+	new /obj/effect/particle_effect/smoke(get_turf(user))

@@ -514,7 +514,6 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/heart
-	r_hand = GetMainGunForWarfareHeartfelt()
 	head = /obj/item/clothing/head/roguetown/tengai/gasa
 	if(prob(70))
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
@@ -887,7 +886,7 @@
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
@@ -921,7 +920,10 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
-	beltr = GetSidearmForWarfare()
+	if(SSticker.warfare_techlevel >= WARMONGERS_TECHLEVEL_COWBOY)
+		beltr = /obj/item/gun/grenadelauncher/granata
+	else
+		beltr = GetSidearmForWarfare()
 	if(H.dna.species.id == "dwarf")
 		beltl = /obj/item/rogueweapon/woodcut/pick
 	else
@@ -934,7 +936,7 @@
 	mask = /obj/item/clothing/mask/rogue/platemask
 	if(prob(70))
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
-	backpack_contents = list(/obj/item/bomb = 4, /obj/item/flint = 1)
+	backpack_contents = list(/obj/item/bomb = 3, /obj/item/bomb/poison = 1, /obj/item/flint = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -1085,7 +1087,6 @@
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	mask = /obj/item/clothing/mask/rogue/snipermask
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz
-	r_hand = GetMainGunForWarfareGrenzelhoft()
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 6, TRUE)

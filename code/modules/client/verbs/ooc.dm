@@ -591,6 +591,11 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	set name = "Propose STALEMATE"
 	set category = "Options"
 	set desc = ""
+	
+	var/sure = alert(usr, "Are you a coward?", "WARMONGERS", "Yes", "No")
+	if(sure == "No")
+		to_chat(usr, "<span class='warning'>The fight shall continue, then.</span>")
+		return
 
 	var/datum/game_mode/warfare/W = SSticker.mode
 	if(istype(W))

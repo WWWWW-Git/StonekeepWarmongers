@@ -178,7 +178,10 @@
 	life--
 
 	if(life <= 0)
-		qdel(src)
+		var/tima = rand(4,6)
+		animate(src, time = tima, alpha = 0)
+		spawn(tima)
+			qdel(src)
 		return
 
 	for(var/mob/living/carbon/human/H in view(2, H))

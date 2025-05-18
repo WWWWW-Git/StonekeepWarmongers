@@ -12,10 +12,6 @@
 	var/max_grenades = 3
 	custom_materials = list(/datum/material/iron=2000)
 
-/obj/item/gun/grenadelauncher/examine(mob/user)
-	. = ..()
-	. += "[grenades.len] / [max_grenades] grenades loaded."
-
 /obj/item/gun/grenadelauncher/attackby(obj/item/I, mob/user, params)
 
 	if((istype(I, /obj/item/grenade)))
