@@ -113,7 +113,7 @@
 						var/turf/closed/C = get_step_multiz(T, DOWN)
 						if(istype(C))
 							count++
-					if(count >= 2)
+					if(count >= 1)
 						break
 				if(count < 2)
 					above.ScrapeAway()

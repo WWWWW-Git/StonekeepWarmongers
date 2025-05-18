@@ -48,6 +48,8 @@
 	pixel_y = rand(5,5)
 	blood_timer = addtimer(CALLBACK(src, PROC_REF(become_dry)), rand(5 MINUTES,15 MINUTES), TIMER_STOPPABLE)
 
+	alpha = 0
+	animate(src, time = 3, alpha = 200)
 
 /obj/effect/decal/cleanable/blood/proc/become_dry()
 	if(QDELETED(src))
