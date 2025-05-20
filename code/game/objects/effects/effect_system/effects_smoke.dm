@@ -138,13 +138,20 @@
 	if(..())
 		//M.drop_all_held_items()
 		M.adjustFireLoss(55)
-		M.emote("cough")
+		var/emote = pick("cough","cry","scream","painscream","agony")
+		M.emote(emote)
+		if(prob(45))
+			M.apply_status_effect(/datum/status_effect/debuff/gas)
+			to_chat(M, "<span class='danger'>MY SKIN IS FALLING OFF!</span>")
+		if(prob(20))
+			M.blood_volume -= 15
+			to_chat(M, "<span class='danger'>Blood squirts out from [pick("my eyes","my mouth","my nose","my ears","underneath my fingernails")]!</span>")
 		return 1
 
 /obj/effect/particle_effect/smoke/bad/CanPass(atom/movable/mover, turf/target)
-	if(istype(mover, /obj/projectile/beam))
-		var/obj/projectile/beam/B = mover
-		B.damage = (B.damage/2)
+	if(istype(mover, /obj/projectile))
+		var/obj/projectile/B = mover
+		B.damage = (B.damage*4) // reward blind shots or something.
 	return 1
 
 

@@ -101,7 +101,7 @@ GLOBAL_LIST_EMPTY(explosions)
 	// 3/7/14 will calculate to 80 + 35
 
 	var/far_dist = 0
-	far_dist += heavy_impact_range * 5
+	far_dist += light_impact_range * 2 // changed from heavy_impact_range * 5 to this so we can have fun far explosion sounds. its war baby, whatcha gonna do.
 	far_dist += devastation_range * 209
 
 	if(!silent)

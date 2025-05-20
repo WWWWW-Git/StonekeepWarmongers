@@ -101,7 +101,7 @@
 		var/datum/effect_system/smoke_spread/smoke = new
 		smoke.set_up(4, src)
 		smoke.start()
-		playsound(src.loc, 'sound/items/firelight.ogg', 100)
+		playsound(src.loc, 'sound/combat/smoke.ogg', 100, FALSE, 5, 5)
 		qdel(smoke)
 	qdel(src)
 
@@ -125,7 +125,7 @@
 		var/datum/effect_system/smoke_spread/bad/smoke = new
 		smoke.set_up(3, src)
 		smoke.start()
-		playsound(src.loc, 'sound/items/firelight.ogg', 100)
+		playsound(src.loc, 'sound/combat/smoke.ogg', 100, FALSE, 5, 5)
 		qdel(smoke)
 	qdel(src)
 

@@ -47,14 +47,11 @@
 	. = ..()
 	if(!shootingdown)
 		visible_message("<span class='info'>[user] begins tilting \the [src] to point down.</span>", "<span class='info'>I begin tilting \the [src] to point down a little...</span>")
-		if(do_after(user, 3  SECONDS, TRUE, src))
-			visible_message("<span class='info'>[user] tilted \the [src] to point down.</span>", "<span class='info'>I tilted \the [src] to point down a little.</span>")
-			shootingdown = TRUE
 	else
 		visible_message("<span class='info'>[user] begins tilting \the [src] to point up.</span>", "<span class='info'>I begin tilting \the [src] to point up a little...</span>")
-		if(do_after(user, 3  SECONDS, TRUE, src))
-			visible_message("<span class='info'>[user] tilted \the [src] to point up.</span>", "<span class='info'>I tilted \the [src] to point up a little.</span>")
-			shootingdown = FALSE
+	if(do_after(user, 3  SECONDS, TRUE, src))
+		shootingdown = !shootingdown
+		playsound(src.loc, 'sound/foley/winch.ogg', 100, extrarange = 3)
 
 /obj/structure/cannon/fire_act(added, maxstacks)
 	if(!loaded)

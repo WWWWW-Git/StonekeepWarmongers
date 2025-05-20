@@ -306,3 +306,14 @@
 	name = "Muscle Soreness"
 	desc = "<span class='warning'>Gaaaah, So sooooooore.</span>\n"
 	icon_state = "muscles"
+
+/datum/status_effect/debuff/gas
+	id = "gas"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/gas
+	effectedstats = list("strength" = -3, "speed" = -3,"endurance" = -3)
+	duration = 600
+
+/atom/movable/screen/alert/status_effect/debuff/gas
+	name = "Gas Exposure"
+	desc = "<span class='warning'>THEY'RE GASSING US! NO! MY SKIN IS FALLING OFF! FUCK!!!</span>\n"
+	icon_state = "poison"
