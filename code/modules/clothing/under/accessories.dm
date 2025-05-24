@@ -72,7 +72,7 @@
 /obj/item/clothing/accessory/proc/on_uniform_dropped(obj/item/clothing/suit/U, user)
 	return
 
-/obj/item/clothing/accessory/AltClick(mob/user)
+/obj/item/clothing/accessory/MiddleClick(mob/user, params)
 	if(istype(user) && user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		if(initial(above_suit))
 			above_suit = !above_suit
@@ -80,7 +80,7 @@
 
 /obj/item/clothing/accessory/examine(mob/user)
 	. = ..()
-	. += "<span class='notice'>\The [src] can be attached to a shirt. Alt-click to remove it once attached.</span>"
+	. += "<span class='info'>\The [src] can be attached to a shirt. Middle-click to remove it once attached.</span>"
 
 /obj/item/clothing/accessory/waistcoat
 	name = "waistcoat"
@@ -189,7 +189,7 @@
 
 /obj/item/clothing/accessory/medal/silver/veteran
 	name = "Sky Veteran medal"
-	desc = "A medal for veterans of whom is said could even beat the Sky in a battle."
+	desc = "A medal for veterans of whom is said they could even beat the Sky in a battle."
 
 /obj/item/clothing/accessory/medal/silver/excellence
 	name = "award for outstanding achievement in the field of excellence"

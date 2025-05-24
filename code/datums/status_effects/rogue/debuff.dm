@@ -315,5 +315,14 @@
 
 /atom/movable/screen/alert/status_effect/debuff/gas
 	name = "Gas Exposure"
-	desc = "<span class='warning'>THEY'RE GASSING US! NO! MY SKIN IS FALLING OFF! FUCK!!!</span>\n"
-	icon_state = "poison"
+	desc = "<span class='boldwarning'>THEY'RE GASSING US! NO! MY SKIN IS FALLING OFF! FUCK!!!</span>\n"
+	icon_state = "gas"
+
+/atom/movable/screen/alert/status_effect/debuff/embed
+	name = "Embedded Objects"
+	desc = "<span class='boldwarning'>There is something inside me that shouldn't.</span>\n"
+	icon_state = "embed"
+
+/datum/status_effect/debuff/embed
+	id = "embed"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/embed

@@ -564,6 +564,11 @@
 		adjustToxLoss(log(radiation-RAD_MOB_SAFE)*RAD_TOX_COEFFICIENT)
 
 /mob/living/carbon/handle_embedded_objects()
+	if(has_embedded_objects())
+		if(!has_status_effect(/datum/status_effect/debuff/embed))
+			apply_status_effect(/datum/status_effect/debuff/embed)
+	else
+		remove_status_effect(/datum/status_effect/debuff/embed)
 	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
 		for(var/obj/item/embedded as anything in bodypart.embedded_objects)
 			if(embedded.on_embed_life(src, bodypart))

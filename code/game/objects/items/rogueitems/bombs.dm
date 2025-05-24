@@ -64,6 +64,7 @@
 				snuff()
 			else
 				explosion(T, heavy_impact_range = heavy_impact, light_impact_range = light_impact, flame_range = flame_impact, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
+				new /obj/item/shard (T)
 		else
 			if(prob(prob2fail))
 				snuff()
@@ -103,6 +104,7 @@
 		smoke.start()
 		playsound(src.loc, 'sound/combat/smoke.ogg', 100, FALSE, 5, 5)
 		qdel(smoke)
+		new /obj/item/shard (T)
 	qdel(src)
 
 /obj/item/bomb/poison
@@ -127,6 +129,7 @@
 		smoke.start()
 		playsound(src.loc, 'sound/combat/smoke.ogg', 100, FALSE, 5, 5)
 		qdel(smoke)
+		new /obj/item/shard (T)
 	qdel(src)
 
 /obj/item/bomb/fire
@@ -145,6 +148,7 @@
 				snuff()
 			else
 				explosion(T, light_impact_range = light_impact, flame_range = flame_impact, smoke = TRUE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+				new /obj/item/shard (T)
 		else
 			if(prob(prob2fail))
 				snuff()

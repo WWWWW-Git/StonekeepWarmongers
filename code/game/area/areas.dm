@@ -628,9 +628,6 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 //		L.client.ambience_playing = 1
 //		SEND_SOUND(L, sound('sound/blank.ogg', repeat = 1, wait = 0, volume = 35, channel = CHANNEL_BUZZ))
 
-	if(first_time_text)
-		L.intro_area(src)
-
 	var/mob/living/living_arrived = M
 
 	if(istype(living_arrived) && living_arrived.client && !living_arrived.cmode)
@@ -649,8 +646,6 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	var/musicfading = 0
 
 /mob/living/proc/intro_area(area/A)
-	return
-	/*
 	if(!mind)
 		return
 	if(A.first_time_text in mind.areas_entered)
@@ -671,7 +666,6 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	playsound_local(src, 'sound/misc/area.ogg', 100, FALSE)
 	animate(T, alpha = 255, time = 10, easing = EASE_IN)
 	addtimer(CALLBACK(src, PROC_REF(clear_area_text), T), 35)
-	*/
 
 /mob/living/proc/clear_area_text(atom/movable/screen/A)
 	if(!A)

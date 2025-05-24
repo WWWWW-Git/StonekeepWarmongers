@@ -13,9 +13,11 @@
 	if(H)
 		var/mob/living/carbon/human/HU = H
 
+		var/obj/item/clothing/suit/U = HU.wear_shirt
 		if(check_bypasslist(H.ckey))
-			if(!HU.wear_neck)
-				HU.equip_to_slot_or_del(new /obj/item/clothing/neck/roguetown/psicross/noc(HU), SLOT_NECK)
+			U.attach_accessory(new /obj/item/clothing/accessory/medal/silver/veteran(U))
+		if(check_badminlist(H.ckey))
+			U.attach_accessory(new /obj/item/clothing/accessory/medal/badmin(U))
 
 		if(aspect_chosen(/datum/round_aspect/squishyhumans))
 			HU.STACON = 6
@@ -385,9 +387,7 @@
 	backpack_contents = list(/obj/item/rogue/sandbagkit = 4, /obj/item/rogueweapon/shovel = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
@@ -396,6 +396,7 @@
 		H.change_stat("strength", 2)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
+		H.change_stat("speed", -6)
 
 //// FIRELANCER ////
 
@@ -852,7 +853,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 		H.change_stat("strength", 2)
 		H.change_stat("perception", -1)
-		H.change_stat("endurance", 2)
+		H.change_stat("endurance", 3)
 		H.change_stat("constitution", 1)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
@@ -1044,7 +1045,8 @@
 						if(!BP.is_object_embedded(src))
 							BP.add_embedded_object(src)
 						C.emote("agony")
-						icon_state = "[icon_state]-bloody"
+						if(icon_state != "[icon_state]-bloody")
+							icon_state = "[icon_state]-bloody"
 						if(loaded_bomb)
 							loaded_bomb.forceMove(get_turf(C))
 							loaded_bomb.light()

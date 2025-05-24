@@ -408,17 +408,13 @@ BLIND     // can't see anything
 		if(H.wear_pants == src)
 			H.update_suit_sensors()
 
-/obj/item/clothing/under/AltClick(mob/user)
-	if(..())
-		return 1
-
+/obj/item/clothing/suit/MiddleClick(mob/user, params)
+	. = ..()
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return
 	else
 		if(attached_accessory)
 			remove_accessory(user)
-		else
-			rolldown()
 
 /obj/item/clothing/under/verb/jumpsuit_adjust()
 	set name = "Adjust Jumpsuit Style"

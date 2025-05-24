@@ -233,7 +233,7 @@
 /atom/movable/screen/alert/status_effect/buff/inspired
 	name = "Inspired"
 	desc = "<span class='nicegreen'>I'm inspired to fight!</span>\n"
-	icon_state = "intelligence"
+	icon_state = "ravox"
 
 /datum/status_effect/buff/inspired/great
 	id = "inspired_great"
