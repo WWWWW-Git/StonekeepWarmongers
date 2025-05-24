@@ -205,6 +205,7 @@
 	..()
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/heartfelt
 	mask = /obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/colourable/oni
+	neck = /obj/item/clothing/neck/roguetown/gorget
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/quiver/bullets
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
@@ -212,8 +213,9 @@
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/rogueweapon/sword/sabre/piandao/dec
-	armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander
 	cloak = /obj/item/clothing/cloak/heartfelt
+	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(SSmapping.config.map_name == "LD-Bloodfort")
 		head = /obj/item/clothing/head/roguetown/crownred
 	if(!(findtext(H.real_name, " of ") || findtext(H.real_name, " the ")))
@@ -706,19 +708,19 @@
 /datum/outfit/job/roguetown/bluking/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	H.patron = GLOB.patronlist[/datum/patron/divine/psydon]
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/quiver/bullets
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	pants = /obj/item/clothing/under/roguetown/tights/black
+	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
+	pants = /obj/item/clothing/under/roguetown/trou
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander/blue
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/rogueweapon/sword
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(SSmapping.config.map_name == "LD-Bloodfort")
-		cloak = /obj/item/clothing/cloak/lordcloak
+		cloak = /obj/item/clothing/cloak/half
 		head = /obj/item/clothing/head/roguetown/crownblu
 	else
 		head = /obj/item/clothing/head/roguetown/commander
