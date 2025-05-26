@@ -166,6 +166,11 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	ramtime = 3.4
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed // i axed you a question
+	name = "barkaxe"
+	desc = "An abomination devised by the bearded menace themselves. The name is being workshopped currently."
+	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/axe/chop, /datum/intent/axe/cut)
+
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/attack_self(mob/living/user)
 	return
 

@@ -413,7 +413,7 @@ BLIND     // can't see anything
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return
 	else
-		if(attached_accessory && !(attach_accessory.noremove))
+		if(attached_accessory && !(attached_accessory.noremove))
 			remove_accessory(user)
 
 /obj/item/clothing/under/verb/jumpsuit_adjust()

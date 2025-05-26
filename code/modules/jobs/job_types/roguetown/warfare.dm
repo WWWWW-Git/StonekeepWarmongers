@@ -561,7 +561,10 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltl = /obj/item/rogueweapon/sword/sabre/piandao
-	beltr = GetSidearmForWarfare()
+	if(H.dna.species.id == "dwarf" && SSticker.warfare_techlevel <= WARMONGERS_TECHLEVEL_COWBOY)
+		beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed
+	else
+		beltr = GetSidearmForWarfare()
 	head = /obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backr = /obj/item/quiver/ironbullets
@@ -607,6 +610,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/medic
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	cloak = /obj/item/clothing/cloak/apron/cook/medical
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
@@ -845,6 +849,8 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/grenzelhoft
 	backr = /obj/item/rogueweapon/sword/long/reskin
 	head = /obj/item/clothing/head/roguetown/grenzelhofthat
+	if(prob(10))
+		mask = /obj/item/clothing/mask/rogue/chainmask
 	if(prob(50))
 		mouth = /obj/item/clothing/mask/cigarette/pipe
 	if(H.mind)
@@ -854,10 +860,10 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
 		H.change_stat("strength", 2)
 		H.change_stat("perception", -1)
-		H.change_stat("endurance", 3)
+		H.change_stat("endurance", 4)
 		H.change_stat("constitution", 1)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
@@ -1134,7 +1140,10 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/rogueweapon/sword/rapier
-	beltr = GetSidearmForWarfare()
+	if(H.dna.species.id == "dwarf" && SSticker.warfare_techlevel <= WARMONGERS_TECHLEVEL_COWBOY)
+		beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed
+	else
+		beltr = GetSidearmForWarfare()
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	backr = /obj/item/quiver/ironbullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
@@ -1179,6 +1188,7 @@
 	beltl = /obj/item/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	cloak = /obj/item/clothing/cloak/apron/cook/medical
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)

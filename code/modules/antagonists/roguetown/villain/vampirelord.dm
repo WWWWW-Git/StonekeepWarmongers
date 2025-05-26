@@ -211,6 +211,8 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	var/datum/game_mode/warfare/W = SSticker.mode
 	W.redcrown = src
 
+	set_light(3, 5, CLOTHING_HEARTFELT)
+
 /obj/item/clothing/head/roguetown/crownblu
 	name = "crown of the Grenzelhofts"
 	icon_state = "vcrown_blu"
@@ -225,6 +227,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	. = ..()
 	var/datum/game_mode/warfare/W = SSticker.mode
 	W.blucrown = src
+	set_light(3, 5, CLOTHING_BLUE)
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/iron/vampire
 	icon_state = "vunder"
