@@ -40,6 +40,14 @@
 	density = TRUE
 	layer = FLY_LAYER
 
+/obj/effect/sparklysparkle
+	name = ""
+	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	underlays = null
+	overlays = null
+
 /obj/effect/supplypod_selector
 	icon_state = "supplypod_selector"
 	layer = FLY_LAYER

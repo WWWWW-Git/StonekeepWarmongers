@@ -10,6 +10,7 @@
 	var/minimize_when_attached = TRUE // TRUE if shown as a small icon in corner, FALSE if overlayed
 	var/datum/component/storage/detached_pockets
 	var/attachment_slot = CHEST
+	var/noremove = FALSE
 
 /obj/item/clothing/accessory/proc/can_attach_accessory(obj/item/clothing/suit/U, mob/user)
 	if(!attachment_slot || (U && U.body_parts_covered & attachment_slot))
@@ -110,6 +111,37 @@
 	resistance_flags = FIRE_PROOF
 	var/medaltype = "medal" //Sprite used for medalbox
 	var/commended = FALSE
+	var/sparkles = FALSE
+
+/obj/item/clothing/accessory/medal/Initialize()
+	. = ..()
+	if(sparkles)
+		START_PROCESSING(SSobj, src)
+
+/obj/item/clothing/accessory/medal/process()
+	spawn(rand(1,5))
+		sparkle()
+
+/obj/item/clothing/accessory/medal/proc/sparkle()
+	var/obj/effect/sparklysparkle/sparkle = new(get_turf(src))
+	sparkle.icon = 'icons/effects/effects.dmi'
+	sparkle.icon_state = "sparkle"
+
+	var/matrix/first = matrix()
+	sparkle.pixel_x += rand(-12, 12) // can be anywhere in the tile bounds
+	sparkle.pixel_y += rand(-12, 12)
+	first.Turn(rand(-90, 90))
+	first.Scale(0.1, 0.1)
+	sparkle.transform = first
+
+	first.Scale(10)
+	animate(sparkle, transform = first, time = 0.3 SECONDS, alpha = 150)
+
+	first.Scale(0.1 * 0.1)
+	first.Turn(rand(-90, 90))
+	animate(transform = first, time = 0.3 SECONDS)
+
+	QDEL_IN(sparkle, 1.5 SECONDS)
 
 //Pinning medals on people
 /obj/item/clothing/accessory/medal/attack(mob/living/carbon/human/M, mob/living/user)
@@ -165,8 +197,10 @@
 	desc = ""
 	icon_state = "cargo"
 
-/obj/item/clothing/accessory/medal/badmin
+/obj/item/clothing/accessory/medal/badmin // warmogners
 	name = "bad conduct medal"
+	desc = "Cursed."
+	noremove = TRUE
 
 /obj/item/clothing/accessory/medal/ribbon/cargo
 	name = "\"cargo tech of the shift\" award"
@@ -179,17 +213,19 @@
 	medaltype = "medal-silver"
 	custom_materials = list(/datum/material/silver=1000)
 
-/obj/item/clothing/accessory/medal/silver/valor
+/obj/item/clothing/accessory/medal/silver/valor // warmogners
 	name = "medal of valor"
 	desc = ""
+	sparkles = TRUE
 
 /obj/item/clothing/accessory/medal/silver/security
 	name = "robust security award"
 	desc = ""
 
-/obj/item/clothing/accessory/medal/silver/veteran
+/obj/item/clothing/accessory/medal/silver/veteran // warmogners
 	name = "Sky Veteran medal"
 	desc = "A medal for veterans of whom is said they could even beat the Sky in a battle."
+	sparkles = TRUE
 
 /obj/item/clothing/accessory/medal/silver/excellence
 	name = "award for outstanding achievement in the field of excellence"
@@ -201,8 +237,9 @@
 	icon_state = "gold"
 	medaltype = "medal-gold"
 	custom_materials = list(/datum/material/gold=1000)
+	sparkles = TRUE
 
-/obj/item/clothing/accessory/medal/gold/admin
+/obj/item/clothing/accessory/medal/gold/admin // warmogners
 	name = "humenitarian service medal"
 
 /obj/item/clothing/accessory/medal/gold/captain

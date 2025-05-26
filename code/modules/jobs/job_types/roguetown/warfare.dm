@@ -14,10 +14,12 @@
 		var/mob/living/carbon/human/HU = H
 
 		var/obj/item/clothing/suit/U = HU.wear_shirt
+		if(check_badminlist(H.ckey)) // being a badmin takes priority over being a veteran
+			U.attach_accessory(new /obj/item/clothing/accessory/medal/badmin(U))
+		else if(H.client.holder)
+			U.attach_accessory(new /obj/item/clothing/accessory/medal/gold/admin(U))
 		if(check_bypasslist(H.ckey))
 			U.attach_accessory(new /obj/item/clothing/accessory/medal/silver/veteran(U))
-		if(check_badminlist(H.ckey))
-			U.attach_accessory(new /obj/item/clothing/accessory/medal/badmin(U))
 
 		if(aspect_chosen(/datum/round_aspect/squishyhumans))
 			HU.STACON = 6

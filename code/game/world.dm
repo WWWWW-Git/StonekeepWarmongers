@@ -318,8 +318,9 @@ GLOBAL_VAR(restart_counter)
 	else
 		s += "<b>GAME STATUS:</b> ON THE BATTLEFIELD<br>"
 
-	if(W.warmode)
-		s += "<b>GAME MODE:</b> [W.warmode]<br>"
+	if(istype(W))
+		if(W.warmode)
+			s += "<b>GAME MODE:</b> [W.warmode]<br>"
 	
 	status = s
 	return s
