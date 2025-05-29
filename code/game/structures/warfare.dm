@@ -161,7 +161,7 @@
 	if(ishuman(user))
 		H = user
 	if(H.warfare_faction == team)
-		if(C.crownbearer == H && SSticker.current_state != GAME_STATE_FINISHED)
+		if(C.crownbearer == H && SSticker.force_ending != TRUE)
 			C.do_war_end(H, team)
 			if(aspect_chosen(/datum/round_aspect/halo))
 				SEND_SOUND(world, 'sound/vo/halo/flag_cap.mp3')

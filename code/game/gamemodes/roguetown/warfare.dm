@@ -14,11 +14,11 @@
 	var/reinforcementwave = 1 // max 5
 
 	var/mob/redlord
-	var/obj/item/redcrown
+	var/obj/item/clothing/head/roguetown/crownred/redcrown
 	var/red_bonus = 2 // reinforcement points
 
 	var/mob/blulord
-	var/obj/item/blucrown
+	var/obj/item/clothing/head/roguetown/crownblu/blucrown
 	var/blu_bonus = 2 // reinforcement points
 
 	var/list/heartfelts = list() // clients

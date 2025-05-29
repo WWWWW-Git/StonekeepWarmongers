@@ -154,6 +154,7 @@ SUBSYSTEM_DEF(ticker)
 
 	login_music = pick('sound/music/dreadfulstench.ogg','sound/music/practiceofwar.ogg','sound/music/faceoff.ogg')
 
+	/*
 	if(!GLOB.syndicate_code_phrase)
 		GLOB.syndicate_code_phrase	= generate_code_phrase(return_list=TRUE)
 
@@ -169,6 +170,7 @@ SUBSYSTEM_DEF(ticker)
 		var/regex/codeword_match = new("([codewords])", "ig")
 
 		GLOB.syndicate_code_response_regex = codeword_match
+	*/
 
 	start_at = world.time + (CONFIG_GET(number/lobby_countdown) * 10)
 	if(CONFIG_GET(flag/randomize_shift_time))

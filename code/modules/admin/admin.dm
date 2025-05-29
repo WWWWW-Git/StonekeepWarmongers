@@ -737,12 +737,12 @@
 	var/datum/game_mode/warfare/W = SSticker.mode
 
 	if(W.blucrown)
-		to_chat(usr, "blu crown found")
+		to_chat(usr, "blu crown found [W.blucrown.loc]")
 	else
 		to_chat(usr, "blu crown not found")
 	
 	if(W.redcrown)
-		to_chat(usr, "red crown found")
+		to_chat(usr, "red crown found [W.redcrown.loc]")
 	else
 		to_chat(usr, "red crown not found")
 
@@ -775,9 +775,10 @@
 			if(ishuman(CR.loc))
 				var/mob/living/carbon/human/H = CR.loc
 				H.dropItemToGround(CR, TRUE)
+				to_chat(usr, "Red crown taken from \"[H.real_name]\" succesfully.")
 			else
 				CR.forceMove(get_turf(usr))
-			to_chat(usr, "Red crown moved succesfully.")
+				to_chat(usr, "Red crown moved succesfully.")
 		if("Blue")
 			if(!W.blucrown)
 				to_chat(usr, "No blu crown!")
@@ -787,9 +788,10 @@
 			if(ishuman(CB.loc))
 				var/mob/living/carbon/human/H = CB.loc
 				H.dropItemToGround(CB, TRUE)
+				to_chat(usr, "Blue crown taken from \"[H.real_name]\" succesfully.")
 			else
 				CB.forceMove(get_turf(usr))
-			to_chat(usr, "Blue crown moved succesfully.")
+				to_chat(usr, "Blue crown moved succesfully.")
 
 	var/obj/effect/telefog/NL = new(get_turf(usr))
 	playsound(NL, 'sound/magic/teleport.ogg', 100, FALSE, -1)

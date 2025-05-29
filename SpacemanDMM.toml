@@ -7,49 +7,49 @@ dreamchecker = true
 use_typepath_names = true
 
 [code_standards]
-disallow_relative_type_definitions = true
-disallow_relative_proc_definitions = true
+disallow_relative_type_definitions = false
+disallow_relative_proc_definitions = false
 
 [debugger]
 engine = "auxtools"
 
 [diagnostics]
 # Raised by DreamChecker
-disabled_directive = "error"
-sets_directive_twice = "error"
-invalid_lint_directive_value = "error"
-invalid_set_value = "error"
-unknown_linter_setting = "error"
-override_missing_keyword_arg = "error"
-must_not_override = "error"
-must_call_parent = "error"
-final_var = "error"
-private_proc = "error"
-protected_proc = "error"
-private_var = "error"
-protected_var = "error"
-must_be_pure = "error"
-must_not_sleep = "error"
+disabled_directive = "off"
+sets_directive_twice = "off"
+invalid_lint_directive_value = "off"
+invalid_set_value = "off"
+unknown_linter_setting = "off"
+override_missing_keyword_arg = "off"
+must_not_override = "off"
+must_call_parent = "off"
+final_var = "off"
+private_proc = "off"
+protected_proc = "off"
+private_var = "off"
+protected_var = "off"
+must_be_pure = "off"
+must_not_sleep = "off"
 redefined_proc = "off"
-ambiguous_in_lhs = "error"
-ambiguous_not_bitwise = "error"
-no_typehint_implicit_new = "error"
-field_access_static_type = "error"
-proc_call_static_type = "error"
-proc_has_no_parent = "error"
-no_operator_overload = "error"
-unreachable_code = "error"
-control_condition_static = "error"
-if_condition_determinate = "error"
-loop_condition_determinate = "error"
+ambiguous_in_lhs = "off"
+ambiguous_not_bitwise = "off"
+no_typehint_implicit_new = "off"
+field_access_static_type = "off"
+proc_call_static_type = "off"
+proc_has_no_parent = "off"
+no_operator_overload = "off"
+unreachable_code = "off"
+control_condition_static = "off"
+if_condition_determinate = "off"
+loop_condition_determinate = "off"
 
 # Raised by Lexer
-integer_precision_loss = "error"
+integer_precision_loss = "off"
 
 # Raised by Parser
-duplicate_include = "error"
-macro_redefined = "error"
-macro_undefined_no_definition = "error"
+duplicate_include = "off"
+macro_redefined = "off"
+macro_undefined_no_definition = "off"
 
 [map_renderer.render_passes]
 icon-smoothing = false

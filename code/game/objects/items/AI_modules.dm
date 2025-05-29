@@ -516,7 +516,7 @@ AI MODULES
 	return laws[1]
 
 /obj/item/aiModule/toyAI/attack_self(mob/user)
-	laws[1] = generate_ion_law()
+	//laws[1] = generate_ion_law()
 	to_chat(user, "<span class='notice'>I press the button on [src].</span>")
 	playsound(user, 'sound/blank.ogg', 20, TRUE)
 	src.loc.visible_message("<span class='warning'>[icon2html(src, viewers(loc))] [laws[1]]</span>")
@@ -573,9 +573,9 @@ AI MODULES
 		desc = ""
 
 /obj/item/aiModule/core/full/damaged/install(datum/ai_laws/law_datum, mob/user)
-	laws += generate_ion_law()
+	//laws += generate_ion_law()
 	while (prob(75))
-		laws += generate_ion_law()
+		//laws += generate_ion_law()
 	..()
 	laws = list()
 
