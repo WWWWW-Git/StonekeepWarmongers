@@ -41,7 +41,7 @@
 	var/list/missing = get_missing_limbs()
 	for(var/t in missing)
 		if(t==BODY_ZONE_HEAD)
-			. += "<span class='dead'><B>[capitalize(m2)] [parse_zone(t)] is gone.</B></span>"
+			. += "<span class='danger'><B>[capitalize(m2)] [parse_zone(t)] is reduced to a bloody pulp!</B></span>"
 			continue
 		. += "<span class='warning'><B>[capitalize(m2)] [parse_zone(t)] is gone.</B></span>"
 

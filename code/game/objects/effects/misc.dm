@@ -60,6 +60,16 @@
 	layer = LIGHTING_LAYER
 	blend_mode = BLEND_ADD
 
+/obj/effect/telefog
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "telefog"
+	plane = GAME_PLANE_UPPER
+	layer = ABOVE_MOB_LAYER
+
+/obj/effect/telefog/Initialize()
+	. = ..()
+	QDEL_IN(src, 20)
+
 /obj/effect/abstract/marker
 	name = "marker"
 	icon = 'icons/effects/effects.dmi'

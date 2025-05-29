@@ -67,9 +67,10 @@
 		return
 	var/turf/here = get_turf(src)
 	var/turf/there = get_turf(target)
-	if(here.z != there.z)
-		add_overlay("pinon[alert ? "alert" : ""]null[icon_suffix]")
-		return
+	if(istype(here) && istype(there))
+		if(here.z != there.z)
+			add_overlay("pinon[alert ? "alert" : ""]zlevel[icon_suffix]")
+			return
 	if(get_dist_euclidian(here,there) <= minimum_range)
 		add_overlay("pinon[alert ? "alert" : ""]direct[icon_suffix]")
 	else
@@ -190,30 +191,35 @@
 	A.other_pair = B
 	B.other_pair = A
 
-/obj/item/pinpointer/crown // todo: FIX (special todo tag: warmongers)
+/obj/item/pinpointer/crown
 	name = "POINTER"
 	desc = "Where do we go? Heed the call of war. It is foolish, it is only able to track the crown if it is on the same elevation."
 	icon_state = "crownpointer"
 	icon_suffix = "_hunter"
 	dropshrink = 0.6
+	process_scan = TRUE
 	var/team
-	var/obj/crown
 
 /obj/item/pinpointer/crown/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/clothing/head/roguetown/crownblu))
 		team = BLUE_WARTEAM
 		say("I HAVE ACQUIRED THE SMELL OF THE GRENZELHOFTS. TRACKING HEARTFELT SCUM'S CROWN!")
-		crown = locate(/obj/item/clothing/head/roguetown/crownred)
 		playsound(src, 'sound/misc/machinetalk.ogg', 50, TRUE)
 	if(istype(I, /obj/item/clothing/head/roguetown/crownred))
 		team = RED_WARTEAM
 		say("I HAVE ACQUIRED THE SMELL OF THE HEARTFELTS. TRACKING GRENZELHOFT SCUM'S CROWN!")
-		crown = locate(/obj/item/clothing/head/roguetown/crownblu)
 		playsound(src, 'sound/misc/machinetalk.ogg', 50, TRUE)
 	scan_for_target()
 
 /obj/item/pinpointer/crown/scan_for_target()
-	target = crown
+	var/datum/game_mode/warfare/W = SSticker.mode
+	if(!istype(W))
+		return
+	switch(team)
+		if(BLUE_WARTEAM)
+			target = W.redcrown
+		if(RED_WARTEAM)
+			target = W.blucrown
 
 /obj/item/pinpointer/crown/toggle_on()
 	if(!team)

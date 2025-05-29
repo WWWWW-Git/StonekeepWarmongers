@@ -637,7 +637,7 @@
 /obj/item/rogueweapon/spear/firelance/update_icon()
 	cut_overlays()
 	if(lit)
-		add_overlay(mutable_appearance('icons/roguetown/weapons/64.dmi', "firelance_overlay"))
+		add_overlay("firelance_overlay")
 	if(!cocked)
 		if(fuel_source)
 			icon_state = "firelance_oil"

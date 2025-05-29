@@ -2006,6 +2006,9 @@
 	icon_state = ""
 	screen_loc = "EAST-2:-14,CENTER-6:16"
 
+/atom/movable/screen/daynight/Destroy()
+	. = ..()
+
 /atom/movable/screen/daynight/New(client/C) //TODO: Make this use INITIALIZE_IMMEDIATE, except its not easy
 	. = ..()
 	icon_state = GLOB.tod
