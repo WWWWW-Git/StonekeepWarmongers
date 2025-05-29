@@ -250,13 +250,13 @@
 		var/bz_pp = breath.get_breath_partial_pressure(breath_gases[/datum/gas/bz][MOLES])
 		if(bz_pp > BZ_trip_balls_min)
 			H.hallucination += 10
-			H.reagents.add_reagent(/datum/reagent/bz_metabolites,5)
+			//H.reagents.add_reagent(/datum/reagent/bz_metabolites,5)
 			if(prob(33))
 				H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3, 150)
 
 		else if(bz_pp > 0.01)
 			H.hallucination += 5
-			H.reagents.add_reagent(/datum/reagent/bz_metabolites,1)
+			//H.reagents.add_reagent(/datum/reagent/bz_metabolites,1)
 
 
 	// Tritium
