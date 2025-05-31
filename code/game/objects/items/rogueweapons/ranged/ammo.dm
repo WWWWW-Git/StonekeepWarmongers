@@ -360,7 +360,7 @@
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
 		M.fire_act(20, 40)
-	explosion(target, light_impact_range = 5, flame_range = 7, smoke = TRUE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+	explosion(target, light_impact_range = 5, flame_range = 4, smoke = TRUE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
 	..(target, blocked)
 
 /obj/projectile/bullet/reusable/cannonball

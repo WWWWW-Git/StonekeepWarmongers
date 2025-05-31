@@ -34,13 +34,16 @@
 			else
 				if(getOxyLoss() < 20)
 					heart_attacking = FALSE
+		
+		if(!cmode)
+			rogstam_add(60)
 
 		//Healing while sleeping in a bed
 		if(stat >= UNCONSCIOUS)
 			var/sleepy_mod = buckled?.sleepy || 0.5
 			var/yess = HAS_TRAIT(src, TRAIT_NOHUNGER)
 			if(nutrition > 0 || yess)
-				rogstam_add(sleepy_mod * 15)
+				rogstam_add(sleepy_mod * 50)
 			if(hydration > 0 || yess)
 				if(!bleed_rate)
 					blood_volume = min(blood_volume + (4 * sleepy_mod), BLOOD_VOLUME_NORMAL)
@@ -76,8 +79,6 @@
 					fallingas++
 					if(fallingas > 25)
 						Sleeping(300)
-				else
-					rogstam_add(10)
 			else if(fallingas)
 				fallingas = 0
 			tiredness = min(tiredness + 1, 100)

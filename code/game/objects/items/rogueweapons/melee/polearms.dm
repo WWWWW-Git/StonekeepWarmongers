@@ -487,6 +487,7 @@
 		playsound(get_turf(src), 'sound/items/firelight.ogg', 100)
 
 		lit = TRUE
+		update_icon()
 		spawn(20)
 			if(lit)
 				playsound(get_turf(src),  pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'), 100)
@@ -500,6 +501,7 @@
 		playsound(get_turf(src), 'sound/items/firelight.ogg', 100)
 
 		lit = TRUE
+		update_icon()
 		spawn(20)
 			if(lit)
 				playsound(get_turf(src), 'sound/misc/explode/meteor.ogg', 100)
@@ -636,8 +638,6 @@
 
 /obj/item/rogueweapon/spear/firelance/update_icon()
 	cut_overlays()
-	if(lit)
-		add_overlay("firelance_overlay")
 	if(!cocked)
 		if(fuel_source)
 			icon_state = "firelance_oil"
@@ -648,6 +648,8 @@
 			icon_state = "firelance_cocked_oil"
 		else
 			icon_state = "firelance_cocked"
+	if(lit)
+		add_overlay("firelance_overlay")
 
 /obj/item/sanctiflux
 	name = "sanctiflux gourd"

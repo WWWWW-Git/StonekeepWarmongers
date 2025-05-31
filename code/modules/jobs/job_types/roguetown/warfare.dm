@@ -13,20 +13,18 @@
 	if(H)
 		var/mob/living/carbon/human/HU = H
 
-		var/obj/item/clothing/suit/U = HU.wear_shirt
-		if(check_badminlist(H.ckey)) // being a badmin takes priority over being a veteran
-			U.attach_accessory(new /obj/item/clothing/accessory/medal/badmin(U))
-		else if(H.client.holder)
-			U.attach_accessory(new /obj/item/clothing/accessory/medal/gold/admin(U))
-		if(check_bypasslist(H.ckey))
-			U.attach_accessory(new /obj/item/clothing/accessory/medal/silver/veteran(U))
-
 		if(aspect_chosen(/datum/round_aspect/squishyhumans))
 			HU.STACON = 6
 			ADD_TRAIT(HU, TRAIT_BRITTLE, TRAIT_GENERIC)
 
 		if(aspect_chosen(/datum/round_aspect/kicking))
 			ADD_TRAIT(HU, TRAIT_NUTCRACKER, TRAIT_GENERIC)
+		
+		if(aspect_chosen(/datum/round_aspect/nomood))
+			ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
+
+		if(aspect_chosen(/datum/round_aspect/monkwarfare))
+			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
 			
 		/*
 		if(aspect_chosen(/datum/round_aspect/cripplefight))
@@ -259,15 +257,11 @@
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
-		if(aspect_chosen(/datum/round_aspect/nomood))
-			ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
-		if(aspect_chosen(/datum/round_aspect/monkwarfare))
-			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
 		H.advsetup = TRUE
 		H.status_flags |= GODMODE
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
-		H.apply_status_effect(/datum/status_effect/incapacitating/stun)
+		H.apply_status_effect(/datum/status_effect/incapacitating/immobilized)
 
 //// MUSKETEER ////
 
@@ -769,16 +763,12 @@
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
-		if(aspect_chosen(/datum/round_aspect/nomood))
-			ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
-		if(aspect_chosen(/datum/round_aspect/monkwarfare))
-			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
 		H.patron = GLOB.patronlist[/datum/patron/divine/psydon] // Grenzelhoft worships Psydon in lore. Why wouldn't they here?
 		H.advsetup = TRUE
 		H.status_flags |= GODMODE
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
-		H.apply_status_effect(/datum/status_effect/incapacitating/stun)
+		H.apply_status_effect(/datum/status_effect/incapacitating/immobilized)
 
 //// MUSKETEER ////
 
