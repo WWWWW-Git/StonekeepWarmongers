@@ -378,7 +378,6 @@
 	beltr = GetSidearmForWarfare()
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	backl = /obj/item/storage/backpack/rogue/backpack
-	backr = /obj/item/rogueweapon/shield/rattan
 	head = /obj/item/clothing/head/roguetown/helmet/skullcap/rattan
 	if(prob(70))
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
@@ -469,7 +468,7 @@
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/khudagach
 	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/bomb/smoke = 1, /obj/item/bomb/poison = 2, /obj/item/rogue/caltrop = 2, /obj/item/throwing_star/ninja = 1)
+	backpack_contents = list(/obj/item/bomb/smoke = 1, /obj/item/bomb/poison = 1, /obj/item/rogue/caltrop = 2)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/bows, 5, TRUE) //No more firearms, strictly bows and crossbows, fog arrows should provide boost in that regard.
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE) //ditto

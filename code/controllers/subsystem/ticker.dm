@@ -930,6 +930,8 @@ SUBSYSTEM_DEF(ticker)
 
 		for(var/mob/M in GLOB.player_list)
 			SEND_SOUND(M, 'sound/music/wolfintro.ogg')
+			M.overlay_fullscreen("graghorror", /atom/movable/screen/fullscreen/graghorror)
+			M.clear_fullscreen("graghorror", 5 SECONDS)
 
 		for(var/obj/structure/warfarebarrier/WB in world)
 			qdel(WB)
