@@ -209,7 +209,11 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 /obj/item/clothing/head/roguetown/crownred/Initialize()
 	. = ..()
 	var/datum/game_mode/warfare/W = SSticker.mode
+	if(W.redcrown) // I know this may look retarded or something, but I swear to god for some reason removing this makes crown teleporting not work. I'm KILLING myself
+		return INITIALIZE_HINT_QDEL
+		
 	W.redcrown = src
+	set_light(3, 5, CLOTHING_HEARTFELT)
 
 /obj/item/clothing/head/roguetown/crownblu
 	name = "crown of the Grenzelhofts"
@@ -224,7 +228,11 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 /obj/item/clothing/head/roguetown/crownblu/Initialize()
 	. = ..()
 	var/datum/game_mode/warfare/W = SSticker.mode
+	if(W.blucrown) // I know this may look retarded or something, but I swear to god for some reason removing this makes crown teleporting not work. I'm KILLING myself
+		return INITIALIZE_HINT_QDEL
+
 	W.blucrown = src
+	set_light(3, 5, CLOTHING_BLUE)
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/iron/vampire
 	icon_state = "vunder"

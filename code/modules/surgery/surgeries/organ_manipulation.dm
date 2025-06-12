@@ -65,13 +65,13 @@
 		surgery_flags &= ~SURGERY_BROKEN
 	return ..()
 
-/datum/surgery_step/manipulate_organs/initiate(mob/user, mob/living/target, target_zone, obj/item/tool, datum/intent/intent, try_to_fail)
+/datum/surgery_step/manipulate_organs/initiate(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/intent/intent, try_to_fail)
 	// stupid workaround right now because eyes are a single organ in a single slot
 	if(target_zone == BODY_ZONE_PRECISE_L_EYE)
 		target_zone = BODY_ZONE_PRECISE_R_EYE
 	return ..()
 
-/datum/surgery_step/manipulate_organs/preop(mob/user, mob/living/target, target_zone, obj/item/tool, datum/intent/intent)
+/datum/surgery_step/manipulate_organs/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/intent/intent)
 	if(istype(tool, /obj/item/reagent_containers/food/snacks/organ))
 		to_chat(user, "<span class='warning'>[tool] was bitten by someone! It's too damaged to use!</span>")
 		return FALSE

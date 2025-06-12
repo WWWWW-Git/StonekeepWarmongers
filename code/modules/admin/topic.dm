@@ -1522,7 +1522,7 @@
 		if(obj_dir && !(obj_dir in list(1,2,4,8,5,6,9,10)))
 			obj_dir = null
 		var/obj_name = sanitize(href_list["object_name"])
-
+		var/icspawn = href_list["ic_spawn"]
 
 		var/atom/target //Where the object will be spawned
 		var/where = href_list["object_where"]
@@ -1572,6 +1572,9 @@
 							O = new path(pod)
 						else
 							O = new path(target)
+							if(icspawn == "ic_spawn")
+								var/obj/effect/telefog/TF = new(target)
+								playsound(TF, 'sound/magic/teleport.ogg', 100, FALSE, -1)
 
 						if(!QDELETED(O))
 							O.flags_1 |= ADMIN_SPAWNED_1

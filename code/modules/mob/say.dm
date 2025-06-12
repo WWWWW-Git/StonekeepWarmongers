@@ -126,7 +126,7 @@
 
 /mob/proc/check_whisper(message, forced)
 	if(copytext(message, 1, 2) == "+")
-		whisper(copytext(message, 2),sanitize = FALSE)//already sani'd
+		whisper(copytext(message, 2))//already sani'd
 		return 1
 /* commenting out subtler
 /mob/proc/check_subtler(message, forced)

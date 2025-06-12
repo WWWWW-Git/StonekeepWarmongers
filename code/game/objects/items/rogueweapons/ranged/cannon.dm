@@ -10,12 +10,15 @@
 	max_integrity = 9999
 	drag_slowdown = 1 // If it took so long it would be not really fun.
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
+	var/shootingdown = FALSE // if we are shooting one tile infront of us below (if its an open space)
 	var/obj/item/ammo_casing/caseless/rogue/cball/loaded
 
 /obj/structure/cannon/examine(mob/user)
 	. = ..()
 	if(loaded)
 		. += "<span class='info'>It is loaded.</span>"
+	if(shootingdown)
+		. += "<span class='info'>It will shoot the things below.</span>"
 
 /obj/structure/cannon/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
@@ -39,6 +42,19 @@
 			fire()
 	else
 		return ..()
+
+/obj/structure/cannon/attack_right(mob/user)
+	. = ..()
+	if(!SSticker.warfare_ready_to_die)
+		to_chat(user, "<span class='danger'>Why in the world would I ever do that? Why would I waste time pointing it down if I can't even use it to kill the enemy right now?</span>")
+		return
+	if(!shootingdown)
+		visible_message("<span class='info'>[user] begins tilting \the [src] to point down.</span>", "<span class='info'>I begin tilting \the [src] to point down a little...</span>")
+	else
+		visible_message("<span class='info'>[user] begins tilting \the [src] to point up.</span>", "<span class='info'>I begin tilting \the [src] to point up a little...</span>")
+	if(do_after(user, 3  SECONDS, TRUE, src))
+		shootingdown = !shootingdown
+		playsound(src.loc, 'sound/foley/winch.ogg', 100, extrarange = 3)
 
 /obj/structure/cannon/fire_act(added, maxstacks)
 	if(!loaded)
@@ -66,7 +82,16 @@
 		H.take_overall_damage(45)
 		visible_message("<span class='danger'>\The [H] is thrown back from \the [src]'s recoil!</span>")
 	flick("cannona_firea", src)
-	var/obj/projectile/fired_projectile = new loaded.projectile_type(get_turf(src))
+
+	var/turfina = get_turf(src)
+	if(shootingdown)
+		var/step = get_step(src, dir)
+		if(istype(step, /turf/open/transparent/openspace))
+			turfina = get_step_multiz(step, DOWN)
+		else
+			explosion(get_turf(src), heavy_impact_range = 4, light_impact_range = 6, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
+
+	var/obj/projectile/fired_projectile = new loaded.projectile_type(turfina)
 	fired_projectile.firer = src
 	fired_projectile.fired_from = src
 	fired_projectile.fire(dir2angle(dir))
@@ -105,23 +130,65 @@
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
 	var/plusy = 0 // no pussy jokes.
 	var/obj/item/bomb/loaded
+	
+/obj/structure/bombard/Moved(atom/OldLoc, Dir)
+	. = ..()
+	switch(Dir)
+		if(NORTH)
+			plusy = abs(plusy)
+		if(SOUTH)
+			plusy = -abs(plusy)
+
+/obj/structure/bombard/MiddleClick(mob/user, params)
+	if(ishuman(user))
+		var/oldy = y
+		var/newy = oldy + plusy
+		var/turf/epicenter = locate(x,newy,z)
+		if(istype(epicenter, /turf/open/transparent/openspace))
+			epicenter = get_step_multiz(epicenter, DOWN)
+
+		to_chat(user, "<span class='notice'>I try to look through the magnifying glass on \the [src].</span>")
+		if(do_after(user, 2 SECONDS, TRUE, src))
+			// these vars are reset automatically when a person tries to move
+			user.client.eye = epicenter
+			user.client.perspective = EYE_PERSPECTIVE
 
 /obj/structure/bombard/examine(mob/user)
 	. = ..()
 	if(plusy)
-		. += "<span class='info'>The azirath is set to [plusy]. Which means it will shoot [plusy] urists to the north, negative numbers to the south.</span>"
+		. += "<span class='info'>The azirath is set to [plusy]. Which means it will shoot [plusy] urists the direction it is facing.</span>"
 	if(loaded)
 		. += "<span class='info'>It is loaded.</span>"
 
 /obj/structure/bombard/attack_right(mob/user)
 	. = ..()
-	var/agka = input(user, "Insert plus azirath for target (pyrimuth equals location of bombardier)", "WARMONGERS") as null|num
+	var/agka = input(user, "Insert azirath for target (pyrimuth equals location of bombardier)", "WARMONGERS") as null|num
+	agka = abs(agka)
 	if(agka)
-		plusy = agka
+		switch(dir)
+			if(NORTH)
+				plusy = agka
+			if(SOUTH)
+				plusy = -agka
 		to_chat(user, "<span class='info'>New Target: [y + plusy] azirath</span>")
 		playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
 
+/obj/structure/bombard/fire_act(added, maxstacks)
+	if(!loaded || !SSticker.warfare_ready_to_die)
+		return
+	playsound(src.loc, 'sound/items/firelight.ogg', 100)
+	fire()
+
+/obj/structure/bombard/spark_act()
+	if(!loaded || !SSticker.warfare_ready_to_die)
+		return
+	playsound(src.loc, 'sound/items/firelight.ogg', 100)
+	fire()
+
 /obj/structure/bombard/attackby(obj/item/I, mob/user, params)
+	if(dir == WEST || dir == EAST)
+		to_chat(user, "<span class='warning'>Shooting that direction would be a waste of resources.</span>")
+		return
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
 		to_chat(user, "<span class='warning'>It won't work, I need a bomb.</span>")
 		return
@@ -138,9 +205,7 @@
 		playsound(src, 'sound/foley/trap_arm.ogg', 65)
 	if(istype(I, /obj/item/flashlight/flare/torch))
 		var/obj/item/flashlight/flare/torch/LR = I
-		if(!loaded)
-			return
-		if(!SSticker.warfare_ready_to_die)
+		if(!loaded || !SSticker.warfare_ready_to_die)
 			to_chat(user, "<span class='danger'>No, that would be stupid.</span>")
 			return
 		if(LR.on)
@@ -168,6 +233,9 @@
 	var/newy = oldy + plusy
 
 	var/turf/epicenter = locate(x,newy,z)
+	if(istype(epicenter, /turf/open/transparent/openspace))
+		epicenter = get_step_multiz(epicenter, DOWN)
+
 	var/obj/effect/warning/G = new(epicenter)
 
 	spawn(5 SECONDS)

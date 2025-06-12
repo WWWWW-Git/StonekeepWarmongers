@@ -35,7 +35,14 @@
 	. = ..()
 	create_reagents(500)
 	START_PROCESSING(SSobj, src)
-
+	
+	alpha = 0
+	var/matrix/ARE = matrix()
+	ARE.Scale(0.8, 0.2)
+	transform = ARE
+	var/matrix/DO = matrix()
+	DO.Scale(1, 1)
+	animate(src, time = 3, alpha = 255, transform = DO, easing = SINE_EASING)
 
 /obj/effect/particle_effect/smoke/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -130,14 +137,22 @@
 /obj/effect/particle_effect/smoke/bad/smoke_mob(mob/living/carbon/M)
 	if(..())
 		//M.drop_all_held_items()
-		M.adjustFireLoss(25)
-		M.emote("cough")
+		M.adjustFireLoss(55)
+		var/emote = pick("cough","cry","scream","painscream","agony")
+		M.emote(emote)
+		if(prob(55))
+			M.apply_status_effect(/datum/status_effect/debuff/gas)
+			M.freak_out()
+			to_chat(M, "<span class='danger'>MY SKIN IS FALLING OFF!</span>")
+		if(prob(20))
+			M.blood_volume -= 15
+			to_chat(M, "<span class='danger'>Blood squirts out from [pick("my eyes","my mouth","my nose","my ears","underneath my fingernails")]!</span>")
 		return 1
 
 /obj/effect/particle_effect/smoke/bad/CanPass(atom/movable/mover, turf/target)
-	if(istype(mover, /obj/projectile/beam))
-		var/obj/projectile/beam/B = mover
-		B.damage = (B.damage/2)
+	if(istype(mover, /obj/projectile))
+		var/obj/projectile/B = mover
+		B.damage = (B.damage*4) // reward blind shots or something.
 	return 1
 
 

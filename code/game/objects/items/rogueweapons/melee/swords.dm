@@ -798,15 +798,7 @@
 	desc = "A shorter design of a Zatana designed to replace the tanto as a zamurai's sidearm. The sorii makes it cut deeper - but is not efficient at thrusting, and can't handle much stress."
 	icon_state = "wakizashi"
 	icon = 'icons/roguetown/weapons/32.dmi'
-	possible_item_intents = list(/datum/intent/sword/cut/sorii, /datum/intent/sword/thrust/sorii)
-
-/datum/intent/sword/cut/sorii //It is the reverse of the Shortsword.
-	clickcd = 10
-	penfactor = 30
-
-/datum/intent/sword/thrust/sorii
-	clickcd = 10
-	damfactor = 0.85
+	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust)
 
 /obj/item/rogueweapon/sword/sabre/piandao
 	name = "piandao"
@@ -818,5 +810,3 @@
 	name = "decorated piandao"
 	desc = "The Abyssariad saber with the hilt covered in gold and letters reflecting the user's family lineage."
 	icon_state = "piandaodec"
-	max_integrity = 550
-	sellprice = 140

@@ -9,5 +9,3 @@
 #else
 	//#define FORCE_MAP "_maps/bloodfort.json"
 #endif
-
-//#define WARTIME

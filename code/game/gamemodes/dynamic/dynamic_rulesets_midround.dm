@@ -247,7 +247,7 @@
 			continue
 		if(player.mind && (player.mind.special_role || player.mind.antag_datums?.len > 0))
 			candidates -= player
-
+/*
 /datum/dynamic_ruleset/midround/malf/execute()
 	if(!candidates || !candidates.len)
 		return FALSE
@@ -263,7 +263,7 @@
 		else
 			M.add_ion_law(generate_ion_law())
 	return TRUE
-
+*/
 //////////////////////////////////////////////
 //                                          //
 //              WIZARD (GHOST)              //

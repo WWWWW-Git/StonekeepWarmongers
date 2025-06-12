@@ -38,8 +38,6 @@
 	if(!screen)
 		return
 
-	screens -= category
-
 	if(animated)
 		animate(screen, alpha = 0, time = animated)
 		addtimer(CALLBACK(src, PROC_REF(clear_fullscreen_after_animate), screen), animated, TIMER_CLIENT_TIME, flags = ANIMATION_PARALLEL)
@@ -47,6 +45,7 @@
 		if(client)
 			client.screen -= screen
 		qdel(screen)
+	screens -= category
 
 /mob/proc/clear_fullscreen_after_animate(atom/movable/screen/fullscreen/screen)
 	if(client)
@@ -107,6 +106,11 @@
 /atom/movable/screen/fullscreen/painflash
 	icon_state = "painflash"
 	layer = 20.19
+	plane = FULLSCREEN_PLANE
+
+/atom/movable/screen/fullscreen/graghorror
+	icon_state = "graghorror"
+	layer = 20.512
 	plane = FULLSCREEN_PLANE
 
 /atom/movable/screen/fullscreen/oxy

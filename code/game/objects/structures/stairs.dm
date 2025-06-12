@@ -13,6 +13,7 @@
 	anchored = TRUE
 	layer = 2
 	obj_flags = CAN_BE_HIT
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	nomouseover = TRUE
 
 /obj/structure/stairs/stone

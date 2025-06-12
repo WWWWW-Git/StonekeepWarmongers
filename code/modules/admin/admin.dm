@@ -733,8 +733,18 @@
 
 /datum/admins/proc/readoutlords()
 	set category = "Debug"
-	set name = "Readout Lords"
+	set name = "Readout Lords/Crowns"
 	var/datum/game_mode/warfare/W = SSticker.mode
+
+	if(W.blucrown)
+		to_chat(usr, "blu crown found [W.blucrown.loc]")
+	else
+		to_chat(usr, "blu crown not found")
+	
+	if(W.redcrown)
+		to_chat(usr, "red crown found [W.redcrown.loc]")
+	else
+		to_chat(usr, "red crown not found")
 
 	if(W.blulord)
 		to_chat(usr, "blu lord found: [W.blulord.real_name]")
@@ -756,12 +766,35 @@
 	if(!pick)
 		return
 	
-	if(pick == "Red")
-		W.redcrown.forceMove(get_turf(usr))
-		to_chat(usr, "Red crown moved succesfully.")
-	if(pick == "Blue")
-		W.blucrown.forceMove(get_turf(usr))
-		to_chat(usr, "Blue crown moved succesfully.")
+	switch(pick)
+		if("Red")
+			if(!W.redcrown)
+				to_chat(usr, "No red crown!")
+				return
+			var/obj/item/clothing/head/roguetown/crownred/CR = W.redcrown
+			if(ishuman(CR.loc))
+				var/mob/living/carbon/human/H = CR.loc
+				H.dropItemToGround(CR, TRUE)
+				to_chat(usr, "Red crown taken from \"[H.real_name]\" succesfully.")
+			else
+				CR.forceMove(get_turf(usr))
+				to_chat(usr, "Red crown moved succesfully.")
+		if("Blue")
+			if(!W.blucrown)
+				to_chat(usr, "No blu crown!")
+				return
+			var/obj/item/clothing/head/roguetown/crownblu/CB = W.blucrown
+			to_chat(usr, "[CB.loc]")
+			if(ishuman(CB.loc))
+				var/mob/living/carbon/human/H = CB.loc
+				H.dropItemToGround(CB, TRUE)
+				to_chat(usr, "Blue crown taken from \"[H.real_name]\" succesfully.")
+			else
+				CB.forceMove(get_turf(usr))
+				to_chat(usr, "Blue crown moved succesfully.")
+
+	var/obj/effect/telefog/NL = new(get_turf(usr))
+	playsound(NL, 'sound/magic/teleport.ogg', 100, FALSE, -1)
 
 /datum/admins/proc/teleport2crown()
 	set category = "Debug"

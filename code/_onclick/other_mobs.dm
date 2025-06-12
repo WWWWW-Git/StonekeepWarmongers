@@ -237,6 +237,9 @@
 	..()
 	if(!mmb_intent)
 		if(!A.Adjacent(src))
+			if(HAS_TRAIT(src, TRAIT_OFFICER) && istype(A, /turf))
+				var/yy = A.y - src.y // so it can be used for the bombard
+				to_chat(src, "<span class='info'>Azirath Calculation: [yy]</span>")
 			return
 		A.MiddleClick(src, params)
 	else
@@ -405,7 +408,7 @@
 										stealpos.Add(V.get_item_by_slot(SLOT_BELT_R))
 									if (V.get_item_by_slot(SLOT_BELT_L))
 										stealpos.Add(V.get_item_by_slot(SLOT_BELT_L))
-								if("r_hand" || "l_hand")
+								if("r_hand", "l_hand")
 									if (V.get_item_by_slot(SLOT_RING))
 										stealpos.Add(V.get_item_by_slot(SLOT_RING))
 							if (length(stealpos) > 0)

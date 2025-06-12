@@ -128,6 +128,8 @@
 				newletter+="[newletter]"
 			if(20)
 				newletter+="[newletter][newletter]"
+			else
+				newletter+=""
 		newphrase+="[newletter]";counter-=1
 	return newphrase
 
@@ -170,6 +172,8 @@
 				newletter="nglu"
 			if(5)
 				newletter="glor"
+			else
+				newletter+=""
 		newphrase+="[newletter]";counter-=1
 	return newphrase
 

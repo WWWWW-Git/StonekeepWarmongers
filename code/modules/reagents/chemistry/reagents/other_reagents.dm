@@ -25,12 +25,7 @@
 
 	if(iscarbon(L))
 		var/mob/living/carbon/C = L
-		if(C.get_blood_id() == /datum/reagent/blood && (method == INJECT || (method == INGEST && C.dna && C.dna.species && (DRINKSBLOOD in C.dna.species.species_traits))))
-			if(!data || !(data["blood_type"] in get_safe_blood(C.dna.blood_type)))
-				C.reagents.add_reagent(/datum/reagent/toxin, reac_volume * 0.5)
-			else
-				C.blood_volume = min(C.blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM)
-
+		C.blood_volume = min(C.blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM)
 
 /datum/reagent/blood/on_new(list/data)
 	if(istype(data))
@@ -133,6 +128,7 @@
 	shot_glass_icon_state = "shotglassclear"
 	var/hydration = 12
 	alpha = 100
+	taste_mult = 0.1
 
 /datum/chemical_reaction/grosswaterify
 	name = "grosswater"
@@ -154,10 +150,17 @@
 	taste_description = "lead"
 	color = "#98934bc6"
 
+/datum/reagent/water/gross/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
+	if(method == INGEST) // Make sure you DRANK the toxic water before giving damage
+		..()
+
 /datum/reagent/water/gross/on_mob_life(mob/living/carbon/M)
-	M.adjustToxLoss(1)
-	M.add_nausea(50)
 	..()
+	if(HAS_TRAIT(M, TRAIT_NASTY_EATER )) // lets orcs and goblins drink bogwater
+		return
+	M.adjustToxLoss(1)
+	M.add_nausea(12) //Over 8 units will cause puking
+
 
 /*
  *	Water reaction to turf
@@ -281,40 +284,21 @@
 	REMOVE_TRAIT(L, TRAIT_HOLY, type)
 	..()
 
-/datum/reagent/water/holywater/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
-	if(iscultist(M))
-		to_chat(M, "<span class='danger'>A vile holiness begins to spread its shining tendrils through my mind, purging the Geometer of Blood's influence!</span>")
-	..()
 
 /datum/reagent/water/holywater/on_mob_life(mob/living/carbon/M)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(!HAS_TRAIT(H, TRAIT_NOHUNGER))
 			H.adjust_hydration(hydration)
-	if(!data)
-		data = 1
-	data++
+	var/old_count = LAZYACCESS(data, "misc")
+	LAZYSET(data, "misc", old_count + 1)
 	M.jitteriness = min(M.jitteriness+4,10)
-	if(iscultist(M))
-		for(var/datum/action/innate/cult/blood_magic/BM in M.actions)
-			to_chat(M, "<span class='cultlarge'>My blood rites falter as holy water scours my body!</span>")
-			for(var/datum/action/innate/cult/blood_spell/BS in BM.spells)
-				qdel(BS)
 	if(data >= 25)		// 10 units, 45 seconds @ metabolism 0.4 units & tick rate 1.8 sec
 		if(!M.stuttering)
 			M.stuttering = 1
 		M.stuttering = min(M.stuttering+4, 10)
 		M.Dizzy(5)
-		if(iscultist(M) && prob(20))
-			M.say(pick("Av'te Nar'Sie","Pa'lid Mors","INO INO ORA ANA","SAT ANA!","Daim'niodeis Arc'iai Le'eones","R'ge Na'sie","Diabo us Vo'iscum","Eld' Mon Nobis"), forced = "holy water")
-			if(prob(10))
-				M.visible_message("<span class='danger'>[M] starts having a seizure!</span>", "<span class='danger'>I have a seizure!</span>")
-				M.Unconscious(120)
-				to_chat(M, "<span class='cultlarge'>[pick("Your blood is my bond - you are nothing without it", "Do not forget my place", \
-				"All that power, and you still fail?", "If you cannot scour this poison, I shall scour my meager life!")].</span>")
 	if(data >= 60)	// 30 units, 135 seconds
-		if(iscultist(M))
-			SSticker.mode.remove_cultist(M.mind, FALSE, TRUE)
 		M.jitteriness = 0
 		M.stuttering = 0
 		holder.remove_reagent(type, volume)	// maybe this is a little too perfect and a max() cap on the statuses would be better??
@@ -325,9 +309,6 @@
 	..()
 	if(!istype(T))
 		return
-	if(reac_volume>=10)
-		for(var/obj/effect/rune/R in T)
-			qdel(R)
 	T.Bless()
 
 /datum/reagent/hydrogen_peroxide
@@ -373,22 +354,11 @@
 	return ..()
 
 /datum/reagent/fuel/unholywater/on_mob_life(mob/living/carbon/M)
-	if(iscultist(M))
-		M.drowsyness = max(M.drowsyness-5, 0)
-		M.AdjustAllImmobility(-40, FALSE)
-		M.adjustStaminaLoss(-10, 0)
-		M.adjustToxLoss(-2, 0)
-		M.adjustOxyLoss(-2, 0)
-		M.adjustBruteLoss(-2, 0)
-		M.adjustFireLoss(-2, 0)
-		if(ishuman(M) && M.blood_volume < BLOOD_VOLUME_NORMAL)
-			M.blood_volume += 3
-	else  // Will deal about 90 damage when 50 units are thrown
-		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3, 150)
-		M.adjustToxLoss(2, 0)
-		M.adjustFireLoss(2, 0)
-		M.adjustOxyLoss(2, 0)
-		M.adjustBruteLoss(2, 0)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3, 150)
+	M.adjustToxLoss(2, 0)
+	M.adjustFireLoss(2, 0)
+	M.adjustOxyLoss(2, 0)
+	M.adjustBruteLoss(2, 0)
 	holder.remove_reagent(type, 1)
 	return TRUE
 
@@ -720,16 +690,6 @@
 /datum/reagent/aslimetoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
 	if(method != TOUCH)
 		L.ForceContractDisease(new /datum/disease/transformation/slime(), FALSE, TRUE)
-
-/datum/reagent/gluttonytoxin
-	name = "Gluttony's Blessing"
-	description = "An advanced corruptive toxin produced by something terrible."
-	color = "#5EFF3B" //RGB: 94, 255, 59
-	can_synth = FALSE
-	taste_description = "decay"
-
-/datum/reagent/gluttonytoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
-	L.ForceContractDisease(new /datum/disease/transformation/morph(), FALSE, TRUE)
 
 /datum/reagent/serotrotium
 	name = "Serotrotium"
@@ -1101,7 +1061,7 @@
 
 /datum/reagent/space_cleaner/ez_clean/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
 	..()
-	if((method == TOUCH || method == VAPOR) && !issilicon(M))
+	if((method == TOUCH || method == VAPOR))
 		M.adjustBruteLoss(1.5)
 		M.adjustFireLoss(1.5)
 
@@ -1145,17 +1105,6 @@
 /datum/reagent/nanomachines/reaction_mob(mob/living/L, method=TOUCH, reac_volume, show_message = 1, touch_protection = 0)
 	if(method==PATCH || method==INGEST || method==INJECT || (method == VAPOR && prob(min(reac_volume,100)*(1 - touch_protection))))
 		L.ForceContractDisease(new /datum/disease/transformation/robot(), FALSE, TRUE)
-
-/datum/reagent/xenomicrobes
-	name = "Xenomicrobes"
-	description = "Microbes with an entirely alien cellular structure."
-	color = "#535E66" // rgb: 83, 94, 102
-	can_synth = FALSE
-	taste_description = "sludge"
-
-/datum/reagent/xenomicrobes/reaction_mob(mob/living/L, method=TOUCH, reac_volume, show_message = 1, touch_protection = 0)
-	if(method==PATCH || method==INGEST || method==INJECT || (method == VAPOR && prob(min(reac_volume,100)*(1 - touch_protection))))
-		L.ForceContractDisease(new /datum/disease/transformation/xeno(), FALSE, TRUE)
 
 /datum/reagent/fungalspores
 	name = "Tubercle bacillus Cosmosis microbes"
@@ -1376,7 +1325,7 @@
 	color = "#FFFFFF" // white
 	random_color_list = list("#FFFFFF") //doesn't actually change appearance at all
 
- /* used by crayons, can't color living things but still used for stuff like food recipes */
+// used by crayons, can't color living things but still used for stuff like food recipes
 
 /datum/reagent/colorful_reagent/powder/red/crayon
 	name = "Red Crayon Powder"
@@ -1469,10 +1418,6 @@
 	color = "#2D2D2D"
 	taste_description = "bitterness"
 	taste_mult = 1.5
-
-/datum/reagent/stable_plasma/on_mob_life(mob/living/carbon/C)
-	C.adjustPlasma(10)
-	..()
 
 /datum/reagent/iodine
 	name = "Iodine"
@@ -1928,28 +1873,6 @@
 	REMOVE_TRAIT(L, TRAIT_PACIFISM, type)
 	..()
 
-/datum/reagent/bz_metabolites
-	name = "BZ metabolites"
-	description = "A harmless metabolite of BZ gas"
-	color = "#FAFF00"
-	taste_description = "acrid cinnamon"
-	metabolization_rate = 0.2 * REAGENTS_METABOLISM
-
-/datum/reagent/bz_metabolites/on_mob_metabolize(mob/living/L)
-	..()
-	ADD_TRAIT(L, CHANGELING_HIVEMIND_MUTE, type)
-
-/datum/reagent/bz_metabolites/on_mob_end_metabolize(mob/living/L)
-	..()
-	REMOVE_TRAIT(L, CHANGELING_HIVEMIND_MUTE, type)
-
-/datum/reagent/bz_metabolites/on_mob_life(mob/living/L)
-	if(L.mind)
-		var/datum/antagonist/changeling/changeling = L.mind.has_antag_datum(/datum/antagonist/changeling)
-		if(changeling)
-			changeling.chem_charges = max(changeling.chem_charges-2, 0)
-	return ..()
-
 /datum/reagent/pax/peaceborg
 	name = "synthpax"
 	description = "A colorless liquid that suppresses violence in its subjects. Cheaper to synthesize than normal Pax, but wears off faster."
@@ -2074,4 +1997,3 @@
 	reagent_state = SOLID
 	color = "#E6E6DA"
 	taste_mult = 0
-

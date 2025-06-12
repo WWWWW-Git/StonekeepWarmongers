@@ -9,16 +9,16 @@
 	enemy_minimum_age = 0
 
 	var/whowon = null // use RED_WARTEAM and BLUE_WARTEAM
-	var/mob/living/carbon/human/crownbearer = null
+	var/mob/living/carbon/human/crownbearer
 
 	var/reinforcementwave = 1 // max 5
 
-	var/mob/redlord = null
-	var/obj/item/redcrown = null
+	var/mob/redlord
+	var/obj/item/clothing/head/roguetown/crownred/redcrown
 	var/red_bonus = 2 // reinforcement points
 
-	var/mob/blulord = null
-	var/obj/item/blucrown = null
+	var/mob/blulord
+	var/obj/item/clothing/head/roguetown/crownblu/blucrown
 	var/blu_bonus = 2 // reinforcement points
 
 	var/list/heartfelts = list() // clients

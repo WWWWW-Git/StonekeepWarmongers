@@ -302,10 +302,11 @@
 	if(!damaged_clothes)
 		update_clothes_damaged_state(TRUE)
 	var/brokemessage = FALSE
-	for(var/x in armor)
-		if(armor[x] > 0)
+	var/list/armorlist = armor?.getList()
+	for(var/x in armorlist)
+		if(armorlist[x] > 0)
 			brokemessage = TRUE
-			armor[x] = 0
+			armorlist[x] = 0
 	if(ismob(loc) && brokemessage)
 		var/mob/M = loc
 		to_chat(M, "ARMOR BROKEN..!")
@@ -408,17 +409,13 @@ BLIND     // can't see anything
 		if(H.wear_pants == src)
 			H.update_suit_sensors()
 
-/obj/item/clothing/under/AltClick(mob/user)
-	if(..())
-		return 1
-
+/obj/item/clothing/suit/MiddleClick(mob/user, params)
+	. = ..()
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return
 	else
-		if(attached_accessory)
+		if(attached_accessory && !(attached_accessory.noremove))
 			remove_accessory(user)
-		else
-			rolldown()
 
 /obj/item/clothing/under/verb/jumpsuit_adjust()
 	set name = "Adjust Jumpsuit Style"

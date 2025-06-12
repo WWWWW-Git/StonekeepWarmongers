@@ -154,6 +154,7 @@ SUBSYSTEM_DEF(ticker)
 
 	login_music = pick('sound/music/dreadfulstench.ogg','sound/music/practiceofwar.ogg','sound/music/faceoff.ogg')
 
+	/*
 	if(!GLOB.syndicate_code_phrase)
 		GLOB.syndicate_code_phrase	= generate_code_phrase(return_list=TRUE)
 
@@ -169,6 +170,7 @@ SUBSYSTEM_DEF(ticker)
 		var/regex/codeword_match = new("([codewords])", "ig")
 
 		GLOB.syndicate_code_response_regex = codeword_match
+	*/
 
 	start_at = world.time + (CONFIG_GET(number/lobby_countdown) * 10)
 	if(CONFIG_GET(flag/randomize_shift_time))
@@ -928,24 +930,15 @@ SUBSYSTEM_DEF(ticker)
 
 		for(var/mob/M in GLOB.player_list)
 			SEND_SOUND(M, 'sound/music/wolfintro.ogg')
+			M.overlay_fullscreen("graghorror", /atom/movable/screen/fullscreen/graghorror)
+			M.clear_fullscreen("graghorror", 5 SECONDS)
 
 		for(var/obj/structure/warfarebarrier/WB in world)
 			qdel(WB)
 
-		var/obj/structure/bloodstatue/BS = locate()
-		if(BS)
-			BS.beginround()
-			return
-
-		var/obj/structure/ponr/PONR = locate()
-		if(PONR)
-			PONR.beginround()
-			return
-
-		var/obj/structure/warthrone/THR = locate()
-		if(THR)
-			THR.beginround()
-			return
+		var/obj/structure/warobjective/WO = locate()
+		if(WO)
+			WO.beginround()
 
 /proc/GetMainGunForWarfareHeartfelt()
 	switch(SSticker.warfare_techlevel)

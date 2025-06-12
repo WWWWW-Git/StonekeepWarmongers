@@ -34,13 +34,16 @@
 			else
 				if(getOxyLoss() < 20)
 					heart_attacking = FALSE
+		
+		if(!cmode)
+			rogstam_add(60)
 
 		//Healing while sleeping in a bed
 		if(stat >= UNCONSCIOUS)
 			var/sleepy_mod = buckled?.sleepy || 0.5
 			var/yess = HAS_TRAIT(src, TRAIT_NOHUNGER)
 			if(nutrition > 0 || yess)
-				rogstam_add(sleepy_mod * 15)
+				rogstam_add(sleepy_mod * 50)
 			if(hydration > 0 || yess)
 				if(!bleed_rate)
 					blood_volume = min(blood_volume + (4 * sleepy_mod), BLOOD_VOLUME_NORMAL)
@@ -76,8 +79,6 @@
 					fallingas++
 					if(fallingas > 25)
 						Sleeping(300)
-				else
-					rogstam_add(10)
 			else if(fallingas)
 				fallingas = 0
 			tiredness = min(tiredness + 1, 100)
@@ -564,6 +565,11 @@
 		adjustToxLoss(log(radiation-RAD_MOB_SAFE)*RAD_TOX_COEFFICIENT)
 
 /mob/living/carbon/handle_embedded_objects()
+	if(has_embedded_objects())
+		if(!has_status_effect(/datum/status_effect/debuff/embed))
+			apply_status_effect(/datum/status_effect/debuff/embed)
+	else
+		remove_status_effect(/datum/status_effect/debuff/embed)
 	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
 		for(var/obj/item/embedded as anything in bodypart.embedded_objects)
 			if(embedded.on_embed_life(src, bodypart))

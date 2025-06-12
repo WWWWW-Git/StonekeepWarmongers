@@ -22,6 +22,7 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^2.1.0",
+    "tgui": "file:",
     "url-loader": "^2.2.0",
     "webpack": "^4.40.2",
     "webpack-build-notifier": "^2.0.0",

@@ -1866,7 +1866,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 							var/obj/item/bodypart/head/BPH = affecting
 							if(BPH.knock_out_teeth(get_dir(target, user), rand(1,5)))
 								target.visible_message("<span class='danger'>[target]'s teeth sail off in an arc!</span>", "<span class='userdanger'>[target]'s teeth sail off in an arc!</span>")
-						if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(damage/2 * hitcheck * user.STASTR/3)))
+						if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(damage/2 * hitcheck * user.STASTR/3)) && prob(45))
 							target.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
 							if(target.stat == CONSCIOUS)
 								target.visible_message("<span class='danger'>[target] is knocked senseless!</span>", "<span class='danger'>You're knocked senseless!</span>")
@@ -1897,14 +1897,14 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 		target.retaliate(user)
 
-/*		if((target.stat != DEAD) && damage >= user.dna.species.punchstunthreshold)
+		if((target.stat != DEAD) && damage >= user.dna.species.punchstunthreshold && prob(35))
 			target.visible_message("<span class='danger'>[user] knocks [target] down!</span>", \
 							"<span class='danger'>You're knocked down by [user]!</span>", "<span class='hear'>I hear aggressive shuffling followed by a loud thud!</span>", COMBAT_MESSAGE_RANGE, user)
 			to_chat(user, "<span class='danger'>I knock [target] down!</span>")
 			var/knockdown_duration = 40 + (target.getStaminaLoss() + (target.getBruteLoss()*0.5))*0.8 //50 total damage = 40 base stun + 40 stun modifier = 80 stun duration, which is the old base duration
 			target.apply_effect(knockdown_duration, EFFECT_KNOCKDOWN, armor_block)
 			target.forcesay(GLOB.hit_appends)
-			log_combat(user, target, "got a stun punch with their previous punch")*/
+			log_combat(user, target, "got a stun punch with their previous punch")
 		if(!(target.mobility_flags & MOBILITY_STAND))
 			target.forcesay(GLOB.hit_appends)
 		if(!nodmg)
@@ -2304,11 +2304,13 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					//to_chat(world, "[BPH.knock_out_teeth(get_dir(H, user), rand(1,5))]")
 					if(BPH.knock_out_teeth(get_dir(H, user), rand(1,5)))
 						H.visible_message("<span class='danger'>[H]'s teeth sail off in an arc!</span>", "<span class='userdanger'>[H]'s teeth sail off in an arc!</span>")
+						H.forcesay(GLOB.hit_appends)
 				if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(I.force/2 * user.STASTR/4)))
 					H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
 					if(H.stat == CONSCIOUS)
 						H.visible_message("<span class='danger'>[H] is knocked senseless!</span>", "<span class='danger'>You're knocked senseless!</span>")
 						H.confused = max(H.confused, 20)
+						H.forcesay(GLOB.hit_appends)
 						H.adjust_blurriness(10)
 					if(prob(10))
 						H.gain_trauma(/datum/brain_trauma/mild/concussion)
@@ -2345,9 +2347,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					if(H.wear_pants)
 						H.wear_pants.add_mob_blood(H)
 						H.update_inv_pants()
-
-		if(Iforce > 10 || Iforce >= 5 && prob(Iforce))
-			H.forcesay(GLOB.hit_appends)	//forcesay checks stat already.
 	return TRUE
 
 /datum/species/proc/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/H, forced = FALSE, spread_damage = FALSE)

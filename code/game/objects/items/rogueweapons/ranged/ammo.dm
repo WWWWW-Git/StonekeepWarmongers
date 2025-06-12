@@ -287,7 +287,7 @@
 	flag = "bullet"
 	armor_penetration = 75
 	speed = 0.1
-	accuracy = 55
+	accuracy = 75
 
 /obj/projectile/bullet/reusable/bullet/wood
 	damage = 35
@@ -338,6 +338,30 @@
 	pellets = 7
 	variance = 25
 	projectile_type = /obj/projectile/bullet/fragment
+
+/obj/projectile/sanctiflux
+	name = "sanctiflux"
+	desc = "Oh shit."
+	damage = 300
+	damage_type = BURN
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "gourd"
+	range = 999
+	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
+	spread = 0
+	woundclass = BCLASS_SMASH
+	impact_effect_type = /obj/effect/temp_visual/impact_effect
+	flag = "bullet"
+	hitscan = FALSE
+	armor_penetration = 100
+	speed = 0.8
+
+/obj/projectile/sanctiflux/on_hit(atom/target,blocked = FALSE)
+	if(iscarbon(target))
+		var/mob/living/carbon/M = target
+		M.fire_act(20, 40)
+	explosion(target, light_impact_range = 5, flame_range = 4, smoke = TRUE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+	..(target, blocked)
 
 /obj/projectile/bullet/reusable/cannonball
 	name = "large lead ball"

@@ -138,7 +138,7 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 	Can probably be done through "{ }" but I don't really see the practical benefit.
 	One example of an earlier system is commented below.
 	/N
-	*/
+	
 
 /proc/generate_code_phrase(return_list=FALSE)//Proc is used for phrase and response in master_controller.dm
 
@@ -217,3 +217,4 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 				. += "."
 			else
 				. += ", "
+*/

@@ -422,10 +422,21 @@
 /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/black
 	color = "#3c3a38"
 
+/obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander
+	name = "heartfelt kikko gusoku"
+	desc = "A lordly protection in Heartfelt colors. Masterfully crafted coat of hexagon plates, for important nobility."
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	icon_state = "heartfelt_kikko"
+	item_state = "heartfelt_kikko"
+	allowed_sex = list(MALE,FEMALE)
+	color = CLOTHING_HEARTFELT
+
 /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander/blue
 	color = "#ffffff"
 	name = "lords coat"
-	desc = "A heavy dark coat worn by Grenzelhoft commanders, decorated with epaulettes and various medals earned over the yils."
+	desc = "A heavy dark coat worn by Grenzelhoft lords, decorated with epaulettes and various medals earned over the yils."
 	icon_state = "grenzcommcoat"
 	item_state = "grenzcommcoat"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'

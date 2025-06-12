@@ -101,7 +101,7 @@
 	if(ammo_list.len)
 		icon_state = "sack_rope"
 	else
-		icon_state = "sack_rope"
+		icon_state = "cbag"
 
 /obj/item/quiver/bullets/Initialize()
 	..()
@@ -120,7 +120,7 @@
 	if(ammo_list.len)
 		icon_state = "sack_rope"
 	else
-		icon_state = "sack_rope"
+		icon_state = "cbag"
 
 /obj/item/quiver/ironbullets/Initialize()
 	..()
@@ -139,7 +139,7 @@
 	if(ammo_list.len)
 		icon_state = "sack_rope"
 	else
-		icon_state = "sack_rope"
+		icon_state = "cbag"
 
 /obj/item/quiver/woodbullets/Initialize()
 	..()

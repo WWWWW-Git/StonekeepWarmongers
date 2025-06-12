@@ -24,9 +24,6 @@
 /mob/proc/rogstam_add(added as num)
 	return
 
-/mob/living/carbon/human/rogstam_add(added) // all my homies hate the blue bar
-	return TRUE
-
 /mob/living/rogstam_add(added as num)
 	if(HAS_TRAIT(src, TRAIT_NOROGSTAM))
 		return TRUE
@@ -132,10 +129,9 @@
 		if(stress > 15)
 			addtimer(CALLBACK(src, TYPE_PROC_REF(/mob, do_freakout_scream)), rand(30,50))
 	if(hud_used)
-//		var/list/screens = list(hud_used.plane_masters["[OPENSPACE_BACKDROP_PLANE]"],hud_used.plane_masters["[BLACKNESS_PLANE]"],hud_used.plane_masters["[GAME_PLANE_UPPER]"],hud_used.plane_masters["[GAME_PLANE_FOV_HIDDEN]"], hud_used.plane_masters["[FLOOR_PLANE]"], hud_used.plane_masters["[GAME_PLANE]"], hud_used.plane_masters["[LIGHTING_PLANE]"])
 		var/matrix/skew = matrix()
 		skew.Scale(2)
-		//skew.Translate(-224,0)
+		skew.Translate(-224,0)
 		var/matrix/newmatrix = skew 
 		for(var/C in hud_used.plane_masters)
 			var/atom/movable/screen/plane_master/whole_screen = hud_used.plane_masters[C]

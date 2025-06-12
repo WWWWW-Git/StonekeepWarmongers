@@ -249,6 +249,10 @@
 	return FALSE
 
 /turf/proc/zImpact(atom/movable/A, levels = 1, turf/prev_turf)
+	if(levels == 1)
+		for(var/obj/structure/stairs/S in contents)
+			return FALSE
+
 	var/flags = NONE
 	var/mov_name = A.name
 	for(var/i in contents)
@@ -257,22 +261,56 @@
 		if(flags & FALL_STOP_INTERCEPTING)
 			break
 	if(prev_turf && !(flags & FALL_NO_MESSAGE))
-		prev_turf.visible_message("<span class='danger'>[mov_name] falls through [prev_turf]!</span>")
+		prev_turf.visible_message("<span class='danger'>\The [mov_name] falls through [prev_turf]!</span>")
 	if(flags & FALL_INTERCEPTED)
 		return
 	if(zFall(A, ++levels))
 		return FALSE
-	A.visible_message("<span class='danger'>[A] crashes into [src]!</span>")
+	if(isliving(A))
+		var/mob/living/O = A
+		var/dex_save = O.mind.get_skill_level(/datum/skill/misc/climbing)
+		if(dex_save >= 5)
+			if(O.m_intent != MOVE_INTENT_SNEAK) // If we're sneaking, don't show a message to anybody, shhh!
+				O.visible_message("<span class='danger'>[A] gracefully lands on top of [src]!</span>")
+		else
+			A.visible_message("<span class='danger'>[A] crashes into [src]!</span>")
+			if(A.fall_damage())
+				for(var/mob/living/M in contents)
+					visible_message("<span class='danger'>\The [src] falls on \the [M.name]!</span>")
+					M.Stun(1)
+					M.take_overall_damage(A.fall_damage()*2)
 	if(A.fall_damage())
 		for(var/mob/living/M in contents)
 			visible_message("<span class='danger'>\The [src] falls on \the [M.name]!</span>")
 			M.Stun(1)
 			M.take_overall_damage(A.fall_damage()*2)
 	A.onZImpact(src, levels)
+	if(isobj(A))
+		for(var/mob/living/mob in contents)
+			A:on_fall_impact(mob, levels * 1.25)
 	return TRUE
 
 /atom/movable/proc/fall_damage()
-	return 0
+	return FALSE
+
+/obj/item/on_fall_impact(mob/living/impactee, fall_speed)
+	. = ..()
+	if(!w_class)
+		return
+
+	var/target_zone = BODY_ZONE_HEAD
+
+	if(impactee.lying)
+		target_zone = BODY_ZONE_CHEST
+
+	playsound(impactee.loc, pick('sound/combat/gib (1).ogg','sound/combat/gib (2).ogg'), 200, FALSE, 3)
+	add_blood_DNA(impactee.return_blood_DNA())
+	impactee.visible_message("<span class='danger'>[src] crashes into [impactee]'s [target_zone]!</span>", "<span class='danger'>A [src] hits you in your [target_zone]!</span>")
+	impactee.apply_damage(force/2 * fall_speed, BRUTE, target_zone, impactee.run_armor_check(target_zone, "blunt", damage = force/2 * fall_speed))
+
+/obj/proc/on_fall_impact(mob/living/impactee, fall_speed)
+	SHOULD_CALL_PARENT(TRUE)
+	return
 
 /obj/item/fall_damage()
 	if(w_class == WEIGHT_CLASS_TINY)
@@ -695,4 +733,3 @@
 //Should return new turf
 /turf/proc/Melt()
 	return ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
-

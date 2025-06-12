@@ -272,11 +272,6 @@
 	layer = ABOVE_MOB_LAYER
 	plane = GAME_PLANE_UPPER
 
-/obj/effect/temp_visual/telefog
-	icon_state = "telefog"
-	duration = 13
-	plane = GAME_PLANE_UPPER
-
 /obj/effect/temp_visual/fire
 	icon = 'icons/effects/fire.dmi'
 	icon_state = "3"

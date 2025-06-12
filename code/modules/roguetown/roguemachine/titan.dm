@@ -3,6 +3,7 @@ GLOBAL_LIST_EMPTY(lord_decrees)
 GLOBAL_LIST_INIT(laws_of_the_land, initialize_laws_of_the_land())
 
 /proc/initialize_laws_of_the_land()
+	/*
 	var/list/laws = strings("laws_of_the_land.json", "lawsets")
 	var/list/lawsets_weighted = list()
 	for(var/lawset_name as anything in laws)
@@ -10,6 +11,8 @@ GLOBAL_LIST_INIT(laws_of_the_land, initialize_laws_of_the_land())
 		lawsets_weighted[lawset_name] = lawset["weight"]
 	var/chosen_lawset = pickweight(lawsets_weighted)
 	return laws[chosen_lawset]["laws"]
+	*/
+	return
 
 /obj/structure/roguemachine/titan
 	name = "THROAT"
@@ -220,7 +223,7 @@ GLOBAL_LIST_INIT(laws_of_the_land, initialize_laws_of_the_land())
 	if(!Adjacent(user))
 		return
 
-	var/mob/list/possible_mobs = orange(2, src)
+	var/list/mob/possible_mobs = orange(2, src)
 	var/mob/victim = input(user, "Who should change their post?", src, null) as null|mob in possible_mobs - user
 	if(isnull(victim) || !Adjacent(user))
 		return

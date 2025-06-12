@@ -58,7 +58,7 @@
 	name = "Crossbows"
 
 /datum/skill/combat/flintlocks
-	name = "Flintlocks"
+	name = "Barkweapons"
 
 /datum/skill/combat/wrestling
 	name = "Wrestling"
