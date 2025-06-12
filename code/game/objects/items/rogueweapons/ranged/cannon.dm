@@ -45,6 +45,9 @@
 
 /obj/structure/cannon/attack_right(mob/user)
 	. = ..()
+	if(!SSticker.warfare_ready_to_die)
+		to_chat(user, "<span class='danger'>Why in the world would I ever do that? Why would I waste time pointing it down if I can't even use it to kill the enemy right now?</span>")
+		return
 	if(!shootingdown)
 		visible_message("<span class='info'>[user] begins tilting \the [src] to point down.</span>", "<span class='info'>I begin tilting \the [src] to point down a little...</span>")
 	else
@@ -171,13 +174,13 @@
 		playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
 
 /obj/structure/bombard/fire_act(added, maxstacks)
-	if(!loaded)
+	if(!loaded || !SSticker.warfare_ready_to_die)
 		return
 	playsound(src.loc, 'sound/items/firelight.ogg', 100)
 	fire()
 
 /obj/structure/bombard/spark_act()
-	if(!loaded)
+	if(!loaded || !SSticker.warfare_ready_to_die)
 		return
 	playsound(src.loc, 'sound/items/firelight.ogg', 100)
 	fire()
@@ -202,9 +205,7 @@
 		playsound(src, 'sound/foley/trap_arm.ogg', 65)
 	if(istype(I, /obj/item/flashlight/flare/torch))
 		var/obj/item/flashlight/flare/torch/LR = I
-		if(!loaded)
-			return
-		if(!SSticker.warfare_ready_to_die)
+		if(!loaded || !SSticker.warfare_ready_to_die)
 			to_chat(user, "<span class='danger'>No, that would be stupid.</span>")
 			return
 		if(LR.on)

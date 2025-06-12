@@ -589,7 +589,7 @@
 		return
 	if(!reaper)
 		return
-	if (InCritical() || health <= 0 || blood_volume in -INFINITY to BLOOD_VOLUME_SURVIVE)
+	if (InCritical() || health <= 0 || (blood_volume < BLOOD_VOLUME_SURVIVE))
 		log_message("Has [whispered ? "whispered his final words" : "succumbed to death"] while in [InFullCritical() ? "hard":"soft"] critical with [round(health, 0.1)] points of health!", LOG_ATTACK)
 		adjustOxyLoss(201)
 		updatehealth()
@@ -1944,7 +1944,7 @@
 			if(ttime < 0)
 				ttime = 0
 		animate(client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, ttime)
-		hud_used?.show_hud(HUD_STYLE_NOHUD)
+		hud_used?.backhudl.alpha = 0
 	else
 		var/_x = T.x-loc.x
 		var/_y = T.y-loc.y
@@ -2008,5 +2008,5 @@
 	update_cone_show()
 	regenerate_icons()
 	client?.change_view(CONFIG_GET(string/default_view))
-	hud_used?.show_hud(HUD_STYLE_STANDARD)
+	hud_used?.backhudl.alpha = 255
 //	UnregisterSignal(src, COMSIG_MOVABLE_PRE_MOVE)

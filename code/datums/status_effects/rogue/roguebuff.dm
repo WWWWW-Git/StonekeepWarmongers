@@ -231,8 +231,8 @@
 	duration = 2 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/inspired
-	name = "Inspired"
-	desc = "<span class='nicegreen'>I'm inspired to fight!</span>\n"
+	name = "Charge"
+	desc = "<span class='nicegreen'>CHARGE!</span>\n"
 	icon_state = "ravox"
 
 /datum/status_effect/buff/inspired/great
@@ -242,8 +242,8 @@
 	duration = 3 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/inspired/great
-	name = "Greatly Inspired"
-	desc = "<span class='nicegreen'>I feel very inspired to fight!</span>\n"
+	name = "Ready to Die"
+	desc = "<span class='nicegreen'>I'M READY TO DIE NOW!</span>\n"
 	icon_state = "intelligence"
 
 /datum/status_effect/buff/spawn_protection

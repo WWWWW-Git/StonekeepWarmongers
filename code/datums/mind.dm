@@ -359,6 +359,7 @@
 	msg += "<span class='info'>*---------*\n</span>"
 	for(var/i in shown_skills)
 		msg += "[i] - [SSskills.level_names[known_skills[i]]]\n"
+	msg += "<span class='info'>*---------*\n</span>"
 	msg += "</span>"
 	to_chat(user, msg)
 

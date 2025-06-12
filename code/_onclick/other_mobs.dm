@@ -237,6 +237,9 @@
 	..()
 	if(!mmb_intent)
 		if(!A.Adjacent(src))
+			if(HAS_TRAIT(src, TRAIT_OFFICER) && istype(A, /turf))
+				var/yy = A.y - src.y // so it can be used for the bombard
+				to_chat(src, "<span class='info'>Azirath Calculation: [yy]</span>")
 			return
 		A.MiddleClick(src, params)
 	else

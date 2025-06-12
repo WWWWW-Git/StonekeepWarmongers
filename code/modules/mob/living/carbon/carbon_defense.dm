@@ -112,6 +112,7 @@
 
 				BP.drop_limb(1)
 				qdel(BP)
+				new /obj/effect/gibspawner/generic(get_turf(src))
 		return TRUE
 
 /mob/living/carbon/check_projectile_embed(obj/projectile/P, def_zone, blocked)

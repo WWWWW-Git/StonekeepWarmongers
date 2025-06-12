@@ -1717,7 +1717,7 @@
 			if(M.get_triumphs() < 2)
 				to_chat(M, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
 				return
-			if(alert("FIGHT WITH ALL YOU GOT?!", "", "Yes", "No") == "Yes")
+			if(alert("FIGHT WITH ALL YOU GOT?! (TWO TRIUMPHS)", "", "Yes", "No") == "Yes")
 				var/mob/living/carbon/V = M
 				if(V.add_stress(/datum/stressevent/triumph))
 					if(M.get_triumphs() < 2)

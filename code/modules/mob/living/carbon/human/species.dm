@@ -1866,7 +1866,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 							var/obj/item/bodypart/head/BPH = affecting
 							if(BPH.knock_out_teeth(get_dir(target, user), rand(1,5)))
 								target.visible_message("<span class='danger'>[target]'s teeth sail off in an arc!</span>", "<span class='userdanger'>[target]'s teeth sail off in an arc!</span>")
-						if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(damage/2 * hitcheck * user.STASTR/3)))
+						if((user.a_intent.blade_class in GLOB.fracture_bclasses) && (prob(damage/2 * hitcheck * user.STASTR/3)) && prob(45))
 							target.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
 							if(target.stat == CONSCIOUS)
 								target.visible_message("<span class='danger'>[target] is knocked senseless!</span>", "<span class='danger'>You're knocked senseless!</span>")
@@ -1897,7 +1897,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 		target.retaliate(user)
 
-		if((target.stat != DEAD) && damage >= user.dna.species.punchstunthreshold)
+		if((target.stat != DEAD) && damage >= user.dna.species.punchstunthreshold && prob(35))
 			target.visible_message("<span class='danger'>[user] knocks [target] down!</span>", \
 							"<span class='danger'>You're knocked down by [user]!</span>", "<span class='hear'>I hear aggressive shuffling followed by a loud thud!</span>", COMBAT_MESSAGE_RANGE, user)
 			to_chat(user, "<span class='danger'>I knock [target] down!</span>")
