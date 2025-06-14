@@ -45,6 +45,7 @@ GLOBAL_LIST_EMPTY(biggates)
 	icon_state = ""
 	bound_width = 32
 	bound_height = 96
+	base_state = ""
 
 /obj/structure/gate/vertical/right
 	icon_state = "gate1_right"

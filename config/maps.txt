@@ -53,3 +53,8 @@ map ziggurat
 	#voteweight 1.5
 	votable
 endmap
+
+map burg_aus_schwarzem_stein
+	#voteweight 1.5
+	votable
+endmap

@@ -1,4 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"by" = (
+/obj/structure/winch{
+	redstone_id = "gate7";
+	gid = "gate7"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue)
 "bS" = (
 /obj/item/natural/stone,
 /turf/open/floor/rogue/dirt/road,
@@ -139,6 +146,13 @@
 "gc" = (
 /turf/open/transparent/openspace/airless,
 /area/rogue)
+"gm" = (
+/obj/structure/gate/vertical/bars/left{
+	redstone_id = "gate1";
+	gid = "gate1"
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue)
 "gF" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/cobble,
@@ -195,6 +209,10 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/tile/bath,
+/area/rogue)
+"kZ" = (
+/obj/effect/landmark/start/grenzellord,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue)
 "ly" = (
 /obj/structure/fluff/psycross,
@@ -406,6 +424,13 @@
 "wx" = (
 /turf/closed/mineral/rogue,
 /area/rogue)
+"wG" = (
+/obj/structure/gate/vertical/bars/right{
+	redstone_id = "gate4";
+	gid = "gate3"
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue)
 "wS" = (
 /obj/effect/landmark/start/heartfeltlord{
 	dir = 1
@@ -424,6 +449,10 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"xR" = (
+/obj/effect/landmark/start/grenzelinfantry,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue)
 "xS" = (
 /obj/structure/mineral_door/bars,
 /obj/effect/decal/cleanable/blood/old,
@@ -432,6 +461,13 @@
 "ya" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/rogue/greenstone,
+/area/rogue)
+"yS" = (
+/obj/structure/gate/vertical/right/preopen{
+	redstone_id = "gate8";
+	gid = "gate8"
+	},
+/turf/open/floor/rogue/cobblerock,
 /area/rogue)
 "yT" = (
 /obj/machinery/light/rogue/torchholder/c{
@@ -556,6 +592,13 @@
 /obj/item/restraints/legcuffs/beartrap/armed/camouflage,
 /turf/open/floor/rogue/grass,
 /area/rogue)
+"Ef" = (
+/obj/structure/winch{
+	redstone_id = "gate1";
+	gid = "gate1"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue)
 "Fi" = (
 /turf/open/floor/rogue/concrete,
 /area/rogue)
@@ -572,6 +615,13 @@
 "FR" = (
 /obj/structure/bars,
 /turf/open/floor/rogue/cobble,
+/area/rogue)
+"FV" = (
+/obj/structure/gate/vertical/bars/right/preopen{
+	redstone_id = "gate4";
+	gid = "gate4"
+	},
+/turf/open/floor/rogue/cobblerock,
 /area/rogue)
 "Gv" = (
 /obj/effect/landmark/start/heartfeltinfantry{
@@ -635,10 +685,28 @@
 /obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"JT" = (
+/obj/effect/landmark/blureinforcement,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue)
+"Ka" = (
+/obj/structure/winch{
+	redstone_id = "gate2";
+	gid = "gate2"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue)
 "Ks" = (
 /obj/structure/fluff/walldeco/chains,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/rogue/concrete,
+/area/rogue)
+"Ku" = (
+/obj/structure/gate/vertical/bars/left/preopen{
+	redstone_id = "gate2";
+	gid = "gate2"
+	},
+/turf/open/floor/rogue/cobblerock,
 /area/rogue)
 "KB" = (
 /obj/structure/fluff/psycross,
@@ -654,6 +722,13 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue)
+"LP" = (
+/obj/structure/winch{
+	redstone_id = "gate4";
+	gid = "gate4"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue)
 "LX" = (
 /turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey{
 	dir = 4
@@ -664,9 +739,23 @@
 /obj/structure/barricade/sandbags/rogue,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue)
+"Mp" = (
+/obj/structure/winch{
+	redstone_id = "gate8";
+	gid = "gate8"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue)
 "MX" = (
 /obj/structure/stairs/stone,
 /turf/open/floor/rogue/blocks,
+/area/rogue)
+"Nn" = (
+/obj/structure/gate/vertical/left/preopen{
+	redstone_id = "gate6";
+	gid = "gate6"
+	},
+/turf/open/floor/rogue/cobblerock,
 /area/rogue)
 "NC" = (
 /obj/structure/bars,
@@ -681,6 +770,20 @@
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/item/reagent_containers/glass/bottle/rogue/wine/sourwine,
 /turf/open/floor/rogue/cobble,
+/area/rogue)
+"Oo" = (
+/obj/structure/gate/vertical/right{
+	redstone_id = "gate7";
+	gid = "gate7"
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue)
+"OB" = (
+/obj/structure/winch{
+	redstone_id = "gate6";
+	gid = "gate6"
+	},
+/turf/open/floor/rogue/grass,
 /area/rogue)
 "OV" = (
 /obj/machinery/light/rogue/torchholder/c,
@@ -804,14 +907,35 @@
 /obj/item/natural/dirtclod,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue)
+"Wx" = (
+/obj/structure/winch{
+	redstone_id = "gate3";
+	gid = "gate3"
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue)
 "WY" = (
 /obj/structure/bars/pipe{
 	dir = 9
 	},
 /turf/open/floor/rogue/tile/bath,
 /area/rogue)
+"Xi" = (
+/obj/structure/winch{
+	redstone_id = "gate5";
+	gid = "gate5"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue)
 "Xt" = (
 /turf/closed/wall/mineral/rogue/stone,
+/area/rogue)
+"XA" = (
+/obj/structure/gate/vertical/left{
+	redstone_id = "gate5";
+	gid = "gate5"
+	},
+/turf/open/floor/rogue/cobblerock,
 /area/rogue)
 "XD" = (
 /obj/structure/well,
@@ -5079,7 +5203,7 @@ xd
 Vl
 Vl
 Rf
-Rf
+JT
 Rf
 Vl
 ee
@@ -5180,7 +5304,7 @@ zV
 Vl
 Vl
 Rf
-Rf
+xR
 Rf
 Vl
 Vl
@@ -5281,7 +5405,7 @@ VG
 Vl
 Vl
 Rf
-Rf
+kZ
 Rf
 Vl
 Vl
@@ -5481,10 +5605,10 @@ SC
 Bv
 xd
 Vl
-Vl
+Ef
 Rf
 Rf
-Rf
+gm
 Vl
 Vl
 Hj
@@ -5683,10 +5807,10 @@ SC
 Ae
 Dm
 zV
-Vl
+Ka
 Rf
 Rf
-Rf
+Ku
 Hj
 Vl
 bS
@@ -5885,10 +6009,10 @@ SC
 Ad
 fU
 fU
+Wx
 Rf
 Rf
-Rf
-Rf
+wG
 Rf
 Rf
 Tf
@@ -6087,10 +6211,10 @@ SC
 Ae
 IR
 VG
-Vl
+LP
 Rf
 Rf
-Rf
+FV
 Vl
 Hj
 Hj
@@ -6289,10 +6413,10 @@ SC
 Bv
 xd
 Vl
-Vl
+Xi
 Rf
 Rf
-Rf
+XA
 Vl
 fe
 Vl
@@ -6491,10 +6615,10 @@ mJ
 Dm
 zV
 Vl
-Vl
+OB
 Rf
 Rf
-Rf
+Nn
 Vl
 Vl
 Vl
@@ -6693,10 +6817,10 @@ Ae
 Bv
 xd
 Vl
-Vl
+by
 Rf
 Rf
-Rf
+Oo
 Vl
 ee
 Vl
@@ -6895,10 +7019,10 @@ Ae
 Dm
 zV
 Vl
-Vl
+Mp
 Rf
 Rf
-Rf
+yS
 Vl
 Vl
 Vl
