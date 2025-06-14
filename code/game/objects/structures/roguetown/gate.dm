@@ -39,6 +39,53 @@ GLOBAL_LIST_EMPTY(biggates)
 	. = ..()
 	open()
 
+// Start of vertical gates
+/obj/structure/gate/vertical
+	icon = 'icons/roguetown/misc/gatevertical.dmi'
+	icon_state = ""
+	bound_width = 32
+	bound_height = 96
+
+/obj/structure/gate/vertical/right
+	icon_state = "gate1_right"
+
+/obj/structure/gate/vertical/right/preopen
+	icon_state = "gate0_right"
+
+/obj/structure/gate/vertical/right/preopen/Initialize()
+	. = ..()
+	open()
+
+/obj/structure/gate/vertical/left
+	icon_state = "gate1_left"
+
+/obj/strucutre/gate/vertical/left/preopen
+	icon_state = "gate0_left"
+
+/obj/structure/gate/vertical/left/preopen/Initialize()
+	. = ..()
+	open()
+
+/obj/structure/gate/vertical/bars/right
+	icon_state = "bar1_right"
+
+/obj/structure/gate/vertical/bars/right/preopen
+	icon_state = "bar0_right"
+
+/obj/structure/gate/vertical/bars/right/preopen/Initialize()
+	. = ..()
+	open()
+
+/obj/structure/gate/vertical/bars/left
+	icon_state = "bar1_left"
+
+/obj/structure/gate/vertical/bars/left/preopen
+	icon_state = "bar0_left"
+
+/obj/structure/gate/vertical/bars/left/preopen/Initialize()
+	. = ..()
+	open()
+
 /obj/gblock
 	name = ""
 	desc = ""
@@ -60,6 +107,24 @@ GLOBAL_LIST_EMPTY(biggates)
 		turfsy += T
 		blockers += G
 		T = get_step(T, EAST)
+		G = new /obj/gblock(T)
+		turfsy += T
+		blockers += G
+	GLOB.biggates += src
+
+/obj/structure/gate/vertical/Initialize()
+	. = ..()
+	update_icon()
+	if(initial(opacity))
+		var/turf/T = loc
+		var/G = new /obj/gblock(T)
+		turfsy += T
+		blockers += G
+		T = get_step(T, NORTH)
+		G = new /obj/gblock(T)
+		turfsy += T
+		blockers += G
+		T = get_step(T, NORTH)
 		G = new /obj/gblock(T)
 		turfsy += T
 		blockers += G
