@@ -41,7 +41,7 @@
 
 /obj/effect/spawner/xmastree
 	name = "christmas tree spawner"
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = 'icons/mob/landmarks.dmi'
 	icon_state = "x2"
 	layer = FLY_LAYER
 

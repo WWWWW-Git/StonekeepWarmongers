@@ -1,6 +1,6 @@
 /obj/effect/landmark
 	name = "landmark"
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = 'icons/mob/landmarks.dmi'
 	icon_state = "x2"
 	anchored = TRUE
 	layer = MID_LANDMARK_LAYER
@@ -30,11 +30,11 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/blureinforcement
 	name = "Blue Reinforcements"
-	icon_state = "x2"
+	icon_state = "reinforcements-blu"
 
 /obj/effect/landmark/redreinforcement
 	name = "Red Reinforcements"
-	icon_state = "x"
+	icon_state = "reinforcements"
 
 /obj/effect/landmark/start
 	name = "start"
@@ -311,13 +311,13 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/grenzelinfantry
 	name = "Grenzelhoft Infantry"
-	icon_state = "arrow"
+	icon_state = "arrow_blu"
 	jobspawn_override = list("Grenzelhoft Infantry")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/grenzellord
 	name = "Grenzelhoft Lord"
-	icon_state = "arrow"
+	icon_state = "arrow_blu"
 	jobspawn_override = list("Grenzelhoft Lord")
 	delete_after_roundstart = FALSE
 
@@ -522,7 +522,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	return ..()
 
 /obj/effect/landmark/start/ai/secondary
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = 'icons/mob/landmarks.dmi'
 	icon_state = "ai_spawn"
 	primary_ai = FALSE
 	latejoin_active = FALSE
@@ -557,7 +557,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/wizard
 	name = "wizard"
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = 'icons/mob/landmarks.dmi'
 	icon_state = "wiznerd_spawn"
 
 /obj/effect/landmark/start/wizard/Initialize()
@@ -566,7 +566,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/nukeop
 	name = "nukeop"
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = 'icons/mob/landmarks.dmi'
 	icon_state = "snukeop_spawn"
 
 /obj/effect/landmark/start/nukeop/Initialize()
@@ -595,7 +595,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/nukeop_leader
 	name = "nukeop leader"
-	icon = 'icons/effects/landmarks_static.dmi'
+	icon = 'icons/mob/landmarks.dmi'
 	icon_state = "snukeop_leader_spawn"
 
 /obj/effect/landmark/start/nukeop_leader/Initialize()
@@ -629,7 +629,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 //observer start
 /obj/effect/landmark/observer_start
 	name = "Observer-Start"
-	icon_state = "x"
+	icon_state = "observer-spawn"
 
 //xenos, morphs and nightmares spawn here
 /obj/effect/landmark/xeno_spawn

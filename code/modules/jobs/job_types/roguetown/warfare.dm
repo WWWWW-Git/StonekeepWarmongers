@@ -437,7 +437,7 @@
 		H.change_stat("strength", 2)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
-	H.cmode_music = 'sound/music/combatmadness.ogg'
+	H.cmode_music = 'sound/music/combatelite.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
@@ -882,7 +882,7 @@
 	head = /obj/item/clothing/head/roguetown/helmet/hussarhelm
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/hussar
-	backr = /obj/item/rogueweapon/spear
+	backr = /obj/item/rogueweapon/halberd
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
@@ -896,7 +896,7 @@
 		H.change_stat("perception", -1)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
-	H.cmode_music = 'sound/music/combatmadness.ogg'
+	H.cmode_music = 'sound/music/combatelite.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
 ////// GRENADIER //////
