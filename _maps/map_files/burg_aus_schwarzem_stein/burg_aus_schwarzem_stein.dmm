@@ -465,7 +465,7 @@
 /area/rogue/indoors)
 "gU" = (
 /obj/structure/closet/crate/coffin,
-/obj/item/rogueweapon/eaglebeak/lucerne,
+/obj/item/clothing/wrists/roguetown/bracers,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
 "gV" = (
@@ -1070,11 +1070,12 @@
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors)
 "rV" = (
-/obj/machinery/light/rogue/oven{
-	pixel_y = 31
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_x = -19
 	},
-/turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
 "rW" = (
 /obj/structure/rack/rogue,
 /obj/machinery/light/rogue/torchholder/c{
@@ -1292,8 +1293,10 @@
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors)
 "vG" = (
-/obj/machinery/light/rogue/torchholder/l,
-/turf/open/floor/rogue/tile,
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/metal,
 /area/rogue/indoors)
 "vH" = (
 /obj/structure/rack/rogue/shelf/biggest,
@@ -1401,7 +1404,7 @@
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors)
 "xd" = (
-/obj/structure/flora/roguegrass/bush_meagre,
+/obj/structure/flora/roguegrass/bush/wall/tall,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "xe" = (
@@ -1641,6 +1644,13 @@
 "Ak" = (
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/cobble,
+/area/rogue/indoors)
+"Aq" = (
+/obj/effect/decal/cobbleedge,
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/blocks,
 /area/rogue/indoors)
 "Au" = (
 /obj/effect/landmark/events/haunts,
@@ -2087,8 +2097,9 @@
 /turf/open/floor/rogue/tile/checker,
 /area/rogue/indoors)
 "Hq" = (
-/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
-/area/rogue/outdoors)
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors)
 "Hs" = (
 /obj/structure/barricade/sandbags/rogue{
 	dir = 8
@@ -2100,11 +2111,9 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
 "Hu" = (
-/obj/effect/decal/cobbleedge,
-/obj/machinery/light/rogue/torchholder/c{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/blocks,
+/obj/structure/closet/crate/coffin,
+/obj/item/clothing/neck/roguetown/gorget,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
 "Hv" = (
 /obj/structure/cannon,
@@ -2615,6 +2624,11 @@
 /obj/item/ammo_casing/caseless/rogue/cball,
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors)
+"Pd" = (
+/obj/structure/closet/crate/coffin,
+/obj/item/rogueweapon/eaglebeak/lucerne,
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/indoors)
 "Pj" = (
 /obj/structure/bars/pipe{
 	dir = 4;
@@ -2676,22 +2690,11 @@
 	},
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors)
-"Ql" = (
-/obj/machinery/light/rogue/torchholder/c{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/metal,
-/area/rogue/indoors)
 "Qn" = (
 /obj/structure/bars/pipe{
 	pixel_x = -14
 	},
 /turf/open/floor/rogue/herringbone,
-/area/rogue/indoors)
-"Qu" = (
-/obj/structure/closet/crate/coffin,
-/obj/item/clothing/neck/roguetown/gorget,
-/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
 "Qv" = (
 /obj/structure/table/wood/large/corner{
@@ -3144,12 +3147,11 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "XE" = (
-/obj/structure/bars/pipe{
-	dir = 6;
-	pixel_x = -19
+/obj/machinery/light/rogue/oven{
+	pixel_y = 31
 	},
-/turf/open/transparent/openspace/airless,
-/area/rogue/outdoors)
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors)
 "XF" = (
 /obj/structure/table/wood/reinforced,
 /obj/item/clothing/head/roguetown/helmet/heavy/blkknight,
@@ -3267,11 +3269,6 @@
 /obj/structure/fluff/psycross/copper,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors)
-"YU" = (
-/obj/structure/closet/crate/coffin,
-/obj/item/clothing/wrists/roguetown/bracers,
-/turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
 "YW" = (
 /obj/structure/roguemachine/scomm/r,
 /turf/open/floor/rogue/blocks,
@@ -3319,7 +3316,7 @@
 /area/rogue/indoors)
 "ZI" = (
 /mob/living/carbon/human/species/skeleton/npc/warrior,
-/turf/open/floor/rogue/dirt/road,
+/turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
 "ZJ" = (
 /obj/structure/fluff/railing/wood{
@@ -4324,14 +4321,14 @@ Ee
 Ee
 Ee
 Vl
-sq
-sq
-sq
-sq
-sq
-sq
-sq
-sq
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
 Ee
 Ee
 Ee
@@ -4421,21 +4418,21 @@ Ae
 Ae
 IR
 VG
-Hj
-Hj
+Vl
+ZI
 Ee
 Vl
 Vl
-sq
 Vl
 Vl
 Vl
 Vl
-sq
-ij
-Ee
-Hj
-Hj
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
 SC
 Ae
 Ae
@@ -4521,22 +4518,22 @@ Ae
 Ae
 Ae
 Bv
-Hj
-Hj
-Hj
 Ee
-sq
-Vl
-sq
-Vl
-sq
-sq
-sq
-sq
 Vl
 Ee
-Hj
-Hj
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Vl
 SC
 Ae
 Ae
@@ -4622,22 +4619,22 @@ Ae
 Ae
 Ae
 Bv
-Hj
-Hj
-Hj
 Ee
 Vl
 Vl
-sq
-Vl
-sq
 Vl
 Vl
 Vl
 Vl
+ZI
 Ee
-Hj
-Hj
+Vl
+Vl
+Vl
+Vl
+ZI
+Ee
+Vl
 SC
 Ae
 Ae
@@ -4724,21 +4721,21 @@ Ae
 Ae
 Dm
 zV
-Hj
-Hj
+Vl
+Ee
 Ee
 Vl
-sq
-sq
-Vl
-sq
-Vl
-sq
-sq
-sq
 Ee
-Hj
-Hj
+Ee
+Ee
+Ee
+Vl
+Ee
+Ee
+Ee
+Ee
+Ee
+Vl
 SC
 Ae
 Ae
@@ -4825,21 +4822,21 @@ Ae
 Ae
 IR
 VG
-Hj
-Hj
+Vl
+Vl
+Ee
+Vl
 Ee
 Vl
 Vl
 Vl
 Vl
-Vl
-Vl
-Vl
-Vl
+Ee
+ZI
 Vl
 Ee
-Hj
-Hj
+Vl
+Vl
 SC
 Ae
 Ae
@@ -4925,22 +4922,22 @@ Ae
 Ae
 Ae
 Bv
-Hj
-Hj
-Hj
+Ee
 Ee
 Vl
-sq
-sq
-Vl
-sq
-Vl
-sq
-sq
+Ee
 Vl
 Ee
-Hj
-Hj
+ZI
+Ee
+Ee
+ij
+Ee
+Ee
+Vl
+Ee
+ij
+Ee
 TK
 cP
 Ae
@@ -5026,23 +5023,23 @@ Ae
 Ae
 Ae
 Bv
-Hj
-Hj
-Hj
 Ee
-Vl
-sq
-Vl
-Vl
-sq
-Vl
-sq
 Vl
 Vl
 Ee
-Hj
-Hj
-Hj
+Vl
+Ee
+Ee
+Ee
+Vl
+Vl
+Ee
+Vl
+Vl
+Ee
+Vl
+Vl
+Vl
 SC
 Ae
 Ae
@@ -5128,22 +5125,22 @@ Ae
 Ae
 Dm
 zV
-Hj
-Hj
+Vl
 Ee
-ij
-sq
-Vl
-sq
-sq
-Vl
-sq
-Vl
-sq
 Ee
-Hj
-Hj
-Hj
+ZI
+Ee
+Vl
+Ee
+Vl
+Ee
+Ee
+Vl
+Ee
+Ee
+Ee
+Ee
+Vl
 SC
 Ae
 Ae
@@ -5229,22 +5226,22 @@ Ae
 Ae
 IR
 VG
-Hj
-Hj
-Ee
-sq
-sq
-Vl
-sq
-Vl
-Vl
-sq
 Vl
 Vl
 Ee
-Hj
-Hj
-Hj
+Ee
+Ee
+Vl
+Ee
+Vl
+Ee
+Vl
+Vl
+Vl
+Vl
+Vl
+Ee
+Vl
 SC
 Ae
 Ae
@@ -5329,23 +5326,23 @@ Ae
 Ae
 Ae
 Bv
-Hj
-Hj
-Hj
+Ee
 Ee
 Vl
 Vl
 Vl
-sq
 Vl
-sq
-sq
-sq
-sq
+Vl
 Ee
-Hj
-Hj
-Hj
+Vl
+Ee
+Vl
+Ee
+Ee
+Ee
+Vl
+Ee
+Vl
 SC
 Ae
 Ae
@@ -5415,7 +5412,7 @@ JN
 JN
 JN
 JN
-Hu
+Aq
 rn
 zV
 JN
@@ -5430,23 +5427,23 @@ Ae
 Ae
 Ae
 Bv
-Hj
-Hj
-Hj
 Ee
 Vl
-sq
-sq
-sq
 Vl
-Vl
-Vl
-sq
+Ee
 ij
 Ee
-Hj
-Hj
-Hj
+Ee
+Ee
+Vl
+Vl
+Vl
+Ee
+Vl
+Ee
+Vl
+Vl
+Vl
 SC
 Ae
 Ae
@@ -5532,22 +5529,22 @@ Ae
 Ae
 Dm
 zV
-Hj
-Hj
+Vl
+Ee
 Ee
 Vl
 Vl
 Vl
-sq
-sq
-sq
-Vl
-sq
+Ee
+Ee
+Ee
+ij
+Ee
 Vl
 Ee
-Hj
-Hj
-Hj
+Ee
+Ee
+Ee
 SC
 Ae
 Ae
@@ -5633,22 +5630,22 @@ Ae
 Ae
 IR
 VG
-Hj
-Hj
-Ee
-Vl
-sq
-Vl
-sq
-Vl
-Vl
-Vl
 Vl
 Vl
 Ee
-Hj
-Hj
-Hj
+Vl
+Ee
+Vl
+Ee
+Vl
+Vl
+Vl
+Vl
+Vl
+Ee
+ZI
+Vl
+Vl
 SC
 Ae
 Ae
@@ -5733,23 +5730,23 @@ Ae
 Ae
 Ae
 Bv
-Hj
-Hj
-Hj
+Ee
 Ee
 Vl
-sq
-Vl
-sq
-Vl
-sq
-sq
-sq
-sq
 Ee
-Hj
-Hj
-Hj
+Vl
+Ee
+Vl
+Ee
+Vl
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Vl
 SC
 Ae
 Ae
@@ -5834,23 +5831,23 @@ Ae
 Ae
 Ae
 Bv
-ZI
-ZI
-ZI
 Ee
+ZI
 Vl
-sq
-Vl
-sq
-Vl
-sq
-Vl
-Vl
+Ee
 Vl
 Ee
 ZI
-ZI
-ZI
+Ee
+Vl
+Ee
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
 SC
 Ae
 Ae
@@ -5940,13 +5937,13 @@ Ee
 Ee
 Ee
 Vl
-sq
-sq
-sq
+Ee
+Ee
+Ee
 Vl
-sq
+Ee
 Vl
-sq
+Ee
 Vl
 Ee
 Ee
@@ -6047,8 +6044,8 @@ Vl
 Vl
 Vl
 Vl
-sq
-Vl
+Ee
+ZI
 Ee
 Vl
 Vl
@@ -6828,7 +6825,7 @@ cU
 Qy
 Fs
 Fs
-Ql
+vG
 Ds
 Ae
 Dm
@@ -7046,7 +7043,7 @@ LX
 LX
 cP
 Bv
-Vl
+xd
 Vl
 Vl
 Vl
@@ -9173,7 +9170,7 @@ Ae
 Ae
 Ae
 Ae
-Hq
+Bv
 xd
 Vl
 Vl
@@ -9587,7 +9584,7 @@ Rf
 Vl
 Vl
 Vl
-Vl
+xd
 SC
 Ae
 Ae
@@ -9672,23 +9669,23 @@ Ae
 Ae
 Ae
 Bv
-Vl
-Vl
-Vl
-Vl
-Vl
-Vl
-Vl
-Vl
-Vl
-Vl
-Rf
-Rf
-Rf
-Vl
-Vl
-Vl
 xd
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+Rf
+Rf
+Rf
+Vl
+Vl
+Vl
+Vl
 SC
 Ae
 Ae
@@ -9789,7 +9786,7 @@ Rf
 Vl
 ee
 Vl
-Vl
+xd
 SC
 Ae
 Ae
@@ -10900,7 +10897,7 @@ ex
 Hj
 wh
 Hj
-Vl
+xd
 SC
 Ae
 Ae
@@ -11253,7 +11250,7 @@ Oo
 Oo
 Mp
 id
-gU
+Pd
 by
 XZ
 by
@@ -11264,7 +11261,7 @@ by
 XZ
 by
 im
-YU
+gU
 fI
 Oo
 Oo
@@ -11455,7 +11452,7 @@ Oo
 Oo
 Mp
 im
-YU
+gU
 by
 XZ
 by
@@ -11660,7 +11657,7 @@ Oo
 kZ
 Ef
 FO
-Qu
+Hu
 by
 by
 by
@@ -11708,7 +11705,7 @@ wh
 Hj
 wh
 Hj
-Vl
+xd
 SC
 Ae
 Ae
@@ -11966,7 +11963,7 @@ kZ
 FO
 HE
 QA
-Qu
+Hu
 gY
 FV
 Oo
@@ -15913,7 +15910,7 @@ wG
 LA
 SC
 Bv
-rV
+XE
 RF
 zo
 dA
@@ -16115,7 +16112,7 @@ wG
 cM
 SC
 Bv
-rV
+XE
 Fh
 Hm
 dA
@@ -16418,7 +16415,7 @@ wG
 cM
 SC
 Bv
-rV
+XE
 RF
 zo
 dA
@@ -16620,7 +16617,7 @@ wG
 cM
 SC
 Bv
-rV
+XE
 RF
 zo
 dA
@@ -17027,7 +17024,7 @@ Bv
 PX
 PX
 PX
-vG
+Hq
 PX
 PX
 PX
@@ -17035,7 +17032,7 @@ ck
 PX
 vF
 PX
-vG
+Hq
 PX
 PX
 PX
@@ -19679,7 +19676,7 @@ sU
 sU
 sU
 sU
-XE
+rV
 gc
 gc
 gc
