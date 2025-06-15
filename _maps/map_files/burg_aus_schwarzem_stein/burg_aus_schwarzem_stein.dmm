@@ -199,7 +199,9 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors)
 "cU" = (
-/turf/open/water/river,
+/turf/open/water/river{
+	dir = 1
+	},
 /area/rogue/indoors)
 "cY" = (
 /obj/machinery/light/rogue/torchholder/l,
@@ -462,9 +464,11 @@
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors)
 "gU" = (
-/turf/closed/mineral/rogue{
-	icon_state = "rockyashbed"
+/obj/effect/decal/cobbleedge,
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = -32
 	},
+/turf/open/floor/rogue/blocks,
 /area/rogue/indoors)
 "gV" = (
 /obj/effect/landmark/events/haunts,
@@ -782,6 +786,11 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors)
+"mk" = (
+/obj/structure/closet/crate/coffin,
+/obj/item/clothing/wrists/roguetown/bracers,
+/turf/open/floor/rogue/cobble/mossy,
+/area/rogue/indoors)
 "mo" = (
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/indoors)
@@ -1068,10 +1077,12 @@
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors)
 "rV" = (
-/obj/effect/decal/cleanable/blood/old,
-/mob/living/simple_animal/hostile/retaliate/rogue/troll/blood,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors)
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_x = -19
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
 "rW" = (
 /obj/structure/rack/rogue,
 /obj/machinery/light/rogue/torchholder/c{
@@ -1134,16 +1145,11 @@
 "sT" = (
 /obj/structure/bars/pipe{
 	dir = 6;
-	pixel_y = -1;
-	pixel_x = 13
+	pixel_y = -15
 	},
 /obj/structure/bars/pipe{
 	dir = 1;
 	pixel_y = -17
-	},
-/obj/structure/bars/pipe{
-	dir = 6;
-	pixel_y = -15
 	},
 /turf/open/transparent/openspace/airless,
 /area/rogue/outdoors)
@@ -1244,7 +1250,8 @@
 "uT" = (
 /obj/structure/fluff/statue/gargoyle/moss{
 	density = 1;
-	name = "Peculiar Statue"
+	name = "Peculiar Statue";
+	opacity = 1
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors)
@@ -1293,9 +1300,9 @@
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors)
 "vG" = (
-/mob/living/simple_animal/hostile/retaliate/rogue/troll/blood,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/rogue/naturalstone,
+/obj/structure/closet/crate/coffin,
+/obj/item/clothing/neck/roguetown/gorget,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
 "vH" = (
 /obj/structure/rack/rogue/shelf/biggest,
@@ -1367,6 +1374,10 @@
 /area/rogue/indoors)
 "wx" = (
 /turf/closed/mineral/rogue,
+/area/rogue/indoors)
+"wA" = (
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/tile,
 /area/rogue/indoors)
 "wG" = (
 /turf/open/floor/rogue/herringbone,
@@ -2102,10 +2113,10 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
 "Hu" = (
-/obj/machinery/light/rogue/oven{
-	pixel_y = -1
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = -32
 	},
-/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/turf/open/floor/rogue/metal,
 /area/rogue/indoors)
 "Hv" = (
 /obj/structure/cannon,
@@ -2543,7 +2554,7 @@
 /area/rogue/outdoors)
 "NP" = (
 /obj/structure/closet/crate/coffin,
-/obj/item/rogueweapon/sword/long/heirloom,
+/obj/item/rogueweapon/greatsword/zwei,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
 "NR" = (
@@ -2562,6 +2573,7 @@
 "Od" = (
 /obj/effect/decal/cleanable/sigil/S,
 /obj/effect/decal/cleanable/blood/old,
+/mob/living/simple_animal/hostile/retaliate/rogue/troll/blood,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors)
 "Og" = (
@@ -2657,13 +2669,19 @@
 "PG" = (
 /obj/structure/fluff/statue/gargoyle/moss{
 	density = 1;
-	name = "Peculiar Statue"
+	name = "Peculiar Statue";
+	opacity = 1
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
 "PI" = (
 /obj/structure/mineral_door/wood/violet,
 /turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors)
+"PN" = (
+/obj/structure/closet/crate/coffin,
+/obj/item/rogueweapon/eaglebeak/lucerne,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
 "PX" = (
 /turf/open/floor/rogue/tile,
@@ -3132,8 +3150,10 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "XE" = (
-/mob/living/simple_animal/hostile/retaliate/rogue/troll/blood,
-/turf/open/floor/rogue/naturalstone,
+/obj/machinery/light/rogue/oven{
+	pixel_y = 31
+	},
+/turf/open/floor/rogue/hexstone,
 /area/rogue/indoors)
 "XF" = (
 /obj/structure/table/wood/reinforced,
@@ -3157,7 +3177,6 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
 "Yb" = (
-/obj/structure/table/wood,
 /obj/item/rogueweapon/sword/long/judgement,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors)
@@ -3993,7 +4012,7 @@ xq
 JN
 JN
 JN
-gU
+wx
 Yb
 sL
 sL
@@ -5396,7 +5415,7 @@ JN
 JN
 JN
 JN
-fz
+gU
 rn
 zV
 JN
@@ -5489,7 +5508,7 @@ Bv
 NR
 pa
 pa
-pa
+Lo
 KO
 PF
 sa
@@ -6225,7 +6244,7 @@ Vl
 Vl
 Vl
 KB
-Vl
+BY
 Vl
 Hj
 Vl
@@ -6809,7 +6828,7 @@ cU
 Qy
 Fs
 Fs
-Fs
+Hu
 Ds
 Ae
 Dm
@@ -6982,8 +7001,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 IR
 LX
 LX
@@ -7083,8 +7102,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 IM
 Fi
@@ -7184,8 +7203,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 nW
 Fi
@@ -7285,8 +7304,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 Fi
 la
@@ -7386,8 +7405,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 rc
 BG
@@ -7487,8 +7506,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 Fi
 BG
@@ -7588,8 +7607,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 Ks
 Fi
@@ -7647,7 +7666,7 @@ Rf
 Rf
 Rf
 Gk
-Vl
+BY
 fe
 SC
 Ae
@@ -7689,8 +7708,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 yJ
 Fi
@@ -7790,8 +7809,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Dm
 mS
 mS
@@ -8800,8 +8819,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 IR
 LX
 LX
@@ -8901,8 +8920,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 IM
 Fi
@@ -8960,7 +8979,7 @@ Rf
 Rf
 Rf
 Gk
-Vl
+BY
 Vl
 SC
 Ae
@@ -9002,8 +9021,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 rc
 BG
@@ -9103,8 +9122,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 Fi
 ci
@@ -9204,8 +9223,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 Ks
 BG
@@ -9305,8 +9324,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 gK
 BG
@@ -9406,8 +9425,8 @@ ny
 ny
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 Ks
 Fi
@@ -9500,15 +9519,15 @@ ny
 vN
 Yi
 sL
-rV
+vN
 vN
 vN
 sL
 sL
 ny
 ny
-ny
-ny
+Ae
+Ae
 Bv
 Fi
 Fi
@@ -9608,8 +9627,8 @@ vN
 sL
 ny
 ny
-ny
-ny
+Ae
+Ae
 Dm
 mS
 mS
@@ -9700,21 +9719,21 @@ ny
 ny
 ny
 sL
-rV
+vN
 yQ
 Og
 Od
-XE
 sL
 sL
 sL
+sL
 ny
 ny
 ny
 ny
-ny
-ny
-ny
+Oo
+Oo
+Oo
 Oo
 Oo
 Oo
@@ -9904,7 +9923,7 @@ ny
 sL
 Yi
 sL
-vG
+vN
 vN
 vN
 sL
@@ -10205,21 +10224,21 @@ Oo
 Oo
 Oo
 Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
 ny
 ny
 ny
 ny
 ny
 ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
+Oo
 kZ
 Ef
 FO
@@ -10537,16 +10556,16 @@ by
 fI
 Oo
 Oo
-ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
 Oo
 Oo
 Mp
@@ -10638,16 +10657,16 @@ VN
 fI
 Oo
 Oo
-ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
 Oo
 Oo
 Mp
@@ -10739,16 +10758,16 @@ by
 fI
 Oo
 Oo
-ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
-ny
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
 Oo
 Oo
 Mp
@@ -10843,13 +10862,13 @@ Oo
 Oo
 Oo
 Oo
-ny
-ny
-ny
-ny
-ny
-ny
-ny
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
 Oo
 Oo
 Mp
@@ -10946,11 +10965,11 @@ Oo
 Oo
 Oo
 Oo
-ny
-ny
-ny
-ny
-ny
+Oo
+Oo
+Oo
+Oo
+Oo
 Oo
 Oo
 kZ
@@ -11234,7 +11253,7 @@ Oo
 Oo
 Mp
 id
-NP
+PN
 by
 XZ
 by
@@ -11245,7 +11264,7 @@ by
 XZ
 by
 im
-RY
+mk
 fI
 Oo
 Oo
@@ -11436,7 +11455,7 @@ Oo
 Oo
 Mp
 im
-RY
+mk
 by
 XZ
 by
@@ -11641,7 +11660,7 @@ Oo
 kZ
 Ef
 FO
-RY
+vG
 by
 by
 by
@@ -11947,7 +11966,7 @@ kZ
 FO
 HE
 QA
-RY
+vG
 gY
 FV
 Oo
@@ -15893,8 +15912,8 @@ OB
 wG
 LA
 SC
-Hu
-RF
+Bv
+XE
 RF
 zo
 dA
@@ -16095,8 +16114,8 @@ wG
 wG
 cM
 SC
-Hu
-RF
+Bv
+XE
 Fh
 Hm
 dA
@@ -16309,7 +16328,7 @@ Ae
 Ae
 Ae
 Bv
-wG
+ri
 wG
 nF
 SC
@@ -16398,8 +16417,8 @@ wG
 wG
 cM
 SC
-Hu
-RF
+Bv
+XE
 RF
 zo
 dA
@@ -16600,8 +16619,8 @@ wG
 wG
 cM
 SC
-Hu
-RF
+Bv
+XE
 RF
 zo
 dA
@@ -17008,7 +17027,7 @@ Bv
 PX
 PX
 PX
-PX
+wA
 PX
 PX
 PX
@@ -17016,7 +17035,7 @@ ck
 PX
 vF
 PX
-PX
+wA
 PX
 PX
 PX
@@ -19560,7 +19579,7 @@ LX
 LX
 Ok
 sT
-gc
+YA
 gc
 gc
 gc
@@ -19660,7 +19679,7 @@ sU
 sU
 sU
 sU
-gc
+rV
 gc
 gc
 gc
@@ -19945,7 +19964,7 @@ VG
 OB
 OB
 OB
-OB
+Vq
 nP
 OB
 OB
