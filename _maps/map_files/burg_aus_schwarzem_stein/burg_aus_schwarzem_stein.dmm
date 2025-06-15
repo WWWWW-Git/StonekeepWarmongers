@@ -464,11 +464,9 @@
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors)
 "gU" = (
-/obj/effect/decal/cobbleedge,
-/obj/machinery/light/rogue/torchholder/c{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/blocks,
+/obj/structure/closet/crate/coffin,
+/obj/item/rogueweapon/eaglebeak/lucerne,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
 "gV" = (
 /obj/effect/landmark/events/haunts,
@@ -786,11 +784,6 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors)
-"mk" = (
-/obj/structure/closet/crate/coffin,
-/obj/item/clothing/wrists/roguetown/bracers,
-/turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
 "mo" = (
 /turf/open/floor/rogue/wood/nosmooth,
 /area/rogue/indoors)
@@ -1077,12 +1070,11 @@
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors)
 "rV" = (
-/obj/structure/bars/pipe{
-	dir = 6;
-	pixel_x = -19
+/obj/machinery/light/rogue/oven{
+	pixel_y = 31
 	},
-/turf/open/transparent/openspace/airless,
-/area/rogue/outdoors)
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors)
 "rW" = (
 /obj/structure/rack/rogue,
 /obj/machinery/light/rogue/torchholder/c{
@@ -1300,9 +1292,8 @@
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors)
 "vG" = (
-/obj/structure/closet/crate/coffin,
-/obj/item/clothing/neck/roguetown/gorget,
-/turf/open/floor/rogue/cobble/mossy,
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/tile,
 /area/rogue/indoors)
 "vH" = (
 /obj/structure/rack/rogue/shelf/biggest,
@@ -1374,10 +1365,6 @@
 /area/rogue/indoors)
 "wx" = (
 /turf/closed/mineral/rogue,
-/area/rogue/indoors)
-"wA" = (
-/obj/machinery/light/rogue/torchholder/l,
-/turf/open/floor/rogue/tile,
 /area/rogue/indoors)
 "wG" = (
 /turf/open/floor/rogue/herringbone,
@@ -2113,10 +2100,11 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
 "Hu" = (
+/obj/effect/decal/cobbleedge,
 /obj/machinery/light/rogue/torchholder/c{
 	pixel_y = -32
 	},
-/turf/open/floor/rogue/metal,
+/turf/open/floor/rogue/blocks,
 /area/rogue/indoors)
 "Hv" = (
 /obj/structure/cannon,
@@ -2678,11 +2666,6 @@
 /obj/structure/mineral_door/wood/violet,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors)
-"PN" = (
-/obj/structure/closet/crate/coffin,
-/obj/item/rogueweapon/eaglebeak/lucerne,
-/turf/open/floor/rogue/cobble/mossy,
-/area/rogue/indoors)
 "PX" = (
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors)
@@ -2693,11 +2676,22 @@
 	},
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors)
+"Ql" = (
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/metal,
+/area/rogue/indoors)
 "Qn" = (
 /obj/structure/bars/pipe{
 	pixel_x = -14
 	},
 /turf/open/floor/rogue/herringbone,
+/area/rogue/indoors)
+"Qu" = (
+/obj/structure/closet/crate/coffin,
+/obj/item/clothing/neck/roguetown/gorget,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
 "Qv" = (
 /obj/structure/table/wood/large/corner{
@@ -3150,11 +3144,12 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
 "XE" = (
-/obj/machinery/light/rogue/oven{
-	pixel_y = 31
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_x = -19
 	},
-/turf/open/floor/rogue/hexstone,
-/area/rogue/indoors)
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
 "XF" = (
 /obj/structure/table/wood/reinforced,
 /obj/item/clothing/head/roguetown/helmet/heavy/blkknight,
@@ -3271,6 +3266,11 @@
 "YT" = (
 /obj/structure/fluff/psycross/copper,
 /turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors)
+"YU" = (
+/obj/structure/closet/crate/coffin,
+/obj/item/clothing/wrists/roguetown/bracers,
+/turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
 "YW" = (
 /obj/structure/roguemachine/scomm/r,
@@ -5415,7 +5415,7 @@ JN
 JN
 JN
 JN
-gU
+Hu
 rn
 zV
 JN
@@ -6828,7 +6828,7 @@ cU
 Qy
 Fs
 Fs
-Hu
+Ql
 Ds
 Ae
 Dm
@@ -11253,7 +11253,7 @@ Oo
 Oo
 Mp
 id
-PN
+gU
 by
 XZ
 by
@@ -11264,7 +11264,7 @@ by
 XZ
 by
 im
-mk
+YU
 fI
 Oo
 Oo
@@ -11455,7 +11455,7 @@ Oo
 Oo
 Mp
 im
-mk
+YU
 by
 XZ
 by
@@ -11660,7 +11660,7 @@ Oo
 kZ
 Ef
 FO
-vG
+Qu
 by
 by
 by
@@ -11966,7 +11966,7 @@ kZ
 FO
 HE
 QA
-vG
+Qu
 gY
 FV
 Oo
@@ -15913,7 +15913,7 @@ wG
 LA
 SC
 Bv
-XE
+rV
 RF
 zo
 dA
@@ -16115,7 +16115,7 @@ wG
 cM
 SC
 Bv
-XE
+rV
 Fh
 Hm
 dA
@@ -16418,7 +16418,7 @@ wG
 cM
 SC
 Bv
-XE
+rV
 RF
 zo
 dA
@@ -16620,7 +16620,7 @@ wG
 cM
 SC
 Bv
-XE
+rV
 RF
 zo
 dA
@@ -17027,7 +17027,7 @@ Bv
 PX
 PX
 PX
-wA
+vG
 PX
 PX
 PX
@@ -17035,7 +17035,7 @@ ck
 PX
 vF
 PX
-wA
+vG
 PX
 PX
 PX
@@ -19679,7 +19679,7 @@ sU
 sU
 sU
 sU
-rV
+XE
 gc
 gc
 gc
