@@ -56,7 +56,7 @@ GLOBAL_LIST_EMPTY(biggates)
 
 /obj/structure/gate/vertical/right/preopen/Initialize()
 	. = ..()
-	open()
+	INVOKE_ASYNC(src, PROC_REF(open))
 
 /obj/structure/gate/vertical/left
 	icon_state = "gateleft1"
@@ -67,7 +67,7 @@ GLOBAL_LIST_EMPTY(biggates)
 
 /obj/structure/gate/vertical/left/preopen/Initialize()
 	. = ..()
-	open()
+	INVOKE_ASYNC(src, PROC_REF(open))
 
 /obj/structure/gate/vertical/bars
 	icon_state = ""
@@ -83,7 +83,7 @@ GLOBAL_LIST_EMPTY(biggates)
 
 /obj/structure/gate/vertical/bars/right/preopen/Initialize()
 	. = ..()
-	open()
+	INVOKE_ASYNC(src, PROC_REF(open))
 
 /obj/structure/gate/vertical/bars/left
 	icon_state = "barleft1"
@@ -94,7 +94,7 @@ GLOBAL_LIST_EMPTY(biggates)
 
 /obj/structure/gate/vertical/bars/left/preopen/Initialize()
 	. = ..()
-	open()
+	INVOKE_ASYNC(src, PROC_REF(open))
 
 /obj/gblock
 	name = ""
@@ -176,7 +176,6 @@ GLOBAL_LIST_EMPTY(biggates)
 		B.opacity = FALSE
 	isSwitchingStates = FALSE
 	update_icon()
-
 
 /obj/structure/gate/proc/close()
 	if(isSwitchingStates || density)
