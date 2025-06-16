@@ -202,6 +202,7 @@
 	icon_state = ""
 	var/bonus_stat
 	var/datum/status_effect/bonus_effect
+	var/atom/movable/screen/alert/bonus_alert
 	var/has_bonus_effect = TRUE
 	var/currently_equipped = FALSE
 
@@ -224,15 +225,29 @@
 		has_bonus_effect = TRUE
 		// Roll 1dX where X is the length of possible_effects
 		bonus_effect = pick(possible_effects)
+		bonus_alert = initial(bonus_effect.alert_type)
 
 /obj/item/clothing/ring/warmongers/magic/proc/update_description()
 	var/new_desc = "A ring imbued with long-forgotten magical energies."
 	if(bonus_stat)
-		new_desc += " You sense it enhances [bonus_stat]."
+		new_desc += " You sense it grants [bonus_stat]."
 	if(has_bonus_effect && bonus_effect)
-		new_desc += " It radiates with [initial(bonus_effect.name)] magic."
+		new_desc += " It also grants [initial(bonus_alert.name)]."
 	desc = new_desc
 
+/obj/item/clothing/ring/warmongers/magic/equipped(mob/living/user, slot)
+	. = ..()
+	if(user.mind)
+		if (slot == SLOT_RING && istype(user))
+			user.apply_status_effect(bonus_stat)
+			if (has_bonus_effect && bonus_effect)
+				user.apply_status_effect(bonus_effect)
+		else
+			user.remove_status_effect(bonus_stat)
+			if (has_bonus_effect && bonus_effect)
+				user.remove_status_effect(bonus_effect)
+
+/* Warning: This only works if rebased to Vanderlin's code
 /obj/item/clothing/ring/warmongers/magic/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_RING)
@@ -262,13 +277,14 @@
 		user.remove_status_effect(bonus_effect)
 	currently_equipped = FALSE
 	to_chat(user, "<span class='warning'>The magical energies of the [name] fade away...</span>")
+*/
 
 /obj/item/clothing/ring/warmongers/magic/examine(mob/user)
 	. = ..()
 	if(bonus_stat)
 		. += "<span class='notice'>This ring grants [bonus_stat].</span>"
 	if(has_bonus_effect && bonus_effect)
-		. += "<span class='notice'>This ring also grants [initial(bonus_effect.name)].</span>"
+		. += "<span class='notice'>This ring also grants [initial(bonus_alert.name)].</span>"
 
 //--------- Start of Standard Magical Warmongers Rings
 
@@ -297,7 +313,7 @@
 	roll_bonuses()
 	update_description()
 
-/obj/item/clothing/ring/warmongers/magic/copper/proc/roll_bonuses()
+/obj/item/clothing/ring/warmongers/magic/copper/roll_bonuses()
 	bonus_stat = pick(possible_stats_copper)
 	if(prob(10))
 		has_bonus_effect = TRUE
@@ -329,7 +345,7 @@
 	roll_bonuses()
 	update_description()
 
-/obj/item/clothing/ring/warmongers/magic/silver/proc/roll_bonuses()
+/obj/item/clothing/ring/warmongers/magic/silver/roll_bonuses()
 	bonus_stat = pick(possible_stats_silver)
 	if(prob(50))
 		has_bonus_effect = TRUE
@@ -361,7 +377,7 @@
 	roll_bonuses()
 	update_description()
 
-/obj/item/clothing/ring/warmongers/magic/gold/proc/roll_bonuses()
+/obj/item/clothing/ring/warmongers/magic/gold/roll_bonuses()
 	bonus_stat = pick(possible_stats_gold)
 	bonus_effect = pick(possible_effects_gold)
 
@@ -371,6 +387,7 @@
 	name = "true ring of warmongering"
 	desc = "Etched into the ring are the initials - J.W."
 	icon_state = ""
+	has_bonus_effect = FALSE
 
 // Edax - Unique Effect: Consumes other, NON-UNIQUE rings to collect their power
 /obj/item/clothing/ring/warmongers/magic/unique/edax
