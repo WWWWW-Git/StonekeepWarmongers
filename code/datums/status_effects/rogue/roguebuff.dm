@@ -261,3 +261,270 @@
 /datum/status_effect/buff/spawn_protection/on_remove()
 	owner.status_flags &= ~GODMODE
 	to_chat(owner, "<span class='info'>Your moment of spawn protection invulnerability has ended.</span>")
+
+/datum/status_effect/buff/warmongers
+
+//--------- Start of Warmongers Ring Buffs
+
+/datum/status_effect/buff/warmongers/ring
+	id = "warmonger"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/warmonger
+	duration = 666 MINUTES
+
+/atom/movable/screen/alert/status_effect/buff/warmonger
+	name = "I AM A TRUE WARMONGER!!"
+	desc = "<span class='nicegreen'>KILL THEM ALL!! WAAAARRRRR!!!!</span>\n"
+	icon_state = "ravox"
+
+/datum/status_effect/buff/warmongers/shiny
+	id = "shiny"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/shiny
+	duration = 666 MINUTES
+
+/atom/movable/screen/alert/status_effect/buff/shiny
+	name = "OOOUH! IT'S SO SHINY!"
+	desc = "<span class='nicegreen'>YESSSSSSS, MY PRECIOUSSS!!</span>\n"
+	icon_state = "ravox"
+
+// Standard Magical Ring Buffs
+// Bonus Stat I, II, III, etc.
+
+// Strength
+/datum/status_effect/buff/warmongers/ring/strength1
+	id = "strength1"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/strength1
+	duration = 666 MINUTES
+	effectedstats = list("strength" = 1)
+
+/atom/movable/screen/alert/status_effect/buff/strength1
+	name = "strength i"
+	desc = "<span class='nicegreen'>I feel stronger.</span>\n"
+	icon_state = "ravox"
+
+/datum/status_effect/buff/warmongers/ring/strength2
+	id = "strength2"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/strength2
+	duration = 666 MINUTES
+	effectedstats = list("strength" = 2)
+
+/atom/movable/screen/alert/status_effect/buff/strength2
+	name = "strength ii"
+	desc = "<span class='nicegreen'>I feel stronger.</span>\n"
+	icon_state = "ravox"
+
+/datum/status_effect/buff/warmongers/ring/strength3
+	id = "strength3"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/strength3
+	duration = 666 MINUTES
+	effectedstats = list("strength" = 3)
+
+/atom/movable/screen/alert/status_effect/buff/strength3
+	name = "strength iii"
+	desc = "<span class='nicegreen'>I feel stronger.</span>\n"
+	icon_state = "ravox"
+
+// Perception
+/datum/status_effect/buff/warmongers/ring/perception1
+	id = "perception1"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/perception1
+	duration = 666 MINUTES
+	effectedstats = list("perception" = 1)
+
+/atom/movable/screen/alert/status_effect/buff/perception1
+	name = "perception i"
+	desc = "<span class='nicegreen'>I see clearer.</span>\n"
+	icon_state = "ravox"
+
+/datum/status_effect/buff/warmongers/ring/perception2
+	id = "perception2"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/perception2
+	duration = 666 MINUTES
+	effectedstats = list("perception" = 2)
+
+/atom/movable/screen/alert/status_effect/buff/perception2
+	name = "perception ii"
+	desc = "<span class='nicegreen'>I see clearer.</span>\n"
+	icon_state = "ravox"
+
+/datum/status_effect/buff/warmongers/ring/perception3
+	id = "perception3"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/perception3
+	duration = 666 MINUTES
+	effectedstats = list("perception" = 3)
+
+/atom/movable/screen/alert/status_effect/buff/perception3
+	name = "perception iii"
+	desc = "<span class='nicegreen'>I see clearer.</span>\n"
+	icon_state = "ravox"
+
+// Intelligence
+/datum/status_effect/buff/warmongers/ring/intelligence1
+	id = "intelligence1"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/intelligence1
+	duration = 666 MINUTES
+	effectedstats = list("intelligence" = 1)
+
+/atom/movable/screen/alert/status_effect/buff/intelligence1
+	name = "intelligence i"
+	desc = "<span class='nicegreen'>I feel smarter.</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/warmongers/ring/intelligence2
+	id = "intelligence2"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/intelligence2
+	duration = 666 MINUTES
+	effectedstats = list("intelligence" = 2)
+
+/atom/movable/screen/alert/status_effect/buff/intelligence2
+	name = "intelligence ii"
+	desc = "<span class='nicegreen'>I feel smarter.</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/warmongers/ring/intelligence3
+	id = "intelligence3"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/intelligence3
+	duration = 666 MINUTES
+	effectedstats = list("intelligence" = 3)
+
+/atom/movable/screen/alert/status_effect/buff/intelligence3
+	name = "intelligence iii"
+	desc = "<span class='nicegreen'>I feel smarter.</span>\n"
+	icon_state = "intelligence"
+
+// Constitution
+/datum/status_effect/buff/warmongers/ring/constitution1
+	id = "constitution1"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/constitution1
+	duration = 666 MINUTES
+	effectedstats = list("constitution" = 1)
+
+/atom/movable/screen/alert/status_effect/buff/constitution1
+	name = "constitution i"
+	desc = "<span class='nicegreen'>I feel heartier.</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/warmongers/ring/constitution2
+	id = "constitution2"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/constitution2
+	duration = 666 MINUTES
+	effectedstats = list("constitution" = 2)
+
+/atom/movable/screen/alert/status_effect/buff/constitution2
+	name = "constitution ii"
+	desc = "<span class='nicegreen'>I feel heartier.</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/warmongers/ring/constitution3
+	id = "constitution31"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/constitution3
+	duration = 666 MINUTES
+	effectedstats = list("constitution" = 3)
+
+/atom/movable/screen/alert/status_effect/buff/constitution3
+	name = "constitution iii"
+	desc = "<span class='nicegreen'>I feel heartier.</span>\n"
+	icon_state = "intelligence"
+
+// Endurance
+/datum/status_effect/buff/warmongers/ring/endurance1
+	id = "endurance1"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/endurance1
+	duration = 666 MINUTES
+	effectedstats = list("endurance" = 1)
+
+/atom/movable/screen/alert/status_effect/buff/endurance1
+	name = "endurance i"
+	desc = "<span class='nicegreen'>I feel sturdier.</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/warmongers/ring/endurance2
+	id = "endurance2"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/endurance2
+	duration = 666 MINUTES
+	effectedstats = list("endurance" = 2)
+
+/atom/movable/screen/alert/status_effect/buff/endurance2
+	name = "endurance ii"
+	desc = "<span class='nicegreen'>I feel sturdier.</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/warmongers/ring/endurance3
+	id = "endurance3"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/endurance3
+	duration = 666 MINUTES
+	effectedstats = list("endurance" = 3)
+
+/atom/movable/screen/alert/status_effect/buff/endurance3
+	name = "endurance iii"
+	desc = "<span class='nicegreen'>I feel sturdier.</span>\n"
+	icon_state = "intelligence"
+
+// Speed
+/datum/status_effect/buff/warmongers/ring/speed1
+	id = "speed1"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/speed1
+	duration = 666 MINUTES
+	effectedstats = list("speed" = 1)
+
+/atom/movable/screen/alert/status_effect/buff/speed1
+	name = "speed i"
+	desc = "<span class='nicegreen'>I feel faster.</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/warmongers/ring/speed2
+	id = "speed2"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/speed2
+	duration = 666 MINUTES
+	effectedstats = list("speed" = 2)
+
+/atom/movable/screen/alert/status_effect/buff/speed2
+	name = "speed ii"
+	desc = "<span class='nicegreen'>I feel faster.</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/warmongers/ring/speed3
+	id = "speed3"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/speed3
+	duration = 666 MINUTES
+	effectedstats = list("speed" = 3)
+
+/atom/movable/screen/alert/status_effect/buff/speed3
+	name = "speed iii"
+	desc = "<span class='nicegreen'>I feel faster.</span>\n"
+	icon_state = "intelligence"
+
+// Fortune
+/datum/status_effect/buff/warmongers/ring/fortune1
+	id = "fortune1"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/fortune1
+	duration = 666 MINUTES
+	effectedstats = list("fortune" = 1)
+
+/atom/movable/screen/alert/status_effect/buff/fortune1
+	name = "fortune i"
+	desc = "<span class='nicegreen'>I feel luckier.</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/warmongers/ring/fortune2
+	id = "fortune2"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/fortune2
+	duration = 666 MINUTES
+	effectedstats = list("fortune" = 2)
+
+/atom/movable/screen/alert/status_effect/buff/fortune2
+	name = "fortune ii"
+	desc = "<span class='nicegreen'>I feel luckier.</span>\n"
+	icon_state = "intelligence"
+
+/datum/status_effect/buff/warmongers/ring/fortune3
+	id = "fortune3"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/fortune3
+	duration = 666 MINUTES
+	effectedstats = list("fortune" = 3)
+
+/atom/movable/screen/alert/status_effect/buff/fortune3
+	name = "fortune iii"
+	desc = "<span class='nicegreen'>I feel luckier.</span>\n"
+	icon_state = "intelligence"
+
+//--------- End of Warmongers Ring Buffs
