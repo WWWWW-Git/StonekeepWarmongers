@@ -284,7 +284,7 @@
 /atom/movable/screen/alert/status_effect/buff/shiny
 	name = "OOOUH! IT'S SO SHINY!"
 	desc = "<span class='nicegreen'>YESSSSSSS, MY PRECIOUSSS!!</span>\n"
-	icon_state = "ravox"
+	icon_state = "stressvg"
 
 // Standard Magical Ring Buffs
 // Bonus Stat I, II, III, etc.
@@ -297,9 +297,9 @@
 	effectedstats = list("strength" = 1)
 
 /atom/movable/screen/alert/status_effect/buff/strength1
-	name = "strength i"
+	name = "Strength I"
 	desc = "<span class='nicegreen'>I feel stronger.</span>\n"
-	icon_state = "ravox"
+	icon_state = "buff_str"
 
 /datum/status_effect/buff/warmongers/ring/strength2
 	id = "strength2"
@@ -308,9 +308,9 @@
 	effectedstats = list("strength" = 2)
 
 /atom/movable/screen/alert/status_effect/buff/strength2
-	name = "strength ii"
+	name = "Strength II"
 	desc = "<span class='nicegreen'>I feel stronger.</span>\n"
-	icon_state = "ravox"
+	icon_state = "buff_str"
 
 /datum/status_effect/buff/warmongers/ring/strength3
 	id = "strength3"
@@ -319,9 +319,9 @@
 	effectedstats = list("strength" = 3)
 
 /atom/movable/screen/alert/status_effect/buff/strength3
-	name = "strength iii"
+	name = "Strength III"
 	desc = "<span class='nicegreen'>I feel stronger.</span>\n"
-	icon_state = "ravox"
+	icon_state = "buff_str"
 
 // Perception
 /datum/status_effect/buff/warmongers/ring/perception1
@@ -331,9 +331,9 @@
 	effectedstats = list("perception" = 1)
 
 /atom/movable/screen/alert/status_effect/buff/perception1
-	name = "perception i"
+	name = "Perception I"
 	desc = "<span class='nicegreen'>I see clearer.</span>\n"
-	icon_state = "ravox"
+	icon_state = "buff_per"
 
 /datum/status_effect/buff/warmongers/ring/perception2
 	id = "perception2"
@@ -342,9 +342,9 @@
 	effectedstats = list("perception" = 2)
 
 /atom/movable/screen/alert/status_effect/buff/perception2
-	name = "perception ii"
+	name = "Perception II"
 	desc = "<span class='nicegreen'>I see clearer.</span>\n"
-	icon_state = "ravox"
+	icon_state = "buff_per"
 
 /datum/status_effect/buff/warmongers/ring/perception3
 	id = "perception3"
@@ -353,9 +353,9 @@
 	effectedstats = list("perception" = 3)
 
 /atom/movable/screen/alert/status_effect/buff/perception3
-	name = "perception iii"
+	name = "Perception III"
 	desc = "<span class='nicegreen'>I see clearer.</span>\n"
-	icon_state = "ravox"
+	icon_state = "buff_per"
 
 // Intelligence
 /datum/status_effect/buff/warmongers/ring/intelligence1
@@ -365,9 +365,9 @@
 	effectedstats = list("intelligence" = 1)
 
 /atom/movable/screen/alert/status_effect/buff/intelligence1
-	name = "intelligence i"
+	name = "Intelligence I"
 	desc = "<span class='nicegreen'>I feel smarter.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_int"
 
 /datum/status_effect/buff/warmongers/ring/intelligence2
 	id = "intelligence2"
@@ -376,9 +376,9 @@
 	effectedstats = list("intelligence" = 2)
 
 /atom/movable/screen/alert/status_effect/buff/intelligence2
-	name = "intelligence ii"
+	name = "Intelligence II"
 	desc = "<span class='nicegreen'>I feel smarter.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_int"
 
 /datum/status_effect/buff/warmongers/ring/intelligence3
 	id = "intelligence3"
@@ -387,9 +387,9 @@
 	effectedstats = list("intelligence" = 3)
 
 /atom/movable/screen/alert/status_effect/buff/intelligence3
-	name = "intelligence iii"
+	name = "Intelligence III"
 	desc = "<span class='nicegreen'>I feel smarter.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_int"
 
 // Constitution
 /datum/status_effect/buff/warmongers/ring/constitution1
@@ -399,9 +399,9 @@
 	effectedstats = list("constitution" = 1)
 
 /atom/movable/screen/alert/status_effect/buff/constitution1
-	name = "constitution i"
+	name = "Constitution I"
 	desc = "<span class='nicegreen'>I feel heartier.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_con"
 
 /datum/status_effect/buff/warmongers/ring/constitution2
 	id = "constitution2"
@@ -410,9 +410,9 @@
 	effectedstats = list("constitution" = 2)
 
 /atom/movable/screen/alert/status_effect/buff/constitution2
-	name = "constitution ii"
+	name = "Constitution II"
 	desc = "<span class='nicegreen'>I feel heartier.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_con"
 
 /datum/status_effect/buff/warmongers/ring/constitution3
 	id = "constitution31"
@@ -421,9 +421,9 @@
 	effectedstats = list("constitution" = 3)
 
 /atom/movable/screen/alert/status_effect/buff/constitution3
-	name = "constitution iii"
+	name = "Constitution III"
 	desc = "<span class='nicegreen'>I feel heartier.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_con"
 
 // Endurance
 /datum/status_effect/buff/warmongers/ring/endurance1
@@ -433,9 +433,9 @@
 	effectedstats = list("endurance" = 1)
 
 /atom/movable/screen/alert/status_effect/buff/endurance1
-	name = "endurance i"
+	name = "Endurance I"
 	desc = "<span class='nicegreen'>I feel sturdier.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_end"
 
 /datum/status_effect/buff/warmongers/ring/endurance2
 	id = "endurance2"
@@ -444,9 +444,9 @@
 	effectedstats = list("endurance" = 2)
 
 /atom/movable/screen/alert/status_effect/buff/endurance2
-	name = "endurance ii"
+	name = "Endurance II"
 	desc = "<span class='nicegreen'>I feel sturdier.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_end"
 
 /datum/status_effect/buff/warmongers/ring/endurance3
 	id = "endurance3"
@@ -455,9 +455,9 @@
 	effectedstats = list("endurance" = 3)
 
 /atom/movable/screen/alert/status_effect/buff/endurance3
-	name = "endurance iii"
+	name = "Endurance III"
 	desc = "<span class='nicegreen'>I feel sturdier.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_end"
 
 // Speed
 /datum/status_effect/buff/warmongers/ring/speed1
@@ -467,9 +467,9 @@
 	effectedstats = list("speed" = 1)
 
 /atom/movable/screen/alert/status_effect/buff/speed1
-	name = "speed i"
+	name = "Speed I"
 	desc = "<span class='nicegreen'>I feel faster.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_spd"
 
 /datum/status_effect/buff/warmongers/ring/speed2
 	id = "speed2"
@@ -478,9 +478,9 @@
 	effectedstats = list("speed" = 2)
 
 /atom/movable/screen/alert/status_effect/buff/speed2
-	name = "speed ii"
+	name = "Speed II"
 	desc = "<span class='nicegreen'>I feel faster.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_spd"
 
 /datum/status_effect/buff/warmongers/ring/speed3
 	id = "speed3"
@@ -489,9 +489,9 @@
 	effectedstats = list("speed" = 3)
 
 /atom/movable/screen/alert/status_effect/buff/speed3
-	name = "speed iii"
+	name = "Speed III"
 	desc = "<span class='nicegreen'>I feel faster.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_spd"
 
 // Fortune
 /datum/status_effect/buff/warmongers/ring/fortune1
@@ -501,9 +501,9 @@
 	effectedstats = list("fortune" = 1)
 
 /atom/movable/screen/alert/status_effect/buff/fortune1
-	name = "fortune i"
+	name = "Fortune I"
 	desc = "<span class='nicegreen'>I feel luckier.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_luc"
 
 /datum/status_effect/buff/warmongers/ring/fortune2
 	id = "fortune2"
@@ -512,9 +512,9 @@
 	effectedstats = list("fortune" = 2)
 
 /atom/movable/screen/alert/status_effect/buff/fortune2
-	name = "fortune ii"
+	name = "Fortune II"
 	desc = "<span class='nicegreen'>I feel luckier.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_luc"
 
 /datum/status_effect/buff/warmongers/ring/fortune3
 	id = "fortune3"
@@ -523,8 +523,8 @@
 	effectedstats = list("fortune" = 3)
 
 /atom/movable/screen/alert/status_effect/buff/fortune3
-	name = "fortune iii"
+	name = "Fortune III"
 	desc = "<span class='nicegreen'>I feel luckier.</span>\n"
-	icon_state = "intelligence"
+	icon_state = "buff_luc"
 
 //--------- End of Warmongers Ring Buffs
