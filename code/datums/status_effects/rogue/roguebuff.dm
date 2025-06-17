@@ -1,7 +1,6 @@
 /datum/status_effect/buff
 	status_type = STATUS_EFFECT_REFRESH
 
-
 /datum/status_effect/buff/drunk
 	id = "drunk"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/drunk
@@ -265,24 +264,27 @@
 //--------- Start of Warmongers Ring Buffs
 
 /datum/status_effect/buff/warmongers
+	var/stats2text = "None."
 
 /datum/status_effect/buff/warmongers/ring
 	id = "warmonger"
+	stats2text = "a Warmonger's Fervor"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/warmonger
 	duration = 666 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/warmonger
 	name = "I AM A TRUE WARMONGER!!"
-	desc = "<span class='nicegreen'>KILL THEM ALL!! WAAAARRRRR!!</span>\n"
+	desc = "<span class='nicegreen'>KILL THEM ALL!! CHAAARRRGE!!</span>\n"
 	icon_state = "buff_war"
 
 /datum/status_effect/buff/warmongers/shiny
 	id = "shiny"
+	stats2text = "a Beautiful Shine"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/shiny
 	duration = 666 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/shiny
-	name = "OOOUH!@ IT'S SO SHINY!@"
+	name = "OOOUH!! IT'S SO SHINY!!"
 	desc = "<span class='nicegreen'>YESSSSSSS, MY PRECIOUSSS!!</span>\n"
 	icon_state = "stressvg"
 
@@ -292,6 +294,7 @@
 // Strength
 /datum/status_effect/buff/warmongers/ring/strength1
 	id = "strength1"
+	stats2text = "Strength I"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/strength1
 	duration = 666 MINUTES
 	effectedstats = list("strength" = 1)
@@ -303,6 +306,7 @@
 
 /datum/status_effect/buff/warmongers/ring/strength2
 	id = "strength2"
+	stats2text = "Strength II"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/strength2
 	duration = 666 MINUTES
 	effectedstats = list("strength" = 2)
@@ -314,6 +318,7 @@
 
 /datum/status_effect/buff/warmongers/ring/strength3
 	id = "strength3"
+	stats2text = "Strength III"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/strength3
 	duration = 666 MINUTES
 	effectedstats = list("strength" = 3)
@@ -326,6 +331,7 @@
 // Perception
 /datum/status_effect/buff/warmongers/ring/perception1
 	id = "perception1"
+	stats2text = "Perception I"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/perception1
 	duration = 666 MINUTES
 	effectedstats = list("perception" = 1)
@@ -337,6 +343,7 @@
 
 /datum/status_effect/buff/warmongers/ring/perception2
 	id = "perception2"
+	stats2text = "Perception II"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/perception2
 	duration = 666 MINUTES
 	effectedstats = list("perception" = 2)
@@ -348,6 +355,7 @@
 
 /datum/status_effect/buff/warmongers/ring/perception3
 	id = "perception3"
+	stats2text = "Perception III"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/perception3
 	duration = 666 MINUTES
 	effectedstats = list("perception" = 3)
@@ -360,6 +368,7 @@
 // Intelligence
 /datum/status_effect/buff/warmongers/ring/intelligence1
 	id = "intelligence1"
+	stats2text = "Intelligence I"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/intelligence1
 	duration = 666 MINUTES
 	effectedstats = list("intelligence" = 1)
@@ -371,6 +380,7 @@
 
 /datum/status_effect/buff/warmongers/ring/intelligence2
 	id = "intelligence2"
+	stats2text = "Intelligence II"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/intelligence2
 	duration = 666 MINUTES
 	effectedstats = list("intelligence" = 2)
@@ -382,6 +392,7 @@
 
 /datum/status_effect/buff/warmongers/ring/intelligence3
 	id = "intelligence3"
+	stats2text = "Intelligence III"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/intelligence3
 	duration = 666 MINUTES
 	effectedstats = list("intelligence" = 3)
@@ -394,6 +405,7 @@
 // Constitution
 /datum/status_effect/buff/warmongers/ring/constitution1
 	id = "constitution1"
+	stats2text = "Constitution I"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/constitution1
 	duration = 666 MINUTES
 	effectedstats = list("constitution" = 1)
@@ -405,6 +417,7 @@
 
 /datum/status_effect/buff/warmongers/ring/constitution2
 	id = "constitution2"
+	stats2text = "Constitution II"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/constitution2
 	duration = 666 MINUTES
 	effectedstats = list("constitution" = 2)
@@ -415,7 +428,8 @@
 	icon_state = "buff_con"
 
 /datum/status_effect/buff/warmongers/ring/constitution3
-	id = "constitution31"
+	id = "constitution3"
+	stats2text = "Constitution III"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/constitution3
 	duration = 666 MINUTES
 	effectedstats = list("constitution" = 3)
@@ -428,6 +442,7 @@
 // Endurance
 /datum/status_effect/buff/warmongers/ring/endurance1
 	id = "endurance1"
+	stats2text = "Endurance I"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/endurance1
 	duration = 666 MINUTES
 	effectedstats = list("endurance" = 1)
@@ -439,6 +454,7 @@
 
 /datum/status_effect/buff/warmongers/ring/endurance2
 	id = "endurance2"
+	stats2text = "Endurance II"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/endurance2
 	duration = 666 MINUTES
 	effectedstats = list("endurance" = 2)
@@ -450,6 +466,7 @@
 
 /datum/status_effect/buff/warmongers/ring/endurance3
 	id = "endurance3"
+	stats2text = "Endurance III"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/endurance3
 	duration = 666 MINUTES
 	effectedstats = list("endurance" = 3)
@@ -462,6 +479,7 @@
 // Speed
 /datum/status_effect/buff/warmongers/ring/speed1
 	id = "speed1"
+	stats2text = "Speed I"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/speed1
 	duration = 666 MINUTES
 	effectedstats = list("speed" = 1)
@@ -473,6 +491,7 @@
 
 /datum/status_effect/buff/warmongers/ring/speed2
 	id = "speed2"
+	stats2text = "Speed II"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/speed2
 	duration = 666 MINUTES
 	effectedstats = list("speed" = 2)
@@ -484,6 +503,7 @@
 
 /datum/status_effect/buff/warmongers/ring/speed3
 	id = "speed3"
+	stats2text = "Speed III"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/speed3
 	duration = 666 MINUTES
 	effectedstats = list("speed" = 3)
@@ -496,6 +516,7 @@
 // Fortune
 /datum/status_effect/buff/warmongers/ring/fortune1
 	id = "fortune1"
+	stats2text = "Fortune I"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/fortune1
 	duration = 666 MINUTES
 	effectedstats = list("fortune" = 1)
@@ -507,6 +528,7 @@
 
 /datum/status_effect/buff/warmongers/ring/fortune2
 	id = "fortune2"
+	stats2text = "Fortune II"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/fortune2
 	duration = 666 MINUTES
 	effectedstats = list("fortune" = 2)
@@ -518,6 +540,7 @@
 
 /datum/status_effect/buff/warmongers/ring/fortune3
 	id = "fortune3"
+	stats2text = "Fortune III"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/fortune3
 	duration = 666 MINUTES
 	effectedstats = list("fortune" = 3)
@@ -534,6 +557,7 @@
 
 /datum/status_effect/buff/warmongers/ring/unique/truemonger
 	id = "truemonger"
+	stats2text = "All Stats Up VI"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/truemonger
 	duration = 666 MINUTES
 	effectedstats = list("strength" = 6, "perception" = 6, "intelligence" = 6, "constitution" = 6, "endurance" = 6, "speed" = 6, "fortune" = 6)

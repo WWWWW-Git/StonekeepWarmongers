@@ -1,5 +1,3 @@
-
-
 /obj/item/clothing/ring
 	name = "ring"
 	desc = ""
@@ -208,9 +206,8 @@
 	name = "magical ring of warmongering"
 	desc = "Legends say this ring allows its wielder to kill other people, magically."
 	icon_state = "black_runes"
-	var/bonus_stat
-	var/datum/status_effect/bonus_effect
-	var/atom/movable/screen/alert/bonus_alert
+	var/datum/status_effect/buff/warmongers/ring/bonus_stat = /datum/status_effect/buff/warmongers/ring/unique
+	var/datum/status_effect/buff/warmongers/bonus_effect
 	var/has_bonus_effect = TRUE
 	var/currently_equipped = FALSE
 
@@ -233,14 +230,13 @@
 		has_bonus_effect = TRUE
 		// Roll 1dX where X is the length of possible_effects
 		bonus_effect = pick(possible_effects)
-		bonus_alert = initial(bonus_effect.alert_type)
 
 /obj/item/clothing/ring/warmongers/magic/proc/update_description()
 	var/new_desc = "A ring imbued with long-forgotten magical energies."
 	if(bonus_stat)
-		new_desc += " You sense it grants [bonus_stat]."
+		new_desc += " You sense it grants [(bonus_stat.stats2text)]."
 	if(has_bonus_effect && bonus_effect)
-		new_desc += " It also grants [initial(bonus_alert.name)]."
+		new_desc += " It also grants [(bonus_effect.stats2text)]."
 	desc = new_desc
 
 /obj/item/clothing/ring/warmongers/magic/equipped(mob/living/user, slot)
@@ -287,13 +283,14 @@
 	to_chat(user, "<span class='warning'>The magical energies of the [name] fade away...</span>")
 */
 
+/* Makes the description bigger
 /obj/item/clothing/ring/warmongers/magic/examine(mob/user)
 	. = ..()
 	if(bonus_stat)
 		. += "<span class='notice'>This ring grants [bonus_stat].</span>"
 	if(has_bonus_effect && bonus_effect)
 		. += "<span class='notice'>This ring also grants [initial(bonus_alert.name)].</span>"
-
+*/
 //--------- Start of Standard Magical Warmongers Rings
 
 /obj/item/clothing/ring/warmongers/magic/copper
