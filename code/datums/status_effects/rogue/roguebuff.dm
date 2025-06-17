@@ -273,7 +273,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/warmonger
 	name = "I AM A TRUE WARMONGER!!"
-	desc = "<span class='nicegreen'>KILL THEM ALL!! WAAAARRRRR!!!!</span>\n"
+	desc = "<span class='nicegreen'>KILL THEM ALL!! WAAAARRRRR!!</span>\n"
 	icon_state = "buff_war"
 
 /datum/status_effect/buff/warmongers/shiny
@@ -282,7 +282,7 @@
 	duration = 666 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/shiny
-	name = "OOOUH! IT'S SO SHINY!"
+	name = "OOOUH!@ IT'S SO SHINY!@"
 	desc = "<span class='nicegreen'>YESSSSSSS, MY PRECIOUSSS!!</span>\n"
 	icon_state = "stressvg"
 
@@ -539,8 +539,8 @@
 	effectedstats = list("strength" = 6, "perception" = 6, "intelligence" = 6, "constitution" = 6, "endurance" = 6, "speed" = 6, "fortune" = 6)
 
 /atom/movable/screen/alert/status_effect/buff/truemonger
-	name = "THERE CAN BE ONLY ONE!"
-	desc = "<span class='nicegreen'>I FEEL LIKE I COULD SLAY GODS!</span>\n"
+	name = "THERE CAN BE ONLY ONE!!"
+	desc = "<span class='nicegreen'>I FEEL LIKE I COULD SLAY GODS!!</span>\n"
 	icon_state = "buff_war"
 
 //--------- End of Warmongers Ring Buffs
