@@ -86,6 +86,7 @@ h1.alert, h2.alert	{color: #c9c1ba;font-family: Pterra, TrueType;}
 .blue					{color: #6a8cb7;}
 .purple					{color: #967aaf;}
 .nicegreen				{color: #9bccd0;}
+.nicegreenbold			{color: #9bccd0;	font-weight: bold;}
 .cult					{color: #960000;}
 .cultlarge				{color: #960000;	font-weight: bold;	font-size: 3;}
 .narsie					{color: #960000;	font-weight: bold;	font-size: 12;}

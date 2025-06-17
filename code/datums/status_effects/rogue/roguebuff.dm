@@ -266,9 +266,10 @@
 /datum/status_effect/buff/warmongers
 	var/stats2text = "None."
 
+// Default #1
 /datum/status_effect/buff/warmongers/ring
 	id = "warmonger"
-	stats2text = "a Warmonger's Fervor"
+	stats2text = "a Warmonger's fervor"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/warmonger
 	duration = 666 MINUTES
 
@@ -277,9 +278,10 @@
 	desc = "<span class='nicegreen'>KILL THEM ALL!! CHAAARRRGE!!</span>\n"
 	icon_state = "buff_war"
 
+// Default #2
 /datum/status_effect/buff/warmongers/shiny
 	id = "shiny"
-	stats2text = "a Beautiful Shine"
+	stats2text = "a beautiful shine"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/shiny
 	duration = 666 MINUTES
 

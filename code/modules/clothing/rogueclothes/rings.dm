@@ -234,9 +234,9 @@
 /obj/item/clothing/ring/warmongers/magic/proc/update_description()
 	var/new_desc = "A ring imbued with long-forgotten magical energies."
 	if(bonus_stat)
-		new_desc += " You sense it grants [(bonus_stat.stats2text)]."
+		new_desc += " You sense it grants <span class='nicegreenbold'>[(bonus_stat.stats2text)].</span>\n"
 	if(has_bonus_effect && bonus_effect)
-		new_desc += " It also grants [(bonus_effect.stats2text)]."
+		new_desc += " It also grants <span class='nicegreenbold'>[(bonus_effect.stats2text)].</span>\n"
 	desc = new_desc
 
 /obj/item/clothing/ring/warmongers/magic/equipped(mob/living/user, slot)
