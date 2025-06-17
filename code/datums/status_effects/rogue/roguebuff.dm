@@ -262,9 +262,9 @@
 	owner.status_flags &= ~GODMODE
 	to_chat(owner, "<span class='info'>Your moment of spawn protection invulnerability has ended.</span>")
 
-/datum/status_effect/buff/warmongers
-
 //--------- Start of Warmongers Ring Buffs
+
+/datum/status_effect/buff/warmongers
 
 /datum/status_effect/buff/warmongers/ring
 	id = "warmonger"
@@ -274,7 +274,7 @@
 /atom/movable/screen/alert/status_effect/buff/warmonger
 	name = "I AM A TRUE WARMONGER!!"
 	desc = "<span class='nicegreen'>KILL THEM ALL!! WAAAARRRRR!!!!</span>\n"
-	icon_state = "ravox"
+	icon_state = "buff_war"
 
 /datum/status_effect/buff/warmongers/shiny
 	id = "shiny"
@@ -526,5 +526,21 @@
 	name = "Fortune III"
 	desc = "<span class='nicegreen'>I feel luckier.</span>\n"
 	icon_state = "buff_luc"
+
+//--------- Unique Magical Ring Buffs
+//--------- Here be dragons
+
+/datum/status_effect/buff/warmongers/ring/unique
+
+/datum/status_effect/buff/warmongers/ring/unique/truemonger
+	id = "truemonger"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/truemonger
+	duration = 666 MINUTES
+	effectedstats = list("strength" = 6, "perception" = 6, "intelligence" = 6, "constitution" = 6, "endurance" = 6, "speed" = 6, "fortune" = 6)
+
+/atom/movable/screen/alert/status_effect/buff/truemonger
+	name = "THERE CAN BE ONLY ONE!"
+	desc = "<span class='nicegreen'>I FEEL LIKE I COULD SLAY GODS!</span>\n"
+	icon_state = "buff_war"
 
 //--------- End of Warmongers Ring Buffs

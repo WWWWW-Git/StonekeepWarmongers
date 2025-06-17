@@ -187,7 +187,15 @@
 /obj/item/clothing/ring/warmongers
 	name = "ring of warmongering"
 	desc = "Legends say this ring allows its wielder to kill other people."
-	icon_state = ""
+	icon_state = "black_runes"
+
+/obj/item/clothing/ring/warmongers/equipped(mob/living/user, slot)
+	. = ..()
+	if(user.mind)
+		if (slot == SLOT_RING && istype(user))
+			user.apply_status_effect(/datum/status_effect/buff/warmongers/ring)
+		else
+			user.remove_status_effect(/datum/status_effect/buff/warmongers/ring)
 
 //--------- Start of Magical Warmongers Rings - MADE FOR KILLING!
 //	Ring Types:
@@ -199,7 +207,7 @@
 /obj/item/clothing/ring/warmongers/magic
 	name = "magical ring of warmongering"
 	desc = "Legends say this ring allows its wielder to kill other people, magically."
-	icon_state = ""
+	icon_state = "black_runes"
 	var/bonus_stat
 	var/datum/status_effect/bonus_effect
 	var/atom/movable/screen/alert/bonus_alert
@@ -386,8 +394,16 @@
 /obj/item/clothing/ring/warmongers/magic/unique
 	name = "true ring of warmongering"
 	desc = "Etched into the ring are the initials - J.W."
-	icon_state = ""
+	icon_state = "black_unique"
 	has_bonus_effect = FALSE
+
+/obj/item/clothing/ring/warmongers/magic/unique/equipped(mob/living/user, slot)
+	. = ..()
+	if(user.mind)
+		if (slot == SLOT_RING && istype(user))
+			user.apply_status_effect(/datum/status_effect/buff/warmongers/ring/unique/truemonger)
+		else
+			user.remove_status_effect(/datum/status_effect/buff/warmongers/ring/unique/truemonger)
 
 // Edax - Unique Effect: Consumes other, NON-UNIQUE rings to collect their power
 /obj/item/clothing/ring/warmongers/magic/unique/edax
