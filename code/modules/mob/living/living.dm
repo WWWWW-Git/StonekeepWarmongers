@@ -200,6 +200,14 @@
 					if(H.rogue_sneaking)
 						dropItemToGround(G)
 						visible_message("<span class='warning'>[L] suplexes [src]'s bayonet charge and makes them drop their gun!")
+						Immobilize(20)
+						
+						flash_fullscreen("whiteflash")
+						L.flash_fullscreen("whiteflash")
+						var/datum/effect_system/spark_spread/S = new()
+						var/turf/front = get_step(src,src.dir)
+						S.set_up(1, 1, front)
+						S.start()
 						return TRUE
 					H.emote("agony")
 					H.apply_damage(30, BRUTE, BODY_ZONE_CHEST)

@@ -113,6 +113,17 @@
 				BP.drop_limb(1)
 				qdel(BP)
 				new /obj/effect/gibspawner/generic(get_turf(src))
+			if(hud_used)
+				var/matrix/skew = matrix()
+				skew.Scale(2)
+				skew.Translate(-224,0)
+				var/matrix/newmatrix = skew 
+				for(var/C in hud_used.plane_masters)
+					var/atom/movable/screen/plane_master/whole_screen = hud_used.plane_masters[C]
+					if(whole_screen.plane == HUD_PLANE)
+						continue
+					animate(whole_screen, transform = newmatrix, time = 1, easing = QUAD_EASING)
+					animate(transform = -newmatrix, time = 10, easing = QUAD_EASING)
 		return TRUE
 
 /mob/living/carbon/check_projectile_embed(obj/projectile/P, def_zone, blocked)

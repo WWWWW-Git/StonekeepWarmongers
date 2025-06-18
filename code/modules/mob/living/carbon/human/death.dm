@@ -49,6 +49,12 @@
 	if(HAS_TRAIT(src, TRAIT_NINJA))
 		new /obj/effect/particle_effect/smoke(get_turf(src))
 
+	for(var/obj/W in get_step(src, turn(dir, 180)))
+		if(istype(W, /obj/structure/roguewindow))
+			var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 2)
+			W.obj_break()
+			throw_at(turfa, 4, 1, null, TRUE)
+
 	var/obj/item/IT = get_item_by_slot(ITEM_SLOT_BACK_L)
 	if(istype(IT, /obj/item/rogue/musicpack))
 		var/obj/item/rogue/musicpack/MP = IT
@@ -116,9 +122,9 @@
 		gib(TRUE)
 	
 	if(aspect_chosen(/datum/round_aspect/whatthefuck))
-		gib(TRUE)
+		new /mob/living/carbon/human/species/goblin/npc(src)
 		spawn(1 SECONDS)
-			new /mob/living/carbon/human/species/goblin/npc(get_turf(src))
+			gib(TRUE)
 
 	if(aspect_chosen(/datum/round_aspect/attackofdead))
 		mind.add_antag_datum(/datum/antagonist/zombie)

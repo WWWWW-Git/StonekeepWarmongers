@@ -54,7 +54,7 @@ map ziggurat
 	votable
 endmap
 
-map burg_aus_schwarzem_stein
+map darkstone
 	#voteweight 1.5
 	votable
 endmap

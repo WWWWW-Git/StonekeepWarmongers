@@ -470,16 +470,13 @@
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/bomb/smoke = 1, /obj/item/bomb/poison = 1, /obj/item/rogue/caltrop = 2)
 	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/bows, 5, TRUE) //No more firearms, strictly bows and crossbows, fog arrows should provide boost in that regard.
-		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE) //ditto
-		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
 		H.change_stat("speed", 2)
 		H.change_stat("endurance", 1)
 	H.cmode_music = 'sound/music/combatspecial.ogg'
@@ -984,7 +981,6 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/music, pick(1,2), TRUE)
 		H.change_stat("speed", 6)
 	H.cmode_music = 'sound/music/combatspecial.ogg'

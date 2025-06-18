@@ -6,7 +6,7 @@ GLOBAL_LIST(string_cache)
 GLOBAL_VAR(string_filename_current_key)
 
 
-/proc/strings_replacement(filename, key, directory = "strings")
+/proc/strings_replacement(filename, key, directory = "string")
 	load_strings_file(filename, directory)
 
 	if((filename in GLOB.string_cache) && (key in GLOB.string_cache[filename]))
@@ -17,7 +17,7 @@ GLOBAL_VAR(string_filename_current_key)
 	else
 		CRASH("strings list not found: [directory]/[filename], index=[key]")
 
-/proc/strings(filename as text, key as text, directory = "strings")
+/proc/strings(filename as text, key as text, directory = "string")
 	load_strings_file(filename, directory)
 	if((filename in GLOB.string_cache) && (key in GLOB.string_cache[filename]))
 		return GLOB.string_cache[filename][key]

@@ -402,24 +402,5 @@
 		else
 			user.remove_status_effect(/datum/status_effect/buff/warmongers/ring/unique/truemonger)
 
-// Edax - Unique Effect: Consumes other, NON-UNIQUE rings to collect their power
-/obj/item/clothing/ring/warmongers/magic/unique/edax
-	name = "edax"
-	desc = "It grins at you, beckoning you to feed it."
-	icon_state = ""
-
-// Mordax - Unique Effect: Grants the wielder vampiric aspects (pale skin, red eyes) and abilities (transfix, night vision)
-/obj/item/clothing/ring/warmongers/magic/unique/mordax
-	name = "mordax"
-	desc = "Legends speak of red-eyed immortal warlords that feasted on the blood of thousands."
-	icon_state = ""
-
-// Mutantur - Unique Effect: Has two forms that can be switched on activating in hand.
-// Form 1 - +2 STR, CON, END; Form 2 - +2 PER, INT, SPD
-/obj/item/clothing/ring/warmongers/magic/unique/mutantur
-	name = "mutantur"
-	desc = "Two snakes share the same body, their heads pointed past each other at the top of the ring. One's eyes glow; the other's does not."
-	icon_state = ""
-
 
 //--------- End of Warmongers Rings
