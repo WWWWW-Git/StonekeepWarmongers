@@ -240,6 +240,17 @@
 	effectedstats = list("speed" = 7,"constitution" = 6,"endurance" = 6,"strength" = 5)
 	duration = 3 MINUTES
 
+/atom/movable/screen/alert/status_effect/buff/charge
+	name = "Charge"
+	desc = "<span class='nicegreen'>CHARGE!</span>\n"
+	icon_state = "ravox"
+
+/datum/status_effect/buff/charge
+	id = "charge"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/charge
+	effectedstats = list("speed" = 7)
+	duration = 1 MINUTES
+
 /atom/movable/screen/alert/status_effect/buff/inspired/great
 	name = "Ready to Die"
 	desc = "<span class='nicegreen'>I'M READY TO DIE NOW!</span>\n"

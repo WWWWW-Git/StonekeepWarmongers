@@ -44,7 +44,14 @@
 	cost = 5
 
 /datum/warperk/gifted/apply(mob/living/carbon/human/H)
-	var/choice = input(H, "Choose a stat!", "WARMONGERS")
+	var/choice = input(H, "Choose a stat!", "WARMONGERS") as anything in list("STR","END","CON")
+	switch(choice)
+		if("STR")
+			H.STASTR += 2
+		if("END")
+			H.STAEND += 2
+		if("CON")
+			H.STACON += 2
 
 /datum/warperk/vampire
 	name = "Vladimir"
@@ -57,7 +64,7 @@
 	cost = 5
 
 /datum/warperk/charge/apply(mob/living/carbon/human/H)
-	// todo
+	H.apply_status_effect(/datum/status_effect/buff/charge)
 
 /datum/warperk/saint
 	name = "Saint"
