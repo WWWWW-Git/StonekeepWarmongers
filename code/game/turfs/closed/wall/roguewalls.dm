@@ -233,6 +233,34 @@
 /turf/closed/wall/mineral/rogue/roofwall/innercorner
 	icon_state = "roofTurf_IC"
 
+// Alternate roofwall with filled corners on OC and different IC pattern
+
+/turf/closed/wall/mineral/rogue/roofwall/center/alt
+	icon_state = "roofTurf_alt_I"
+
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt
+	icon_state = "roofTurf_alt_M"
+
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt
+	icon_state = "roofTurf_alt_OC"
+
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt
+	icon_state = "roofTurf_alt_IC"
+
+// Alternate roofwall colored Grey
+
+/turf/closed/wall/mineral/rogue/roofwall/center/alt/grey
+	icon_state = "roofTurf_alt_I2"
+
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey
+	icon_state = "roofTurf_alt_M2"
+
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey
+	icon_state = "roofTurf_alt_OC2"
+
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey
+	icon_state = "roofTurf_alt_IC2"
+
 /turf/closed/wall/mineral/rogue/decowood
 	name = "decorated wooden wall"
 	desc = "This one is a fancy wooden wall."
