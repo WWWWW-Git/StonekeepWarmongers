@@ -1,5 +1,3 @@
-
-
 /obj/item/clothing/ring
 	name = "ring"
 	desc = ""
@@ -181,3 +179,247 @@
 			user.apply_status_effect(/datum/status_effect/buff/noc)
 		else
 			user.remove_status_effect(/datum/status_effect/buff/noc)
+
+//--------- Start of Warmongers Rings
+
+/obj/item/clothing/ring/warmongers
+	name = "ring of warmongering"
+	desc = "Legends say this ring allows its wielder to kill other people."
+	icon_state = "black_runes"
+
+/obj/item/clothing/ring/warmongers/equipped(mob/living/user, slot)
+	. = ..()
+	if(user.mind)
+		if (slot == SLOT_RING && istype(user))
+			user.apply_status_effect(/datum/status_effect/buff/warmongers/ring)
+		else
+			user.remove_status_effect(/datum/status_effect/buff/warmongers/ring)
+
+//--------- Start of Magical Warmongers Rings - MADE FOR KILLING!
+//	Ring Types:
+//	Copper = +1 Stat & 10% chance other effect (wip)
+//	Silver = +2 Stat & 50% chance other effect
+//	Gold   = +3 Stat & 100% chance other effect
+//	Unique = Unique effect (Only 1 of each Unique Ring possible per round)
+
+/obj/item/clothing/ring/warmongers/magic
+	name = "magical ring of warmongering"
+	desc = "Legends say this ring allows its wielder to kill other people, magically."
+	icon_state = "black_runes"
+	var/datum/status_effect/buff/warmongers/ring/bonus_stat = /datum/status_effect/buff/warmongers/ring/unique
+	var/datum/status_effect/buff/warmongers/bonus_effect
+	var/has_bonus_effect = TRUE
+	var/currently_equipped = FALSE
+
+	// Lists of possible stats and effects
+	var/list/possible_stats = list(
+		/datum/status_effect/buff/warmongers/ring
+		)
+	var/list/possible_effects = list(
+		/datum/status_effect/buff/warmongers/shiny
+	)
+
+/obj/item/clothing/ring/warmongers/magic/Initialize()
+	. = ..()
+	roll_bonuses()
+	update_description()
+
+/obj/item/clothing/ring/warmongers/magic/proc/roll_bonuses()
+	bonus_stat = pick(possible_stats)
+	if(prob(50))
+		has_bonus_effect = TRUE
+		// Roll 1dX where X is the length of possible_effects
+		bonus_effect = pick(possible_effects)
+
+/obj/item/clothing/ring/warmongers/magic/proc/update_description()
+	var/new_desc = "A ring imbued with long-forgotten magical energies."
+	if(bonus_stat)
+		new_desc += " You sense it grants <span class='nicegreenbold'>[(bonus_stat.stats2text)].</span>\n"
+	if(has_bonus_effect && bonus_effect)
+		new_desc += " It also grants <span class='nicegreenbold'>[(bonus_effect.stats2text)].</span>\n"
+	desc = new_desc
+
+/obj/item/clothing/ring/warmongers/magic/equipped(mob/living/user, slot)
+	. = ..()
+	if(user.mind)
+		if (slot == SLOT_RING && istype(user))
+			user.apply_status_effect(bonus_stat)
+			if (has_bonus_effect && bonus_effect)
+				user.apply_status_effect(bonus_effect)
+		else
+			user.remove_status_effect(bonus_stat)
+			if (has_bonus_effect && bonus_effect)
+				user.remove_status_effect(bonus_effect)
+
+/* Warning: This only works if rebased to Vanderlin's code
+/obj/item/clothing/ring/warmongers/magic/equipped(mob/user, slot)
+	. = ..()
+	if(slot == ITEM_SLOT_RING)
+		apply_bonuses(user)
+
+/obj/item/clothing/ring/warmongers/magic/dropped(mob/living/user)
+	. = ..()
+	if(currently_equipped)
+		remove_bonuses(user)
+
+/obj/item/clothing/ring/warmongers/magic/proc/apply_bonuses(mob/living/user)
+	if(!user || currently_equipped)
+		return
+	if(bonus_stat)
+		user.apply_status_effect(bonus_stat)
+	if(has_bonus_effect && bonus_effect)
+		user.apply_status_effect(bonus_effect)
+	currently_equipped = TRUE
+	to_chat(user, "<span class='notice'>You feel the magical energies of the [name] flow through you!</span>")
+
+/obj/item/clothing/ring/warmongers/magic/proc/remove_bonuses(mob/living/user)
+	if(!user || !currently_equipped)
+		return
+	if(bonus_stat)
+		user.remove_status_effect(bonus_stat)
+	if(has_bonus_effect && bonus_effect)
+		user.remove_status_effect(bonus_effect)
+	currently_equipped = FALSE
+	to_chat(user, "<span class='warning'>The magical energies of the [name] fade away...</span>")
+*/
+
+/* Makes the description bigger
+/obj/item/clothing/ring/warmongers/magic/examine(mob/user)
+	. = ..()
+	if(bonus_stat)
+		. += "<span class='notice'>This ring grants [bonus_stat].</span>"
+	if(has_bonus_effect && bonus_effect)
+		. += "<span class='notice'>This ring also grants [initial(bonus_alert.name)].</span>"
+*/
+//--------- Start of Standard Magical Warmongers Rings
+
+/obj/item/clothing/ring/warmongers/magic/copper
+	name = "magical copper ring"
+	desc = "Carved runes softly glow and shimmer; wearing this copper ring is said to grant its wielder a minor boon."
+	icon_state = "copper_runes"
+	has_bonus_effect = TRUE
+
+	// Copper Tier
+	var/list/possible_stats_copper = list(
+		/datum/status_effect/buff/warmongers/ring/strength1,
+		/datum/status_effect/buff/warmongers/ring/perception1,
+		/datum/status_effect/buff/warmongers/ring/intelligence1,
+		/datum/status_effect/buff/warmongers/ring/constitution1,
+		/datum/status_effect/buff/warmongers/ring/endurance1,
+		/datum/status_effect/buff/warmongers/ring/speed1,
+		/datum/status_effect/buff/warmongers/ring/fortune1,
+		)
+	var/list/possible_effects_copper = list(
+		/datum/status_effect/buff/warmongers/shiny
+	)
+
+/obj/item/clothing/ring/warmongers/magic/copper/Initialize()
+	. = ..()
+	roll_bonuses()
+	update_description()
+
+/obj/item/clothing/ring/warmongers/magic/copper/roll_bonuses()
+	bonus_stat = pick(possible_stats_copper)
+	if(prob(10))
+		has_bonus_effect = TRUE
+		// Roll 1dX where X is the length of possible_effects
+		bonus_effect = pick(possible_effects_copper)
+
+/obj/item/clothing/ring/warmongers/magic/silver
+	name = "magical silver ring"
+	desc = "Carved runes glow and shimmer; wearing this silver ring is said to grant its wielder a significant boon."
+	icon_state = "silver_runes"
+	has_bonus_effect = TRUE
+
+		// Silver Tier
+	var/list/possible_stats_silver = list(
+		/datum/status_effect/buff/warmongers/ring/strength2,
+		/datum/status_effect/buff/warmongers/ring/perception2,
+		/datum/status_effect/buff/warmongers/ring/intelligence2,
+		/datum/status_effect/buff/warmongers/ring/constitution2,
+		/datum/status_effect/buff/warmongers/ring/endurance2,
+		/datum/status_effect/buff/warmongers/ring/speed2,
+		/datum/status_effect/buff/warmongers/ring/fortune2,
+		)
+	var/list/possible_effects_silver = list(
+		/datum/status_effect/buff/warmongers/shiny
+	)
+
+/obj/item/clothing/ring/warmongers/magic/silver/Initialize()
+	. = ..()
+	roll_bonuses()
+	update_description()
+
+/obj/item/clothing/ring/warmongers/magic/silver/roll_bonuses()
+	bonus_stat = pick(possible_stats_silver)
+	if(prob(50))
+		has_bonus_effect = TRUE
+		// Roll 1dX where X is the length of possible_effects
+		bonus_effect = pick(possible_effects_silver)
+
+/obj/item/clothing/ring/warmongers/magic/gold
+	name = "magical gold ring"
+	desc = "Carved runes energetically glow and shimmer; wearing this gold ring is said to grant its wielder a great boon."
+	icon_state = "gold_runes"
+	has_bonus_effect = TRUE
+	
+		// Gold Tier
+	var/list/possible_stats_gold = list(
+		/datum/status_effect/buff/warmongers/ring/strength3,
+		/datum/status_effect/buff/warmongers/ring/perception3,
+		/datum/status_effect/buff/warmongers/ring/intelligence3,
+		/datum/status_effect/buff/warmongers/ring/constitution3,
+		/datum/status_effect/buff/warmongers/ring/endurance3,
+		/datum/status_effect/buff/warmongers/ring/speed3,
+		/datum/status_effect/buff/warmongers/ring/fortune3,
+		)
+	var/list/possible_effects_gold = list(
+		/datum/status_effect/buff/warmongers/shiny
+	)
+
+/obj/item/clothing/ring/warmongers/magic/gold/Initialize()
+	. = ..()
+	roll_bonuses()
+	update_description()
+
+/obj/item/clothing/ring/warmongers/magic/gold/roll_bonuses()
+	bonus_stat = pick(possible_stats_gold)
+	bonus_effect = pick(possible_effects_gold)
+
+//--------- Start of Unique Magical Warmongers Rings
+
+/obj/item/clothing/ring/warmongers/magic/unique
+	name = "true ring of warmongering"
+	desc = "Etched into the ring are the initials - J.W."
+	icon_state = "black_unique"
+	has_bonus_effect = FALSE
+
+/obj/item/clothing/ring/warmongers/magic/unique/equipped(mob/living/user, slot)
+	. = ..()
+	if(user.mind)
+		if (slot == SLOT_RING && istype(user))
+			user.apply_status_effect(/datum/status_effect/buff/warmongers/ring/unique/truemonger)
+		else
+			user.remove_status_effect(/datum/status_effect/buff/warmongers/ring/unique/truemonger)
+
+// Edax - Unique Effect: Consumes other, NON-UNIQUE rings to collect their power
+/obj/item/clothing/ring/warmongers/magic/unique/edax
+	name = "edax"
+	desc = "It grins at you, beckoning you to feed it."
+	icon_state = ""
+
+// Mordax - Unique Effect: Grants the wielder vampiric aspects (pale skin, red eyes) and abilities (transfix, night vision)
+/obj/item/clothing/ring/warmongers/magic/unique/mordax
+	name = "mordax"
+	desc = "Legends speak of red-eyed immortal warlords that feasted on the blood of thousands."
+	icon_state = ""
+
+// Mutantur - Unique Effect: Has two forms that can be switched on activating in hand.
+// Form 1 - +2 STR, CON, END; Form 2 - +2 PER, INT, SPD
+/obj/item/clothing/ring/warmongers/magic/unique/mutantur
+	name = "mutantur"
+	desc = "Two snakes share the same body, their heads pointed past each other at the top of the ring. One's eyes glow; the other's does not."
+	icon_state = ""
+
+
+//--------- End of Warmongers Rings
