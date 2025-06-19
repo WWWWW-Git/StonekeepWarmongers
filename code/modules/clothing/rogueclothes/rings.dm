@@ -187,14 +187,6 @@
 	desc = "Legends say this ring allows its wielder to kill other people."
 	icon_state = "black_runes"
 
-/obj/item/clothing/ring/warmongers/equipped(mob/living/user, slot)
-	. = ..()
-	if(user.mind)
-		if (slot == SLOT_RING && istype(user))
-			user.apply_status_effect(/datum/status_effect/buff/warmongers/ring)
-		else
-			user.remove_status_effect(/datum/status_effect/buff/warmongers/ring)
-
 //--------- Start of Magical Warmongers Rings - MADE FOR KILLING!
 //	Ring Types:
 //	Copper = +1 Stat & 10% chance other effect (wip)
@@ -206,7 +198,7 @@
 	name = "magical ring of warmongering"
 	desc = "Legends say this ring allows its wielder to kill other people, magically."
 	icon_state = "black_runes"
-	var/datum/status_effect/buff/warmongers/ring/bonus_stat = /datum/status_effect/buff/warmongers/ring/unique
+	var/datum/status_effect/buff/warmongers/ring/bonus_stat
 	var/datum/status_effect/buff/warmongers/bonus_effect
 	var/has_bonus_effect = TRUE
 	var/currently_equipped = FALSE
