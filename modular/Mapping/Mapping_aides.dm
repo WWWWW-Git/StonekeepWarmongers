@@ -130,3 +130,43 @@
 			static_debris = list(/obj/item/natural/silk = 2, /obj/item/natural/stone = 1)
 			icon_state = pick("cocoon1","cocoon2")
 	. = ..()
+
+//--------- Start of Warmongers Loot Spawners
+
+/obj/effect/spawner/roguemap/warmongers
+	icon_state = "phatlewt"
+
+/obj/effect/spawner/roguemap/warmongers/lootbasic
+	probby = 50
+	spawned = list(
+		/obj/item/reagent_containers/food/snacks/rogue/crackerscooked = 50,
+		/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette = 40,
+		/obj/item/reagent_containers/glass/bottle/waterskin = 40,
+		/obj/item/reagent_containers/food/snacks/smallrat = 35, // fucker ate my crackers
+		/obj/item/clothing/wrists/roguetown/bracers = 20,
+		/obj/item/clothing/neck/roguetown/gorget = 20,
+		/obj/item/rogueweapon/sword/iron = 10,
+		/obj/item/rogueweapon/battle = 10,
+		/obj/item/rogueweapon/mace = 10
+	)
+
+/obj/effect/spawner/roguemap/warmongers/lootgood
+	icon_state = "phatlewtgreen"
+	probby = 45
+	spawned = list(
+		/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 50,
+		/obj/item/reagent_containers/glass/bottle/rogue/manapot = 50,
+		/obj/item/rogueweapon/eaglebeak/lucerne = 5,
+		/obj/item/rogueweapon/greatsword/zwei = 5,
+		/obj/item/rogueweapon/spear/billhook = 5,
+		/obj/item/rogueweapon/mace/steel = 5
+	)
+
+/obj/effect/spawner/roguemap/warmongers/lootmagic
+	icon_state = "phatlewtblue"
+	probby = 40
+	spawned = list(
+		/obj/item/clothing/ring/warmongers/magic/copper = 50,
+		/obj/item/clothing/ring/warmongers/magic/silver = 5,
+		/obj/item/clothing/ring/warmongers/magic/gold = 0.5
+	)
