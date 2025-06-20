@@ -192,7 +192,6 @@
 			new /obj/effect/temp_visual/dir_setting/bloodsplatter/xenosplatter(target_loca, splatter_dir)
 		else
 			new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir)
-			flash_color(L, flash_color = "#FF0000", flash_time = 3 SECONDS)
 		L.add_splatter_floor(target_loca)
 
 	if(impact_effect_type && !hitscan)

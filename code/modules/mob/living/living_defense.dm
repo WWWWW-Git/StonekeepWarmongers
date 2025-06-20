@@ -50,6 +50,11 @@
 	var/armor = run_armor_check(def_zone, P.flag, "", "",P.armor_penetration, damage = P.damage)
 
 	next_attack_msg.Cut()
+	// i moved this here so it actually shows up as hitting the head
+	var/organ_hit_text = ""
+	var/limb_hit = check_limb_hit(def_zone) //to get the correct message info.
+	if(limb_hit)
+		organ_hit_text = " in \the [parse_zone(limb_hit)]"
 
 	var/on_hit_state = P.on_hit(src, armor)
 	var/nodmg = FALSE
@@ -68,10 +73,6 @@
 		else
 			P.handle_drop()
 
-	var/organ_hit_text = ""
-	var/limb_hit = check_limb_hit(def_zone)//to get the correct message info.
-	if(limb_hit)
-		organ_hit_text = " in \the [parse_zone(limb_hit)]"
 	if(P.hitsound && !nodmg)
 		var/volume = P.vol_by_damage()
 		playsound(loc, pick(P.hitsound), volume, TRUE, -1)

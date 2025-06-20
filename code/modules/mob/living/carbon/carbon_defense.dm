@@ -69,7 +69,7 @@
 	..()
 
 /mob/living/carbon/human/check_projectile_wounding(obj/projectile/P, def_zone, blocked)
-	. = ..()
+	..()
 	if(ishuman(P.firer))
 		var/mob/living/carbon/human/H = P.firer
 		if(warfare_faction == H.warfare_faction)
@@ -117,6 +117,7 @@
 					var/mob/living/carbon/human/H = P.firer
 					if(H.client.hasPerk(/datum/warperk/headhunter))
 						gib()
+			flash_color(client, flash_color = "#af0000ff", flash_time = 3 SECONDS)
 			if(hud_used)
 				var/matrix/skew = matrix()
 				skew.Scale(2)
