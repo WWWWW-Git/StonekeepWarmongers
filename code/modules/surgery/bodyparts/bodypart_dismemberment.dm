@@ -40,9 +40,13 @@
 		C.visible_message("<span class='danger'><B>[C] is [pick("BRUTALLY","VIOLENTLY","BLOODILY","MESSILY")] DECAPITATED!</B></span>")
 	else
 		C.visible_message("<span class='danger'><B>The [src.name] is [pick("torn off", "sundered", "severed", "seperated", "unsewn")]!</B></span>")
-	C.emote("painscream")
+		C.emote("painscream")
 	if(aspect_chosen(/datum/round_aspect/halo))
 		playsound(C, 'sound/vo/halo/decap.mp3', 100, FALSE, -1)
+	if(user.client.hasPerk(/datum/warperk/brutalist))
+		user.STASPD += 1
+	if(C.client.hasPerk(/datum/warperk/brutalist))
+		user.STASTR += 4
 
 	var/obj/effect/temp_visual/bloodmist/BM = new(get_turf(C))
 	animate(BM, transform = matrix()*2, alpha = 0, time = 6) // looks cool

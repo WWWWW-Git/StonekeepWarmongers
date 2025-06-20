@@ -105,6 +105,8 @@
 					if(HU.dna?.species && dna?.species)
 						if(HU.dna.species.id == dna.species.id)
 							HU.add_stress(/datum/stressevent/viewdeath)
+				if(client.hasPerk(/datum/warperk/saint))
+					HU.apply_status_effect(/datum/status_effect/buff/saint)
 
 	. = ..()
 

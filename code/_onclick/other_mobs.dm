@@ -340,6 +340,8 @@
 					if(!H.check_armor_skill())
 						jadded += 50
 						jrange = 1
+				if(client.hasPerk(/datum/warperk/athlete))
+					jadded = jadded/2
 				if(rogfat_add(min(jadded,100)))
 					if(jextra)
 						throw_at(A, jrange, 1, src, spin = FALSE)

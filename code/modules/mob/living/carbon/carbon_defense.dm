@@ -90,9 +90,9 @@
 			animate(BM, transform = matrix()*2, alpha = 0, time = 6) // looks cool
 
 			if(aspect_chosen(/datum/round_aspect/halo))
-				if(isliving(P.firer))
-					var/mob/living/F = P.firer
-					F.playsound_local(get_turf(P.firer), 'sound/vo/halo/headshot.mp3', 50)
+				if(ishuman(P.firer))
+					var/mob/living/carbon/human/H = P.firer
+					H.playsound_local(get_turf(H), 'sound/vo/halo/headshot.mp3', 50)
 			playsound(src, "headcrush", 100, vary = FALSE)
 			newdam = newdam * 2
 			var/obj/item/clothing/head/roguetown/hed = head
@@ -113,6 +113,10 @@
 				BP.drop_limb(1)
 				qdel(BP)
 				new /obj/effect/gibspawner/generic(get_turf(src))
+				if(ishuman(P.firer))
+					var/mob/living/carbon/human/H = P.firer
+					if(H.client.hasPerk(/datum/warperk/headhunter))
+						gib()
 			if(hud_used)
 				var/matrix/skew = matrix()
 				skew.Scale(2)

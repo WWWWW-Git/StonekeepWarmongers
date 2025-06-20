@@ -162,6 +162,8 @@ SUBSYSTEM_DEF(vote)
 					to_chat(world, "\n<font color='purple'>More blood shall be spilled, then.</font>")
 				if(. == "YES")
 					to_chat(world, "\n<font color='purple'>I knew you were all cowards. Five minutes remain.</font>")
+					for(var/mob/living/L in GLOB.player_list)
+						L.playsound_local(L, 'sound/misc/coward.ogg', 75, FALSE)
 					var/datum/game_mode/warfare/W = SSticker.mode
 					if(istype(W))
 						spawn(5 MINUTES)

@@ -516,7 +516,8 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		var/datum/verbs/menu/menuitem = GLOB.menulist[thing]
 		if (menuitem)
 			menuitem.Load_checked(src)
-
+	
+	equippedPerk = new /datum/warperk()
 	Master.UpdateTickRate()
 
 //////////////

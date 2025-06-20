@@ -73,6 +73,7 @@
 	var/account_age = -1
 
 	var/warfare_faction = null
+	var/datum/warperk/equippedPerk = null
 
 	preload_rsc = PRELOAD_RSC
 

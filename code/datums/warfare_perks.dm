@@ -6,6 +6,10 @@
 /datum/warperk/proc/apply(var/mob/living/carbon/human/H) // for special shit ig
 	return
 
+/client/proc/hasPerk(datum/warperk/perk)
+	if(istype(equippedPerk, perk))
+		return TRUE
+
 // 1-4 tri
 
 /datum/warperk/madness
@@ -15,7 +19,7 @@
 
 /datum/warperk/masochist
 	name = "Masochist"
-	desc = "You no longer feel pain, and losing a limb makes you gain +2 strength."
+	desc = "You no longer feel pain, and losing a limb makes you gain +4 strength."
 	cost = 3
 
 /datum/warperk/masochist/apply(mob/living/carbon/human/H)
@@ -23,7 +27,7 @@
 
 /datum/warperk/brutalist
 	name = "Brutalist"
-	desc = "Decapitating someone grants you +1 speed."
+	desc = "Decapitating someone permanently grants you +1 speed."
 	cost = 2
 
 /datum/warperk/athlete
@@ -77,4 +81,4 @@
 	cost = 6
 
 /datum/warperk/lightbrigade/apply(mob/living/carbon/human/H)
-	// todo
+	H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/blind)

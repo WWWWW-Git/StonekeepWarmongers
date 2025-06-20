@@ -240,6 +240,11 @@
 	effectedstats = list("speed" = 7,"constitution" = 6,"endurance" = 6,"strength" = 5)
 	duration = 3 MINUTES
 
+/atom/movable/screen/alert/status_effect/buff/inspired/great
+	name = "Ready to Die"
+	desc = "<span class='nicegreen'>I'M READY TO DIE NOW!</span>\n"
+	icon_state = "intelligence"
+
 /atom/movable/screen/alert/status_effect/buff/charge
 	name = "Charge"
 	desc = "<span class='nicegreen'>CHARGE!</span>\n"
@@ -251,9 +256,15 @@
 	effectedstats = list("speed" = 7)
 	duration = 1 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/inspired/great
-	name = "Ready to Die"
-	desc = "<span class='nicegreen'>I'M READY TO DIE NOW!</span>\n"
+/datum/status_effect/buff/saint
+	id = "saint"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/saint
+	effectedstats = list("speed" = 1,"constitution" = 1,"endurance" = 1,"strength" = 1)
+	duration = 1 MINUTES
+
+/atom/movable/screen/alert/status_effect/buff/saint
+	name = "Death of a Saint"
+	desc = "<span class='nicegreen'>They were a saint! A SAINT!</span>\n"
 	icon_state = "intelligence"
 
 /datum/status_effect/buff/spawn_protection
