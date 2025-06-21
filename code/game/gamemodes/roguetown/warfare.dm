@@ -44,11 +44,25 @@
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
 				H.adjust_triumphs(1)
+				H << sound(null) // Stop all sounds
+				SEND_SOUND(H, 'sound/vo/wc/gren/grenzvictorysong.ogg')
+		for(var/client/C in heartfelts)
+			if(ishuman(C.mob))
+				var/mob/living/carbon/human/H = C.mob
+				H << sound(null) // Stop all sounds
+				SEND_SOUND(H, 'sound/vo/wc/felt/heartdefeatsong.ogg')
 	if(whowon == RED_WARTEAM)
 		for(var/client/C in heartfelts)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
 				H.adjust_triumphs(1)
+				H << sound(null) // Stop all sounds
+				SEND_SOUND(H, 'sound/vo/wc/felt/heartvictorysong.ogg')
+		for(var/client/C in grenzels)
+			if(ishuman(C.mob))
+				var/mob/living/carbon/human/H = C.mob
+				H << sound(null) // Stop all sounds
+				SEND_SOUND(H, 'sound/vo/wc/gren/grenzdefeatsong.ogg')
 
 /datum/game_mode/warfare/proc/do_war_end(var/mob/living/carbon/human/crownguy = null, var/team = null) // if you call this with zero arguments, its a stalemate.
 	whowon = team

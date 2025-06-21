@@ -306,7 +306,7 @@
 		H.change_stat("perception", 1)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
-
+		ADD_TRAIT(H, TRAIT_RANK_AND_FILE, TRAIT_GENERIC)
 //// SAMURAI ////
 
 /datum/advclass/red/samurai // Good health, armor, and a spear make for a stalwart defender. However, no gun skills, and slow.
@@ -348,6 +348,7 @@
 		H.change_stat("constitution", 2)
 		H.change_stat("speed", -6)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_BUSHIDO_CODE, TRAIT_GENERIC)
 
 //// SAPPER ////
 
@@ -394,6 +395,7 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 		H.change_stat("speed", -6)
+		ADD_TRAIT(H, TRAIT_SAPPER, TRAIT_GENERIC)
 
 //// FIRELANCER ////
 
@@ -439,7 +441,7 @@
 		H.change_stat("constitution", 1)
 	H.cmode_music = 'sound/music/combatelite.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_FIRELANCER, TRAIT_GENERIC)
 
 //// HEARTFELT NINJA ////
 
@@ -530,7 +532,6 @@
 		H.change_stat("speed", -2)
 		H.change_stat("constitution", -3)
 	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// OFFICER ////
 
@@ -619,6 +620,7 @@
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_MEDIC, TRAIT_GENERIC)
 
 //// ELVEN SLAVE ////
 
@@ -649,6 +651,7 @@
 		H.change_stat("speed", 2)
 		H.change_stat("intelligence", -3)
 		H.change_stat("strength", -3)
+		ADD_TRAIT(H, TRAIT_SLAVE, TRAIT_GENERIC)
 
 /////////////////////////////////////// BLU //////////////////////////////////////////////
 
@@ -813,6 +816,7 @@
 		H.change_stat("perception", 1)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
+		ADD_TRAIT(H, TRAIT_RANK_AND_FILE, TRAIT_GENERIC)
 
 //// ZWEIHANDER ////
 
@@ -855,6 +859,7 @@
 		H.change_stat("endurance", 4)
 		H.change_stat("constitution", 1)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ZWEIHANDER, TRAIT_GENERIC)
 
 //// HUSSAR ////
 
@@ -898,6 +903,7 @@
 		H.change_stat("constitution", 1)
 	H.cmode_music = 'sound/music/combatelite.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_HUSSAR, TRAIT_GENERIC)
 
 ////// GRENADIER //////
 
@@ -951,6 +957,7 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 		H.change_stat("speed", -6)
+		ADD_TRAIT(H, TRAIT_GRENADIER, TRAIT_GENERIC)
 
 ////// JESTER //////
 
@@ -1193,6 +1200,7 @@
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_MEDIC, TRAIT_GENERIC)
 
 //// ELVEN SLAVE ////
 
@@ -1223,3 +1231,4 @@
 		H.change_stat("speed", 2)
 		H.change_stat("intelligence", -3)
 		H.change_stat("strength", -1)
+		ADD_TRAIT(H, TRAIT_SLAVE, TRAIT_GENERIC)
