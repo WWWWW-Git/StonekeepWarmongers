@@ -43,9 +43,9 @@
 		C.emote("painscream")
 	if(aspect_chosen(/datum/round_aspect/halo))
 		playsound(C, 'sound/vo/halo/decap.mp3', 100, FALSE, -1)
-	if(user.client.hasPerk(/datum/warperk/brutalist))
+	if(user.client?.hasPerk(/datum/warperk/brutalist))
 		user.STASPD += 1
-	if(C.client.hasPerk(/datum/warperk/brutalist))
+	if(C.client?.hasPerk(/datum/warperk/brutalist))
 		user.STASTR += 4
 
 	var/obj/effect/temp_visual/bloodmist/BM = new(get_turf(C))
