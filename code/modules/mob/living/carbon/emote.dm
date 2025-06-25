@@ -49,129 +49,47 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/carbon/warcry/run_emote(mob/user, params, type_override, intentional, targetted)
-    . = ..()
-    var/warcry = "WAR!!!"
-    var/sound2play
-    if(ishuman(user))
-        var/mob/living/carbon/human/H = user
-        switch(H.warfare_faction)
-            if(RED_WARTEAM)
-                warcry = "For honor! For Heartfelt!"
-                if(HAS_TRAIT(user, TRAIT_NOBLE))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/felt/female/f_heart_lord1.ogg','sound/vo/wc/felt/female/f_heart_lord2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/felt/heart_lord1.ogg','sound/vo/wc/felt/heart_lord2.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_RANK_AND_FILE))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/felt/female/f_heart_musk1.ogg','sound/vo/wc/felt/female/f_heart_musk2.ogg','sound/vo/wc/felt/female/f_heart_musk3.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/felt/heart_musk1.ogg','sound/vo/wc/felt/heart_musk2.ogg','sound/vo/wc/felt/heart_musk3.ogg','sound/vo/wc/felt/heart_musk_rare.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_BUSHIDO_CODE))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/felt/female/f_heart_zam1.ogg','sound/vo/wc/felt/female/f_heart_zam2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/felt/heart_zam1.ogg','sound/vo/wc/felt/heart_zam2.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_SAPPER))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/felt/female/f_heart_sapper1.ogg','sound/vo/wc/felt/female/f_heart_sapper2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/felt/heart_sapper1.ogg','sound/vo/wc/felt/heart_sapper2.ogg','sound/vo/wc/felt/heart_sapper3.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_FIRELANCER))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/felt/female/f_heart_firelance1.ogg','sound/vo/wc/felt/female/f_heart_firelance2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/felt/heart_firelance1.ogg','sound/vo/wc/felt/heart_firelance2.ogg','sound/vo/wc/felt/heart_firelance3.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_NINJA))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/felt/female/f_heart_ninja1.ogg','sound/vo/wc/felt/female/f_heart_ninja2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/felt/heart_ninja1.ogg','sound/vo/wc/felt/heart_ninja2.ogg','sound/vo/wc/felt/heart_ninja3.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_SNIPER))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/felt/female/f_heart_sharpbarker1.ogg','sound/vo/wc/felt/female/f_heart_sharpbarker2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/felt/heart_sharpbarker1.ogg','sound/vo/wc/felt/heart_sharpbarker2.ogg','sound/vo/wc/felt/heart_sharpbarker3.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_OFFICER))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/felt/female/f_heart_officer1.ogg','sound/vo/wc/felt/female/f_heart_officer2.ogg','sound/vo/wc/felt/female/f_heart_officer3.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/felt/heart_officer1.ogg','sound/vo/wc/felt/heart_officer2.ogg','sound/vo/wc/felt/heart_officer3.ogg','sound/vo/wc/felt/heart_officer_rare.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_MEDIC))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/felt/female/f_heart_medic1.ogg','sound/vo/wc/felt/female/f_heart_medic2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/felt/heart_medic1.ogg','sound/vo/wc/felt/heart_medic2.ogg','sound/vo/wc/felt/heart_medic3.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_SLAVE))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/felt/female/f_heart_slave1.ogg','sound/vo/wc/felt/female/f_heart_slave2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/felt/heart_slave1.ogg','sound/vo/wc/felt/heart_slave2.ogg','sound/vo/wc/felt/heart_slave3.ogg'))
-            if(BLUE_WARTEAM)
-                warcry = "Glory in the stars!"
-                if(HAS_TRAIT(user, TRAIT_NOBLE))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/gren/female/f_grenz_lord1.ogg','sound/vo/wc/gren/female/f_grenz_lord2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/gren/grenz_lord1.ogg','sound/vo/wc/gren/grenz_lord2.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_RANK_AND_FILE))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/gren/female/f_grenz_musk1.ogg','sound/vo/wc/gren/female/f_grenz_musk2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/gren/grenz_musk1.ogg','sound/vo/wc/gren/grenz_musk2.ogg','sound/vo/wc/gren/grenz_musk3.ogg','sound/vo/wc/gren/grenz_musk_rare.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_ZWEIHANDER))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/gren/female/f_grenz_zwei1.ogg','sound/vo/wc/gren/female/f_grenz_zwei2.ogg','sound/vo/wc/gren/female/f_grenz_zwei3.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/gren/zwei1.ogg','sound/vo/wc/gren/zwei2.ogg','sound/vo/wc/gren/zwei3.ogg','sound/vo/wc/gren/zwei4.ogg','sound/vo/wc/gren/zwei_rare.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_HUSSAR))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/gren/female/f_grenz_hussar1.ogg','sound/vo/wc/gren/female/f_grenz_hussar2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/gren/grenz_hussar1.ogg','sound/vo/wc/gren/grenz_hussar2.ogg','sound/vo/wc/gren/grenz_hussar3.ogg','sound/vo/wc/gren/grenz_hussar_rare.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_GRENADIER))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/gren/female/f_grenz_grenadier1.ogg','sound/vo/wc/gren/female/f_grenz_grenadier2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/gren/grenz_grenadier1.ogg','sound/vo/wc/gren/grenz_grenadier2.ogg','sound/vo/wc/gren/grenz_grenadier3.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_JESTER))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/gren/female/f_grenz_jester1.ogg','sound/vo/wc/gren/female/f_grenz_jester2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/gren/grenz_jester1.ogg','sound/vo/wc/gren/grenz_jester2.ogg','sound/vo/wc/gren/grenz_jester3.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_SNIPER))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/gren/female/f_grenz_sharpbarker1.ogg','sound/vo/wc/gren/female/f_grenz_sharpbarker2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/gren/grenz_sharpbarker1.ogg','sound/vo/wc/gren/grenz_sharpbarker2.ogg','sound/vo/wc/gren/grenz_sharpbarker3.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_OFFICER))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/gren/female/f_grenz_officer1.ogg','sound/vo/wc/gren/female/f_grenz_officer2.ogg','sound/vo/wc/gren/female/f_grenz_officer3.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/gren/grenz_officer1.ogg','sound/vo/wc/gren/grenz_officer2.ogg','sound/vo/wc/gren/grenz_officer3.ogg','sound/vo/wc/gren/grenz_officer_rare.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_MEDIC))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/gren/female/f_grenz_medic1.ogg','sound/vo/wc/gren/female/f_grenz_medic2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/gren/grenz_medic1.ogg','sound/vo/wc/gren/grenz_medic2.ogg','sound/vo/wc/gren/grenz_medic3.ogg'))
-                else if(HAS_TRAIT(user, TRAIT_SLAVE))
-                    if(H.gender == FEMALE)
-                        sound2play = sound(pick('sound/vo/wc/gren/female/f_grenz_slave1.ogg','sound/vo/wc/gren/female/f_grenz_slave2.ogg'))
-                    else
-                        sound2play = sound(pick('sound/vo/wc/gren/grenz_slave1.ogg','sound/vo/wc/gren/grenz_slave2.ogg','sound/vo/wc/gren/grenz_slave3.ogg'))
-        if(aspect_chosen(/datum/round_aspect/explodeatwill))
-            user.say(warcry)
-            spawn(2 SECONDS)
-                var/obj/item/bomb/B = new(get_turf(user))
-                B.light()
-                B.explode(TRUE)
-                user.gib()
-        if(sound2play)
-            playsound(user, sound2play, 60, TRUE, -2, ignore_walls = FALSE)
-        else
-            to_chat(user, "<span class='warning'>Nothing to warcry about yet!</span>")
-        user.shoutbubble()
-        ping_sound(user)
+	. = ..()
+	var/warcry = "WAR!!!"
+	var/sound2play
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		switch(H.warfare_faction)
+			if(RED_WARTEAM)
+				warcry = "For honor! For Heartfelt!"
+				if(H.gender == MALE)
+					if(prob(50))
+						sound2play = sound('sound/vo/wc/felt/warcry_male_rare1.ogg','sound/vo/wc/felt/warcry_male_rare2.ogg')
+					else
+						sound2play = sound(pick('sound/vo/wc/felt/warcry_male1.ogg','sound/vo/wc/felt/warcry_male2.ogg','sound/vo/wc/felt/warcry_male3.ogg','sound/vo/wc/felt/warcry_male4.ogg'))
+				else
+					if(prob(1))
+						sound2play = sound('sound/vo/wc/felt/warcry_female_rare1.ogg','sound/vo/wc/felt/warcry_female_rare2.ogg')
+					else
+						sound2play = sound(pick('sound/vo/wc/felt/warcry_female1.ogg','sound/vo/wc/felt/warcry_female2.ogg','sound/vo/wc/felt/warcry_female3.ogg'))
+			if(BLUE_WARTEAM)
+				warcry = "Glory in the stars!"
+				if(H.gender == MALE)
+					if(prob(50))
+						sound2play = sound('sound/vo/wc/gren/warcry_male_rare1.ogg','sound/vo/wc/gren/warcry_male_rare2.ogg')
+					else
+						sound2play = sound(pick('sound/vo/wc/gren/warcry_male1.ogg','sound/vo/wc/gren/warcry_male2.ogg','sound/vo/wc/gren/warcry_male3.ogg','sound/vo/wc/gren/warcry_male4.ogg'))
+				else
+					if(prob(1))
+						sound2play = sound('sound/vo/wc/gren/warcry_female_rare1.ogg','sound/vo/wc/gren/warcry_female_rare2.ogg')
+					else
+						sound2play = sound(pick('sound/vo/wc/gren/warcry_female1.ogg','sound/vo/wc/gren/warcry_female2.ogg','sound/vo/wc/gren/warcry_female3.ogg'))
+		if(aspect_chosen(/datum/round_aspect/explodeatwill))
+			user.say(warcry)
+			spawn(2 SECONDS)
+				var/obj/item/bomb/B = new(get_turf(user))
+				B.light()
+				B.explode(TRUE)
+				user.gib()
+
+	playsound(user, sound2play, 60, TRUE, -2, ignore_walls = FALSE, vary = FALSE)
+	user.shoutbubble()
+	ping_sound(user)
     
 /mob/proc/shoutbubble()
     var/image/I = image('icons/mob/talk.dmi', src, "default2", FLY_LAYER)

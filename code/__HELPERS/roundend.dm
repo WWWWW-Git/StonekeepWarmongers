@@ -790,7 +790,8 @@
 	'sound/roundend/abattlewon.ogg',
 	'sound/roundend/thatssoldiering.ogg',
 	'sound/roundend/nevermeetagain.ogg',
-	'sound/roundend/thiswarsgonnaend.ogg')
+	'sound/roundend/thiswarsgonnaend.ogg',
+	'sound/roundend/war.ogg')
 
 	for(var/client/thing in GLOB.clients)
 		if(!thing)

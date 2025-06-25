@@ -36,15 +36,6 @@
 #define TRAIT_CYCLOPS_LEFT				"Cyclops (Left)" //poked left eye
 #define TRAIT_CYCLOPS_RIGHT				"Cyclops (Right)" //poked right eye
 #define TRAIT_LEECHIMMUNE				"Unleechable" //leeches wont attach in bog squares
-#define TRAIT_RANK_AND_FILE				"Footsoldier" //for warmongers warcries
-#define TRAIT_BUSHIDO_CODE				"Bushido Code" //for warmongers warcries
-#define TRAIT_SAPPER					"Sapper" //for warmongers warcries
-#define	TRAIT_FIRELANCER				"Firelancer" //for warmongers warcries
-#define TRAIT_MEDIC						"Medic" //for warmongers warcries
-#define TRAIT_SLAVE						"Slave" //for warmongers warcries
-#define TRAIT_ZWEIHANDER				"Zweihander" //for warmongers warcries
-#define TRAIT_HUSSAR					"Hussar" //for warmongers warcries
-#define TRAIT_GRENADIER					"Grenadier" //for warmongers warcries
 
 #define TRAIT_MISSING_NOSE "Missing Nose" //halved stamina regeneration
 #define TRAIT_DISFIGURED "Disfigured"
@@ -89,16 +80,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_SOUL_EXAMINE = "<span class='deadsay'>I know when someone's soul has departed.</span>",
 	TRAIT_CYCLOPS_RIGHT = "<span class='warning'>My right eye has been poked out...</span>",
 	TRAIT_LEECHIMMUNE = "Leeches are reluctant to bite me.",
-	TRAIT_RETARD_ANATOMY = "My anatomy is inhumen, preventing me from wearing hats and shoes.",
-	TRAIT_RANK_AND_FILE = "My life is less valuable than the weapon in my hand.",
-	TRAIT_BUSHIDO_CODE = "Live by the sword, die by the sword.",
-	TRAIT_SAPPER = "If I run out of sandbags there are plenty of corpses to use instead.",
-	TRAIT_FIRELANCER = "I AM THE GOD OF HELLFIRE! AND I BRING YOU, FIRE!",
-	TRAIT_MEDIC = "Blood and guts, my blood, their guts.",
-	TRAIT_SLAVE = "I must fight for my very right to live.",
-	TRAIT_ZWEIHANDER = "A long legacy of Zweihanders stands behind me, and I will not bring them shame.",
-	TRAIT_HUSSAR = "My trusty saiga will carry me to victory.",
-	TRAIT_GRENADIER = "You only get to make a mistake when dealing with explosives once, you know.",
+	TRAIT_RETARD_ANATOMY = "My anatomy is inhumen, preventing me from wearing hats and shoes."
 	))
 
 // trait accessor defines
