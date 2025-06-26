@@ -62,7 +62,7 @@ GLOBAL_LIST_EMPTY(biggates)
 	icon_state = "gateleft1"
 	base_state = "gateleft"
 
-/obj/strucutre/gate/vertical/left/preopen
+/obj/structure/gate/vertical/left/preopen
 	icon_state = "gateleft0"
 
 /obj/structure/gate/vertical/left/preopen/Initialize()

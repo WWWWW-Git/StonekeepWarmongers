@@ -20,7 +20,7 @@
 	icon_state = "fountain"
 	bound_width = 64
 	layer = ABOVE_MOB_LAYER
-	plane = -1 // so people are actually BEHIND the fucking fountain because if we dont have this theyre drawn on top
+	plane = GAME_PLANE_UPPER // so people are actually BEHIND the fucking fountain because if we dont have this theyre drawn on top
 
 /obj/structure/well/fountain/bloody
 	name = "blood fountain"

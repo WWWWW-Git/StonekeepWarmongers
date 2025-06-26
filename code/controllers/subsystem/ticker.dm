@@ -28,6 +28,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/warfare_ready_to_die = FALSE		// If the barriers for fair play have been removed yet.
 	var/warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
+	var/list/warfare_barriers = list()
 
 	var/oneteammode = FALSE // players only allowed to choose grenzelhoft
 
@@ -933,8 +934,12 @@ SUBSYSTEM_DEF(ticker)
 			M.overlay_fullscreen("graghorror", /atom/movable/screen/fullscreen/graghorror)
 			M.clear_fullscreen("graghorror", 5 SECONDS)
 
-		for(var/obj/structure/warfarebarrier/WB in world)
-			qdel(WB)
+		for(var/obj/O in warfare_barriers)
+			if(istype(O, /obj/structure/shopkeep))
+				var/obj/structure/shopkeep/FUCKYOU = O // im not making another var for this candy ass bullshit
+				FUCKYOU.leave()
+			else
+				qdel(O)
 
 		var/obj/structure/warobjective/WO = locate()
 		if(WO)

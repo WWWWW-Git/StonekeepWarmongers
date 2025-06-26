@@ -87,7 +87,7 @@
 		if(istype(BP, /obj/item/bodypart/head) && istype(P, /obj/projectile/bullet/reusable/bullet))
 			to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
 			var/obj/effect/temp_visual/bloodmist/BM = new(get_turf(src))
-			animate(BM, transform = matrix()*2, alpha = 0, time = 6) // looks cool
+			animate(BM, transform = matrix()*2, alpha = 0, time = 10) // looks cool
 
 			if(aspect_chosen(/datum/round_aspect/halo))
 				if(ishuman(P.firer))

@@ -1,5 +1,6 @@
 /obj/structure/warobjective
 	name = "objective"
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/blurb = "Fuck the opposing team to win!"
 	var/alertsound = 'sound/misc/alert.ogg'
 	var/haloalertsound = 'sound/misc/alert.ogg'
@@ -137,7 +138,6 @@
 	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE HEARTFELTS TOUCH THIS! But if you're a Heartfelt... Eh, sure. Why not."
 	icon = 'icons/shamelessly_stolen.dmi'
 	icon_state = "destruct"
-	max_integrity = 999999
 	anchored = TRUE
 	climbable = FALSE
 	density = TRUE
@@ -194,8 +194,6 @@
 	density = FALSE
 	can_buckle = 1
 	pixel_x = -32
-	max_integrity = 999999
-	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	buckle_lying = FALSE
 	blurb = "Take the enemy Lord's crown and sit on the Throne of Heartfelt!"
 	haloalertsound = 'sound/vo/halo/hail2theking.mp3'
@@ -242,3 +240,62 @@
 	M.color = secondary
 	add_overlay(M)
 	GLOB.lordcolor -= src
+
+// Shopkeepers
+
+/obj/structure/shopkeep
+	name = "\improper Shopkeeper"
+	desc = "A merchant from the isle of Enigma, he has some things to sell. He is hanging from an airship by chain... he won't stick around for long."
+	icon = 'icons/roguetown/misc/tallstructure.dmi'
+	icon_state = "shop"
+	layer = 4.26
+	plane = GAME_PLANE_UPPER
+	pixel_x = 6
+	pixel_y = 9
+	anchored = TRUE
+	density = FALSE
+	var/leaving = FALSE
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+
+/obj/structure/shopkeep/proc/leave()
+	if(leaving)
+		return
+	leaving = TRUE
+	flick("shop_leave", src)
+	playsound(src, 'sound/misc/gate.ogg', 50, FALSE)
+	QDEL_IN(src, 35)
+
+/obj/structure/shopkeep/Initialize()
+	. = ..()
+	SSticker.warfare_barriers += src
+
+/obj/structure/shopkeep/examine(mob/user)
+	. = ..()
+	if(istype(get_area(src), /area/rogue/indoors))
+		. += "<span class='info'>There is a hole in the roof to allow the chains to get inside.</span>"
+
+/obj/structure/shopkeep/attack_hand(mob/user)
+	. = ..()
+	if(leaving)
+		to_chat(user, "<span class='warning'>NO! NO! I FORGOT TO GET MY CHANGE! NOOOOOOOOO!</span>")
+		user.playsound_local(src, 'sound/misc/zizo.ogg', 50, FALSE)
+		return
+	playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
+
+	var/list/buyables = list()
+	for(var/thing in subtypesof(/datum/warperk))//Populate possible aspects list.
+		var/datum/warperk/A = new thing
+		buyables[A.name] = A
+	var/chosen = input(user, "ENIGMATIC EXPENSIVITIES TO PROTECT YOUR EXTREMITIES! BUY NOW!", "WARMONGERS") as null|anything in buyables
+	var/datum/warperk/WP = buyables[chosen]
+	if(WP)
+		var/full_desc = "[WP.desc] ([WP.cost] TRI)"
+		var/alerto = alert(user, full_desc, WP.name, "Confirm", "Cancel")
+		if(alerto == "Confirm")
+			if(user.get_triumphs() < WP.cost)
+				to_chat(user, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
+				return
+			user.adjust_triumphs(-WP.cost)
+			user.client.equippedPerk = WP
+			say("THANK YOU FOR SHOPPING WITH US TODAE!")
+			playsound(src, 'sound/misc/machinetalk.ogg', 50, FALSE)

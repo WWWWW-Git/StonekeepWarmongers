@@ -472,6 +472,10 @@
 	max_integrity = INFINITY
 	CanAtmosPass = ATMOS_PASS_DENSITY
 
+/obj/structure/warfarebarrier/Initialize()
+	. = ..()
+	SSticker.warfare_barriers += src
+
 /*
 /obj/structure/teambarrrier // allows only people of defined team past
 	name = "barrier of better fairness"

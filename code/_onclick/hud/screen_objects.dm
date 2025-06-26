@@ -86,9 +86,9 @@
 		to_chat(L, "*----*")
 		if(ishuman(usr))
 			var/mob/living/carbon/human/M = usr
-			if(M.charflaw)
-				to_chat(M, "<span class='info'>[M.charflaw.desc]</span>")
-				to_chat(M, "*----*")
+			to_chat(M, "<span class='info'>ᛉ [M.client.equippedPerk.name]</span>")
+			to_chat(M, "<span class='info'>ᛣ [M.client.equippedPerk.desc]</span>")
+			to_chat(M, "*----*")
 			if(M.mind)
 				if(M.mind.language_holder)
 					var/finn
