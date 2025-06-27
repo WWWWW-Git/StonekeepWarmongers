@@ -261,13 +261,11 @@ GLOBAL_VAR(restart_counter)
 //	else
 //	to_chat(world, "<span class='boldannounce'><b><u><a href='byond://winset?command=.reconnect'>CLICK TO RECONNECT</a></u></b></span>")
 
-	var/round_end_sound = 'sound/warmongers.ogg'
 	var/quote = pick("When you see a rattlesnake poised to bite, you do not wait until he has struck to crush him.", "If the Grenzelhoft invaded the Zed's hell I would make at least a favorable reference to the devil in Royal Council House.", "Isn't it dreadful? Here we are, two officers of the Grenzelhoft general staff discussing how best to murder our commander-in-chief.", "I ask you, do you want total war? If necessary, do you want a war more total and radical than anything we can yet imagine?")
 	for(var/client/thing in GLOB.clients)
 		if(!thing)
 			continue
 		thing.stop_sounds_rogue()
-		thing << sound(round_end_sound)
 		thing << "<span class='info'>[quote]</span>"
 
 	to_chat(world, "<B>You will be reconnected in a few seconds.</B>")

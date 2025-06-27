@@ -59,26 +59,26 @@
 				warcry = "For honor! For Heartfelt!"
 				if(H.gender == MALE)
 					if(prob(50))
-						sound2play = sound('sound/vo/wc/felt/warcry_male_rare_1.ogg','sound/vo/wc/felt/warcry_male_rare_2.ogg','sound/vo/wc/felt/warcry_male_rare_3.ogg')
+						sound2play = sound('sound/vo/wc/felt/warcry_male_rare1.ogg','sound/vo/wc/felt/warcry_male_rare2.ogg')
 					else
-						sound2play = sound(pick('sound/vo/wc/felt/warcry_male_1.ogg','sound/vo/wc/felt/warcry_male_2.ogg','sound/vo/wc/felt/warcry_male_3.ogg','sound/vo/wc/felt/warcry_male_4.ogg'))
+						sound2play = sound(pick('sound/vo/wc/felt/warcry_male1.ogg','sound/vo/wc/felt/warcry_male2.ogg','sound/vo/wc/felt/warcry_male3.ogg','sound/vo/wc/felt/warcry_male4.ogg'))
 				else
 					if(prob(1))
-						sound2play = sound('sound/vo/wc/felt/warcry_female_1.ogg')	//fuck it bro it was hard enough finding normal female voices to begin with
+						sound2play = sound('sound/vo/wc/felt/warcry_female_rare1.ogg','sound/vo/wc/felt/warcry_female_rare2.ogg')
 					else
-						sound2play = sound(pick('sound/vo/wc/felt/warcry_female_1.ogg','sound/vo/wc/felt/warcry_female_2.ogg','sound/vo/wc/felt/warcry_female_3.ogg'))
+						sound2play = sound(pick('sound/vo/wc/felt/warcry_female1.ogg','sound/vo/wc/felt/warcry_female2.ogg','sound/vo/wc/felt/warcry_female3.ogg'))
 			if(BLUE_WARTEAM)
 				warcry = "Glory in the stars!"
 				if(H.gender == MALE)
 					if(prob(50))
-						sound2play = sound('sound/vo/wc/gren/warcry_male_rare_1.ogg','sound/vo/wc/gren/warcry_male_rare_2.ogg','sound/vo/wc/gren/warcry_male_rare_3.ogg')
+						sound2play = sound('sound/vo/wc/gren/warcry_male_rare1.ogg','sound/vo/wc/gren/warcry_male_rare2.ogg')
 					else
-						sound2play = sound(pick('sound/vo/wc/gren/warcry_male_1.ogg','sound/vo/wc/gren/warcry_male_2.ogg','sound/vo/wc/gren/warcry_male_3.ogg','sound/vo/wc/gren/warcry_male_4.ogg'))
+						sound2play = sound(pick('sound/vo/wc/gren/warcry_male1.ogg','sound/vo/wc/gren/warcry_male2.ogg','sound/vo/wc/gren/warcry_male3.ogg','sound/vo/wc/gren/warcry_male4.ogg'))
 				else
 					if(prob(1))
-						sound2play = sound('sound/vo/wc/gren/warcry_female_1.ogg')	//fuck it bro it was hard enough finding normal female voices to begin with
+						sound2play = sound('sound/vo/wc/gren/warcry_female_rare1.ogg','sound/vo/wc/gren/warcry_female_rare2.ogg')
 					else
-						sound2play = sound(pick('sound/vo/wc/gren/warcry_female_1.ogg','sound/vo/wc/gren/warcry_female_2.ogg','sound/vo/wc/gren/warcry_female_3.ogg'))
+						sound2play = sound(pick('sound/vo/wc/gren/warcry_female1.ogg','sound/vo/wc/gren/warcry_female2.ogg','sound/vo/wc/gren/warcry_female3.ogg'))
 		if(aspect_chosen(/datum/round_aspect/explodeatwill))
 			user.say(warcry)
 			spawn(2 SECONDS)
@@ -86,21 +86,21 @@
 				B.light()
 				B.explode(TRUE)
 				user.gib()
-				
-	playsound(user, sound2play, 60, TRUE, -2, ignore_walls = FALSE)
+
+	playsound(user, sound2play, 60, TRUE, -2, ignore_walls = FALSE, vary = FALSE)
 	user.shoutbubble()
 	ping_sound(user)
-
+    
 /mob/proc/shoutbubble()
-	var/image/I = image('icons/mob/talk.dmi', src, "default2", FLY_LAYER)
-	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
+    var/image/I = image('icons/mob/talk.dmi', src, "default2", FLY_LAYER)
+    I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 
-	var/list/listening = view(6,src)
-	var/list/speech_bubble_recipients = list()
-	for(var/mob/M in listening)
-		speech_bubble_recipients.Add(M.client)
+    var/list/listening = view(6,src)
+    var/list/speech_bubble_recipients = list()
+    for(var/mob/M in listening)
+        speech_bubble_recipients.Add(M.client)
 
-	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay), I, speech_bubble_recipients, 30)
+    INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay), I, speech_bubble_recipients, 30)
 
 /mob/living/carbon/human/verb/emote_warcry()
 	set name = "WARCRY"

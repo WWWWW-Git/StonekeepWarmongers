@@ -219,7 +219,7 @@
 				sleep(10)
 				C.mob.playsound_local(C.mob, 'sound/vo/halo/blowmeaway.mp3', 100, FALSE)
 			else
-				C.mob.playsound_local(C.mob, 'sound/music/rainingdownofathousandsouls.ogg', 100, FALSE)
+				C.mob.playsound_local(C.mob, 'sound/blank.ogg', 100, FALSE)
 		if(isliving(C.mob) && C.ckey)
 			key_list += C.ckey
 //	if(key_list.len)
@@ -784,3 +784,16 @@
 				return
 			qdel(query_update_everything_ranks)
 		qdel(query_check_everything_ranks)
+
+/world/Reboot(reason = 0, fast_track = FALSE)
+	var/round_end_sound = pick('sound/roundend/mildenjoymentofwar.ogg',
+	'sound/roundend/abattlewon.ogg',
+	'sound/roundend/thatssoldiering.ogg',
+	'sound/roundend/nevermeetagain.ogg',
+	'sound/roundend/thiswarsgonnaend.ogg',
+	'sound/roundend/war.ogg')
+
+	for(var/client/thing in GLOB.clients)
+		if(!thing)
+			continue
+		thing << sound(round_end_sound)

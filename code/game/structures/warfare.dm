@@ -6,12 +6,15 @@
 	var/haloalertsound = 'sound/misc/alert.ogg'
 
 /obj/structure/warobjective/proc/beginround()
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		to_chat(world, "<span class='danger'>[blurb]</span>")
-		if(aspect_chosen(/datum/round_aspect/halo))
-			SEND_SOUND(world, haloalertsound)
-		else
-			SEND_SOUND(world, alertsound)
+    if(istype(SSticker.mode, /datum/game_mode/warfare))
+        to_chat(world, "<span class='danger'>[blurb]</span>")
+        if(aspect_chosen(/datum/round_aspect/halo))
+            SEND_SOUND(world, haloalertsound)
+        for(var/mob/living/carbon/human/M in GLOB.player_list)
+            if(hasvar(M, "warfare_faction") && M.warfare_faction == BLUE_WARTEAM)
+                SEND_SOUND(M, 'sound/vo/wc/gren/grenzrounstart1.ogg')
+            if(hasvar(M, "warfare_faction") && M.warfare_faction == RED_WARTEAM)
+                SEND_SOUND(M, 'sound/vo/wc/felt/heartroundstart1.ogg')
 
 // TDM
 

@@ -309,7 +309,6 @@
 		H.change_stat("perception", 1)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
-
 //// SAMURAI ////
 
 /datum/advclass/red/samurai // Good health, armor, and a spear make for a stalwart defender. However, no gun skills, and slow.
@@ -442,7 +441,6 @@
 		H.change_stat("constitution", 1)
 	H.cmode_music = 'sound/music/combatelite.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// HEARTFELT NINJA ////
 
@@ -531,7 +529,6 @@
 		H.change_stat("constitution", -3)
 	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
-
 //// OFFICER ////
 
 /datum/advclass/red/officer
