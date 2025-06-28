@@ -234,7 +234,7 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
 	..()
 	new /obj/effect/particle_effect/smoke(get_turf(user))
-	SSticker.musketsshot++
+	SSticker.muskshots++
 
 /obj/item/ammo_box/magazine/internal/shot/musk
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet

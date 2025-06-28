@@ -15,12 +15,18 @@ SUBSYSTEM_DEF(persistence)
 	var/list/obj/structure/sign/picture_frame/photo_frames
 	var/list/obj/item/storage/photo_album/photo_albums
 
+	var/cached_deaths = 0
+	var/cached_muskshots = 0
+	var/cached_grenz_wins = 0
+	var/cached_heart_wins = 0
+
 /datum/controller/subsystem/persistence/Initialize()
 	LoadPoly()
 	LoadChiselMessages()
 	LoadTrophies()
 	LoadRecentModes()
 	LoadPhotoPersistence()
+	LoadCachedStats()
 	if(CONFIG_GET(flag/use_antag_rep))
 		LoadAntagReputation()
 	LoadRandomizedRecipes()
@@ -104,6 +110,18 @@ SUBSYSTEM_DEF(persistence)
 		return
 	saved_modes = json["data"]
 
+/datum/controller/subsystem/persistence/proc/LoadCachedStats()
+	var/json_file = file("data/TotalStatistics.json")
+	if(!fexists(json_file))
+		return
+	var/list/json = json_decode(file2text(json_file))
+	if(!json)
+		return
+	cached_deaths = json["deaths"]
+	cached_muskshots = json["muskshots"]
+	cached_grenz_wins = json["grenz_wins"]
+	cached_heart_wins = json["heart_wins"]
+
 /datum/controller/subsystem/persistence/proc/LoadAntagReputation()
 	var/json = file2text(FILE_ANTAG_REP)
 	if(!json)
@@ -144,6 +162,7 @@ SUBSYSTEM_DEF(persistence)
 	CollectChiselMessages()
 	CollectTrophies()
 	CollectRoundtype()
+	CollectStats()
 	SavePhotoPersistence()						//THIS IS PERSISTENCE, NOT THE LOGGING PORTION.
 	if(CONFIG_GET(flag/use_antag_rep))
 		CollectAntagReputation()
@@ -267,6 +286,25 @@ SUBSYSTEM_DEF(persistence)
 	var/json_file = file("data/RecentModes.json")
 	var/list/file_data = list()
 	file_data["data"] = saved_modes
+	fdel(json_file)
+	WRITE_FILE(json_file, json_encode(file_data))
+
+/datum/controller/subsystem/persistence/proc/CollectStats()
+	var/json_file = file("data/TotalStatistics.json")
+	var/list/file_data = list()
+	file_data["deaths"] = SSticker.deaths + cached_deaths
+	file_data["muskshots"] = SSticker.muskshots + cached_muskshots
+
+	if(istype(SSticker.mode, /datum/game_mode/warfare))
+		var/datum/game_mode/warfare/C = SSticker.mode
+		switch(C.whowon)
+			if(BLUE_WARTEAM)
+				file_data["grenz_wins"] = cached_grenz_wins++
+				file_data["heart_wins"] = cached_heart_wins
+			if(RED_WARTEAM)
+				file_data["heart_wins"] = cached_heart_wins++
+				file_data["grenz_wins"] = cached_grenz_wins
+
 	fdel(json_file)
 	WRITE_FILE(json_file, json_encode(file_data))
 

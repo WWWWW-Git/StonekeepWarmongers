@@ -113,7 +113,7 @@
 	..()
 	QDEL_NULL(chambered)
 	//new /obj/effect/particle_effect/smoke(get_turf(user))
-	SSticker.musketsshot++
+	SSticker.muskshots++
 
 /obj/item/ammo_box/magazine/internal/shot/peter // petah.. the saiga is here.
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
@@ -222,7 +222,7 @@
 	..()
 	QDEL_NULL(chambered)
 	//new /obj/effect/particle_effect/smoke(get_turf(user))
-	SSticker.musketsshot++
+	SSticker.muskshots++
 	update_icon()
 
 // STUPID
@@ -320,7 +320,7 @@
 	..()
 	QDEL_NULL(chambered)
 	//new /obj/effect/particle_effect/smoke(get_turf(user))
-	SSticker.musketsshot++
+	SSticker.muskshots++
 
 /obj/item/gun/grenadelauncher/granata
 	name = "blunderelauncher"

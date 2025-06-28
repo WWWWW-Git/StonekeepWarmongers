@@ -1,7 +1,5 @@
 /proc/emoji_parse(text) //turns :ai: into an emoji in text.
 	. = text
-	if(!CONFIG_GET(flag/emojis))
-		return
 	var/static/list/emojis = icon_states(icon('icons/emoji.dmi'))
 	var/parsed = ""
 	var/pos = 1
@@ -15,9 +13,7 @@
 			search = findtext(text, ":", pos+1)
 			if(search)
 				emoji = lowertext(copytext(text, pos+1, search))
-//				var/datum/asset/spritesheet/sheet = get_asset_datum(/datum/asset/spritesheet/goonchat)
-				var/datum/asset/spritesheet/sheet
-				var/tag = sheet.icon_tag("emoji-[emoji]")
+				var/tag = "\icon[icon('icons/emoji.dmi', emoji)]"
 				if(tag)
 					parsed += tag
 					pos = search + 1
@@ -33,8 +29,6 @@
 
 /proc/emoji_sanitize(text) //cuts any text that would not be parsed as an emoji
 	. = text
-	if(!CONFIG_GET(flag/emojis))
-		return
 	var/static/list/emojis = icon_states(icon('icons/emoji.dmi'))
 	var/final = "" //only tags are added to this
 	var/pos = 1

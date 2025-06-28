@@ -63,7 +63,7 @@
 					else
 						sound2play = sound(pick('sound/vo/wc/felt/warcry_male1.ogg','sound/vo/wc/felt/warcry_male2.ogg','sound/vo/wc/felt/warcry_male3.ogg','sound/vo/wc/felt/warcry_male4.ogg'))
 				else
-					if(prob(1))
+					if(prob(10))
 						sound2play = sound('sound/vo/wc/felt/warcry_female_rare1.ogg','sound/vo/wc/felt/warcry_female_rare2.ogg')
 					else
 						sound2play = sound(pick('sound/vo/wc/felt/warcry_female1.ogg','sound/vo/wc/felt/warcry_female2.ogg','sound/vo/wc/felt/warcry_female3.ogg'))
@@ -75,7 +75,7 @@
 					else
 						sound2play = sound(pick('sound/vo/wc/gren/warcry_male1.ogg','sound/vo/wc/gren/warcry_male2.ogg','sound/vo/wc/gren/warcry_male3.ogg','sound/vo/wc/gren/warcry_male4.ogg'))
 				else
-					if(prob(1))
+					if(prob(10))
 						sound2play = sound('sound/vo/wc/gren/warcry_female_rare1.ogg','sound/vo/wc/gren/warcry_female_rare2.ogg')
 					else
 						sound2play = sound(pick('sound/vo/wc/gren/warcry_female1.ogg','sound/vo/wc/gren/warcry_female2.ogg','sound/vo/wc/gren/warcry_female3.ogg'))

@@ -385,7 +385,7 @@
 /datum/controller/subsystem/ticker/proc/stats_report()
 	var/list/shit = list()
 	shit += "<br><span class='bold'>Δ--------------------Δ</span><br>"
-	shit += "<br><font color='#d4ff00'><span class='bold'>Weapons Shot:</span></font> [musketsshot]"
+	shit += "<br><font color='#d4ff00'><span class='bold'>Weapons Shot:</span></font> [muskshots]"
 	shit += "<br><font color='#680000'><span class='bold'>Heartfelt Deaths:</span></font> [heartfelt_deaths]"
 	shit += "<br><font color='#001a68'><span class='bold'>Grenzelhoft Deaths:</span></font> [grenzelhoft_deaths]"
 	shit += "<br><font color='#000000'><span class='bold'>Total Deaths:</span></font> [deaths]"
@@ -785,16 +785,3 @@
 				return
 			qdel(query_update_everything_ranks)
 		qdel(query_check_everything_ranks)
-
-/world/Reboot(reason = 0, fast_track = FALSE)
-	var/round_end_sound = pick('sound/roundend/mildenjoymentofwar.ogg',
-	'sound/roundend/abattlewon.ogg',
-	'sound/roundend/thatssoldiering.ogg',
-	'sound/roundend/nevermeetagain.ogg',
-	'sound/roundend/thiswarsgonnaend.ogg',
-	'sound/roundend/war.ogg')
-
-	for(var/client/thing in GLOB.clients)
-		if(!thing)
-			continue
-		thing << sound(round_end_sound)
