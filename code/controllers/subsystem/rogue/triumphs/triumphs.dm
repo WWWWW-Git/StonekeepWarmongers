@@ -238,8 +238,7 @@ SUBSYSTEM_DEF(triumphs)
 	if(fexists(leaderboard_file))
 		fdel(leaderboard_file)
 	WRITE_FILE(leaderboard_file, json_encode(triumph_leaderboard))
-
-
+	SSpersistence.CollectData()
 
 // Adjust triumphs
 /datum/controller/subsystem/triumphs/proc/triumph_adjust(amt, target_ckey)

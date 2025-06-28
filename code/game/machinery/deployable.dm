@@ -106,7 +106,7 @@
 	desc = "Bags of sand meant to cover your sorry face."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "sandbags"
-	max_integrity = 50
+	max_integrity = 150
 	proj_pass_rate = 15
 	layer = ABOVE_MOB_LAYER
 	plane = GAME_PLANE_UPPER
@@ -136,7 +136,7 @@
 			return !density
 	return 1
 
-/obj/structure/barricade/sandbags/rogue/obj_break(damage_flag)
+/obj/structure/barricade/sandbags/rogue/obj_destruction(damage_flag)
 	new /obj/item/rogue/sandbagkit(get_turf(src))
 	. = ..()
 

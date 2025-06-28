@@ -114,7 +114,7 @@ SUBSYSTEM_DEF(persistence)
 	var/json_file = file("data/TotalStatistics.json")
 	if(!fexists(json_file))
 		return
-	var/list/json = json_decode(file2text(json_file))
+	var/list/json = json_decode(json_file)
 	if(!json)
 		return
 	cached_deaths = json["deaths"]
@@ -299,10 +299,10 @@ SUBSYSTEM_DEF(persistence)
 		var/datum/game_mode/warfare/C = SSticker.mode
 		switch(C.whowon)
 			if(BLUE_WARTEAM)
-				file_data["grenz_wins"] = cached_grenz_wins++
+				file_data["grenz_wins"] = ++cached_grenz_wins
 				file_data["heart_wins"] = cached_heart_wins
 			if(RED_WARTEAM)
-				file_data["heart_wins"] = cached_heart_wins++
+				file_data["heart_wins"] = ++cached_heart_wins
 				file_data["grenz_wins"] = cached_grenz_wins
 
 	fdel(json_file)

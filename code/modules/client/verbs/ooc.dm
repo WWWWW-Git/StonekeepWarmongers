@@ -366,13 +366,13 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	var/list/json = json_decode(file2text(json_file))
 	
 	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
-	contents += "<center>BATTLE-WIDE STATISTICS<BR>"
+	contents += "<center><b>BATTLE-WIDE STATISTICS</b><BR>"
 	contents += "<center>A.K.A, ARE WE WINNING?<BR>"
 	contents += "--------------</center><BR>"
-	contents += "TOTAL DEATHS: [json["deaths"]]<BR>"
-	contents += "TOTAL SHOTS FIRED: [json["muskshots"]]<BR>"
-	contents += "GRENZELHOFT VICTORIES: [json["grenz_wins"]]<BR>"
-	contents += "HEARTFELT VICTORIES: [json["heart_wins"]]<BR>"
+	contents += "<b>TOTAL DEATHS:</b> [json["deaths"]]<BR>"
+	contents += "<b>TOTAL SHOTS FIRED:</b> [json["muskshots"]]<BR>"
+	contents += "<b>GRENZELHOFT VICTORIES:</b> [json["grenz_wins"]]<BR>"
+	contents += "<b>HEARTFELT VICTORIES:</b> [json["heart_wins"]]<BR>"
 	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
 	popup.set_content(contents)
 	popup.open()
