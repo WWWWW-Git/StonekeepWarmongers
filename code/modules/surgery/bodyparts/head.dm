@@ -73,7 +73,8 @@
 	teeth = new /obj/item/stack/teeth/full(src)
 
 /obj/item/bodypart/head/proc/knock_out_teeth(throw_dir, num=24)
-	num = CLAMP(num, 1, 24)
+	num = CLAMP(num, 1, teeth.amount)
+	SSticker.lostteeth += num
 	var/done = FALSE
 	if(teeth && !teeth.zero_amount()) //We still have teeth
 		for(var/d = 1 to num) //Random amount of teeth
@@ -324,7 +325,7 @@
 	if(icon_state_variation >= 1)
 		icon_state = "[base_icon_state]_[rand(1, icon_state_variation)]"
 
-/obj/item/stack/teeth/proc/do_knock_out_animation(shrink_time = 5)
+/obj/item/stack/teeth/proc/do_knock_out_animation(shrink_time = 2)
 	shrink_time = rand(1, shrink_time)
 	var/old_transform = matrix(transform)
 	transform = transform.Scale(2, 2)

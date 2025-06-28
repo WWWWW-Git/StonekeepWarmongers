@@ -115,12 +115,12 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 	else
 		final_message = replacetext(final_message, "%BODYPART", parse_zone(BODY_ZONE_CHEST))
 	if(critical)
-		final_message = "<span class='crit'><b>Critical hit!</b> [final_message]</span>"
+		final_message = "<span class='crit'>[final_message]</span>"
 	return final_message
 
 /// Sound that plays when this wound is applied to a mob
 /datum/wound/proc/get_sound_effect(mob/living/affected, obj/item/bodypart/affected_bodypart)
-	if(critical && prob(3))
+	if(critical && prob(10))
 		return 'sound/combat/tf2crit.ogg'
 	return pick(sound_effect)
 

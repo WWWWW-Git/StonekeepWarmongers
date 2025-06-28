@@ -304,13 +304,6 @@
 /turf/closed/wall/mineral/rogue/decostone/long
 	icon_state = "decostone-l"
 
-/obj/structure/warobjective/warthronething
-	name = "stone wall"
-	icon = 'icons/turf/roguewall.dmi'
-	max_integrity = 0
-	opacity = 0
-	icon_state = "decostone-l"
-
 /turf/closed/wall/mineral/rogue/decostone/center
 	icon_state = "decostone-c"
 
