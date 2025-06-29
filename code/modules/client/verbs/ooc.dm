@@ -366,13 +366,16 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	var/list/json = json_decode(file2text(json_file))
 	
 	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
-	contents += "<center><b>BATTLE-WIDE STATISTICS</b><BR>"
-	contents += "<center>A.K.A, ARE WE WINNING?<BR>"
-	contents += "--------------</center><BR>"
+	contents += "<center>"
+	contents += "<b>BATTLE-WIDE STATISTICS</b><BR>"
+	contents += "A.K.A, ARE WE WINNING?<BR>"
+	contents += "--------------<BR>"
+	contents += "</center>"
 	contents += "<b>TOTAL DEATHS:</b> [json["deaths"]]<BR>"
 	contents += "<b>TOTAL SHOTS FIRED:</b> [json["muskshots"]]<BR>"
 	contents += "<b>GRENZELHOFT VICTORIES:</b> [json["grenz_wins"]]<BR>"
 	contents += "<b>HEARTFELT VICTORIES:</b> [json["heart_wins"]]<BR>"
+	contents += "<b>MOST TRIUMPHANT SOLDIER: [SStriumphs.triumph_leaderboard[1]]</b> "
 	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
 	popup.set_content(contents)
 	popup.open()
@@ -383,7 +386,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	var/contents
 
 	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
-	contents += "<center>Drill Sergeant Cockbottom's Basic Combat Training<BR>"
+	contents += "<center>Drill Sergeant Dornan's Basic Combat Training<BR>"
 	contents += "--------------</center><BR>"
 	contents += "Headshots most of the time do not deal lethal damage. If you hit a headshot as an untrained marksman, you will only knock the person's helmet off and cause some blunt force trauma. This rarely results in death by itself. If the target is not wearing a helmet or any other kind of headwear they will die instantly and you'll feel accoomplished. Another way to kill your opponent is to bayonet charge them. Wield your barksteel, change to STAB intent and RUN into your opponent. If you ever happen to be in the situation where you are the person being charged, switch to SNEAK intent to suplex the weapon out of their hands."
 	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)

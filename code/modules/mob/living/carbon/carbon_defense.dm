@@ -115,10 +115,11 @@
 				new /obj/effect/gibspawner/generic(get_turf(src))
 				if(ishuman(P.firer))
 					var/mob/living/carbon/human/H = P.firer
+					H.adjust_triumphs(1)
 					if(H.client?.hasPerk(/datum/warperk/headhunter))
 						gib()
-						user.playsound_local(get_turf(user), 'sound/misc/notice.ogg')
-						to_chat(user, "<span class='info'>ᛉ PERK ACTIVATED.</span>")
+						H.playsound_local(get_turf(H), 'sound/misc/notice.ogg')
+						to_chat(H, "<span class='info'>ᛉ PERK ACTIVATED.</span>")
 			flash_color(client, flash_color = "#af0000ff", flash_time = 3 SECONDS)
 			if(hud_used)
 				var/matrix/skew = matrix()

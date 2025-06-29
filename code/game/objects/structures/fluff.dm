@@ -312,6 +312,12 @@
 	w_class = WEIGHT_CLASS_BULKY
 	drag_slowdown = 2
 
+/obj/structure/fluff/explodabarrel/onkick(mob/user)
+	. = ..()
+	var/turf/target = get_ranged_target_turf(src, get_dir(user, src), 5)
+	throw_at(target, 5, 2, user, FALSE)
+	visible_message("<span class='notice'>[src] rolls towards \the [target]!</span>")
+
 /obj/structure/fluff/explodabarrel/bullet_act(obj/projectile/P)
 	boom()
 
