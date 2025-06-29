@@ -38,18 +38,23 @@
 	playsound(C, pick(dismemsound), 50, FALSE, -1)
 	if(body_zone == BODY_ZONE_HEAD)
 		C.visible_message("<span class='danger'><B>[C] is [pick("BRUTALLY","VIOLENTLY","BLOODILY","MESSILY")] DECAPITATED!</B></span>")
+		if(user.client)
+			if(user.client?.hasPerk(/datum/warperk/brutalist))
+				user.STASPD += 1
+				user.playsound_local(get_turf(user), 'sound/misc/notice.ogg')
+				to_chat(user, "<span class='info'>ᛉ PERK ACTIVATED.</span>")
 	else
 		C.visible_message("<span class='danger'><B>The [src.name] is [pick("torn off", "sundered", "severed", "seperated", "unsewn")]!</B></span>")
 		C.emote("painscream")
+	
 	if(aspect_chosen(/datum/round_aspect/halo))
 		playsound(C, 'sound/vo/halo/decap.mp3', 100, FALSE, -1)
 
-	if(user.client)
-		if(user.client?.hasPerk(/datum/warperk/brutalist))
-			user.STASPD += 1
 	if(C.client)
 		if(C.client?.hasPerk(/datum/warperk/masochist))
-			user.STASTR += 4
+			C.STASTR += 4
+			C.playsound_local(get_turf(C), 'sound/misc/notice.ogg')
+			to_chat(C, "<span class='info'>ᛉ PERK ACTIVATED.</span>")
 
 	var/obj/effect/temp_visual/bloodmist/BM = new(get_turf(C))
 	animate(BM, transform = matrix()*2, alpha = 0, time = 6) // looks cool

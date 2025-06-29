@@ -107,6 +107,8 @@
 							HU.add_stress(/datum/stressevent/viewdeath)
 				if(client?.hasPerk(/datum/warperk/saint))
 					HU.apply_status_effect(/datum/status_effect/buff/saint)
+					HU.playsound_local(get_turf(HU), 'sound/misc/notice.ogg')
+					to_chat(HU, "<span class='info'>ᛉ A SAINT HAS DIED.</span>")
 
 	. = ..()
 
