@@ -43,10 +43,13 @@
 		C.emote("painscream")
 	if(aspect_chosen(/datum/round_aspect/halo))
 		playsound(C, 'sound/vo/halo/decap.mp3', 100, FALSE, -1)
-	if(user.client?.hasPerk(/datum/warperk/brutalist))
-		user.STASPD += 1
-	if(C.client?.hasPerk(/datum/warperk/brutalist))
-		user.STASTR += 4
+
+	if(user.client)
+		if(user.client?.hasPerk(/datum/warperk/brutalist))
+			user.STASPD += 1
+	if(C.client)
+		if(C.client?.hasPerk(/datum/warperk/masochist))
+			user.STASTR += 4
 
 	var/obj/effect/temp_visual/bloodmist/BM = new(get_turf(C))
 	animate(BM, transform = matrix()*2, alpha = 0, time = 6) // looks cool

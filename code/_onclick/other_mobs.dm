@@ -274,7 +274,7 @@
 						src.do_attack_animation(M, visual_effect_icon = src.used_intent.animname)
 						playsound(src, pick(PUNCHWOOSH), 100, FALSE, -1)
 
-						sleep(src.used_intent.swingdelay)
+						//sleep(src.used_intent.swingdelay)
 						if(QDELETED(src) || QDELETED(M))
 							return
 						if(!M.Adjacent(src))
@@ -308,9 +308,6 @@
 				if(IsOffBalanced())
 					to_chat(src, "<span class='warning'>I haven't regained my balance yet.</span>")
 					return
-				if(lying)
-					to_chat(src, "<span class='warning'>I should stand up first.</span>")
-					return
 				if(!ismob(A) && !isturf(A))
 					return
 				if(A.z != src.z)
@@ -318,14 +315,17 @@
 						return
 				changeNext_move(mmb_intent.clickcd)
 				face_atom(A)
-				if(m_intent == MOVE_INTENT_RUN)
-					emote("leap", forced = TRUE)
+				if(lying)
+					visible_message("[src] rolls out of the way!")
 				else
-					emote("jump", forced = TRUE)
+					if(m_intent == MOVE_INTENT_RUN)
+						emote("leap", forced = TRUE)
+					else
+						emote("jump", forced = TRUE)
 				var/jadded
 				var/jrange
 				var/jextra = FALSE
-				if(m_intent == MOVE_INTENT_RUN)
+				if(m_intent == MOVE_INTENT_RUN && !lying)
 					OffBalance(5)
 					jadded = 15
 					jrange = 3
@@ -340,7 +340,7 @@
 					if(!H.check_armor_skill())
 						jadded += 50
 						jrange = 1
-				if(client.hasPerk(/datum/warperk/athlete))
+				if(client?.hasPerk(/datum/warperk/athlete))
 					jadded = jadded/2
 				if(rogfat_add(min(jadded,100)))
 					if(jextra)

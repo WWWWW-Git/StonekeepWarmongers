@@ -292,9 +292,17 @@
 
 /obj/structure/shopkeep/attack_hand(mob/user)
 	. = ..()
+	if(!ishuman(user))
+		say("FUCK YOU! YOU'RE JUST AN ANIMAL, FIEND!")
+		playsound(src, 'sound/misc/machineno.ogg', 50, FALSE)
+		return
 	if(leaving)
 		to_chat(user, "<span class='warning'>NO! NO! I FORGOT TO GET MY CHANGE! NOOOOOOOOO!</span>")
 		user.playsound_local(src, 'sound/misc/zizo.ogg', 50, FALSE)
+		return
+	if(user.client.equippedPerk.type != /datum/warperk)
+		say("SORRY! YOU ARE ALREADY EMPOWERED!")
+		playsound(src, 'sound/misc/machinetalk.ogg', 50, FALSE)
 		return
 	playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
 
@@ -313,5 +321,6 @@
 				return
 			user.adjust_triumphs(-WP.cost)
 			user.client.equippedPerk = WP
+			user.client.equippedPerk.apply(user)
 			say("THANK YOU FOR SHOPPING WITH US TODAE!")
 			playsound(src, 'sound/misc/machinetalk.ogg', 50, FALSE)

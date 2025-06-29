@@ -1,6 +1,6 @@
 /datum/warperk
 	var/name = "Ordinary Person"
-	var/desc = "I'm just a regular guy. I'll gain an extra TRIUMPH if my team wins."
+	var/desc = "I'm just a regular guy. I'll gain a TRIUMPH if my team wins."
 	var/cost = 0
 
 /datum/warperk/proc/apply(var/mob/living/carbon/human/H) // for special shit ig
@@ -37,7 +37,7 @@
 
 /datum/warperk/headhunter
 	name = "Headhunter"
-	desc = "Dealing a killing blow via headshot makes your target explode into giblets."
+	desc = "Dealing a killing blow via headshot makes your target explode into giblets. Quaking, isn't it?"
 	cost = 1
 
 // 5-10 tri

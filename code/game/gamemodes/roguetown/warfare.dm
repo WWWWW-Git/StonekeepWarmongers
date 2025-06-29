@@ -43,7 +43,8 @@
 		for(var/client/C in grenzels)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
-				H.adjust_triumphs(1)
+				if(H.client?.equippedPerk.type == /datum/warperk)
+					H.adjust_triumphs(1)
 				H << sound(null) // Stop all sounds
 				SEND_SOUND(H, 'sound/vo/wc/gren/grenzvictory.ogg')
 				sleep(30)
@@ -59,7 +60,8 @@
 		for(var/client/C in heartfelts)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
-				H.adjust_triumphs(1)
+				if(H.client?.equippedPerk.type == /datum/warperk)
+					H.adjust_triumphs(1)
 				H << sound(null) // Stop all sounds
 				SEND_SOUND(H, 'sound/vo/wc/felt/heartvictory.ogg')
 				sleep(30)

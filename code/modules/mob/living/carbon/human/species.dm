@@ -1790,7 +1790,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 //				user.do_attack_animation(target, ATTACK_EFFECT_PUNCH)
 
 		var/cached_intent = user.used_intent
-		sleep(user.used_intent.swingdelay)
+		//sleep(user.used_intent.swingdelay)
 		if(user.a_intent != cached_intent)
 			return FALSE
 		if(!target.Adjacent(user))
@@ -2275,7 +2275,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/easy_dismember = HAS_TRAIT(H, TRAIT_EASYDISMEMBER) || affecting.rotted
 	if(prob(probability) || (easy_dismember && prob(probability))) //try twice
 		if(affecting.brute_dam > 0)
-			if(affecting.dismember(I.damtype, selzone))
+			if(affecting.dismember(I.damtype, selzone, user))
 				bloody = 1
 				I.add_mob_blood(H)
 				user.update_inv_hands()

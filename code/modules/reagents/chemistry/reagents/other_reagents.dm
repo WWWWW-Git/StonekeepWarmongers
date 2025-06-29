@@ -26,7 +26,7 @@
 	if(iscarbon(L))
 		var/mob/living/carbon/C = L
 		C.blood_volume = min(C.blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM)
-		if(C.client.hasPerk(/datum/warperk/vampire))
+		if(C.client?.hasPerk(/datum/warperk/vampire))
 			C.reagents.add_reagent(/datum/reagent/medicine/healthpot, 20)	
 
 /datum/reagent/blood/on_new(list/data)

@@ -135,7 +135,7 @@
 							shoutbubble()
 						else
 							emote("painscream")
-							if(client.hasPerk(/datum/warperk/madness))
+							if(client?.hasPerk(/datum/warperk/madness))
 								reagents.add_reagent(/datum/reagent/medicine/healthpot, 15)
 						Jitter(10)
 						stuttering += 5

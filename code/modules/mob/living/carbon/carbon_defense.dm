@@ -115,7 +115,7 @@
 				new /obj/effect/gibspawner/generic(get_turf(src))
 				if(ishuman(P.firer))
 					var/mob/living/carbon/human/H = P.firer
-					if(H.client.hasPerk(/datum/warperk/headhunter))
+					if(H.client?.hasPerk(/datum/warperk/headhunter))
 						gib()
 			flash_color(client, flash_color = "#af0000ff", flash_time = 3 SECONDS)
 			if(hud_used)
