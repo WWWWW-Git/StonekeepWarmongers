@@ -1,12 +1,9 @@
-{
-	
+{	
     "universal": {
 		"friday": "freysdae",
 		"saturday": "satursdae",
 		"sunday": "sunsdae",
 		"monday": "moonsdae",
-		"jesus": "divine",
-		"christ": "gods",
 		"colour": "color",
 		"armour": "armor",
 		"humour": "humor",
@@ -44,8 +41,14 @@
 		"adonai": "psydon",
 		"praise psydon": "Mourn the Weeper",
 		"cuck": "wittol",
-		"shylock": "Miester"
+		"shylock": "Miester",
+		"musket": "barksteel",
+		"pistol": "barkiron",
+		"repeater": "levershot",
+		"revolver": "revolleyer",
+		"gunpowder": "barkpowder",
+		"gun": "barkenweapon",
+		"flintlock": "flientlocke",
+		"the ten": "the dead gods"
 		}
-	
-	
 }
