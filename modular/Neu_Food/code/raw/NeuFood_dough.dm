@@ -252,8 +252,8 @@
 	eat_effect = null
 
 /obj/item/reagent_containers/food/snacks/rogue/crackerscooked
-	name = "hardtack"
-	desc = "Very, very hard and dry."
+	name = "knaeckebrot" // boom 4001
+	desc = "A staple of the Grenzelhoftian military diet. Adopted by many militaries around the world because it's easy to make and never spoils along with it having nutritional value!"
 	icon_state = "tack6"
 	list_reagents = list(/datum/reagent/consumable/nutriment = DOUGH_NUTRITION)
 	w_class = WEIGHT_CLASS_NORMAL
