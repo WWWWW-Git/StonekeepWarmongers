@@ -324,3 +324,7 @@
 			user.client.equippedPerk.apply(user)
 			say("THANK YOU FOR SHOPPING WITH US TODAE!")
 			playsound(src, 'sound/misc/machinetalk.ogg', 50, FALSE)
+
+/obj/structure/warobjective/cfour
+	name = "\improper grand orb"
+	desc = "A relic of a former age. It hums with unstable magick."
