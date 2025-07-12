@@ -20,7 +20,6 @@
 		if(C.silent || !C.can_speak())
 			message = "makes a noise. Tears stream down their face."
 
-
 /datum/emote/living/carbon/human/sexmoanlight
 	key = "sexmoanlight"
 	emote_type = EMOTE_AUDIBLE
@@ -133,6 +132,8 @@
 	. = ..()
 	if(. && iscarbon(user))
 		var/mob/living/carbon/human/H = user
+		ping_sound(H)
+		playsound(get_turf(H), 'sound/misc/salute.ogg', 50, TRUE, -1)
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
 				message = "puts a hand to their heart!"

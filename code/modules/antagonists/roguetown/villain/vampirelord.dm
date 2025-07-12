@@ -213,7 +213,12 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		return INITIALIZE_HINT_QDEL
 		
 	W.redcrown = src
+	START_PROCESSING(SSobj, src)
 	set_light(3, 5, CLOTHING_HEARTFELT)
+
+/obj/item/clothing/head/roguetown/crownred/process()
+	spawn(rand(1,5))
+		sparkle()
 
 /obj/item/clothing/head/roguetown/crownblu
 	name = "crown of the Grenzelhofts"
@@ -232,7 +237,12 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		return INITIALIZE_HINT_QDEL
 
 	W.blucrown = src
+	START_PROCESSING(SSobj, src)
 	set_light(3, 5, CLOTHING_BLUE)
+
+/obj/item/clothing/head/roguetown/crownblu/process()
+	spawn(rand(1,5))
+		sparkle()
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/iron/vampire
 	icon_state = "vunder"

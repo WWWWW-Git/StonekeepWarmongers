@@ -317,7 +317,7 @@ GLOBAL_VAR(restart_counter)
 /world/proc/update_status()
 	var/datum/game_mode/warfare/W = SSticker.mode
 	var/s = ""
-	s += "<center><a href=\"https://discord.gg/stonekeep\">"
+	s += "<center><a href=\"https://discord.gg/KMq9VGEuXx\">"
 	s += "<big><b>WARMONGERS</b></big></a><br>"
 	s += "<b>Fantasy PvP Musket-based Top-down Shooter<b><br>"
 

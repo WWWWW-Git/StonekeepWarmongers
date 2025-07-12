@@ -122,27 +122,6 @@
 	spawn(rand(1,5))
 		sparkle()
 
-/obj/item/clothing/accessory/medal/proc/sparkle()
-	var/obj/effect/sparklysparkle/sparkle = new(get_turf(src))
-	sparkle.icon = 'icons/effects/effects.dmi'
-	sparkle.icon_state = "sparkle"
-
-	var/matrix/first = matrix()
-	sparkle.pixel_x += rand(-12, 12) // can be anywhere in the tile bounds
-	sparkle.pixel_y += rand(-12, 12)
-	first.Turn(rand(-90, 90))
-	first.Scale(0.1, 0.1)
-	sparkle.transform = first
-
-	first.Scale(10)
-	animate(sparkle, transform = first, time = 0.3 SECONDS, alpha = 150)
-
-	first.Scale(0.1 * 0.1)
-	first.Turn(rand(-90, 90))
-	animate(transform = first, time = 0.3 SECONDS)
-
-	QDEL_IN(sparkle, 1.5 SECONDS)
-
 //Pinning medals on people
 /obj/item/clothing/accessory/medal/attack(mob/living/carbon/human/M, mob/living/user)
 	if(ishuman(M))

@@ -87,7 +87,7 @@
 				B.explode(TRUE)
 				user.gib()
 
-	playsound(user, sound2play, 60, TRUE, -2, ignore_walls = FALSE, vary = FALSE)
+	playsound(user, sound2play, 100, TRUE, -2, ignore_walls = FALSE, vary = FALSE)
 	user.shoutbubble()
 	ping_sound(user)
     

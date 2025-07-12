@@ -1072,6 +1072,26 @@ GLOBAL_LIST_INIT(freon_color_matrix, list("#2E5E69", "#60A2A8", "#A1AFB1", rgb(0
 		alpha += 25
 		obj_flags &= ~FROZEN
 
+/obj/proc/sparkle()
+	var/obj/effect/sparklysparkle/sparkle = new(get_turf(src))
+	sparkle.icon = 'icons/effects/effects.dmi'
+	sparkle.icon_state = "sparkle"
+
+	var/matrix/first = matrix()
+	sparkle.pixel_x += rand(-12, 12) // can be anywhere in the tile bounds
+	sparkle.pixel_y += rand(-12, 12)
+	first.Turn(rand(-90, 90))
+	first.Scale(0.1, 0.1)
+	sparkle.transform = first
+
+	first.Scale(10)
+	animate(sparkle, transform = first, time = 0.3 SECONDS, alpha = 150)
+
+	first.Scale(0.1 * 0.1)
+	first.Turn(rand(-90, 90))
+	animate(transform = first, time = 0.3 SECONDS)
+
+	QDEL_IN(sparkle, 1.5 SECONDS)
 
 //Converts an icon to base64. Operates by putting the icon in the iconCache savefile,
 // exporting it as text, and then parsing the base64 from that.
