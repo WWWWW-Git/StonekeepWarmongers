@@ -22,90 +22,15 @@
 			mmi.brainmob.suiciding = suicide_state
 
 /mob/living/carbon/human/verb/suicide()
-	set hidden = 1
-	if(!usr.client.holder)
-		return
-	if(!canSuicide())
-		return
-	var/oldkey = ckey
-	var/confirm = alert("Are you sure you want to commit suicide?", "Confirm Suicide", "Yes", "No")
-	if(ckey != oldkey)
-		return
-	if(!canSuicide())
-		return
-	if(confirm == "Yes")
-		set_suicide(TRUE) //need to be called before calling suicide_act as fuck knows what suicide_act will do with your suicider
-		var/obj/item/held_item = get_active_held_item()
-		if(held_item)
-			var/damagetype = held_item.suicide_act(src)
-			if(damagetype)
-				if(damagetype & SHAME)
-					adjustStaminaLoss(200)
-					set_suicide(FALSE)
-					SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "shameful_suicide", /datum/mood_event/shameful_suicide)
-					return
-
-				if(damagetype & MANUAL_SUICIDE_NONLETHAL) //Make sure to call the necessary procs if it does kill later
-					set_suicide(FALSE)
-					return
-
-				suicide_log()
-
-				var/damage_mod = 0
-				for(var/T in list(BRUTELOSS, FIRELOSS, TOXLOSS, OXYLOSS))
-					damage_mod += (T & damagetype) ? 1 : 0
-				damage_mod = max(1, damage_mod)
-
-				//Do 200 damage divided by the number of damage types applied.
-				if(damagetype & BRUTELOSS)
-					adjustBruteLoss(200/damage_mod)
-
-				if(damagetype & FIRELOSS)
-					adjustFireLoss(200/damage_mod)
-
-				if(damagetype & TOXLOSS)
-					adjustToxLoss(200/damage_mod)
-
-				if(damagetype & OXYLOSS)
-					adjustOxyLoss(200/damage_mod)
-
-				if(damagetype & MANUAL_SUICIDE)	//Assume the object will handle the death.
-					return
-
-				//If something went wrong, just do normal oxyloss
-				if(!(damagetype & (BRUTELOSS | FIRELOSS | TOXLOSS | OXYLOSS) ))
-					adjustOxyLoss(max(200 - getToxLoss() - getFireLoss() - getBruteLoss() - getOxyLoss(), 0))
-
-				death(FALSE)
-
-				return
-
-		var/suicide_message
-
-		if(used_intent.type == INTENT_DISARM)
-			suicide_message = pick("[src] is attempting to push [p_their()] own head off [p_their()] shoulders! It looks like [p_theyre()] trying to commit suicide.", \
-								"[src] is pushing [p_their()] thumbs into [p_their()] eye sockets! It looks like [p_theyre()] trying to commit suicide.", \
-								"[src] is ripping [p_their()] own arms off! It looks like [p_theyre()] trying to commit suicide.")//heheh get it?
-		if(used_intent.type == INTENT_GRAB)
-			suicide_message = pick("[src] is attempting to pull [p_their()] own head off! It looks like [p_theyre()] trying to commit suicide.", \
-									"[src] is aggressively grabbing [p_their()] own neck! It looks like [p_theyre()] trying to commit suicide.", \
-									"[src] is pulling [p_their()] eyes out of their sockets! It looks like [p_theyre()] trying to commit suicide.")
-		if(used_intent.type == INTENT_HELP)
-			suicide_message = pick("[src] is hugging [p_them()]self to death! It looks like [p_theyre()] trying to commit suicide.", \
-									"[src] is high-fiving [p_them()]self to death! It looks like [p_theyre()] trying to commit suicide.", \
-									"[src] is getting too high on life! It looks like [p_theyre()] trying to commit suicide.")
-		else
-			suicide_message = pick("[src] is attempting to bite [p_their()] tongue off! It looks like [p_theyre()] trying to commit suicide.", \
-								"[src] is jamming [p_their()] thumbs into [p_their()] eye sockets! It looks like [p_theyre()] trying to commit suicide.", \
-								"[src] is twisting [p_their()] own neck! It looks like [p_theyre()] trying to commit suicide.", \
-								"[src] is holding [p_their()] breath! It looks like [p_theyre()] trying to commit suicide.")
-
-		visible_message("<span class='danger'>[suicide_message]</span>", "<span class='danger'>[suicide_message]</span>")
-
-		suicide_log()
-
-		adjustOxyLoss(max(200 - getToxLoss() - getFireLoss() - getBruteLoss() - getOxyLoss(), 0))
-		death(FALSE)
+	set name = "Suicide"
+	set category = "Emotes"
+	var/usure = alert(src, "You sure?", "WARMONGERS", "Yes", "No")
+	if(usure == "Yes")
+		var/areusure = alert(src, "Are you sure?", "STUPID REFERENCE MONGERS", "Pretty sure", "Threw a trashbag", "Into space")
+		if(areusure == "Pretty sure")
+			say("IT JUST AINT WORTH IT!")
+			spawn(20)
+				gib(TRUE)
 
 /mob/living/brain/verb/suicide()
 	set hidden = 1

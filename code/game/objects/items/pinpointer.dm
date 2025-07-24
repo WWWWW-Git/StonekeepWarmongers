@@ -201,11 +201,11 @@
 	var/team
 
 /obj/item/pinpointer/crown/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/clothing/head/roguetown/crownblu))
+	if(istype(I, /obj/item/clothing/head/roguetown/warmongers/crownblu))
 		team = BLUE_WARTEAM
 		say("I HAVE ACQUIRED THE SMELL OF THE GRENZELHOFTS. TRACKING HEARTFELT SCUM'S CROWN!")
 		playsound(src, 'sound/misc/machinetalk.ogg', 50, TRUE)
-	if(istype(I, /obj/item/clothing/head/roguetown/crownred))
+	if(istype(I, /obj/item/clothing/head/roguetown/warmongers/crownred))
 		team = RED_WARTEAM
 		say("I HAVE ACQUIRED THE SMELL OF THE HEARTFELTS. TRACKING GRENZELHOFT SCUM'S CROWN!")
 		playsound(src, 'sound/misc/machinetalk.ogg', 50, TRUE)

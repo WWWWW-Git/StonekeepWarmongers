@@ -55,6 +55,10 @@
 			W.obj_break()
 			throw_at(turfa, 4, 1, null, TRUE)
 
+	for(var/obj/item/clothing/head/roguetown/warmongers/WC in src)
+		to_chat(world, "<span class='info'>\The [WC] has been dropped.</span>")
+		doUnEquip(WC, FALSE, get_turf(src))
+
 	var/obj/item/IT = get_item_by_slot(ITEM_SLOT_BACK_L)
 	if(istype(IT, /obj/item/rogue/musicpack))
 		var/obj/item/rogue/musicpack/MP = IT

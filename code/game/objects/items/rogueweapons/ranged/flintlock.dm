@@ -47,6 +47,8 @@
 
 /obj/item/rogue/ramrod
 	name = "rod of ramming"
+	possible_item_intents = list(/datum/intent/use, /datum/intent/mace/heavy/strike)
+	force = 15
 	desc = ""
 	drop_sound = 'sound/combat/ramrod_pickup.ogg' // lol
 	icon = 'icons/roguetown/items/misc.dmi'

@@ -296,6 +296,58 @@
 /obj/item/clothing/head/roguetown/headband/red
 	color = CLOTHING_RED
 
+/obj/item/clothing/head/roguetown/warmongers
+	plane = GAME_PLANE_UPPER
+	layer = ABOVE_MOB_LAYER
+
+/obj/item/clothing/head/roguetown/warmongers/crownred
+	name = "crown of Heartfelt"
+	icon_state = "vcrown"
+	item_state = "vcrown"
+	w_class = WEIGHT_CLASS_HUGE
+	body_parts_covered = null
+	slot_flags = ITEM_SLOT_HEAD
+	dynamic_hair_suffix = null
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+
+/obj/item/clothing/head/roguetown/warmongers/crownred/Initialize()
+	. = ..()
+	var/datum/game_mode/warfare/W = SSticker.mode
+	if(W.redcrown) // I know this may look retarded or something, but I swear to god for some reason removing this makes crown teleporting not work. I'm KILLING myself
+		return INITIALIZE_HINT_QDEL
+		
+	W.redcrown = src
+	START_PROCESSING(SSobj, src)
+	set_light(3, 5, CLOTHING_HEARTFELT)
+
+/obj/item/clothing/head/roguetown/warmongers/crownred/process()
+	spawn(rand(1,5))
+		sparkle()
+
+/obj/item/clothing/head/roguetown/warmongers/crownblu
+	name = "crown of the Grenzelhofts"
+	icon_state = "vcrown_blu"
+	item_state = "vcrown_blu"
+	w_class = WEIGHT_CLASS_HUGE
+	body_parts_covered = null
+	slot_flags = ITEM_SLOT_HEAD
+	dynamic_hair_suffix = null
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+
+/obj/item/clothing/head/roguetown/warmongers/crownblu/Initialize()
+	. = ..()
+	var/datum/game_mode/warfare/W = SSticker.mode
+	if(W.blucrown) // I know this may look retarded or something, but I swear to god for some reason removing this makes crown teleporting not work. I'm KILLING myself
+		return INITIALIZE_HINT_QDEL
+
+	W.blucrown = src
+	START_PROCESSING(SSobj, src)
+	set_light(3, 5, CLOTHING_BLUE)
+
+/obj/item/clothing/head/roguetown/warmongers/crownblu/process()
+	spawn(rand(1,5))
+		sparkle()
+
 /obj/item/clothing/head/roguetown/crown/serpcrown
 	name = "crown of rockhill"
 	desc = ""

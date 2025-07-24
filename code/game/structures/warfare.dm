@@ -227,10 +227,10 @@
 			return // Gets rid of people farming triumphs
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
-				if(istype(H.head, /obj/item/clothing/head/roguetown/crownblu))
+				if(istype(H.head, /obj/item/clothing/head/roguetown/warmongers/crownblu))
 					C.do_war_end(H, RED_WARTEAM)
 			if(BLUE_WARTEAM)
-				if(istype(H.head, /obj/item/clothing/head/roguetown/crownred))
+				if(istype(H.head, /obj/item/clothing/head/roguetown/warmongers/crownred))
 					C.do_war_end(H, BLUE_WARTEAM)
 
 /obj/structure/warobjective/warthrone/post_unbuckle_mob(mob/living/M)

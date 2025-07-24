@@ -220,7 +220,7 @@
 	cloak = /obj/item/clothing/cloak/heartfelt
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(SSmapping.config.map_name == "LD-Bloodfort")
-		head = /obj/item/clothing/head/roguetown/crownred
+		head = /obj/item/clothing/head/roguetown/warmongers/crownred
 	if(!(findtext(H.real_name, " of ") || findtext(H.real_name, " the ")))
 		H.change_name("[H.real_name] [getlordtitle()]")
 	if(H.mind)
@@ -304,6 +304,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		H.change_stat("strength", 1)
 		H.change_stat("perception", 1)
@@ -717,7 +718,7 @@
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(SSmapping.config.map_name == "LD-Bloodfort")
 		cloak = /obj/item/clothing/cloak/half
-		head = /obj/item/clothing/head/roguetown/crownblu
+		head = /obj/item/clothing/head/roguetown/warmongers/crownblu
 	else
 		head = /obj/item/clothing/head/roguetown/commander
 	if(!(findtext(H.real_name, " of ") || findtext(H.real_name, " the ")))
@@ -1094,7 +1095,6 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
 		H.change_stat("perception", 4)
 		H.change_stat("strength", -3)
 		H.change_stat("endurance", -4)

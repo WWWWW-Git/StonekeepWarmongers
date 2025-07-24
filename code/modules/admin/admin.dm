@@ -771,7 +771,7 @@
 			if(!W.redcrown)
 				to_chat(usr, "No red crown!")
 				return
-			var/obj/item/clothing/head/roguetown/crownred/CR = W.redcrown
+			var/obj/item/clothing/head/roguetown/warmongers/crownred/CR = W.redcrown
 			if(ishuman(CR.loc))
 				var/mob/living/carbon/human/H = CR.loc
 				H.dropItemToGround(CR, TRUE)
@@ -783,7 +783,7 @@
 			if(!W.blucrown)
 				to_chat(usr, "No blu crown!")
 				return
-			var/obj/item/clothing/head/roguetown/crownblu/CB = W.blucrown
+			var/obj/item/clothing/head/roguetown/warmongers/crownblu/CB = W.blucrown
 			to_chat(usr, "[CB.loc]")
 			if(ishuman(CB.loc))
 				var/mob/living/carbon/human/H = CB.loc

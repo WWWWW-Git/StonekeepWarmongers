@@ -276,6 +276,8 @@ SUBSYSTEM_DEF(vote)
 			trialmin = 1
 	voting |= C
 
+	. += "<head><script>(()=>{const k='scrollY';addEventListener('beforeunload',()=>localStorage.setItem(k,scrollY));addEventListener('load',()=>{const y=localStorage.getItem(k);if(y!==null)scrollTo(0,parseInt(y))})})();</script></head>"
+
 	if(mode)
 		if(question)
 			. += "<h2>Vote: '[question]'</h2>"

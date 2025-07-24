@@ -215,7 +215,7 @@
 	else if(isobj(AM))
 		if((!allow_dense && AM.density) || AM.anchored || AM.has_buckled_mobs())
 			return FALSE
-		else if(istype(AM, /obj/item/clothing/head/roguetown/crownblu) || (istype(AM, /obj/item/clothing/head/roguetown/crownred)))
+		else if(istype(AM, /obj/item/clothing/head/roguetown/warmongers/crownblu) || (istype(AM, /obj/item/clothing/head/roguetown/warmongers/crownred)))
 			return FALSE
 		else if(isitem(AM) && !HAS_TRAIT(AM, TRAIT_NODROP))
 			return TRUE
