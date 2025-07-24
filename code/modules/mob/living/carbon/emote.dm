@@ -58,27 +58,27 @@
 			if(RED_WARTEAM)
 				warcry = "For honor! For Heartfelt!"
 				if(H.gender == MALE)
-					if(prob(50))
+					if(prob(5))
 						sound2play = sound('sound/vo/wc/felt/warcry_male_rare1.ogg','sound/vo/wc/felt/warcry_male_rare2.ogg')
 					else
-						sound2play = sound(pick('sound/vo/wc/felt/warcry_male1.ogg','sound/vo/wc/felt/warcry_male2.ogg','sound/vo/wc/felt/warcry_male3.ogg','sound/vo/wc/felt/warcry_male4.ogg'))
+						sound2play = sound(pick('sound/vo/wc/felt/warcry_male1.ogg','sound/vo/wc/felt/warcry_male2.ogg'))
 				else
-					if(prob(10))
+					if(prob(5))
 						sound2play = sound('sound/vo/wc/felt/warcry_female_rare1.ogg','sound/vo/wc/felt/warcry_female_rare2.ogg')
 					else
-						sound2play = sound(pick('sound/vo/wc/felt/warcry_female1.ogg','sound/vo/wc/felt/warcry_female2.ogg','sound/vo/wc/felt/warcry_female3.ogg'))
+						sound2play = sound(pick('sound/vo/wc/felt/warcry_female1.ogg','sound/vo/wc/felt/warcry_female2.ogg'))
 			if(BLUE_WARTEAM)
 				warcry = "Glory in the stars!"
 				if(H.gender == MALE)
-					if(prob(50))
+					if(prob(5))
 						sound2play = sound('sound/vo/wc/gren/warcry_male_rare1.ogg','sound/vo/wc/gren/warcry_male_rare2.ogg')
 					else
-						sound2play = sound(pick('sound/vo/wc/gren/warcry_male1.ogg','sound/vo/wc/gren/warcry_male2.ogg','sound/vo/wc/gren/warcry_male3.ogg','sound/vo/wc/gren/warcry_male4.ogg'))
+						sound2play = sound(pick('sound/vo/wc/gren/warcry_male1.ogg','sound/vo/wc/gren/warcry_male2.ogg'))
 				else
-					if(prob(10))
+					if(prob(5))
 						sound2play = sound('sound/vo/wc/gren/warcry_female_rare1.ogg','sound/vo/wc/gren/warcry_female_rare2.ogg')
 					else
-						sound2play = sound(pick('sound/vo/wc/gren/warcry_female1.ogg','sound/vo/wc/gren/warcry_female2.ogg','sound/vo/wc/gren/warcry_female3.ogg'))
+						sound2play = sound(pick('sound/vo/wc/gren/warcry_female1.ogg','sound/vo/wc/gren/warcry_female2.ogg'))
 		if(aspect_chosen(/datum/round_aspect/explodeatwill))
 			user.say(warcry)
 			spawn(2 SECONDS)
