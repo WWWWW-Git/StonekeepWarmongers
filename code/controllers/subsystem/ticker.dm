@@ -945,6 +945,7 @@ SUBSYSTEM_DEF(ticker)
 		var/obj/structure/warobjective/WO = locate()
 		if(WO)
 			WO.beginround()
+			W.objective = WO
 
 /proc/GetMainGunForWarfareHeartfelt()
 	switch(SSticker.warfare_techlevel)

@@ -169,7 +169,7 @@
 	for(var/turf/closed/wall/W in RANGE_TURFS(2, src)) //no cheating by just boxing in the statue, that is super lame.
 		W.dismantle_wall()
 
-/obj/structure/warobjective/ponr/attack_hand(mob/user)
+/obj/structure/warobjective/ponr/attack_hand(mob/user) // Dumb fucking oversight here, only one person from each team can be carrying a flag at the same time.
 	. = ..()
 	var/mob/living/carbon/human/H
 	var/datum/game_mode/warfare/C = SSticker.mode

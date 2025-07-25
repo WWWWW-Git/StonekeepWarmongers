@@ -28,6 +28,7 @@
 	var/warfare_reinforcement_time = 5 // in minutes
 	
 	var/stalematecooldown // a cooldown before another stalemate can be held
+	var/obj/structure/warobjective/objective
 	
 	var/warmode = null
 
