@@ -8,6 +8,11 @@
 /obj/effect/temp_visual/point/still
 	icon_state = "arrow_still"
 
+/obj/effect/point
+	icon = 'icons/mob/screen_gen.dmi'
+	icon_state = "max_indicator"
+	layer = POINT_LAYER
+
 /obj/effect/temp_visual/point/Initialize(mapload, set_invis = 0)
 	. = ..()
 	var/atom/old_loc = loc

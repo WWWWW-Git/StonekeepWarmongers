@@ -347,7 +347,7 @@
 /datum/crafting_recipe/roguetown/structure/lever
 	name = "lever"
 	result = /obj/structure/lever
-	reqs = list(/obj/item/roguegear = 1)
+	reqs = list(/obj/item/rogue/gear = 1)
 	verbage = "construct"
 	verbage_tp = "constructs"
 	craftsound = 'sound/foley/Building-01.ogg'
@@ -357,7 +357,7 @@
 	name = "floorhatch"
 	result = /obj/structure/floordoor
 	reqs = list(/obj/item/grown/log/tree/small = 1,
-					/obj/item/roguegear = 1)
+					/obj/item/rogue/gear = 1)
 	verbage = "construct"
 	verbage_tp = "constructs"
 	craftsound = 'sound/foley/Building-01.ogg'
@@ -376,7 +376,7 @@
 	name = "pressure plate"
 	result = /obj/structure/pressure_plate
 	reqs = list(/obj/item/grown/log/tree/small = 1,
-					/obj/item/roguegear = 1)
+					/obj/item/rogue/gear = 1)
 	verbage = "construct"
 	verbage_tp = "constructs"
 	craftsound = 'sound/foley/Building-01.ogg'
@@ -387,7 +387,7 @@
 	result = /obj/structure/repeater
 	reqs = list(/obj/item/grown/log/tree/small = 1,
 					/obj/item/ingot/iron = 2,
-					/obj/item/roguegear = 1)
+					/obj/item/rogue/gear = 1)
 	verbage = "construct"
 	verbage_tp = "constructs"
 	craftsound = 'sound/foley/Building-01.ogg'
@@ -398,7 +398,7 @@
 	result = /obj/structure/activator
 	reqs = list(/obj/item/grown/log/tree/small = 2,
 					/obj/item/ingot/iron = 1,
-					/obj/item/roguegear = 2)
+					/obj/item/rogue/gear = 2)
 	verbage = "construct"
 	verbage_tp = "constructs"
 	craftsound = 'sound/foley/Building-01.ogg'
@@ -470,7 +470,7 @@
 	name = "passage"
 	result = /obj/structure/bars/passage
 	reqs = list(/obj/item/ingot/iron = 1,
-					/obj/item/roguegear = 1)
+					/obj/item/rogue/gear = 1)
 	verbage = "build"
 	verbage_tp = "builds"
 	craftsound = 'sound/foley/Building-01.ogg'

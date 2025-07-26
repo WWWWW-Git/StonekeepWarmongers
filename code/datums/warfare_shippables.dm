@@ -64,6 +64,14 @@
 	name = "BOMBARDIER"
 	items = list(/obj/structure/bombard)
 
+/datum/warshippable/cannon
+	name = "BARKSTONE"
+	items = list(/obj/structure/cannon)
+
+/datum/warshippable/maxim
+	name = "THE MAXWELL"
+	items = list(/obj/structure/maxim)
+
 /datum/warshippable/caltrops
 	name = "TETSUBISHI CALTROPS"
 	items = list(/obj/item/rogue/caltrop,

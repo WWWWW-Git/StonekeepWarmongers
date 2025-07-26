@@ -247,3 +247,111 @@
 
 	sleep(8)
 	new /obj/effect/particle_effect/smoke(get_turf(src))
+
+// maxim bb gun
+
+/obj/structure/maxim
+	name = "\improper Maxwell's Barkenweapon"
+	desc = "Oh boy, this'll be complicated to operate, won't it? There is a scroll wheel on it."
+	icon = 'icons/roguetown/misc/structure.dmi'
+	icon_state = "machina"
+	anchored = FALSE
+	density = TRUE
+	max_integrity = 9999
+	drag_slowdown = 2 // If it took so long it would be not really fun.
+	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
+	var/list/firesounds = list('sound/combat/Ranged/firebow-shot-01.ogg', 'sound/combat/Ranged/firebow-shot-02.ogg', 'sound/combat/Ranged/firebow-shot-03.ogg')
+	var/bullets = 0 // starts with zero
+	var/fireangle = 0 // straight forward
+
+	var/obj/effect/point/indicator
+	var/last_scroll_time = 0
+
+/obj/structure/maxim/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/ammo_casing/caseless/rogue/bullet))
+		to_chat(user, "<span class='notice'>You begin crushing up the ball...</span>")
+		if(do_after(user, 5 SECONDS, TRUE, src))
+			to_chat(user, "<span class='info'>You break the ball into five small pellets and load them into the machine.</span>")
+			bullets += 5
+			qdel(I)
+	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
+		to_chat(user, "<span class='notice'>Too big to fit... you'll need to smash that.</span>")
+	if(istype(I, /obj/item/rogue/maxim_ammo))
+		to_chat(user, "<span class='info'>That's what it was made for. Aim it at some hearts already!</span>")
+		bullets += 25
+		qdel(I)
+
+/obj/structure/maxim/examine(mob/user)
+	. = ..()
+	if(bullets)
+		. += "<span class='info'>It is loaded. ([bullets])</span>"
+
+/obj/structure/maxim/proc/fire(mob/user)
+	if(!bullets)
+		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+		return
+	var/turf/T = get_turf(src)
+	var/turf/target = get_ranged_target_turf(src, dir, 7) // seven7
+	var/obj/projectile/bullet/reusable/bullet/maxim/A = new(T)
+	A.muzzle_type = null // Fuck you.
+	
+	var/true_angle = fireangle + dir2angle(dir)
+	flick("machina_firea", src)
+	playsound(src.loc, pick(firesounds), 100, FALSE)
+
+	for(var/mob/living/carbon/H in hearers(7, src))
+		shake_camera(H, 1, 1)
+
+	A.preparePixelProjectile(target, T)
+	A.firer = user
+	A.fired_from = src
+	A.fire(true_angle)
+
+	new /obj/effect/temp_visual/small_smoke/halfsecond(get_turf(src))
+
+/obj/structure/maxim/attack_hand(mob/user)
+	if(prob(1))
+		to_chat(user, "<span class='info'>The trigger got stuck... try again!</span>")
+		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+		return
+	fire(user)
+
+/obj/structure/maxim/proc/update_indicator()
+	if(!indicator || QDELETED(indicator))
+		indicator = new(src)
+	indicator.forceMove(get_turf(src))
+	indicator.alpha = 255
+	indicator.pixel_y = 10
+
+	var/matrix/M = matrix()
+	var/true_angle = fireangle + dir2angle(dir)
+
+	M.Turn(true_angle)
+	indicator.transform = M
+
+/obj/structure/maxim/proc/start_indicator_timeout()
+	var/current_scroll_time = last_scroll_time
+
+	spawn(3 SECONDS)
+		if(last_scroll_time == current_scroll_time)
+			animate(indicator, 10, alpha = 0)
+			sleep(10)
+			qdel(indicator)
+
+/obj/structure/maxim/MouseWheel(delta_x, delta_y, location, control, params)
+	. = ..()
+	var/mob/M = usr
+	if(!M)
+		return
+
+	if(delta_y > 0)
+		fireangle += 5
+	else
+		fireangle -= 5
+	fireangle = clamp(fireangle, -45, 45)
+	last_scroll_time = world.time
+
+	update_indicator()
+	start_indicator_timeout()
+
+	to_chat(M, "<span class='info'>...[fireangle]...</span>")

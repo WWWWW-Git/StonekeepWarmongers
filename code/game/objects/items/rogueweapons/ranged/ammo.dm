@@ -297,6 +297,13 @@
 	damage = 65
 	armor_penetration = 90
 
+/obj/projectile/bullet/reusable/bullet/maxim
+	damage = 30
+	armor_penetration = 40
+
+/obj/projectile/bullet/reusable/bullet/maxim/handle_drop()
+	return
+
 /obj/projectile/bullet/fragment
 	name = "fragment"
 	desc = "Haha. You're not able to see this!"
@@ -401,7 +408,15 @@
 	icon_state = "cball"
 	caliber = "cannoball"
 	possible_item_intents = list(/datum/intent/use)
+	static_debris = list(/obj/item/rogue/maxim_ammo = 2)
 	max_integrity = 100
 	randomspread = 0
 	variance = 0
 	force = 20
+
+/obj/item/rogue/maxim_ammo
+	name = "lead fragments"
+	desc = "Pellets of leaded origin, you count twenty-five. Perhaps they'll be of use somewhere?"
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "pellets"
+	w_class = WEIGHT_CLASS_TINY

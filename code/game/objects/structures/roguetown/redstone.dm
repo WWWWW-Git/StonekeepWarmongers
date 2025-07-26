@@ -238,7 +238,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 
 /obj/structure/activator/attackby(obj/item/I, mob/user, params)
 	if(!user.cmode)
-		if(!containment && !istype(I, /obj/item/quiver) && !istype(I, /obj/item/roguegear))
+		if(!containment && !istype(I, /obj/item/quiver) && !istype(I, /obj/item/rogue/gear))
 			if(!user.transferItemToLoc(I, src))
 				return
 			containment = I

@@ -126,16 +126,16 @@
 /datum/anvil_recipe/tools/cogstee
 	name = "steel cog"
 	req_bar = /obj/item/ingot/steel
-	created_item = list(/obj/item/roguegear,
-						/obj/item/roguegear,
-						/obj/item/roguegear)
+	created_item = list(/obj/item/rogue/gear,
+						/obj/item/rogue/gear,
+						/obj/item/rogue/gear)
 
 /datum/anvil_recipe/tools/cogiron
 	name = "iron cog"
 	req_bar = /obj/item/ingot/iron
-	created_item = list(/obj/item/roguegear,
-						/obj/item/roguegear,
-						/obj/item/roguegear)
+	created_item = list(/obj/item/rogue/gear,
+						/obj/item/rogue/gear,
+						/obj/item/rogue/gear)
 
 /datum/anvil_recipe/tools/locks
 	name = "5x locks"

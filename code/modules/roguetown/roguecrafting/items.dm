@@ -103,7 +103,7 @@
 	name = "wood arm (L)"
 	result = list(/obj/item/bodypart/l_arm/rproesthetic)
 	reqs = list(/obj/item/grown/log/tree/small = 1,
-	/obj/item/roguegear = 1)
+	/obj/item/rogue/gear = 1)
 	skillcraft = /datum/skill/craft/carpentry
 	craftdiff = 3
 
@@ -111,7 +111,7 @@
 	name = "wood arm (R)"
 	result = list(/obj/item/bodypart/r_arm/rproesthetic)
 	reqs = list(/obj/item/grown/log/tree/small = 1,
-	/obj/item/roguegear = 1)
+	/obj/item/rogue/gear = 1)
 	skillcraft = /datum/skill/craft/carpentry
 	craftdiff = 3
 
@@ -316,7 +316,7 @@ datum/crafting_recipe/roguetown/poisonbolt
 /datum/crafting_recipe/roguetown/levershot
 	name = "levershot"
 	result = /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/empty
-	reqs = list(/obj/item/roguegear = 2,
+	reqs = list(/obj/item/rogue/gear = 2,
 				/obj/item/flint = 1,
 				/obj/item/ingot/steel = 2,
 				/obj/item/grown/log/tree/small = 2)
@@ -326,7 +326,7 @@ datum/crafting_recipe/roguetown/poisonbolt
 /datum/crafting_recipe/roguetown/revolver
 	name = "revolleyer"
 	result = /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot/empty
-	reqs = list(/obj/item/roguegear = 2,
+	reqs = list(/obj/item/rogue/gear = 2,
 				/obj/item/flint = 1,
 				/obj/item/ingot/steel = 1,
 				/obj/item/grown/log/tree/small = 1)
@@ -336,7 +336,7 @@ datum/crafting_recipe/roguetown/poisonbolt
 /datum/crafting_recipe/roguetown/barksteel
 	name = "barksteel"
 	result = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
-	reqs = list(/obj/item/roguegear = 1,
+	reqs = list(/obj/item/rogue/gear = 1,
 				/obj/item/flint = 2,
 				/obj/item/ingot/steel = 1,
 				/obj/item/grown/log/tree/small = 2)
@@ -353,7 +353,7 @@ datum/crafting_recipe/roguetown/poisonbolt
 /datum/crafting_recipe/roguetown/barkiron
 	name = "barkiron"
 	result = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
-	reqs = list(/obj/item/roguegear = 1,
+	reqs = list(/obj/item/rogue/gear = 1,
 				/obj/item/flint = 1,
 				/obj/item/ingot/iron = 2,
 				/obj/item/grown/log/tree/small = 1)

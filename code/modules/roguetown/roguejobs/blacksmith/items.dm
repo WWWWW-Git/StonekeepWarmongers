@@ -59,7 +59,7 @@
 
 //000000000000000000000000000--
 
-/obj/item/roguegear
+/obj/item/rogue/gear
 	icon = 'icons/roguetown/items/misc.dmi'
 	name = "cog"
 	icon_state = "gear"
@@ -67,18 +67,18 @@
 	smeltresult = null
 	var/obj/structure/linking
 
-/obj/item/roguegear/Destroy()
+/obj/item/rogue/gear/Destroy()
 	if(linking)
 		linking = null
 	. = ..()
 
-/obj/item/roguegear/attack_self(mob/user)
+/obj/item/rogue/gear/attack_self(mob/user)
 	if(linking)
 		linking = null
 		to_chat(user, "<span class='warning'>Linking halted.</span>")
 		return
 
-/obj/item/roguegear/attack_obj(obj/O, mob/living/user)
+/obj/item/rogue/gear/attack_obj(obj/O, mob/living/user)
 	if(!istype(O, /obj/structure))
 		return ..()
 	var/obj/structure/S = O

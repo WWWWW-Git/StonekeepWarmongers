@@ -134,5 +134,5 @@
 	adminonly = TRUE
 
 /datum/round_aspect/halo
-	name = "Heroic Ballads"
+	name = "Haloic Ballads"
 	description = "This battle has an announcer. How cool!"
