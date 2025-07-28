@@ -588,12 +588,12 @@
 
 /atom/movable/screen/def_intent
 	name = "defense intent"
-	icon_state = "def1n"
+	icon_state = "def2"
 	icon = 'icons/mob/roguehud.dmi'
 	screen_loc = rogueui_def
 
 /atom/movable/screen/def_intent/update_icon()
-	icon_state = "def[hud.mymob.d_intent]n"
+	icon_state = "def[hud.mymob.d_intent]"
 
 /atom/movable/screen/def_intent/Click(location, control, params)
 	var/_y = text2num(params2list(params)["icon-y"])
@@ -1783,8 +1783,8 @@
 			continue
 		var/atom/movable/screen/rintent_selection/R = new(M.client)
 		var/datum/rmb_intent/RI = new X
+		R.add_overlay("[RI.icon_state]_x")
 		R.stored_intent = X
-		R.icon_state = RI.icon_state
 		R.name = RI.name
 		R.desc = RI.desc
 		shown_intents += R
@@ -1803,7 +1803,7 @@
 /atom/movable/screen/rintent_selection
 	name = "rmb intent"
 	icon = 'icons/mob/roguehud.dmi'
-	icon_state = "rmbaimed"
+	icon_state = "rmmbb"
 	var/stored_intent
 	var/stored_name
 	var/client/holder

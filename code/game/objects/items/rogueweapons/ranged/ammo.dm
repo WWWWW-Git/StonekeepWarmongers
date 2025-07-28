@@ -282,6 +282,7 @@
 	immobilize = 1
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
+	obj_flags = CAN_BE_HIT
 	woundclass = BCLASS_STAB
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
@@ -325,12 +326,13 @@
 	name = "lead ball"
 	desc = "A round lead shot, simple and spherical."
 	projectile_type = /obj/projectile/bullet/reusable/bullet
+	blade_dulling = DULLING_BASHCHOP
 	caliber = "musketball"
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball"
 	dropshrink = 0.5
 	possible_item_intents = list(/datum/intent/use)
-	max_integrity = 0
+	max_integrity = 10
 	force = 20
 
 /obj/item/ammo_casing/caseless/rogue/bullet/iron
@@ -404,12 +406,14 @@
 	name = "large lead ball"
 	desc = "A round lead ball. Complex and still spherical."
 	icon = 'icons/roguetown/weapons/ammo.dmi'
+	obj_flags = CAN_BE_HIT
+	blade_dulling = DULLING_BASHCHOP
 	projectile_type = /obj/projectile/bullet/reusable/cannonball
 	icon_state = "cball"
 	caliber = "cannoball"
 	possible_item_intents = list(/datum/intent/use)
 	static_debris = list(/obj/item/rogue/maxim_ammo = 2)
-	max_integrity = 100
+	max_integrity = 30
 	randomspread = 0
 	variance = 0
 	force = 20

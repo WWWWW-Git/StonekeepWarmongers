@@ -78,16 +78,10 @@ GLOBAL_LIST_INIT(ghost_forms_with_directions_list, list(
 	"ghost_camo",
 	"catghost")) //stores the ghost forms that support directional sprites
 
-GLOBAL_LIST_INIT(unarmed_swingmiss, list(
-	'sound/blank.ogg',
-	'sound/blank.ogg',
-	'sound/blank.ogg'))
-
 GLOBAL_LIST_INIT(unarmed_parrysound, list(
 	'sound/blank.ogg',
 	'sound/blank.ogg',
 	'sound/blank.ogg'))
-
 
 GLOBAL_LIST_INIT(ghost_forms_with_accessories_list, list("ghost")) //stores the ghost forms that support hair and other such things
 

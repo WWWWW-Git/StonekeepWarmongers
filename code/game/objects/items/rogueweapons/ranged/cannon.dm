@@ -291,7 +291,8 @@
 		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 		return
 	var/turf/T = get_turf(src)
-	var/turf/target = get_ranged_target_turf(src, dir, 7) // seven7
+	//var/turf/target = get_ranged_target_turf(src, dir, 7) // seven7
+	var/turf/target = get_step(src, dir)
 	var/obj/projectile/bullet/reusable/bullet/maxim/A = new(T)
 	A.muzzle_type = null // Fuck you.
 	
@@ -306,6 +307,7 @@
 	A.firer = user
 	A.fired_from = src
 	A.fire(true_angle)
+	bullets--
 
 	new /obj/effect/temp_visual/small_smoke/halfsecond(get_turf(src))
 

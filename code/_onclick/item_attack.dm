@@ -93,8 +93,6 @@
 	else
 		return
 
-//	if(force)
-//		user.emote("attackgrunt")
 	var/datum/intent/cached_intent = user.used_intent
 	if(user.used_intent.swingdelay)
 		if(!user.used_intent.noaa)

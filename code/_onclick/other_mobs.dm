@@ -30,9 +30,6 @@
 	SEND_SIGNAL(src, COMSIG_HUMAN_MELEE_UNARMED_ATTACK, A, proximity)
 	if(isliving(A))
 		var/mob/living/L = A
-		if(!used_intent.noaa)
-			playsound(get_turf(src), pick(GLOB.unarmed_swingmiss), 100, FALSE)
-//			src.emote("attackgrunt")
 		if(L.checkmiss(src))
 			return
 		if(!L.checkdefense(used_intent, src))
@@ -510,10 +507,8 @@
 		if(istype(G) && G.Touch(A,0)) // for magic gloves
 			return
 	if(!used_intent.noaa && ismob(A))
-//		playsound(src, pick(GLOB.unarmed_swingmiss), 100, FALSE)
 		do_attack_animation(A, visual_effect_icon = used_intent.animname)
 		changeNext_move(used_intent.clickcd)
-//		src.emote("attackgrunt")
 		playsound(get_turf(src), used_intent.miss_sound, 100, FALSE)
 		if(used_intent.miss_text)
 			visible_message("<span class='warning'>[src] [used_intent.miss_text]!</span>", \
