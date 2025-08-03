@@ -2,7 +2,7 @@
 
 /obj/structure/well
 	name = "well"
-	desc = ""
+	desc = "Well, well, well..."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "well"
 	anchored = TRUE

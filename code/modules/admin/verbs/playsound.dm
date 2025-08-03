@@ -92,19 +92,6 @@
 		prefs.save_preferences()
 
 		mob.update_channel_volume(CHANNEL_AMBIENCE, prefs.mastervol)
-/*
-/client/verb/help_rpguide()
-	set category = "Options"
-	set name = "zHelp-RPGuide"
-
-	src << link("https://cdn.discordapp.com/attachments/844865105040506891/938971395445112922/rpguide.jpg")
-
-/client/verb/help_uihelp()
-	set category = "Options"
-	set name = "zHelp-UIGuide"
-
-	src << link("https://cdn.discordapp.com/attachments/844865105040506891/938275090414579762/unknown.png")
-*/
 
 /client/proc/play_local_sound(S as sound)
 	set category = "Fun"
@@ -225,3 +212,11 @@
 		if(C && C.chatOutput && !C.chatOutput.broken && C.chatOutput.loaded)
 			C.chatOutput.stopMusic()
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Stop All Playing Sounds") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/verb/preload_sounds()
+	set category = "Options"
+	set name = "Preload Music (!)"
+
+	for(var/music in MUSIC_COMBAT)
+		mob.playsound_local(mob, music, 0.1)
+		sleep(10)

@@ -90,6 +90,11 @@
 
 #define AMB_WARFARE list('sound/music/dreadfulstench.ogg')
 
+#define MUSIC_COMBAT list('sound/music/combatgrenzelhoft.ogg',\
+						'sound/music/combatheartfelt.ogg',\
+						'sound/music/combatelite.ogg',\
+						'sound/music/combatspecial.ogg')
+
 #define AMB_MOUNTAIN list('sound/ambience/MOUNTAIN (1).ogg',\
 						'sound/ambience/MOUNTAIN (2).ogg')
 
