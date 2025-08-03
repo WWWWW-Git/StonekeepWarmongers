@@ -743,6 +743,7 @@
 #include "code\game\gamemodes\roguetown\roguetown.dm"
 #include "code\game\gamemodes\roguetown\roguewar.dm"
 #include "code\game\gamemodes\roguetown\warfare.dm"
+#include "code\game\gamemodes\roguetown\warfare_gamemodes.dm"
 #include "code\game\gamemodes\sandbox\airlock_maker.dm"
 #include "code\game\gamemodes\sandbox\h_sandbox.dm"
 #include "code\game\gamemodes\sandbox\sandbox.dm"

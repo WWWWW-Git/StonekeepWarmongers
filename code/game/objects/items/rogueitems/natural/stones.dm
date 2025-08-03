@@ -1,5 +1,3 @@
-
-
 /obj/item/natural/stone
 	name = "stone"
 	desc = "A piece of rough ground stone."
@@ -16,7 +14,6 @@
 /obj/item/natural/stone/Initialize()
 	icon_state = "stone[rand(1,4)]"
 	..()
-
 
 /obj/item/natural/stone/attackby(obj/item/W, mob/user, params)
 	user.changeNext_move(CLICK_CD_MELEE)

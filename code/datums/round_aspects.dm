@@ -67,7 +67,7 @@
 	description = "Because the Lords both have favors to the Quartermaster of Enigma, they both get five supply points on the start of the battle."
 
 /datum/round_aspect/supplypoints/apply()
-	var/datum/game_mode/warfare/W = SSticker.mode
+	var/datum/game_mode/warmongers/W = SSticker.mode
 	W.blu_bonus = 5
 	W.red_bonus = 5
 

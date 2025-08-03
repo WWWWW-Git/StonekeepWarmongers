@@ -212,7 +212,7 @@
 	scan_for_target()
 
 /obj/item/pinpointer/crown/scan_for_target()
-	var/datum/game_mode/warfare/W = SSticker.mode
+	var/datum/game_mode/warmongers/W = SSticker.mode
 	if(!istype(W))
 		return
 	switch(team)

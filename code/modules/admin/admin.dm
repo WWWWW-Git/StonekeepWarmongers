@@ -720,7 +720,7 @@
 	set category = "Server"
 	set desc="Start the round RIGHT NOW"
 	set name="Reinforcements Now"
-	var/datum/game_mode/warfare/W = SSticker.mode
+	var/datum/game_mode/warmongers/W = SSticker.mode
 	if(!(W.reinforcementwave >= 5))
 		SSticker.SendReinforcements()
 		log_admin("[usr.key] has sent reinforcements")
@@ -734,7 +734,7 @@
 /datum/admins/proc/readoutlords()
 	set category = "Debug"
 	set name = "Readout Lords/Crowns"
-	var/datum/game_mode/warfare/W = SSticker.mode
+	var/datum/game_mode/warmongers/W = SSticker.mode
 
 	if(W.blucrown)
 		to_chat(usr, "blu crown found [W.blucrown.loc]")
@@ -759,7 +759,7 @@
 /datum/admins/proc/recallcrown()
 	set category = "Debug"
 	set name = "Recall Crown"
-	var/datum/game_mode/warfare/W = SSticker.mode
+	var/datum/game_mode/warmongers/W = SSticker.mode
 
 	var/pick = input(usr, "Which crown do you recall?", "WARMONGERS") as null|anything in list("Red","Blue")
 
@@ -799,7 +799,7 @@
 /datum/admins/proc/teleport2crown()
 	set category = "Debug"
 	set name = "TP2Crown"
-	var/datum/game_mode/warfare/W = SSticker.mode
+	var/datum/game_mode/warmongers/W = SSticker.mode
 
 	var/pick = input(usr, "Which crown?", "WARMONGERS") as null|anything in list("Red","Blue")
 

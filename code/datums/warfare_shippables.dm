@@ -93,6 +93,22 @@
 			/obj/item/rogue/sandbagkit
 			)
 
+/datum/warshippable/wood
+	name = "WOOD SUPPLIES"
+	items = list(/obj/structure/closet/crate/chest/woodsupps)
+
+/obj/structure/closet/crate/chest/woodsupps/PopulateContents()
+	for(var/i = 0 to 10)
+		new /obj/item/grown/log/tree(src)
+
+/datum/warshippable/stone
+	name = "STONE SUPPLIES"
+	items = list(/obj/structure/closet/crate/chest/stonesupps)
+
+/obj/structure/closet/crate/chest/stonesupps/PopulateContents()
+	for(var/i = 0 to 10)
+		new /obj/item/natural/stone(src)
+
 /datum/warshippable/explodabarrel
 	name = "EXPLODABARRELS"
 	items = list(/obj/structure/fluff/explodabarrel,

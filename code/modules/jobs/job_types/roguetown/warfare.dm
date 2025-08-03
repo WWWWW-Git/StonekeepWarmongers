@@ -115,7 +115,7 @@
 /mob/living/carbon/human/proc/warfare_shop()
 	set name = "REDEEM SUPPORT POINTS"
 	set category = "LORD"
-	var/datum/game_mode/warfare/C = SSticker.mode
+	var/datum/game_mode/warmongers/C = SSticker.mode
 	var/list/shippables = list()
 
 	for(var/s in subtypesof(/datum/warshippable))
@@ -182,8 +182,8 @@
 		/mob/living/carbon/human/proc/warfare_inspire,
 		/mob/living/carbon/human/proc/warfare_shop
 	)
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		var/datum/game_mode/warfare/C = SSticker.mode
+	if(istype(SSticker.mode, /datum/game_mode/warmongers))
+		var/datum/game_mode/warmongers/C = SSticker.mode
 		C.redlord = H
 
 	if(aspect_chosen(/datum/round_aspect/stronglords))
@@ -680,8 +680,8 @@
 		/mob/living/carbon/human/proc/warfare_inspire,
 		/mob/living/carbon/human/proc/warfare_shop
 	)
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		var/datum/game_mode/warfare/C = SSticker.mode
+	if(istype(SSticker.mode, /datum/game_mode/warmongers))
+		var/datum/game_mode/warmongers/C = SSticker.mode
 		C.blulord = H
 
 	if(aspect_chosen(/datum/round_aspect/stronglords))

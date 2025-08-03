@@ -64,11 +64,14 @@
 		var/obj/item/rogue/musicpack/MP = IT
 		MP.soundloop.stop()
 
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		var/datum/game_mode/warfare/C = SSticker.mode
-
-		if(C.crownbearer == src)
-			C.crownbearer = null // stupid hack for PONR (ctf) gamemode
+	if(istype(SSticker.mode, /datum/game_mode/warmongers))
+		var/datum/game_mode/warmongers/C = SSticker.mode
+		if(istype(C.warmode, /datum/warmode/noreturn))
+			var/datum/warmode/noreturn/NR = C.warmode
+			if(NR.blu_flag == src)
+				NR.blu_flag = null
+			if(NR.red_flag == src)
+				NR.red_flag = null
 			var/team = RED_WARTEAM
 			if(warfare_faction == RED_WARTEAM)
 				team = BLUE_WARTEAM

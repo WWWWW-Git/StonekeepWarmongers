@@ -1,7 +1,7 @@
-/datum/game_mode/warfare
-	name = "warmode"
-	config_tag = "warmode"
-	report_type = "warmode"
+/datum/game_mode/warmongers
+	name = "warmongers"
+	config_tag = "warmongers"
+	report_type = "warmongers"
 	false_report_weight = 0
 	required_players = 0
 	required_enemies = 0
@@ -9,8 +9,6 @@
 	enemy_minimum_age = 0
 
 	var/whowon = null // use RED_WARTEAM and BLUE_WARTEAM
-	var/mob/living/carbon/human/crownbearer
-
 	var/reinforcementwave = 1 // max 5
 
 	var/mob/redlord
@@ -28,18 +26,16 @@
 	var/warfare_reinforcement_time = 5 // in minutes
 	
 	var/stalematecooldown // a cooldown before another stalemate can be held
-	var/obj/structure/warobjective/objective
-	
-	var/warmode = null
+	var/datum/warmode/warmode = null
 
 	announce_span = "danger"
 	announce_text = "The"
 
-/datum/game_mode/warfare/post_setup(report)
+/datum/game_mode/warmongers/post_setup(report)
 	begin_countDown()
 	return ..()
 
-/datum/game_mode/warfare/proc/award_triumphs()
+/datum/game_mode/warmongers/proc/award_triumphs()
 	if(whowon == BLUE_WARTEAM)
 		for(var/client/C in grenzels)
 			if(ishuman(C.mob))
@@ -67,14 +63,14 @@
 				H << sound(null) // Stop all sounds
 				SEND_SOUND(H, 'sound/vo/wc/gren/grenzdefeatsong.ogg')
 
-/datum/game_mode/warfare/proc/do_war_end(var/mob/living/carbon/human/crownguy = null, var/team = null) // if you call this with zero arguments, its a stalemate.
+/datum/game_mode/warmongers/proc/do_war_end(var/mob/living/carbon/human/crownguy = null, var/team = null) // if you call this with zero arguments, its a stalemate.
 	whowon = team
 	SSticker.force_ending = TRUE
 	if(crownguy)
-		crownbearer = crownguy
-		crownguy.adjust_triumphs(5)
+		warmode.winner = crownguy
+		warmode.winner.adjust_triumphs(5)
 
-/datum/game_mode/warfare/proc/begin_autobalance_loop()
+/datum/game_mode/warmongers/proc/begin_autobalance_loop()
 	set waitfor = 0
 	while(1)
 		CHECK_TICK
@@ -85,7 +81,7 @@
 			CHECK_TICK
 			P.autobalance()
 
-/datum/game_mode/warfare/proc/reinforcements()
+/datum/game_mode/warmongers/proc/reinforcements()
 	set waitfor = 0
 	while(1)
 		CHECK_TICK
@@ -95,7 +91,7 @@
 		testing("Sending reinforcement loop works")
 		SSticker.SendReinforcements()
 
-/datum/game_mode/warfare/proc/begin_countDown()
+/datum/game_mode/warmongers/proc/begin_countDown()
 	set waitfor = 0
 	while(1)
 		sleep(1 MINUTES)

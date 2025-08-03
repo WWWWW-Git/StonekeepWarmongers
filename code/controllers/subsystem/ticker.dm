@@ -503,15 +503,6 @@ SUBSYSTEM_DEF(ticker)
 		if(oneteammode)
 			to_chat(world, "<span class='notice'><B>This time you can only play as the Grenzelhofts.</B></span>")
 
-	// handle setting the war mode for this round, this is retarded, but im too lazy to do it any other way
-	var/datum/game_mode/warfare/W = mode
-	if(findtext(SSmapping.config?.map_name, "PONR"))
-		W.warmode = GAMEMODE_PONR
-	if(findtext(SSmapping.config?.map_name, "LS"))
-		W.warmode = GAMEMODE_STAND
-	if(findtext(SSmapping.config?.map_name, "LD"))
-		W.warmode = GAMEMODE_LORD
-
 	CHECK_TICK
 
 	for(var/client/C in GLOB.clients)
@@ -921,7 +912,7 @@ SUBSYSTEM_DEF(ticker)
 	text2file(login_music, "data/last_round_lobby_music.txt")
 
 /datum/controller/subsystem/ticker/proc/ReadyToDie()
-	var/datum/game_mode/warfare/W = mode
+	var/datum/game_mode/warmongers/W = mode
 	if(!warfare_ready_to_die)
 		to_chat(world, "<span class='userdanger'>[pick("FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I'M NOT AFRAID TO DIE!")]</span>")
 		if(!(oneteammode))
@@ -941,11 +932,8 @@ SUBSYSTEM_DEF(ticker)
 				FUCKYOU.leave()
 			else
 				qdel(O)
-
-		var/obj/structure/warobjective/WO = locate()
-		if(WO)
-			WO.beginround()
-			W.objective = WO
+		
+		W.warmode.beginround()
 
 /proc/GetMainGunForWarfareHeartfelt()
 	switch(SSticker.warfare_techlevel)
@@ -979,7 +967,7 @@ SUBSYSTEM_DEF(ticker)
 			return null
 
 /datum/controller/subsystem/ticker/proc/SendReinforcements()
-	var/datum/game_mode/warfare/W = mode
+	var/datum/game_mode/warmongers/W = mode
 
 	var/obj/effect/landmark/blureinforcement/blu = locate(/obj/effect/landmark/blureinforcement) in GLOB.landmarks_list
 	var/obj/effect/landmark/redreinforcement/red = locate(/obj/effect/landmark/redreinforcement) in GLOB.landmarks_list

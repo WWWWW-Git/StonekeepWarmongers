@@ -295,8 +295,8 @@ SUBSYSTEM_DEF(persistence)
 	file_data["deaths"] = SSticker.deaths + cached_deaths
 	file_data["muskshots"] = SSticker.muskshots + cached_muskshots
 
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
-		var/datum/game_mode/warfare/C = SSticker.mode
+	if(istype(SSticker.mode, /datum/game_mode/warmongers))
+		var/datum/game_mode/warmongers/C = SSticker.mode
 		switch(C.whowon)
 			if(BLUE_WARTEAM)
 				file_data["grenz_wins"] = ++cached_grenz_wins

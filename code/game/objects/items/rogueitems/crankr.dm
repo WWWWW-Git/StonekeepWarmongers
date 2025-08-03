@@ -49,7 +49,7 @@
 
 /obj/item/cranker/attack_self(mob/living/carbon/human/user)
 	. = ..()
-	var/datum/game_mode/warfare/C = SSticker.mode
+	var/datum/game_mode/warmongers/C = SSticker.mode
 	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)
 		to_chat(user, "<span class='warning'>I don't know how to use this.</span>")
 		return

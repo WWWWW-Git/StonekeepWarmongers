@@ -78,7 +78,7 @@
 				client.warfare_faction = BLUE_WARTEAM
 
 /mob/dead/new_player/proc/autobalance()
-	var/datum/game_mode/warfare/W = SSticker.mode
+	var/datum/game_mode/warmongers/W = SSticker.mode
 
 	W.heartfelts -= src.client
 	W.grenzels -= src.client

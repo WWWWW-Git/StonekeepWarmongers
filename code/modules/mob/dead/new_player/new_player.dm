@@ -410,7 +410,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 		if(W.get_team(ckey))
 			if(W.get_team(ckey) != job.faction)
 				return JOB_UNAVAILABLE_GENERIC
-	if(istype(SSticker.mode, /datum/game_mode/warfare))
+	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		if(client.warfare_faction)
 			if(client.warfare_faction != job.warfare_faction)
 				return JOB_UNAVAILABLE_WRONGTEAM

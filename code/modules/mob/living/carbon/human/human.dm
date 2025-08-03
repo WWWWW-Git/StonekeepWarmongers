@@ -896,8 +896,8 @@
 
 /mob/living/carbon/human/proc/setclientwarfaction(w_faction)
 	if(client)
-		if(istype(SSticker.mode, /datum/game_mode/warfare))
-			var/datum/game_mode/warfare/C = SSticker.mode
+		if(istype(SSticker.mode, /datum/game_mode/warmongers))
+			var/datum/game_mode/warmongers/C = SSticker.mode
 			if(!check_bypasslist(client.ckey))
 				client.warfare_faction = w_faction
 			switch(w_faction)

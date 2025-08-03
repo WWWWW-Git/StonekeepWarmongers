@@ -312,7 +312,7 @@
 
 /obj/item/clothing/head/roguetown/warmongers/crownred/Initialize()
 	. = ..()
-	var/datum/game_mode/warfare/W = SSticker.mode
+	var/datum/game_mode/warmongers/W = SSticker.mode
 	if(W.redcrown) // I know this may look retarded or something, but I swear to god for some reason removing this makes crown teleporting not work. I'm KILLING myself
 		return INITIALIZE_HINT_QDEL
 		
@@ -336,7 +336,7 @@
 
 /obj/item/clothing/head/roguetown/warmongers/crownblu/Initialize()
 	. = ..()
-	var/datum/game_mode/warfare/W = SSticker.mode
+	var/datum/game_mode/warmongers/W = SSticker.mode
 	if(W.blucrown) // I know this may look retarded or something, but I swear to god for some reason removing this makes crown teleporting not work. I'm KILLING myself
 		return INITIALIZE_HINT_QDEL
 

@@ -71,7 +71,7 @@
 /datum/advclass/proc/check_requirements(mob/living/carbon/human/H)
 
 	var/list/local_allowed_sexes = list()
-	var/datum/game_mode/warfare/W = SSticker.mode
+	var/datum/game_mode/warmongers/W = SSticker.mode
 	if(length(allowed_sexes))
 		local_allowed_sexes |= allowed_sexes
 

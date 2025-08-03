@@ -246,8 +246,8 @@
 					to_chat(M, "<br><span class='alert'>Incoming universal message: [message]</span>")
 					M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
 		else
-			if(istype(SSticker.mode, /datum/game_mode/warfare))
-				var/datum/game_mode/warfare/C = SSticker.mode
+			if(istype(SSticker.mode, /datum/game_mode/warmongers))
+				var/datum/game_mode/warmongers/C = SSticker.mode
 				if(!ishuman(user))
 					return
 				var/mob/living/carbon/human/H = user
