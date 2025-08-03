@@ -82,10 +82,6 @@
 	if(master_ui)
 		master_ui.children += src
 	src.state = state
-	if(user.client)
-		if(user.client.holder)
-			var/datum/asset/assets = get_asset_datum(/datum/asset/group/tgui)
-			assets.send(user)
 
  /**
   * public

@@ -342,35 +342,7 @@ field_generator power level display
 	move_resist = initial(move_resist)
 
 /obj/machinery/field/generator/proc/shield_floor(create)
-	if(connected_gens.len < 2)
-		return
-	var/CGcounter
-	for(CGcounter = 1; CGcounter < connected_gens.len, CGcounter++)
-
-		var/list/CGList = ((connected_gens[CGcounter].connected_gens & connected_gens[CGcounter+1].connected_gens)^src)
-		if(!CGList.len)
-			return
-		var/obj/machinery/field/generator/CG = CGList[1]
-
-		var/x_step
-		var/y_step
-		if(CG.x > x && CG.y > y)
-			for(x_step=x; x_step <= CG.x; x_step++)
-				for(y_step=y; y_step <= CG.y; y_step++)
-					place_floor(locate(x_step,y_step,z),create)
-		else if(CG.x > x && CG.y < y)
-			for(x_step=x; x_step <= CG.x; x_step++)
-				for(y_step=y; y_step >= CG.y; y_step--)
-					place_floor(locate(x_step,y_step,z),create)
-		else if(CG.x < x && CG.y > y)
-			for(x_step=x; x_step >= CG.x; x_step--)
-				for(y_step=y; y_step <= CG.y; y_step++)
-					place_floor(locate(x_step,y_step,z),create)
-		else
-			for(x_step=x; x_step >= CG.x; x_step--)
-				for(y_step=y; y_step >= CG.y; y_step--)
-					place_floor(locate(x_step,y_step,z),create)
-
+	return
 
 /obj/machinery/field/generator/proc/place_floor(Location,create)
 	if(create && !locate(/obj/effect/shield) in Location)

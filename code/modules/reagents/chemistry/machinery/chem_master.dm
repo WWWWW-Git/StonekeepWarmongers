@@ -26,6 +26,7 @@
 	create_reagents(100)
 
 	//Calculate the span tags and ids fo all the available pill icons
+	/*
 	var/datum/asset/spritesheet/simple/assets = get_asset_datum(/datum/asset/spritesheet/simple/pills)
 	pillStyles = list()
 	for (var/x in 1 to PILL_STYLE_COUNT)
@@ -33,6 +34,7 @@
 		SL["id"] = x
 		SL["className"] = assets.icon_class_name("pill[x]")
 		pillStyles += list(SL)
+	*/
 
 	. = ..()
 
@@ -151,8 +153,7 @@
 
 //Insert our custom spritesheet css link into the html
 /obj/machinery/chem_master/ui_base_html(html)
-	var/datum/asset/spritesheet/simple/assets = get_asset_datum(/datum/asset/spritesheet/simple/pills)
-	. = replacetext(html, "<!--customheadhtml-->", assets.css_tag())
+	return
 
 /obj/machinery/chem_master/ui_data(mob/user)
 	var/list/data = list()

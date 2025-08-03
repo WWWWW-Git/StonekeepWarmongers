@@ -17,6 +17,8 @@
 		InitializeData()
 
 /datum/achievement_data/proc/InitializeData()
+	return
+	/*
 	initialized = TRUE
 	load_all_achievements() //So we know which achievements we have unlocked so far.
 
@@ -27,6 +29,7 @@
 		var/list/SL = list()
 		SL["htmltag"] = assets.icon_tag(achievement.icon)
 		AchievementIcons[achievement.name] += list(SL)
+	*/
 
 ///Saves any out-of-date achievements to the hub.
 /datum/achievement_data/proc/save()
@@ -79,8 +82,7 @@
 		data[achievement_type] = 0
 
 /datum/achievement_data/ui_base_html(html)
-	var/datum/asset/spritesheet/simple/assets = get_asset_datum(/datum/asset/spritesheet/simple/achievements)
-	. = replacetext(html, "<!--customheadhtml-->", assets.css_tag())
+	return
 
 /datum/achievement_data/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.always_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
@@ -91,6 +93,8 @@
 		ui.open()
 
 /datum/achievement_data/ui_data(mob/user)
+	return
+	/*
 	var/ret_data = list() // screw standards (qustinnus you must rename src.data ok)
 	ret_data["categories"] = list("Bosses", "Misc")
 	ret_data["achievements"] = list()
@@ -113,6 +117,7 @@
 		ret_data["achievements"] += list(this)
 
 	return ret_data
+	*/
 
 /client/verb/checkachievements()
 	set category = "OOC"

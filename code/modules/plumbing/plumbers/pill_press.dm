@@ -32,6 +32,7 @@
 	AddComponent(/datum/component/plumbing/simple_demand, bolt)
 
 	//expertly copypasted from chemmasters
+	/*
 	var/datum/asset/spritesheet/simple/assets = get_asset_datum(/datum/asset/spritesheet/simple/pills)
 	pill_styles = list()
 	for (var/x in 1 to PILL_STYLE_COUNT)
@@ -39,6 +40,7 @@
 		SL["id"] = x
 		SL["class_name"] = assets.icon_class_name("pill[x]")
 		pill_styles += list(SL)
+	*/
 
 /obj/machinery/plumbing/pill_press/process()
 	if(stat & NOPOWER)
@@ -67,8 +69,11 @@
 
 
 /obj/machinery/plumbing/pill_press/ui_base_html(html)
+	return
+	/*
 	var/datum/asset/spritesheet/simple/assets = get_asset_datum(/datum/asset/spritesheet/simple/pills)
 	. = replacetext(html, "<!--customheadhtml-->", assets.css_tag())
+	*/
 
 /obj/machinery/plumbing/pill_press/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)

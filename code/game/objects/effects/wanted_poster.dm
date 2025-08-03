@@ -73,6 +73,8 @@
 	color: This set the text color: #ff00ff
 */
 /obj/structure/sign/poster/wanted/proc/print_across_top(icon/poster_icon, text, color)
+	return
+	/*
 	var/textLen = min(length(text), 7)
 	var/startX = 16 - (2*textLen)
 	var/i
@@ -84,6 +86,7 @@
 		letter_icon.SwapColor(rgb(255,255,255), color)
 		poster_icon.Blend(letter_icon, ICON_OVERLAY)
 		startX = startX + 4
+	*/
 
 /obj/structure/sign/poster/wanted/roll_and_drop(turf/location)
 	var/obj/item/poster/wanted/P = ..(location)

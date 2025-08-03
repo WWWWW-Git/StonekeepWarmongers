@@ -102,11 +102,15 @@
 			if(M.warfare_faction != src.warfare_faction)
 				continue
 			M.apply_status_effect(/datum/status_effect/buff/inspired)
-			to_chat(M, "<span class='alert'>I WILL DIE FOR THE LORD!</span>")
+			M.shoutbubble()
+			M.emote_warcry()
+			if(!M.cmode)
+				M.toggle_cmode()
 			if(aspect_chosen(/datum/round_aspect/halo))
 				M.playsound_local(M.loc, 'sound/vo/halo/hail2theking.mp3', 75)
 			else
 				M.playsound_local(M.loc, 'sound/foley/trumpt.ogg', 75)
+			to_chat(M, "<span class='alert'>I WILL DIE FOR THE LORD!</span>")
 
 /mob/living/carbon/human/proc/warfare_shop()
 	set name = "REDEEM SUPPORT POINTS"
