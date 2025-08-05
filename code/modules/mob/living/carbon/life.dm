@@ -132,7 +132,6 @@
 					if(prob(probby))
 						if(aspect_chosen(/datum/round_aspect/halo))
 							playsound(src, 'sound/vo/halo/wound.mp3', 100, FALSE, -1)
-							shoutbubble()
 						else
 							emote("painscream")
 							if(client?.hasPerk(/datum/warperk/madness))

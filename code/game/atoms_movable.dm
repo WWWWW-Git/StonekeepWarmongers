@@ -823,12 +823,17 @@
 	icon = 'icons/effects/effects.dmi'
 	duration = 3
 
-/atom/movable/proc/do_warning()
-	var/image/I
-	I = image('icons/effects/effects.dmi', src, "mobwarning", src.layer + 0.1)
-	I.pixel_y = 16
-	flick_overlay(I, GLOB.clients, 5)
+/obj/effect/temp_visual/warnie
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "mobwarning"
+	duration = 10
+	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
 
+/atom/movable/proc/do_warning()
+	var/obj/effect/temp_visual/warnie/E = new(get_turf(src))
+	animate(E, 10, pixel_y = 20, alpha = 0)
+	spawn(10) qdel(E)
 
 /atom/movable/vv_get_dropdown()
 	. = ..()

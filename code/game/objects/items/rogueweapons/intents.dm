@@ -298,6 +298,7 @@
 /datum/intent/shoot/prewarning()
 	if(masteritem && mastermob)
 		mastermob.visible_message("<span class='warning'>[mastermob] aims [masteritem]!</span>")
+		mastermob.do_warning()
 
 /datum/intent/arc
 	name = "arc"
@@ -318,7 +319,7 @@
 /datum/intent/arc/prewarning()
 	if(masteritem && mastermob)
 		mastermob.visible_message("<span class='warning'>[mastermob] aims [masteritem]!</span>")
-
+		mastermob.do_warning()
 
 /datum/intent/unarmed
 	unarmed = TRUE

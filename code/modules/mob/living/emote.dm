@@ -867,6 +867,7 @@
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
+		H.shoutbubble()
 		if(H.has_flaw(/datum/charflaw/addiction/masochist))
 			H.sate_addiction()
 
@@ -880,6 +881,7 @@
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
+		H.shoutbubble()
 		if(H.has_flaw(/datum/charflaw/addiction/masochist))
 			H.sate_addiction()
 
@@ -893,6 +895,7 @@
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
+		H.shoutbubble()
 		if(H.has_flaw(/datum/charflaw/addiction/masochist))
 			H.sate_addiction()
 
@@ -1012,14 +1015,17 @@
 	message = "screams!"
 	message_mime = "acts out a scream!"
 	emote_type = EMOTE_AUDIBLE
+
 /mob/living/carbon/human/verb/emote_scream()
 	set name = "Scream"
 	set category = "Noises"
 	emote("scream", intentional = TRUE)
+
 /datum/emote/living/scream/can_run_emote(mob/living/user, status_check = TRUE , intentional)
 	. = ..()
 	if(. && iscarbon(user))
 		var/mob/living/carbon/C = user
+		C.shoutbubble()
 		if(C.silent || !C.can_speak_vocal())
 			message = "makes a muffled scream!"
 		if(intentional)

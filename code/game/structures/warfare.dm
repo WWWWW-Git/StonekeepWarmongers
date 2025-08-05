@@ -2,14 +2,18 @@
 	name = "objective"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/gametype = /datum/warmode
+	var/qdel_on_init = FALSE
 
 /obj/structure/warobjective/Initialize()
-	. = ..() // I don't know at this point. I guess if you don't want it to show up on the map you can hide it or make a special object that deletes itself on init.
+	. = ..()
 	var/datum/game_mode/warmongers/C = SSticker.mode
 	var/datum/warmode/WM = new gametype
 	
 	C.warmode = WM
 	WM.objective = src
+
+	if(qdel_on_init)
+		return INITIALIZE_HINT_QDEL
 
 // TDM
 

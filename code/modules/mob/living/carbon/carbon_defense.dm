@@ -103,6 +103,9 @@
 				update_inv_head()
 				BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 			else
+				var/obj/item/bodypart/chest = get_bodypart(BODY_ZONE_CHEST)
+				chest.add_wound(/datum/wound/dismemberment/head)
+				
 				newdam = newdam * 5
 				if(aspect_chosen(/datum/round_aspect/halo))
 					playsound_local(get_turf(src), 'sound/vo/halo/skillissue.mp3', 100)
