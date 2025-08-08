@@ -28,6 +28,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/warfare_ready_to_die = FALSE		// If the barriers for fair play have been removed yet.
 	var/warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
+	var/obj/structure/warobjective/fuckthisshit
 	var/list/warfare_barriers = list()
 
 	var/oneteammode = FALSE // players only allowed to choose grenzelhoft

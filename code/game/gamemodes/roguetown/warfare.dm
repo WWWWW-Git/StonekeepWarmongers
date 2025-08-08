@@ -33,6 +33,7 @@
 
 /datum/game_mode/warmongers/post_setup(report)
 	begin_countDown()
+	SSticker.fuckthisshit.setup()
 	return ..()
 
 /datum/game_mode/warmongers/proc/award_triumphs()

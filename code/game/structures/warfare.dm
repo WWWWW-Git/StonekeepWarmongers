@@ -4,8 +4,11 @@
 	var/gametype = /datum/warmode
 	var/qdel_on_init = FALSE
 
-/obj/structure/warobjective/LateInitialize()
+/obj/structure/warobjective/Initialize()
 	. = ..()
+	SSticker.fuckthisshit = src
+
+/obj/structure/warobjective/proc/setup()
 	var/datum/game_mode/warmongers/C = SSticker.mode
 	var/datum/warmode/WM = new gametype
 	
@@ -13,7 +16,8 @@
 	WM.objective = src
 
 	if(qdel_on_init)
-		return INITIALIZE_HINT_QDEL
+		WM.objective = null
+		qdel(src)
 
 // TDM
 
