@@ -1,242 +1,795 @@
-"am" = (/obj/structure/rack/rogue,/obj/item/quiver/bullets{pixel_x = -4},/obj/item/quiver/bullets,/obj/item/quiver/bullets{pixel_x = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"ah" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 4},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"am" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"ar" = (/obj/structure/ladder,/turf/open/floor/rogue/blocks,/area/rogue/outdoors/beach)
 "aA" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"aH" = (/obj/effect/landmark/start/heartfeltinfantry,/obj/structure/bed/rogue/shit,/obj/structure/bed/rogue/sleepingbag,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
 "aM" = (/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
-"cq" = (/obj/effect/landmark/start/grenzellord{dir = 8},/obj/structure/chair/wood/rogue/fancy{dir = 8},/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
-"cN" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"dc" = (/obj/structure/rack/rogue,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"dU" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 9},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"aO" = (/obj/machinery/light/rogue/campfire,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"aS" = (/obj/structure/fluff/statue/knight,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"bl" = (/obj/structure/fluff/railing/border{dir = 6},/obj/structure/fluff/railing/border{dir = 10},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"bn" = (/obj/structure/fluff/railing/fence{dir = 1},/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"bw" = (/obj/structure/flora/newbranch,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"bO" = (/obj/structure/chair/bench/ancientlog,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"bT" = (/obj/machinery/light/rogue/torchholder/r{dir = 4},/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"cb" = (/obj/structure/cannon,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"cq" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"cy" = (/obj/structure/stairs{dir = 4},/obj/structure/fluff/railing/border,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"cJ" = (/obj/item/chair/stool/bar/rogue/crafted,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"cK" = (/obj/machinery/light/rogue/firebowl,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"cN" = (/obj/structure/fluff/railing/fence,/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/blocks,/area/rogue/outdoors/beach)
+"cT" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/ruinedwood,/area/rogue/outdoors/beach)
+"cZ" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/beach)
+"dc" = (/obj/structure/table/wood/large_alt,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"dh" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/mace/spiked,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"dz" = (/obj/structure/table/wood/crafted,/obj/item/reagent_containers/food/snacks/rogue/raisinbreadslice,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"dU" = (/obj/structure/table/wood/treestump,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"em" = (/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "ex" = (/obj/structure/fluff/railing/border{dir = 6},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
 "ez" = (/obj/structure/fluff/railing/border,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"eA" = (/obj/structure/table/wood/plain,/obj/item/paper/scroll,/obj/item/natural/feather,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"eC" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/ruinedwood,/area/rogue/outdoors/beach)
+"eI" = (/obj/structure/chair/stool/rogue,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "eJ" = (/obj/structure/fluff/railing/border,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"eZ" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"fb" = (/obj/structure/table/wood/treestump,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"fl" = (/obj/machinery/light/rogue/torchholder/l,/obj/machinery/light/rogue/hearth,/obj/item/cooking/pan,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"fm" = (/obj/structure/fluff/psycross/copper,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
 "ft" = (/obj/machinery/light/rogue/firebowl,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"fG" = (/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
-"fX" = (/obj/effect/landmark/redreinforcement,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"fZ" = (/obj/structure/rack/rogue,/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"gh" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/obj/structure/warfarebarrier,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"gB" = (/obj/structure/fluff/railing/border{dir = 5},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"hl" = (/obj/structure/fluff/railing/border{dir = 8},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"hG" = (/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
-"hI" = (/obj/structure/fluff/statue/knight,/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
-"in" = (/obj/effect/landmark/observer_start,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"fB" = (/obj/structure/table/wood/crafted,/obj/item/reagent_containers/food/condiment/saltshaker,/obj/item/reagent_containers/food/condiment/peppermill,/turf/closed,/area/rogue/outdoors/beach/boat)
+"fC" = (/obj/structure/table/wood/crafted,/obj/item/reagent_containers/food/snacks/rogue/fryfish,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"fG" = (/obj/structure/fluff/railing/border{dir = 5},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"fI" = (/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 8},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"fJ" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach)
+"fV" = (/obj/structure/rack/rogue,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"fX" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"fZ" = (/obj/structure/flora/newtree,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"gh" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"gq" = (/obj/structure/table/wood/plain/alt,/obj/item/reagent_containers/food/snacks/rogue/breadslice,/obj/item/reagent_containers/food/snacks/rogue/breadslice,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"gB" = (/obj/structure/barricade/sandbags/rogue,/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"gC" = (/obj/structure/fluff/railing/border{dir = 10},/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"gI" = (/obj/structure/barricade/sandbags/rogue{dir = 4},/turf/open/floor/rogue/dirt/road{dir = 1},/area/rogue/outdoors/beach)
+"gZ" = (/obj/structure/cannon,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"ha" = (/obj/structure/chair/stool/rogue{dir = 1; pixel_x = 3},/turf/open/floor/rogue/blocks,/area/rogue/outdoors/beach)
+"hj" = (/obj/structure/fluff/railing/border{dir = 10},/obj/structure/stairs/d,/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"hl" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"hC" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"hF" = (/obj/structure/table/wood/treestump,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/beach)
+"hG" = (/obj/structure/fluff/railing/fence{dir = 1},/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"hI" = (/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"hO" = (/obj/structure/fluff/railing/border{dir = 9},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"ia" = (/obj/effect/landmark/observer_start,/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
+"ic" = (/obj/structure/table/wood/nice,/obj/item/book/rogue/psybibleplayerbook,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"ih" = (/obj/structure/roguerock,/turf/open/floor/rogue/naturalstone,/area/rogue/outdoors/beach)
+"il" = (/obj/structure/table/wood/plain/alt,/obj/item/reagent_containers/food/snacks/rogue/bread,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"in" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"ir" = (/obj/structure/mineral_door/wood,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"iD" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"iY" = (/obj/structure/flora/newtree,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"jb" = (/obj/structure/warfarebarrier,/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"jc" = (/obj/structure/ladder,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"jn" = (/obj/structure/fluff/walldeco/psybanner,/turf/closed/wall/mineral/rogue/wooddark,/area/rogue/outdoors/beach/boat)
 "jE" = (/obj/structure/fluff/railing/border{dir = 10},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"jJ" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 6},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"jF" = (/obj/structure/table/wood/crafted,/obj/item/reagent_containers/food/snacks/rogue/raisinbread,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"jJ" = (/turf/open/floor/rogue/ruinedwood,/area/rogue/outdoors/beach)
+"jK" = (/obj/machinery/light/rogue/firebowl/stump,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"jM" = (/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/ruinedwood,/area/rogue/outdoors/beach)
+"jR" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/wool{name = "kneeling sheet"},/obj/effect/landmark/start/grenzelinfantry{dir = 1},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"jU" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/mace/ararebo{pixel_x = -5},/obj/item/rogueweapon/mace/ararebo,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
 "jV" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
 "jW" = (/obj/structure/fluff/railing/border{dir = 5},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"jY" = (/obj/structure/fluff/railing/border{dir = 10},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"lj" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
-"lB" = (/obj/structure/warfarebarrier,/turf/open/chasm,/area/rogue/outdoors/beach)
+"jY" = (/obj/structure/fluff/railing/border{dir = 10},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"km" = (/obj/structure/plank/h,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"kr" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"kv" = (/obj/structure/flora/roguetree/burnt,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/beach)
+"kC" = (/obj/structure/rack/rogue,/obj/item/quiver/bullets{pixel_x = 4},/obj/item/quiver/bullets{pixel_x = -3},/obj/item/quiver/bullets,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"kK" = (/obj/structure/table/vtable,/obj/item/reagent_containers/glass/bottle/rogue/redwine,/obj/item/reagent_containers/glass/bottle/rogue/redwine,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"kY" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"lj" = (/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"lB" = (/obj/structure/flora/newtree,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
 "lC" = (/obj/structure/fluff/railing/border{dir = 6},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"lG" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
-"lH" = (/obj/structure/fluff/railing/border{dir = 6},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"lG" = (/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"lH" = (/obj/structure/fluff/railing/border{dir = 6},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"lX" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"mq" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"mE" = (/obj/structure/rack/rogue,/obj/item/quiver/bullets{pixel_x = -3},/obj/item/quiver/bullets{pixel_x = 4},/obj/item/rogueweapon/sword/uchigatana{pixel_x = -20},/obj/item/rogueweapon/sword/uchigatana,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "mK" = (/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "mO" = (/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"mY" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 5},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"nB" = (/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
-"nF" = (/obj/structure/warfarebarrier/red,/turf/open/chasm,/area/rogue/outdoors/beach)
-"ob" = (/obj/structure/stairs{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"op" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/mace/spiked{pixel_y = 5},/obj/item/rogueweapon/mace/spiked{pixel_y = -2},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"oO" = (/obj/structure/closet/crate/chest,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"pc" = (/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"pF" = (/obj/structure/fluff/railing/border{dir = 5},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"pY" = (/obj/structure/fluff/grindwheel,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"rp" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 6},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"mR" = (/obj/structure/flora/newbranch,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"mU" = (/obj/effect/landmark/start/heartfeltinfantry,/obj/structure/bed/rogue/shit,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"mY" = (/obj/structure/stairs,/turf/open/water,/area/rogue/outdoors/beach)
+"nd" = (/obj/structure/rack/rogue,/obj/item/quiver/bullets{pixel_x = -4},/obj/item/quiver/bullets,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"nh" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/dirt/road{dir = 1},/area/rogue/outdoors/beach)
+"nk" = (/obj/machinery/light/rogue/torchholder/r,/turf/closed/wall/mineral/rogue/wooddark/horizontal,/area/rogue/outdoors/beach/boat)
+"nv" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"nA" = (/obj/item/natural/rock,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"nB" = (/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach)
+"nF" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/uchigatana{pixel_x = -10},/obj/item/rogueweapon/sword/uchigatana{pixel_x = -23},/obj/item/rogueweapon/sword/uchigatana,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"nS" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"nT" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/barricade/sandbags/rogue{dir = 1},/obj/structure/barricade/sandbags/rogue{dir = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"nW" = (/obj/machinery/light/rogue/torchholder{dir = 1},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"ob" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"oc" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"op" = (/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"os" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"oy" = (/obj/structure/fluff/psycross/copper,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"oN" = (/obj/structure/closet/crate/chest,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"oO" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"pc" = (/obj/structure/chair/bench/ancientlog,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"pe" = (/obj/structure/fluff/standingflag/red,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"pg" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"pl" = (/obj/structure/fluff/walldeco/psybanner,/turf/closed/wall/mineral/rogue/wooddark/vertical,/area/rogue/outdoors/beach/boat)
+"pm" = (/obj/structure/cannon{dir = 1},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"ps" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol{pixel_y = -8},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"pt" = (/obj/structure/rack/rogue,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"pC" = (/obj/structure/flora/roguetree/wise,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"pD" = (/obj/structure/fluff/railing/fence{dir = 1},/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors/beach)
+"pF" = (/obj/structure/fluff/railing/border{dir = 5},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"pJ" = (/obj/structure/barricade/sandbags/rogue{dir = 4},/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"pT" = (/obj/structure/stairs,/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"pY" = (/obj/structure/chair/wood/rogue/fancy{dir = 8},/obj/effect/landmark/start/grenzellord{dir = 8},/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"qh" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{pixel_x = -5; pixel_y = -28},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{pixel_y = -20; pixel_x = -5},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{pixel_y = -10; pixel_x = -5},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"qn" = (/obj/structure/fluff/railing/border{dir = 5},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"qp" = (/obj/structure/bed/rogue/inn/double,/obj/item/bedsheet/rogue/fabric_double,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"qB" = (/obj/structure/flora/newtree,/obj/structure/flora/newtree,/obj/structure/flora/newtree,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"qO" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"qU" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"rg" = (/obj/structure/barricade/sandbags/rogue{dir = 4},/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"ri" = (/obj/structure/table/vtable/v2,/obj/item/reagent_containers/glass/cup/silver,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"rp" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/spear{pixel_x = -22},/obj/item/rogueweapon/spear,/obj/item/rogueweapon/spear{pixel_x = -10},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"ru" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"rF" = (/turf/closed/wall/mineral/rogue/decowood,/area/rogue/outdoors/beach/boat)
+"rI" = (/obj/item/bedsheet/rogue/cloth{name = "kneeling sheet"},/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
 "rK" = (/obj/structure/fluff/railing/border{dir = 5},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
-"rQ" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/spear/yari,/obj/item/rogueweapon/spear/yari{pixel_x = -10},/obj/item/rogueweapon/spear/yari{pixel_x = -23},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"sn" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/mace/ararebo{pixel_x = -5},/obj/item/rogueweapon/mace/ararebo,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"sQ" = (/obj/structure/fluff/railing/border{dir = 9},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"ub" = (/obj/structure/barricade/sandbags/rogue,/obj/structure/warfarebarrier/red,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"rQ" = (/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach)
+"sl" = (/obj/structure/fluff/railing/fence{dir = 1},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/outdoors/beach)
+"sn" = (/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"so" = (/obj/structure/fluff/railing/border{dir = 10},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"ss" = (/obj/structure/flora/roguetree/evil,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"sz" = (/obj/structure/warfarebarrier/red,/turf/closed/wall/mineral/rogue/wooddark/vertical,/area/rogue/outdoors/beach)
+"sQ" = (/turf/open/floor/rogue/dirt/road{dir = 1},/area/rogue/outdoors/beach)
+"sV" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/wool{name = "kneeling sheet"},/obj/effect/landmark/start/grenzelinfantry,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"tc" = (/obj/structure/fluff/railing/fence,/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"ts" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors/beach)
+"tK" = (/obj/effect/landmark/start/heartfeltinfantry{dir = 1},/obj/structure/bed/rogue/shit,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"tR" = (/obj/item/natural/rock,/turf/open/floor/rogue/dirt/road{dir = 1},/area/rogue/outdoors/beach)
+"ub" = (/obj/structure/flora/newtree,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"uh" = (/obj/structure/fluff/railing/border{dir = 1},/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
 "us" = (/turf/closed/wall/mineral/rogue/wooddark,/area/rogue/outdoors/beach/boat)
-"uu" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/spear{pixel_x = -22},/obj/item/rogueweapon/spear,/obj/item/rogueweapon/spear{pixel_x = -10},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"uC" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/uchigatana{pixel_x = -20},/obj/item/rogueweapon/sword/uchigatana,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"uI" = (/obj/structure/warobjective/bloodstatue,/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
+"uu" = (/obj/structure/fermenting_barrel/beer,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"ux" = (/obj/machinery/light/rogue/firebowl,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"uz" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"uC" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"uF" = (/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"uI" = (/obj/structure/warfarebarrier/red,/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
+"uV" = (/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"vf" = (/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/outdoors/beach)
+"vi" = (/obj/structure/table/wood/plain,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
 "vj" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"vu" = (/obj/effect/landmark/start/heartfeltlord{dir = 8},/obj/structure/chair/wood/rogue/fancy{dir = 8},/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
-"vL" = (/obj/structure/warfarebarrier/red,/obj/structure/cannon,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"vR" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"wy" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 9},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"wB" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"xc" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"vl" = (/obj/structure/warfarebarrier/red,/turf/open/water,/area/rogue/outdoors/beach)
+"vu" = (/obj/structure/chair/stool/rogue,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"vF" = (/obj/structure/fluff/psycross/evil,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"vG" = (/turf/closed/wall/mineral/rogue/wooddark/window,/area/rogue/outdoors/beach/boat)
+"vL" = (/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"vP" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"vR" = (/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"vZ" = (/obj/structure/rack/rogue,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"wv" = (/obj/structure/table/wood/large/corner_alt,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"wy" = (/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/ruinedwood,/area/rogue/outdoors/beach)
+"wB" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"wO" = (/obj/structure/barricade/sandbags/rogue{dir = 4},/turf/open/floor/rogue/ruinedwood,/area/rogue/outdoors/beach)
+"xc" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"xk" = (/obj/structure/fluff/railing/fence{dir = 1},/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"xm" = (/obj/structure/table/wood/plain/alt,/obj/item/reagent_containers/glass/cup/wooden,/obj/item/reagent_containers/glass/cup/wooden,/obj/item/reagent_containers/glass/cup/wooden,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"xq" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/woodcut/steel,/obj/item/rogueweapon/woodcut/steel{pixel_y = -6},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
 "xt" = (/turf/open/chasm,/area/rogue/outdoors/beach)
+"xC" = (/obj/item/natural/rock,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"xO" = (/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 4},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
 "xT" = (/obj/structure/roguewindow,/turf/open/floor/rogue/blocks,/area/rogue/outdoors/beach/boat)
 "xU" = (/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
-"yB" = (/obj/structure/warfarebarrier/red,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"xZ" = (/obj/structure/barricade/sandbags/rogue,/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"yn" = (/obj/structure/fermenting_barrel/beer,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"yv" = (/obj/structure/chair/stool/rogue,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"yB" = (/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
 "yE" = (/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"yJ" = (/obj/structure/table/wood/nice,/obj/item/paper/scroll,/obj/item/natural/feather,/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
-"za" = (/obj/structure/table/wood/nice,/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
-"zc" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{pixel_y = -20; pixel_x = -10},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{pixel_y = -10; pixel_x = -10},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{pixel_x = -10},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"Ar" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/woodcut/steel,/obj/item/rogueweapon/woodcut/steel{pixel_y = -6},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"As" = (/obj/structure/fluff/railing/border,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"yG" = (/obj/structure/fluff/railing/border{dir = 9},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"yJ" = (/turf/closed/wall/mineral/rogue/tent,/area/rogue/outdoors/beach/boat)
+"yK" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"yS" = (/obj/structure/flora/newtree,/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"yY" = (/obj/structure/cannon{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"za" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"zc" = (/turf/open/floor/rogue/dirt/sand,/area/rogue/outdoors/beach)
+"zu" = (/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/outdoors/beach)
+"zA" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"zP" = (/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"zW" = (/obj/structure/fluff/railing/fence,/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"Ah" = (/obj/machinery/light/rogue/torchholder/l,/obj/structure/roguemachine/musicbox,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"Al" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/outdoors/beach)
+"Ar" = (/obj/structure/fluff/railing/border,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"As" = (/obj/structure/fluff/railing/border,/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "AM" = (/obj/machinery/light/rogue/torchholder{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"Bk" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"AP" = (/obj/structure/barricade/sandbags/rogue{dir = 4},/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach)
+"AZ" = (/obj/structure/fluff/railing/border,/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Bb" = (/turf/closed/wall/mineral/rogue/wooddark/slitted,/area/rogue/outdoors/beach/boat)
+"Bh" = (/turf/closed/wall/mineral/rogue/stone/moss,/area/rogue/outdoors/beach)
+"Bk" = (/obj/structure/roguetent,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Bl" = (/obj/machinery/light/rogue/hearth,/obj/item/cooking/pan,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Bm" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
 "Bn" = (/obj/structure/plank,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"Bt" = (/obj/structure/warfarebarrier,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"Bz" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 10},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Bs" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"Bt" = (/obj/structure/table/wood/nice,/obj/item/clothing/neck/roguetown/psicross/silver{desc = "Smells of old blood and... marmalade."},/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"Bz" = (/turf/closed/wall/mineral/rogue/wood,/area/rogue/outdoors/beach/boat)
+"BG" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"BU" = (/obj/machinery/light/rogue/firebowl/stump,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Cj" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 8},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Ck" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/preserved/onion_fried,/obj/item/reagent_containers/food/snacks/rogue/preserved/onion_fried,/obj/item/reagent_containers/food/snacks/rogue/preserved/onion_fried,/obj/item/reagent_containers/food/snacks/rogue/preserved/onion_fried,/obj/item/reagent_containers/food/snacks/rogue/preserved/onion_fried,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
 "Cm" = (/obj/machinery/light/rogue/torchholder{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"Cn" = (/obj/structure/stairs{dir = 4},/obj/structure/fluff/railing/border,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Cn" = (/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/beach)
 "CA" = (/obj/structure/cannon{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"CQ" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
-"Dq" = (/obj/structure/cannon,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"ET" = (/obj/machinery/light/rogue/torchholder/r,/obj/machinery/light/rogue/hearth,/obj/item/cooking/pan,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"CD" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"CQ" = (/obj/machinery/light/rogue/torchholder,/turf/closed/wall/mineral/rogue/wood,/area/rogue/outdoors/beach/boat)
+"CV" = (/obj/item/rogueweapon/sword/sabre/piandao/dec,/obj/structure/rack/rogue,/obj/item/clothing/neck/roguetown/psicross/ravox,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Df" = (/obj/structure/barricade/sandbags/rogue{dir = 4},/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"Dk" = (/obj/machinery/light/rogue/firebowl,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"Dq" = (/obj/structure/fluff/walldeco/customflag,/turf/closed/wall/mineral/rogue/wood,/area/rogue/outdoors/beach/boat)
+"DH" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/obj/structure/fluff/grindwheel,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"DR" = (/obj/structure/rack/rogue,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"El" = (/obj/structure/flora/roguetree,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/beach)
+"Es" = (/obj/structure/fluff/railing/border{dir = 6},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"Et" = (/obj/structure/barricade/sandbags/rogue,/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"Ev" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{pixel_y = -20; pixel_x = -10},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{pixel_y = -10; pixel_x = -10},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{pixel_x = -10},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"EP" = (/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"ET" = (/obj/structure/fluff/grindwheel,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"EW" = (/obj/structure/fluff/railing/border,/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"EY" = (/obj/structure/rack/rogue,/obj/item/quiver/bullets{pixel_x = -4},/obj/item/quiver/bullets,/obj/item/quiver/bullets{pixel_x = 4},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"Fe" = (/obj/structure/rack/rogue,/obj/item/quiver/bullets{pixel_x = -4},/obj/item/quiver/bullets,/obj/item/quiver/bullets{pixel_x = 4},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"Fg" = (/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/outdoors/beach)
+"Fm" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/cutlass{pixel_x = -1},/obj/item/rogueweapon/sword/cutlass{pixel_x = 3},/obj/item/rogueweapon/sword/cutlass{pixel_x = 7},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
 "FI" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"FL" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/beach)
+"FR" = (/obj/structure/chair/stool/rogue{dir = 1; pixel_y = 5},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"FW" = (/obj/structure/cannon,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"Gb" = (/obj/structure/fluff/railing/fence{dir = 1},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"Gd" = (/obj/effect/landmark/mapGenerator/sunlights{endTurfX = 110; endTurfY = 127},/turf/open/transparent/openspace,/area/rogue)
 "Gh" = (/obj/structure/fluff/railing/border{dir = 9},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Gk" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/rogue/blocks,/area/rogue/outdoors/beach)
+"Gz" = (/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"GB" = (/obj/structure/flora/roguetree/evil,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"GL" = (/obj/machinery/light/rogue/firebowl,/turf/open/floor/rogue/naturalstone,/area/rogue/outdoors/beach)
+"GN" = (/turf/closed/wall/mineral/rogue/wooddark/horizontal,/area/rogue/outdoors/beach/boat)
 "GU" = (/obj/structure/stairs{dir = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Hd" = (/obj/structure/fluff/railing/fence{dir = 8},/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"Hk" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"Hp" = (/obj/item/bedsheet/rogue/wool{name = "kneeling sheet"},/obj/effect/landmark/start/heartfeltlord{dir = 8},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"Hw" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"HI" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"HR" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors/beach)
+"HY" = (/obj/structure/closet/crate/chest,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
 "Ib" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"Ie" = (/obj/machinery/light/rogue/torchholder/l,/obj/structure/roguemachine/musicbox,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"IR" = (/obj/effect/landmark/blureinforcement,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"Jk" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/cutlass,/obj/item/rogueweapon/sword/cutlass{pixel_x = 5},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"Kn" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/woodcut/changfu{pixel_x = 5},/obj/item/rogueweapon/woodcut/changfu,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"Ly" = (/obj/structure/fluff/statue/knight,/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
-"MF" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
+"Ie" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Ih" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"In" = (/obj/structure/flora/roguetree/burnt,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"Is" = (/turf/open/floor/rogue/plank,/area/rogue/outdoors/beach)
+"ID" = (/obj/structure/fluff/railing/fence{dir = 1},/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"II" = (/obj/structure/fluff/wallclock,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"IP" = (/obj/structure/mineral_door/wood/donjon{dir = 8},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"IR" = (/obj/structure/stairs{dir = 4},/turf/closed,/area/rogue/outdoors/beach/boat)
+"Jb" = (/obj/structure/fluff/railing/border{dir = 9},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"Jf" = (/obj/structure/fluff/railing/border,/obj/structure/warfarebarrier,/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Jk" = (/obj/structure/table/wood/crafted,/obj/item/reagent_containers/glass/cup/silver,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"Js" = (/obj/structure/fluff/railing/fence{dir = 1},/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"Jv" = (/obj/structure/fluff/railing/border,/obj/structure/barricade/sandbags/rogue,/obj/structure/barricade/sandbags/rogue{dir = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Jw" = (/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"JC" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"JN" = (/obj/machinery/light/rogue/firebowl,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"Ka" = (/obj/structure/cannon{dir = 1},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"Km" = (/obj/structure/cannon{dir = 1},/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"Kn" = (/obj/structure/table/wood/treestump,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"KP" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"KQ" = (/obj/structure/bed/rogue/inn/hay,/turf/open/floor/rogue/ruinedwood,/area/rogue/outdoors/beach)
+"Ld" = (/obj/structure/fluff/railing/fence{dir = 4},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Lg" = (/obj/structure/barricade/sandbags/rogue{dir = 4},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Ly" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"Mf" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/outdoors/beach)
+"Mj" = (/obj/structure/stairs{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"Mp" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/cutlass,/obj/item/rogueweapon/sword/cutlass{pixel_x = 5},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Mq" = (/obj/structure/mineral_door/wood/fancywood,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"Mt" = (/obj/structure/fluff/railing/fence{dir = 1},/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"Mu" = (/obj/structure/stairs{dir = 4},/obj/structure/fluff/railing/border,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"MF" = (/turf/closed/wall/mineral/rogue/wooddark/vertical,/area/rogue/outdoors/beach/boat)
+"MJ" = (/obj/structure/stairs,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach)
 "MM" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"Ng" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"Nz" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/pelt,/obj/effect/landmark/start/heartfeltinfantry,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"Oh" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"MP" = (/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"MQ" = (/obj/structure/rack/rogue,/obj/item/quiver/bullets{pixel_x = 4},/obj/item/quiver/bullets{pixel_x = -3},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"MZ" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"Ng" = (/obj/structure/barricade/sandbags/rogue{dir = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Nh" = (/obj/structure/warobjective/bloodstatue,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"Nj" = (/obj/structure/fluff/psycross/evil,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"Nz" = (/turf/closed/wall/mineral/rogue/stonebrick,/area/rogue/outdoors/beach)
+"NB" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/bread,/obj/item/reagent_containers/food/snacks/rogue/bread,/obj/item/reagent_containers/food/snacks/rogue/bread,/obj/machinery/light/rogue/torchholder/l{dir = 8},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"NN" = (/obj/structure/table/vtable,/obj/item/reagent_containers/food/snacks/rogue/meat/poultry/baked/plated,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"NW" = (/obj/structure/fluff/railing/border{dir = 10},/obj/structure/fluff/railing/border{dir = 6},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"NY" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/mace/spiked{pixel_y = 5},/obj/item/rogueweapon/mace/spiked{pixel_y = -2},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"Oc" = (/obj/structure/rack/rogue,/obj/machinery/light/rogue/torchholder/l,/obj/item/rogueweapon/woodcut/steel,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"Oh" = (/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Oo" = (/obj/structure/mineral_door/wood/red,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "Oq" = (/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Ot" = (/obj/structure/table/wood/nice,/obj/item/paper/scroll,/obj/item/natural/feather,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"OC" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/woodcut/changfu{pixel_x = 5},/obj/item/rogueweapon/woodcut/changfu,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"OG" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/beach)
+"OU" = (/obj/structure/chair/bench/ancientlog,/turf/open/floor/rogue/dirt/road{dir = 1},/area/rogue/outdoors/beach)
+"OV" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "Pb" = (/obj/structure/closet/crate/chest,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"Pj" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{pixel_x = -5; pixel_y = -28},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{pixel_y = -20; pixel_x = -5},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{pixel_y = -10; pixel_x = -5},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"PE" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/wool,/obj/effect/landmark/start/grenzelinfantry{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"PI" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/pelt,/obj/effect/landmark/start/heartfeltinfantry{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"QZ" = (/obj/structure/table/wood/nice,/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
-"Rb" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 5},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"Rm" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/wool,/obj/effect/landmark/start/grenzelinfantry,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Pc" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"Pi" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/dirt/road{dir = 1},/area/rogue/outdoors/beach)
+"Pj" = (/obj/item/natural/rock,/turf/open/floor/rogue/naturalstone,/area/rogue/outdoors/beach)
+"Pq" = (/obj/structure/fluff/standingflag,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"PE" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border,/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"PH" = (/obj/structure/chair/stool/rogue,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors/beach)
+"PI" = (/turf/open/floor/rogue/blocks,/area/rogue/outdoors/beach)
+"PU" = (/obj/machinery/light/rogue/torchholder/l{dir = 8},/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"PY" = (/obj/machinery/light/rogue/firebowl,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"Qc" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"Qd" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"Qs" = (/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"Qy" = (/obj/structure/fluff/railing/fence{dir = 1},/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"QR" = (/obj/structure/bed/rogue/inn/double,/obj/item/bedsheet/rogue/double_pelt,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"QY" = (/obj/structure/fluff/railing/fence{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"QZ" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"Rb" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/eaglebeak/lucerne,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Re" = (/obj/structure/flora/newbranch,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/beach)
+"Rm" = (/obj/structure/barricade/sandbags/rogue,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"RE" = (/obj/machinery/light/rogue/campfire/densefire,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"RM" = (/obj/structure/cannon,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"RU" = (/obj/structure/fermenting_barrel/beer,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Sf" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/blocks,/area/rogue/outdoors/beach)
+"Sg" = (/obj/structure/fluff/railing/fence,/obj/structure/fluff/railing/fence{dir = 4},/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"Sj" = (/obj/machinery/light/rogue/torchholder{dir = 1},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"SK" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/dirt/sand,/area/rogue/outdoors/beach)
+"SL" = (/obj/structure/warfarebarrier,/turf/closed/wall/mineral/rogue/wooddark/vertical,/area/rogue/outdoors/beach)
 "SN" = (/obj/structure/warfarebarrier,/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
-"SS" = (/obj/structure/rack/rogue,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"Tm" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 10},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"SS" = (/obj/structure/flora/roguetree/burnt,/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"SV" = (/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors/beach)
+"Tm" = (/obj/effect/landmark/events/haunts,/obj/structure/roguetent,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "Tv" = (/obj/structure/rack/rogue,/obj/item/quiver/bullets{pixel_x = 4},/obj/item/quiver/bullets{pixel_x = -3},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"TF" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"TH" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/steak,/obj/item/reagent_containers/food/snacks/rogue/meat/wiener,/obj/item/reagent_containers/food/snacks/rogue/meat/wiener,/obj/item/reagent_containers/food/snacks/rogue/meat/wiener,/obj/item/reagent_containers/food/snacks/rogue/meat/salami,/obj/item/reagent_containers/food/snacks/rogue/meat/salami,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"TO" = (/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "Uf" = (/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
+"Uw" = (/obj/structure/rack/rogue,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
 "Uz" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"UK" = (/obj/structure/warfarebarrier,/obj/structure/cannon{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"UK" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
 "UL" = (/obj/structure/fluff/railing/border{dir = 4},/obj/machinery/light/rogue/firebowl,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"UQ" = (/obj/structure/warfarebarrier/red,/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
-"VD" = (/obj/structure/table/wood/nice,/obj/item/paper/scroll,/obj/item/natural/feather,/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
+"UO" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 8},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"UQ" = (/turf/open/water,/area/rogue/outdoors/beach)
+"Va" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/beach)
+"Vd" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/beach)
+"Vi" = (/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"Vl" = (/obj/structure/fluff/railing/fence,/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/beach)
+"Vw" = (/obj/structure/flora/newbranch/leafless,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
+"VB" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol{pixel_y = -8},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"VD" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
 "VQ" = (/obj/structure/fluff/railing/border{dir = 6},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"VT" = (/obj/structure/roguewindow,/obj/structure/bars/grille,/turf/open/floor/rogue/blocks,/area/rogue/outdoors/beach/boat)
+"Wb" = (/obj/structure/flora/roguetree/burnt,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"Wd" = (/obj/structure/barricade/sandbags/rogue{dir = 8},/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach)
 "Wk" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"Wl" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/uchigatana{pixel_x = -10},/obj/item/rogueweapon/sword/uchigatana{pixel_x = -23},/obj/item/rogueweapon/sword/uchigatana,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Wl" = (/obj/structure/chair/bench/ancientlog,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
 "Ws" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Wy" = (/obj/structure/stairs{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
 "WP" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol{pixel_y = -8},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"Xd" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/cutlass{pixel_x = -1},/obj/item/rogueweapon/sword/cutlass{pixel_x = 3},/obj/item/rogueweapon/sword/cutlass{pixel_x = 7},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"WV" = (/obj/structure/barricade/sandbags/rogue{dir = 4},/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors/beach)
+"WW" = (/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 8},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Xd" = (/turf/open/floor/rogue/naturalstone,/area/rogue/outdoors/beach)
 "Xe" = (/obj/effect/landmark/blureinforcement,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Xf" = (/obj/structure/barricade/sandbags/rogue{dir = 1},/turf/open/floor/rogue/cobble,/area/rogue/outdoors/beach)
+"Xo" = (/obj/structure/fluff/railing/border{dir = 8},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
+"Xp" = (/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 4},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"XI" = (/obj/structure/table/wood/crafted,/turf/closed,/area/rogue/outdoors/beach/boat)
 "XN" = (/obj/structure/fluff/railing/border,/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"XO" = (/obj/item/natural/rock,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"XR" = (/obj/effect/landmark/start/heartfeltinfantry{dir = 1},/obj/structure/bed/rogue/shit,/obj/structure/bed/rogue/sleepingbag,/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"XU" = (/obj/structure/fluff/psycross/evil,/turf/open/floor/rogue/grass,/area/rogue/outdoors/beach)
+"XY" = (/obj/structure/flora/newtree,/obj/structure/flora/newtree,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Yj" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/spear/yari,/obj/item/rogueweapon/spear/yari{pixel_x = -10},/obj/item/rogueweapon/spear/yari{pixel_x = -23},/turf/open/floor/rogue/woodturned,/area/rogue/outdoors/beach/boat)
+"Yl" = (/obj/structure/flora/roguetree/burnt,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Yq" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/glass/cup/wooden,/obj/item/reagent_containers/glass/cup/wooden,/obj/item/reagent_containers/glass/cup/wooden,/obj/item/reagent_containers/glass/cup/wooden,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/outdoors/beach/boat)
+"Yu" = (/obj/structure/fluff/railing/border{dir = 9},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"Yw" = (/obj/structure/flora/roguetree/wise,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
 "Yz" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "YE" = (/obj/structure/stairs{dir = 4},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"YG" = (/obj/structure/table/vtable/v2,/obj/item/reagent_containers/food/snacks/rogue/bun_grenz/plated,/turf/open/floor/rogue/twig,/area/rogue/outdoors/beach/boat)
+"YL" = (/obj/structure/warfarebarrier,/turf/open/water,/area/rogue/outdoors/beach)
+"YP" = (/obj/structure/fluff/railing/fence,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors/beach)
 "Ze" = (/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Zg" = (/obj/structure/closet/crate/chest,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"Zj" = (/obj/structure/rack/rogue,/turf/open/floor/rogue/dirt,/area/rogue/outdoors/beach)
 "Zz" = (/obj/effect/landmark/redreinforcement,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"ZW" = (/obj/machinery/light/rogue/torchholder/l,/obj/machinery/light/rogue/hearth,/obj/item/cooking/pan,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"ZW" = (/turf/open/floor/rogue/greenstone,/area/rogue/outdoors/beach)
 
 (1,1,1) = {"
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususususususususususususususususususususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususzcamusPbIbZeZeZeIbZeZeZeIbZeusZeZeIbZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususrQWlZeZeOqusZeZeZeZeZeZeZeZeZeZeZeusZeZeZeZeZeNzNzNzusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfussnZeZeZeZeZeZeZeZeZeZeGUususZeZeusNgZeZeZeNgusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusdcZeZeZeZeZeWkZeZeZeZeGUususZeOqusZWZeWkZeZWusIefXNzNzNzususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusKnZeZeZeZeZeZeZeZeZeZeGUususZeZeuscNZeZeZecNusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususrQWlZeZeOqusZeZeZeZeZeZeZeZeZeZeZeusZeZeZeZeZePIPIPIusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususoOoOusPbAMDqZeDqAMDqZeDqAMZeusZeZeAMZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-nFUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQususususususZeusZeusZeusZeususususususususususUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQ
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-lBSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNususususususZeusZeusZeusZeususususususususususSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSN
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususPjamusPbIbCAZeCAIbCAZeCAIbZeusZeZeIbZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususuuXdSSZeOqusZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeRmRmRmusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusArZeZeZeZeZeZeZeZeZeZeGUususZeZeusNgZeZeZeNgusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusfZZeZeZeZeZeWkZeZeZeZeGUususZeOqusZWZeWkZeETusIeXePEPEPEususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusopZeZeZeZeZeZeZeZeZeZeGUususZeZeuscNZeZeZecNusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususuuXdSSZeOqusZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZePEPEPEusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususPjamusPbAMZeZeZeAMZeZeZeAMZeusZeZeAMZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususususususususususususususususususususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuI
+xtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIuIuIusMFMFMFMFMFMFMFMFvGMFMFvGususvGususususususususususuIuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIusMFMFusBzBzBzBzBzljljljKaljljKaljljKaljyJyJyJyJyJyJyJusususuIuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIususBzBzBzBzljEvEYBzmOmOQYljQYQYljQYQYljmOyJxmBlkYBlmOyJyJyJyJusuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIusGNBzBzljYjnFmOljmOBzmOmOmOljmOmOljmOmOljmOyJmOljljljmOmUaHaHyJusuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIusMFGNBzjUmOmOmOmOljmOBzmOmOmOGUBzmOljmOBzljmOBkmOCkyJljmOljljljyJusuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIusMFMFGNBzvZljljljljljWsOomOmOmOGUBzZgfmGzBzVimOTmmONBusVimOaHaHmUyJusuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIusMFGNBzOCmOmOmOmOljmOBzmOmOmOGUBzZgljmOBzljmOBkmOcJyJljmOljljljyJusuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIuIusGNBzBzljYjnFmOljmOBzmOmOmOljmOmOljmOmOljmOyJmOljljljmOXRtKXRyJusuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIususBzBzBzBzljHYHYBzmOmOnvljnvnvljnvnvljmOyJeIilgqFRmOyJyJyJyJusuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIusMFMFusBzBzBzBzBzljljljljljljgZljljgZljyJyJyJyJyJyJyJusususuIuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIuIuIusMFMFMFMFMFMFususMFMFMFvGMFMFvGMFMFMFMFMFMFMFMFususuIuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfuIuIuIuIuIuIuIuIuIvlszvluIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQmYUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQUQUQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQUQUQUQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcUfUfUfUfUfUfzczcUQUQUQUfUfUfUfUfUfUfzczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcUfzczczczczczczczczczczczczczczcUfzczczczczczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczcUfzcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczczczczczczczczczczcvRvRvRvRzczcvRzczczczcvRzczczczczcvRvRvRvRvRvRvRzczczczczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczczczczczczcvRvRvRvRvRzczczcvRvRopopopvRvRvRvRvRvRvRvRvRCnCnvRvRopsnsnvRvRvRsnvRzczcvRzczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczcSKzczczczcvRvRvRvRvRvRvRvRvRvRopsnsnopopopopvRopopopopvRvRcKCnopopsnsnvRbOsnvRsnvRvRvRvRzczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczcvRvRvRvRzcvRvRvRvRbOvRvRopopopvRopsnvRopopNjopopopsnvRvRopopvRCnCnmqopopopsnopopvRvRvRsnvRvRinzczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRvRvRvRvRvRvRvRvRvRvRvRHIzasnsnsnbOvRvRopopopvRopsnopsnopopiYvRdUCnCnopopopsnvRopopKnsnsnbOvRvRvRzcUfUfUfzcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRvRvRvRvRvRvRvRubopopvRopopsnvRvRvRvRvRvRvRKnsnsnvRWbsnopopopvRvRCnCnCnvRubvRopvRvRopsnsnvRvRvRvRvRzczczczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRvRvRbOvRvRopvRvRiYsnsnXOsnopopvRopYwopopvRopopsniYvRvRvRsngIvRsQCnCnCnCnvRJNvRvRvRbwvRsnsnvRvRvRvRvRzczczczcvRzczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRvRvRvRvRdUopvRvRopvRvRsnopXdihXdopopsnvRsnsninsnopvRopopvRvRsQVdPiCnCnCnCnCnvRvRsnsnvRsnvRvRInvRopvRvRvRvRvRbOvRvRvRzczczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRvRvRvRopsnvRopsnvRbOsnvRXOXdXdPjXdPjXdopsnsnopubvRsnvRcKvRCnsQsQCnsQOGCnCnCnCnsnsnopsnsnvRubvRvRopopopopvRvRvRvRvRvRvRvRzczczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRvRvRopsnopsnsnsnsnUKfXfXsnsnvRopXdXdXdvRsnsnsnsnvRvRopCnCnOUsQsQsQsQsQopopCnCnCnCnopvRvRpcvRvRopopopopvRKnvRvRvRvRvRbOvRvRvRzcvRzczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczcopopWlsnsnsnsnsnubvRvRvRvRvRvRopubvRGLXdvRvRCnhFopCnCnCnsQsQsQsQsQopsnsnvRopcKvRCnCnOGUKvRvRvRJwopopopvRvRvRvRvRvRPjvRopopKnopopvRzczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczcvRvRsnsnopvRlBvRvRopopQcuCuCvRslslopubvRtRsQReCnCnCnCnCnsQsQsQsQopubXdPjvRsnsnvRopCnCnCnvRvRvRopQyvRopvRWlvRvRvFvRopXdXdXdHkvRopopvRopzczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRopopopvRopopvRvRvRopvRvfjJsnjJKQFgopopsQsQCnCnsQsQCnCnsQnhVlvRopvRvRPjXdXdvRbOsnubCnCnCnCnsQubvRsnopsninsnvRopvRopPjXdXdXdopvRopVaopopopzcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRvRvRKnvRvRsnvRopopvRvRvfZjptjJcTcTvRjJjJCnCnsQCnCnCncKopvRvRopsnvRvRXdXdvRXdvRopsnvRCnElCnsQJNsnfbsnvRvRvRvRdUlBvRvRXdPjvRopopopVaopvRopopUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRopopvRvRvRsnsnbOvRhGvRpJjJopvRjJjJjJQcjJzusQsQvRinvRububvRvRvRKnvRsnopopPjXdvRvRsnvRvRCnCnsQsQsQsnvRvRvRvRvRsnvRvRvRvRvRsnvRvRvRCDopopopvRopUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRubvRvRopsnvRvRvRopvRsnwOjJjJjJFgjJjJjJjJzusQcKvRsnvRvRubvRvRopvRvRsnpcvRsnvRvRfbvRvRvRvRvRCnsQsQnhtcvRPjXdvRvRvRvRvRsnopopiYvRvRopopopopopzcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRvRvRvRbwvRsnsnsnopvRsnjJjJopKQjJFgFgjJjJPcvRvRvRvRJwvRopsnopsnvRvRvRsnvRvRvRvRsnsnsnzWsnsnsnCnsQsQsQsQvRXdPjXdvRvRbOvRsnopSSopubvRopfbvRopvRzcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRvRopsnsnvRvRbOopQssnopvRsnjMjJjJyvaOjJjJMfsnjJjJsnJwopvRvRvRvRopiYvRvRubopvRVwsnsnsnsnopvRsnubsQCnsQsQcKPjXdXdvRopsnvRsnfbvRvRopvRopopopopzczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRopvRsnvRvRopsnsnMPopvRQcsnFgFgjJjJsnyvjJFgjJsnsnopvRvRvRvRopvRvRvRvRInsnsnvRopvRsnopsnvRopsnsnsQCnsQsQvRopXdPjsnsnopsnvRopvRvRopoppcvRvRzczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRopopvRdUopvRvRvRsnvRububsnsnAleCAlFgcTcTopwyopvRiYopvRKnvRvRvRopvRvRsnopopvRopoppcvRmRvRsnvRcKsQsQkvsQopopvRXdsnsnubvRvRopvRiYopvRvRopvRzczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRbOvRopopsnvRvRinopvRopvRsnvRvRopopsnFgFgvRXdsnopvRopvRvRopiYvRopsnopvRpcopvRsnsnsnopvRvRdUvRvRopsQCngIBmuCvRsnsnvRopoprgHwHwubiYopvRopvRvRzcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRvRvRopvRvRvRubvRsnXdvRsnvRsnopvRvRvRsnvRFgXdXdvRvRvRHIVaopopvRsnvRvRvRopopopvRvRiYvRopsnopopvRsnvRsQCnsQsnopvRopfbvRvRvRvRvRvRopvRopopvRUfvRUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRvRvRvRvRInvRvRvRXdPjXdvRdUzazazavRvRfXfXfXXdihXdvRvRopsnvRvRvRopvRvRvRsnfbopopvRsnububsnvRopsnvRvRCnCnvRvRvRvRvRvRvRvRvRvRvRvRvRvRvRvRbOUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRsnvRfXvRsnopvRsnsnXdXdXdvRsninvRvRvRvRvRopopvRXdXdopopsnvRopopsnvRoyvRsnvRsnopsnsnvRsnopopsnvRNzIDNzSVSVNzvRvRvRvRvRUfUfUfUfUfUfvRUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfzczcsnsnvRopsnsnubvRsnsnvRPjXdvRsnsnvRvRubsnopopvRvRvRopopopopopopWlopvRopvRsnopopubvRvRopsnvRcKNzKmDRyBNzSVSVNzJsDkUfUfUfUfUfZWZWUfUfUfUfUfUfUfBhZWUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfzczczcsnvRubopsnvRublBsnWlvRXdPjsnvRbOvRvRvRsnoppcopopvRopvRvRvRsnopvRsnopopopopvRmqopopopvRvRvRNzyByByByByBSVSVPIyBIDNzUfUfUfUfBhBhZWUfUfUfUfUfUfBhBhUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRsnopvRopsnvRvRsnsnsnsnXdvRopvRubopvRsnopopvRvRopsnubSSvRvRsnopmRopqBopopopvRvRvRvRUfUfvREPPISfhayByBSVHRKPyByBNzNzUfUfUfZWBhUfUfUfUfUfUfUfZWBhZWUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRvRopvRdUvRvRsnopopsnsnmRvRvRopvRvRopvRsnopopsnopsnvRvRvRvRfbsnsnvRopopopvRvRUfUfUfUfUfNzyBPIyByBREPHWVSVyBPIyByBzPUfUfUfUfUfUfUfBhZWUfUfUfZWBhUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRvRvRsnopopsnvRlBlBsnvRvRopvRopopvRvRsnvRvRoposUKopsnvRsnsnopopopopopvRvRUfUfUfUfUfUfUfNzIDIDJsyByBSVSVSVVDPIyByBDfUfUfUfUfUfUfUfBhBhUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfzczcvRSSvRopvRpcopvRvRopvRrgvRvRvRopopoppcvRvRvRlBvRvRopopopopopopvRopopvRvRvRUfUfUfUfUfUfUfUfNzyByBPIyBSVSVSVyByBPIaryBDfUfUfBhUfUfUfUfZWUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfzczcvRopvRopvRsnvRsnsnsnopopuCuCvRopopopopvRvRubvRvRopopopoppcopvRvRvRvRUfUfUfUfUfUfUfUfUfUfUfNzjcPIPIyBSVpDpDyByByByByBNzUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRvRopdUsnvRiYsnGBvRvRvRvRopSSopvRopHkopopopvRopvRvRvRvRvRvRvRvRUfUfUfUfUfUfBhUfUfUfUfUfLyyByByByBSVSVSVyBPIcNzAzANzUfUfUfvRvRvRvRvRvRvRvRvRvRvRvRUfUfBhUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfzczcvRopopvRsnvRvRvRsnvRopbOvRvRopvRvRvRopopopvRvRvRvRvRvRvRvRvRUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfEPPIyByBXftsSVyByByBPIyByBNzUfvRvRvRvRvRsnsnsnsnsnubvRopopvRUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfzczcvRopopinvRopopsnXUvRopvRopvRvRvRvRvRUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfBhBhZWUfUfiaUfUfUfUfUfEPPIPIVDyBSVSVyBDkPIPIyByBNzvRvRvRvRvRubBmBmsnsnsnsnvRopopvRzcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfzczcbOopvRvRopvRsnvRopdUsnsnvRvRvRUfUfUfUfUfBhUfUfUfUfUfZWUfUfUfUfUfUfUfZWBhBhUfUfUfUfUfUfUfUfNzDkPIyBNzSVSVSVNzDRyBFWSfzPvRvRsnvRvRvRvRbOsnKnsnvRsnoppcvRzczcUfzcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfzcvRopopopUKSgvRvRopsnsnopvRvRUfUfUfUfUfUfUfUfUfUfUfBhBhUfUfUfUfUfUfUfZWBhUfUfUfUfUfUfBhUfUfUfIDyBNzNzSVSVYPNzIDIDyBNzNzsnsnsnvRsnsnsnsnsnvRvRvRsnsnopopvRzczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfzcvRopsnsnsnvRvRvRopsnopvRsnUfUfUfUfUfUfUfUfUfUfUfUfZWZWUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfvRvRvRvRvRvRCnCnCnsnsnvRsnvRcKopsnWlvRsnlBvRvRsnsnopvRsnopopvRvRzczczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfzcvRopKnopopvRvRopSSsnvRUfUfUfUfUfUfZWBhUfUfUfUfUfUfUfUfUfUfBhUfUfUfUfUfUfUfUfUfUfvRUfvRvRvRKnvRvRpJzacZCnCnvRvRsnsnvRsnvRsnopsnsnsnvRvRvRububuCPcopsnvRvRvRzcvRvRzczcUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfzcvRubvRopopopvRopvRsnUfsnUfUfUfUfUfBhBhZWUfUfUfUfUfUfUfUfUfUfUfUfvRvRvRvRvRvRvRvRvRvRvRsnsnsnsnsnsnsnCnCnCnCnsnsnzasnvRsnopvRvRvRvRopvRHkvRsnvRvRopopopsnsnvRvRvRvRzczcUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfzcvRvRvRpcopopiYvRvRUfUfUfUfUfUfUfUfUfZWUfUfUfUfUfUfUfvRUfvRvRsnsnvRvRvRvRbOvRvRvRsnsnvRsnsnWlsnsnsnvRCnCnCnsnlBsnsnsnvRlBsnvRvRvRsnKnvRvRvRvRvRopopiYsnsnsnvRvRvRvRzczcUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRvRopvRvRvRUfUfUfUfUfUfUfUfUfUfUfUfvRUfvRvRvRvRvRvRsnsnvRbOsnsnsnvRvRvRsnsnvRvRsnsnlBvRvRsnsnvRCnCnCncKsnvRvRvRsnvRsnfXUKvRsnvRopsnsnWlsnvRlBopsnSSvRsnsnvRvRvRzczcUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRopopvRvRUfUfUfUfUfBhUfUfUfUfUfUfvRvRvRvRvRvRvRsnsnsnvRsnsnvRvRsnsnvRsnhGhGvRvRvRlBsnXOsnvRlBCnCnCnCnvRvRsnWbsnvRvFsnvRsnopsniYsnvRvRsnopvRopsnsnopvRsnsnsnvRvRzcUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRvRUfUfUfUfUfUfZWBhUfUfUfUfsnvRvRsnsnvRsnvRvRsnvRvRvRsnsnsnsnsnvRvRlBCnCnsncKsnCnCnCnCnCnCnCnCnCnsnsnsnopsnvRvRsnsnsnvRvRsnvRsnopopvRsnvRvRsnlBopvRXdsnsnvRvRzczcUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczcvRUfUfUfUfUfUfUfUfUfUfUfvRsnWlsnsnvRsnfXfXvRsnvRWbopopvRopQyQyCnCnCnCnCnCnCnCnCnCnCnCnCnCnCnCnsnopsndUsnsnvRopsnsnbOvRopvRvRopopvRHdsnsnsnsnsnopsnsnXdsnvRvRzczcUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcUfUfUfUfBhUfUfUfUfUfUfvRsnsnvRsnsnsnvRvRvRvRvRopvRKnvRcKopCnCnCnCnCnCnCnCnCnCnCnCnCnCnCnJNvRvRsnsnsnsnvRvRvRopsnvRvRopsnvRPjXdopsnvRopvRvRsninopopdUXdXdvRvRzczcUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzcUfUfUfBhBhZWUfUfUfUfUfvRsnsnvRsnvRvRvRvRopopvRvRopopvRCnCnCnCnCnCnCnCnCnvRCnCnCnCnsnvRiYopopSSopbOopsnvRsnvRvRzaHIubvRsnvRsnXdXdvRsnopvRsnsnsnsnopXdXdXdvRvRzczcUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfZWUfUfUfUfvRvRsnsnlBsnopvRvRnAvRopvRlBopvRvRvRCnCnCnopvRCnCnsnvRopophGbnvRsnvRopvRopsnvRvRvRvRsnvRsnpJsnvRvRsnsnvRvRPjXdPjsnopvRsnvRsnvRvRsnsnvRvRvRzczcUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfZWBhUfvRvRvRvRsnsnsnvRopvRopvRsnsnWlsnvRvRvRCnCnCnCnopopHIHIvRoplBsnsnsnsnsninvRvRopopopopvRvRvRvRvRvRoprQnBfJfJvRXdXdvRvRopbOvRsnvRsnbOvRsnsnvRvRvRzczcUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfvRvRvRvRvRsnvRvRvRopvRvRopsnvRvRvRvRzacZCnCnCnopbOopoprgHwsnsnsnsnsnsnvRvRopopvRsnvRopopQyhGvRsnlBsnrQvRvRnBnBopubvRopvRsnvRvRopopvRvRopsnvRvRzczcUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfvRvRvRsnhGxksnsnsnvRInopsnssopXdvRsnsnsnvRCnFLCnsnopvRopvRopsnsnsnsndUopvRvRvRKnopvRopvRopubsnvRsnlBnBrQnBsnrQrQrQWdvRvRvRopopopvRdUopsnopvRsnvRvRzczcUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfvRvRvRvRvRsnsnsnsnsnvRsnopsnopPjXdPjsnsnsnopvRvRCnCnCnvRvRlBWbsnopvRsnsndUvRvRbOsnopvRopopopsnsnvRopubsnAPnBopaOsnrQnBvRvRoppCsniYvRInvRvRvRopvRsnvRzczczcUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzcvRvRvRvRsnsnvRopsnlBopopfbsnvRXdPjXdsnsnfbvRsnsnCnCnCnopvRsnsnsnopsnsniYopvRvRsnopsnvRvRvRvRvRopopopsnvRAPrQrQrQnBrQsnopopvRopopopopvRopopvRvRbOvRvRzczcUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRbOvRsnsnopopsnvRvRopopsnsnXdXdvRsnubsnvRvRsnopCnCnCnJNsnvRopopopopiYvRvRopubsnvRvRsnsnopopvRfbopsnvRsnnBrQrQnBhGMtopvRvRvRopopsnvRiYsnvRsnsnvRvRzcUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRsnopopoppcvRvRvRsnsnsnsnPjsnsnsnsnvRvFsnUKosCnCnCnsnfbsnopopopvRopsnvRopsnsnsnsnvRvRvRvRopsnvRvRvRnBrQCDsnsnopopbOvRvRopKnsnvRvRvRvRsnvRvRzczcUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcvRvRsnvRiYopopvRvRsnvRlBsnvRvRmqsnvRvRvRvRsnsnopCnCnCnCnsnsnvRvRsnsnvRvRopvRvRSSvRXdsnopvRvRvRsnvRsnsnvRnBopubvRvRvRvRvRvRopsnvRvRvRvRsnlBvRsnzczcUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRsnvRvRvRopvRvRsnopsnsnsnopvRvRopvRsnopsnsnvRsnCnCnCnCnvRvRsnsnopopopvRopopvRsnPjXdPjsnubsnsnmqvRsnopopvRvRopvRopopXdPjvRopvRopsnvRsnvRvRsnzczcUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczcsnvRsnvRvRvRvRsnXOsnhGQysnsnsnnAvRvRopoplBsnsnsnvRCnCnCnvRvRySsnvRopvRvRvRvRvRsnsnPjXdXdXdsnsnopsnsnopopxCvRvRvRvRvRopopXdXdopopopopvRsnsnvRsnzcUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzcsnsnsnHIvRKnsnsnsnopsnsnsnopvRvRvRopvRsnlBsnopsnsnsnCnCnCnopopvRopopKnvRvRvRubvRopXdPjPjsnsnopdUsnopopopopvRopInvRfbvRopXdPjPjopsnsnvRsnvRsnzczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzcsnmqsnvRvRvRsnopopubsnsnvRsnsnsnvRvRbOvRsnsnsniYvRopCnCnvRsnopvRopSSopopsnvRopopopnAXdvRXdvRopopvRopoppcvRvRvRsnvRsnvRvRvRvRsnlBsnvRvRsnsnzczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcsnsnsnvRvRvRvRopsnlBsnsnsnvRKnvRvRvRopvRvRvRvRsnsnsnCnCnopopopvRopopopvRopvRHkopopvRXdvRvRsnopopvRvRvRvRvRvRubvRvRvRsnvRvRsnvRvRsnvRvRvRzczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczcsnvRvRsnsnsnsnsnvRsnsnsnvRvRopvRsnsnsnsnvRopvRopsnopCnCnopvRvRvRvRopopopsnopopopvRvRvRopsnopopsnvRlBvRvRsnsnvRsnsnvRvRvRvRvRvRvRvRvRvRzczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczcsnvRWlsnvRvRlBvRvRvRsnsnWlopinvRiYvRvRvRdUsnopopJNCnCnCnvRlBvRopKnvRvRopopvRvRvRvRopiYvRnAvRvRvRvRvRubvRvRvRvRsnvRvRinubvRsnsnsnvRzczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczcsnsnsnsnsnsnsnsnsnvRopopopvRvRvRsnvRsnWbvRopopopopCnCnCnCnvRsnsnsnopoplBlBvRsndUsnopopvRvRvRvRvRvRvRvRvRsnvRvRvRvRvRvRvRzczczczczczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczcvRzcvRvRsnsnsnsnSSopsnvRsnsnvRXOvRvRsnsnsnvRvRvRvRCnCnCnsnsnvRsnopsnvRvRvRopopopopopvRvRvRvRvRvRsnsnsnvRvRzczczczczczczczczczczczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczczczcsnsnsnsnvRsnsnsnsnsnsnvRvRvRvRvRvRvRzczczczcsnCnvRvRvRvRvRvRvRvRvRvRvRvRvRvRzczczczczczczczczczczczczczczczczczczczczcUfzczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczczczczczcsnsnsnvRvRvRvRvRvRzczczczczczczczczczczczczczczcvRzczczczczczczczczczczczczczczczczczczczczczczczczcUfzczcUfzcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczczcUfzczczczcUfzcUfzcUfUfUfUfUfzczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczczczczczczczczczczczczczczcUfUfUfzczczczczczczczczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfzczczczczcUfUfzczcUfUfUfUfUfUfUfUfUfUfUfzczczczczczcUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQUQUQUQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQUQUQUQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQrQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQMJUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNSNSNSNSNSNYLSLYLSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNSNSNSNSNusMFMFusMFMFMFMFvGMFvGMFvGMFMFusMFMFusMFMFMFMFusSNSNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNSNSNusMFMFMFusqhFeGNoNvPlGlGpmvPpmlGpmvPlGGNlGlGusMFMFMFMFusususSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNusMFusfVrpFmfVZeZeGNlGZeZeZeZeZeZeZeZeZelGGNlGZeirZeZeZeqUusGNGNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNGNfVlGlGZeZeZeZeOqGNlGZeZeZeAMZeZeZeZeZeZeZeZeZeussVlGsVlGsVGNGNSNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNGNxqZeZeZeZeZeZeZeuslGZeZeGUususlGlGusfllGynlGYqGNZeZeZeZeZenkGNusSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNusOcZeETdhRbETZeWkIPZeZeZeGUGNGNlGuFGNvilGMZlGXIvGAhlGjRlGjRGNGNGNSNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNGNNYZeZeZeZeZeZeZeuslGZeZeGUususlGlGusTHlGynlGfBGNZeZeZeZeZenkGNusSNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNGNfVlGlGZeZeZeZeOqGNlGZeZeZeIbZeZeZeZeZeZeZeZeZeusjRlGjRlGjRGNGNSNSNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNusMFusfVrpFmfVZeZeGNlGZeZeZeZeZeZeZeZeZelGGNlGZeirZeZeZeqUusGNGNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNSNSNusMFMFMFusqhFeGNoNnWlGlGcbnWcblGcbnWlGGNlGlGusMFMFMFMFusususSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNSNSNSNSNusMFMFusMFMFMFMFvGMFvGMFvGMFMFusMFMFusMFMFMFMFusSNSNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfxt
+xtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxt
 "}
 (1,1,2) = {"
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAsAsAsAsAsAsAsAsAsAsAsAsAsAsAsAsjYmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAsAsAsjJmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOusususxTxTususmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAsjJmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOYEushGhGhGCQususususmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAsjJmOmOmOmOmOmOmOCmmOmOmOVQeJeJeJmOmOmOCmmOWsmOCnushGhGhGhGhGhGzausmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKwBmOmOmOWsmOmOmOmOmOusmOmOmOYzxUxUYEmOmOmOusmOmOmOmOusLyhGhGzahGhGhGxTmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOftmOmOusususPbZzULxUxUYEmOPbusususmOmOmOljhGhGhGyJvuhGhGxTmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKwBaAaAmOmOmOmOmOmOmOusmOmOmOYzxUxUYEmOmOmOusmOmOmOmOusLyhGhGzahGhGhGxTmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFxcRbaAaAmOmOmOmOmOUzmOmOmOjWMMMMMMmOmOWsUzmOmOmOobushGhGhGhGhGhGzausmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFxcRbaAaAaAaAmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOYEushGhGhGCQususususmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-pcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcgBvRvRvRmYububvLububyBububvLububyBububvLubusususxTxTususpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpc
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFxcxcmKxcxcBnxcxcmKxcxcBnxcxcmKxcGhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKBnmKmKmKmKmKBnmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKBnmKmKinmKmKBnmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKBnmKmKmKmKmKBnmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAsAsmKAsAsBnAsAsmKAsAsBnAsAsmKAsjYmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyElCXNXNXNrpghghUKghghBtghghUKghghBtghghUKghusususxTxTususyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyE
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAsjJvjvjvjvjmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOYEusfGfGfGlGususususmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAsjJvjvjmOmOmOmOmOCmmOmOWsVQeJeJeJmOmOmOCmmOmOmOCnusfGfGfGfGfGfGQZusmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKwBvjvjmOmOmOmOmOmOmOusmOmOmOYzxUxUYEmOmOmOusmOmOmOmOushIfGfGQZfGfGfGxTmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOftmOmOusususPbIRULxUxUYEmOPbusususWsmOmOMFfGfGfGVDcqfGfGxTmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKwBmOmOmOmOmOmOmOmOmOusmOmOmOYzxUxUYEmOmOmOusmOmOmOmOushIfGfGQZfGfGfGxTmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFxcRbmOmOmOmOWsmOmOUzmOmOmOjWMMMMMMmOmOmOUzmOmOmOobusfGfGfGfGfGfGQZusmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFxcRbmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOYEusfGfGfGlGususususmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFxcxcxcRbmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOmOusususxTxTususmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcxcGhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAsAsAsAsAsAsAsAsAsAsAsAsAsAsAsAsAsAsAsjYOhOhOhOhOhOhOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAsAsTOuzKauzvjyYvjvjvjvjvjvjvjvjKauzuzyYvjvjBzBzBzBzBzBzBzOhOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHPEvjvjvjljljljmOmOmOmOmOmOmOmOmOmOljljljmOmOYEBzhIrIhIhIPUBzBzOhOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHPEuzmOnvnvljljljnvnvmOmOnvnvnvnvmOmOlXlXljmOmOYEBzyKjFJkdzrIeZDqBzOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHPEmOljmOmOmOljljljCmmOmOmOVQeJeJeJmOmOljSjljWsmOmOBzhIrIhIrIhIhIuuBzOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHPEmOmOvLWsmOmOljljljBzZgmOmOYzxUxUIRmOmOljBzljmOmOmOyJmOljmOljpeljRUBzOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKwBpemOmOvLmOBzftljljBzBzBzZzmOULxUxUIRmOZgBzBzBzmOmOmOBkmOljmOljeAHpCVBzOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFammOmOvLmOmOmOljljljBzZgmOmOYzxUxUIRmOmOljBzljmOmOmOyJmOljmOljpeljmOBzOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhpFammOljmOmOmOljljljUzmOmOmOjWMMMMMMmOmOnSBGljmOmOmOBzhIrIhIrIhIhIqpBzOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFamRmmOQYQYljljljQYQYmOmOQYQYQYQYmOmOGbGbljmOmOYEBzyKJkfCJkrIeZDqBzOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFamaAaAaAljljljmOmOmOmOmOmOmOmOmOmOljljljmOmOYEBzhIhIrIhIPUBzBzOhOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFxcxcamEtgZRmaARMaAaAaAmOmOaAaAaAgZRmRmRMaAaABzBzBzBzBzBzBzOhOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFxcxcxcxcxcxcxcxcOhpTxcxcxcxcxcxcxcxcxchOOhOhOhOhOhOhOhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKfZmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZfZmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKYlmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKNzXfNzmKmKNzmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKPIXfpgPINzmKmKNzXfPImKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKfZfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKNzyByBPIyBmKmKmKmKyByBzPmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKyByByBmKmKmKIsmKmKNzmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKNzmKmKmKyByByByByByByBmKmKDfmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKNzmKmKmKmKPIPIyBUwyBPImKmKDfmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKNzmKmKmKyBPIDkNhyByByBjckmyBmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKLyjcyByByByByBPImKyBmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKLyyBPIPIyByByBmKmKBnmKmKmKNzmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyByBPIpgmKmKmKmKmKBnmKmKmKNzmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyByBPIyBLdmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKNzmKmKmKNzmKmKmKNzyBGkyBmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKNzNzmKmKmKNzKPKPmKNzNzmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKXYmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKfZfZmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlCXNXNNWXNNWXNhjyEJfXNNWXNblXNXNXNjEyEyEyEyEyEyEyEyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlCXNXNXNgCJCghCAghCAghZeZeghghCAghCAghghghususrFrFVTVTrFusyEyEyEyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlCXNemJCghghghBUlGlGlGlGlGlGlGjKlGlGlGlGlGlGZeGUrFeZhINNYGhIjnrFrFusyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlCXNXNXNemJCghZelGlGlGlGlGlGlGlGlGlGlGlGlGlGBsBsBslGZecyrFaShIhIhIhIeZhIIIrFyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEemJCghghghBUlGlGlGlGlGlGlGBsBsBsEsArArArlGlGlGlGlGlGZehCVThIhIhIhIhIhIhIhIrFyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyEZeZeZeZelGlGlGlGlGlGlGlGGNZeZeZeZeZecqxUxUYEZeZePbGNlGlGlGZerFrFbThIhIhIichIhIxTyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEPqZeZeZeZeZeZelGlGlGlGlGlGlGMFBbMFPbZeXeZecqxUxUYEZePbMFBbMFlGlGZeZeMqhIhIhIhIOtpYhIxTyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyEZeZeZeZelGlGlGlGlGlGlGlGGNkCZeZeZeZecqxUxUYEZeZeZeGNlGlGlGZerFrFbThIhIhIBthIhIxTyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEIhgBoOoOoOBUlGlGlGlGlGlGlGkrkrkrfGQZQZQZlGlGlGlGlGlGZehCVThIhIhIhIhIhIhIhIrFyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKqnIeIeIeXpgBoOZelGlGlGlGlGlGlGlGlGlGlGlGlGlGkrkrkrlGZeWyrFaShIhIhIhIeZhIQRrFyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKqnIeIhgBoOoOoOBUlGlGlGlGlGlGlGjKlGlGlGlGlGlGZeGUrFeZhIkKrihIjnrFrFusyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKqnIeIeIeyGgBoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOususrFrFVTVTrFusyEyEyEyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKqnIeIeIeIeIeIeIeIeIeOVOVIeIeIeIeIeYuyEyEyEyEyEyEyEyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
 "}
 (1,1,3) = {"
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAsAsAsAsAsAsAsAsjYmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUjVmOmOmOmOmOmOmOmOTmAsjYmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUrKFIobmOmOmOmOmOWsmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUexCnmOmOmOmOmOmOmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUusxUxUxUxUxUxUxUxUxUxUusxUxUxUjVmOmOmOmOmOmOmOmOTvhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUusususxUxUxUxUxUxUxUxUusususxUxUjVmOpYmOmOftmOmOmOuChlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUusxUxUxUxUxUxUxUxUxUxUusxUxUxUjVmOmOWsmOmOmOmOmOWPhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUrKobmOmOmOmOmOmOmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUexezCnmOmOmOmOmOmOmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-pcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcpcnBnBnBnBnBnBnBnBnBnBnBnBnBnBnBOhububububyBubububdUvRsQpcpcpcpcpcpcpcpcpcpcpcpcpcpc
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKpFxcxcxcxcBnxcxcxcGhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKBnmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKBnmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKBnmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKlHAsAsAsAsBnAsAsAsjYmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-yEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEaMaMaMaMaMaMaMaMaMaMaMaMaMaMaMBkghghghghBtghghghBzXNjEyEyEyEyEyEyEyEyEyEyEyEyEyEyE
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUrKFIobmOmOmOmOmOmOmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUexCnmOmOmOmOmOmOmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUusxUxUxUxUxUxUxUxUxUxUusxUxUxUjVmOmOmOmOmOmOWsmOWPhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUusususxUxUxUxUxUxUxUxUusususxUxUjVmOpYmOmOftmOmOmOJkhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUusxUxUxUxUxUxUxUxUxUxUusxUxUxUjVmOmOmOmOmOmOmOmOTvhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUrKobmOWsmOmOmOmOmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUexezCnmOmOmOmOmOmOmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUjVmOmOmOmOmOmOmOmOwyxcGhmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
-mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhAsAsAsAsAsAsAsjYmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhOhOhxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUWWmOmOmOWPTvpsfIjYmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUYEmOmOmOmOmOmOocfIjYmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUYEmOmOmOmOmOmOmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhxUxUxUxUxUxUruvjCmvjvjvjvjmOvjvjvjvjvjCmvjvjmOMMMMmOLguzljuzuzmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhxUxUxUxUxUxUxUvLxUBzxUuVxUxUljxUxUxUvLxUBzxUuVxUxUmOmOLgljljljljmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhxUxUxUxUxUpemOmOmODqBzDquVxUxUljxUxUxUvLDqBzDquVxUxUocmOLgljljPYljmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhxUxUxUxUxUxUxUvLxUCQxUuVxUxUljxUxUxUvLxUCQxUuVxUxUmOmOLgljljljljmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhOhxUxUxUxUxUxUxZaAmOaAaAaAaAmOaAaAaAaAaAmOaAaAmOeJeJmOLgRmljRmRmmOmOhlmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUYEmOmOmOmOmOmOmOmOQdmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUYEmOmOmOmOmOmOocCjhOmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhOhOhxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUUOmOmOmOndmEndCjhOmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhOhxcxcxcxcxcxcxchOmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKGhmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyEyEyEyEyEjbyEyEyEyEyEyEyEyEyElCXNXNXNXNXNXNXNXNjEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyEyExUxUxUxUxUxUxUxUxUxUxUxUxUxUxUjVghghghghhCghghghobyEyEyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEaMaMxUxUxUxUxUxUxUxUxUxUxUxUezsoxUxUxUxUxUrKFIMjZeZeZeZeZeZeqOuhnTobmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyEyExUxUxUxUxUxUxUxUxUxUxUxUxUxUxUXoxUxUxUxUxUxUexMuZeZeZeZeZeZeZeZeNgobmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyExUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUXoxUxUxUxUxUexxOZeZeZevudcdcvuZeZeNgobmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyExUxUxUxUxUxUxUxUxUxUxUxUGNxUxUxUxUxUxUxUxUxUXoxUxUGNxUxUjVTFZeZeZevudcdcvuZeVBNgobmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyExUxUxUxUxUxUxUxUxUxUxUxUxUxUplBbplxUxUxUxUxUxUxUxUXoxUplBbplxUjVDHZeuxZevudcdcvuZeMpNgobmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyExUxUxUxUxUxUxUxUxUxUxUxUGNxUxUxUxUxUxUxUxUxUXoxUxUGNxUxUjViDZeZeZevudcdcvuZeMQNgobmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyExUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUxUXoxUxUxUxUxUrKahZeZeZevuwvwvvuZeZeNgobmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyEyEyExUxUxUxUxUxUxUxUxUxUxUxUxUxUxUXoxUxUxUxUxUxUrKMjZeZeZeZeZeZeZeZeNgobmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEaMaMxUxUxUxUxUxUxUxUxUxUxUxUFIJbxUxUxUxUxUexezMuZeZeZeZeZeZeAZEWJvobmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyEyEyExUxUxUxUxUxUxUxUxUxUxUxUxUxUxUjVoOoOoOoOhCoOoOoOobyEyEyEmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEyEqnIeIeIeIeIeIeIeIeYumKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
+GdmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
 "}

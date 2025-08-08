@@ -4,7 +4,7 @@
 	var/gametype = /datum/warmode
 	var/qdel_on_init = FALSE
 
-/obj/structure/warobjective/Initialize()
+/obj/structure/warobjective/LateInitialize()
 	. = ..()
 	var/datum/game_mode/warmongers/C = SSticker.mode
 	var/datum/warmode/WM = new gametype

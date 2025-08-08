@@ -52,6 +52,8 @@
 /turf/closed/wall/mineral/rogue/stone/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && ((mover.pass_flags & PASSTABLE) || (mover.pass_flags & PASSGRILLE)) )
 		return 1
+	else if(istype(mover, /obj/projectile))
+		return 1
 	return ..()
 
 /turf/closed/wall/mineral/rogue/stone/window/Initialize()
@@ -136,6 +138,8 @@
 /turf/closed/wall/mineral/rogue/wood/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && ((mover.pass_flags & PASSTABLE) || (mover.pass_flags & PASSGRILLE)) )
 		return 1
+	else if(istype(mover, /obj/projectile))
+		return 1
 	return ..()
 
 /turf/closed/wall/mineral/rogue/wood/window/Initialize()
@@ -204,6 +208,8 @@
 
 /turf/closed/wall/mineral/rogue/wooddark/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && ((mover.pass_flags & PASSTABLE) || (mover.pass_flags & PASSGRILLE)) )
+		return 1
+	else if(istype(mover, /obj/projectile))
 		return 1
 	return ..()
 

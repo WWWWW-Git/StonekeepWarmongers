@@ -173,8 +173,8 @@
 	desc = "Precursor to glass, ancestor to rocks."
 	gender = PLURAL
 	icon_state = "sand"
-	smooth = SMOOTH_TRUE | SMOOTH_MORE
-	canSmoothWith = list(/turf/open/floor/rogue, /turf/closed/mineral, /turf/closed/wall/mineral)
+	smooth = SMOOTH_TRUE
+	canSmoothWith = list(/turf/open/floor/rogue, /turf/open/floor/rogue/grass)
 	neighborlay = "sandedge"
 
 /turf/open/floor/rogue/dirt/sand/Initialize()
