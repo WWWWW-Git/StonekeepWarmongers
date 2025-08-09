@@ -54,6 +54,9 @@
 			var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 2)
 			W.obj_break()
 			throw_at(turfa, 4, 1, null, TRUE)
+	if(istype(get_step(src, turn(dir, 180)), /turf/open/transparent/openspace))
+		var/turf/turfa = get_ranged_target_turf(src, turn(dir, 180), 1)
+		throw_at(turfa, 4, 1, null, TRUE)
 
 	for(var/obj/item/clothing/head/roguetown/warmongers/WC in src)
 		to_chat(world, "<span class='info'>\The [WC] has been dropped.</span>")
