@@ -56,18 +56,6 @@
 		shootingdown = !shootingdown
 		playsound(src.loc, 'sound/foley/winch.ogg', 100, extrarange = 3)
 
-/obj/structure/cannon/fire_act(added, maxstacks)
-	if(!loaded)
-		return
-	playsound(src.loc, 'sound/items/firelight.ogg', 100)
-	fire()
-
-/obj/structure/cannon/spark_act()
-	if(!loaded)
-		return
-	playsound(src.loc, 'sound/items/firelight.ogg', 100)
-	fire()
-
 /obj/structure/cannon/proc/fire()
 	if(!loaded)
 		return
@@ -173,18 +161,6 @@
 		to_chat(user, "<span class='info'>New Target: [y + plusy] azirath</span>")
 		playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
 
-/obj/structure/bombard/fire_act(added, maxstacks)
-	if(!loaded || !SSticker.warfare_ready_to_die)
-		return
-	playsound(src.loc, 'sound/items/firelight.ogg', 100)
-	fire()
-
-/obj/structure/bombard/spark_act()
-	if(!loaded || !SSticker.warfare_ready_to_die)
-		return
-	playsound(src.loc, 'sound/items/firelight.ogg', 100)
-	fire()
-
 /obj/structure/bombard/attackby(obj/item/I, mob/user, params)
 	if(dir == WEST || dir == EAST)
 		to_chat(user, "<span class='warning'>Shooting that direction would be a waste of resources.</span>")
@@ -234,7 +210,7 @@
 
 	var/turf/epicenter = locate(x,newy,z)
 	if(istype(epicenter, /turf/open/transparent/openspace))
-		epicenter = get_step_multiz(epicenter, DOWN)
+		epicenter = epicenter.below()
 
 	var/obj/effect/warning/G = new(epicenter)
 
@@ -245,7 +221,23 @@
 		loaded.explode(TRUE)
 		QDEL_NULL(loaded)
 
-	sleep(8)
+	var/py = 0
+	var/px = 0
+	switch(dir)
+		if(NORTH)
+			py = 96
+		if(SOUTH)
+			py = -96
+		if(EAST)
+			px = 96
+		if(WEST)
+			px = -96
+	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(src))
+	var/matrix/ARE = matrix()
+	ARE.Scale(4, 4)
+	ARE.Turn(rand(50,350))
+	animate(S, time = 50, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
+
 	new /obj/effect/particle_effect/smoke(get_turf(src))
 
 // maxim bb gun
@@ -310,6 +302,23 @@
 	bullets--
 
 	new /obj/effect/temp_visual/small_smoke/halfsecond(get_turf(src))
+
+	var/py = 0
+	var/px = 0
+	switch(dir)
+		if(NORTH)
+			py = 64
+		if(SOUTH)
+			py = -64
+		if(EAST)
+			px = 64
+		if(WEST)
+			px = -64
+	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(src))
+	var/matrix/ARE = matrix()
+	ARE.Scale(0.8, 0.8)
+	ARE.Turn(rand(50,350))
+	animate(S, time = 10, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
 
 /obj/structure/maxim/attack_hand(mob/user)
 	if(prob(1))

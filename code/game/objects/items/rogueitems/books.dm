@@ -617,5 +617,7 @@ ____________End of Example*/
 /obj/item/book/rogue/psybibleplayerbook
 	name = "Psybible"
 	desc = "An old tome, authored by Father Ambrose of Grenzelhoft."
+	possible_item_intents = list(/datum/intent/use, /datum/intent/mace/heavy/strike)
+	force = 25 // lol
 	bookfile = "PsyBible.json"
 	random_cover = TRUE
