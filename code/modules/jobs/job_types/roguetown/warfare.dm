@@ -219,7 +219,7 @@
 	pants = /obj/item/clothing/under/roguetown/trou/tobi
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltr = GetSidearmForWarfare()
-	beltl = /obj/item/rogueweapon/sword/sabre/piandao/dec
+	beltl = /obj/item/rogueweapon/sword/sabre/warcrime
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander
 	cloak = /obj/item/clothing/cloak/heartfelt
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
@@ -718,7 +718,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander/blue
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltr = GetSidearmForWarfare()
-	beltl = /obj/item/rogueweapon/sword
+	beltl = /obj/item/rogueweapon/sword/sabre/dec/alt
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	if(SSmapping.config.map_name == "LD-Bloodfort")
 		cloak = /obj/item/clothing/cloak/half

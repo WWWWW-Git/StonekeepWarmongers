@@ -70,7 +70,7 @@
 	var/max_stalemate_kills = 400
 
 /datum/warmode/tdm/beginround()
-	var/player_count = get_active_player_count()
+	var/player_count = length(GLOB.clients)
 	win_kills = clamp(round(50 * (player_count / base_player_count)), min_win_kills, max_win_kills)
 	stalemate_kills = clamp(round(98 * (player_count / base_player_count)), min_stalemate_kills, max_stalemate_kills)
 

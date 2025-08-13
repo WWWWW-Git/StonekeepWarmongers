@@ -170,6 +170,7 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed // i axed you a question
 	name = "barkaxe"
+	icon_state = "pistolaxe"
 	desc = "An abomination devised by the bearded menace themselves. The name is being workshopped currently."
 	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/axe/chop, /datum/intent/axe/cut)
 

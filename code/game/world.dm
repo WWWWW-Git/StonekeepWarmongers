@@ -79,12 +79,12 @@ GLOBAL_VAR(restart_counter)
 		fdel(RESTART_COUNTER_PATH)
 
 	if(prob(1))
-		if(prob(1))
-			name = "super pregnancy sex simulator ojh my gawd"
-		else
-			name = "WARMONGRELS"
+		name = "WARMONGRELS"
 	else
-		name = "WARMONGERS"
+		if(prob(20))
+			name = "WARMONGERERS" // thanks runner on discord (runnerr7)
+		else
+			name = "WARMONGERS"
 
 	if(NO_INIT_PARAMETER in params)
 		return

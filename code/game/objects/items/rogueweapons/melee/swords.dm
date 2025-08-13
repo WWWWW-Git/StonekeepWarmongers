@@ -604,6 +604,9 @@
 	wbalance = 1
 	sellprice = 140
 
+/obj/item/rogueweapon/sword/sabre/dec/alt
+	icon_state = "napoleon"
+
 /obj/item/rogueweapon/sword/sabre/messer //not IRL sabre, but its a one handed cutting weapon, way lower defense, but has higher damage and the axe chop intent
 	name = "falchion"
 	desc = "A broad steel falchion, a favored sword among the few created by dwarffolk."
@@ -810,3 +813,8 @@
 	name = "decorated piandao"
 	desc = "The Abyssariad saber with the hilt covered in gold and letters reflecting the user's family lineage."
 	icon_state = "piandaodec"
+
+/obj/item/rogueweapon/sword/sabre/warcrime
+	name = "Metch"
+	desc = "It is a valecnycin."
+	icon_state = "warcrime"
