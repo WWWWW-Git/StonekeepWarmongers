@@ -867,7 +867,8 @@
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		H.shoutbubble()
+		if(H.stat)
+			H.shoutbubble()
 		if(H.has_flaw(/datum/charflaw/addiction/masochist))
 			H.sate_addiction()
 
@@ -881,7 +882,8 @@
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		H.shoutbubble()
+		if(H.stat)
+			H.shoutbubble()
 		if(H.has_flaw(/datum/charflaw/addiction/masochist))
 			H.sate_addiction()
 
@@ -895,7 +897,8 @@
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		H.shoutbubble()
+		if(H.stat)
+			H.shoutbubble()
 		if(H.has_flaw(/datum/charflaw/addiction/masochist))
 			H.sate_addiction()
 
@@ -1025,7 +1028,8 @@
 	. = ..()
 	if(. && iscarbon(user))
 		var/mob/living/carbon/C = user
-		C.shoutbubble()
+		if(C.stat)
+			C.shoutbubble()
 		if(C.silent || !C.can_speak_vocal())
 			message = "makes a muffled scream!"
 		if(intentional)
