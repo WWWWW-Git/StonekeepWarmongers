@@ -27,7 +27,7 @@
 			ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
 
 		if(aspect_chosen(/datum/round_aspect/monkwarfare))
-			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6)
+			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6, TRUE)
 			
 		/*
 		if(aspect_chosen(/datum/round_aspect/cripplefight))
@@ -237,11 +237,12 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/leadership, 5, TRUE)
-		H.change_stat("strength", 1)
+		H.change_stat("strength", 2)
 		H.change_stat("intelligence", 3)
 		H.change_stat("endurance", 3)
+		H.change_stat("constitution", 3)
 		H.change_stat("speed", 1)
-		H.change_stat("perception", 2)
+		H.change_stat("perception", 4)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 
@@ -737,11 +738,12 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/leadership, 5, TRUE)
-		H.change_stat("strength", 1)
+		H.change_stat("strength", 2)
 		H.change_stat("intelligence", 3)
 		H.change_stat("endurance", 3)
+		H.change_stat("constitution", 3)
 		H.change_stat("speed", 1)
-		H.change_stat("perception", 2)
+		H.change_stat("perception", 4)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 

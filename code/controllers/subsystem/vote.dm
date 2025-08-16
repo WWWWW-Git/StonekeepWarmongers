@@ -167,7 +167,8 @@ SUBSYSTEM_DEF(vote)
 					var/datum/game_mode/warmongers/W = SSticker.mode
 					if(istype(W))
 						spawn(5 MINUTES)
-							W.do_war_end()
+							if(!SSticker.force_ending)
+								W.do_war_end()
 	if(restart)
 		var/active_admins = 0
 		for(var/client/C in GLOB.admins)

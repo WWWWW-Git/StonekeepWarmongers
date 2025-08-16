@@ -32,6 +32,7 @@
 	vary_fire_sound = TRUE
 	drop_sound = 'sound/foley/gun_drop.ogg'
 	dropshrink = 0.7
+	droprot = TRUE
 	associated_skill = /datum/skill/combat/flintlocks
 	var/ramtime = 5.5
 

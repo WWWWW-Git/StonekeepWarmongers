@@ -803,6 +803,14 @@
 	else
 		SSrole_class_handler.setup_class_handler(H)
 
+/atom/movable/screen/advsetup/MouseEntered(location, control, params)
+	. = ..()
+	add_overlay(image('icons/mob/roguehud.dmi', icon_state="lclick"))
+
+/atom/movable/screen/advsetup/MouseExited(params)
+	. = ..()
+	cut_overlays()
+
 /atom/movable/screen/eye_intent
 	name = "eye intent"
 	icon = 'icons/mob/roguehud.dmi'
