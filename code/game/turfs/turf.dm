@@ -249,49 +249,57 @@
 	return FALSE
 
 /turf/proc/zImpact(atom/movable/A, levels = 1, turf/prev_turf)
+	// Stairs catch things on the first fall level
 	if(levels == 1)
-		for(var/obj/structure/stairs/S in contents)
+		if(locate(/obj/structure/stairs) in contents)
 			return FALSE
 
 	var/flags = NONE
 	var/mov_name = A.name
-	for(var/i in contents)
-		var/atom/thing = i
+
+	// Give contents a chance to intercept
+	for(var/atom/thing as anything in contents)
 		flags |= thing.intercept_zImpact(A, levels)
 		if(flags & FALL_STOP_INTERCEPTING)
 			break
+
+	// Message for falling through
 	if(prev_turf && !(flags & FALL_NO_MESSAGE))
 		prev_turf.visible_message("<span class='danger'>\The [mov_name] falls through [prev_turf]!</span>")
+
+	// Intercepted completely
 	if(flags & FALL_INTERCEPTED)
 		return
+
+	// Keep falling if possible
 	if(zFall(A, ++levels))
 		return FALSE
-	if(isliving(A))
-		var/mob/living/O = A
-		var/dex_save = O.mind.get_skill_level(/datum/skill/misc/climbing)
-		if(dex_save >= 5)
-			if(O.m_intent != MOVE_INTENT_SNEAK) // If we're sneaking, don't show a message to anybody, shhh!
-				O.visible_message("<span class='danger'>[A] gracefully lands on top of [src]!</span>")
-		else
-			A.visible_message("<span class='danger'>[A] crashes into [src]!</span>")
-			if(A.fall_damage())
-				for(var/mob/living/M in contents)
-					visible_message("<span class='danger'>\The [src] falls on \the [M.name]!</span>")
-					M.Stun(1)
-					M.take_overall_damage(A.fall_damage()*2)
-	if(A.fall_damage())
-		for(var/mob/living/M in contents)
-			visible_message("<span class='danger'>\The [src] falls on \the [M.name]!</span>")
-			M.Stun(1)
-			M.take_overall_damage(A.fall_damage()*2)
+
+	// Handle impact damage + messaging
+	handle_fall_impact(A, levels, prev_turf)
+
+	// Call per-object hooks
 	A.onZImpact(src, levels)
 	if(isobj(A))
-		for(var/mob/living/mob in contents)
-			A:on_fall_impact(mob, levels * 1.25)
+		var/obj/O = A
+		for(var/mob/living/M in O.contents)
+			O.on_fall_impact(M, levels * 0.75)
+
 	return TRUE
 
-/atom/movable/proc/fall_damage()
-	return FALSE
+/turf/proc/handle_fall_impact(atom/movable/A, levels, turf/prev_turf)
+	var/damage = A.fall_damage()
+	if(!damage)
+		return
+
+	A.visible_message("<span class='danger'>\The [A] crashes into \the [src]!</span>")
+
+	// Shared logic: hurt mobs under the impact
+	for(var/mob/living/M in contents)
+		visible_message("<span class='danger'>\The [A] falls on \the [M.name]!</span>")
+		M.Stun(20)
+		M.take_overall_damage(damage)
+		M.update_damage_overlays()
 
 /obj/item/on_fall_impact(mob/living/impactee, fall_speed)
 	. = ..()
@@ -312,21 +320,13 @@
 	SHOULD_CALL_PARENT(TRUE)
 	return
 
-/obj/item/fall_damage()
-	if(w_class == WEIGHT_CLASS_TINY)
-		return 0
-	if(w_class == WEIGHT_CLASS_GIGANTIC)
-		return 300
-	var/bsc = 3**(w_class-1)
-	return bsc
+/atom/movable/proc/fall_damage()
+	return 0
 
-/obj/structure/fall_damage()
-	if(w_class == WEIGHT_CLASS_TINY)
-		return 0
-	if(w_class == WEIGHT_CLASS_GIGANTIC)
-		return 300
-	var/bsc = 3**(w_class-1)
-	return bsc
+/obj/fall_damage()
+	if(w_class == WEIGHT_CLASS_TINY)      return 0
+	if(w_class == WEIGHT_CLASS_GIGANTIC)  return 300
+	return 5 ** max(0, w_class - 1) // 3 to the power of X
 
 /turf/proc/can_zFall(atom/movable/A, levels = 1, turf/target)
 	return zPassOut(A, DOWN, target) && target.zPassIn(A, DOWN, src)

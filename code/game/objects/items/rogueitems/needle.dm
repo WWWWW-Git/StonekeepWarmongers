@@ -112,7 +112,7 @@
 	var/mob/living/carbon/human/patient = target
 	if(stringamt < 1)
 		to_chat(user, "<span class='warning'>The needle has no thread left!</span>")
-		return
+		return FALSE
 	var/list/sewable
 	var/obj/item/bodypart/affecting
 	if(iscarbon(patient))
@@ -129,39 +129,50 @@
 	if(!length(sewable))
 		to_chat(doctor, "<span class='warning'>There aren't any wounds to be sewn.</span>")
 		return FALSE
-	var/datum/wound/target_wound = input(doctor, "Which wound?", "[src]") as null|anything in sewable
-	if(!target_wound)
-		return FALSE
 
-	playsound(loc, 'sound/foley/sewflesh.ogg', 100, TRUE, -2)
 	var/moveup = 10
 	if(doctor.mind)
 		moveup = ((doctor.mind.get_skill_level(/datum/skill/misc/medicine)+1) * 5)
-	while(!QDELETED(target_wound) && !QDELETED(src) && \
-		!QDELETED(user) && (target_wound.sew_progress < target_wound.sew_threshold) && \
-		stringamt >= 1)
-		if(!do_after(doctor, 5, target = patient))
-			break
-		playsound(loc, 'sound/foley/sewflesh.ogg', 100, TRUE, -2)
-		target_wound.sew_progress = min(target_wound.sew_progress + moveup, target_wound.sew_threshold)
-		if(target_wound.sew_progress < target_wound.sew_threshold)
-			continue
-		if(doctor.mind)
-			doctor.mind.adjust_experience(/datum/skill/misc/medicine, doctor.STAINT * 5)
-		use(1)
-		target_wound.sew_wound()
-		target_wound.heal_wound(20)
-		affecting.heal_damage(20)
-		if(patient == doctor)
-			doctor.visible_message("<span class='notice'>[doctor] sews \a [target_wound.name] on [doctor.p_them()]self.</span>", "<span class='notice'>I stitch \a [target_wound.name] on my [affecting].</span>")
-		else
+
+	// Loop through each wound in the list
+	for(var/datum/wound/target_wound in sewable)
+		while(!QDELETED(target_wound) && !QDELETED(src) && !QDELETED(user) && \
+			target_wound.sew_progress < target_wound.sew_threshold && \
+			stringamt >= 1)
+
+			if(!do_after(doctor, 5, target = patient))
+				break
+
+			playsound(loc, 'sound/foley/sewflesh.ogg', 100, TRUE, -2)
+			target_wound.sew_progress = min(target_wound.sew_progress + moveup, target_wound.sew_threshold)
+
+			if(target_wound.sew_progress < target_wound.sew_threshold)
+				continue
+
+			if(doctor.mind)
+				doctor.mind.adjust_experience(/datum/skill/misc/medicine, doctor.STAINT * 5)
+
+			use(1)
+			target_wound.sew_wound()
+			target_wound.heal_wound(20)
 			if(affecting)
-				doctor.visible_message("<span class='notice'>[doctor] sews \a [target_wound.name] on [patient]'s [affecting].</span>", "<span class='notice'>I stitch \a [target_wound.name] on [patient]'s [affecting].</span>")
+				affecting.heal_damage(20)
+
+			if(patient == doctor)
+				doctor.visible_message("<span class='notice'>[doctor] sews \a [target_wound.name] on [doctor.p_them()]self.</span>", "<span class='notice'>I stitch \a [target_wound.name] on my [affecting].</span>")
 			else
-				doctor.visible_message("<span class='notice'>[doctor] sews \a [target_wound.name] on [patient].</span>", "<span class='notice'>I stitch \a [target_wound.name] on [patient].</span>")
-		log_combat(doctor, patient, "sew", "needle")
-		return TRUE
-	return FALSE
+				if(affecting)
+					doctor.visible_message("<span class='notice'>[doctor] sews \a [target_wound.name] on [patient]'s [affecting].</span>", "<span class='notice'>I stitch \a [target_wound.name] on [patient]'s [affecting].</span>")
+				else
+					doctor.visible_message("<span class='notice'>[doctor] sews \a [target_wound.name] on [patient].</span>", "<span class='notice'>I stitch \a [target_wound.name] on [patient].</span>")
+
+			log_combat(doctor, patient, "sew", "needle")
+
+		// stop if the needle ran out of thread
+		if(stringamt < 1)
+			break
+
+	return TRUE
 
 /obj/item/needle/thorn
 	name = "needle"

@@ -84,6 +84,21 @@
 	var/dam = levels * rand(10,50)
 	V.add_stress(/datum/stressevent/felldown)
 	var/chat_message
+	var/cushioned = FALSE
+	for(var/mob/living/M in T.contents)
+		if(M == src)
+			continue
+		cushioned = TRUE
+		visible_message("<span class='danger'>\The [src] hits \the [M.name]!</span>")
+		if(levels >= 2)
+			M.gib(TRUE)
+		else
+			M.AdjustKnockdown(levels * 20)
+			M.take_overall_damage(dam * levels * 1.25)
+
+	if(cushioned)
+		return
+
 	switch(rand(1,4))
 		if(1)
 			affecting = get_bodypart(pick(BODY_ZONE_R_LEG, BODY_ZONE_L_LEG))
@@ -104,13 +119,6 @@
 		if(levels >= 1)
 			//absurd damage to guarantee a crit
 			affecting.try_crit(BCLASS_TWIST, 300)
-
-	for(var/mob/living/M in T.contents)
-		if(M == src)
-			continue
-		visible_message("\The [src] hits \the [M.name]!")
-		M.AdjustKnockdown(levels * 20)
-		M.take_overall_damage(dam * levels * 1.25)
 
 	if(chat_message)
 		to_chat(src, chat_message)

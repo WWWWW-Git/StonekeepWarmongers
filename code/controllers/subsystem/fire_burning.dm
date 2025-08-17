@@ -11,6 +11,7 @@ SUBSYSTEM_DEF(fire_burning)
 	..("P:[processing.len]")
 
 /obj
+	var/w_class = WEIGHT_CLASS_NORMAL
 	var/fire_burn_start //make us not burn that long
 
 /datum/controller/subsystem/fire_burning/fire(resumed = 0)
