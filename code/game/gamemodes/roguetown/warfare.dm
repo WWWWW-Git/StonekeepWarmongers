@@ -111,6 +111,9 @@
 		CHECK_TICK
 
 /datum/game_mode/warmongers/proc/HandleNoLords()
+	if(!istype(warmode, /datum/warmode/lords)) // Not required.
+		return
+
 	var/obj/effect/landmark/blureinforcement/blu = locate(/obj/effect/landmark/blureinforcement) in GLOB.landmarks_list
 	var/obj/effect/landmark/redreinforcement/red = locate(/obj/effect/landmark/redreinforcement) in GLOB.landmarks_list
 

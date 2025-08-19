@@ -511,7 +511,7 @@
 
 /obj/projectile/magic/fetch
 	name = "bolt of fetching"
-	icon_state = "cursehand0"
+	icon_state = ""
 	range = 15
 
 /obj/projectile/magic/fetch/on_hit(target)

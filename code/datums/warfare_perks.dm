@@ -75,6 +75,14 @@
 	desc = "When you die, nearby allies will be struck by fury and vigor."
 	cost = 5
 
+/datum/warperk/mortalcombat
+	name = "Combat of Mortals"
+	desc = "Shouting 'Get Over Here' will make people in front of you to... get over here..? I'll be honest with you, not quite sure where we got this."
+	cost = 5
+
+/datum/warperk/mortalcombat/apply(mob/living/carbon/human/H)
+	H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/gitoverhere)
+
 /datum/warperk/lightbrigade
 	name = "Brigade of Light"
 	desc = "You gain an ability that blinds all nearby enemies for a few seconds, but it blinds you aswell."

@@ -67,3 +67,44 @@
 				H.playsound_local(H, 'sound/misc/XSCREAM.ogg', 75, FALSE)
 	..()
 	return TRUE
+
+/obj/effect/proc_holder/spell/targeted/gitoverhere
+	name = "GET OVER HERE!"
+	overlay_state = "blindness"
+	releasedrain = 30
+	chargedrain = 0
+	chargetime = 0
+
+	range = -1
+	warnie = "sydwarning"
+	sound = 'sound/magic/getoverhere.ogg'
+	invocation = "GET OVER HERE!"
+	invocation_type = "shout"
+	antimagic_allowed = TRUE
+	charge_max = 25 SECONDS
+	include_user = TRUE
+
+/obj/effect/proc_holder/spell/targeted/gitoverhere/cast(list/targets, mob/living/user)
+	if(prob(2))
+		invocation = "GET OVER HERE, BITCH!"
+		sound = 'sound/magic/getoverbitch.ogg'
+	else
+		invocation = initial(invocation)
+		sound = initial(sound)
+
+	for(var/mob/living/carbon/human/H in targets)
+		var/obj/projectile/magic/fetch/A = new(get_turf(H))
+		var/turf/target = get_ranged_target_turf(H, H.dir, 15)
+		
+		playsound(H, 'sound/foley/winch.ogg', 100, FALSE, -1)
+		H.do_warning()
+		H.shoutbubble()
+		H.Immobilize(2 SECONDS)
+
+		A.preparePixelProjectile(target, H)
+		A.firer = H
+		A.fired_from = H
+		A.fire(dir2angle(H.dir))
+
+	..()
+	return TRUE

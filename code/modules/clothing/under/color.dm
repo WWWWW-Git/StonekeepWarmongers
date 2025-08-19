@@ -70,7 +70,7 @@
 	desc = ""
 
 /obj/item/clothing/under/color/grey/glorf/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	owner.forcesay(GLOB.hit_appends)
+	owner.say(GLOB.hit_appends)
 	return 0
 
 /obj/item/clothing/under/color/blue

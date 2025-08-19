@@ -89,6 +89,7 @@
 /datum/round_aspect/attackofdead
 	name = "Attack of the Living Dead"
 	description = "When a person dies, it's not the end."
+	adminonly = TRUE // its so fucked up
 
 /datum/round_aspect/whatthefuck
 	name = "What? Just... why?"

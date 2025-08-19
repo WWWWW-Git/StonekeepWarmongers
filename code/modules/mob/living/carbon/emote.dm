@@ -87,6 +87,9 @@
 				B.explode(TRUE)
 				user.gib()
 
+	if(user.client.hasPerk(/datum/warperk/mortalcombat))
+		sound2play = 'sound/misc/mortalkombat.ogg'
+
 	playsound(user, sound2play, 100, TRUE, -2, ignore_walls = FALSE, vary = FALSE)
 	user.shoutbubble()
 	ping_sound(user)
