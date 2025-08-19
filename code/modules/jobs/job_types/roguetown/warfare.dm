@@ -1,4 +1,4 @@
-/datum/job/roguetown/warfare/after_spawn(mob/living/H, mob/M, latejoin)
+/datum/job/roguetown/warmongers/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
 	var/obj/S = null
 	for(var/obj/effect/landmark/start/sloc in GLOB.start_landmarks_list)
@@ -155,11 +155,11 @@
 
 ///////////////////////////// RED ///////////////////////////////////////
 
-/datum/job/roguetown/warfare/red
+/datum/job/roguetown/warmongers/red
 	warfare_faction = RED_WARTEAM
 	selection_color = CLOTHING_RED
 
-/datum/job/roguetown/warfare/red/lord
+/datum/job/roguetown/warmongers/red/lord
 	title = "Heartfelt Lord"
 	tutorial = "Heartfelt is under attack. Your men are demoralized and little is left. But not all is lost just yet, with supplies coming in from the Foglands you might be able to push the Grenzelhoft barbarians off this land."
 	department_flag = REDSS
@@ -174,7 +174,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	outfit = /datum/outfit/job/roguetown/redking
 
-/datum/job/roguetown/warfare/red/lord/after_spawn(mob/living/carbon/human/H, mob/M, latejoin)
+/datum/job/roguetown/warmongers/red/lord/after_spawn(mob/living/carbon/human/H, mob/M, latejoin)
 	. = ..()
 	H.verbs += list(
 		/mob/living/carbon/human/proc/warfare_announce,
@@ -206,7 +206,7 @@
 
 /datum/outfit/job/roguetown/redking
 	name = "Heartfelt Lord"
-	jobtype = /datum/job/roguetown/warfare/red/lord
+	jobtype = /datum/job/roguetown/warmongers/red/lord
 
 /datum/outfit/job/roguetown/redking/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -248,7 +248,7 @@
 
 ////////////// RED SOLDIERS AND CLASSES /////////////////
 
-/datum/job/roguetown/warfare/red/soldier
+/datum/job/roguetown/warmongers/red/soldier
 	title = "Heartfelt Infantry"
 	tutorial = "Every day feels as though its worst than the last, hope is dwindling and food is getting scarcer. You never wanted any of this, but even though no man wants war it will find him eventually regardless. You have two choices, die, or take up arms and drive these barbarians back into the sea! For Heartfelt!"
 	department_flag = REDSS
@@ -261,7 +261,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	advclass_cat_rolls = list(CTAG_REDSOLDIER = 99)
 
-/datum/job/roguetown/warfare/red/soldier/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/roguetown/warmongers/red/soldier/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
@@ -655,11 +655,11 @@
 
 /////////////////////////////////////// BLU //////////////////////////////////////////////
 
-/datum/job/roguetown/warfare/blu
+/datum/job/roguetown/warmongers/blu
 	warfare_faction = BLUE_WARTEAM
 	selection_color = CLOTHING_BLUE
 
-/datum/job/roguetown/warfare/blu/lord
+/datum/job/roguetown/warmongers/blu/lord
 	title = "Grenzelhoft Lord"
 	tutorial = "A middle-class noble with aspirations for something greater. You've been given charge of a small detachment and sent directly into the meat grinder. You will either return to Grenzelhoft a conquerer, or not at all."
 	department_flag = BLUES
@@ -673,7 +673,7 @@
 	)
 	outfit = /datum/outfit/job/roguetown/bluking
 
-/datum/job/roguetown/warfare/blu/lord/after_spawn(mob/living/carbon/human/H, mob/M, latejoin)
+/datum/job/roguetown/warmongers/blu/lord/after_spawn(mob/living/carbon/human/H, mob/M, latejoin)
 	. = ..()
 	H.verbs += list(
 		/mob/living/carbon/human/proc/warfare_announce,
@@ -705,7 +705,7 @@
 
 /datum/outfit/job/roguetown/bluking
 	name = "Grenzelhoft Lord"
-	jobtype = /datum/job/roguetown/warfare/blu/lord
+	jobtype = /datum/job/roguetown/warmongers/blu/lord
 
 /datum/outfit/job/roguetown/bluking/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -749,7 +749,7 @@
 
 /////// BLU SOLDIERS AND CLASSES /////////////////
 
-/datum/job/roguetown/warfare/blu/soldier
+/datum/job/roguetown/warmongers/blu/soldier
 	title = "Grenzelhoft Infantry"
 	tutorial = "Yours is a just task, to expand the borders of the Grenzelhoft Imperiate, the lack of food in your belly and pay in your pocket is easily ignored by knowing you're doing your part, in the unending colossus that is Grenzelhoft. For the Empire! For the KAISER! For the One True God!"
 	department_flag = BLUES
@@ -762,7 +762,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	advclass_cat_rolls = list(CTAG_BLUSOLDIER = 99)
 
-/datum/job/roguetown/warfare/blu/soldier/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/roguetown/warmongers/blu/soldier/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L

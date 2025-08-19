@@ -793,8 +793,7 @@
 				CB.forceMove(get_turf(usr))
 				to_chat(usr, "Blue crown moved succesfully.")
 
-	var/obj/effect/telefog/NL = new(get_turf(usr))
-	playsound(NL, 'sound/magic/teleport.ogg', 100, FALSE, -1)
+	new /obj/effect/telefog(get_turf(usr))
 
 /datum/admins/proc/teleport2crown()
 	set category = "Debug"

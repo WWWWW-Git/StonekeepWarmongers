@@ -313,7 +313,7 @@
 				changeNext_move(mmb_intent.clickcd)
 				face_atom(A)
 				if(lying)
-					visible_message("[src] rolls out of the way!")
+					visible_message("<b>[src]</b> rolls out of the way!")
 				else
 					if(m_intent == MOVE_INTENT_RUN)
 						emote("leap", forced = TRUE)

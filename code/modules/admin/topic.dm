@@ -1573,9 +1573,7 @@
 						else
 							O = new path(target)
 							if(icspawn == "ic_spawn")
-								var/obj/effect/telefog/TF = new(target)
-								playsound(TF, 'sound/magic/teleport.ogg', 100, FALSE, -1)
-
+								new /obj/effect/telefog(target)
 						if(!QDELETED(O))
 							O.flags_1 |= ADMIN_SPAWNED_1
 							if(obj_dir)

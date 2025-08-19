@@ -109,3 +109,23 @@
 		sleep(warfare_start_time MINUTES)
 		SSticker.ReadyToDie()
 		CHECK_TICK
+
+/datum/game_mode/warmongers/proc/HandleNoLords()
+	var/obj/effect/landmark/blureinforcement/blu = locate(/obj/effect/landmark/blureinforcement) in GLOB.landmarks_list
+	var/obj/effect/landmark/redreinforcement/red = locate(/obj/effect/landmark/redreinforcement) in GLOB.landmarks_list
+
+	if(isnull(redlord) || isnull(redcrown)) // You brought this upon yourself, nobody plays lord, no fancy shop and no fancy buffs! DIE!
+		var/datum/job/J = SSjob.GetJobType(/datum/job/roguetown/warmongers/red/lord)
+		J.total_positions = 0
+		J.spawn_positions = 0
+
+		new /obj/effect/telefog(red.loc)
+		new /obj/item/clothing/head/roguetown/warmongers/crownred(red.loc)
+
+	if(isnull(blulord) || isnull(blucrown))
+		var/datum/job/J = SSjob.GetJobType(/datum/job/roguetown/warmongers/blu/lord)
+		J.total_positions = 0
+		J.spawn_positions = 0
+
+		new /obj/effect/telefog(blu.loc)
+		new /obj/item/clothing/head/roguetown/warmongers/crownblu(blu.loc)

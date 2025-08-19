@@ -934,6 +934,7 @@ SUBSYSTEM_DEF(ticker)
 			else
 				qdel(O)
 		
+		W.HandleNoLords()
 		W.warmode.beginround()
 
 /proc/GetMainGunForWarfareHeartfelt()
@@ -1011,6 +1012,8 @@ SUBSYSTEM_DEF(ticker)
 			SEND_SOUND(M, 'sound/vo/halo/reinforcements.mp3')
 		else
 			SEND_SOUND(M, 'sound/music/traitor.ogg')
+	new /obj/effect/telefog(red.loc)
+	new /obj/effect/telefog(blu.loc)
 	for(var/i in reinforcementinas)
 		var/typepath = text2path(i)
 		new typepath(red.loc)

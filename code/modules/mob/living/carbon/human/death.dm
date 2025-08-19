@@ -82,7 +82,7 @@
 			if(aspect_chosen(/datum/round_aspect/halo))
 				SEND_SOUND(world, 'sound/vo/halo/flag_drop.mp3')
 
-		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warfare/red/lord))
+		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warmongers/red/lord))
 			testing("Red lord is dead!")
 			for(var/client/X in C.heartfelts)
 				var/mob/living/carbon/human/V = X.mob
@@ -92,7 +92,7 @@
 				else
 					V.playsound_local(get_turf(V), 'sound/music/faceoff.ogg', 20, FALSE, pressure_affected = FALSE)
 				V.add_stress(/datum/stressevent/deadlord)
-		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warfare/blu/lord))
+		if(istype(SSjob.GetJob(job),/datum/job/roguetown/warmongers/blu/lord))
 			testing("Blue lord is dead!")
 			for(var/client/X in C.grenzels)
 				var/mob/living/carbon/human/V = X.mob

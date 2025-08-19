@@ -68,6 +68,7 @@
 
 /obj/effect/telefog/Initialize()
 	. = ..()
+	playsound(src, 'sound/magic/teleport.ogg', 100, FALSE, -1)
 	QDEL_IN(src, 20)
 
 /obj/effect/abstract/marker
