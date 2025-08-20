@@ -201,20 +201,26 @@
 	desc = "Standard issue for officers in the Grenzelhoft Imperiate."
 	icon_state = "officerhat"
 	item_state = "officerhat"
+	bloody_icon_state = "helmetblood_big"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
 	flags_inv = HIDEHAIR
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	worn_x_dimension = 64
 	worn_y_dimension = 64
+	dynamic_hair_suffix = ""
 
-/obj/item/clothing/head/roguetown/commander //Will probably go unused, crown required for win conditions
+/obj/item/clothing/head/roguetown/commander
 	name = "lords hat"
-	desc = "A hat commonly worn by commanders in the Grenzelhoft Imperiate, decorated with a shining gold skull."
+	desc = "A hat commonly worn by commanders in the Grenzelhoft Imperiate, decorated with a shining gold psycross."
 	icon_state = "grenzcommhat"
 	item_state = "grenzcommhat"
+	bloody_icon_state = "helmetblood_big"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
 	flags_inv = HIDEHAIR
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	worn_x_dimension = 64
 	worn_y_dimension = 64
+	dynamic_hair_suffix = ""
 
 /obj/item/clothing/head/roguetown/bardhat
 	name = "hat"
@@ -997,6 +1003,7 @@
 	icon = 'icons/roguetown/clothing/head.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon_state = "helmetblood_big"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
 	worn_x_dimension = 64
 	worn_y_dimension = 64
 	emote_environment = 3
@@ -1025,6 +1032,7 @@
 	icon_state = "jingasa"
 	flags_inv = HIDEEARS
 	icon = 'icons/roguetown/clothing/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
 	flags_inv = HIDEEARS
 	smeltresult = /obj/item/ash
@@ -1039,6 +1047,7 @@
 	flags_inv = HIDEEARS
 	icon = 'icons/roguetown/clothing/head.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
 	worn_x_dimension = 64
 	worn_y_dimension = 64
@@ -1055,6 +1064,7 @@
 	body_parts_covered = HEAD|HAIR|EARS
 	icon = 'icons/roguetown/clothing/head.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
 	worn_x_dimension = 64
 	worn_y_dimension = 64
@@ -1067,6 +1077,7 @@
 	flags_inv = HIDEEARS
 	icon = 'icons/roguetown/clothing/head.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
 	worn_x_dimension = 64
 	worn_y_dimension = 64

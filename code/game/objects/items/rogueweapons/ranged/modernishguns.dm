@@ -20,6 +20,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	bolt_type = BOLT_TYPE_STANDARD
 	semi_auto = FALSE
+	droprot = TRUE
 	casing_ejector = FALSE
 	internal_magazine = TRUE
 	tac_reloads = FALSE
@@ -143,6 +144,7 @@
 	slot_flags = ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_NORMAL
 	bolt_type = BOLT_TYPE_STANDARD
+	droprot = TRUE
 	semi_auto = FALSE
 	casing_ejector = FALSE
 	internal_magazine = TRUE
