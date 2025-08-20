@@ -163,9 +163,9 @@ SUBSYSTEM_DEF(vote)
 				if(. == "YES")
 					to_chat(world, "\n<font color='purple'>I knew you were all cowards. Five minutes remain.</font>")
 					for(var/mob/living/L in GLOB.player_list)
-						var/sound = 'sound/vo/halo/stalemate.ogg'
+						var/sound = 'sound/misc/coward.ogg'
 						if(aspect_chosen(/datum/round_aspect/halo))
-							sound = 
+							sound = 'sound/vo/halo/stalemate.ogg'
 						L.playsound_local(L, sound, 75, FALSE)
 					var/datum/game_mode/warmongers/W = SSticker.mode
 					if(istype(W))
