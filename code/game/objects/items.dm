@@ -207,16 +207,13 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 
 /obj/item/proc/update_transform()
 	transform = null
-	if(dropshrink)
-		if(isturf(loc))
-			var/matrix/M = matrix()
+	if(isturf(loc))
+		var/matrix/M = matrix()
+		if(dropshrink)
 			M.Scale(dropshrink,dropshrink)
-			transform = M
-	if(droprot)
-		if(isturf(loc))
-			var/matrix/M = matrix()
+		if(droprot)
 			M.Turn(rand(50,350))
-			transform = M
+		transform = M
 	if(ismob(loc))
 		if(altgripped)
 			if(gripsprite)
