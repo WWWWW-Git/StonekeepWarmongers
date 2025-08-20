@@ -8,6 +8,7 @@
 	icon = 'icons/mob/human_parts.dmi'
 	icon_state = ""
 	layer = BELOW_MOB_LAYER //so it isn't hidden behind objects when on the floor
+	droprot = TRUE
 	var/mob/living/carbon/owner = 0
 	var/mob/living/carbon/original_owner = 0
 	var/status = BODYPART_ORGANIC

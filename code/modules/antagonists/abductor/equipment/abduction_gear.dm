@@ -572,7 +572,7 @@ Congratulations! You are now trained for invasive xenobiology research!"}
 
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
-		H.say(GLOB.hit_appends)
+		H.say(pick(GLOB.hit_appends))
 
 	log_combat(user, L, "stunned")
 

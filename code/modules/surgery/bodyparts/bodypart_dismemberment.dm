@@ -104,6 +104,7 @@
 		target_turf = new_turf
 		if(new_turf.density)
 			break
+	update_transform()
 	throw_at(target_turf, throw_range, throw_speed)
 	return TRUE
 

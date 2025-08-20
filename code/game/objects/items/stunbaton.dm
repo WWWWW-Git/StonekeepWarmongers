@@ -185,7 +185,7 @@
 
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
-		H.say(GLOB.hit_appends)
+		H.say(pick(GLOB.hit_appends))
 
 	cooldown_check = world.time + cooldown
 

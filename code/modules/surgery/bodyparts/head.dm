@@ -318,6 +318,7 @@
 	max_amount = 24 // i know this isnt realistic but it would be dumb to have so much teeth objects being flung around
 	throwforce = 4 // trol
 	force = 0
+	droprot = TRUE
 	var/icon_state_variation = 4
 
 /obj/item/stack/teeth/Initialize()
