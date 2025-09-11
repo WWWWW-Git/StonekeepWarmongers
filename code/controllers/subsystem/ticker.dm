@@ -926,6 +926,7 @@ SUBSYSTEM_DEF(ticker)
 			SEND_SOUND(M, 'sound/music/wolfintro.ogg')
 			M.overlay_fullscreen("graghorror", /atom/movable/screen/fullscreen/graghorror)
 			M.clear_fullscreen("graghorror", 5 SECONDS)
+			M.client.verbs -= /client/verb/forcestartvote
 
 		for(var/obj/O in warfare_barriers)
 			if(istype(O, /obj/structure/shopkeep))

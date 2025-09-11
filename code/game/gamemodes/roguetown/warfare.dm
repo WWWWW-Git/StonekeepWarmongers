@@ -26,6 +26,7 @@
 	var/warfare_reinforcement_time = 5 // in minutes
 	
 	var/stalematecooldown // a cooldown before another stalemate can be held
+	var/forcestartcooldown
 	var/datum/warmode/warmode = null
 
 	announce_span = "danger"

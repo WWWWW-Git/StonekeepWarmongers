@@ -630,6 +630,27 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 			W.stalematecooldown = world.time + 10 MINUTES
 			SSvote.initiate_vote("stalemate", "The God of War")
 
+/client/verb/forcestartvote()
+	set name = "Propose FORCE START"
+	set category = "Options"
+	set desc = ""
+	if(SSticker.warfare_ready_to_die)
+		to_chat(usr, "<B>FOOL</B>")
+		return
+	
+	var/sure = alert(usr, "Are you sure? Any team without a lord present will be barred from having a lord in the future. (ONLY APPLICABLE FOR LORD DESTRUCTION MAPS)", "WARMONGERS", "Yes", "No")
+	if(sure == "No")
+		to_chat(usr, "<span class='warning'>The wait shall continue, then.</span>")
+		return
+
+	var/datum/game_mode/warmongers/W = SSticker.mode
+	if(istype(W))
+		if(W.forcestartcooldown >= world.time)
+			to_chat(src, "\n<font color='red'>It is too early for that, try again later.</font>")
+		else
+			W.forcestartcooldown = world.time + 10 MINUTES
+			SSvote.initiate_vote("forcestart", "The God of War")
+
 /client/verb/accessibility()
 	set name = "Accessibility"
 	set category = "Options"
@@ -662,11 +683,9 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	set name = "Fit Viewport"
 	set category = "Options"
 	set desc = ""
-	if(!holder)
-		return
 	// Fetch aspect ratio
 	var/view_size = getviewsize(view)
-	var/aspect_ratio = view_size[1] / view_size[2]
+	var/aspect_ratio = view_size[1] / (view_size[2] / 1.3)
 
 	// Calculate desired pixel width using window size and aspect ratio
 	var/sizes = params2list(winget(src, "mainwindow.split;mapwindow", "size"))
@@ -704,7 +723,6 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 		pct += delta
 		winset(src, "mainwindow.split", "splitter=[pct]")
-
 
 /client/verb/policy()
 	set name = "Show Policy"

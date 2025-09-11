@@ -56,8 +56,12 @@
 /datum/outfit/job/roguetown/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
 	var/datum/job/roguetown/J = SSjob.GetJob(H.job)
-	if(J.tutorial)
+	H.client?.fit_viewport()
+	
+	if(J?.tutorial)
+		to_chat(H, "<span class='info'><b>[uppertext(J.title)]</b></span>")
 		to_chat(H, "<span class='info'>[J.tutorial]</span>")
+
 	for(var/list_key in SStriumphs.post_equip_calls)
 		var/datum/triumph_buy/thing = SStriumphs.post_equip_calls[list_key]
 		thing.on_activate(H)
@@ -65,7 +69,7 @@
 	var/obj/item/clothing/suit/U = H.wear_shirt
 	if(check_badminlist(H.ckey)) // being a badmin takes priority over being a veteran
 		U.attach_accessory(new /obj/item/clothing/accessory/medal/badmin(U))
-	else if(H.client.holder)
+	else if(H.client?.holder)
 		U.attach_accessory(new /obj/item/clothing/accessory/medal/gold/admin(U))
 	if(check_bypasslist(H.ckey))
 		U.attach_accessory(new /obj/item/clothing/accessory/medal/silver/veteran(U))

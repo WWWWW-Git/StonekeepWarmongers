@@ -112,6 +112,8 @@ SUBSYSTEM_DEF(vote)
 					winners = list("End Round")
 				if(mode == "stalemate")
 					winners = list("NO")
+				if(mode == "forcestart")
+					winners = list("YES")
 			. = pick(winners)
 			text += "\n<b>Vote Result: [.]</b>"
 		else
@@ -172,6 +174,14 @@ SUBSYSTEM_DEF(vote)
 						spawn(5 MINUTES)
 							if(!SSticker.force_ending)
 								W.do_war_end()
+			if("forcestart")
+				if(. == "NO")
+					to_chat(world, "\n<font color='purple'>The wait shall continue, then.</font>")
+				if(. == "YES")
+					to_chat(world, "\n<font color='purple'>Understood. The wait shall end.</font>")
+					var/datum/game_mode/warmongers/W = SSticker.mode
+					if(istype(W))
+						SSticker.ReadyToDie()
 	if(restart)
 		var/active_admins = 0
 		for(var/client/C in GLOB.admins)
@@ -244,6 +254,9 @@ SUBSYSTEM_DEF(vote)
 			if("stalemate")
 				initiator_key = "The God of War"
 				choices.Add("YES","NO")
+			if("forcestart")
+				initiator_key = "The God of War"
+				choices.Add("YES","NO")
 			else
 				return 0
 		mode = vote_type
@@ -279,8 +292,6 @@ SUBSYSTEM_DEF(vote)
 		if(check_rights_for(C, R_ADMIN))
 			trialmin = 1
 	voting |= C
-
-	. += "<head><script>(()=>{const k='scrollY';addEventListener('beforeunload',()=>localStorage.setItem(k,scrollY));addEventListener('load',()=>{const y=localStorage.getItem(k);if(y!==null)scrollTo(0,parseInt(y))})})();</script></head>"
 
 	if(mode)
 		if(question)
@@ -332,8 +343,10 @@ SUBSYSTEM_DEF(vote)
 			. += "<li><a href='?src=[REF(src)];vote=custom'>Custom</a></li>"
 		. += "</ul><hr>"
 	. += "<a href='?src=[REF(src)];vote=close' style='position:absolute;right:50px'>Close</a>"
-	return .
 
+	var/html = "<div id='c' style='overflow:auto;height:100%;'>" + . + "</div>"
+	html += "<script>var e=document.getElementById('c'),s=sessionStorage.getItem('vote_scroll');if(s)e.scrollTop=s;window.onbeforeunload=function(){sessionStorage.setItem('vote_scroll',e.scrollTop);};</script>"
+	return html
 
 /datum/controller/subsystem/vote/Topic(href,href_list[],hsrc)
 	if(!usr || !usr.client)
