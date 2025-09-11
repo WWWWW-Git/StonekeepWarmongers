@@ -12,7 +12,6 @@
 //this is very slightly better than it was because you can use it more places. still can't do \his[src] though.
 	var/t_He = p_they(TRUE)
 	var/t_his = p_their()
-//	var/t_him = p_them()
 	var/t_has = p_have()
 	var/t_is = p_are()
 	var/obscure_name
@@ -54,7 +53,7 @@
 				used_title = J.title
 			else
 				used_title = "Ambusher"
-			if(gender == FEMALE && J.f_title)
+			if(gender == FEMALE && J?.f_title)
 				used_title = J.f_title
 			if(used_title == "Adventurer")
 				used_title = advjob
@@ -64,68 +63,12 @@
 		else
 			. = list("<span class='info'>ø ------------ ø\nThis is the <EM>[used_name]</EM>, the [race_name].")
 
-		if(dna.species.use_skintones)
-			var/skin_tone_wording = dna.species.skin_tone_wording ? lowertext(dna.species.skin_tone_wording) : "skin tone"
-			var/list/skin_tones = dna.species.get_skin_list()
-			var/skin_tone_seen = "incomprehensible"
-			if(skin_tone)
-				//AGGHHHHH this is stupid
-				for(var/tone in skin_tones)
-					if(src.skin_tone == skin_tones[tone])
-						skin_tone_seen = lowertext(tone)
-						break
-			var/slop_lore_string = "."
-			if(ishumannorthern(user))
-				var/mob/living/carbon/human/racist = user
-				var/list/user_skin_tones = racist.dna.species.get_skin_list()
-//				var/user_skin_tone_seen = "incomprehensible"	gives unused warning now, sick of seeing it
-				for(var/tone in user_skin_tones)
-					if(racist.skin_tone == user_skin_tones[tone])
-//						user_skin_tone_seen = lowertext(tone)	gives unused warning now, sick of seeing it
-						break
-			. += "<span class='info'>[capitalize(m2)] [skin_tone_wording] is [skin_tone_seen][slop_lore_string]</span>"
-
-		if(ishuman(user))
-			var/mob/living/carbon/human/H = user
-			if(H.marriedto == real_name)
-				. += "<span class='love'>It's my spouse.</span>"
-
-		if(real_name in GLOB.excommunicated_players)
-			. += "<span class='userdanger'>HERETIC! SHAME!</span>"
-
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
 			if(H.warfare_faction != src.warfare_faction)
 				. += "<span class='userdanger'>THEY'RE THE ENEMY! KILL THEM!</span>"
 			else if(HAS_TRAIT(H, TRAIT_NOBLE))
 				. += "<span class='notice'>Our Lord! Protect him!</span>"
-
-		if(iszizocultist(user) || iszizolackey(user))
-			if(virginity)
-				. += "<span class='userdanger'>VIRGIN!</span>"
-
-		if(real_name in GLOB.outlawed_players)
-			. += "<span class='userdanger'>OUTLAW!</span>"
-		if(mind && mind.special_role)
-		else
-			if(mind && mind.special_role == "Bandit")
-				. += "<span class='userdanger'>BANDIT!</span>"
-			if(mind && mind.special_role == "Vampire Lord")
-				. += "<span class='userdanger'>A MONSTER!</span>"
-
-	if(leprosy == 1)
-		. += "<span class='necrosis'>A LEPER...</span>"
-
-	if(user != src)
-		var/datum/mind/Umind = user.mind
-		if(Umind && mind)
-			for(var/datum/antagonist/aD in mind.antag_datums)
-				for(var/datum/antagonist/bD in Umind.antag_datums)
-					var/shit = bD.examine_friendorfoe(aD,user,src)
-					if(shit)
-						. += shit
-		if(user.mind?.has_antag_datum(/datum/antagonist/vampirelord) || user.mind?.has_antag_datum(/datum/antagonist/vampire))
-			. += "<span class='userdanger'>Blood Volume: [blood_volume]</span>"
 
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
@@ -147,9 +90,6 @@
 		//suit/armor storage
 		if(s_store && !(SLOT_S_STORE in obscured))
 			. += "[m1] carrying [s_store.get_examine_string(user)] on [m2] [wear_armor.name]."
-	//back
-//	if(back)
-//		. += "[m3] [back.get_examine_string(user)] on [m2] back."
 
 	if(cloak && !(SLOT_CLOAK in obscured))
 		. += "[m3] [cloak.get_examine_string(user)] on [m2] shoulders."
@@ -233,10 +173,6 @@
 			msg += "[t_He] appear[p_s()] to have committed suicide... there is no hope of recovery."
 		if(hellbound)
 			msg += "[capitalize(m2)] soul seems to have been ripped out of [m2] body. Revival is impossible."
-//		if(getorgan(/obj/item/organ/brain) && !key && !get_ghost(FALSE, TRUE))
-//			msg += "<span class='deadsay'>[m1] limp and unresponsive; there are no signs of life and [m2] soul has departed...</span>"
-//		else
-//			msg += "<span class='deadsay'>[m1] limp and unresponsive; there are no signs of life...</span>"
 
 	var/temp = getBruteLoss() + getFireLoss() //no need to calculate each of these twice
 
@@ -244,13 +180,13 @@
 		// Damage
 		switch(temp)
 			if(5 to 25)
-				msg += "[m1] a little wounded."
+				msg += "[m1] injured."
 			if(25 to 50)
 				msg += "[m1] wounded."
 			if(50 to 100)
 				msg += "<B>[m1] severely wounded.</B>"
 			if(100 to INFINITY)
-				msg += "<span class='danger'>[m1] gravely wounded.</span>"
+				msg += "<span class='danger'>[m1] close to death, if not dead already.</span>"
 
 	// Blood volume
 	switch(blood_volume)
@@ -324,11 +260,6 @@
 	//Nutrition
 	if(nutrition < (NUTRITION_LEVEL_STARVING - 50))
 		msg += "[m1] looking starved."
-//	else if(nutrition >= NUTRITION_LEVEL_FAT)
-//		if(user.nutrition < NUTRITION_LEVEL_STARVING - 50)
-//			msg += "[t_He] [t_is] plump and delicious looking - Like a fat little piggy. A tasty piggy."
-//		else
-//			msg += "[t_He] [t_is] quite chubby."
 
 	//Fire/water stacks
 	if(fire_stacks > 0)
@@ -379,7 +310,7 @@
 			if(HAS_TRAIT(user, TRAIT_EMPATH))
 				switch(stress)
 					if(20 to INFINITY)
-						msg += "[m1] extremely stressed."
+						msg += "[m1] traumatized."
 					if(10 to 19)
 						msg += "[m1] very stressed."
 					if(1 to 9)
@@ -433,7 +364,7 @@
 		var/strength_diff = final_str - L.STASTR
 		switch(strength_diff)
 			if(5 to INFINITY)
-				. += "<span class='warning'><B>[t_He] look[p_s()] much stronger than I.</B></span>"
+				. += "<span class='warning'><B>[t_He][p_s()] fucking ripped!</B></span>"
 			if(1 to 5)
 				. += "<span class='warning'>[t_He] look[p_s()] stronger than I.</span>"
 			if(0)
