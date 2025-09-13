@@ -339,9 +339,20 @@
 /mob/proc/do_unarmed_parry(parrydrain as num, mob/living/user)
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
+
+		// Check for bracers in wrist slot
+		var/obj/item/clothing/wrists/roguetown/bracers/br = H.wear_wrists
+
 		if(H.rogfat_add(parrydrain))
 			playsound(get_turf(src), pick(parry_sound), 100, FALSE)
-			src.visible_message("<span class='warning'><b>[src]</b> parries [user] with their hands!</span>")
+
+			if(istype(br))
+				src.visible_message("<span class='warning'><b>[src]</b> parries [user] with their bracers!</span>")
+			else
+				src.visible_message("<span class='danger'><b>[src]</b> parries [user] with their bare hands!</span>")
+				var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
+				if(affecting && affecting.receive_damage(5))
+					H.update_damage_overlays()
 			return TRUE
 		else
 			to_chat(src, "<span class='boldwarning'>I'm too tired to parry!</span>")
@@ -349,7 +360,6 @@
 	else
 		playsound(get_turf(src), pick(parry_sound), 100, FALSE)
 		return TRUE
-
 
 /mob/proc/do_dodge(mob/user, turf/turfy)
 	if(!dodgecd)

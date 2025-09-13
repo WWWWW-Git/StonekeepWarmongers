@@ -93,19 +93,19 @@
 				if(ishuman(P.firer))
 					var/mob/living/carbon/human/H = P.firer
 					H.playsound_local(get_turf(H), 'sound/vo/halo/headshot.mp3', 50)
-			playsound(src, "headcrush", 100, vary = FALSE)
 			newdam = newdam * 2
 			var/obj/item/clothing/head/roguetown/hed = head
 			if(hed && !HAS_TRAIT(P.firer, TRAIT_SNIPER))
 				transferItemToLoc(hed, get_step(src, turn(dir, 180)))
 				hed.take_damage(45 + newdam / 2, BRUTE, "melee", 1)
 				head = null
+				playsound(src, 'sound/combat/helmshot.ogg', 100, vary = FALSE)
 				update_inv_head()
 				BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 			else
 				var/obj/item/bodypart/chest = get_bodypart(BODY_ZONE_CHEST)
 				chest.add_wound(/datum/wound/dismemberment/head)
-				
+				playsound(src, "headcrush", 100, vary = FALSE)
 				newdam = newdam * 5
 				if(aspect_chosen(/datum/round_aspect/halo))
 					playsound_local(get_turf(src), 'sound/vo/halo/skillissue.mp3', 100)

@@ -1359,6 +1359,8 @@
 			limby.color = "#2f002f"
 			. += limby
 
+	. += mutable_appearance('icons/mob/roguehud64.dmi', "m-r_inhand") // testing: might remove later
+	. += mutable_appearance('icons/mob/roguehud64.dmi', "m-l_inhand")
 	. += mutable_appearance(overlay_icon, "m_[hud.mymob.zone_selected]")
 
 /atom/movable/screen/zone_sel/alien

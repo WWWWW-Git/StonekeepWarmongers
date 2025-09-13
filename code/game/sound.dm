@@ -342,7 +342,9 @@
 				soundin = pick('sound/combat/fracture/headcrush (1).ogg',
 'sound/combat/fracture/headcrush (2).ogg',
 'sound/combat/fracture/headcrush (3).ogg',
-'sound/combat/fracture/headcrush (4).ogg')
+'sound/combat/fracture/headcrush (4).ogg',
+'sound/combat/fracture/headcrush (5).ogg',
+'sound/combat/fracture/headcrush (6).ogg')
 			if("punch")
 				soundin = pick('sound/combat/hits/punch/punch (1).ogg','sound/combat/hits/punch/punch (2).ogg','sound/combat/hits/punch/punch (3).ogg')
 			if("punch_hard")
