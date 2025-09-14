@@ -73,12 +73,10 @@
 			var/datum/warmode/noreturn/NR = C.warmode
 			if(NR.blu_flag == src)
 				NR.blu_flag = null
+				to_chat(world, "<span class='userdanger'>GRENZELHOFTS FLAG DROPPED.</span>")
 			if(NR.red_flag == src)
 				NR.red_flag = null
-			var/team = RED_WARTEAM
-			if(warfare_faction == RED_WARTEAM)
-				team = BLUE_WARTEAM
-			to_chat(world, "<span class='userdanger'>[uppertext(team)] FLAG DROPPED.</span>")
+				to_chat(world, "<span class='userdanger'>HEARTFELTS FLAG DROPPED.</span>")
 			if(aspect_chosen(/datum/round_aspect/halo))
 				SEND_SOUND(world, 'sound/vo/halo/flag_drop.mp3')
 

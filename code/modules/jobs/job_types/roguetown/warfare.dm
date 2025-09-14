@@ -46,10 +46,12 @@
 		switch(HU.warfare_faction)
 			if(RED_WARTEAM)
 				HU.speech_sound = 'sound/vo/speech_heartfelt.ogg'
-				HU.cmode_music = 'sound/music/combatheartfelt.ogg'
+				if(HU.cmode != 'sound/music/combatspecial.ogg')
+					HU.cmode_music = 'sound/music/combatheartfelt.ogg'
 			if(BLUE_WARTEAM)
 				HU.speech_sound = 'sound/vo/speech_grenzelhoft.ogg'
-				HU.cmode_music = 'sound/music/combatgrenzelhoft.ogg'
+				if(HU.cmode != 'sound/music/combatspecial.ogg')
+					HU.cmode_music = 'sound/music/combatgrenzelhoft.ogg'
 		if(HAS_TRAIT(HU, TRAIT_NOBLE))
 			HU.speech_sound = 'sound/vo/speech_lord.ogg'
 
