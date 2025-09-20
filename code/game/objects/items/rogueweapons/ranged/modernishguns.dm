@@ -113,7 +113,25 @@
 		return
 	..()
 	QDEL_NULL(chambered)
-	//new /obj/effect/particle_effect/smoke(get_turf(user))
+
+	var/angle
+	switch(user.dir)
+		if(NORTH) angle = 90
+		if(SOUTH) angle = 270
+		if(EAST)  angle = 0
+		if(WEST)  angle = 180
+	angle += rand(-15, 15)
+
+	var/px = round(128 * cos(angle))
+	var/py = round(128 * sin(angle))
+
+	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(user))
+	var/matrix/ARE = matrix()
+	ARE.Scale(2, 2)
+	ARE.Turn(rand(-350,350))
+	animate(S, time = 20, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
+	QDEL_IN(S, 20)
+
 	SSticker.muskshots++
 
 /obj/item/ammo_box/magazine/internal/shot/peter // petah.. the saiga is here.
@@ -223,6 +241,24 @@
 		return
 	..()
 	QDEL_NULL(chambered)
+
+	var/angle
+	switch(user.dir)
+		if(NORTH) angle = 90
+		if(SOUTH) angle = 270
+		if(EAST)  angle = 0
+		if(WEST)  angle = 180
+	angle += rand(-15, 15)
+
+	var/px = round(64 * cos(angle))
+	var/py = round(64 * sin(angle))
+
+	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(user))
+	var/matrix/ARE = matrix()
+	ARE.Turn(rand(-350,350))
+	animate(S, time = 10, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
+	QDEL_IN(S, 10)
+
 	//new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.muskshots++
 	update_icon()

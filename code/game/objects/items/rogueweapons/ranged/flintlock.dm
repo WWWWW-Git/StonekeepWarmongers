@@ -25,7 +25,7 @@
 	pin = /obj/item/firing_pin
 	force = 10
 	cartridge_wording = "ball"
-	recoil = 4
+	recoil = 3
 	load_sound = 'sound/foley/nockarrow.ogg'
 	fire_sound = list('sound/combat/Ranged/muskshoot.ogg','sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg')
 	fire_sound_volume = 500
@@ -160,7 +160,7 @@
 	icon_state = "pistol"
 	item_state = "pistol"
 	bigboy = FALSE
-	recoil = 8
+	recoil = 2
 	spread = 3
 	click_delay = 2.4
 	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, INTENT_GENERIC)
@@ -226,9 +226,6 @@
 		return
 	if(!rammed)
 		return
-	if(user.mind.get_skill_level(/datum/skill/combat/flintlocks) <= 0)
-		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
-		return
 	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	cocked = FALSE
 	rammed = FALSE
@@ -236,7 +233,28 @@
 	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
+	if(user.mind.get_skill_level(/datum/skill/combat/flintlocks) <= 0)
+		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
+		return
 	..()
+	var/angle
+	switch(user.dir)
+		if(NORTH) angle = 90
+		if(SOUTH) angle = 270
+		if(EAST)  angle = 0
+		if(WEST)  angle = 180
+	angle += rand(-25, 25)
+
+	var/px = round(128 * cos(angle))
+	var/py = round(128 * sin(angle))
+
+	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(user))
+	var/matrix/ARE = matrix()
+	ARE.Scale(5, 5)
+	ARE.Turn(rand(-350,350))
+	animate(S, time = 50, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
+	QDEL_IN(S, 50)
+
 	new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.muskshots++
 

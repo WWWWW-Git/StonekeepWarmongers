@@ -40,6 +40,15 @@
 			playsound(src.loc, 'sound/items/firelight.ogg', 100)
 			user.visible_message("<span class='danger'>\The [user] lights \the [src]!</span>")
 			fire()
+	if(istype(I, /obj/item/flint))
+		var/obj/item/flint/F = I
+		if(!loaded || !SSticker.warfare_ready_to_die)
+			to_chat(user, "<span class='danger'>No, that would be stupid.</span>")
+			return
+		F.afterattack(src, user, TRUE)
+		playsound(src.loc, 'sound/items/firelight.ogg', 100)
+		user.visible_message("<span class='danger'>\The [user] lights \the [src]!</span>")
+		fire()
 	else
 		return ..()
 
@@ -108,7 +117,7 @@
 
 /obj/structure/bombard
 	name = "bombardier"
-	desc = "Artiljerija! Load in a bomb and set the azirath, then light."
+	desc = "Artiljerija! Load in a bomb and set the azirath, then light. Use your middle eye to check through the magnifying glass."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "bombardier"
 	anchored = FALSE
@@ -188,6 +197,15 @@
 			playsound(src.loc, 'sound/items/firelight.ogg', 100)
 			user.visible_message("<span class='danger'>\The [user] lights \the [src]!</span>")
 			fire()
+	if(istype(I, /obj/item/flint))
+		var/obj/item/flint/F = I
+		if(!loaded || !SSticker.warfare_ready_to_die)
+			to_chat(user, "<span class='danger'>No, that would be stupid.</span>")
+			return
+		F.afterattack(src, user, TRUE)
+		playsound(src.loc, 'sound/items/firelight.ogg', 100)
+		user.visible_message("<span class='danger'>\The [user] lights \the [src]!</span>")
+		fire()
 	else
 		return ..()
 
@@ -221,17 +239,17 @@
 		loaded.explode(TRUE)
 		QDEL_NULL(loaded)
 
-	var/py = 0
-	var/px = 0
+	var/angle
 	switch(dir)
-		if(NORTH)
-			py = 96
-		if(SOUTH)
-			py = -96
-		if(EAST)
-			px = 96
-		if(WEST)
-			px = -96
+		if(NORTH) angle = 90
+		if(SOUTH) angle = 270
+		if(EAST)  angle = 0
+		if(WEST)  angle = 180
+	angle += rand(-15, 15)
+
+	var/px = round(64 * cos(angle))
+	var/py = round(64 * sin(angle))
+
 	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(src))
 	var/matrix/ARE = matrix()
 	ARE.Scale(4, 4)
@@ -264,12 +282,13 @@
 		to_chat(user, "<span class='notice'>You begin crushing up the ball...</span>")
 		if(do_after(user, 5 SECONDS, TRUE, src))
 			to_chat(user, "<span class='info'>You break the ball into five small pellets and load them into the machine.</span>")
+			playsound(src, 'sound/foley/trap_arm.ogg', 65)
 			bullets += 5
 			qdel(I)
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
-		to_chat(user, "<span class='notice'>Too big to fit... you'll need to smash that.</span>")
+		to_chat(user, "<span class='notice'>Too big to fit... you'll need to smash that.</span>") // Nobody is gonna get this, but this is a reference to There is No Game: Wrong Dimension in the credits level!
 	if(istype(I, /obj/item/rogue/maxim_ammo))
-		to_chat(user, "<span class='info'>That's what it was made for. Aim it at some hearts already!</span>")
+		playsound(src, 'sound/foley/trap_arm.ogg', 65)
 		bullets += 25
 		qdel(I)
 
@@ -301,19 +320,19 @@
 	A.fire(true_angle)
 	bullets--
 
-	new /obj/effect/temp_visual/small_smoke/halfsecond(get_turf(src))
+	//new /obj/effect/temp_visual/small_smoke/halfsecond(get_turf(src))
 
-	var/py = 0
-	var/px = 0
+	var/angle
 	switch(dir)
-		if(NORTH)
-			py = 64
-		if(SOUTH)
-			py = -64
-		if(EAST)
-			px = 64
-		if(WEST)
-			px = -64
+		if(NORTH) angle = 90
+		if(SOUTH) angle = 270
+		if(EAST)  angle = 0
+		if(WEST)  angle = 180
+	angle += rand(-15, 15)
+
+	var/px = round(64 * cos(angle))
+	var/py = round(64 * sin(angle))
+
 	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(src))
 	var/matrix/ARE = matrix()
 	ARE.Scale(0.8, 0.8)
