@@ -406,10 +406,11 @@
 		M.Turn(Angle)
 		transform = M
 	if(muzzle_type)
-		var/atom/movable/thing = new muzzle_type
+		var/atom/movable/thing = new muzzle_type(get_turf(firer))
 		var/matrix/M = new
 		M.Turn(original_angle)
-		thing.forceMove(get_step(firer, firer.dir))
+		M.Scale(1.5,1.5)
+		//thing.forceMove(get_step(firer, firer.dir))
 		thing.transform = M
 		thing.color = color
 		thing.set_light(muzzle_flash_range, muzzle_flash_intensity, muzzle_flash_color_override? muzzle_flash_color_override : color)

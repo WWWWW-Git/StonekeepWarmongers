@@ -311,8 +311,7 @@
 	flick("machina_firea", src)
 	playsound(src.loc, pick(firesounds), 100, FALSE)
 
-	for(var/mob/living/carbon/H in hearers(7, src))
-		shake_camera(H, 1, 1)
+	firearm_recoil_camera(user, 1, 1, user.dir)
 
 	A.preparePixelProjectile(target, T)
 	A.firer = user

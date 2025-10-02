@@ -84,7 +84,7 @@
 
 /obj/effect/temp_visual/dir_setting/firing_effect
 	icon = 'icons/effects/effects.dmi'
-	icon_state = "firing_effect"
+	icon_state = "firing_effect_plus"
 	duration = 2
 
 /obj/effect/temp_visual/dir_setting/firing_effect/setDir(newdir)

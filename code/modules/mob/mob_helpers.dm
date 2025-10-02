@@ -285,6 +285,50 @@
 			animate(pixel_x=rand(min,max), pixel_y=rand(min,max), time=1)
 	animate(pixel_x=oldx, pixel_y=oldy, time=1)
 
+/proc/firearm_recoil_camera(mob/M, duration, strength=1, direction)
+	if(!M || !M.client || duration < 1)
+		return
+	
+	var/client/C = M.client
+	var/oldx = C.pixel_x
+	var/oldy = C.pixel_y
+	
+	// Calculate recoil direction based on where the player is facing
+	var/recoil_x = 0
+	var/recoil_y = 0
+	
+	// Default to backward if no direction specified
+	if(!direction)
+		direction = M.dir
+	
+	// Calculate recoil vector (opposite to facing direction)
+	switch(direction)
+		if(NORTH)
+			recoil_y = -strength * world.icon_size
+		if(SOUTH)
+			recoil_y = strength * world.icon_size
+		if(EAST)
+			recoil_x = -strength * world.icon_size
+		if(WEST)
+			recoil_x = strength * world.icon_size
+	
+	// Quick initial kick
+	animate(C, pixel_x=oldx + recoil_x, pixel_y=oldy + recoil_y, time=1)
+	
+	// Quick snap-back (about 70% of the initial recoil)
+	animate(pixel_x=oldx + (recoil_x * 0.3), pixel_y=oldy + (recoil_y * 0.3), time=1)
+	
+	// Add some shake during the recoil
+	var/shake_amount = strength * world.icon_size * 0.15  // Subtle shake
+	for(var/i in 1 to duration-2)
+		// Gradually reduce recoil and add shake
+		var/reduction_factor = 0.3 - (0.3 * i / (duration-2))
+		animate(pixel_x=oldx + (recoil_x * reduction_factor) + rand(-shake_amount, shake_amount), 
+				pixel_y=oldy + (recoil_y * reduction_factor) + rand(-shake_amount, shake_amount), 
+				time=1)
+	
+	// Return to original position
+	animate(pixel_x=oldx, pixel_y=oldy, time=1)
 
 ///Find if the message has the real name of any user mob in the mob_list
 /proc/findname(msg)

@@ -248,7 +248,7 @@
 	var/px = round(128 * cos(angle))
 	var/py = round(128 * sin(angle))
 
-	var/obj/effect/temp_visual/small_smoke/S = new(get_turf(user))
+	var/obj/effect/temp_visual/small_smoke/S = new(get_step(user.loc, user.dir))
 	var/matrix/ARE = matrix()
 	ARE.Scale(5, 5)
 	ARE.Turn(rand(-350,350))
