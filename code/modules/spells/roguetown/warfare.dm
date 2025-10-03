@@ -84,14 +84,16 @@
 	charge_max = 25 SECONDS
 	include_user = TRUE
 
-/obj/effect/proc_holder/spell/targeted/gitoverhere/cast(list/targets, mob/living/user)
+/obj/effect/proc_holder/spell/targeted/gitoverhere/invocation(mob/user)
 	if(prob(2))
 		invocation = "GET OVER HERE, BITCH!"
 		sound = 'sound/magic/getoverbitch.ogg'
 	else
 		invocation = initial(invocation)
 		sound = initial(sound)
+	. = ..()
 
+/obj/effect/proc_holder/spell/targeted/gitoverhere/cast(list/targets, mob/living/user)
 	for(var/mob/living/carbon/human/H in targets)
 		var/obj/projectile/magic/fetch/A = new(get_turf(H))
 		var/turf/target = get_ranged_target_turf(H, H.dir, 15)
