@@ -20,7 +20,7 @@
 	desc = ""
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "floor1"
-	random_icon_states = list("floor1", "floor2", "floor3", "floor4", "floor5", "floor6")
+	random_icon_states = list("floor1", "floor2", "floor3", "floor4", "floor5", "floor6", "floor7", "floor8", "floor9", "floor10", "floor11", "floor12", "floor13", "floor14", "floor15", "floor16", "floor18")
 	blood_state = BLOOD_STATE_HUMAN
 	bloodiness = BLOOD_AMOUNT_PER_DECAL
 	beauty = -100
@@ -85,7 +85,7 @@
 
 /obj/effect/decal/cleanable/blood/splatter
 	icon_state = "gibbl1"
-	random_icon_states = list("gibbl1", "gibbl2", "gibbl3", "gibbl4", "gibbl5")
+	random_icon_states = list("gibbl1", "gibbl2", "gibbl3", "gibbl4", "gibbl5", "splatter1", "splatter2", "splatter3", "splatter4", "splatter5", "splatter6")
 	var/drips = 1
 
 /obj/effect/decal/cleanable/blood/splatter/replace_decal(obj/effect/decal/cleanable/C) // Returns true if we should give up in favor of the pre-existing decal

@@ -338,6 +338,7 @@
 	var/datum/looping_sound/torchloop/soundloop
 	var/should_self_destruct = TRUE //added for torch burnout
 	max_integrity = 40
+	tool_behaviour = TOOL_HOT
 	fuel = 30 MINUTES
 	light_depth = 0
 	light_height = 0
@@ -401,12 +402,14 @@
 		M.update_inv_hands()
 		M.update_inv_belt()
 	damtype = BRUTE
+	tool_behaviour = null
 
 /obj/item/flashlight/flare/torch/fire_act(added, maxstacks)
 	if(fuel)
 		if(!on)
 			playsound(src.loc, 'sound/items/firelight.ogg', 100)
 			on = TRUE
+			tool_behaviour = TOOL_HOT
 			damtype = BURN
 			update_brightness()
 			force = on_damage

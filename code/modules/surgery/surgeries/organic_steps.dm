@@ -93,6 +93,7 @@
 	surgery_flags = SURGERY_BLOODY
 	skill_min = SKILL_LEVEL_NOVICE
 	skill_median = SKILL_LEVEL_APPRENTICE
+	self_operable = TRUE
 
 /datum/surgery_step/cauterize/validate_bodypart(mob/user, mob/living/carbon/target, obj/item/bodypart/bodypart, target_zone)
 	. = ..()
@@ -101,15 +102,9 @@
 	return length(bodypart.wounds)
 
 /datum/surgery_step/cauterize/preop(mob/user, mob/living/target, target_zone, obj/item/tool, datum/intent/intent)
-	display_results(user, target, "<span class='notice'>I begin to cauterize the wounds on [target]'s [parse_zone(target_zone)]...</span>",
-		"<span class='notice'>[user] begins to cauterize the wounds on [target]'s [parse_zone(target_zone)].</span>",
-		"<span class='notice'>[user] begins to cauterize the wounds on [target]'s [parse_zone(target_zone)].</span>")
 	return TRUE
 
 /datum/surgery_step/cauterize/success(mob/user, mob/living/target, target_zone, obj/item/tool, datum/intent/intent)
-	display_results(user, target, "<span class='notice'>I cauterize the wounds on [target]'s [parse_zone(target_zone)].</span>",
-		"<span class='notice'>[user] cauterizes the wounds on [target]'s [parse_zone(target_zone)].</span>",
-		"<span class='notice'>[user] cauterizes the wounds on [target]'s [parse_zone(target_zone)].</span>")
 	var/obj/item/bodypart/bodypart = target.get_bodypart(check_zone(target_zone))
 	if(bodypart)
 		for(var/datum/wound/bleeder in bodypart.wounds)

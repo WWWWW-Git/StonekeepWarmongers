@@ -41,8 +41,6 @@
 	var/list/chems_needed
 	/// Any chem on the list required, or all of them?
 	var/require_all_chems = TRUE
-	/// This surgery ignores clothes on the targeted bodypart
-	var/ignore_clothes = FALSE
 	/// Does the patient need to be lying down?
 	var/lying_required = FALSE
 	/// Does this step allow self surgery?
@@ -94,6 +92,8 @@
 		return FALSE
 	if(!validate_tech(user, target, target_zone, intent))
 		return FALSE
+	if(user == target)
+		return TRUE
 	if(!validate_user(user, target, target_zone, intent))
 		return FALSE
 	if(!validate_target(user, target, target_zone, intent))
