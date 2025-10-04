@@ -14,7 +14,8 @@
 		var/mob/living/carbon/human/HU = H
 
 		if(istype(HU.client.equippedPerk))
-			HU.client.equippedPerk.apply(H)
+			spawn()
+				HU.client.equippedPerk.apply(H)
 
 		if(aspect_chosen(/datum/round_aspect/squishyhumans))
 			HU.STACON = 3
