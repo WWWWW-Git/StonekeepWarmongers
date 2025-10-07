@@ -369,7 +369,9 @@
 	icon_state = "granata"
 	item_state = "musket"
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_BACK
-	max_grenades = 1
+	max_grenades = 3
+	bigboy = TRUE
+	droprot = TRUE
 
 /obj/item/gun/grenadelauncher/granata/examine(mob/user)
 	. = ..()
@@ -378,7 +380,7 @@
 
 /obj/item/gun/grenadelauncher/granata/update_icon()
 	if(grenades.len)
-		icon_state = "granata_loaded"
+		icon_state = "granata_[grenades.len]"
 	else
 		icon_state = "granata"
 
@@ -400,6 +402,11 @@
 	F.forceMove(user.loc)
 	F.throw_at(target, 30, 4, user, spin = TRUE)
 	F.lit = TRUE
-	playsound(user.loc, 'sound/combat/Ranged/muskshoot.ogg', 75, TRUE, -3)
+	playsound(user.loc, 'sound/foley/shoot_granata.ogg', 75, TRUE, -3)
+	firearm_recoil_camera(user, 1, 3, user.dir)
 	update_icon()
+
+	var/turf/turfa = get_ranged_target_turf(user, turn(user.dir, 180), 1)
+	user.throw_at(turfa, 1, 1, null, FALSE)
+
 	new /obj/effect/particle_effect/smoke(get_turf(user))

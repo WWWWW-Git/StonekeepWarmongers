@@ -36,7 +36,7 @@
 	if(affecting && dismember_wound)
 		affecting.add_wound(dismember_wound)
 	playsound(C, pick(dismemsound), 50, FALSE, -1)
-	if(body_zone == BODY_ZONE_HEAD)
+	if(istype(src, /obj/item/bodypart/head) && user.zone_selected == BODY_ZONE_PRECISE_NECK)
 		C.visible_message("<span class='danger'><B>[C] is [pick("BRUTALLY","VIOLENTLY","BLOODILY","MESSILY")] DECAPITATED!</B></span>")
 		if(user.client)
 			if(user.client?.hasPerk(/datum/warperk/brutalist))

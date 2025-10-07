@@ -560,6 +560,7 @@
 	for(var/mob/living/carbon/H in hearers(7, src))
 		shake_camera(H, 6, 5)
 		H.blur_eyes(4)
+		firearm_recoil_camera(H, 2, 5, user.dir)
 		if(prob(30))
 			H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 45, FALSE)
 

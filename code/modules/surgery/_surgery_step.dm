@@ -92,8 +92,6 @@
 		return FALSE
 	if(!validate_tech(user, target, target_zone, intent))
 		return FALSE
-	if(user == target)
-		return TRUE
 	if(!validate_user(user, target, target_zone, intent))
 		return FALSE
 	if(!validate_target(user, target, target_zone, intent))

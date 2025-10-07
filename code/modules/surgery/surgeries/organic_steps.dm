@@ -91,9 +91,10 @@
 	)
 	time = 2.4 SECONDS
 	surgery_flags = SURGERY_BLOODY
-	skill_min = SKILL_LEVEL_NOVICE
+	skill_min = SKILL_LEVEL_NONE
 	skill_median = SKILL_LEVEL_APPRENTICE
 	self_operable = TRUE
+	lying_required = FALSE
 
 /datum/surgery_step/cauterize/validate_bodypart(mob/user, mob/living/carbon/target, obj/item/bodypart/bodypart, target_zone)
 	. = ..()
