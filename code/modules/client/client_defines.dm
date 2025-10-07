@@ -74,6 +74,7 @@
 
 	var/warfare_faction = null
 	var/datum/warperk/equippedPerk = null
+	var/haspaid = FALSE
 
 	preload_rsc = PRELOAD_RSC
 
