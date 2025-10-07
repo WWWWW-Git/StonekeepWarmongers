@@ -32,17 +32,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Blue Reinforcements"
 	icon_state = "reinforcements-blu"
 
-/obj/effect/landmark/blureinforcement/Initialize()
-	. = ..()
-	new /obj/structure/shopkeep(get_turf(src))
-
 /obj/effect/landmark/redreinforcement
 	name = "Red Reinforcements"
 	icon_state = "reinforcements"
-
-/obj/effect/landmark/redreinforcement/Initialize()
-	. = ..()
-	new /obj/structure/shopkeep(get_turf(src))
 
 /obj/effect/landmark/start
 	name = "start"

@@ -62,7 +62,7 @@
 	var/next_move = null
 	var/next_rmove = null
 	var/next_lmove = null
-	var/used_hand = 1
+	var/used_hand = 2
 
 	/**
 	  * Magic var that stops you moving and interacting with anything

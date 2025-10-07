@@ -13,12 +13,12 @@
 		if(counted)
 			SSticker.tri_gained += amt
 		if(current)
-			to_chat(current, "\n<font color='purple'>[amt] TRIUMPH(S) awarded.</font>")
+			to_chat(current, "\n<font color='purple'>[amt] TRIUMPH(s) awarded.</font>")
 	else if(amt < 0)
 		if(counted)
 			SSticker.tri_lost += amt
 		if(current)
-			to_chat(current, "\n<font color='purple'>[amt*-1] TRIUMPH(S) lost.</font>")
+			to_chat(current, "\n<font color='purple'>[amt*-1] TRIUMPH(s) lost.</font>")
 
 
 
@@ -36,11 +36,11 @@
 	if(amt > 0)
 		if(counted)
 			SSticker.tri_gained += amt
-		to_chat(src, "\n<font color='purple'>[amt] TRIUMPH(S) awarded.</font>")
+		to_chat(src, "\n<font color='purple'>[amt] TRIUMPH(s) awarded.</font>")
 	else if(amt < 0)
 		if(counted)
 			SSticker.tri_lost += amt
-		to_chat(src, "\n<font color='purple'>[amt*-1] TRIUMPH(S) lost.</font>")
+		to_chat(src, "\n<font color='purple'>[amt*-1] TRIUMPH(s) lost.</font>")
 
 /*
 	mobs also got ckeys p simple
@@ -55,8 +55,8 @@
 	if(amt > 0)
 		if(counted)
 			SSticker.tri_gained += amt
-		to_chat(src, "\n<font color='purple'>[amt] TRIUMPH(S) awarded.</font>")
+		to_chat(src, "\n<font color='purple'>[amt] TRIUMPH(s) awarded.</font>")
 	else if(amt < 0)
 		if(counted)
 			SSticker.tri_lost += amt
-		to_chat(src, "\n<font color='purple'>[amt*-1] TRIUMPH(S) lost.</font>")
+		to_chat(src, "\n<font color='purple'>[amt*-1] TRIUMPH(s) lost.</font>")

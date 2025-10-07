@@ -134,7 +134,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	var/domhand = 2
 	var/alignment = ALIGNMENT_TN
-	var/datum/charflaw/charflaw
+	var/datum/warperk/warperk
 
 	var/family = FAMILY_NONE
 
@@ -161,10 +161,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			return
 	//we couldn't load character data so just randomize the character appearance + name
 	random_character()		//let's create a random character then - rather than a fat, bald and naked man.
-	if(!charflaw)
-		charflaw = pick(GLOB.character_flaws)
-		charflaw = GLOB.character_flaws[charflaw]
-		charflaw = new charflaw()
+	warperk = new /datum/warperk()
 	if(!selected_patron)
 		selected_patron = GLOB.patronlist[default_patron]
 	key_bindings = deepCopyList(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
@@ -281,7 +278,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 //				dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_AGE_ANTAG]'>When Antagonist: [(randomise[RANDOM_AGE_ANTAG]) ? "Yes" : "No"]</A>"
 
 //			dat += "<b><a href='?_src_=prefs;preference=name;task=random'>Random Name</A></b><BR>"
-			dat += "<b>FLAW:</b> <a>IT DOESN'T MATTER</a><BR>"
+			if(!warperk)
+				warperk = new /datum/warperk()
+			dat += "<b>PERK:</b> <a href='?_src_=prefs;preference=warperk;task=input'>[warperk?.name]</a><BR>"
 			dat += "<b>FAITH:</b> <a>THE GODS ARE DEAD</a><BR>"
 			dat += "<b>DOM. HAND:</b> <a href='?_src_=prefs;preference=domhand'>[domhand == 1 ? "LEFT" : "RIGHT"]</a><BR>"
 /*
@@ -1899,16 +1898,23 @@ Slots: [job.spawn_positions]</span>
 						random_character(gender)
 						accessory = "Nothing"
 
-				if("charflaw")
-					var/list/coom = GLOB.character_flaws.Copy()
-					var/result = input(user, "Select a flaw", "WARMONGERS") as null|anything in coom
-					if(result)
-						result = coom[result]
-						var/datum/charflaw/C = new result()
-						charflaw = C
-						if(charflaw.desc)
-							to_chat(user, "<span class='info'>[charflaw.desc]</span>")
-
+				if("warperk")
+					var/list/buyables = list()
+					for(var/thing in subtypesof(/datum/warperk))//Populate possible aspects list.
+						var/datum/warperk/A = new thing
+						buyables[A.name] = A
+					var/chosen = input(user, "Choose a perk", "WARMONGERS") as null|anything in buyables
+					var/datum/warperk/WP = buyables[chosen]
+					if(WP)
+						var/full_desc = "[WP.desc] ([WP.cost] TRI)"
+						var/alerto = alert(user, full_desc, WP.name, "Confirm", "Cancel")
+						if(alerto == "Confirm")
+							if(user.get_triumphs() < WP.cost)
+								to_chat(user, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
+								return
+							warperk = WP
+							to_chat(user, "<span class='info'><b>[WP.name] ([WP.cost])</b></span>")
+							to_chat(user, "<span class='info'>[WP.desc]</span>")
 
 				if("mutant_color")
 					var/new_mutantcolor = input(user, "Choose your character's alien/mutant color:", "Character Preference","#"+features["mcolor"]) as color|null
@@ -2415,19 +2421,15 @@ Slots: [job.spawn_positions]</span>
 
 	character.jumpsuit_style = jumpsuit_style
 
-	if(charflaw)
-		var/obj/item/bodypart/O = character.get_bodypart(BODY_ZONE_R_ARM)
-		if(O)
-			O.drop_limb()
-			qdel(O)
-		O = character.get_bodypart(BODY_ZONE_L_ARM)
-		if(O)
-			O.drop_limb()
-		character.regenerate_limb(BODY_ZONE_R_ARM)
-		character.regenerate_limb(BODY_ZONE_L_ARM)
-		if(istype(charflaw, /datum/charflaw/badsight))
-			charflaw = new /datum/charflaw/randflaw()
-		character.charflaw = null // No flaws in a PvP game
+	var/obj/item/bodypart/O = character.get_bodypart(BODY_ZONE_R_ARM) // ?
+	if(O)
+		O.drop_limb()
+		qdel(O)
+	O = character.get_bodypart(BODY_ZONE_L_ARM)
+	if(O)
+		O.drop_limb()
+	character.regenerate_limb(BODY_ZONE_R_ARM)
+	character.regenerate_limb(BODY_ZONE_L_ARM)
 
 	character.dna.real_name = character.real_name
 

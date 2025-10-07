@@ -929,11 +929,7 @@ SUBSYSTEM_DEF(ticker)
 			M.client.verbs -= /client/verb/forcestartvote
 
 		for(var/obj/O in warfare_barriers)
-			if(istype(O, /obj/structure/shopkeep))
-				var/obj/structure/shopkeep/FUCKYOU = O // im not making another var for this candy ass bullshit
-				FUCKYOU.leave()
-			else
-				qdel(O)
+			qdel(O)
 		
 		W.HandleNoLords()
 		W.warmode.beginround()

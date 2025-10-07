@@ -5,7 +5,7 @@
 	icon_state = "cranker"
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_HIP
-	var/obj/item/bodypart/bp // bodypart to grind
+	var/obj/item/bp // bodypart/teeth to grind
 	var/datum/reagent/chosen_potion = /datum/reagent/medicine/healthpot
 	var/obj/item/reagent_containers/glass/bottle/rogue/pot // where to put the health potion
 
@@ -76,7 +76,7 @@
 	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)
 		to_chat(user, "<span class='warning'>I don't know how to use this.</span>")
 		return ..()
-	if(istype(I, /obj/item/bodypart))
+	if(istype(I, /obj/item/bodypart) || istype(I, /obj/item/stack/teeth)) // I don't fucking care. You can waste an entire stack of teeth for all I care.
 		var/obj/item/bodypart/BI = I
 		to_chat(user, "<span class='info'>I put \the [BI] into the [src].</span>")
 		playsound(get_turf(user), 'sound/foley/struggle.ogg', 100, FALSE, -2)

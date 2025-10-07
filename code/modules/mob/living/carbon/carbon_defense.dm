@@ -84,6 +84,7 @@
 	if(BP)
 		testing("projwound")
 		var/newdam = P.damage * (100-blocked)/100
+		playsound(src, list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg'), 100, vary = FALSE)
 		if(istype(BP, /obj/item/bodypart/head) && istype(P, /obj/projectile/bullet/reusable/bullet))
 			to_chat(P.firer, "<span class='userdanger'>Headshot!</span>")
 			var/obj/effect/temp_visual/bloodmist/BM = new(get_turf(src))
@@ -101,7 +102,6 @@
 				head = null
 				playsound(src, 'sound/combat/helmshot.ogg', 100, vary = FALSE)
 				update_inv_head()
-				BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 			else
 				var/obj/item/bodypart/chest = get_bodypart(BODY_ZONE_CHEST)
 				chest.add_wound(/datum/wound/dismemberment/head)
@@ -138,6 +138,7 @@
 						continue
 					animate(whole_screen, transform = newmatrix, time = 1, easing = QUAD_EASING)
 					animate(transform = -newmatrix, time = 10, easing = QUAD_EASING)
+		BP.bodypart_attacked_by(P.woundclass, newdam, zone_precise = def_zone, crit_message = TRUE)
 		return TRUE
 
 /mob/living/carbon/check_projectile_embed(obj/projectile/P, def_zone, blocked)
