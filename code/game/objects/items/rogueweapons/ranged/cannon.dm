@@ -312,7 +312,10 @@
 	flick("machina_firea", src)
 	playsound(src.loc, pick(firesounds), 100, FALSE)
 
-	firearm_recoil_camera(user, 1, 1, user.dir)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(!H.lying)
+			firearm_recoil_camera(H, 1, 1, H.dir)
 
 	A.preparePixelProjectile(target, T)
 	A.firer = user

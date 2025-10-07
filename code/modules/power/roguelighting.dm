@@ -597,6 +597,7 @@
 	base_state = "chand"
 	icon = 'icons/roguetown/misc/tallwide.dmi'
 	density = FALSE
+	max_integrity = 20
 	brightness = 10
 	pixel_x = -10
 	pixel_y = -10

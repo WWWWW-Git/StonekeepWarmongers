@@ -74,7 +74,7 @@
 
 /obj/item/rogue/sandbagkit
 	name = "kit of sand bags"
-	desc = "Bags of sand meant to be built to cover your sorry face."
+	desc = "Bags of sand meant to be built to cover your sorry face. Put on ground and use it RIGHT while looking the way you want to deploy it!"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "sandbag"
 	dropshrink = 0.8
@@ -99,6 +99,10 @@
 		var/obj/structure/barricade/sandbags/rogue/sb = new(T)
 		sb.dir = user.dir
 		qdel(src)
+
+/obj/item/rogue/sandbagkit/MiddleClick(mob/user, params) // for the oldies
+	. = ..()
+	attack_right(user)
 
 /obj/structure/barricade/sandbags/rogue
 	name = "sand bags"
