@@ -98,7 +98,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	if(!message || message == "")
 		return
 
-	if(ic_blocked)
+	if(ic_blocked && SSticker.current_state != GAME_STATE_FINISHED) // to allow slang like 'lol' in OOC after game end
 		to_chat(src, "<span class='danger'>AAAAGH! MY HEAD HURTS FROM THE WORDS I TRIED TO UTTER!</span>")
 		adjustOrganLoss(ORGAN_SLOT_BRAIN, 40)
 		playsound_local(get_turf(src), 'sound/lobotomy.ogg', 60)
