@@ -156,6 +156,29 @@
 	for(var/i in shoppin.items)
 		new i(get_turf(src))
 
+/mob/living/carbon/human/proc/warfare_points()
+	set name = "GAIN SUPPORT POINTS"
+	set category = "LORD"
+	var/datum/game_mode/warmongers/C = SSticker.mode
+	to_chat(src, "<span class='info'>You call forward an airship from Enigma and you begin donating your blood plasme.</span>")
+	flash_fullscreen("redflash1")
+	emote("embed")
+	playsound(loc, 'sound/misc/sucking.ogg', 100, FALSE, -1)
+	if(do_after(src, 15 SECONDS, TRUE))
+		if(blood_volume <= BLOOD_VOLUME_BAD)
+			to_chat(src, "<span class='userdanger'>The airship sucks out all your blood plasme, AND YOU FUCKING DIE!!! HOLY SHIT!!!</span>")
+			death()
+		else
+			to_chat(src, "<span class='info'>The airship sucks out all your blood plasme, it leaves you weak... but hey, one point!</span>")
+	blood_volume = BLOOD_VOLUME_SURVIVE
+	flash_fullscreen("redflash3")
+	switch(warfare_faction)
+		if(RED_WARTEAM)
+			C.red_bonus++
+		if(BLUE_WARTEAM)
+			C.blu_bonus++
+	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
+
 ///////////////////////////// RED ///////////////////////////////////////
 
 /datum/job/roguetown/warmongers/red
@@ -183,7 +206,8 @@
 		/mob/living/carbon/human/proc/warfare_announce,
 		/mob/living/carbon/human/proc/warfare_command,
 		/mob/living/carbon/human/proc/warfare_inspire,
-		/mob/living/carbon/human/proc/warfare_shop
+		/mob/living/carbon/human/proc/warfare_shop,
+		/mob/living/carbon/human/proc/warfare_points
 	)
 	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		var/datum/game_mode/warmongers/C = SSticker.mode
@@ -682,7 +706,8 @@
 		/mob/living/carbon/human/proc/warfare_announce,
 		/mob/living/carbon/human/proc/warfare_command,
 		/mob/living/carbon/human/proc/warfare_inspire,
-		/mob/living/carbon/human/proc/warfare_shop
+		/mob/living/carbon/human/proc/warfare_shop,
+		/mob/living/carbon/human/proc/warfare_points
 	)
 	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		var/datum/game_mode/warmongers/C = SSticker.mode

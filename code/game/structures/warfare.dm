@@ -165,3 +165,103 @@
 	M.color = secondary
 	add_overlay(M)
 	GLOB.lordcolor -= src
+
+// Shopkeepers, back now with improvements!
+
+/obj/structure/shopkeep
+	name = "\improper Shopkeeper"
+	desc = "A merchant from the isle of Enigma, he has some things to sell. He is hanging from an airship by chain... he won't stick around for long."
+	icon = 'icons/roguetown/misc/tallstructure.dmi'
+	icon_state = "shop"
+	layer = 4.26
+	plane = GAME_PLANE_UPPER
+	pixel_x = 6
+	pixel_y = 9
+	anchored = TRUE
+	density = FALSE
+	var/leaving = FALSE
+	var/faction = BLUE_WARTEAM
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+
+/obj/structure/shopkeep/red
+	name = "Lé Shopekeep"
+	faction = RED_WARTEAM
+
+/obj/structure/shopkeep/proc/leave()
+	if(leaving)
+		return
+	leaving = TRUE
+	flick("shop_leave", src)
+	playsound(src, 'sound/misc/gate.ogg', 50, FALSE)
+	QDEL_IN(src, 35)
+
+/obj/structure/shopkeep/Initialize()
+	. = ..()
+	SSticker.warfare_barriers += src
+
+/obj/structure/shopkeep/examine(mob/user)
+	. = ..()
+	if(istype(get_area(src), /area/rogue/indoors))
+		. += "<span class='info'>There is a hole in the roof to allow the chains to get inside.</span>"
+
+/obj/structure/shopkeep/attack_hand(mob/user)
+	. = ..()
+	var/datum/game_mode/warmongers/C = SSticker.mode
+	var/mob/living/carbon/human/H
+	if(ishuman(user))
+		H = user
+		if(H.warfare_faction != faction)
+			say("OK! LETS GET TO BUSINE- wait a second... HEY YOU'RE NOT MEANT TO BE HERE!!!")
+			playsound(loc, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
+			return
+	if(leaving)
+		to_chat(user, "<span class='warning'>NO! NO! I FORGOT TO GET MY CHANGE! NOOOOOOOOO!</span>")
+		user.playsound_local(src, 'sound/misc/zizo.ogg', 50, FALSE)
+		return
+	playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
+
+	var/list/shippables = list()
+	for(var/s in subtypesof(/datum/warshippable))
+		var/datum/warshippable/WS = new s()
+		if(C.reinforcementwave >= WS.reinforcement)
+			shippables[WS.name] = WS
+
+	var/choice = input(user, "AIRSHIP ENIGMATIVITIES STRAIGHT FROM ENIGMA!", "BUY NOW!!!") as null|anything in shippables
+	var/datum/warshippable/shoppin = shippables[choice]
+	if(!shoppin)
+		return
+	if(!do_after(user, 5 SECONDS, TRUE, loc))
+		playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
+		return
+
+	switch(faction)
+		if(RED_WARTEAM)
+			if(C.red_bonus >= 1)
+				C.red_bonus--
+				playsound(loc, 'sound/misc/machinevomit.ogg', 100, FALSE, -1)
+			else
+				playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
+				say("INSUFFICIENT POINTS!!!")
+				return
+		if(BLUE_WARTEAM)
+			if(C.blu_bonus >= 1)
+				C.blu_bonus--
+				playsound(loc, 'sound/misc/machinevomit.ogg', 100, FALSE, -1)
+			else
+				playsound(loc, 'sound/misc/machineno.ogg', 100, FALSE, -1)
+				say("INSUFFICIENT POINTS!!!")
+				return
+	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
+
+	for(var/i in shoppin.items)
+		var/fuck = new i(get_turf(src))
+		if(istype(fuck, /obj))
+			var/obj/O = fuck
+			O.pixel_y = 200
+			animate(O, 1 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)
+			spawn(0.35 SECONDS)
+				playsound(loc, 'sound/misc/fall.ogg', 100, FALSE, -1)
+
+/obj/structure/warobjective/cfour
+	name = "\improper grand orb"
+	desc = "A relic of a former age. It hums with unstable magick."

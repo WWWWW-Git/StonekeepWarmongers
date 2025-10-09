@@ -984,12 +984,16 @@ SUBSYSTEM_DEF(ticker)
 			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/flint"
 			SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
+			to_chat(world, "<span class='notice'>This battle will soon get too heated for these shopkeepers!</span>")
 		if(3)
 			reinforcementinas += "/obj/item/bomb/smoke"
 			reinforcementinas += "/obj/item/bomb/fire"
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb"
+			for(var/obj/structure/shopkeep/SHP in world)
+				to_chat(world, "<span class='notice'>This battle is getting too heated for these shopkeepers! They're leaving!</span>")
+				SHP.leave()
 		if(4)
 			reinforcementinas += "/obj/item/bomb/fire"
 			reinforcementinas += "/obj/item/bomb/fire"
