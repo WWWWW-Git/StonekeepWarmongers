@@ -254,6 +254,8 @@
 	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
 
 	for(var/i in shoppin.items)
+		if(shoppin.items.len > 1)
+			sleep(rand(1,3))
 		var/fuck = new i(get_turf(src))
 		if(istype(fuck, /obj))
 			var/obj/O = fuck
