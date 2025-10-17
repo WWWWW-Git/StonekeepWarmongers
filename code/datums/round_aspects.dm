@@ -50,8 +50,8 @@
 	description = "Sadly, it's like old WARMONGERS all over again! Everyone is hungry and thirsty at the start of the round!"
 
 /datum/round_aspect/monkwarfare
-	name = "Monkers"
-	description = "Everyone on the battlefield is a natural in hand-to-hand combat."
+	name = "Warmonkers"
+	description = "Everyone on the battlefield is a natural in hand-to-hand combat. A monk, if you didn't get the joke."
 
 /datum/round_aspect/kicking
 	name = "Kicking Nuts"

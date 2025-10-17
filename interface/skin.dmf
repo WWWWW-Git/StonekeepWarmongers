@@ -1,38 +1,44 @@
 macro "default"
 	elem 
-		name = "CENTER+REP"
+		name = "Center+REP"
 		command = ".center"
 	elem 
-		name = "NORTHEAST+REP"
+		name = "Northeast+REP"
 		command = ".northeast"
 	elem 
-		name = "SOUTHEAST+REP"
+		name = "Southeast+REP"
 		command = ".southeast"
 	elem 
-		name = "SOUTHWEST+REP"
+		name = "Southwest+REP"
 		command = ".southwest"
 	elem 
-		name = "NORTHWEST+REP"
+		name = "Northwest+REP"
 		command = ".northwest"
 	elem 
-		name = "WEST+REP"
+		name = "West+REP"
 		command = ".west"
 	elem 
-		name = "NORTH+REP"
+		name = "CTRL+North"
+		command = ".ghostup"
+	elem 
+		name = "North+REP"
 		command = ".north"
 	elem 
-		name = "EAST+REP"
+		name = "East+REP"
 		command = ".east"
 	elem 
-		name = "SOUTH+REP"
+		name = "CTRL+South"
+		command = ".ghostdown"
+	elem 
+		name = "South+REP"
 		command = ".south"
+	elem 
+		name = "F1"
+		command = ".warcry"
 	elem 
 		name = "CTRL+F1"
 		command = ".options"
 	elem 
-		name = "F1"
-		command = ".warcry"
-	elem
 		name = "F2"
 		command = ".salute"
 	elem 
@@ -41,6 +47,7 @@ macro "default"
 	elem 
 		name = "SHIFT+F3"
 		command = ".screenshot"
+
 
 window "mainwindow"
 	elem "mainwindow"
@@ -141,10 +148,6 @@ window "outputwindow"
 		background-color = #2e2a1b
 		saved-params = "pos;size"
 		is-pane = true
-		outer-size = 658x549
-		outer-pos = 384,0
-		inner-pos = 9,38
-		screen-size = 1920x1020
 	elem "browseroutput"
 		type = BROWSER
 		pos = 0,0
@@ -196,11 +199,6 @@ window "statwindow"
 		image = 'interface\\bg.png'
 		image-mode = center
 		transparent-color = #000000
-		outer-size = 676x618
-		outer-pos = 384,0
-		inner-size = 658x549
-		inner-pos = 9,38
-		screen-size = 1920x1020
 	elem "stat"
 		type = INFO
 		pos = 0,0

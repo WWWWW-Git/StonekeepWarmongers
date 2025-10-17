@@ -198,7 +198,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 		if(turf_type == /turf/open/transparent/openspace)
 			var/turf/below = get_step_multiz(src, DOWN)
 			if(!below) //We are at the LOWEST z-level.
-				turf_type = /turf/open/floor/rogue/naturalstone
+				return
 			else
 				if(isclosedturf(below)) //must destroy bottom closed turfs to create a hole
 					var/turf/closed/C = below
@@ -225,7 +225,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	if(baseturfs == /turf/open/transparent/openspace)
 		var/turf/below = get_step_multiz(src, DOWN)
 		if(!below) //We are at the LOWEST z-level.
-			used_type = /turf/open/floor/rogue/naturalstone
+			return
 		else
 			if(isclosedturf(below)) //must destroy bottom closed turfs to create a hole
 				var/turf/closed/C = below
