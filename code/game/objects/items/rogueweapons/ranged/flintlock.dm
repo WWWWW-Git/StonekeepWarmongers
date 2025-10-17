@@ -62,30 +62,16 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attackby(obj/item/A, mob/user, params)
 	var/rt = ramtime
-	if(aspect_chosen(/datum/round_aspect/linefocus))
-		rt = 9
 	var/tt
 	tt = rt - (user.mind.get_skill_level(/datum/skill/combat/flintlocks) / 2.5)
+	if(aspect_chosen(/datum/round_aspect/linefocus))
+		tt += 3
 
 	var/mob/living/carbon/human/U
 	if(ishuman(user))
 		U = user
-	
-	for(var/mob/living/carbon/human/H in get_step(src, NORTH))
-		if(H.warfare_faction == U.warfare_faction)
-			tt = tt - 0.5
-
-	for(var/mob/living/carbon/human/H in get_step(src, SOUTH))
-		if(H.warfare_faction == U.warfare_faction)
-			tt = tt - 0.5
-
-	for(var/mob/living/carbon/human/H in get_step(src, EAST))
-		if(H.warfare_faction == U.warfare_faction)
-			tt = tt - 0.5
-
-	for(var/mob/living/carbon/human/H in get_step(src, WEST))
-		if(H.warfare_faction == U.warfare_faction)
-			tt = tt - 0.5
+		if(U.formation_check())
+			tt -= 0.6
 
 	if(tt < 0)
 		tt = 0.1
