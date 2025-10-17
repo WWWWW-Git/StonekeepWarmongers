@@ -109,6 +109,48 @@
 	if(aspect_chosen(/datum/round_aspect/halo))
 		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
 
+// ASLT
+
+/obj/structure/warobjective/assaultthrone
+	name = "throne of Heartfelt"
+	desc = "Do not let the enemy sit on this with your crown."
+	icon = 'icons/roguetown/misc/96x96.dmi'
+	icon_state = "throne"
+	density = FALSE
+	can_buckle = 1
+	pixel_x = -32
+	buckle_lying = FALSE
+	gametype = /datum/warmode/assault
+
+/obj/structure/warobjective/assaultthrone/post_buckle_mob(mob/living/M)
+	..()
+	density = TRUE
+	M.set_mob_offsets("bed_buckle", _x = 0, _y = 8)
+
+/obj/structure/warobjective/assaultthrone/post_unbuckle_mob(mob/living/M)
+	..()
+	density = FALSE
+	M.reset_offsets("bed_buckle")
+
+/obj/structure/warobjective/warthrone/Initialize()
+	..()
+	lordcolor(CLOTHING_RED,CLOTHING_YELLOW)
+
+/obj/structure/warobjective/warthrone/Destroy()
+	GLOB.lordcolor -= src
+	return ..()
+
+/obj/structure/warobjective/warthrone/lordcolor(primary,secondary)
+	if(!primary || !secondary)
+		return
+	var/mutable_appearance/M = mutable_appearance(icon, "throne_primary", -(layer+0.1))
+	M.color = primary
+	add_overlay(M)
+	M = mutable_appearance(icon, "throne_secondary", -(layer+0.1))
+	M.color = secondary
+	add_overlay(M)
+	GLOB.lordcolor -= src
+
 // LD
 
 /obj/structure/warobjective/warthrone
@@ -264,6 +306,6 @@
 			spawn(0.35 SECONDS)
 				playsound(loc, 'sound/misc/fall.ogg', 100, FALSE, -1)
 
-/obj/structure/warobjective/cfour
+/obj/structure/cfour
 	name = "\improper grand orb"
 	desc = "A relic of a former age. It hums with unstable magick."

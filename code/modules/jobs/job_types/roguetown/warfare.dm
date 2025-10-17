@@ -237,6 +237,8 @@
 
 /datum/outfit/job/roguetown/redking/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
+	var/datum/game_mode/warmongers/W = SSticker.mode
+
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/heartfelt
 	mask = /obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/colourable/oni
 	neck = /obj/item/clothing/neck/roguetown/gorget
@@ -250,7 +252,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander
 	cloak = /obj/item/clothing/cloak/heartfelt
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
-	if(SSmapping.config.map_name == "LD-Bloodfort")
+	if(istype(W.warmode, /datum/warmode/lords))
 		head = /obj/item/clothing/head/roguetown/warmongers/crownred
 	if(!(findtext(H.real_name, " of ") || findtext(H.real_name, " the ")))
 		H.change_name("[H.real_name] [getlordtitle()]")
@@ -737,6 +739,8 @@
 
 /datum/outfit/job/roguetown/bluking/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
+	var/datum/game_mode/warmongers/W = SSticker.mode
+
 	H.patron = GLOB.patronlist[/datum/patron/divine/psydon]
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light
 	neck = /obj/item/clothing/neck/roguetown/gorget
@@ -749,7 +753,7 @@
 	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/rogueweapon/sword/sabre/dec/alt
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
-	if(SSmapping.config.map_name == "LD-Bloodfort")
+	if(istype(W.warmode, /datum/warmode/lords))
 		cloak = /obj/item/clothing/cloak/half
 		head = /obj/item/clothing/head/roguetown/warmongers/crownblu
 	else
