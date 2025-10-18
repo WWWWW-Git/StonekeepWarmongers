@@ -55,6 +55,18 @@
 	if(HAS_TRAIT(affected, TRAIT_CRITICAL_WEAKNESS))
 		affected.death()
 
+/datum/wound/artery/neck/on_life()
+	. = ..()
+	if(!iscarbon(owner))
+		return
+	var/mob/living/carbon/carbon_owner = owner
+	if(!carbon_owner.stat && prob(10))
+		carbon_owner.Jitter(10)
+		if(prob(50))
+			playsound(carbon_owner, pick('sound/vo/throat.ogg','sound/vo/throat2.ogg','sound/vo/throat3.ogg'), 100, FALSE)
+		else
+			carbon_owner.emote("deathgurgle")
+
 /datum/wound/artery/neck/on_mob_loss(mob/living/affected)
 	. = ..()
 	REMOVE_TRAIT(affected, TRAIT_GARGLE_SPEECH, "[type]")

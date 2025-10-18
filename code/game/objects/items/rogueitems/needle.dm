@@ -1,6 +1,6 @@
 /obj/item/needle
 	name = "needle"
-	desc = "A firm needle affixed with a simple thread, Pestra's most favored tool."
+	desc = "A firm needle affixed with a simple thread."
 	icon_state = "needle"
 	icon = 'icons/roguetown/items/misc.dmi'
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
@@ -82,9 +82,6 @@
 			if(user.mind.get_skill_level(/datum/skill/misc/sewing) < I.required_repair_skill)
 				to_chat(user, "<span class='warning'>I don't know how to repair this...</span>")
 				return
-			if(!I.ontable())
-				to_chat(user, "<span class='warning'>I should put this on a table first.</span>")
-				return
 			playsound(loc, 'sound/foley/sewflesh.ogg', 100, TRUE, -2)
 			var/sewtime = 70
 			if(user.mind)
@@ -156,7 +153,7 @@
 			target_wound.sew_wound()
 			target_wound.heal_wound(20)
 			if(affecting)
-				affecting.heal_damage(20)
+				affecting.heal_damage(20, 20)
 
 			if(patient == doctor)
 				doctor.visible_message("<span class='notice'>[doctor] sews \a [target_wound.name] on [doctor.p_them()]self.</span>", "<span class='notice'>I stitch \a [target_wound.name] on my [affecting].</span>")
@@ -183,6 +180,4 @@
 	anvilrepair = null
 
 /obj/item/needle/blessed
-	name = "needle"
-	desc = ""
 	infinite = TRUE

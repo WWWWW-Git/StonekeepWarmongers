@@ -91,3 +91,7 @@
 		if(SSticker.deaths >= stalemate_kills)
 			C.do_war_end()
 			STOP_PROCESSING(SSprocessing, src)
+
+/datum/warmode/assault
+	name = "Assault"
+	shorthand = "ASLT"
