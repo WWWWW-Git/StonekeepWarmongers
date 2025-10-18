@@ -75,7 +75,8 @@
 	name = "powderflask"
 	desc = "A leather pouch containing blackpowder."
 	icon_state = "powderflask"
-	icon = 'icons/roguetown/weapons/64.dmi'
+	slot_flags = ITEM_SLOT_NECK
+	icon = 'icons/roguetown/items/misc.dmi'
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/Initialize()
 	. = ..()
@@ -321,6 +322,7 @@
 	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	cocked = FALSE
 	rammed = FALSE
+	has_blackpowder = FALSE
 	sleep(click_delay)
 	..()
 
@@ -346,10 +348,6 @@
 	ARE.Turn(rand(-350,350))
 	animate(S, time = 50, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
 	QDEL_IN(S, 50)
-
-	new /obj/effect/particle_effect/smoke(get_turf(user))
-	SSticker.muskshots++
-	new /obj/effect/particle_effect/smoke/transparent(get_turf(user))
 
 /obj/item/ammo_box/magazine/internal/shot/musk
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet

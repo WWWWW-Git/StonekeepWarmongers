@@ -424,5 +424,3 @@
 
 	var/turf/turfa = get_ranged_target_turf(user, turn(user.dir, 180), 1)
 	user.throw_at(turfa, 1, 1, null, FALSE)
-
-	new /obj/effect/particle_effect/smoke(get_turf(user))
