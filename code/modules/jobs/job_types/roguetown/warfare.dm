@@ -241,7 +241,7 @@
 
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/heartfelt
 	mask = /obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/colourable/oni
-	neck = /obj/item/clothing/neck/roguetown/gorget
+	neck = /obj/item/rogue/blackpowderflask
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/quiver/bullets
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
@@ -321,11 +321,11 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/tatami
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	beltl = /obj/item/rogueweapon/huntingknife/idagger/steel/tanto
+	beltl = /obj/item/rogueweapon/huntingknife/bayonet
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	backr = GetMainGunForWarfareHeartfelt()
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	neck = /obj/item/rogue/blackpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/jingasa
 	if(prob(70))
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
@@ -401,7 +401,7 @@
 
 /datum/outfit/job/roguetown/redsapper/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	neck = /obj/item/rogue/blackpowderflask
 	pants = /obj/item/clothing/under/roguetown/trou/tobi
 	cloak = /obj/item/clothing/cloak/jinbaori/reddy
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare
@@ -543,7 +543,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife/idagger/steel/tanto
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	neck = /obj/item/rogue/blackpowderflask
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/heart
 	head = /obj/item/clothing/head/roguetown/tengai/gasa
 	if(prob(70))
@@ -591,7 +591,7 @@
 	else
 		beltr = GetSidearmForWarfare()
 	head = /obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	neck = /obj/item/rogue/blackpowderflask
 	backr = /obj/item/quiver/ironbullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	if(prob(50))
@@ -743,7 +743,7 @@
 
 	H.patron = GLOB.patronlist[/datum/patron/divine/psydon]
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light
-	neck = /obj/item/clothing/neck/roguetown/gorget
+	neck = 	/obj/item/rogue/blackpowderflask
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/quiver/bullets
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
@@ -826,11 +826,11 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
+	beltl = /obj/item/rogueweapon/huntingknife/bayonet
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	backr = GetMainGunForWarfareGrenzelhoft()
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	neck = /obj/item/rogue/blackpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/kettle/pickl
 	if(prob(70))
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
@@ -916,7 +916,7 @@
 	beltr = /obj/item/quiver/bullets
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 	head = /obj/item/clothing/head/roguetown/helmet/hussarhelm
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	neck = /obj/item/rogue/blackpowderflask
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/hussar
 	backr = /obj/item/rogueweapon/halberd
 	if(H.mind)
@@ -966,7 +966,7 @@
 		beltl = /obj/item/rogueweapon/woodcut/steel
 	backr = /obj/item/quiver/woodbullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	neck = /obj/item/rogue/blackpowderflask
 	backl = /obj/item/storage/backpack/rogue/backpack
 	head = /obj/item/clothing/head/roguetown/helmet/kettle/steelhelm
 	mask = /obj/item/clothing/mask/rogue/platemask
@@ -1120,7 +1120,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	neck = /obj/item/rogue/blackpowderflask
 	mask = /obj/item/clothing/mask/rogue/snipermask
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz
 	if(H.mind)
@@ -1167,7 +1167,7 @@
 		beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed
 	else
 		beltr = GetSidearmForWarfare()
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
+	neck = /obj/item/rogue/blackpowderflask
 	backr = /obj/item/quiver/ironbullets
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	head = /obj/item/clothing/head/roguetown/offitser

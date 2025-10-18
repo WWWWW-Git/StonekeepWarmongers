@@ -316,3 +316,13 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 10
 	wdefense = 5
+
+//..............................Bayonet.......................
+/obj/item/rogueweapon/huntingknife/bayonet
+	possible_item_intents = list(/datum/intent/dagger/thrust)
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH
+	name = "bayonet"
+	desc = "A triangular blade designed to be fixed to a Barksteel. Can be used on its own in a pinch for cutting underbrush, cooking meat, and stabbing the foe in the throat."
+	force = 12
+	icon_state = "bayonet"
+	smeltresult = null
