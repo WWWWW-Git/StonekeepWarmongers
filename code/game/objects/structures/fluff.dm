@@ -312,11 +312,22 @@
 	w_class = WEIGHT_CLASS_BULKY
 	drag_slowdown = 2
 
+/obj/structure/fluff/explodabarrel/Initialize()
+	. = ..()
+	if(prob(1))
+		icon = 'icons/shamelessly_stolen.dmi'
+		icon_state = "one_b"
+
 /obj/structure/fluff/explodabarrel/onkick(mob/user)
 	. = ..()
 	var/turf/target = get_ranged_target_turf(src, get_dir(user, src), 5)
 	throw_at(target, 5, 2, user, FALSE)
 	visible_message("<span class='notice'>[src] rolls towards \the [target]!</span>")
+	playsound(src, 'sound/combat/hits/kick/stomp.ogg', 100, TRUE, -1)
+
+	var/matrix/M = matrix(transform) // So you can turn it back around, I think. Idk.
+	M.Turn(90)
+	transform = M
 
 /obj/structure/fluff/explodabarrel/bullet_act(obj/projectile/P)
 	boom()
