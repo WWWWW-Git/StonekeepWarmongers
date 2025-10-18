@@ -81,6 +81,10 @@
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 
+/obj/item/rogue/sandbagkit/examine(mob/user)
+	. = ..()
+	. += "<span class='tutorial'>Use middleclick or rightclick to deploy the sandbags in the direction you're facing on the tile they're placed on.</span>"
+
 /obj/item/rogue/sandbagkit/attack_right(mob/user)
 	. = ..()
 	var/turf/T = get_turf(src)

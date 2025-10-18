@@ -1,6 +1,6 @@
-/obj/item/cranker
+/obj/item/rogue/cranker
 	name = "CRANKeR"
-	desc = "A strange skull-shaped medical device used to grind up bodyparts to make all sorts of things."
+	desc = "A strange skull-shaped medical device used to grind up bodyparts and teeth to make all sorts of things."
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "cranker"
 	w_class = WEIGHT_CLASS_SMALL
@@ -9,11 +9,15 @@
 	var/datum/reagent/chosen_potion = /datum/reagent/medicine/healthpot
 	var/obj/item/reagent_containers/glass/bottle/rogue/pot // where to put the health potion
 
-/obj/item/cranker/ShiftMiddleClick(mob/user, params)
+/obj/item/rogue/cranker/examine(mob/user)
 	. = ..()
-	// todo: tutorial for this bitch. doo the same thing with muskets to replace the HELP verb
+	if(pot)
+		. += "<span class='tutorial'>Use middleclick to unscrew the bottle.</span>"
+	if(bp)
+		. += "<span class='tutorial'>Use it in-hand to begin grinding.</span>"
+	. += "<span class='tutorial'>Use rightclick to change what you'll be cooking.</span>"
 
-/obj/item/cranker/MiddleClick(mob/user, params)
+/obj/item/rogue/cranker/MiddleClick(mob/user, params)
 	. = ..()
 	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)
 		to_chat(user, "<span class='warning'>I don't know how to use this.</span>")
@@ -28,7 +32,7 @@
 		pot = null
 		return
 
-/obj/item/cranker/attack_right(mob/user)
+/obj/item/rogue/cranker/attack_right(mob/user)
 	. = ..()
 	var/chosen = input(user, "What are we cooking today?", "WARMONGERS") as null|anything in list("HEALTH","DUST OF MOON","OZ","LOVE")
 	if(!chosen)
@@ -47,7 +51,7 @@
 			chosen_potion = /datum/reagent/druqks
 			to_chat(user, "<span class='info'>Love defeats all hardship.</span>")
 
-/obj/item/cranker/attack_self(mob/living/carbon/human/user)
+/obj/item/rogue/cranker/attack_self(mob/living/carbon/human/user)
 	. = ..()
 	var/datum/game_mode/warmongers/C = SSticker.mode
 	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)
@@ -72,7 +76,7 @@
 		if(BLUE_WARTEAM)
 			C.blu_bonus++
 	
-/obj/item/cranker/attackby(obj/item/I, mob/user, params)
+/obj/item/rogue/cranker/attackby(obj/item/I, mob/user, params)
 	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)
 		to_chat(user, "<span class='warning'>I don't know how to use this.</span>")
 		return ..()

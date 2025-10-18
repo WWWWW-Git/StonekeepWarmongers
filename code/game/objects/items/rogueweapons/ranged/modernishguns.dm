@@ -27,6 +27,7 @@
 	pin = /obj/item/firing_pin
 	force = 10
 	cartridge_wording = "ball"
+	droprot = TRUE
 	recoil = 4
 	load_sound = 'sound/foley/nockarrow.ogg'
 	fire_sound = list('sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg')
@@ -56,6 +57,7 @@
 	. = ..()
 	if(chambered)
 		. += "<span class='info'>It is loaded.</span>"
+	. += "<span class='tutorial'>Use rightclick to cycle the lever. You need to do it twice for it to load a bullet.</span>"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/chamber_round(spin_cylinder)
 	return
@@ -63,7 +65,7 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/proc/reloadact(mob/user)
 	if(chambered)
 		return
-	if(!do_after(user, 0.5 SECONDS, TRUE, src))
+	if(!move_after(user, 0.5 SECONDS, TRUE, src))
 		return
 	var/obj/item/ammo_casing/caseless/rogue/bullet/B = magazine.get_round(TRUE)
 	if(B)
@@ -174,6 +176,7 @@
 	can_parry = TRUE
 	pin = /obj/item/firing_pin
 	force = 10
+	droprot = TRUE
 	cartridge_wording = "ball"
 	recoil = 4
 	load_sound = 'sound/foley/nockarrow.ogg'
@@ -191,6 +194,7 @@
 	. = ..()
 	if(chambered)
 		. += "<span class='info'>It is loaded.</span>"
+	. += "<span class='tutorial'>Use rightclick to pull the clicker down.</span>"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot/attack_self(mob/living/user)
 	return
@@ -201,7 +205,7 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot/proc/reloadact(mob/user)
 	if(chambered)
 		return
-	if(!do_after(user, 1.5 SECONDS, TRUE, src))
+	if(!move_after(user, 1.5 SECONDS, TRUE, src))
 		return
 	var/obj/item/ammo_casing/caseless/rogue/bullet/B = magazine.get_round(TRUE)
 	if(B)
@@ -375,8 +379,9 @@
 	possible_item_intents = list(INTENT_GENERIC)
 	gripped_intents = list(/datum/intent/shoot/musket/rifle, /datum/intent/shoot/musket/arc, /datum/intent/mace/smash/wood)
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = ITEM_SLOT_BACK
-	max_grenades = 1
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_BACK
+	droprot = TRUE
+	max_grenades = 3
 
 /obj/item/gun/grenadelauncher/granata/getonmobprop(tag)
 	. = ..()
@@ -393,10 +398,11 @@
 	. = ..()
 	if(grenades.len)
 		. = "It is loaded."
+	. += "<span class='tutorial'>It can hold three bombs, note the indicators on the sprite to see how much bombs are left.</span>"
 
 /obj/item/gun/grenadelauncher/granata/update_icon()
 	if(grenades.len)
-		icon_state = "granata_loaded"
+		icon_state = "granata_[grenades.len]"
 	else
 		icon_state = "granata"
 
@@ -424,3 +430,5 @@
 
 	var/turf/turfa = get_ranged_target_turf(user, turn(user.dir, 180), 1)
 	user.throw_at(turfa, 1, 1, null, FALSE)
+	
+	new /obj/effect/particle_effect/smoke(get_turf(user))

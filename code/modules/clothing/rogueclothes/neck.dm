@@ -118,7 +118,46 @@
 	blocksound = PLATEHIT
 	smeltresult = /obj/item/ingot/iron
 	anvilrepair = /datum/skill/craft/armorsmithing
+	var/obj/item/rogue/barkpowderflask/flask
 
+/obj/item/clothing/neck/roguetown/gorget/flasked/Initialize()
+	. = ..()
+	var/obj/item/rogue/barkpowderflask/F = new(src)
+	flask = F
+	update_icon()
+
+/obj/item/clothing/neck/roguetown/gorget/examine(mob/user)
+	. = ..()
+	if(flask)
+		. += "<span class='notice'>It has a <b>flask of barkpowder</b> tied around it.</span>"
+		. += "<span class='tutorial'>Use rightclick to remove it.</span>"
+
+/obj/item/clothing/neck/roguetown/gorget/update_icon()
+	if(flask)
+		icon_state = "[initial(icon_state)]_flask"
+	else
+		icon_state = initial(icon_state)
+
+/obj/item/clothing/neck/roguetown/gorget/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/rogue/barkpowderflask))
+		var/obj/item/rogue/barkpowderflask/F = I
+		to_chat(user, "<span class='info'>You tie \the [F] around \the [src] with a piece of string.</span>")
+		F.forceMove(src)
+		flask = F
+		user.update_a_intents()
+		update_icon()
+	return ..()
+
+/obj/item/clothing/neck/roguetown/gorget/attack_right(mob/user)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(flask)
+			H.put_in_hands(flask)
+			flask = null
+			to_chat(H, "<span class='info'>I remove the flask from \the [src].</span>")
+			update_icon()
+			playsound(get_turf(H), 'sound/foley/struggle.ogg', 100, FALSE, -1)
 
 /obj/item/clothing/neck/roguetown/psicross
 	name = "psycross"

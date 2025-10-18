@@ -22,11 +22,12 @@
 	var/rammed = FALSE
 	var/bayonetable = FALSE
 	var/has_bayonet = FALSE
-	var/has_blackpowder = FALSE
+	var/has_barkpowder = FALSE
 	var/click_delay = 2
 	var/obj/item/rogue/ramrod/rod
 	bigboy = TRUE
 	can_parry = TRUE
+	droprot = TRUE
 	pin = /obj/item/firing_pin
 	force = 10
 	cartridge_wording = "ball"
@@ -51,10 +52,16 @@
 			if("onback")
 				return list("shrink" = 0.5,"sx" = -5,"sy" = 2,"nx" = 5,"ny" = 2,"wx" = 3,"wy" = 3,"ex" = -3,"ey" = 3,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 90,"eturn" = -90,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/examine(mob/user)
+	. = ..()
+	. += "<span class='tutorial'>Use shift+middleclick to cock the weapon.</span>"
+	. += "<span class='tutorial'>Use middleclick to remove or put back the ramrod.</span>"
+	if(has_bayonet)
+		. += "<span class='tutorial'>Use rightclick to remove the bayonet.</span>"
+
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/heart
 	icon_state = "barotrauma1"
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/heavy/strike)
-
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz
 	icon_state = "ironbarkmarksman"
@@ -71,9 +78,9 @@
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "ramrod"
 
-/obj/item/rogue/blackpowderflask
+/obj/item/rogue/barkpowderflask
 	name = "powderflask"
-	desc = "A leather pouch containing blackpowder."
+	desc = "A leather pouch containing barkpowder."
 	icon_state = "powderflask"
 	slot_flags = ITEM_SLOT_NECK
 	icon = 'icons/roguetown/items/misc.dmi'
@@ -93,22 +100,8 @@
 	var/mob/living/carbon/human/U
 	if(ishuman(user))
 		U = user
-
-	for(var/mob/living/carbon/human/H in get_step(src, NORTH))
-		if(H.warfare_faction == U.warfare_faction)
-			tt = tt - 0.5
-
-	for(var/mob/living/carbon/human/H in get_step(src, SOUTH))
-		if(H.warfare_faction == U.warfare_faction)
-			tt = tt - 0.5
-
-	for(var/mob/living/carbon/human/H in get_step(src, EAST))
-		if(H.warfare_faction == U.warfare_faction)
-			tt = tt - 0.5
-
-	for(var/mob/living/carbon/human/H in get_step(src, WEST))
-		if(H.warfare_faction == U.warfare_faction)
-			tt = tt - 0.5
+		if(U.formation_check())
+			tt -= 0.6
 
 	if(tt < 0)
 		tt = 0.1
@@ -126,15 +119,15 @@
 				if(do_after(user, tt SECONDS, TRUE, src))
 					to_chat(user, "<span class='info'>I ram \the [src].</span>")
 					rammed = TRUE
-	if(istype(A, /obj/item/rogue/blackpowderflask))
+	if(istype(A, /obj/item/rogue/barkpowderflask))
 		if(!user.is_holding(src))
-			to_chat(user, "<span class='warning'>I need to hold \the [src] to add blackpowder!</span>")
+			to_chat(user, "<span class='warning'>I need to hold \the [src] to add barkpowder!</span>")
 			return
-		if(has_blackpowder == FALSE)
+		if(has_barkpowder == FALSE)
 			playsound(src.loc, 'sound/foley/equip/rummaging-01.ogg', 100, FALSE, -3)
 			if(do_after(user, tt SECONDS, TRUE, src))
-				to_chat(user, "<span class='info'>I add blackpowder to \the [src].</span>")
-				has_blackpowder = TRUE
+				to_chat(user, "<span class='info'>I add barkpowder to \the [src].</span>")
+				has_barkpowder = TRUE
 	else if(istype(A, /obj/item/rogueweapon/huntingknife/bayonet))
 		if(bayonetable == FALSE)
 			to_chat(user, "<span class='warning'>I can't attach a bayonet to this weapon!</span>")
@@ -164,14 +157,15 @@
 		if(rod)
 			H.put_in_hands(rod)
 			rod = null
-			to_chat(user, "<span class='info'>I remove the ramrod from \the [src].</span>")
+			to_chat(H, "<span class='info'>I remove the ramrod from \the [src].</span>")
 			playsound(src.loc, 'sound/foley/struggle.ogg', 100, FALSE, -1)
 		else
 			if(istype(H.get_active_held_item(), /obj/item/rogue/ramrod))
 				var/obj/item/rogue/ramrod/rrod = H.get_active_held_item()
 				rrod.forceMove(src)
 				rod = rrod
-				to_chat(user, "<span class='info'>I put \the [rrod] into \the [src].</span>")
+				H.update_a_intents()
+				to_chat(H, "<span class='info'>I put \the [rrod] into \the [src].</span>")
 				playsound(src.loc, 'sound/combat/ramrod_pickup.ogg', 100, FALSE, -1)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
@@ -288,7 +282,7 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(user.client)
-		if(has_blackpowder == FALSE)
+		if(has_barkpowder == FALSE)
 			playsound(src.loc, 'sound/items/match_fail.ogg', 100, FALSE)
 			to_chat(user, "<span class='info'>I dry fire \the [src]!</span>")
 			cocked = FALSE
@@ -322,7 +316,7 @@
 	playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
 	cocked = FALSE
 	rammed = FALSE
-	has_blackpowder = FALSE
+	has_barkpowder = FALSE
 	sleep(click_delay)
 	..()
 
@@ -348,6 +342,7 @@
 	ARE.Turn(rand(-350,350))
 	animate(S, time = 50, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
 	QDEL_IN(S, 50)
+	SSticker.muskshots++
 
 /obj/item/ammo_box/magazine/internal/shot/musk
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
