@@ -915,6 +915,26 @@
 					C.grenzels |= client
 	testing(w_faction)
 
+/mob/living/carbon/human/proc/formation_check()
+	var/formation_check = FALSE
+	for(var/mob/living/carbon/human/H in get_step(src, NORTH))
+		if(H.warfare_faction == warfare_faction)
+			formation_check = TRUE
+			break
+	for(var/mob/living/carbon/human/H in get_step(src, SOUTH))
+		if(H.warfare_faction == warfare_faction)
+			formation_check = TRUE
+			break
+	for(var/mob/living/carbon/human/H in get_step(src, EAST))
+		if(H.warfare_faction == warfare_faction)
+			formation_check = TRUE
+			break
+	for(var/mob/living/carbon/human/H in get_step(src, WEST))
+		if(H.warfare_faction == warfare_faction)
+			formation_check = TRUE
+			break
+	return formation_check
+
 /mob/living/carbon/human/proc/fireman_carry(mob/living/carbon/target)
 	var/carrydelay = 50 //if you have latex you are faster at grabbing
 

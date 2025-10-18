@@ -67,7 +67,7 @@
 			var/mob/living/carbon/human/H = user
 			if(H.warfare_faction != src.warfare_faction)
 				. += "<span class='userdanger'>THEY'RE THE ENEMY! KILL THEM!</span>"
-			else if(HAS_TRAIT(H, TRAIT_NOBLE))
+			else if(HAS_TRAIT(src, TRAIT_NOBLE))
 				. += "<span class='notice'>Our Lord! Protect him!</span>"
 
 	var/list/obscured = check_obscured_slots()

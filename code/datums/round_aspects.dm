@@ -50,8 +50,8 @@
 	description = "Sadly, it's like old WARMONGERS all over again! Everyone is hungry and thirsty at the start of the round!"
 
 /datum/round_aspect/monkwarfare
-	name = "Monkers"
-	description = "Everyone on the battlefield is a natural in hand-to-hand combat."
+	name = "Warmonkers"
+	description = "Everyone on the battlefield is a natural in hand-to-hand combat. A monk, if you didn't get the joke."
 
 /datum/round_aspect/kicking
 	name = "Kicking Nuts"
@@ -68,8 +68,8 @@
 
 /datum/round_aspect/supplypoints/apply()
 	var/datum/game_mode/warmongers/W = SSticker.mode
-	W.blu_bonus = 5
-	W.red_bonus = 5
+	W.blu_bonus = 10
+	W.red_bonus = 10
 
 /datum/round_aspect/superiorbreeds
 	name = "The Superior Breed"

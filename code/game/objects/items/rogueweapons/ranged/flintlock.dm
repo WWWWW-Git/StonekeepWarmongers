@@ -84,10 +84,10 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/attackby(obj/item/A, mob/user, params)
 	var/rt = ramtime
-	if(aspect_chosen(/datum/round_aspect/linefocus))
-		rt = 9
 	var/tt
 	tt = rt - (user.mind.get_skill_level(/datum/skill/combat/flintlocks) / 2.5)
+	if(aspect_chosen(/datum/round_aspect/linefocus))
+		tt += 3
 
 	var/mob/living/carbon/human/U
 	if(ishuman(user))

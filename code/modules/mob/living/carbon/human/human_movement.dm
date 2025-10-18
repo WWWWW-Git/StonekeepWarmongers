@@ -57,6 +57,11 @@
 		if(!has_gravity(loc))
 			return
 
+		if(formation_check())
+			apply_status_effect(/datum/status_effect/buff/formation)
+		else
+			remove_status_effect(/datum/status_effect/buff/formation)
+
 		if(wear_armor)
 			if(mobility_flags & MOBILITY_STAND)
 				var/obj/item/clothing/C = wear_armor

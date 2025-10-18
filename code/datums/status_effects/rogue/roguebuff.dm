@@ -283,6 +283,21 @@
 	owner.status_flags &= ~GODMODE
 	to_chat(owner, "<span class='info'>Your moment of spawn protection invulnerability has ended.</span>")
 
+/atom/movable/screen/alert/status_effect/buff/formation
+	name = "In Formation"
+	desc = "<span class='nicegreen'>I'm in formation. So synchronized! I'm in awe, I can reload barksteels faster.</span>"
+	icon_state = "formation"
+
+/datum/status_effect/buff/formation
+	id = "formation"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/formation
+
+/datum/status_effect/buff/formation/on_apply()
+	if(prob(1))
+		to_chat(owner, "<span class='info'>ok ladies now lets get in formation!</span>")
+		owner.playsound_local(src, 'sound/misc/formation.ogg', 100)
+	return ..()
+
 //--------- Start of Warmongers Ring Buffs
 
 /datum/status_effect/buff/warmongers

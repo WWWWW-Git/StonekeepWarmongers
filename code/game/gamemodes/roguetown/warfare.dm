@@ -13,11 +13,11 @@
 
 	var/mob/redlord
 	var/obj/item/clothing/head/roguetown/warmongers/crownred/redcrown
-	var/red_bonus = 2 // reinforcement points
+	var/red_bonus = 5 // reinforcement points
 
 	var/mob/blulord
 	var/obj/item/clothing/head/roguetown/warmongers/crownblu/blucrown
-	var/blu_bonus = 2 // reinforcement points
+	var/blu_bonus = 5 // reinforcement points
 
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
