@@ -476,7 +476,17 @@
 	. = ..()
 	SSticker.warfare_barriers += src
 
-/*
+/obj/structure/warfarebarrier/CanPass(atom/movable/mover, turf/target)
+	..()
+	return 0
+
+/obj/structure/warfarebarrier/CheckExit(atom/movable/mover as mob|obj, turf/target) // You're stuck, bitch.
+	..()
+	return 0
+
+/obj/structure/warfarebarrier/red
+	icon_state = "shield-red"
+
 /obj/structure/teambarrrier // allows only people of defined team past
 	name = "barrier of better fairness"
 	desc = "You're not meant to see this."
@@ -538,15 +548,3 @@
 	if(isobj(mover)) // i have no idea at this point
 		return 1
 	return 0
-*/
-
-/obj/structure/warfarebarrier/CanPass(atom/movable/mover, turf/target)
-	..()
-	return 0
-
-/obj/structure/warfarebarrier/CheckExit(atom/movable/mover as mob|obj, turf/target) // You're stuck, bitch.
-	..()
-	return 0
-
-/obj/structure/warfarebarrier/red
-	icon_state = "shield-red"
