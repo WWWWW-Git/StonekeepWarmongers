@@ -487,7 +487,7 @@
 /obj/structure/warfarebarrier/red
 	icon_state = "shield-red"
 
-/obj/structure/teambarrrier // allows only people of defined team past
+/obj/structure/teambarrier // allows only people of defined team past
 	name = "barrier of better fairness"
 	desc = "You're not meant to see this."
 	icon = 'icons/effects/effects.dmi'
@@ -500,15 +500,15 @@
 	CanAtmosPass = ATMOS_PASS_DENSITY
 	var/team
 
-/obj/structure/teambarrrier/red
+/obj/structure/teambarrier/red
 	team = "red"
 	icon_state = "impact_laser"
 	
-/obj/structure/teambarrrier/blue
+/obj/structure/teambarrier/blue
 	team = "blue"
 	icon_state = "impact_laser_blue"
 
-/obj/structure/teambarrrier/Initialize()
+/obj/structure/teambarrier/Initialize()
 	. = ..()
 	invisibility = INVISIBILITY_MAXIMUM
 	switch(team)
@@ -517,7 +517,7 @@
 		if("blue")
 			team = BLUE_WARTEAM
 
-/obj/structure/teambarrrier/CanPass(atom/movable/mover, turf/target)
+/obj/structure/teambarrier/CanPass(atom/movable/mover, turf/target)
 	..()
 	if(ishuman(mover))
 		var/mob/living/carbon/human/H = mover
@@ -533,7 +533,7 @@
 		return 1
 	return 0
 
-/obj/structure/teambarrrier/CheckExit(atom/movable/mover as mob|obj)
+/obj/structure/teambarrier/CheckExit(atom/movable/mover as mob|obj)
 	..()
 	if(ishuman(mover))
 		var/mob/living/carbon/human/H = mover
