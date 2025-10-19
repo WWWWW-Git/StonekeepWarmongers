@@ -20,13 +20,13 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	name = "indoors rt"
 	icon_state = "indoors"
 	ambientrain = RAIN_IN
-	ambientsounds = AMB_WARFARE
-	ambientnight = AMB_WARFARE
+	ambientsounds = AMB_TOWNNIGHT
+	ambientnight = AMB_TOWNNIGHT
 	spookysounds = SPOOKY_GEN
 	spookynight = SPOOKY_GEN
-	droning_sound = 'sound/music/dreadfulstench.ogg'
-	droning_sound_dusk = 'sound/music/dreadfulstench.ogg'
-	droning_sound_night = 'sound/music/dreadfulstench.ogg'
+	droning_sound = 'sound/music/area/field.ogg'
+	droning_sound_dusk = 'sound/music/area/field.ogg'
+	droning_sound_night = 'sound/music/area/field.ogg'
 	plane = INDOOR_PLANE
 	converted_type = /area/rogue/outdoors
 
@@ -49,13 +49,13 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	outdoors = TRUE
 	ambientrain = RAIN_OUT
 //	ambientsounds = list('sound/ambience/wamb.ogg')
-	ambientsounds = AMB_WARFARE
-	ambientnight = AMB_WARFARE
+	ambientsounds = AMB_TOWNNIGHT
+	ambientnight = AMB_TOWNNIGHT
 	spookysounds = SPOOKY_CROWS
 	spookynight = SPOOKY_GEN
-	droning_sound = 'sound/music/dreadfulstench.ogg'
-	droning_sound_dusk = 'sound/music/dreadfulstench.ogg'
-	droning_sound_night = 'sound/music/dreadfulstench.ogg'
+	droning_sound = 'sound/music/area/field.ogg'
+	droning_sound_dusk = 'sound/music/area/field.ogg'
+	droning_sound_night = 'sound/music/area/field.ogg'
 	converted_type = /area/rogue/indoors/shelter
 
 /area/rogue/indoors/shelter
@@ -357,14 +357,14 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 /area/rogue/indoors/town
 	name = "indoors"
 	icon_state = "blueold"
-	droning_sound = 'sound/music/dreadfulstench.ogg'
-	droning_sound_dusk = 'sound/music/dreadfulstench.ogg'
-	droning_sound_night = 'sound/music/dreadfulstench.ogg'
+	droning_sound = 'sound/music/area/field.ogg'
+	droning_sound_dusk = 'sound/music/area/field.ogg'
+	droning_sound_night = 'sound/music/area/field.ogg'
 	converted_type = /area/rogue/outdoors/exposed/town
 
 /area/rogue/outdoors/exposed/town
 	icon_state = "town"
-	droning_sound = 'sound/music/dreadfulstench.ogg'
+	droning_sound = 'sound/music/area/field.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
 

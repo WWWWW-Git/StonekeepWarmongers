@@ -46,7 +46,7 @@
 "gm" = (/obj/machinery/anvil,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "gt" = (/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "gz" = (/obj/item/roguebin,/turf/open/floor/rogue/cobble,/area/rogue/outdoors)
-"gA" = (/obj/structure/winch{redstone_id = "thronegate"; gid = "innergate1"; dir = 8},/turf/open/floor/rogue/tile/masonic/single,/area/rogue/indoors/town)
+"gA" = (/obj/structure/winch{redstone_id = "thronegate"; gid = "thronegate"; dir = 8},/turf/open/floor/rogue/tile/masonic/single,/area/rogue/indoors/town)
 "gM" = (/obj/structure/stairs/stone,/turf/open/floor/rogue/cobble,/area/rogue/indoors/town)
 "gT" = (/obj/structure/fluff/walldeco/customflag{pixel_y = 32},/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "hh" = (/obj/structure/stairs/stone{dir = 8},/turf/open/floor/rogue/blocks,/area/rogue/outdoors)
@@ -79,7 +79,6 @@
 "kI" = (/obj/structure/rack/rogue/shelf/biggest,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "lc" = (/obj/structure/fluff/statue/knight,/turf/open/floor/rogue/tile/masonic/single,/area/rogue/indoors/town)
 "lq" = (/obj/effect/spawner/roguemap/grass_low,/obj/structure/flora/roguetree/burnt,/turf/open/floor/rogue/grass,/area/rogue/outdoors)
-"lG" = (/obj/structure/cfour/gates,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "lI" = (/obj/effect/landmark/start/grenzelinfantry{dir = 1},/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
 "lT" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/uchigatana{pixel_x = -10},/obj/item/rogueweapon/sword/uchigatana{pixel_x = -5},/obj/item/rogueweapon/sword/uchigatana,/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "lU" = (/obj/structure/chair/stool/rogue,/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue/indoors/town)
@@ -127,7 +126,7 @@
 "rx" = (/obj/machinery/light/rogue/chand,/obj/effect/landmark/start{name = "blue"},/turf/open/transparent/openspace,/area/rogue/indoors/town)
 "rC" = (/obj/structure/plank,/turf/open/transparent/openspace,/area/rogue/outdoors)
 "rI" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{pixel_x = -10; pixel_y = -13},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz{pixel_x = -8; pixel_y = -25},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz{pixel_x = -10; pixel_y = -20},/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
-"rW" = (/obj/structure/gate/bars/preopen{redstone_id = "thronegate"},/turf/open/floor/rogue/carpet/lord/left,/area/rogue/indoors/town)
+"rW" = (/obj/structure/gate/bars/preopen{redstone_id = "thronegate"; gid = "thronegate"},/turf/open/floor/rogue/carpet/lord/left,/area/rogue/indoors/town)
 "sx" = (/obj/structure/fluff/statue/knight/interior,/turf/open/floor/rogue/tile/masonic/inverted,/area/rogue/indoors/town)
 "sI" = (/obj/structure/warfarebarrier/red,/obj/structure/warfarebarrier/red,/turf/open/floor/rogue/dirt,/area/rogue/outdoors)
 "sY" = (/obj/structure/fluff/statue/knight/r,/turf/open/floor/rogue/tile/masonic/single,/area/rogue/indoors/town)
@@ -176,7 +175,6 @@
 "yF" = (/turf/closed/wall/mineral/rogue/tent{dir = 8},/area/rogue/indoors/town)
 "yV" = (/obj/structure/mineral_door/wood/deadbolt{dir = 1},/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
 "yZ" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/church,/area/rogue/indoors/town)
-"zm" = (/obj/structure/cfour/throne,/turf/open/floor/rogue/carpet/lord/center,/area/rogue/indoors/town)
 "zn" = (/obj/structure/stairs/stone{dir = 8},/turf/open/floor/rogue/blocks,/area/rogue/outdoors/town/roofs)
 "zu" = (/obj/machinery/light/rogue/torchholder/r,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
 "zx" = (/obj/structure/ladder,/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
@@ -399,7 +397,7 @@ tgtgyCIoIoIoIoIoyCtgtgtgtgtgtgtgtgtgtgtgtgtgtgtgtgtgtgbetgtgtgFQtgtgtgtgyCIoIoIo
 tgtgyCkIIokIkIkIyCtgtgtgyCyCpwyCyCyCpwyCyCgMgMgMyCyCpwyCyCyCpwyCyCtgtgtgyCyCyCyCyCyCyCtgtg
 tgtgyCyCIoyCyCyCyCtgtgtgyCWpqstpyCIoIoIoyCyCyCyCyCIoIoIoyCIoIoIoyCtgtgtgyCgmHykpWzLYyCFQtg
 tgtgyCIoIoIoVXIoyCtgOUtgyCqsqsqsyCIoVXXWIoStyCIoIoIoVXIoyCIoIoIoyCtgtgtgyCIoIoIoIoIoyCtgtg
-tgtgVhIoVXIoIoXVyCtgTEtgGJqsxCqsyCIoVXqIVXVXlGetXVocIoIoyCIoIoIoGJtgTEtgNzIoIoIoIoIooktgtg
+tgtgVhIoVXIoIoXVyCtgTEtgGJqsxCqsyCIoVXqIVXVXIoetXVocIoIoyCIoIoIoGJtgTEtgNzIoIoIoIoIooktgtg
 tgtgyCIoXVIoIoIoGJtgtgtgyCwdqsWpyCIoIoBgIoIoDjIoIoIoVXIoyCIoIoIoyCtgtgtgyCmPIoIoIobJyCtgtg
 tgtgyCIoIoIoyCIoyCtgtgtgyCqsqswdyCStIoVXIoBuBuVXDjIoXVIoyCIoIoIoyCtgtgtgyCJVIoIodTcmyCtgFQ
 TETEyCyCWlXVIoyCyCTEtgTEyCyCGJyCyCyCyCGJyCVXIoWeIoGJyCyCyCyCGJyCyCTEtgTEyCyCyCGJyCyCyCTETE
@@ -462,7 +460,7 @@ bmbmbmbmbmbmbmxmxmNAxmxmxmxmbmbmbmbmbmbmbmSBSBVNbmbmbmbmbmbmbmxmxmNAxmxmxmNAbmbm
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjkjkjkjkjkjkjkjkjkjkjkjkjkjkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjkjVccONwqaOSuOYUGqDIVbqakjkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjkjlcqaqacQWHEroXcQqaqasYkjkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
-FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjJEqaqaqaqaOSzmYUTXqaqaqaqtkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
+FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjJEqaqaqaqaOSErYUTXqaqaqaqtkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjJEqaqaqaqaOSigYUqaqaqaqaqtkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjJEqaqaqaqaOSErYUqaqaqaqaqtkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr
 FrFrFrFrFrFrFrFrFrFrFrFrFrFrFrkjkjlcqaqacQOSErYUcQqaqasYkjkjFrFrFrFrFrFrFrFrFrFrFrFrFrFrFr

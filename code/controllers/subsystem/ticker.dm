@@ -927,6 +927,7 @@ SUBSYSTEM_DEF(ticker)
 			M.overlay_fullscreen("graghorror", /atom/movable/screen/fullscreen/graghorror)
 			M.clear_fullscreen("graghorror", 5 SECONDS)
 			M.client.verbs -= /client/verb/forcestartvote
+			SSdroning.area_entered(get_area(M), M.client)
 
 		for(var/obj/O in warfare_barriers)
 			qdel(O)
