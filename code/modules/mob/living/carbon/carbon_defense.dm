@@ -118,10 +118,11 @@
 				new /obj/effect/gibspawner/generic(get_turf(src))
 				if(ishuman(P.firer))
 					var/mob/living/carbon/human/H = P.firer
-					if(HAS_TRAIT(H, TRAIT_SNIPER))
-						H.adjust_triumphs(2)
-					else
-						H.adjust_triumphs(1)
+					if(get_dist(H,src) >= 8)
+						if(HAS_TRAIT(H, TRAIT_SNIPER))
+							H.adjust_triumphs(2)
+						else
+							H.adjust_triumphs(1)
 					if(H.client?.hasPerk(/datum/warperk/headhunter))
 						gib()
 						H.playsound_local(get_turf(H), 'sound/misc/notice.ogg')

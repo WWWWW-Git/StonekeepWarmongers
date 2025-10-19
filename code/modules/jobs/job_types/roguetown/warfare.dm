@@ -1029,7 +1029,7 @@
 
 /obj/item/rogue/caltrop
 	name = "caltrop"
-	desc = "Heartfeltians call this thing a tetsubishi. But now armed with a bomb theres only one thing you can call it, funny. "
+	desc = "Heartfeltians call this thing a tetsubishi. But when it's armed with a bomb theres only one thing you can call it, funny. "
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "tetsubishi"
 	var/obj/item/bomb/loaded_bomb = null

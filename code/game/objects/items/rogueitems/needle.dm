@@ -75,7 +75,7 @@
 		if(stringamt < 1)
 			to_chat(user, "<span class='warning'>The needle has no thread left!</span>")
 			return
-		if(I.sewrepair && I.max_integrity && !I.obj_broken)
+		if(I.sewrepair && I.max_integrity)
 			if(I.obj_integrity == I.max_integrity)
 				to_chat(user, "<span class='warning'>This is not broken.</span>")
 				return
@@ -88,9 +88,12 @@
 				sewtime = (70 - ((user.mind.get_skill_level(/datum/skill/misc/sewing)) * 10))
 			var/datum/component/storage/target_storage = I.GetComponent(/datum/component/storage) //Vrell - Part of storage item repair fix
 			if(do_after(user, sewtime, target = I))
+				var/obj/item/clothing/C = I
 				playsound(loc, 'sound/foley/sewflesh.ogg', 100, TRUE, -2)
 				user.visible_message("<span class='info'>[user] repairs [I]!</span>")
 				I.obj_integrity = I.max_integrity
+				I.obj_broken = FALSE
+				C.update_clothes_damaged_state(FALSE)
 				//Vrell - Part of storage item repair fix
 				if(target_storage)
 					target_storage.being_repaired = FALSE
