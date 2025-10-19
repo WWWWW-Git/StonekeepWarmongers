@@ -42,6 +42,10 @@
 /obj/effect/landmark/events/haunts,
 /turf/open/floor/rogue/blocks,
 /area/rogue/underworld)
+"cE" = (
+/obj/structure/warfarebarrier,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/underworld)
 "cM" = (
 /obj/structure/cannon{
 	dir = 1
@@ -96,6 +100,10 @@
 "gh" = (
 /turf/open/lava,
 /area/rogue/underworld)
+"gy" = (
+/obj/structure/warfarebarrier,
+/turf/open/floor/rogue/volcanic,
+/area/rogue/underworld)
 "gF" = (
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/underworld)
@@ -121,6 +129,10 @@
 	redstone_id = "leftwing"
 	},
 /turf/open/floor/rogue/volcanic,
+/area/rogue/underworld)
+"jd" = (
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/underworld)
 "ji" = (
 /obj/effect/decal/cleanable/sigil/NW,
@@ -208,6 +220,10 @@
 /area/rogue/underworld)
 "mH" = (
 /obj/effect/landmark/events/haunts,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/underworld)
+"mY" = (
+/obj/structure/warfarebarrier,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/underworld)
 "nw" = (
@@ -316,6 +332,10 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/underworld)
+"xy" = (
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/volcanic,
+/area/rogue/underworld)
 "xV" = (
 /obj/structure/stone_tile/slab/cracked,
 /turf/open/lava,
@@ -346,6 +366,10 @@
 	},
 /turf/open/floor/rogue/volcanic,
 /area/rogue/underworld)
+"Bs" = (
+/obj/structure/warfarebarrier/red,
+/turf/open/lava,
+/area/rogue/underworld)
 "BC" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/halberd/naginata,
@@ -357,12 +381,21 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/underworld)
+"Cm" = (
+/obj/effect/landmark/events/haunts,
+/obj/structure/warfarebarrier,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/underworld)
 "Dv" = (
 /obj/structure/barricade/sandbags/rogue,
 /obj/structure/barricade/sandbags/rogue{
 	dir = 4
 	},
 /turf/open/floor/rogue/blocks,
+/area/rogue/underworld)
+"DL" = (
+/obj/structure/warfarebarrier/red,
+/turf/open/transparent/openspace,
 /area/rogue/underworld)
 "DN" = (
 /obj/effect/landmark/start/heartfeltlord,
@@ -390,6 +423,7 @@
 /area/rogue/underworld)
 "Gu" = (
 /obj/structure/fluff/statue,
+/obj/structure/warfarebarrier,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/underworld)
 "GC" = (
@@ -398,6 +432,15 @@
 	},
 /obj/structure/fluff/testportal,
 /turf/open/floor/rogue/volcanic,
+/area/rogue/underworld)
+"Hk" = (
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/underworld)
+"HH" = (
+/obj/structure/fluff/statue,
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/underworld)
 "HY" = (
 /obj/structure/gate/vertical/left{
@@ -469,6 +512,10 @@
 /obj/structure/fluff/statue/gargoyle/moss/candles,
 /turf/open/floor/rogue/greenstone,
 /area/rogue/underworld)
+"Mt" = (
+/obj/structure/warfarebarrier,
+/turf/open/lava,
+/area/rogue/underworld)
 "Of" = (
 /obj/effect/landmark/events/haunts,
 /obj/structure/floordoor/gatehatch/inner,
@@ -490,11 +537,20 @@
 /obj/structure/stone_tile/slab/burnt,
 /turf/open/lava,
 /area/rogue/underworld)
+"OC" = (
+/obj/effect/landmark/events/haunts,
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/underworld)
+"PO" = (
+/obj/structure/warfarebarrier,
+/turf/open/transparent/openspace,
+/area/rogue/underworld)
 "Qo" = (
 /turf/open/floor/rogue/volcanic,
 /area/rogue/underworld)
 "Qv" = (
-/obj/structure/warfarebarrier/red,
+/obj/structure/teambarrier/red,
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/underworld)
 "Qx" = (
@@ -618,7 +674,7 @@
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/underworld)
 "Yv" = (
-/obj/structure/warfarebarrier,
+/obj/structure/teambarrier/blue,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/underworld)
 "YO" = (
@@ -1301,13 +1357,13 @@ oI
 oI
 oI
 oI
+Bs
 gh
 gh
 gh
 gh
 gh
-gh
-gh
+Mt
 oI
 oI
 oI
@@ -1372,13 +1428,13 @@ oI
 oI
 gh
 gh
-gh
+Bs
 Qo
 gF
 gF
 gF
 Qo
-gh
+Mt
 gh
 gh
 oI
@@ -1443,13 +1499,13 @@ gh
 gh
 gh
 Qo
-Qo
+xy
 Qo
 gF
 gF
 gF
 Qo
-Qo
+gy
 Qo
 gh
 gh
@@ -1514,13 +1570,13 @@ gh
 Qo
 Qo
 Qo
-eG
+Hk
 eG
 gF
 gF
 gF
 eG
-eG
+cE
 Qo
 Qo
 Qo
@@ -1585,13 +1641,13 @@ Qo
 Qo
 aW
 eG
+Hk
 eG
 eG
 eG
 eG
 eG
-eG
-eG
+cE
 eG
 xf
 Qo
@@ -1656,13 +1712,13 @@ eG
 eG
 Vs
 eG
-eG
+Hk
 eG
 eG
 zP
 eG
 eG
-eG
+cE
 eG
 cM
 eG
@@ -1727,13 +1783,13 @@ eG
 eG
 kJ
 eG
+Hk
 eG
 eG
 eG
 eG
 eG
-eG
-eG
+cE
 eG
 mz
 eG
@@ -1798,13 +1854,13 @@ eG
 eG
 eG
 eG
-eG
+Hk
 eG
 gF
 gF
 gF
 eG
-eG
+cE
 eG
 eG
 eG
@@ -1869,13 +1925,13 @@ eG
 eG
 eG
 eG
-eG
+Hk
 eG
 gF
 gF
 gF
 eG
-eG
+cE
 eG
 eG
 eG
@@ -1940,13 +1996,13 @@ eG
 eG
 aW
 eG
+Hk
 eG
 eG
 eG
 eG
 eG
-eG
-eG
+cE
 eG
 xf
 eG
@@ -2011,13 +2067,13 @@ eG
 eG
 Vs
 eG
-eG
+Hk
 eG
 eG
 zP
 eG
 eG
-eG
+cE
 eG
 cM
 eG
@@ -2082,13 +2138,13 @@ eG
 eG
 kJ
 eG
+Hk
 eG
 eG
 eG
 eG
 eG
-eG
-eG
+cE
 eG
 mz
 eG
@@ -2153,13 +2209,13 @@ eG
 eG
 eG
 eG
-eG
+Hk
 eG
 gF
 gF
 gF
 eG
-eG
+cE
 eG
 eG
 eG
@@ -2224,7 +2280,7 @@ eG
 eG
 eG
 eG
-Gu
+HH
 gF
 gF
 gF
@@ -2295,13 +2351,13 @@ eq
 eq
 eq
 eq
-eq
+jd
 Bo
 ji
 vE
 wI
 Bo
-eq
+mY
 eq
 eq
 eq
@@ -2366,13 +2422,13 @@ eq
 eq
 mH
 eq
-eq
+jd
 Qo
 hx
 tB
 ZH
 Qo
-eq
+mY
 eq
 mH
 eq
@@ -2437,13 +2493,13 @@ eq
 eq
 eq
 eq
-eq
+jd
 Qo
 lu
 cv
 Eq
 Qo
-eq
+mY
 eq
 eq
 eq
@@ -2508,7 +2564,7 @@ eG
 eG
 eG
 eG
-Gu
+HH
 gF
 gF
 gF
@@ -2579,13 +2635,13 @@ eG
 eG
 eG
 eG
-eG
+Hk
 eG
 gF
 gF
 gF
 eG
-eG
+cE
 eG
 eG
 eG
@@ -2650,13 +2706,13 @@ eG
 eG
 aW
 eG
+Hk
 eG
 eG
 eG
 eG
 eG
-eG
-eG
+cE
 eG
 xf
 eG
@@ -2721,13 +2777,13 @@ eG
 eG
 Vs
 eG
-eG
+Hk
 eG
 eG
 zP
 eG
 eG
-eG
+cE
 eG
 cM
 eG
@@ -2792,13 +2848,13 @@ eG
 eG
 kJ
 eG
+Hk
 eG
 eG
 eG
 eG
 eG
-eG
-eG
+cE
 eG
 mz
 eG
@@ -2863,13 +2919,13 @@ eG
 eG
 eG
 eG
-eG
+Hk
 eG
 gF
 gF
 gF
 eG
-eG
+cE
 eG
 eG
 eG
@@ -2934,13 +2990,13 @@ eG
 eG
 eG
 eG
-eG
+Hk
 eG
 gF
 gF
 gF
 eG
-eG
+cE
 eG
 eG
 eG
@@ -3005,13 +3061,13 @@ eG
 eG
 aW
 eG
+Hk
 eG
 eG
 eG
 eG
 eG
-eG
-eG
+cE
 eG
 xf
 eG
@@ -3076,13 +3132,13 @@ eG
 eG
 Vs
 eG
-eG
+Hk
 eG
 eG
 zP
 eG
 eG
-eG
+cE
 eG
 cM
 eG
@@ -3147,13 +3203,13 @@ Qo
 Qo
 kJ
 eG
+Hk
 eG
 eG
 eG
 eG
 eG
-eG
-eG
+cE
 eG
 mz
 Qo
@@ -3218,13 +3274,13 @@ gh
 Qo
 Qo
 Qo
-eG
+Hk
 eG
 gF
 gF
 gF
 eG
-eG
+cE
 Qo
 Qo
 Qo
@@ -3289,13 +3345,13 @@ gh
 gh
 gh
 Qo
-Qo
+xy
 Qo
 gF
 gF
 gF
 Qo
-Qo
+gy
 Qo
 gh
 gh
@@ -3360,13 +3416,13 @@ oI
 oI
 gh
 gh
-gh
+Bs
 Qo
 gF
 gF
 gF
 Qo
-gh
+Mt
 gh
 gh
 oI
@@ -3431,13 +3487,13 @@ oI
 oI
 oI
 oI
+Bs
 gh
 gh
 gh
 gh
 gh
-gh
-gh
+Mt
 oI
 oI
 oI
@@ -6432,7 +6488,7 @@ gh
 mw
 Om
 xV
-Qo
+gy
 oI
 oI
 oI
@@ -6473,7 +6529,7 @@ oI
 oI
 oI
 oI
-Qo
+xy
 Qo
 mw
 gh
@@ -6503,7 +6559,7 @@ gh
 gh
 mw
 Qo
-Qo
+gy
 oI
 oI
 oI
@@ -6544,7 +6600,7 @@ oI
 oI
 oI
 eG
-eG
+Hk
 Qo
 Qo
 gh
@@ -6574,7 +6630,7 @@ yt
 gh
 Qo
 Qo
-eG
+cE
 eG
 oI
 oI
@@ -6615,7 +6671,7 @@ oI
 oI
 oI
 eG
-eG
+Hk
 eG
 eG
 yt
@@ -6645,7 +6701,7 @@ yt
 yt
 eG
 eG
-eG
+cE
 eG
 oI
 oI
@@ -6686,7 +6742,7 @@ oI
 oI
 eG
 eG
-zP
+OC
 eG
 eG
 yt
@@ -6716,7 +6772,7 @@ yt
 yt
 eG
 eG
-zP
+Cm
 eG
 eG
 oI
@@ -6757,7 +6813,7 @@ oI
 oI
 eG
 eG
-eG
+Hk
 eG
 yt
 yt
@@ -6787,7 +6843,7 @@ yt
 yt
 yt
 eG
-eG
+cE
 eG
 eG
 oI
@@ -6828,7 +6884,7 @@ oI
 eG
 eG
 eG
-eG
+Hk
 eG
 yt
 yt
@@ -6858,7 +6914,7 @@ yt
 yt
 yt
 eG
-eG
+cE
 eG
 eG
 eG
@@ -6899,7 +6955,7 @@ oI
 eG
 eG
 eG
-eG
+Hk
 yt
 yt
 yt
@@ -6929,7 +6985,7 @@ yt
 yt
 yt
 yt
-eG
+cE
 eG
 eG
 eG
@@ -6970,7 +7026,7 @@ oI
 eG
 eG
 eG
-eG
+Hk
 yt
 yt
 yt
@@ -7000,7 +7056,7 @@ yt
 yt
 yt
 yt
-eG
+cE
 eG
 eG
 eG
@@ -7041,7 +7097,7 @@ oI
 eG
 eG
 eG
-yt
+DL
 yt
 yt
 yt
@@ -7071,7 +7127,7 @@ yt
 yt
 yt
 yt
-yt
+PO
 eG
 eG
 eG
@@ -7112,7 +7168,7 @@ oI
 eG
 eG
 eG
-yt
+DL
 yt
 yt
 yt
@@ -7142,7 +7198,7 @@ yt
 yt
 yt
 yt
-yt
+PO
 eG
 eG
 eG
@@ -7183,7 +7239,7 @@ Qv
 eG
 eG
 eG
-yt
+DL
 yt
 yt
 yt
@@ -7213,7 +7269,7 @@ yt
 yt
 yt
 yt
-yt
+PO
 eG
 eG
 eG
@@ -7254,7 +7310,7 @@ Qv
 eG
 zP
 eG
-yt
+DL
 yt
 yt
 yt
@@ -7284,7 +7340,7 @@ yt
 yt
 yt
 yt
-yt
+PO
 eG
 zP
 eG
@@ -7325,7 +7381,7 @@ Qv
 eG
 eG
 eG
-yt
+DL
 yt
 yt
 yt
@@ -7355,7 +7411,7 @@ yt
 yt
 yt
 yt
-yt
+PO
 eG
 eG
 eG
@@ -7396,7 +7452,7 @@ oI
 eG
 eG
 eG
-yt
+DL
 yt
 yt
 yt
@@ -7426,7 +7482,7 @@ yt
 yt
 yt
 yt
-yt
+PO
 eG
 eG
 eG
@@ -7467,7 +7523,7 @@ oI
 eG
 eG
 eG
-yt
+DL
 yt
 yt
 yt
@@ -7497,7 +7553,7 @@ yt
 yt
 yt
 yt
-yt
+PO
 eG
 eG
 eG
@@ -7538,7 +7594,7 @@ oI
 eG
 eG
 eG
-eG
+Hk
 yt
 yt
 yt
@@ -7568,7 +7624,7 @@ yt
 yt
 yt
 yt
-eG
+cE
 eG
 eG
 eG
@@ -7609,7 +7665,7 @@ oI
 eG
 eG
 eG
-eG
+Hk
 yt
 yt
 yt
@@ -7639,7 +7695,7 @@ yt
 yt
 yt
 yt
-eG
+cE
 eG
 eG
 eG
@@ -7680,7 +7736,7 @@ oI
 eG
 eG
 eG
-eG
+Hk
 eG
 yt
 yt
@@ -7710,7 +7766,7 @@ yt
 yt
 yt
 eG
-eG
+cE
 eG
 eG
 eG
@@ -7751,7 +7807,7 @@ oI
 oI
 eG
 eG
-eG
+Hk
 eG
 yt
 yt
@@ -7781,7 +7837,7 @@ yt
 yt
 yt
 eG
-eG
+cE
 eG
 eG
 oI
@@ -7822,7 +7878,7 @@ oI
 oI
 eG
 eG
-zP
+OC
 eG
 eG
 yt
@@ -7852,7 +7908,7 @@ yt
 yt
 eG
 eG
-zP
+Cm
 eG
 eG
 oI
@@ -7893,7 +7949,7 @@ oI
 oI
 oI
 eG
-eG
+Hk
 eG
 eG
 yt
@@ -7923,7 +7979,7 @@ yt
 yt
 eG
 eG
-eG
+cE
 eG
 oI
 oI
@@ -7964,7 +8020,7 @@ oI
 oI
 oI
 eG
-eG
+Hk
 Qo
 Qo
 gh
@@ -7994,7 +8050,7 @@ yt
 gh
 Qo
 Qo
-eG
+cE
 eG
 oI
 oI
@@ -8035,7 +8091,7 @@ oI
 oI
 oI
 oI
-Qo
+xy
 Qo
 mw
 gh
@@ -8065,7 +8121,7 @@ gh
 gh
 mw
 Qo
-Qo
+gy
 oI
 oI
 oI
