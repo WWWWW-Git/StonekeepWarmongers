@@ -63,7 +63,7 @@
 	if(J?.tutorial)
 		to_chat(H, "<span class='info'><b>[uppertext(J.title)]</b></span>")
 		to_chat(H, "<span class='info'>[J.tutorial]</span>")
-		if(H.warfare_faction == RED_WARTEAM && istype(W.warmode, /datum/warmode/lords) && !SSticker.warfare_ready_to_die)
+		if(H.warfare_faction == RED_WARTEAM && (istype(W.warmode, /datum/warmode/assault) || istype(W.warmode, /datum/warmode/lords)) && !SSticker.warfare_ready_to_die)
 			to_chat(H, "<span class='notice'>YOU'RE PLAYING HEARTFELT! REMEMBER TO BUILD DEFENSES OR YOUR DEATH IS GUARANTEED!</span>")
 
 	for(var/list_key in SStriumphs.post_equip_calls)

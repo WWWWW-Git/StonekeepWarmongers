@@ -724,6 +724,9 @@ GLOBAL_VAR_INIT(mobids, 1)
 				stat("GRENZELHOFT DEATHS: [SSticker.grenzelhoft_deaths]")
 				stat("HEARTFELT DEATHS: [SSticker.heartfelt_deaths]")
 				stat("TOTALITY: [SSticker.deaths]")
+			if(istype(W) && istype(W.warmode, /datum/warmode/assault))
+				var/datum/warmode/assault/ASS = W.warmode
+				stat("GRENZELHOFT REINFORCEMENTS: [ASS.blu_spawns - SSticker.grenzelhoft_deaths]")
 
 	if(client && client.holder && check_rights(R_ADMIN,0))
 		if(statpanel("MC"))

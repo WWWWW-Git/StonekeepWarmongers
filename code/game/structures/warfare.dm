@@ -306,6 +306,28 @@
 			spawn(0.35 SECONDS)
 				playsound(loc, 'sound/misc/fall.ogg', 100, FALSE, -1)
 
-/obj/structure/cfour
+/obj/structure/capturepoint_shower
 	name = "\improper grand orb"
 	desc = "A relic of a former age. It hums with unstable magick."
+	icon = 'icons/roguetown/misc/machines.dmi'
+	icon_state = "ballooner"
+	var/area/rogue/assault/assault
+
+/obj/structure/capturepoint_shower/Initialize()
+	. = ..()
+	var/area/A = get_area(src)
+	if(istype(A, /area/rogue/assault))
+		var/area/rogue/assault/ASS = A
+		assault = ASS
+	name = "[uppertext(assault.name)] ASSAULT POINT"
+
+/obj/structure/capturepoint_shower/examine(mob/user)
+	. = ..()
+	var/datum/game_mode/warmongers/C = SSticker.mode
+	if(!istype(C.warmode, /datum/warmode/assault))
+		return
+	var/datum/warmode/assault/ASS = C.warmode // hehe
+
+	if(assault)
+		. += "<span class='tutorial'>It is controlled by the [assault.holder].</span>"
+		. += "<span class='tutorial'>Progress: [ASS.attack_progress]/[assault.tocapture_points]</span>"
