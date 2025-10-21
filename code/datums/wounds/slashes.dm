@@ -54,6 +54,7 @@
 	clotting_threshold = 10
 	sewn_clotting_threshold = 0.5
 	sew_threshold = 150 //absolutely awful to sew up
+	mob_overlay = "disembowel"
 	critical = TRUE
 	/// Organs we can disembowel associated with chance to disembowel
 	var/static/list/affected_organs = list(

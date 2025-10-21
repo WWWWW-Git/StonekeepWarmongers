@@ -95,3 +95,7 @@
 /datum/warmode/assault
 	name = "Assault"
 	shorthand = "ASLT"
+	objective = /obj/structure/warobjective/assaultthrone
+
+	var/list/control_point_handlers = list()
+	var/list/control_point_areas = list()

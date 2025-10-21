@@ -18,6 +18,7 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 
 	/// Overlay to use when this wound is applied to a carbon mob
 	var/mob_overlay = "w1"
+	var/mob_overlay_is_bloody = FALSE // If the overlay should disappear if it isn't bleeding/or there isn't enough blood.
 	/// Overlay to use when this wound is sewn, and is on a carbon mob
 	var/sewn_overlay = ""
 

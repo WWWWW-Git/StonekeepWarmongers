@@ -19,6 +19,8 @@
 		. += "<span class='info'>It is loaded.</span>"
 	if(shootingdown)
 		. += "<span class='info'>It will shoot the things below.</span>"
+	. += "<span class='tutorial'>Load with big lead balls, then use a torch, lamptern or flint to fire.</span>"
+	. += "<span class='tutorial'>Use rightclick to make it shoot at the tile below if infront of an open space.</span>"
 
 /obj/structure/cannon/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/cball))
@@ -157,6 +159,9 @@
 		. += "<span class='info'>The azirath is set to [plusy]. Which means it will shoot [plusy] urists the direction it is facing.</span>"
 	if(loaded)
 		. += "<span class='info'>It is loaded.</span>"
+	. += "<span class='tutorial'>Use rightclick to change the amount of tiles it will fire the direction it is facing in.</span>"
+	. += "<span class='tutorial'>Use middleclick to see what tile you're aiming at.</span>"
+	. += "<span class='tutorial'>Load with bombs.</span>"
 
 /obj/structure/bombard/attack_right(mob/user)
 	. = ..()
@@ -297,6 +302,8 @@
 	. = ..()
 	if(bullets)
 		. += "<span class='info'>It is loaded. ([bullets])</span>"
+	. += "<span class='tutorial'>Use mouse wheel to change direction you're firing in.</span>"
+	. += "<span class='tutorial'>Load with lead balls or smashed up big lead balls.</span>"
 
 /obj/structure/maxim/proc/fire(mob/user)
 	if(!bullets)

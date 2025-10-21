@@ -162,7 +162,10 @@ There are several things that need to be remembered:
 			for(var/datum/wound/wound as anything in BP.wounds)
 				if(!wound.mob_overlay)
 					continue
-				wound_overlays |= wound.mob_overlay
+				if(wound.mob_overlay_is_bloody)
+					if(BP.get_bleed_rate()) wound_overlays |= wound.mob_overlay
+				else
+					wound_overlays |= wound.mob_overlay
 			for(var/wound_overlay in wound_overlays)
 				var/mutable_appearance/damage_overlay = mutable_appearance(limb_icon, "[BP.body_zone]_[wound_overlay]", -DAMAGE_LAYER)
 				damage_overlays += damage_overlay

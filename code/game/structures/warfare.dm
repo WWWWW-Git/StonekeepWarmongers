@@ -109,7 +109,7 @@
 	if(aspect_chosen(/datum/round_aspect/halo))
 		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
 
-// ASLT
+// LD
 
 /obj/structure/warobjective/assaultthrone
 	name = "throne of Heartfelt"
@@ -226,7 +226,7 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
 /obj/structure/shopkeep/red
-	name = "Lé Shopekeep"
+	name = "Lé Shopekeepe"
 	faction = RED_WARTEAM
 
 /obj/structure/shopkeep/proc/leave()

@@ -47,6 +47,7 @@
 	woundpain = 60
 	sewn_woundpain = 30
 	mob_overlay = "s1_throat"
+	mob_overlay_is_bloody = TRUE
 
 /datum/wound/artery/neck/on_mob_gain(mob/living/affected)
 	. = ..()
