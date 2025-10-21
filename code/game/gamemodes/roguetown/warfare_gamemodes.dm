@@ -105,6 +105,9 @@
 	var/min_blu_spawns = 40
 	var/max_blu_spawns = 200
 
+	var/list/capture_points = list()
+	var/total_capture_points = 0
+
 /datum/warmode/assault/beginround()
 	var/player_count = length(GLOB.clients)
 	blu_spawns = clamp(round(50 * (player_count / base_player_count)), min_blu_spawns, max_blu_spawns)
@@ -112,6 +115,10 @@
 	START_PROCESSING(SSprocessing, src)
 	blurb = "Grenzelhoft must capture both points! Heartfelt must defend! GRENZELHOFT GETS ONLY [blu_spawns] AVAILABLE SOLDIERS, DEATH IS BAD!!!"
 
+	for(var/area/rogue/assault/cp in world)
+		if(istype(cp))
+			capture_points += cp
+			total_capture_points++
 	..()
 
 /datum/warmode/assault/process()
@@ -119,6 +126,9 @@
 		var/datum/game_mode/warmongers/C = SSticker.mode
 		if(SSticker.grenzelhoft_deaths >= blu_spawns)
 			C.do_war_end(null, RED_WARTEAM)
+			STOP_PROCESSING(SSprocessing, src)
+		if(current_capture_point > total_capture_points)
+			C.do_war_end(null, BLUE_WARTEAM)
 			STOP_PROCESSING(SSprocessing, src)
 
 /area/rogue/assault
@@ -189,10 +199,10 @@
 	if(capturable)
 		if(grenz.len > heart.len)
 			if(ASS.attack_progress < tocapture_points)
-				ASS.attack_progress++
+				ASS.attack_progress += 1 * capture_rate
 		else if(grenz.len < heart.len)
 			if(ASS.attack_progress > 0)
-				ASS.attack_progress--
+				ASS.attack_progress -= capture_rate
 
 		if(ASS.attack_progress >= tocapture_points && (holder != BLUE_WARTEAM))
 			to_chat(world, "<span class='userdanger'>[uppertext("[BLUE_WARTEAM] HAVE CAPTURED THE [src]")]!</span>")
@@ -200,7 +210,7 @@
 			ASS.attack_progress = 0
 			on_capture(holder)
 			SEND_SOUND(world, capture_sound)
-			ASS.current_capture_point += 1 * capture_rate
+			ASS.current_capture_point++
 
 /area/rogue/assault/Entered(atom/movable/M)
 	. = ..()
