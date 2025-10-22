@@ -38,6 +38,12 @@
 	return ..()
 
 /datum/game_mode/warmongers/proc/award_triumphs()
+	if(whowon == null)
+		for(var/client/C in GLOB.clients)
+			C << sound(null) // Stop all sounds
+			SEND_SOUND(C, 'sound/music/tension2.ogg')
+			spawn(15 SECONDS)
+				SEND_SOUND(C, sound('sound/music/credits.ogg', volume=30))
 	if(whowon == BLUE_WARTEAM)
 		for(var/client/C in grenzels)
 			if(ishuman(C.mob))

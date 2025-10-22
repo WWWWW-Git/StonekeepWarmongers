@@ -148,6 +148,7 @@
 		var/mob/dead/observer/rogue/G = ghostize()
 
 		if(G?.client)
+			G << sound(null) // Stop all sounds
 			SSdroning.kill_droning(G.client)
 			SSdroning.kill_loop(G.client)
 			SSdroning.kill_rain(G.client)
