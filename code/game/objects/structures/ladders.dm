@@ -216,13 +216,23 @@
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "ladderwall"
 	anchored = TRUE
-	var/obj/structure/ladder/down   //the ladder below this one
-	var/obj/structure/ladder/up     //the ladder above this one
 	obj_flags = BLOCK_Z_OUT_DOWN
 	max_integrity = 200
 	blade_dulling = DULLING_BASHCHOP
 
+/obj/structure/wallladder/attack_hand(mob/user)
+	var/step = get_step(src, dir)
 
+	if(!locate(user) in loc)
+		to_chat(user, "<span class='warning'>I need to get closer.</span>")
+		return
+
+	if(istype(step, /turf/closed))
+		var/turf/closed/T = step
+		T.attack_hand(user)
+		return
+		
+	. = ..()
 
 /obj/structure/wallladder/OnCrafted(dirin)
 	dir = dirin

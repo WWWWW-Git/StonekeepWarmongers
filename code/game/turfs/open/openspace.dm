@@ -111,6 +111,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	return attack_hand(user)
 
 /turf/open/transparent/openspace/attack_hand(mob/user)
+	var/climb_sound = 'sound/foley/climb.ogg'
 	if(isliving(user))
 		var/mob/living/L = user
 		if(L.stat != CONSCIOUS)
@@ -131,11 +132,14 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 			to_chat(user, "<span class='warning'>I can't climb here.</span>")
 			return
 		if(user.m_intent != MOVE_INTENT_SNEAK)
-			playsound(user, 'sound/foley/climb.ogg', 100, TRUE)
+			var/obj/structure/wallladder/WL = locate() in target.contents
+			if(WL)
+				climb_sound = 'sound/foley/ladder.ogg'
+			playsound(user, climb_sound, 100, TRUE)
 		user.visible_message("<span class='warning'>[user] starts to climb down.</span>", "<span class='warning'>I start to climb down.</span>")
 		if(do_after(L, 30, target = src))
 			if(user.m_intent != MOVE_INTENT_SNEAK)
-				playsound(user, 'sound/foley/climb.ogg', 100, TRUE)
+				playsound(user, climb_sound, 100, TRUE)
 			var/pulling = user.pulling
 			if(ismob(pulling))
 				user.pulling.forceMove(target)
