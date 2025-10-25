@@ -77,26 +77,6 @@
 			to_chat(usr, "<span class='warning'>I can't reach that! Something is covering it.</span>")
 			return
 
-	if(href_list["undiesthing"]) //canUseTopic check for this is handled by mob/Topic()
-		if(!get_location_accessible(src, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
-			to_chat(usr, "<span class='warning'>I can't reach that! Something is covering it.</span>")
-			return
-		if(underwear == "Nude")
-			return
-		if(do_after(usr, 50, needhand = 1, target = src))
-			cached_underwear = underwear
-			underwear = "Nude"
-			update_body()
-			var/obj/item/undies/U
-			if(gender == MALE)
-				U = new/obj/item/undies(get_turf(src))
-			else
-				U = new/obj/item/undies/f(get_turf(src))
-			U.color = underwear_color
-			if(iscarbon(usr))
-				var/mob/living/carbon/C = usr
-				C.put_in_hands(U)
-
 	if(href_list["pockets"] && usr.canUseTopic(src, BE_CLOSE, NO_DEXTERITY)) //TODO: Make it match (or intergrate it into) strippanel so you get 'item cannot fit here' warnings if mob_can_equip fails
 		var/pocket_side = href_list["pockets"]
 		var/pocket_id = (pocket_side == "right" ? SLOT_R_STORE : SLOT_L_STORE)
