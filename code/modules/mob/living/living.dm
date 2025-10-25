@@ -1953,6 +1953,11 @@
 				ttime = 0
 		animate(client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, ttime)
 		hud_used?.backhudl.alpha = 0
+
+		for(var/atom/movable/screen/scannies/S in client.screen)
+			S.alpha = 0
+		for(var/atom/movable/screen/grain/S in client.screen)
+			S.alpha = 0
 	else
 		var/_x = T.x-loc.x
 		var/_y = T.y-loc.y
@@ -2017,4 +2022,9 @@
 	regenerate_icons()
 	client?.change_view(CONFIG_GET(string/default_view))
 	hud_used?.backhudl.alpha = 255
+	if(client.prefs.visibility_accessibility == FALSE)
+		for(var/atom/movable/screen/scannies/S in client.screen)
+			S.alpha = 80
+		for(var/atom/movable/screen/grain/S in client.screen)
+			S.alpha = 75
 //	UnregisterSignal(src, COMSIG_MOVABLE_PRE_MOVE)
