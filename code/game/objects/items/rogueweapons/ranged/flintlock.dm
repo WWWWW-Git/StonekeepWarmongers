@@ -33,7 +33,7 @@
 	cartridge_wording = "ball"
 	recoil = 3
 	load_sound = 'sound/foley/nockarrow.ogg'
-	fire_sound = list('sound/combat/Ranged/muskshoot.ogg','sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg')
+	fire_sound = list('sound/combat/Ranged/muskshot1.ogg','sound/combat/Ranged/muskshot2.ogg','sound/combat/Ranged/muskshot3.ogg', 'sound/combat/Ranged/muskshot4.ogg', 'sound/combat/Ranged/muskshot5.ogg', 'sound/combat/Ranged/muskshot6.ogg')
 	fire_sound_volume = 500
 	vary_fire_sound = TRUE
 	drop_sound = 'sound/foley/gun_drop.ogg'
