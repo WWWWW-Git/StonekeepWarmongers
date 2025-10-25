@@ -2,15 +2,14 @@
 	race = /datum/species/human/northern
 
 /datum/species/human/northern
-	name = "Humen"
+	name = "Subhumin"
 	id = "human"
-	desc = "<b>Humen</b><br>\
-	Humenity is the 'perfected race' of the weeping god. Noted for their \
-	tenacity and overwhelming population, humens tend to outnumber the other races drastically. \
-	Humens come from a vast swathe of cultures and ethnicities all around Grimoria, most of which \
-	have historically been at odds with one another and other races. \
-	Humens tend to find fortune easier than the other races, and are so diverse that no other racial trait \
-	are dominant in their species..."
+	desc = "<b>Subhumin</b><br>\
+	The great root below us all has changed us, both from within and without. \
+	We are found everywhere on The Clump, as common as the root is, and we find ourselves \
+	destined for greatness, whether by the grace of the root, or by our own ingenuity. \
+	Ours is such a simple life, but when the horns of war sound out we feel compelled to obey His call. \
+	There is no finer calling in life than to die for a cause, and to die happy knowing the root may yet consume you."
 
 	skin_tone_wording = "Ancestry"
 
@@ -98,14 +97,14 @@
 					break
 		if(gender == FEMALE)
 			for(var/i in 1 to 10)
-				randname = pick( world.file2list("string/rt/names/human/humnorf.txt") )
+				randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 				if(!findname(randname))
 					break
 	else
 		if(gender == MALE)
 			randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 		if(gender == FEMALE)
-			randname = pick( world.file2list("string/rt/names/human/humnorf.txt") )
+			randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 	return randname
 
 /datum/species/human/northern/random_surname()

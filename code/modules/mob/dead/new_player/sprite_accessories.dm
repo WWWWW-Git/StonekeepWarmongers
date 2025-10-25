@@ -675,29 +675,6 @@
 	use_static = TRUE
 	specuse = ALL_RACES_LIST
 #else*/
-/datum/sprite_accessory/underwear/regm
-	name = "Undies"
-	icon_state = "male_reg"
-	gender = MALE
-	specuse = list("human")
-
-/datum/sprite_accessory/underwear/regme
-	name = "Undiese"
-	icon_state = "maleelf_reg"
-	gender = MALE
-	specuse = list("elf")
-
-/datum/sprite_accessory/underwear/regmd
-	name = "Undiesd"
-	icon_state = "maledwarf_reg"
-	gender = MALE
-	specuse = list("dwarf")
-
-/datum/sprite_accessory/underwear/female_bikini
-	name = "Femundies"
-	icon_state = "female_bikini"
-	gender = FEMALE
-	specuse = ALL_RACES_LIST
 
 /datum/sprite_accessory/underwear/female_leotard
 	name = "Femleotard"
