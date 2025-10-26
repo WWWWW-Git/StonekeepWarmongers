@@ -166,8 +166,11 @@
 
 /area/rogue/assault/process()
 	var/datum/game_mode/warmongers/C = SSticker.mode
-	if(!istype(C.warmode, /datum/warmode/assault))
-		STOP_PROCESSING(SSprocessing, src)
+	if(C?.warmode)
+		if(!istype(C?.warmode, /datum/warmode/assault))
+			STOP_PROCESSING(SSprocessing, src)
+			return
+	else
 		return
 	var/datum/warmode/assault/ASS = C.warmode // hehe
 
@@ -215,7 +218,7 @@
 /area/rogue/assault/Entered(atom/movable/M)
 	. = ..()
 	var/datum/game_mode/warmongers/C = SSticker.mode
-	if(!istype(C.warmode, /datum/warmode/assault))
+	if(!istype(C?.warmode, /datum/warmode/assault))
 		return
 	var/datum/warmode/assault/ASS = C.warmode // hehe
 	if(ishuman(M))

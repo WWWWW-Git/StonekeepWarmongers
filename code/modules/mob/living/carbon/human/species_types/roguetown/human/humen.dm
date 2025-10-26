@@ -98,14 +98,14 @@
 					break
 		if(gender == FEMALE)
 			for(var/i in 1 to 10)
-				randname = pick( world.file2list("string/rt/names/human/humnorf.txt") )
+				randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 				if(!findname(randname))
 					break
 	else
 		if(gender == MALE)
 			randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 		if(gender == FEMALE)
-			randname = pick( world.file2list("string/rt/names/human/humnorf.txt") )
+			randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 	return randname
 
 /datum/species/human/northern/random_surname()
