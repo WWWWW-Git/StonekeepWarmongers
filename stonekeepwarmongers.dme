@@ -4,20 +4,6 @@
 
 // BEGIN_INTERNALS
 // END_INTERNALS
-
-// BEGIN_FILE_DIR
-#define FILE_DIR .
-// END_FILE_DIR
-
-// BEGIN_PREFERENCES
-#define DEBUG
-// END_PREFERENCES
-
-// BEGIN_INCLUDE
-// END_INCLUDE
-
-// BEGIN_INTERNALS
-// END_INTERNALS
 // BEGIN_FILE_DIR
 #define FILE_DIR .
 // END_FILE_DIR
@@ -325,6 +311,7 @@
 #include "code\controllers\subsystem\treestuff.dm"
 #include "code\controllers\subsystem\vis_overlays.dm"
 #include "code\controllers\subsystem\vote.dm"
+#include "code\controllers\subsystem\warmongers.dm"
 #include "code\controllers\subsystem\weather.dm"
 #include "code\controllers\subsystem\processing\fastprocess.dm"
 #include "code\controllers\subsystem\processing\fields.dm"
