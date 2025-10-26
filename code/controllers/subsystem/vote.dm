@@ -181,7 +181,7 @@ SUBSYSTEM_DEF(vote)
 					to_chat(world, "\n<font color='purple'>Understood. The wait shall end.</font>")
 					var/datum/game_mode/warmongers/W = SSticker.mode
 					if(istype(W))
-						SSticker.ReadyToDie()
+						SSwarmongers.ReadyToDie()
 	if(restart)
 		var/active_admins = 0
 		for(var/client/C in GLOB.admins)

@@ -833,6 +833,11 @@ SUBSYSTEM_DEF(job)
 	var/atom/destination
 	if(M.mind && M.mind.assigned_role && length(GLOB.jobspawn_overrides[M.mind.assigned_role])) //We're doing something special today.
 		destination = pick(GLOB.jobspawn_overrides[M.mind.assigned_role])
+		if(SSwarmongers.warfare_ready_to_die)
+			if(M:warfare_faction == RED_WARTEAM)
+				destination = pick(SSwarmongers.red_airship_landmarks)
+			else
+				destination = pick(SSwarmongers.blue_airship_landmarks)
 		destination.JoinPlayerHere(M, FALSE)
 		return
 

@@ -634,7 +634,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	set name = "Propose FORCE START"
 	set category = "Options"
 	set desc = ""
-	if(SSticker.warfare_ready_to_die)
+	if(SSwarmongers.warfare_ready_to_die)
 		to_chat(usr, "<B>FOOL</B>")
 		return
 	

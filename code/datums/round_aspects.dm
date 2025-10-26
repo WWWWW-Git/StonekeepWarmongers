@@ -17,7 +17,7 @@
 	description = "These levershots are the future!"
 
 /datum/round_aspect/futurewar/apply()
-	SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
+	SSwarmongers.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
 
 /datum/round_aspect/nomood
 	name = "Moodless"
@@ -84,7 +84,7 @@
 	description = "We didn't have enough of a budget to pay Enigma for our firearms."
 
 /datum/round_aspect/poorbastards/apply()
-	SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_NONE
+	SSwarmongers.warfare_techlevel = WARMONGERS_TECHLEVEL_NONE
 
 /datum/round_aspect/attackofdead
 	name = "Attack of the Living Dead"

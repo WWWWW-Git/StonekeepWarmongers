@@ -32,7 +32,7 @@
 	if(stat == DEAD)
 		return
 
-	if(mind)
+	if(mind && SSwarmongers.warfare_ready_to_die)
 		SSticker.deaths++
 		switch(warfare_faction)
 			if(RED_WARTEAM)

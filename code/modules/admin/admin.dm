@@ -673,8 +673,8 @@
 	set category = "Server"
 	set desc="Start the round RIGHT NOW"
 	set name="Ready2Die Now"
-	if(!SSticker.warfare_ready_to_die)
-		SSticker.ReadyToDie()
+	if(!SSwarmongers.warfare_ready_to_die)
+		SSwarmongers.ReadyToDie()
 		log_admin("[usr.key] has started the game.")
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Ready2Die Now") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		return 1
@@ -687,29 +687,29 @@
 	set category = "GameMaster"
 	set name = "One Team Mode"
 
-	if(SSticker.oneteammode)
-		SSticker.oneteammode = FALSE
+	if(SSwarmongers.oneteammode)
+		SSwarmongers.oneteammode = FALSE
 		to_chat(usr, "off")
 	else
-		SSticker.oneteammode = TRUE
+		SSwarmongers.oneteammode = TRUE
 		to_chat(usr, "on")
 
 /datum/admins/proc/settechlevel()
 	set category = "GameMaster"
 	set name = "Set Techlevel"
 
-	if(SSticker.warfare_techlevel)
+	if(SSwarmongers.warfare_techlevel)
 		var/inss = input(usr, "Choose tech level (1 MUSKETS, 2 REPEATERS, 3 NO GUNS, 4 AUTOMATIC HOLY SHIT)", "WARMONGERS", "1") as anything in list("1","2","3","4")
 		if(inss)
 			switch(inss)
 				if("1")
-					SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
+					SSwarmongers.warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
 				if("2")		
-					SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
+					SSwarmongers.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
 				if("3")
-					SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_NONE
+					SSwarmongers.warfare_techlevel = WARMONGERS_TECHLEVEL_NONE
 				if("4")
-					SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_AUTO
+					SSwarmongers.warfare_techlevel = WARMONGERS_TECHLEVEL_AUTO
 			SSblackbox.record_feedback("tally", "admin_verb", 1, "SetTechLevel") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 			log_admin("[usr.key] has set the tech level to [inss]")
 			return 1
@@ -722,7 +722,7 @@
 	set name="Reinforcements Now"
 	var/datum/game_mode/warmongers/W = SSticker.mode
 	if(!(W.reinforcementwave >= 5))
-		SSticker.SendReinforcements()
+		SSwarmongers.SendSupplies()
 		log_admin("[usr.key] has sent reinforcements")
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Reinforcements Now") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		return 1

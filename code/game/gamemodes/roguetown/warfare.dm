@@ -34,7 +34,7 @@
 
 /datum/game_mode/warmongers/post_setup(report)
 	begin_countDown()
-	SSticker.fuckthisshit.setup()
+	SSwarmongers.fuckthisshit.setup()
 	return ..()
 
 /datum/game_mode/warmongers/proc/award_triumphs()
@@ -82,14 +82,14 @@
 	set waitfor = 0
 	while(1)
 		CHECK_TICK
-		if(SSticker.oneteammode)
+		if(SSwarmongers.oneteammode)
 			break
 		CHECK_TICK
 		for(var/mob/dead/new_player/P in GLOB.player_list)
 			CHECK_TICK
 			P.autobalance()
 
-/datum/game_mode/warmongers/proc/reinforcements()
+/datum/game_mode/warmongers/proc/supplies()
 	set waitfor = 0
 	while(1)
 		CHECK_TICK
@@ -97,14 +97,14 @@
 			break
 		sleep(warfare_reinforcement_time MINUTES)
 		testing("Sending reinforcement loop works")
-		SSticker.SendReinforcements()
+		SSwarmongers.SendSupplies()
 
 /datum/game_mode/warmongers/proc/begin_countDown()
 	set waitfor = 0
 	while(1)
 		sleep(1 MINUTES)
 		CHECK_TICK
-		if(SSticker.warfare_ready_to_die)
+		if(SSwarmongers.warfare_ready_to_die)
 			break
 		if(!redlord)
 			continue
@@ -114,7 +114,7 @@
 		CHECK_TICK
 		to_chat(world, "Both sides are present. We will begin in [warfare_start_time] minutes.")
 		sleep(warfare_start_time MINUTES)
-		SSticker.ReadyToDie()
+		SSwarmongers.ReadyToDie()
 		CHECK_TICK
 
 /datum/game_mode/warmongers/proc/HandleNoLords()

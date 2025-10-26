@@ -220,7 +220,7 @@
 	var/datum/warmode/assault/ASS = C.warmode // hehe
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		if(!capturable)
+		if(!capturable && H.warfare_faction != holder)
 			if(capture_order < ASS.current_capture_point)
 				to_chat(H, "<span class='warning'>[src] has been already captured!</span>")
 			else
@@ -237,3 +237,24 @@
 			grenz -= M
 		else if(M in heart)
 			heart -= M
+
+/area/rogue/indoors/airship
+	name = "reinforcement airship"
+	ambientrain = RAIN_IN
+	ambientsounds = 'sound/ambience/airship_ambience.ogg'
+	ambientnight = 'sound/ambience/airship_ambience.ogg'
+	spookysounds = SPOOKY_GEN
+	spookynight = SPOOKY_GEN
+	droning_sound = 'sound/ambience/airship_ambience.ogg'
+	droning_sound_dusk = 'sound/ambience/airship_ambience.ogg'
+	droning_sound_night = 'sound/ambience/airship_ambience.ogg'
+
+/area/rogue/indoors/airship/Entered(mob/living/M, atom/OldLoc)
+	. = ..()
+	to_chat(M, "<span class='info'>Be patient and await arrival to the battlefield. Chat with your fellow comrades.</span>")
+
+/area/rogue/indoors/airship/red
+	icon_state = "red"
+
+/area/rogue/indoors/airship/blue
+	icon_state = "blue"
