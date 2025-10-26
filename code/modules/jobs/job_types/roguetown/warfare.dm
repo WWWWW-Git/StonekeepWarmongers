@@ -1,15 +1,5 @@
 /datum/job/roguetown/warmongers/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
-	var/obj/S = null
-	for(var/obj/effect/landmark/start/sloc in GLOB.start_landmarks_list)
-		if(sloc.name != title)
-			continue
-		S = sloc
-		sloc.used = TRUE
-		break
-	if(S)
-		S.JoinPlayerHere(M)
-	
 	if(H)
 		var/mob/living/carbon/human/HU = H
 
@@ -586,7 +576,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	beltl = /obj/item/rogueweapon/sword/sabre/piandao
-	if(H.dna.species.id == "dwarf" && SSticker.warfare_techlevel <= WARMONGERS_TECHLEVEL_COWBOY)
+	if(H.dna.species.id == "dwarf" && SSwarmongers.warfare_techlevel <= WARMONGERS_TECHLEVEL_COWBOY)
 		beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed
 	else
 		beltr = GetSidearmForWarfare()
@@ -956,7 +946,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
-	if(SSticker.warfare_techlevel >= WARMONGERS_TECHLEVEL_COWBOY)
+	if(SSwarmongers.warfare_techlevel >= WARMONGERS_TECHLEVEL_COWBOY)
 		beltr = /obj/item/gun/grenadelauncher/granata
 	else
 		beltr = GetSidearmForWarfare()
@@ -1163,7 +1153,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/rogueweapon/sword/rapier
-	if(H.dna.species.id == "dwarf" && SSticker.warfare_techlevel <= WARMONGERS_TECHLEVEL_COWBOY)
+	if(H.dna.species.id == "dwarf" && SSwarmongers.warfare_techlevel <= WARMONGERS_TECHLEVEL_COWBOY)
 		beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed
 	else
 		beltr = GetSidearmForWarfare()

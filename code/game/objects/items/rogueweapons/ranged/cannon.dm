@@ -44,7 +44,7 @@
 			fire()
 	if(istype(I, /obj/item/flint))
 		var/obj/item/flint/F = I
-		if(!loaded || !SSticker.warfare_ready_to_die)
+		if(!loaded || !SSwarmongers.warfare_ready_to_die)
 			to_chat(user, "<span class='danger'>No, that would be stupid.</span>")
 			return
 		F.afterattack(src, user, TRUE)
@@ -56,7 +56,7 @@
 
 /obj/structure/cannon/attack_right(mob/user)
 	. = ..()
-	if(!SSticker.warfare_ready_to_die)
+	if(!SSwarmongers.warfare_ready_to_die)
 		to_chat(user, "<span class='danger'>Why in the world would I ever do that? Why would I waste time pointing it down if I can't even use it to kill the enemy right now?</span>")
 		return
 	if(!shootingdown)
@@ -196,7 +196,7 @@
 		playsound(src, 'sound/foley/trap_arm.ogg', 65)
 	if(istype(I, /obj/item/flashlight/flare/torch))
 		var/obj/item/flashlight/flare/torch/LR = I
-		if(!loaded || !SSticker.warfare_ready_to_die)
+		if(!loaded || !SSwarmongers.warfare_ready_to_die)
 			to_chat(user, "<span class='danger'>No, that would be stupid.</span>")
 			return
 		if(LR.on)
@@ -205,7 +205,7 @@
 			fire()
 	if(istype(I, /obj/item/flint))
 		var/obj/item/flint/F = I
-		if(!loaded || !SSticker.warfare_ready_to_die)
+		if(!loaded || !SSwarmongers.warfare_ready_to_die)
 			to_chat(user, "<span class='danger'>No, that would be stupid.</span>")
 			return
 		F.afterattack(src, user, TRUE)

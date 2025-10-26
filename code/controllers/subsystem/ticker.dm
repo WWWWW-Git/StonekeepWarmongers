@@ -26,13 +26,6 @@ SUBSYSTEM_DEF(ticker)
 	var/round_end_sound						//music/jingle played when the world reboots
 	var/round_end_sound_sent = TRUE			//If all clients have loaded it
 
-	var/warfare_ready_to_die = FALSE		// If the barriers for fair play have been removed yet.
-	var/warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
-	var/obj/structure/warobjective/fuckthisshit
-	var/list/warfare_barriers = list()
-
-	var/oneteammode = FALSE // players only allowed to choose grenzelhoft
-
 	var/list/datum/mind/minds = list()		//The characters in the game. Used for objective tracking.
 
 	var/delay_end = 0						//if set true, the round will not restart on it's own
@@ -501,13 +494,13 @@ SUBSYSTEM_DEF(ticker)
 	spawn(15)
 		if(end_party)
 			to_chat(world, "<span class='notice'><B>THIS IS THE FINAL STRUGGLE. DON'T LET THOSE BASTARDS WIN! IT'S NOW OR NEVER!!!</B></span>")
-		if(oneteammode)
+		if(SSwarmongers.oneteammode)
 			to_chat(world, "<span class='notice'><B>This time you can only play as the Grenzelhofts.</B></span>")
 
 	CHECK_TICK
 
 	for(var/client/C in GLOB.clients)
-		if(oneteammode)
+		if(SSwarmongers.oneteammode)
 			C.warfare_faction = "Grenzelhofts"
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
@@ -911,112 +904,3 @@ SUBSYSTEM_DEF(ticker)
 	update_everything_flag_in_db()
 
 	text2file(login_music, "data/last_round_lobby_music.txt")
-
-/datum/controller/subsystem/ticker/proc/ReadyToDie()
-	var/datum/game_mode/warmongers/W = mode
-	if(!warfare_ready_to_die)
-		to_chat(world, "<span class='userdanger'>[pick("FOR THE CROWN! FOR THE EMPIRE!","CHILDREN OF THE NATION, TO YOUR STATIONS!","I'M NOT AFRAID TO DIE!")]</span>")
-		if(!(oneteammode))
-			W.reinforcements()
-		warfare_ready_to_die = TRUE
-
-		// https://imgur.com/a/mzWBurl
-
-		for(var/mob/M in GLOB.player_list)
-			SEND_SOUND(M, 'sound/music/wolfintro.ogg')
-			M.overlay_fullscreen("graghorror", /atom/movable/screen/fullscreen/graghorror)
-			M.clear_fullscreen("graghorror", 5 SECONDS)
-			M.client.verbs -= /client/verb/forcestartvote
-			SSdroning.area_entered(get_area(M), M.client)
-
-		for(var/obj/O in warfare_barriers)
-			qdel(O)
-		
-		W.HandleNoLords()
-		W.warmode.beginround()
-
-/proc/GetMainGunForWarfareHeartfelt()
-	switch(SSticker.warfare_techlevel)
-		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
-		if(WARMONGERS_TECHLEVEL_COWBOY)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
-		if(WARMONGERS_TECHLEVEL_AUTO)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine
-		if(WARMONGERS_TECHLEVEL_NONE)
-			return null
-
-/proc/GetMainGunForWarfareGrenzelhoft()
-	switch(SSticker.warfare_techlevel)
-		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz
-		if(WARMONGERS_TECHLEVEL_COWBOY)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
-		if(WARMONGERS_TECHLEVEL_AUTO)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine
-		if(WARMONGERS_TECHLEVEL_NONE)
-			return null
-
-/proc/GetSidearmForWarfare()
-	switch(SSticker.warfare_techlevel)
-		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
-		if(WARMONGERS_TECHLEVEL_COWBOY)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
-		if(WARMONGERS_TECHLEVEL_NONE)
-			return null
-
-/datum/controller/subsystem/ticker/proc/SendReinforcements()
-	var/datum/game_mode/warmongers/W = mode
-
-	var/obj/effect/landmark/blureinforcement/blu = locate(/obj/effect/landmark/blureinforcement) in GLOB.landmarks_list
-	var/obj/effect/landmark/redreinforcement/red = locate(/obj/effect/landmark/redreinforcement) in GLOB.landmarks_list
-
-	W.reinforcementwave++
-	var/list/reinforcementinas = list()
-	switch(W.reinforcementwave)
-		if(1)
-			reinforcementinas += "/obj/item/bomb"
-			reinforcementinas += "/obj/item/bomb/fire/weak"
-		if(2)
-			reinforcementinas += "/obj/item/bomb"
-			reinforcementinas += "/obj/item/bomb"
-			reinforcementinas += "/obj/item/bomb/fire/weak"
-			reinforcementinas += "/obj/item/bomb/smoke"
-			reinforcementinas += "/obj/item/flint"
-			SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_FLINTLOCKS
-			to_chat(world, "<span class='notice'>This battle will soon get too heated for these shopkeepers!</span>")
-		if(3)
-			reinforcementinas += "/obj/item/bomb/smoke"
-			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/bomb/poison"
-			reinforcementinas += "/obj/item/bomb"
-			reinforcementinas += "/obj/item/bomb"
-			for(var/obj/structure/shopkeep/SHP in world)
-				to_chat(world, "<span class='notice'>This battle is getting too heated for these shopkeepers! They're leaving!</span>")
-				SHP.leave()
-		if(4)
-			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/bomb/poison"
-			reinforcementinas += "/obj/item/bomb/poison"
-			SSticker.warfare_techlevel = WARMONGERS_TECHLEVEL_COWBOY
-		if(5)
-			reinforcementinas += "/obj/item/bomb"
-			reinforcementinas += "/obj/item/bomb"
-			reinforcementinas += "/obj/item/bomb/fire"
-			reinforcementinas += "/obj/item/bomb/smoke"
-			reinforcementinas += "/obj/item/bomb/poison"
-			reinforcementinas += "/obj/item/bomb/poison"
-	to_chat(world, "<span class='info'><span class='typewrite'>Reinforcements have arrived.</span></span>")
-	for(var/mob/M in GLOB.player_list)
-		if(aspect_chosen(/datum/round_aspect/halo))
-			SEND_SOUND(M, 'sound/vo/halo/reinforcements.mp3')
-		else
-			SEND_SOUND(M, 'sound/music/traitor.ogg')
-	new /obj/effect/telefog(red.loc)
-	new /obj/effect/telefog(blu.loc)
-	for(var/i in reinforcementinas)
-		var/typepath = text2path(i)
-		new typepath(red.loc)
-		new typepath(blu.loc)

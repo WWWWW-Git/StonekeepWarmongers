@@ -28,6 +28,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	GLOB.landmarks_list -= src
 	return ..()
 
+/obj/effect/landmark/bluairship
+	name = "Blue Airship"
+	icon_state = "reinforcements-blu"
+
+/obj/effect/landmark/bluairship/Initialize()
+	. = ..()
+	SSwarmongers.blue_airship_landmarks += src
+
 /obj/effect/landmark/blureinforcement
 	name = "Blue Reinforcements"
 	icon_state = "reinforcements-blu"
@@ -35,6 +43,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/blureinforcement/Initialize()
 	. = ..()
 	new /obj/structure/shopkeep(get_turf(src))
+
+/obj/effect/landmark/redairship
+	name = "Red Airship"
+	icon_state = "reinforcements"
+
+/obj/effect/landmark/redairship/Initialize()
+	. = ..()
+	SSwarmongers.red_airship_landmarks += src
 
 /obj/effect/landmark/redreinforcement
 	name = "Red Reinforcements"

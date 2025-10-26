@@ -17,6 +17,10 @@
 	desc = "The lamptern is permanently built into the structure of this one."
 	permanent = TRUE
 
+/obj/machinery/light/rogue/lanternpost/fixed/compact
+	icon = 'icons/roguetown/misc/structure.dmi'
+	icon_state = "lanterno1"
+
 /obj/machinery/light/rogue/lanternpost/fire_act(added, maxstacks)
 	if(torchy)
 		if(!on)

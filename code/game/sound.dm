@@ -68,6 +68,10 @@
 			if(M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, channel, pressure_affected, S, repeat))
 				. += M
 
+/proc/playsound_area(var/area/area, sound)
+	for(var/mob/M in area)
+		if(ismob(M) && M.client)
+			M.playsound_local(get_turf(M), sound, 75)
 
 /proc/ping_sound(atom/A)
 	var/image/I = image(icon = 'icons/effects/effects.dmi', loc = A, icon_state = "emote", layer = ABOVE_MOB_LAYER)

@@ -474,7 +474,7 @@
 
 /obj/structure/warfarebarrier/Initialize()
 	. = ..()
-	SSticker.warfare_barriers += src
+	SSwarmongers.warfare_barriers += src
 
 /obj/structure/warfarebarrier/CanPass(atom/movable/mover, turf/target)
 	..()

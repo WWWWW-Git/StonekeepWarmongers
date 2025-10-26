@@ -80,7 +80,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 			continue
 		var/datum/atom_hud/alternate_appearance/AA = v
 		AA.onNewMob(src)
-	if(!(SSticker.warfare_ready_to_die) && aspect_chosen(/datum/round_aspect/starvingmarvins))
+	if(!(SSwarmongers.warfare_ready_to_die) && aspect_chosen(/datum/round_aspect/starvingmarvins))
 		set_nutrition(450)
 		set_hydration(500)
 	if(aspect_chosen(/datum/round_aspect/rationsurplus))
@@ -727,6 +727,10 @@ GLOBAL_VAR_INIT(mobids, 1)
 			if(istype(W) && istype(W.warmode, /datum/warmode/assault))
 				var/datum/warmode/assault/ASS = W.warmode
 				stat("GRENZELHOFT REINFORCEMENTS: [ASS.blu_spawns - SSticker.grenzelhoft_deaths]")
+			if(istype(loc.loc, /area/rogue/indoors/airship))
+				var/timeto = SSwarmongers.next_respawn - round_duration_in_ticks
+				var/next_respawn = SSwarmongers.respawning ? "Now" : "[round(timeto/10)] seconds"
+				stat("TIME UNTIL ARRIVAL: [next_respawn]")
 
 	if(client && client.holder && check_rights(R_ADMIN,0))
 		if(statpanel("MC"))

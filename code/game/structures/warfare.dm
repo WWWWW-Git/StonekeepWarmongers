@@ -6,7 +6,7 @@
 
 /obj/structure/warobjective/Initialize()
 	. = ..()
-	SSticker.fuckthisshit = src
+	SSwarmongers.fuckthisshit = src
 
 /obj/structure/warobjective/proc/setup()
 	var/datum/game_mode/warmongers/C = SSticker.mode
@@ -239,7 +239,7 @@
 
 /obj/structure/shopkeep/Initialize()
 	. = ..()
-	SSticker.warfare_barriers += src
+	SSwarmongers.warfare_barriers += src
 
 /obj/structure/shopkeep/examine(mob/user)
 	. = ..()

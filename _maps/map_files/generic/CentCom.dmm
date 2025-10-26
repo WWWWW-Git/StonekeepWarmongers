@@ -1492,10 +1492,18 @@
 	icon_state = "chess"
 	},
 /area/rogue/indoors)
+"gS" = (
+/turf/closed/wall/mineral/rogue/wood,
+/area/rogue/indoors/airship/red)
 "gY" = (
 /obj/machinery/light/rogue/forge,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town/dwarfin)
+"hf" = (
+/obj/structure/bed/rogue/shit,
+/obj/effect/landmark/bluairship,
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/airship/blue)
 "hQ" = (
 /turf/open/floor/rogue/blocks,
 /area/rogue)
@@ -1590,6 +1598,11 @@
 /obj/structure/table/optable/abductor,
 /turf/open/floor/white,
 /area/rogue/indoors)
+"mf" = (
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/rogue/indoors/airship/red)
 "mp" = (
 /obj/structure/roguewindow/openclose{
 	icon_state = "woodwindowdir";
@@ -1772,6 +1785,10 @@
 /obj/structure/toilet,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors)
+"rn" = (
+/obj/structure/wallladder,
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/airship/blue)
 "ro" = (
 /obj/structure/fermenting_barrel/random/water,
 /turf/open/floor/rogue/herringbone,
@@ -1922,10 +1939,23 @@
 "vQ" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
+"vT" = (
+/obj/structure/bed/rogue/shit,
+/obj/effect/landmark/redairship,
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/rogue/indoors/airship/red)
 "wB" = (
 /obj/effect/landmark/start/new_player,
 /turf/open/floor/plating,
 /area/start)
+"wL" = (
+/obj/structure/fluff/standingflag/red,
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/rogue/indoors/airship/red)
 "wO" = (
 /turf/closed,
 /area/rogue/outdoors)
@@ -2032,6 +2062,12 @@
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors/town/dwarfin)
+"Ae" = (
+/obj/machinery/light/rogue/lanternpost/fixed/compact{
+	dir = 1
+	},
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/airship/blue)
 "Al" = (
 /obj/item/reagent_containers/food/snacks/grown/rogue/pipeweeddry,
 /obj/structure/closet/crate/roguecloset/dark,
@@ -2072,6 +2108,10 @@
 "Ba" = (
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
+"BB" = (
+/obj/structure/fluff/standingflag,
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/airship/blue)
 "BM" = (
 /obj/structure/mineral_door/wood/red{
 	lockid = "banditcamp";
@@ -2452,6 +2492,14 @@
 "RH" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"RN" = (
+/obj/machinery/light/rogue/lanternpost/fixed/compact{
+	dir = 1
+	},
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/rogue/indoors/airship/red)
 "RX" = (
 /turf/closed/indestructible/riveted,
 /area/start)
@@ -2461,6 +2509,9 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
+"Sl" = (
+/turf/closed/wall/mineral/rogue/wood,
+/area/rogue/indoors/airship/blue)
 "Sn" = (
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/dirt/road,
@@ -2554,6 +2605,15 @@
 /obj/structure/fluff/wallclock/l,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
+"Vo" = (
+/obj/structure/mineral_door/wood/donjon{
+	dir = 1;
+	icon_state = "donjondir";
+	locked = 1;
+	lockid = "mansionvampire"
+	},
+/turf/closed/wall/mineral/rogue/wood,
+/area/rogue/indoors/airship/blue)
 "Vu" = (
 /obj/machinery/light/rogue/forge,
 /turf/open/floor/rogue/ruinedwood{
@@ -2657,6 +2717,9 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
+"Ye" = (
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/airship/blue)
 "Yk" = (
 /obj/item/rogueweapon/pick,
 /turf/open/floor/rogue/dirt/road,
@@ -2710,11 +2773,26 @@
 "Zl" = (
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
+"ZC" = (
+/obj/structure/mineral_door/wood/donjon{
+	dir = 1;
+	icon_state = "donjondir";
+	locked = 1;
+	lockid = "mansionvampire"
+	},
+/turf/closed/wall/mineral/rogue/wood,
+/area/rogue/indoors/airship/red)
 "ZV" = (
 /obj/structure/closet/crate/chest,
 /obj/item/reagent_containers/powder,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
+"ZW" = (
+/obj/structure/wallladder,
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/rogue/indoors/airship/red)
 
 (1,1,1) = {"
 rQ
@@ -12092,25 +12170,25 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+bX
+Sl
+Sl
+Sl
+Vo
+Sl
+Sl
+Sl
+Sl
+bX
+gS
+gS
+gS
+ZC
+gS
+gS
+gS
+gS
+bX
 rQ
 rQ
 rQ
@@ -12222,25 +12300,25 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+bX
+Sl
+BB
+Ye
+Ye
+hf
+hf
+hf
+Sl
+bX
+gS
+wL
+mf
+mf
+vT
+vT
+vT
+gS
+bX
 rQ
 rQ
 rQ
@@ -12352,25 +12430,25 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+bX
+Sl
+Ye
+Ye
+Ae
+Ye
+Ye
+rn
+Sl
+bX
+gS
+mf
+mf
+RN
+mf
+mf
+ZW
+gS
+bX
 rQ
 rQ
 rQ
@@ -12482,25 +12560,25 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+bX
+Sl
+BB
+Ye
+Ye
+hf
+hf
+hf
+Sl
+bX
+gS
+wL
+mf
+mf
+vT
+vT
+vT
+gS
+bX
 rQ
 rQ
 rQ
@@ -12612,25 +12690,25 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+bX
+Sl
+Sl
+Sl
+Vo
+Sl
+Sl
+Sl
+Sl
+bX
+gS
+gS
+gS
+ZC
+gS
+gS
+gS
+gS
+bX
 rQ
 rQ
 rQ
@@ -12742,25 +12820,25 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
+bX
 rQ
 rQ
 rQ
