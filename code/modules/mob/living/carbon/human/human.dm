@@ -1,4 +1,3 @@
-#ifdef MATURESERVER
 /mob/living/carbon/human/MiddleClick(mob/user, params)
 	..()
 	if(!user)

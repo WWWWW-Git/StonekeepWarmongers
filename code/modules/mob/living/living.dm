@@ -2022,7 +2022,7 @@
 	regenerate_icons()
 	client?.change_view(CONFIG_GET(string/default_view))
 	hud_used?.backhudl.alpha = 255
-	if(client.prefs.visibility_accessibility == FALSE)
+	if(client?.prefs?.visibility_accessibility == FALSE)
 		for(var/atom/movable/screen/scannies/S in client.screen)
 			S.alpha = 80
 		for(var/atom/movable/screen/grain/S in client.screen)

@@ -1,4 +1,4 @@
-environment = "stonekeep.dme"
+environment = "stonekeepwarmongers.dme"
 
 [langserver]
 dreamchecker = true
