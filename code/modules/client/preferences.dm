@@ -222,7 +222,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 			dat += "<td style='width:33%;text-align:right'>"
 			dat += "<a href='?_src_=prefs;preference=keybinds;task=menu'>Keybinds</a><br>"
-			dat += "[user.get_triumphs() ? "[user.get_triumphs()]" : "NULLA"] <a href='?_src_=prefs;preference=showoff;'><b>TRIUMPH(s)</b></a>"
+			dat += "[user.get_triumphs() ? "[user.get_triumphs()]" : "NULLA (ZERO)"] <a href='?_src_=prefs;preference=showoff;'><b>TRIUMPH(s)</b></a>"
 			dat += "</td>"
 
 			dat += "</table>"

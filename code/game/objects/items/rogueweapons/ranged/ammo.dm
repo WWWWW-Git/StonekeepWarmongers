@@ -283,7 +283,7 @@
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
 	obj_flags = CAN_BE_HIT
-	woundclass = BCLASS_STAB
+	woundclass = BCLASS_BULLET
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
 	armor_penetration = 75

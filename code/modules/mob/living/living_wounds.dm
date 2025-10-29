@@ -143,6 +143,14 @@
 					added_wound = /datum/wound/bite
 				if(1 to 10)
 					added_wound = /datum/wound/bite/small
+		if(BCLASS_BULLET)
+			switch(dam)
+				if(20 to INFINITY)
+					added_wound = pick(/datum/wound/puncture/large,/datum/wound/slash/large)
+				if(10 to 20)
+					added_wound = pick(/datum/wound/slash,/datum/wound/puncture)
+				if(1 to 10)
+					added_wound = pick(/datum/wound/puncture/small,/datum/wound/slash/small)
 	if(added_wound)
 		added_wound = simple_add_wound(added_wound, silent, crit_message)
 	if(do_crit)

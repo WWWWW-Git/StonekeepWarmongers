@@ -71,7 +71,9 @@
 		cushioned = TRUE
 		visible_message("<span class='danger'>\The [src] hits \the [M.name]!</span>")
 		if(levels >= 2)
-			M.gib(TRUE)
+			if(!M.has_status_effect(/datum/status_effect/buff/spawn_protection))
+				adjust_triumphs(1)
+				M.gib(TRUE)
 		else
 			M.AdjustKnockdown(levels * 20)
 			M.take_overall_damage(dam * levels * 1.25)

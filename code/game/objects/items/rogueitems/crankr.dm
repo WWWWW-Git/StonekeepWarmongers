@@ -70,6 +70,7 @@
 	playsound(get_turf(user), "wetbreak", 100, TRUE, -5)
 	pot.reagents.add_reagent(chosen_potion, 25)
 	to_chat(user, "<span class='info'>The product is ready.</span>")
+	user.adjust_triumphs(1)
 	switch(user.warfare_faction)
 		if(RED_WARTEAM)
 			C.red_bonus++

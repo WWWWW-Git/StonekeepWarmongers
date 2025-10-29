@@ -86,7 +86,8 @@
 	var/mob/M = user.mob
 	if(!ishuman(M))
 		return
-	M.emote("warcry", intentional = TRUE)
+	if(M.stat == CONSCIOUS)
+		M.emote("warcry", intentional = TRUE)
 
 /datum/keybinding/living/wield
 	hotkey_keys = list("G")

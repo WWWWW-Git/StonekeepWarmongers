@@ -139,7 +139,6 @@ SUBSYSTEM_DEF(role_class_handler)
 	var/atom/movable/screen/advsetup/GET_IT_OUT = locate() in H.hud_used.static_inventory // dis line sux its basically a loop anyways if i remember
 	qdel(GET_IT_OUT)
 	H.cure_blind("advsetup")
-	H.apply_status_effect(/datum/status_effect/buff/spawn_protection)
 	H.remove_status_effect(/datum/status_effect/incapacitating/immobilized)
 
 	//If we get any plus factor at all, we run the datums boost proc on the human also.

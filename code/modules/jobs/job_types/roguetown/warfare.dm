@@ -54,6 +54,9 @@
 /mob/living/carbon/human/proc/warfare_announce()
 	set name = "ANNOUNCE!"
 	set category = "LORD"
+	if(stat != CONSCIOUS)
+		to_chat(src, "<span class='warning'>You're incapable.</span>")
+		return
 	var/ann = input(usr, "ANNOUNCE TO YOUR FLOCK!", "WARMONGERS") as null|text
 
 	if(ann)
@@ -68,6 +71,9 @@
 /mob/living/carbon/human/proc/warfare_command()
 	set name = "COMMAND!"
 	set category = "LORD"
+	if(stat != CONSCIOUS)
+		to_chat(src, "<span class='warning'>You're incapable.</span>")
+		return
 	var/ann = input(usr, "COMMAND YOUR FLOCK!", "WARMONGERS") as null|text
 
 	if(ann)

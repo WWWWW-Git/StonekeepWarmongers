@@ -108,7 +108,8 @@
 /mob/living/carbon/human/verb/emote_warcry()
 	set name = "WARCRY"
 	set category = "Noises"
-	emote("warcry", intentional = TRUE)
+	if(stat == CONSCIOUS)
+		emote("warcry", intentional = TRUE)
 
 /mob/living/carbon/human/verb/emote_warcry_f1()
 	set name = ".warcry"

@@ -183,6 +183,7 @@
 #define BCLASS_PICK			"stab"
 #define BCLASS_TWIST		"twist"
 #define BCLASS_PUNCH		"punch"
+#define BCLASS_BULLET		"bullet" // Hack
 #define BCLASS_BITE			"bite"
 #define BCLASS_BURN			"charring"
 #define BCLASS_LASHING		"lashing"

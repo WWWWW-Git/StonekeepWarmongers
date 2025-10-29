@@ -58,7 +58,7 @@
 	if(..())
 		return TRUE
 	var/adf = user.used_intent.clickcd
-	if(istype(user.rmb_intent, /datum/rmb_intent/aimed))
+	if(istype(user.rmb_intent, /datum/rmb_intent/aimed) || istype(user.rmb_intent, /datum/rmb_intent/strong))
 		adf = round(adf * 1.4)
 	if(istype(user.rmb_intent, /datum/rmb_intent/swift))
 		adf = round(adf * 0.6)
@@ -222,9 +222,9 @@
 		*/
 		if(C.domhand)
 			used_str = C.get_str_arms(C.used_hand)
-	//STR is +1 from STRONG stance and -1 from WEAK stance
+	//STR is +2 from STRONG stance and -1 from WEAK stance
 	if(istype(user.rmb_intent, /datum/rmb_intent/strong))
-		used_str++
+		used_str += 2
 	if(istype(user.rmb_intent, /datum/rmb_intent/weak))
 		used_str--
 	//Your max STR is 40.
@@ -487,7 +487,7 @@
 	if(force && !user.used_intent.tranged && !user.used_intent.tshield)
 		if(proximity_flag && isopenturf(target) && !user.used_intent?.noaa)
 			var/adf = user.used_intent.clickcd
-			if(istype(user.rmb_intent, /datum/rmb_intent/aimed))
+			if(istype(user.rmb_intent, /datum/rmb_intent/aimed) || istype(user.rmb_intent, /datum/rmb_intent/strong))
 				adf = round(adf * 1.4)
 			if(istype(user.rmb_intent, /datum/rmb_intent/swift))
 				adf = round(adf * 0.6)
@@ -497,7 +497,7 @@
 			user.aftermiss()
 		if(!proximity_flag && ismob(target) && !user.used_intent?.noaa) //this block invokes miss cost clicking on seomone who isn't adjacent to you
 			var/adf = user.used_intent.clickcd
-			if(istype(user.rmb_intent, /datum/rmb_intent/aimed))
+			if(istype(user.rmb_intent, /datum/rmb_intent/aimed) || istype(user.rmb_intent, /datum/rmb_intent/strong))
 				adf = round(adf * 1.4)
 			if(istype(user.rmb_intent, /datum/rmb_intent/swift))
 				adf = round(adf * 0.6)
