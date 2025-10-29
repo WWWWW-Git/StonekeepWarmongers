@@ -1,17 +1,17 @@
-/mob/living/carbon/human/species/human/northern
-	race = /datum/species/human/northern
+/mob/living/carbon/human/species/human/northern/subhumin
+	race = /datum/species/human/northern/subhumin
 
-/datum/species/human/northern
-	name = "Humin"
+/datum/species/human/northern/subhumin
+	name = "Subhumin"
 	id = "human"
-	desc = "<b>Humin</b><br>\
-	We are a gifted peoples, the great root below changing our bodies and our minds thanks\
-	to years of selfless service. But now the root has grown silent, and our place in the world is uncertain. \
-	Ours is the most populous race on the Clump, and we devote ourselves to our patron, that which granted us gifts \
-	beyond measure. Great nations have risen and fallen, crusades, jihads, genocides, all have come and gone but the \
-	Humin race remains, changed for the better. And at times, seemingly, for the worse."
+	desc = "<b>Subhumin</b><br>\
+	They call us lesser, say we do not embrace our fullest potential, but any true Humin would know that purity\
+	of body begets purity of soul. Mockery fades when they see what we are truly capable of, when one's bones are not\
+	replaced with roots, and his blood is turned to sap. Subhumin, we wear the name like a medal, for to be below what is now \
+	considered 'huminity' must surely be a cause for celebration, and not sorrow. \
+	We coexist with what remains of our once noble race, at least somewhat disheartened that they hate us because they remember a time when we were once truly great."
 
-	skin_tone_wording = "Patronage"
+	skin_tone_wording = "Enclave"
 
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,STUBBLE,OLDGREY)
@@ -44,25 +44,25 @@
 	specstats_f = list("strength" = 0, "perception" = 0, "intelligence" = 1, "constitution" = 0, "endurance" = 0, "speed" = 1, "fortune" = 0)
 	enflamed_icon = "widefire"
 
-/datum/species/human/northern/check_roundstart_eligible()
+/datum/species/human/northern/subhumin/check_roundstart_eligible()
 	return TRUE
 
-/datum/species/human/northern/get_skin_list()
+/datum/species/human/northern/subhumin/get_skin_list()
 	return sortList(list(
-		"Cauliflower" = SKIN_COLOR_CAULIFLOWER,
-		"Parsnip" = SKIN_COLOR_PARSNIP,
-		"Turnip" = SKIN_COLOR_TURNIP,
-		"Artichoke" = SKIN_COLOR_ARTICHOKE,
-		"Potato" = SKIN_COLOR_POTATO,
-		"Carrot" = SKIN_COLOR_CARROT,
-		"Squash" = SKIN_COLOR_SQUASH,
-		"Tomato" = SKIN_COLOR_TOMATO,
-		"Pepper" = SKIN_COLOR_PEPPER,
-		"Pumpkin" = SKIN_COLOR_PUMPKIN,
-		"Aubergine" = SKIN_COLOR_AUBERGINE,
+		"Frostbit" = SKIN_COLOR_ICECAP,
+		"Wrack" = SKIN_COLOR_ARCTIC,
+		"Hidden Garden" = SKIN_COLOR_TUNDRA,
+		"Bogtown" = SKIN_COLOR_CONTINENTAL,
+		"Grenn" = SKIN_COLOR_TEMPERATE,
+		"Kaiz Of Ku" = SKIN_COLOR_COASTAL,
+		"Heart" = SKIN_COLOR_SUBTROPICAL,
+		"Valorfort" = SKIN_COLOR_TROPICALDRY,
+		"Zybus" = SKIN_COLOR_TROPICALWET,
+		"Sand Ocean" = SKIN_COLOR_DESERT,
+		"Crater" = SKIN_COLOR_CRIMSONLANDS,
 	))
 
-/datum/species/human/northern/get_hairc_list()
+/datum/species/human/northern/subhumin/get_hairc_list()
 	return sortList(list(
 	"blond - pale" = "9d8d6e",
 	"blond - dirty" = "88754f",
@@ -86,7 +86,7 @@
 
 	))
 
-/datum/species/human/northern/random_name(gender,unique,lastname)
+/datum/species/human/northern/subhumin/random_name(gender,unique,lastname)
 
 	var/randname
 	if(unique)
@@ -97,15 +97,15 @@
 					break
 		if(gender == FEMALE)
 			for(var/i in 1 to 10)
-				randname = pick( world.file2list("string/rt/names/human/humnorf.txt") )
+				randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 				if(!findname(randname))
 					break
 	else
 		if(gender == MALE)
 			randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 		if(gender == FEMALE)
-			randname = pick( world.file2list("string/rt/names/human/humnorf.txt") )
+			randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 	return randname
 
-/datum/species/human/northern/random_surname()
+/datum/species/human/northern/subhumin/random_surname()
 	return " [pick(world.file2list("string/rt/names/human/humnorlast.txt"))]"

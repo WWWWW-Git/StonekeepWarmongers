@@ -237,3 +237,19 @@
 
 /obj/item/clothing/under/roguetown/tights/hakama/heartfelt
     color = CLOTHING_HEARTFELT
+
+//............Warmongers..........
+/obj/item/clothing/under/roguetown/trou/war/pantaloons
+	name = "pantaloons"
+	icon_state = "pantaloons"
+	desc = "Cheaply made pantaloons. Itchy."
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+
+/obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
+	icon_state = "pantaloons2"
+
+/obj/item/clothing/under/roguetown/trou/war/panties
+	name = "panties"
+	icon_state = "panties"
+	desc = "Comfortable undergarments. Far too large to be worn by the less rotund."
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'

@@ -349,3 +349,17 @@
 
 /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
 	color = COLOR_ALMOST_BLACK	
+
+//.............Warmongers................
+/obj/item/storage/backpack/rogue/backpack/war/ppr
+	slot_flags = ITEM_SLOT_BACK_L|ITEM_SLOT_BACK_R
+	name = "trashsack"
+	desc = "A cheaply made backpack worn by those in the PPR, topped with an itchy bedroll."
+	icon_state = "trashsack"
+	item_state = "trashsack"
+	icon = 'icons/roguetown/clothing/storage.dmi'
+
+/obj/item/storage/belt/rogue/leather/rope/war
+	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
+	icon_state = "rope"
+	color = "#382318"

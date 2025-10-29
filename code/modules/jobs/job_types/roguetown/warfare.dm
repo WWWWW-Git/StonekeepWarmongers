@@ -185,7 +185,8 @@
 	spawn_positions = 1
 	faction = "Station"
 	allowed_races = list(
-		"Humen"
+		"Humin",
+		"Subhumin"
 	)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	outfit = /datum/outfit/job/roguetown/redking
@@ -293,8 +294,8 @@
 //// MUSKETEER ////
 
 /datum/advclass/red/musketeer
-	name = "Musketeer"
-	tutorial = "Common infantry. Poorly armored and unsuited for melee, but equipped and trained for musket combat."
+	name = "Muckraker"
+	tutorial = "Unwashed land workers armed with muskets. The bulk of any PPR army."
 	outfit = /datum/outfit/job/roguetown/redsoldier
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -305,20 +306,27 @@
 
 /datum/outfit/job/roguetown/redsoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
-	pants = /obj/item/clothing/under/roguetown/trou/tobi
-	cloak = /obj/item/clothing/cloak/jinbaori/reddy
-	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/tatami
-	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
+	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
+	if(prob(50))
+		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
+	cloak = /obj/item/clothing/cloak/war/ppr/scarf
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
+	if(prob(50))
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	beltl = /obj/item/rogueweapon/huntingknife/bayonet
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
+	if(prob(50))
+		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
 	beltr = /obj/item/quiver/bullets
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	backr = GetMainGunForWarfareHeartfelt()
+	backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
 	neck = /obj/item/rogue/barkpowderflask
-	head = /obj/item/clothing/head/roguetown/helmet/jingasa
-	if(prob(70))
-		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
+	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm
+	if(prob(50))
+		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm/alternate
+	backpack_contents = list(/obj/item/rogue/sandbagkit = 4, /obj/item/rogueweapon/shovel = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
@@ -534,7 +542,7 @@
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
 	neck = /obj/item/rogue/barkpowderflask
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/heart
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	head = /obj/item/clothing/head/roguetown/tengai/gasa
 	if(prob(70))
 		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
@@ -688,7 +696,8 @@
 	spawn_positions = 1
 	faction = "Station"
 	allowed_races = list(
-		"Humen"
+		"Humin",
+		"Subhumin"
 	)
 	outfit = /datum/outfit/job/roguetown/bluking
 
@@ -1112,7 +1121,7 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	neck = /obj/item/rogue/barkpowderflask
 	mask = /obj/item/clothing/mask/rogue/snipermask
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/jezail
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 6, TRUE)
