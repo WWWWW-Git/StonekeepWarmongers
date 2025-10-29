@@ -73,6 +73,8 @@
 	drop_sound = 'sound/combat/ramrod_pickup.ogg' // lol
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "ramrod"
+	force = 15
+	possible_item_intents = list(/datum/intent/use,/datum/intent/mace/strike,/datum/intent/mace/smash)
 
 /obj/item/rogue/barkpowderflask
 	name = "powderflask"

@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"az" = (
+/obj/structure/warobjective/bloodstatue,
+/turf/closed/mineral/rogue/bedrock,
+/area/rogue/underworld)
 "aW" = (
 /obj/structure/barricade/sandbags/rogue,
 /obj/structure/barricade/sandbags/rogue{
@@ -5655,7 +5659,7 @@ oI
 oI
 oI
 oI
-oI
+az
 "}
 (2,1,2) = {"
 oI
