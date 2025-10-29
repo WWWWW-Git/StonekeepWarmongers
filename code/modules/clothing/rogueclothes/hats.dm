@@ -1103,7 +1103,10 @@
 /obj/item/clothing/head/roguetown/helmet/war/ppr/toffhelm
 	name = "toff's helmet"
 	desc = "Dulliron battered into the vague shape of a pointed helmet, crowned with a large hat signifying the wearer as being VERY important. And don't you forget it."
-	icon_state = "fodderhelm"
+	icon_state = "toffhat"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
 	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 	flags_cover = HEADCOVERSEYES

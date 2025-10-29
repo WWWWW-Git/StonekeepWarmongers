@@ -166,7 +166,7 @@
 				to_chat(H, "<span class='info'>I put \the [rrod] into \the [src].</span>")
 				playsound(src.loc, 'sound/combat/ramrod_pickup.ogg', 100, FALSE, -1)
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
 	icon_state = "musket"
 	desc = "A firearm of Fogland design, provided to Heartfelt to fight the Grenzelhofts."
 	bayonetable = TRUE
