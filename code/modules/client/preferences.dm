@@ -1613,8 +1613,6 @@ Slots: [job.spawn_positions]</span>
 						facial_hairstyle = "None"
 					else
 						facial_hairstyle = pref_species.random_facial_hairstyle(gender)
-				if("underwear")
-					underwear = pref_species.random_underwear(gender)
 				if("underwear_color")
 					underwear_color = random_short_color()
 				if("undershirt")

@@ -199,13 +199,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 							spec_undies += X
 			return spec_undies
 
-/datum/species/proc/random_underwear(gender)
-	var/list/spec_undies = get_spec_undies_list(gender)
-	var/datum/sprite_accessory/X
-	if(spec_undies.len)
-		X = pick(spec_undies)
-		return X.name
-
 /datum/species/proc/get_spec_hair_list(gender)
 	if(!GLOB.hairstyles_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/hair,GLOB.hairstyles_list, GLOB.hairstyles_male_list, GLOB.hairstyles_female_list)
@@ -495,7 +488,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 /datum/species/proc/random_character(mob/living/carbon/human/H)
 	H.real_name = random_name(H.gender,1)
 //	H.age = pick(possible_ages)
-	H.underwear = random_underwear(H.gender)
 	H.hairstyle = random_hairstyle(H.gender)
 	H.facial_hairstyle = random_facial_hairstyle(H.gender)
 	var/list/hairs
