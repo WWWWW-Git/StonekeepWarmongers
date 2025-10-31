@@ -517,3 +517,18 @@
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
 	body_parts_covered = CHEST|ARMS|VITALS
+
+//.............Warmongers..................
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
+	name = "worker's shirt"
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red."
+	icon_state = "pprshirt"
+	item_state = "pprshirt"
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red. This one has epaulettes signifying a rather prestigious career in raking muck."
+	icon_state = "pprshirt2"
+	item_state = "pprshirt2"

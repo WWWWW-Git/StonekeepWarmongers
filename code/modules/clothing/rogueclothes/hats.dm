@@ -1081,3 +1081,35 @@
 	bloody_icon_state = "helmetblood_big"
 	worn_x_dimension = 64
 	worn_y_dimension = 64
+
+//..............Warmongers...................
+/obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm
+	name = "pointed helmet"
+	desc = "Dulliron battered into the vague shape of a pointed helmet. You can barely see out of it. Some muckrakers prefer to just use it as a portable shitpot. Those same muckrakers get a messy surprise when they then go to wear their newly polished helmet."
+	icon_state = "fodderhelm"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+
+/obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm/alternate
+	icon_state = "fodderhelm2"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+
+/obj/item/clothing/head/roguetown/helmet/war/ppr/toffhelm
+	name = "toff's helmet"
+	desc = "Dulliron battered into the vague shape of a pointed helmet, crowned with a large hat signifying the wearer as being VERY important. And don't you forget it."
+	icon_state = "toffhat"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND

@@ -139,12 +139,6 @@
 	gender = MALE
 	specuse = list("human", "tiefling", "aasimar")
 
-/datum/sprite_accessory/hair/undercut
-	name = "Conscript"
-	icon_state = "hair_undercut"
-	gender = MALE
-	under_layer = TRUE
-
 /datum/sprite_accessory/hair/father
 	name = "Forged"
 	icon_state = "hair_father"
@@ -215,64 +209,9 @@
 	gender = MALE
 	specuse = list("human", "tiefling", "aasimar")
 
-
-/datum/sprite_accessory/hair/scout
-	name = "Druid"
-	icon_state = "elfhair_scout"
-	gender = MALE
-	specuse = list("elf")
-
-/datum/sprite_accessory/hair/elfhair_son
-	name = "Sun"
-	icon_state = "elfhair_son"
-	gender = MALE
-	specuse = list("elf")
-
-/datum/sprite_accessory/hair/elfhair_fatherless
-	name = "Princely"
-	icon_state = "elfhair_fatherless"
-	gender = MALE
-	specuse = list("elf")
-
-/datum/sprite_accessory/hair/elfhair_long
-	name = "Long"
-	icon_state = "elfhair_long"
-	gender = MALE
-	specuse = list("elf", "aasimar")
-
-/datum/sprite_accessory/hair/elfhair_tied
-	name = "Warrior"
-	icon_state = "elfhair_tied"
-	gender = MALE
-	specuse = list("elf")
-
-/datum/sprite_accessory/hair/hair_sidecut
-	name = "Tied Sidecut"
-	icon_state = "TIED_SIDECUT"
-	gender = MALE
-	specuse = list("human", "tiefling", "aasimar")
-
-/datum/sprite_accessory/hair/hair_sidecut_untied
-	name = "Wild Sidecut"
-	icon_state = "UNTIED_SIDECUT"
-	gender = MALE
-	specuse = list("human", "tiefling", "aasimar")
-
-/datum/sprite_accessory/hair/hair_trimmerd
-	name = "Trimmed hair"
-	icon_state = "HAIR_TRIMMED"
-	gender = MALE
-	specuse = list("human", "tiefling", "aasimar")
-
-/datum/sprite_accessory/hair/manbun_rows
-	name = "Manbun"
-	icon_state = "MANBUN_ROWS"
-	gender = MALE
-	specuse = list("human", "tiefling", "aasimar")
-
-/datum/sprite_accessory/hair/manbun_rows
-	name = "Manbun alt"
-	icon_state = "MANBUN_2"
+/datum/sprite_accessory/hair/hair_aristocrat
+	name = "Aristocrat"
+	icon_state = "hair_majestic"
 	gender = MALE
 	specuse = list("human", "tiefling", "aasimar")
 
@@ -376,54 +315,10 @@
 	icon_state = "fhair_pixie"
 	gender = FEMALE
 
-/datum/sprite_accessory/hair/fwisp
-	name = "Wisp"
-	icon_state = "felfhair_wisp"
-	gender = FEMALE
-	specuse = list("elf")
-
-/datum/sprite_accessory/hair/ffancy
-	name = "Fancy"
-	icon_state = "felfhair_fancy"
-	gender = NEUTER
-	specuse = list("elf")
-
-/datum/sprite_accessory/hair/dmajesty
-	name = "Majestic Dwarf"
-	icon_state = "fdwarf_majestic"
-	gender = FEMALE
-	specuse = list("dwarf")
-
-/datum/sprite_accessory/hair/fmajesty
-	name = "Majestic Human"
+/datum/sprite_accessory/hair/faristo
+	name = "Aristocrat"
 	icon_state = "fhair_majestic"
 	gender = FEMALE
-	specuse = list("human")
-
-/datum/sprite_accessory/hair/elfmajesty
-	name = "Majestic Elf"
-	icon_state = "elfhair_majestic"
-	gender = NEUTER
-	specuse = list("elf")
-
-/datum/sprite_accessory/hair/flongtails
-	name = "Shrine Keeper"
-	icon_state = "felfhair_longtails"
-	gender = FEMALE
-	specuse = list("elf")
-
-/datum/sprite_accessory/hair/fupper
-	name = "Tied Up"
-	icon_state = "felfhair_updo"
-	gender = FEMALE
-	specuse = list("elf")
-
-/datum/sprite_accessory/hair/ffelfhair_hime
-	name = "Mystery"
-	icon_state = "felfhair_hime"
-	gender = FEMALE
-	specuse = list("elf")
-
 
 /*
 /datum/sprite_accessory/hair/felfhair_fatherless

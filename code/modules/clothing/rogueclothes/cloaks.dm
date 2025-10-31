@@ -985,3 +985,11 @@
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	body_parts_covered = CHEST|GROIN|VITALS|ARMS
+
+//................Warmongers..................
+
+/obj/item/clothing/cloak/war/ppr/scarf
+	name = "red scarf"
+	desc = "A red scarf worn by muckrakers and landworkers in the PPR, proudly covered in bier stains and dirt."
+	icon_state = "ppr_scarf"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK

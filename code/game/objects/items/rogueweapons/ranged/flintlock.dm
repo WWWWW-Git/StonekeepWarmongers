@@ -2,8 +2,8 @@
 	name = "barksteel"
 	desc = "A firearm without a bayonet, typically used by marksmen."
 	icon = 'icons/roguetown/weapons/64.dmi'
-	icon_state = "longgun"
-	item_state = "longgun"
+	icon_state = "musket"
+	item_state = "musket"
 	possible_item_intents = list(INTENT_GENERIC)
 	gripped_intents = list(/datum/intent/shoot/musket/rifle, /datum/intent/shoot/musket/arc, /datum/intent/mace/smash/wood)
 	wieldsound = 'sound/combat/musket_wield.ogg'
@@ -59,12 +59,8 @@
 	if(has_bayonet)
 		. += "<span class='tutorial'>Use rightclick to remove the bayonet.</span>"
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/heart
-	icon_state = "barotrauma1"
-	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/heavy/strike)
-
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz
-	icon_state = "ironbarkmarksman"
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/jezail
+	icon_state = "jezail"
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/heavy/strike)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/equipped(mob/living/user, slot)
@@ -171,16 +167,11 @@
 				playsound(src.loc, 'sound/combat/ramrod_pickup.ogg', 100, FALSE, -1)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
-	icon_state = "barotrauma"
+	icon_state = "musket"
 	desc = "A firearm of Fogland design, provided to Heartfelt to fight the Grenzelhofts."
 	bayonetable = TRUE
 	spread = 0.5
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/smash/wood)
-
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz
-	desc = "A weapon that is common in the ranks of the armies of Grenzelhoft, it gets the job done."
-	icon_state = "ironbarker"
-	bayonetable = TRUE
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/dropped(mob/user)
 	. = ..()
