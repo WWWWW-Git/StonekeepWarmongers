@@ -1,17 +1,13 @@
-/mob/living/carbon/human/species/human/northern
-	race = /datum/species/human/northern
+/mob/living/carbon/human/species/human/northern/bulky
+	race = /datum/species/human/northern/bulky
 
-/datum/species/human/northern
-	name = "Humin"
-	id = "human"
-	desc = "<b>Humin</b><br>\
-	We are a gifted peoples, the great root below changing our bodies and our minds thanks\
-	to years of selfless service. But now the root has grown silent, and our place in the world is uncertain. \
-	Ours is the most populous race on the Clump, and we devote ourselves to our patron, that which granted us gifts \
-	beyond measure. Great nations have risen and fallen, crusades, jihads, genocides, all have come and gone but the \
-	Humin race remains, changed for the better. And at times, seemingly, for the worse."
+/datum/species/human/northern/bulky
+	name = "Bulky"
+	id = "bulky"
+	desc = "<b>Bulky</b><br>\
+	You are a genetic freak of nature, tall and strong, with not much going on between those ears in the slightest."
 
-	skin_tone_wording = "Patronage"
+	skin_tone_wording = "Origin"
 
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,STUBBLE,OLDGREY)
@@ -23,46 +19,46 @@
 	disliked_food = NONE
 	liked_food = NONE
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
-	limbs_icon_m = 'icons/roguetown/mob/bodies/m/mt.dmi'
-	limbs_icon_f = 'icons/roguetown/mob/bodies/f/fm.dmi'
+	limbs_icon_m = 'icons/roguetown/mob/bodies/m/mm.dmi'
+	limbs_icon_f = 'icons/roguetown/mob/bodies/f/ft.dmi'
 	dam_icon = 'icons/roguetown/mob/bodies/dam/dam_male.dmi'
 	dam_icon_f = 'icons/roguetown/mob/bodies/dam/dam_female.dmi'
 	hairyness = "t1"
 	soundpack_m = /datum/voicepack/male
 	soundpack_f = /datum/voicepack/female
 	offset_features = list(OFFSET_ID = list(0,1), OFFSET_GLOVES = list(0,1), OFFSET_WRISTS = list(0,1),\
-	OFFSET_CLOAK = list(0,1), OFFSET_FACEMASK = list(0,1), OFFSET_HEAD = list(0,1), \
-	OFFSET_FACE = list(0,1), OFFSET_BELT = list(0,1), OFFSET_BACK = list(0,1), \
+	OFFSET_CLOAK = list(0,1), OFFSET_FACEMASK = list(0,1), OFFSET_HEAD = list(0,2), \
+	OFFSET_FACE = list(0,3), OFFSET_BELT = list(0,1), OFFSET_BACK = list(0,1), \
 	OFFSET_NECK = list(0,1), OFFSET_MOUTH = list(0,1), OFFSET_PANTS = list(0,1), \
 	OFFSET_SHIRT = list(0,1), OFFSET_ARMOR = list(0,1), OFFSET_HANDS = list(0,1), OFFSET_UNDIES = list(0,1), \
 	OFFSET_ID_F = list(0,-1), OFFSET_GLOVES_F = list(0,0), OFFSET_WRISTS_F = list(0,0), OFFSET_HANDS_F = list(0,0), \
-	OFFSET_CLOAK_F = list(0,0), OFFSET_FACEMASK_F = list(0,-1), OFFSET_HEAD_F = list(0,-1), \
-	OFFSET_FACE_F = list(0,0), OFFSET_BELT_F = list(0,0), OFFSET_BACK_F = list(0,-1), \
+	OFFSET_CLOAK_F = list(0,0), OFFSET_FACEMASK_F = list(0,-1), OFFSET_HEAD_F = list(0,2), \
+	OFFSET_FACE_F = list(0,3), OFFSET_BELT_F = list(0,0), OFFSET_BACK_F = list(0,-1), \
 	OFFSET_NECK_F = list(0,-1), OFFSET_MOUTH_F = list(0,-1), OFFSET_PANTS_F = list(0,0), \
 	OFFSET_SHIRT_F = list(0,0), OFFSET_ARMOR_F = list(0,0), OFFSET_UNDIES_F = list(0,0))
 	specstats = list("strength" = 0, "perception" = 0, "intelligence" = 0, "constitution" = 1, "endurance" = 1, "speed" = 0, "fortune" = 0)
 	specstats_f = list("strength" = 0, "perception" = 0, "intelligence" = 1, "constitution" = 0, "endurance" = 0, "speed" = 1, "fortune" = 0)
 	enflamed_icon = "widefire"
 
-/datum/species/human/northern/check_roundstart_eligible()
+/datum/species/human/northern/bulky/check_roundstart_eligible()
 	return TRUE
 
-/datum/species/human/northern/get_skin_list()
+/datum/species/human/northern/bulky/get_skin_list()
 	return sortList(list(
-		"Cauliflower" = SKIN_COLOR_CAULIFLOWER,
-		"Parsnip" = SKIN_COLOR_PARSNIP,
-		"Turnip" = SKIN_COLOR_TURNIP,
-		"Artichoke" = SKIN_COLOR_ARTICHOKE,
-		"Potato" = SKIN_COLOR_POTATO,
-		"Carrot" = SKIN_COLOR_CARROT,
-		"Squash" = SKIN_COLOR_SQUASH,
-		"Tomato" = SKIN_COLOR_TOMATO,
-		"Pepper" = SKIN_COLOR_PEPPER,
-		"Pumpkin" = SKIN_COLOR_PUMPKIN,
-		"Aubergine" = SKIN_COLOR_AUBERGINE,
+		"Frostbit" = SKIN_COLOR_ICECAP,
+		"Wrack" = SKIN_COLOR_ARCTIC,
+		"Hidden Garden" = SKIN_COLOR_TUNDRA,
+		"Bogtown" = SKIN_COLOR_CONTINENTAL,
+		"Grenn" = SKIN_COLOR_TEMPERATE,
+		"Kaiz Of Ku" = SKIN_COLOR_COASTAL,
+		"Heart" = SKIN_COLOR_SUBTROPICAL,
+		"Valorfort" = SKIN_COLOR_TROPICALDRY,
+		"Zybus" = SKIN_COLOR_TROPICALWET,
+		"Sand Ocean" = SKIN_COLOR_DESERT,
+		"Crater" = SKIN_COLOR_CRIMSONLANDS,
 	))
 
-/datum/species/human/northern/get_hairc_list()
+/datum/species/human/northern/bulky/get_hairc_list()
 	return sortList(list(
 	"blond - pale" = "9d8d6e",
 	"blond - dirty" = "88754f",
@@ -86,7 +82,7 @@
 
 	))
 
-/datum/species/human/northern/random_name(gender,unique,lastname)
+/datum/species/human/northern/bulky/random_name(gender,unique,lastname)
 
 	var/randname
 	if(unique)
@@ -97,15 +93,15 @@
 					break
 		if(gender == FEMALE)
 			for(var/i in 1 to 10)
-				randname = pick( world.file2list("string/rt/names/human/humnorf.txt") )
+				randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 				if(!findname(randname))
 					break
 	else
 		if(gender == MALE)
 			randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 		if(gender == FEMALE)
-			randname = pick( world.file2list("string/rt/names/human/humnorf.txt") )
+			randname = pick( world.file2list("string/rt/names/human/humnorm.txt") )
 	return randname
 
-/datum/species/human/northern/random_surname()
+/datum/species/human/northern/bulky/random_surname()
 	return " [pick(world.file2list("string/rt/names/human/humnorlast.txt"))]"

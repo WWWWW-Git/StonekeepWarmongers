@@ -191,8 +191,7 @@
 	spawn_positions = 1
 	faction = "Station"
 	allowed_races = list(
-		"Humin",
-		"Subhumin"
+		"Fat"
 	)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	outfit = /datum/outfit/job/roguetown/redking
@@ -236,19 +235,16 @@
 	..()
 	var/datum/game_mode/warmongers/W = SSticker.mode
 
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/heartfelt
-	mask = /obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/colourable/oni
 	neck = /obj/item/clothing/neck/roguetown/gorget/flasked
+	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/toffhelm
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/quiver/bullets
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
-	pants = /obj/item/clothing/under/roguetown/trou/tobi
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	pants = /obj/item/clothing/under/roguetown/trou/war/panties
+	belt = /obj/item/storage/belt/rogue/leather/black
 	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/rogueweapon/sword/sabre/warcrime
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander
-	cloak = /obj/item/clothing/cloak/heartfelt
-	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	armor = /obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies
 	if(istype(W.warmode, /datum/warmode/lords))
 		head = /obj/item/clothing/head/roguetown/warmongers/crownred
 	if(!(findtext(H.real_name, " of ") || findtext(H.real_name, " the ")))
@@ -313,22 +309,56 @@
 /datum/outfit/job/roguetown/redsoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
-	if(prob(50))
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
+	if(H.dna.species.id == "fat")
+		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat
+	else
+		if(H.dna.species.id == "bulky")
+			pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky
+		if(prob(50))
+			pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
+			if(H.dna.species.id == "fat")
+			else
+				pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat/alternate
+				if(H.dna.species.id == "bulky")
+					pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky/alternate
 	cloak = /obj/item/clothing/cloak/war/ppr/scarf
+	if(H.dna.species.id == "bulky")
+		cloak = null
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
-	if(prob(50))
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
+	if(H.dna.species.id == "fat")
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
+	else
+		if(H.dna.species.id == "bulky")
+			shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky
+		if(prob(50))
+			shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
+			if(H.dna.species.id == "fat")
+			else
+				shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat/alternate
+				if(H.dna.species.id == "bulky")
+					shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	if(H.dna.species.id == "bulky")
+		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	beltl = /obj/item/rogueweapon/huntingknife/bayonet
+	if(H.dna.species.id == "bulky")
+		beltl = /obj/item/rogueweapon/mace/cudgel/war
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
 	beltr = /obj/item/quiver/bullets
+	if(H.dna.species.id == "bulky")
+		beltr = /obj/item/restraints/legcuffs/bola
 	backr = GetMainGunForWarfareHeartfelt()
+	if(H.dna.species.id == "bulky")
+		backr = null
 	backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
+	if(H.dna.species.id == "bulky")
+		backl = /obj/item/rogueweapon/shield/tower/war
 	neck = /obj/item/rogue/barkpowderflask
+	if(H.dna.species.id == "bulky")
+		neck = null
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm/alternate
@@ -701,8 +731,9 @@
 	spawn_positions = 1
 	faction = "Station"
 	allowed_races = list(
-		"Humin",
-		"Subhumin"
+		"fat",
+		"standard",
+		"bulky"
 	)
 	outfit = /datum/outfit/job/roguetown/bluking
 
