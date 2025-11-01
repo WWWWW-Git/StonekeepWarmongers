@@ -495,3 +495,28 @@
 	icon = 'icons/roguetown/weapons/32.dmi'
 	icon_state = "jitte"
 	wdefense = 4
+
+//...........Warfare............
+/obj/item/rogueweapon/mace/cudgel/war
+	force = 15
+	force_wielded = 20
+	name = "cudgel"
+	icon_state = "cudgel"
+	desc = "A heavy iron club for cracking heads."
+	gripped_intents = null
+	smeltresult = /obj/item/ash
+	wlength = WLENGTH_SHORT
+	w_class = WEIGHT_CLASS_NORMAL
+	max_integrity = 180
+	wbalance = 0
+	minstr = 0
+	wdefense = 3
+
+/obj/item/rogueweapon/mace/cudgel/war/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.5,"sx" = -8,"sy" = -7,"nx" = 10,"ny" = -7,"wx" = -1,"wy" = -8,"ex" = 1,"ey" = -7,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 91,"sturn" = -90,"wturn" = -90,"eturn" = 90,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.4,"sx" = -3,"sy" = -4,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 70,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 1,"wflip" = 0,"eflip" = 0)

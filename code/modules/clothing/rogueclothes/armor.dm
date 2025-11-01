@@ -740,9 +740,13 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 	name = "breastplate"
 	desc = "The finest dulliron hammered haphazardly into armor. Don't get your hopes up of it saving your life."
 	icon_state = "dullplate"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
 	max_integrity = 200
 	smeltresult = /obj/item/ingot/iron
-	armor_class = ARMOR_CLASS_HEAVY
+	armor_class = ARMOR_CLASS_LIGHT
+	allowed_race = list("standard")
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
 	icon_state = "dullplate2"
@@ -753,6 +757,10 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 	desc = "A fine aristocratic uniform, perfect for the aspiring Warmonger. Only for those with a healthy rotundness."
 	body_parts_covered = CHEST|ARMS|VITALS
 	icon_state = "jammies"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	allowed_sex = list("female", "male")
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
 	armor = list("melee" = 30, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT)
 	blocksound = SOFTHIT
@@ -763,3 +771,4 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
 	armor_class = ARMOR_CLASS_LIGHT
+	allowed_race = list("fat")
