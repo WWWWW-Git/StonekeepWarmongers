@@ -232,4 +232,20 @@
 	gender = PLURAL
 	icon_state = "stompers"
 	item_state = "stompers"
+	icon = 'icons/roguetown/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
+	allowed_race = list("standard", "fat")
+	armor = list("melee" = 15, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
+	name = "stompers"
+	desc = "These workboots are perfect for trudging through the mud of the PPR lands. And corpses too. There are a good amount of those in the mud."
+	gender = PLURAL
+	icon_state = "stompersbulky"
+	item_state = "stompersbulky"
+	icon = 'icons/roguetown/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
+	allowed_race = list("bulky")
 	armor = list("melee" = 15, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)

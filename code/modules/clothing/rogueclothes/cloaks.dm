@@ -993,3 +993,4 @@
 	desc = "A red scarf worn by muckrakers and landworkers in the PPR, proudly covered in bier stains and dirt."
 	icon_state = "ppr_scarf"
 	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_race = list("standard", "fat")
