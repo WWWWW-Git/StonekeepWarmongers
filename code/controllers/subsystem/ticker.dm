@@ -149,6 +149,7 @@ SUBSYSTEM_DEF(ticker)
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
 	login_music = pick('sound/music/dreadfulstench.ogg','sound/music/practiceofwar.ogg','sound/music/faceoff.ogg')
+	SSevents.getHoliday()
 
 	/*
 	if(!GLOB.syndicate_code_phrase)
@@ -513,13 +514,11 @@ SUBSYSTEM_DEF(ticker)
 	CHECK_TICK
 
 	Master.SetRunLevel(RUNLEVEL_GAME)
-/*
 	if(SSevents.holidays)
 		to_chat(world, "<span class='notice'>and...</span>")
 		for(var/holidayname in SSevents.holidays)
 			var/datum/holiday/holiday = SSevents.holidays[holidayname]
-			to_chat(world, "<h4>[holiday.greet()]</h4>")
-*/
+			to_chat(world, "<h4><span class='notice'><span class='typewrite'>[holiday.greet()]</span></span></h4>")
 
 	CHECK_TICK
 

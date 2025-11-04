@@ -657,8 +657,6 @@
 	..()
 
 /datum/species/golem/cloth/check_roundstart_eligible()
-	if(SSevents.holidays && SSevents.holidays[HALLOWEEN])
-		return TRUE
 	return ..()
 
 /datum/species/golem/cloth/random_name(gender,unique,lastname)
