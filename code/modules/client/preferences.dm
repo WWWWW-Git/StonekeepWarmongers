@@ -82,7 +82,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/eye_color = "000"				//Eye color
 	var/voice_color = "a0a0a0"
 	var/detail_color = "000"
-	var/datum/species/pref_species = new /datum/species/human/northern()	//Mutant race
+	var/datum/species/pref_species = new /datum/species/human/northern/standard()	//Mutant race
 	var/datum/patron/selected_patron
 	var/static/datum/patron/default_patron = /datum/patron/divine/astrata
 	var/list/features = list("mcolor" = "FFF", "ethcolor" = "9c3030", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain", "moth_markings" = "None")
@@ -253,7 +253,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a> <a href='?_src_=prefs;preference=name;task=random'>\[R\]</a>"
 
 			dat += "<BR>"
-			dat += "<b>RACE:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (&#5859)"]<BR>"
+			dat += "<b>BODYTYPE:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (&#5859)"]<BR>"
 //			dat += "<a href='?_src_=prefs;preference=species;task=random'>Random Species</A> "
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SPECIES]'>Always Random Species: [(randomise[RANDOM_SPECIES]) ? "Yes" : "No"]</A><br>"
 
@@ -1879,7 +1879,7 @@ Slots: [job.spawn_positions]</span>
 							continue
 						crap += bla
 
-					var/result = input(user, "Select a race", "WARMONGERS") as null|anything in crap
+					var/result = input(user, "Select a bodytype", "WARMONGERS") as null|anything in crap
 
 					if(result)
 						//var/newtype = GLOB.species_list[result]
@@ -2357,13 +2357,13 @@ Slots: [job.spawn_positions]</span>
 	var/datum/species/chosen_species
 	chosen_species = pref_species.type
 	if(!(pref_species.name in GLOB.roundstart_races))
-		chosen_species = /datum/species/human/northern
-		pref_species = new /datum/species/human/northern
+		chosen_species = /datum/species/human/northern/standard
+		pref_species = new /datum/species/human/northern/standard
 		random_character(gender)
 	if(parent)
 		if(pref_species.patreon_req > parent.patreonlevel())
-			chosen_species = /datum/species/human/northern
-			pref_species = new /datum/species/human/northern
+			chosen_species = /datum/species/human/northern/standard
+			pref_species = new /datum/species/human/northern/standard
 			random_character(gender)
 
 	character.age = age

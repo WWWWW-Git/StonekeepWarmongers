@@ -103,7 +103,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	if(H.dna.species?.id != "human" && H.dna.species?.id != "elf")
 		H.age = AGE_ADULT
 		if(prob(50))
-			H.set_species(/datum/species/human/northern)
+			H.set_species(/datum/species/human/northern/standard)
 		else
 			H.set_species(/datum/species/elf/snow) //setspecies randomizes body
 		H.after_creation()

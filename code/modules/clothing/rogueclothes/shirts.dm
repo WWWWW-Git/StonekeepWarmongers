@@ -524,11 +524,67 @@
 	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red."
 	icon_state = "pprshirt"
 	item_state = "pprshirt"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
 	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("standard")
+
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
+	name = "worker's shirt"
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red."
+	icon_state = "pprshirtfat"
+	item_state = "pprshirtfat"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("fat")
+
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky
+	name = "worker's shirt"
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red."
+	icon_state = "pprshirtbulky"
+	item_state = "pprshirtbulky"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("bulky")
 
 /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
 	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red. This one has epaulettes signifying a rather prestigious career in raking muck."
 	icon_state = "pprshirt2"
 	item_state = "pprshirt2"
+
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat/alternate
+	name = "worker's shirt"
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red. This one has epaulettes signifying a rather prestigious career in raking muck."
+	icon_state = "pprshirt2fat"
+	item_state = "pprshirt2fat"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("fat")
+
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky/alternate
+	name = "worker's shirt"
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red. This one has epaulettes signifying a rather prestigious career in raking muck."
+	icon_state = "pprshirt2bulky"
+	item_state = "pprshirt2bulky"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("bulky")

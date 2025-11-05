@@ -25,8 +25,6 @@
 			H.heal_overall_damage(1,1, 0, BODYPART_ORGANIC)
 
 /datum/species/shadow/check_roundstart_eligible()
-	if(SSevents.holidays && SSevents.holidays[HALLOWEEN])
-		return TRUE
 	return ..()
 
 /datum/species/shadow/nightmare
