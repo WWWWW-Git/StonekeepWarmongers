@@ -88,9 +88,9 @@
 
 #define AMB_TOWNDAY list('sound/ambience/townday.ogg')
 
-#define AMB_WARFARE list('sound/beforedeath.ogg')
+#define AMB_WARFARE list('sound/music/beforedeath.ogg')
 
-#define AMB_WARFARE_INDOORS list('sound/powderdry.ogg')
+#define AMB_WARFARE_INDOORS list('sound/music/powderdry.ogg')
 
 #define MUSIC_COMBAT list('sound/music/combatgrenzelhoft.ogg',\
 						'sound/music/combatheartfelt.ogg',\
