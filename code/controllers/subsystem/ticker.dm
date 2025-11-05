@@ -148,7 +148,7 @@ SUBSYSTEM_DEF(ticker)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
-	login_music = pick('sound/music/dreadfulstench.ogg','sound/music/practiceofwar.ogg','sound/music/faceoff.ogg')
+	login_music = pick('sound/music/warmongrels.ogg')
 
 	/*
 	if(!GLOB.syndicate_code_phrase)
@@ -505,7 +505,7 @@ SUBSYSTEM_DEF(ticker)
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
 		else
-			C.mob.playsound_local(C.mob, 'sound/vote_start.ogg', 70, FALSE)
+			C.mob.playsound_local(C.mob, 'sound/readyup.ogg', 70, FALSE)
 
 //	SEND_SOUND(world, sound('sound/misc/roundstart.ogg'))
 	current_state = GAME_STATE_PLAYING

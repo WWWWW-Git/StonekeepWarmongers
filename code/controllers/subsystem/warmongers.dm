@@ -96,7 +96,7 @@ SUBSYSTEM_DEF(warmongers)
 		// https://imgur.com/a/mzWBurl
 
 		for(var/mob/M in GLOB.player_list)
-			SEND_SOUND(M, 'sound/music/wolfintro.ogg')
+			SEND_SOUND(M, sound(null))
 			M.overlay_fullscreen("graghorror", /atom/movable/screen/fullscreen/graghorror)
 			M.clear_fullscreen("graghorror", 5 SECONDS)
 			M.client.verbs -= /client/verb/forcestartvote
@@ -155,7 +155,7 @@ SUBSYSTEM_DEF(warmongers)
 		if(aspect_chosen(/datum/round_aspect/halo))
 			SEND_SOUND(M, 'sound/vo/halo/reinforcements.mp3')
 		else
-			SEND_SOUND(M, 'sound/music/traitor.ogg')
+			SEND_SOUND(M, 'sound/misc/reinforcement.ogg')
 	new /obj/effect/telefog(red.loc)
 	new /obj/effect/telefog(blu.loc)
 	for(var/i in reinforcementinas)

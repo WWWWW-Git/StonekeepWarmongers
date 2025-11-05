@@ -629,7 +629,7 @@
 /mob
 	var/last_aimhchange = 0
 	var/aimheight = 11
-	var/cmode_music = 'sound/music/practiceofwar.ogg'
+	var/cmode_music = 'sound/blank.ogg'
 
 /mob/proc/aimheight_change(input)
 	var/old_zone = zone_selected

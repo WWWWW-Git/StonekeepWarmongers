@@ -116,7 +116,7 @@
 				if(client?.hasPerk(/datum/warperk/saint))
 					HU.apply_status_effect(/datum/status_effect/buff/saint)
 					HU.playsound_local(get_turf(HU), 'sound/misc/notice.ogg')
-					to_chat(HU, "<span class='info'>ᛉ A SAINT HAS DIED.</span>")
+					to_chat(HU, "<span class='info'>A SAINT HAS DIED.</span>")
 
 	. = ..()
 
@@ -152,11 +152,11 @@
 			SSdroning.kill_droning(G.client)
 			SSdroning.kill_loop(G.client)
 			SSdroning.kill_rain(G.client)
-			G.playsound_local(src, 'sound/misc/deth.ogg', 75)
+			G.playsound_local(src, 'sound/misc/deadbell.ogg', 75)
 			if(aspect_chosen(/datum/round_aspect/halo) && prob(45))
 				G.playsound_local(src, 'sound/vo/halo/copedie.mp3', 100)
 			else
-				G.playsound_local(src, 'sound/foley/death.ogg', 100)
+				G.playsound_local(src, 'sound/misc/deadbell.ogg', 100)
 
 			var/atom/movable/screen/gameover/hog/H = new()
 			var/list/iconstato = list(
