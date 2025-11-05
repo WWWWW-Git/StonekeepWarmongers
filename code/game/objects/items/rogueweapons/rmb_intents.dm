@@ -41,6 +41,8 @@
 		perc = 0
 	if(L.has_status_effect(/datum/status_effect/debuff/feinted))
 		perc = 0
+	if(istype(L.rmb_intent,/datum/rmb_intent/riposte))
+		perc += 50
 	if(user.has_status_effect(/datum/status_effect/debuff/feintcd))
 		perc -= rand(10,30)
 	user.apply_status_effect(/datum/status_effect/debuff/feintcd)
