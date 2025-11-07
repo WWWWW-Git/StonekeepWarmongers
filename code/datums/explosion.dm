@@ -43,7 +43,8 @@ GLOBAL_LIST_EMPTY(explosions)
 	epicenter = get_turf(epicenter)
 	if(!epicenter)
 		return
-
+	var/image/overlay = image(icon='icons/turf/crater64.dmi',icon_state="dirt_shell_alt", dir=pick(GLOB.cardinals), layer = ABOVE_OBJ_LAYER, pixel_x = rand(-14,-16), pixel_y = rand(-14,-16))
+	epicenter.overlays += overlay
 	GLOB.explosions += src
 	if(isnull(flame_range))
 		flame_range = light_impact_range

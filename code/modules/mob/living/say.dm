@@ -263,9 +263,11 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			deaf_message = "<span class='name'>[speaker]</span> [speaker.verb_say] something but you cannot hear [speaker.p_them()]."
 			deaf_type = 1
 	else
-		deaf_message = "<span class='notice'>I can't hear yourself!</span>"
+		deaf_message = "<span class='notice'>I can't hear myself!</span>"
 		deaf_type = 2 // Since you should be able to hear myself without looking
 
+	if(deaf_type)
+		SEND_SOUND(src, sound('sound/misc/muffled.ogg', volume = 95))
 	// Create map text prior to modifying message for goonchat
 	if(client?.prefs)
 		if (client?.prefs.chat_on_map && stat != UNCONSCIOUS && (client.prefs.see_chat_non_mob || ismob(speaker)) && can_hear())
