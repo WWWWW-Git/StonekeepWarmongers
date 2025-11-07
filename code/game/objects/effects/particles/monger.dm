@@ -394,6 +394,10 @@
 	icon_state = "light_ash"
 	alpha = 40
 
+/atom/movable/screen/fullscreen/storm/sand
+	icon_state = "sand_storm"
+	alpha = 25
+
 /atom/movable/screen/fullscreen/fog
 	icon = 'icons/effects/weather_effects.dmi'
 	screen_loc = "WEST,SOUTH to EAST,NORTH"

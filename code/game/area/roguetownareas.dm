@@ -57,11 +57,18 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = 'sound/music/area/field.ogg'
 	droning_sound_night = 'sound/music/area/field.ogg'
 	converted_type = /area/rogue/indoors/shelter
+	var/sandy = FALSE // ???
+
+/area/rogue/outdoors/desert
+	sandy = TRUE
 
 /area/rogue/outdoors/Entered(mob/living/L, area/A)
 	. = ..()
 	if(istype(L) && !istype(A, /area/rogue/outdoors))//Doesn't work but this does stop the lag.
-		L.overlay_fullscreen("ash", /atom/movable/screen/fullscreen/storm)
+		if(sandy)
+			L.overlay_fullscreen("ash", /atom/movable/screen/fullscreen/storm/sand)
+		else
+			L.overlay_fullscreen("ash", /atom/movable/screen/fullscreen/storm)
 		L.overlay_fullscreen("ashparticle", /atom/movable/screen/fullscreen/ashparticles)
 	
 /area/rogue/outdoors/Exited(mob/living/L, area/A)
