@@ -160,7 +160,7 @@
 	landsound = 'sound/foley/jumpland/dirtland.wav'
 	slowdown = 2
 	smooth = SMOOTH_TRUE
-	canSmoothWith = list(/turf/open/floor/rogue/grass,/turf/open/floor/rogue/dirt/sand)
+	canSmoothWith = list(/turf/open/floor/rogue/grass,/turf/open/floor/rogue/sand)
 	neighborlay = "dirtedge"
 	var/muddy = FALSE
 	var/bloodiness = 20
@@ -168,20 +168,27 @@
 	var/obj/machinery/crop/planted_crop
 	var/dirt_amt = 3
 
-/turf/open/floor/rogue/dirt/sand // Shut up.
+/turf/open/floor/rogue/sand
 	name = "sand"
 	desc = "Precursor to glass, ancestor to rocks."
 	gender = PLURAL
 	icon_state = "sand"
 	smooth = SMOOTH_TRUE
+	layer = MID_TURF_LAYER
+	footstep = FOOTSTEP_GRASS
+	barefootstep = FOOTSTEP_SOFT_BAREFOOT
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	tiled_dirt = FALSE
+	landsound = 'sound/foley/jumpland/dirtland.wav'
+	slowdown = 2
 	canSmoothWith = list(/turf/open/floor/rogue, /turf/open/floor/rogue/grass)
 	neighborlay = "sandedge"
 
-/turf/open/floor/rogue/dirt/sand/Initialize()
+/turf/open/floor/rogue/sand/Initialize()
 	dir = pick(GLOB.cardinals)
 	. = ..()
 
-/*
+
 /turf/open/floor/rogue/dirt/get_slowdown(mob/user)
 	var/returned = slowdown
 	for(var/obj/item/I in user.held_items)
@@ -191,7 +198,6 @@
 				if(!L.cmode)
 					returned = max(returned-2, 0)
 	return returned
-*/
 
 /turf/open/floor/rogue/dirt/attack_right(mob/user)
 	if(isliving(user))
