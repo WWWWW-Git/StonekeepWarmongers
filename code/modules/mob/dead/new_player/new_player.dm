@@ -425,6 +425,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 	if(SSticker.late_join_disabled)
 		alert(src, "Something went bad.")
 		return FALSE
+
+	SEND_SOUND(src, sound('sound/misc/deploy.ogg', volume=45))
 /*
 	var/arrivals_docked = TRUE
 	if(SSshuttle.arrivals)

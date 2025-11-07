@@ -38,38 +38,40 @@
 	return ..()
 
 /datum/game_mode/warmongers/proc/award_triumphs()
-	if(whowon == null)
-		for(var/client/C in GLOB.clients)
-			C << sound(null) // Stop all sounds
-			SEND_SOUND(C, 'sound/music/tension2.ogg')
-			spawn(15 SECONDS)
-				SEND_SOUND(C, sound('sound/music/credits.ogg', volume=30))
-	if(whowon == BLUE_WARTEAM)
-		for(var/client/C in grenzels)
-			if(ishuman(C.mob))
-				var/mob/living/carbon/human/H = C.mob
-				if(H.client?.equippedPerk.type == /datum/warperk)
-					H.adjust_triumphs(1)
-				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/gren/grenzvictorysong.ogg')
-		for(var/client/C in heartfelts)
-			if(ishuman(C.mob))
-				var/mob/living/carbon/human/H = C.mob
-				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/felt/heartdefeatsong.ogg')
-	if(whowon == RED_WARTEAM)
-		for(var/client/C in heartfelts)
-			if(ishuman(C.mob))
-				var/mob/living/carbon/human/H = C.mob
-				if(H.client?.equippedPerk.type == /datum/warperk)
-					H.adjust_triumphs(1)
-				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/felt/heartvictorysong.ogg')
-		for(var/client/C in grenzels)
-			if(ishuman(C.mob))
-				var/mob/living/carbon/human/H = C.mob
-				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/gren/grenzdefeatsong.ogg')
+	SEND_SOUND(world, 'sound/misc/roundstart.ogg')
+	spawn(6 SECONDS)
+		if(whowon == null)
+			for(var/client/C in GLOB.clients)
+				C << sound(null) // Stop all sounds
+				SEND_SOUND(C, 'sound/music/tension2.ogg')
+				spawn(15 SECONDS)
+					SEND_SOUND(C, sound('sound/music/credits.ogg', volume=30))
+		if(whowon == BLUE_WARTEAM)
+			for(var/client/C in grenzels)
+				if(ishuman(C.mob))
+					var/mob/living/carbon/human/H = C.mob
+					if(H.client?.equippedPerk.type == /datum/warperk)
+						H.adjust_triumphs(1)
+					H << sound(null) // Stop all sounds
+					SEND_SOUND(H, 'sound/vo/wc/gren/grenzvictorysong.ogg')
+			for(var/client/C in heartfelts)
+				if(ishuman(C.mob))
+					var/mob/living/carbon/human/H = C.mob
+					H << sound(null) // Stop all sounds
+					SEND_SOUND(H, 'sound/vo/wc/felt/heartdefeatsong.ogg')
+		if(whowon == RED_WARTEAM)
+			for(var/client/C in heartfelts)
+				if(ishuman(C.mob))
+					var/mob/living/carbon/human/H = C.mob
+					if(H.client?.equippedPerk.type == /datum/warperk)
+						H.adjust_triumphs(1)
+					H << sound(null) // Stop all sounds
+					SEND_SOUND(H, 'sound/vo/wc/felt/heartvictorysong.ogg')
+			for(var/client/C in grenzels)
+				if(ishuman(C.mob))
+					var/mob/living/carbon/human/H = C.mob
+					H << sound(null) // Stop all sounds
+					SEND_SOUND(H, 'sound/vo/wc/gren/grenzdefeatsong.ogg')
 
 /datum/game_mode/warmongers/proc/do_war_end(var/mob/living/carbon/human/crownguy = null, var/team = null) // if you call this with zero arguments, its a stalemate.
 	whowon = team
