@@ -360,6 +360,7 @@
 	name = "explosion"
 	icon = 'icons/effects/96x96.dmi'
 	icon_state = "explosion"
+	blend_mode = BLEND_ADD
 	pixel_x = -32
 	pixel_y = -32
 	duration = 39

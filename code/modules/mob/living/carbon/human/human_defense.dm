@@ -500,24 +500,30 @@
 				damage_clothes(400 - bomb_armor, BRUTE, "bomb")
 
 		if (EXPLODE_HEAVY)
+			SEND_SOUND(src, sound('sound/misc/explo_cutoff.ogg', volume = 95))
 			brute_loss = 60
 			burn_loss = 60
 			if(bomb_armor)
 				brute_loss = 30*(2 - round(bomb_armor*0.01, 0.05))
 				burn_loss = brute_loss				//damage gets reduced from 120 to up to 60 combined brute+burn
 			damage_clothes(100 - bomb_armor, BRUTE, "bomb")
-//			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
-//				adjustEarDamage(30, 120)
+			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
+				SEND_SOUND(src, sound('sound/foley/shellshock.ogg', volume = 75))
+				adjustEarDamage(30, 120)
 			Unconscious(20)							//short amount of time for follow up attacks against elusive enemies like wizards
 			Knockdown(25)
 
 		if(EXPLODE_LIGHT)
+			if(!can_hear())
+				Unconscious(15)
+				SEND_SOUND(src, sound('sound/misc/explo_cutoff.ogg', volume = 95))
 			brute_loss = 5
 			if(bomb_armor)
 				brute_loss = 5*(2 - round(bomb_armor*0.01, 0.05))
-//			damage_clothes(max(50 - bomb_armor, 0), BRUTE, "bomb")
-//			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
-//				adjustEarDamage(15,60)
+			damage_clothes(max(50 - bomb_armor, 0), BRUTE, "bomb")
+			if (!istype(ears, /obj/item/clothing/ears/earmuffs))
+				SEND_SOUND(src, sound('sound/foley/tinnitus.ogg', volume = 100))
+				adjustEarDamage(15,60)
 			Knockdown(20)
 
 	take_overall_damage(brute_loss,burn_loss)
@@ -527,6 +533,8 @@
 		var/max_limb_loss = round(4/severity) //so you don't lose four limbs at severity 3.
 		for(var/X in bodyparts)
 			var/obj/item/bodypart/BP = X
+			spawn(0.4)
+				SEND_SOUND(src, sound('sound/foley/trauma.ogg', volume = 75))
 			if(prob(50/severity) && !prob(getarmor(BP, "bomb")) && BP.body_zone != BODY_ZONE_HEAD && BP.body_zone != BODY_ZONE_CHEST)
 				BP.brute_dam = BP.max_damage
 				BP.dismember()

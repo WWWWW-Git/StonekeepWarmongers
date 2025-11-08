@@ -319,6 +319,7 @@
 				playsound(get_turf(src), pick(W.parrysound), 100, FALSE)
 			if(istype(rmb_intent, /datum/rmb_intent/riposte))
 				src.visible_message("<span class='boldwarning'><b>[src]</b> ripostes [user] with [W]!</span>")
+				user.rogfat_add(15)
 			else if(istype(W, /obj/item/rogueweapon/shield))
 				src.visible_message("<span class='boldwarning'><b>[src]</b> blocks [user] with [W]!</span>")
 				var/shieldur

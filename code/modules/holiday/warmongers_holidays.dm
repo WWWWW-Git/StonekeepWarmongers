@@ -115,6 +115,7 @@
 
 	return "Say 'Happy Birthday' to WARMONGERS, first publicly playable on August 3rd, 2024![Fact]"
 
+/*
 /datum/holiday/debugmas
 	name = "Debugmas"
 	begin_day = 4
@@ -127,6 +128,37 @@
 		var/mob/dead/new_player/P = i
 		if(P.client)
 			P.client.playtitlemusic()
+*/
 
 /datum/holiday/debugmas/greet()
 	return "Have a merry Debugmas!"
+
+/datum/holiday/peace // end of ww1
+	name = "Interglobal Peace Day"
+	begin_day = 11
+	begin_month = NOVEMBER
+
+/datum/holiday/peace/celebrate()
+	SSticker.login_music = pick('sound/music/parade.ogg','sound/music/beauty.ogg','sound/music/calm.ogg')
+	for(var/i in GLOB.new_player_list)
+		var/mob/dead/new_player/P = i
+		if(P.client)
+			P.client.playtitlemusic()
+
+/datum/holiday/peace/greet()
+	return "Have a kind Interglobal Peace Day!"
+
+/datum/holiday/peace2 // end of ww1
+	name = "Second Interglobal Peace Day"
+	begin_day = 2
+	begin_month = JULY
+
+/datum/holiday/peace2/celebrate()
+	SSticker.login_music = pick('sound/music/thomas.ogg','sound/music/beauty.ogg','sound/music/drama.ogg')
+	for(var/i in GLOB.new_player_list)
+		var/mob/dead/new_player/P = i
+		if(P.client)
+			P.client.playtitlemusic()
+
+/datum/holiday/peace2/greet()
+	return "Have a kind Second Interglobal Peace Day!"
