@@ -41,7 +41,7 @@
 	if(whowon == null)
 		for(var/client/C in GLOB.clients)
 			C << sound(null) // Stop all sounds
-			SEND_SOUND(C, sound('sound/music/credits.ogg', volume=50))
+			SEND_SOUND(C, sound('sound/music/whocareswhowon.ogg', volume=50))
 	if(whowon == BLUE_WARTEAM)
 		for(var/client/C in grenzels)
 			if(ishuman(C.mob))

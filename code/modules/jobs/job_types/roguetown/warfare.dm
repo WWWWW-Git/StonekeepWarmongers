@@ -36,8 +36,12 @@
 		//HU.add_client_colour(/datum/client_colour/sepia)
 		switch(HU.warfare_faction)
 			if(RED_WARTEAM)
+				if(HU.cmode != 'sound/music/soberandhatingit.ogg')
+					HU.cmode_music = 'sound/music/drunkandlovingit.ogg'
 				HU.speech_sound = list('sound/vo/wc/speech_ppr1.ogg', 'sound/vo/wc/speech_ppr2.ogg', 'sound/vo/wc/speech_ppr3.ogg')
 			if(BLUE_WARTEAM)
+				if(HU.cmode != 'sound/music/makeamartyrofme.ogg')
+					HU.cmode_music = 'sound/music/prayformoreammo.ogg'
 				HU.speech_sound = list('sound/vo/wc/speech_regimer1.ogg', 'sound/vo/wc/speech_regimer2.ogg', 'sound/vo/wc/speech_regimer3.ogg')
 		if(HAS_TRAIT(HU, TRAIT_NOBLE))
 			HU.speech_sound = 'sound/vo/speech_lord.ogg'
