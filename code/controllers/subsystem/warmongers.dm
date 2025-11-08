@@ -177,7 +177,7 @@ SUBSYSTEM_DEF(warmongers)
 /proc/GetMainGunForWarfareGrenzelhoft()
 	switch(SSwarmongers.warfare_techlevel)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/carbine
 		if(WARMONGERS_TECHLEVEL_COWBOY)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
 		if(WARMONGERS_TECHLEVEL_AUTO)

@@ -249,3 +249,27 @@
 	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
 	allowed_race = list("bulky")
 	armor = list("melee" = 15, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/shoes/roguetown/boots/war/trompers
+	name = "trompers"
+	desc = "The soles of these boots almost have dealight coming through them."
+	gender = PLURAL
+	icon_state = "trompers"
+	item_state = "trompers"
+	icon = 'icons/roguetown/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
+	allowed_race = list("standard", "fat")
+	armor = list("melee" = 15, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
+	name = "trompers"
+	desc = "The soles of these boots almost have dealight coming through them."
+	gender = PLURAL
+	icon_state = "trompersbulky"
+	item_state = "trompersbulky"
+	icon = 'icons/roguetown/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
+	allowed_race = list("bulky")
+	armor = list("melee" = 15, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)

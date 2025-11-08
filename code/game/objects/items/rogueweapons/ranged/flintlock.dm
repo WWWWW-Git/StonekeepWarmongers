@@ -59,9 +59,12 @@
 	if(has_bayonet)
 		. += "<span class='tutorial'>Use rightclick to remove the bayonet.</span>"
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/jezail
-	icon_state = "jezail"
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper
+	icon_state = "musketsniper"
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/heavy/strike)
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper/alternate
+	icon_state = "musketsniper1"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/equipped(mob/living/user, slot)
 	. = ..()
@@ -173,6 +176,13 @@
 	spread = 0.5
 	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/smash/wood)
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/carbine
+	name = "barksteel"
+	desc = "A firearm without a bayonet, typically used by marksmen."
+	icon = 'icons/roguetown/weapons/64.dmi'
+	icon_state = "musket1"
+	item_state = "musket1"
+
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/dropped(mob/user)
 	. = ..()
 	if(wielded)
@@ -236,6 +246,12 @@
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/alternate
+	icon = 'icons/roguetown/weapons/32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "pistol1"
+	item_state = "pistol1"
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed // i axed you a question
 	name = "barkaxe"
@@ -336,6 +352,15 @@
 	animate(S, time = 50, alpha = 0, pixel_x = px, pixel_y = py, transform = ARE, easing = SINE_EASING)
 	QDEL_IN(S, 50)
 	SSticker.muskshots++
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed/alternate
+	name = "barkaxe"
+	desc = "An abomination devised by the bearded menace themselves. The name is being workshopped currently."
+	icon = 'icons/roguetown/weapons/32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "pistolaxe1"
+	item_state = "pistolaxe1"
 
 /obj/item/ammo_box/magazine/internal/shot/musk
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet

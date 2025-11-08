@@ -818,3 +818,13 @@
 	name = "Metch"
 	desc = "It is a valecnycin."
 	icon_state = "warcrime"
+
+/obj/item/rogueweapon/sword/sabre/officer
+	name = "Saber"
+	desc = "The guard of this sword doesn't extend to the back of the blade. The reason given is to instill fearlessness when fighting the foe. The truth was it was cheaper."
+	icon_state = "sabre"
+
+/obj/item/rogueweapon/sword/sabre/shofficer
+	name = "Cutter"
+	desc = "A former tool, given new purpose."
+	icon_state = "shitsabre"
