@@ -159,6 +159,11 @@
 				else
 					L.succumb(reaper = TRUE)
 
+/atom/movable/screen/fullscreen/crit/cmode
+	icon_state = "cmode"
+	layer = 20.09
+	plane = FULLSCREEN_PLANE
+
 /atom/movable/screen/fullscreen/crit/death
 	icon_state = "DD"
 	layer = 20.511
