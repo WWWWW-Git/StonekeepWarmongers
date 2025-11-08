@@ -57,10 +57,10 @@
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
 				warcry = "For honor! For Heartfelt!"
-					sound2play = sound('sound/vo/wc/speech_ppr_taunt.ogg')
+				sound2play = sound('sound/vo/wc/speech_ppr_taunt.ogg')
 			if(BLUE_WARTEAM)
 				warcry = "Glory in the stars!"
-					sound2play = sound('sound/vo/wc/speech_regimer_taunt.ogg')
+				sound2play = sound('sound/vo/wc/speech_regimer_taunt.ogg')
 
 		if(aspect_chosen(/datum/round_aspect/explodeatwill))
 			user.say(warcry)
