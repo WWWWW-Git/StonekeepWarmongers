@@ -1085,7 +1085,7 @@
 //..............Warmongers...................
 /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm
 	name = "pointed helmet"
-	desc = "Dulliron battered into the vague shape of a pointed helmet. You can barely see out of it. Some muckrakers prefer to just use it as a portable shitpot. Those same muckrakers get a messy surprise when they then go to wear their newly polished helmet."
+	desc = "Dulliron battered into the vague shape of a pointed helmet. You can barely see out of it."
 	icon_state = "fodderhelm"
 	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
@@ -1100,13 +1100,202 @@
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 
+/obj/item/clothing/head/roguetown/helmet/war/ppr/redhelm
+	name = "redtop helmet"
+	desc = "Dulliron battered into the vague shape of a pointed helmet. Has the iconic red broadhat worn by senior muckrakers."
+	icon_state = "redhelm"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/helmet/war/ppr/redhelm/alternate
+	icon_state = "redhelm2"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm
+	name = "flattop helmet"
+	desc = "This helmet evokes the massive blacksmonk billowing smokestacks common across the nation. Just as stuffy to wear."
+	icon_state = "flattop"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm/alternate
+	icon_state = "flattop2"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/helmet/war/regime/kalpakhelm
+	name = "imperial kalpak"
+	desc = "A skull emblazoned kalpak worn by rabble-rousers, well versed in the art of whipping the masses into a frenzy."
+	icon_state = "kalpak"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/helmet/war/regime/kalpakhelm/alternate
+	icon_state = "kalpak2"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/helmet/war/regime/heavyhelm
+	name = "holed helmet"
+	desc = "Dulliron battered into the vague shape of a pointed helmet. You can barely see out of it."
+	icon_state = "holey"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/helmet/war/heavy/regime/sunhelm
+	name = "sun helmet"
+	desc = "Dulliron battered into the vague shape of a pointed helmet. You can barely see out of it."
+	icon_state = "sun"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/war/slouchhat
+	name = "broadhat"
+	icon_state = "broadhat"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/helmet/war/heavy/ppr/beak
+	name = "beaked helmet"
+	icon_state = "beak"
+	item_state = "beak"
+	adjustable = CAN_CADJUST
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	emote_environment = 3
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR
+	block2add = FOV_RIGHT|FOV_LEFT
+	smeltresult = /obj/item/ingot/steel
+
+/obj/item/clothing/head/roguetown/helmet/war/heavy/ppr/beak/AdjustClothes(mob/user)
+	if(loc == user)
+		playsound(user, "sound/items/visor.ogg", 100, TRUE, -1)
+		if(adjustable == CAN_CADJUST)
+			adjustable = CADJUSTED
+			icon_state = "[initial(icon_state)]_up"
+			body_parts_covered = HEAD|HAIR|EARS
+			flags_inv = HIDEEARS|HIDEHAIR
+			flags_cover = null
+			prevent_crits -= list(BCLASS_STAB) // Vulnerable to eye stabs with the cover up
+			emote_environment = 0
+			if(ishuman(user))
+				var/mob/living/carbon/H = user
+				H.update_inv_head()
+			block2add = null
+		else if(adjustable == CADJUSTED)
+			ResetAdjust(user)
+			prevent_crits += list(BCLASS_STAB)
+			emote_environment = 3
+			if(user)
+				if(ishuman(user))
+					var/mob/living/carbon/H = user
+					H.update_inv_head()
+		user.update_fov_angles()
+
 /obj/item/clothing/head/roguetown/helmet/war/ppr/toffhelm
 	name = "toff's helmet"
 	desc = "Dulliron battered into the vague shape of a pointed helmet, crowned with a large hat signifying the wearer as being VERY important. And don't you forget it."
 	icon_state = "toffhat"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	worn_x_dimension = 64
 	worn_y_dimension = 64
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+
+/obj/item/clothing/head/roguetown/war/hood
+	name = "hood"
+	desc = "A sack haphazardly made into a hood."
+	icon_state = "hood"
+	item_state = "hood"
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/head/roguetown/war/wickerhelm
+	name = "wickerhelm"
+	desc = "A padded helmet worn by those who work the hives, adequate against stingers, not so much against bullets."
+	icon_state = "wickerhelm"
+	item_state = "wickerhelm"
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/head/roguetown/helmet/war/smiler
+	name = "smiling helm"
+	desc = "A hooded helmet with a grinning smile."
+	icon_state = "smiler"
 	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
 	flags_cover = HEADCOVERSEYES

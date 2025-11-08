@@ -750,6 +750,17 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
 	icon_state = "dullplate2"
+	allowed_race = list("standard")
+
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
+	desc = "No expense was paid in acquiring these incredibly cheap, dulliron chestplates. 'NOT DESIGNED TO PROTECT' is etched on the inside."
+	icon_state = "dullplate3"
+	allowed_race = list("standard")
+
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
+	desc = "No expense was paid in acquiring these incredibly cheap, dulliron chestplates. 'NOT DESIGNED TO PROTECT' is etched on the inside."
+	icon_state = "dullplate4"
+	allowed_race = list("standard")
 
 /obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies
 	slot_flags = ITEM_SLOT_ARMOR

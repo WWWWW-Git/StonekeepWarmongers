@@ -300,3 +300,57 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
 	allowed_race = list("fat")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
+	name = "pantaloons"
+	icon_state = "darkpantaloons"
+	desc = "Cheaply made pantaloons. Itchy."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("standard")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat
+	name = "pantaloons"
+	icon_state = "darkpantaloonsfat"
+	item_state = "darkpantaloonsfat"
+	desc = "Cheaply made pantaloons. Itchy."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("fat")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky
+	name = "pantaloons"
+	icon_state = "darkpantaloonsbulky"
+	item_state = "darkpantaloonsbulky"
+	desc = "Cheaply made pantaloons. Itchy."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("bulky")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
+	icon_state = "darkpantaloons2"
+	desc = "Cheaply made pantaloons. Itchy. The legs are cut short."
+	allowed_race = list("standard")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
+	name = "pantaloons"
+	icon_state = "darkpantaloons2fat"
+	item_state = "darkpantaloons2fat"
+	desc = "Cheaply made pantaloons. Itchy. The legs are cut short."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("fat")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
+	name = "pantaloons"
+	icon_state = "darkpantaloons2bulky"
+	item_state = "darkpantaloons2bulky"
+	desc = "Cheaply made pantaloons. Itchy. The legs are cut short."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("bulky")
