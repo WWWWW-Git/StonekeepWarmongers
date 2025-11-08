@@ -36,20 +36,20 @@
 		//HU.add_client_colour(/datum/client_colour/sepia)
 		switch(HU.warfare_faction)
 			if(RED_WARTEAM)
-				HU.speech_sound = 'sound/vo/speech_heartfelt.ogg'
-				if(HU.cmode != 'sound/music/combatspecial.ogg')
-					HU.cmode_music = 'sound/music/combatheartfelt.ogg'
+				if(HU.cmode != 'sound/music/soberandhatingit.ogg')
+					HU.cmode_music = 'sound/music/drunkandlovingit.ogg'
+				HU.speech_sound = list('sound/vo/wc/speech_ppr1.ogg', 'sound/vo/wc/speech_ppr2.ogg', 'sound/vo/wc/speech_ppr3.ogg')
 			if(BLUE_WARTEAM)
-				HU.speech_sound = 'sound/vo/speech_grenzelhoft.ogg'
-				if(HU.cmode != 'sound/music/combatspecial.ogg')
-					HU.cmode_music = 'sound/music/combatgrenzelhoft.ogg'
+				if(HU.cmode != 'sound/music/makeamartyrofme.ogg')
+					HU.cmode_music = 'sound/music/prayformoreammo.ogg'
+				HU.speech_sound = list('sound/vo/wc/speech_regimer1.ogg', 'sound/vo/wc/speech_regimer2.ogg', 'sound/vo/wc/speech_regimer3.ogg')
 		if(HAS_TRAIT(HU, TRAIT_NOBLE))
 			HU.speech_sound = 'sound/vo/speech_lord.ogg'
 
 // Lord Procs
 
 /proc/getlordtitle()
-	return pick("of Volfs", "the Tyrant", "the Idiot", "the Foolish", "the Bloody", "the Impaler", "the Discombobulater", "the Risktaker", "the Golden", "of Gold", "the Warmonger", "the Thief", "the Waterborn", "the Bloodborn", "the Barker", "the Volf", "the Predator", "of Predators", "the Stealthy", "the Sneaky", "the Destroyer", "the Ambusher", "the Bomber", "the Strategist", "of Strategy", "of Bombing", "of Ambushing", "the Racist", "the Hater of Elves", "the Suicidal", "the Buffoon", "the Baboon", "the Bear", "the Bringer of Death", "of Death", "the Ordinary", "the Boring", "the Peaceful", "the Negotiator", "the Actor", "the Funny", "the Jestful", "of Jesters", "of Heartfelt", "of Grenzelhoft", "of Life")
+	return pick("of Wolvs", "the Tyrant", "the Idiot", "the Foolish", "the Bloody", "the Impaler", "the Discombobulater", "the Risktaker", "the Golden", "of Gold", "the Warmonger", "the Thief", "the Waterborn", "the Bloodborn", "the Barker", "the Wolv", "the Predator", "of Predators", "the Stealthy", "the Sneaky", "the Destroyer", "the Ambusher", "the Bomber", "the Strategist", "of Strategy", "of Bombing", "of Ambushing", "the Racist", "the Hater of Stringbeans", "the Suicidal", "the Buffoon", "the Baboon", "the Bear", "the Bringer of Death", "of Death", "the Ordinary", "the Boring", "the Peaceful", "the Negotiator", "the Actor", "the Funny", "the Jestful", "of Jesters", "of Heartfelt", "of Grenzelhoft", "of Life")
 
 /mob/living/carbon/human/proc/warfare_announce()
 	set name = "ANNOUNCE!"
@@ -507,7 +507,6 @@
 		H.change_stat("strength", 2)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
-	H.cmode_music = 'sound/music/combatelite.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
 //// HEARTFELT NINJA ////
@@ -548,7 +547,6 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
 		H.change_stat("speed", 2)
 		H.change_stat("endurance", 1)
-	H.cmode_music = 'sound/music/combatspecial.ogg'
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NINJA, TRAIT_GENERIC)
 
@@ -641,7 +639,6 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
-	H.cmode_music = 'sound/music/combatspecial.ogg'
 	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// MEDIC ////
@@ -967,7 +964,6 @@
 		H.change_stat("perception", -1)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
-	H.cmode_music = 'sound/music/combatelite.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
 ////// GRENADIER //////
@@ -1057,7 +1053,6 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/music, pick(1,2), TRUE)
 		H.change_stat("speed", 6)
-	H.cmode_music = 'sound/music/combatspecial.ogg'
 	ADD_TRAIT(H, TRAIT_JESTER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
@@ -1218,7 +1213,6 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
-	H.cmode_music = 'sound/music/combatspecial.ogg'
 	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// MEDIC ////

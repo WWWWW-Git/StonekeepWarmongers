@@ -18,10 +18,8 @@
 			SEND_SOUND(world, haloalertsound)
 		else
 			for(var/mob/living/carbon/human/M in GLOB.player_list)
-				if(hasvar(M, "warfare_faction") && M.warfare_faction == BLUE_WARTEAM)
-					SEND_SOUND(M, 'sound/vo/wc/gren/grenzroundstart.ogg')
-				if(hasvar(M, "warfare_faction") && M.warfare_faction == RED_WARTEAM)
-					SEND_SOUND(M, 'sound/vo/wc/felt/heartroundstart.ogg')
+				SEND_SOUND(M, 'sound/misc/warstart.ogg')
+				SEND_SOUND(M, 'sound/music/peopledie.ogg')
 
 /datum/warmode/Destroy()
 	. = QDEL_HINT_IWILLGC

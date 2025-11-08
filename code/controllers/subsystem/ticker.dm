@@ -148,7 +148,7 @@ SUBSYSTEM_DEF(ticker)
 	else
 		login_music = "[global.config.directory]/title_music/sounds/[pick(music)]"
 
-	login_music = pick('sound/music/thomas.ogg','sound/music/chore.ogg','sound/music/drama.ogg','sound/music/faceoff.ogg')
+	login_music = pick('sound/music/warmongrels.ogg', 'sound/music/smellofblackpowder.ogg', 'sound/music/drama.ogg', 'sound/music/thomas.ogg', 'sound/music/draft.ogg')
 	SSevents.getHoliday()
 
 	/*
@@ -506,7 +506,7 @@ SUBSYSTEM_DEF(ticker)
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
 		else
-			C.mob.playsound_local(C.mob, 'sound/roundstart.ogg', 100, FALSE)
+			C.mob.playsound_local(C.mob, 'sound/readyup.ogg', 70, FALSE)
 
 //	SEND_SOUND(world, sound('sound/misc/roundstart.ogg'))
 	current_state = GAME_STATE_PLAYING

@@ -1,4 +1,4 @@
-#define MUSIC_TAV list("Memory Of Eora" = 'sound/music/jukeboxes/eora.ogg',"March Of Freemen" = 'sound/music/jukeboxes/marche.ogg',"Capital Of The World" = 'sound/music/jukeboxes/capital.ogg')
+#define MUSIC_TAV list("Chimneysmoke" = 'sound/music/jukeboxes/track1.ogg',"Start The Work" = 'sound/music/jukeboxes/track2.ogg',"New Muck" = 'sound/music/jukeboxes/track3.ogg', "Fishman's Dirge" = 'sound/music/jukeboxes/track4.ogg', "Indust Exhale" = 'sound/music/jukeboxes/track5.ogg')
 
 /datum/looping_sound/musloop
 	mid_sounds = list()
