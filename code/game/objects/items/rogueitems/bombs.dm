@@ -1,7 +1,7 @@
 /obj/item/bomb
 	name = "bomb"
 	desc = "Dangerous explosion."
-	icon_state = "sticknade"
+	icon_state = "grenade"
 	icon = 'icons/roguetown/items/misc.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	//dropshrink = 0

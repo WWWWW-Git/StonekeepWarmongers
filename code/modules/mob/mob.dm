@@ -163,6 +163,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 			if(!alt_msg)
 				return
 			else
+				SEND_SOUND(src, sound('sound/misc/muffled.ogg', volume = 95))
 				msg = alt_msg
 				type = alt_type
 				if(type & MSG_VISUAL && eye_blind)

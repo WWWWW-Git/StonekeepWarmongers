@@ -619,8 +619,8 @@
 		cmode = FALSE
 	else
 		cmode = TRUE
+		//SEND_SOUND(src, sound(null))
 		playsound_local(src, 'sound/misc/combon.ogg', 100)
-		SEND_SOUND(src, sound(null))
 		if(L.cmode_music)
 			SSdroning.play_combat_music(L.cmode_music, client)
 	if(hud_used)
