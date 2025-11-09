@@ -256,7 +256,7 @@
 				if(!CHECK_BITFIELD(movement_type, UNSTOPPABLE))
 					temporary_unstoppable_movement = TRUE
 					ENABLE_BITFIELD(movement_type, UNSTOPPABLE)
-				M.playsound_local(T, "whiz", 100, FALSE, pressure_affected = FALSE)
+				playsound(M, "whiz", 100, FALSE, -2, pressure_affected = FALSE)
 				return process_hit(T, qdel_self=2, hit_something=TRUE)
 		return process_hit(T, select_target(T, A))
 	else
