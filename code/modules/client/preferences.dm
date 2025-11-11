@@ -397,7 +397,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 						dat += "<br>"
 					dat += "<b>Hair Color: </b>  <a href='?_src_=prefs;preference=hair;task=input'>Change</a>"
 					dat += "<br>"
-				dat += "<b>Face Detail:</b> <a href='?_src_=prefs;preference=detail;task=input'>[detail]</a>"
+				dat += "<b>Detail:</b> <a href='?_src_=prefs;preference=detail;task=input'>[detail]</a>"
+				dat += "<br>"
+				dat += "<b>Accessory:</b> <a href='?_src_=prefs;preference=accessory;task=input'>[accessory]</a>"
 				if(gender == FEMALE)
 					dat += "<br>"
 				dat += "<br></td>"
@@ -1828,7 +1830,7 @@ Slots: [job.spawn_positions]</span>
 					for(var/datum/sprite_accessory/X in spec_hair)
 						hairlist += X.name
 					var/new_hairstyle
-					new_hairstyle = input(user, "Choose your character's accessory:", "Jewelry and Trinkets")  as null|anything in hairlist //don't ask
+					new_hairstyle = input(user, "Choose your character's accessory:", "Bits and Bobs")  as null|anything in hairlist //don't ask
 					if(new_hairstyle)
 						accessory = new_hairstyle
 
@@ -1843,7 +1845,7 @@ Slots: [job.spawn_positions]</span>
 					for(var/datum/sprite_accessory/X in spec_detail)
 						detaillist += X.name
 					var/new_detail
-					new_detail = input(user, "Choose your character's detail:", "Make me unique")  as null|anything in detaillist //don't ask
+					new_detail = input(user, "Choose your character's detail:", "Marks and Mutations")  as null|anything in detaillist //don't ask
 					if(new_detail)
 						detail = new_detail
 
@@ -2411,7 +2413,7 @@ Slots: [job.spawn_positions]</span>
 	character.underwear = underwear
 //	character.underwear_color = underwear_color
 	character.undershirt = undershirt
-//	character.accessory = accessory
+	character.accessory = accessory
 	character.detail = detail
 	character.socks = socks
 	character.patron = selected_patron
