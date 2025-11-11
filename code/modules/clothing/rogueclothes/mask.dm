@@ -178,20 +178,6 @@
 	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
 
-//...........Kaizoku Content...............
-/obj/item/clothing/mask/rogue/kaizoku/menpo/steel/half
-	name = "steel half menpo"
-	icon_state = "steelhalfmenpo"
-	desc = "The lower part of a menpo portraying the maws of a Ogrun's head. It covers only the neck and the mouth, often used by warriors that cares about their sight."
-	flags_cover = HEADCOVERSMOUTH | MASKCOVERSMOUTH
-	flags_inv = HIDEFACIALHAIR|HIDEFACE
-
-/obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/colourable/oni
-	name = "ogrun mask"
-	icon_state = "c_menyoroi"
-	max_integrity = 200
-	desc = "A mask that glorifies a Ogrun warrior. It portrays the mostly perfect perception of the race, so efficiently it became the standards for Fog island military due to its intimidation value."
-
 //.............Warmongers....................
 /obj/item/clothing/mask/rogue/war/mask
 	name = "mask"

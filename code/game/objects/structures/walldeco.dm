@@ -164,13 +164,13 @@
 	..()
 
 /obj/structure/fluff/walldeco/customflag
-	name = "flag of Heartfelt"
+	name = "flag of the PPU"
 	desc = ""
 	icon_state = "wallflag"
 
 /obj/structure/fluff/walldeco/customflag/Initialize()
 	..()
-	lordcolor(CLOTHING_RED,CLOTHING_YELLOW)
+	lordcolor(CLOTHING_RED,CLOTHING_BLUE)
 
 /obj/structure/fluff/walldeco/customflag/Destroy()
 	GLOB.lordcolor -= src

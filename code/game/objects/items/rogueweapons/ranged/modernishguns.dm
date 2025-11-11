@@ -3,7 +3,7 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
 	name = "levershot"
-	desc = "A type of gun invented by a dwarven engineer to stop wood elves stealing his plants for alcohol brewing off of his garden, the authenticity of this story is being challenged due to the fact that dwarves generally don't live above ground. The part about wood elf murder is true due to the fact the engineer which has chosen to stay anonymous has written many books with the same basis of elves being inferior in every aspect."
+	desc = "A gun designed to be fired rapidly in quick succession using a lever-action design to spin a cylinder, automatically cycling a new bullet into the barrel."
 	icon = 'icons/roguetown/weapons/64.dmi'
 	icon_state = "repeatergun"
 	possible_item_intents = list(INTENT_GENERIC)
@@ -154,7 +154,7 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
 	name = "revolleyer"
-	desc = "This gun iterates on the hypothetical design of the same dwarven gunsmith that created the levershot. The design, found inside his basement after his suicide (by his own invention, a levershot) was then stolen and passed off as someone elses a week after his death. He was called out by the wife of the dwarven engineer and murdered by said wife. The wife was not jailed under the dwarven lawcode as this exact scenario was covered by the writers of the Ardcnoc League Constitution. It deviates from the previous naming convention as the creator found it to be 'barbaric'."
+	desc = "Similar to a barkpistol, in both size and overall design. This barker uses a revolving cylinder to ensure the rapid firing of shots one after the other."
 	icon = 'icons/roguetown/weapons/32.dmi'
 	icon_state = "shitvolver"
 	possible_item_intents = list(/datum/intent/shoot/musket/peter, /datum/intent/shoot/musket/arc, INTENT_GENERIC)
@@ -278,8 +278,8 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine // fucking unbalanced bullshit that shouldnt exist.
-	name = "\improper Machine"
-	desc = "Something unholy."
+	name = "double-barkerbuss"
+	desc = "Two barkerbuss's haphazardly combined to produce this unholy weapon."
 	icon = 'icons/roguetown/weapons/64.dmi'
 	icon_state = "doubleblunder"
 	possible_item_intents = list(INTENT_GENERIC)
@@ -369,8 +369,8 @@
 	SSticker.muskshots++
 
 /obj/item/gun/grenadelauncher/granata
-	name = "blunderelauncher"
-	desc = "To fire and back. Load with bombs."
+	name = "barklauncher"
+	desc = "To fire and back. Load with grenades."
 	icon = 'icons/roguetown/weapons/64.dmi'
 	icon_state = "granata"
 	bigboy = TRUE
@@ -398,7 +398,7 @@
 	. = ..()
 	if(grenades.len)
 		. = "It is loaded."
-	. += "<span class='tutorial'>It can hold three bombs, note the indicators on the sprite to see how much bombs are left.</span>"
+	. += "<span class='tutorial'>It can hold three grenades, note the indicators on the weapon to see how many grenades are left.</span>"
 
 /obj/item/gun/grenadelauncher/granata/update_icon()
 	if(grenades.len)
@@ -417,8 +417,8 @@
 			update_icon()
 
 /obj/item/gun/grenadelauncher/granata/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
-	user.visible_message("<span class='danger'>[user] launches a bomb!</span>", \
-						"<span class='danger'>I launch a bomb!</span>")
+	user.visible_message("<span class='danger'>[user] launches a grenade!</span>", \
+						"<span class='danger'>I launch a grenade!</span>")
 	var/obj/item/bomb/F = grenades[1] //Now with less copypasta!
 	grenades -= F
 	F.forceMove(user.loc)
