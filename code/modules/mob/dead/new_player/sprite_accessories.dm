@@ -78,14 +78,14 @@
 
 /datum/sprite_accessory/hair/bald
 	name = "Bald"
-	icon_state = ""
-	specuse = list("human", "dwarf", "elf", "aasimar")
+	icon_state = "hair_bald"
+	specuse = list("fat", "standard", "bulky")
 	gender = MALE
 
 /datum/sprite_accessory/hair/skinhead
 	name = "Shaved"
 	icon_state = "hair_skinhead"
-	specuse = list("human", "dwarf", "elf")
+	specuse = list("fat", "standard", "bulky")
 	gender = MALE
 	under_layer = TRUE
 
@@ -426,7 +426,7 @@
 	name = "Pick"
 	icon_state = "facial_longbeard"
 	gender = MALE
-	specuse = list("dwarf")
+	specuse = list("fat", "standard", "bulky")
 
 /datum/sprite_accessory/facial_hair/know
 	name = "Knowledge"
@@ -438,13 +438,13 @@
 	name = "Brew"
 	icon_state = "facial_moonshiner"
 	gender = MALE
-	specuse = list("dwarf")
+	specuse = list("fat", "standard", "bulky")
 
 /datum/sprite_accessory/facial_hair/ranger
 	name = "Ranger"
 	icon_state = "facial_dwarf"
 	gender = MALE
-	specuse = list("dwarf")
+	specuse = list("fat", "standard", "bulky")
 
 ///////////////////////////
 // Accessory Definitions //
@@ -457,54 +457,90 @@
 	gender = NEUTER
 	icon = 'icons/roguetown/mob/accessories.dmi'
 	use_static = TRUE
-	specuse = list("human", "dwarf", "elf")
+	specuse = list("fat", "standard", "bulky")
 
 /datum/sprite_accessory/accessories/nothing
 	name = "Nothing"
 	icon_state = "nothing"
-	specuse = list("human", "dwarf", "elf")
+	specuse = list("fat", "standard", "bulky")
 
 /datum/sprite_accessory/accessories/earrings/sil
 	name = "Earrings"
 	icon_state = "earrings_sil"
 	gender = FEMALE
-	specuse = list("human", "dwarf", "elf")
+	specuse = list("fat", "standard", "bulky")
 
 /datum/sprite_accessory/accessories/earrings
 	name = "Earrings (G)"
 	icon_state = "earrings"
 	gender = FEMALE
-	specuse = list("human", "dwarf", "elf")
-
-/datum/sprite_accessory/accessories/earrings/em
-	name = "Earrings (E)"
-	icon_state = "earrings_em"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf")
-
-/datum/sprite_accessory/accessories/eyepierce
-	name = "Pierced Brow (L)"
-	icon_state = "eyepierce"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf")
-
-/datum/sprite_accessory/accessories/eyepierce/alt
-	name = "Pierced Brow (R)"
-	icon_state = "eyepiercealt"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf")
+	specuse = list("fat", "standard", "bulky")
 
 /datum/sprite_accessory/accessories/choker
 	name = "Neckband"
 	icon_state = "choker"
 	gender = FEMALE
-	specuse = list("elf")
+	specuse = list("standard", "bulky")
 
-/datum/sprite_accessory/accessories/chokere
-	name = "Neckband (E)"
-	icon_state = "chokere"
-	gender = FEMALE
-	specuse = list("elf")
+/datum/sprite_accessory/accessories/mask
+	name = "Straps"
+	icon_state = "straps"
+	specuse = list("fat", "standard", "bulky")
+
+/datum/sprite_accessory/accessories/eyeglasses
+	name = "Eyeglasses"
+	icon_state = "eyeglasses"
+	specuse = list("fat", "standard", "bulky")
+
+/datum/sprite_accessory/accessories/eyepatch
+	name = "Eyepatch (r)"
+	icon_state = "eyepatch_r"
+	specuse = list("fat", "standard", "bulky")
+
+/datum/sprite_accessory/accessories/eyepatch/alt
+	name = "Eyepatch (l)"
+	icon_state = "eyepatch_l"
+	specuse = list("fat", "standard", "bulky")
+
+/datum/sprite_accessory/accessories/pipe
+	name = "Pipe"
+	icon_state = "pipe"
+	specuse = list("fat", "standard", "bulky")
+
+/datum/sprite_accessory/accessories/pipe/lit
+	name = "Pipe (lit)"
+	icon_state = "pipe_lit"
+	specuse = list("fat", "standard", "bulky")
+
+/datum/sprite_accessory/accessories/pipe2
+	name = "Pipe 2"
+	icon_state = "pipe2"
+	specuse = list("fat", "standard", "bulky")
+
+/datum/sprite_accessory/accessories/pipe2/lit
+	name = "Pipe 2 (lit)"
+	icon_state = "pipe2_lit"
+	specuse = list("fat", "standard", "bulky")
+
+/datum/sprite_accessory/accessories/cigarette
+	name = "Cigarette"
+	icon_state = "spliff"
+	specuse = list("fat", "standard", "bulky")
+
+/datum/sprite_accessory/accessories/cigarette/lit
+	name = "Cigarette (lit)"
+	icon_state = "spliff_lit"
+	specuse = list("fat", "standard", "bulky")
+
+/datum/sprite_accessory/accessories/stogie
+	name = "Cigar"
+	icon_state = "stogie"
+	specuse = list("fat", "standard", "bulky")
+
+/datum/sprite_accessory/accessories/stogie/lit
+	name = "Cigar (lit)"
+	icon_state = "stogie_lit"
+	specuse = list("fat", "standard", "bulky")
 
 ///////////////////////////
 // Detail Definitions //
@@ -517,7 +553,7 @@
 	gender = NEUTER
 	icon = 'icons/roguetown/mob/detail.dmi'
 	use_static = TRUE
-	specuse = list("human", "dwarf", "elf")
+	specuse = list("fat", "standard", "bulky")
 
 /datum/sprite_accessory/detail/nothing
 	name = "Nothing"
@@ -556,6 +592,37 @@
 /datum/sprite_accessory/detail/deadeye_l
 	name = "Dead Eye (l)"
 	icon_state = "deadeye_l"
+
+/datum/sprite_accessory/detail/snaileyes
+	name = "Snail Eyes"
+	gender = PLURAL
+	icon_state = "snaileyes"
+
+/datum/sprite_accessory/detail/mandibles
+	name = "Mandibles"
+	gender = PLURAL
+	icon_state = "mandibles"
+
+/datum/sprite_accessory/detail/tentacles
+	name = "Tentacles"
+	gender = PLURAL
+	icon_state = "tentacles"
+
+/datum/sprite_accessory/detail/growth_r
+	name = "Unnatural Growth (r)"
+	icon_state = "unnaturalgrowth_r"
+
+/datum/sprite_accessory/detail/growth_l
+	name = "Unnatural Growth (l)"
+	icon_state = "unnaturalgrowth_l"
+
+/datum/sprite_accessory/detail/branch_r
+	name = "Branch (r)"
+	icon_state = "branch_r"
+
+/datum/sprite_accessory/detail/branch_l
+	name = "Branch (l)"
+	icon_state = "branch_l"
 
 ///////////////////////////
 // Underwear Definitions //

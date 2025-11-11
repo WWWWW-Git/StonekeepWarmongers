@@ -241,7 +241,7 @@
 	backr = /obj/item/quiver/bullets
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 	pants = /obj/item/clothing/under/roguetown/trou/war/panties
-	belt = /obj/item/storage/belt/rogue/leather/black
+	belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
 	beltr = GetSidearmForWarfare()
 	beltl = /obj/item/rogueweapon/sword/sabre/warcrime
 	armor = /obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies
@@ -320,6 +320,8 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	if(H.dna.species.id == "fat")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
 	beltl = /obj/item/rogueweapon/huntingknife/bayonet
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	if(prob(50))
@@ -837,6 +839,8 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/fat
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	if(H.dna.species.id == "fat")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
 	beltl = /obj/item/rogueweapon/huntingknife/bayonet
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	if(prob(50))
