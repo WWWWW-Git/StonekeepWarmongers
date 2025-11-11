@@ -122,6 +122,7 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/grassland.wav'
+	canSmoothWith = list(/turf/open/floor/rogue/sand)
 	slowdown = 0
 	neighborlay = "grassedge"
 

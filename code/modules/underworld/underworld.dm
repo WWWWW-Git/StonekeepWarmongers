@@ -135,7 +135,7 @@
 	if(user.paid)
 		switch(alert("Are you ready to be judged?",,"Yes","No"))
 			if("Yes")
-				playsound(user, 'sound/misc/deadbell.ogg', 50, TRUE, -2, ignore_walls = TRUE)
+				playsound(user, 'sound/misc/deth.ogg', 50, TRUE, -2, ignore_walls = TRUE)
 				user.returntolobby()
 			if("No")
 				usr << "You delay fate."

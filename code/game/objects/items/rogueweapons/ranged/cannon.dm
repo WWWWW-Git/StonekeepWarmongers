@@ -89,7 +89,7 @@
 		if(istype(step, /turf/open/transparent/openspace))
 			turfina = get_step_multiz(step, DOWN)
 		else
-			explosion(get_turf(src), heavy_impact_range = 4, light_impact_range = 6, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
+			explosion(get_turf(src), heavy_impact_range = 4, light_impact_range = 6, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg','sound/misc/explode/bottlebomb (3).ogg'))
 
 	var/obj/projectile/fired_projectile = new loaded.projectile_type(turfina)
 	fired_projectile.firer = src

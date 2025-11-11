@@ -365,6 +365,16 @@
 	pixel_y = -32
 	duration = 39
 
+	var/obj/particle_emitter/burst/rocks/rocks
+
+/obj/effect/temp_visual/explosion/Initialize()
+	. = ..()
+	rocks = new(get_turf(src))
+
+/obj/effect/temp_visual/explosion/Destroy()
+	QDEL_NULL(rocks)
+	return ..()
+
 /obj/effect/temp_visual/explosion/fast
 	icon_state = "explosionfast"
 	duration = 13

@@ -506,7 +506,7 @@ SUBSYSTEM_DEF(ticker)
 		if(end_party)
 			C.mob.playsound_local(C.mob, 'sound/warmongers.ogg', 70, FALSE)
 		else
-			C.mob.playsound_local(C.mob, 'sound/readyup.ogg', 70, FALSE)
+			C.mob.playsound_local(C.mob, 'sound/roundstart.ogg', 70, FALSE)
 
 //	SEND_SOUND(world, sound('sound/misc/roundstart.ogg'))
 	current_state = GAME_STATE_PLAYING

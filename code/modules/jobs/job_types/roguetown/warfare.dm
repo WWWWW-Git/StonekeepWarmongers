@@ -452,9 +452,9 @@
 	spawn_positions = 1
 	faction = "Station"
 	allowed_races = list(
-		"fat",
-		"standard",
-		"bulky"
+		"Fat",
+		"Standard",
+		"Bulky"
 	)
 	outfit = /datum/outfit/job/roguetown/bluking
 
@@ -496,6 +496,8 @@
 /datum/outfit/job/roguetown/bluking/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	var/datum/game_mode/warmongers/W = SSticker.mode
+
+	H.set_species(/datum/species/human/northern/fat)
 
 	H.patron = GLOB.patronlist[/datum/patron/divine/psydon]
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light

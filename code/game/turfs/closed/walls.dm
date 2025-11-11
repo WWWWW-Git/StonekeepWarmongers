@@ -287,6 +287,7 @@
 	switch(denttype)
 		if(WALL_DENT_SHOT)
 			decal.icon_state = "bullet_hole"
+			playsound(src, "whiz", 100, FALSE, 6, pressure_affected = FALSE)
 		if(WALL_DENT_HIT)
 			decal.icon_state = "impact[rand(1, 3)]"
 
