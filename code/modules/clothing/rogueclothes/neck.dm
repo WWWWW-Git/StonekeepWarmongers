@@ -118,18 +118,18 @@
 	blocksound = PLATEHIT
 	smeltresult = /obj/item/ingot/iron
 	anvilrepair = /datum/skill/craft/armorsmithing
-	var/obj/item/rogue/barkpowderflask/flask
+	var/obj/item/rogue/barkenpowderflask/flask
 
 /obj/item/clothing/neck/roguetown/gorget/flasked/Initialize()
 	. = ..()
-	var/obj/item/rogue/barkpowderflask/F = new(src)
+	var/obj/item/rogue/barkenpowderflask/F = new(src)
 	flask = F
 	update_icon()
 
 /obj/item/clothing/neck/roguetown/gorget/examine(mob/user)
 	. = ..()
 	if(flask)
-		. += "<span class='notice'>It has a <b>flask of barkpowder</b> tied around it.</span>"
+		. += "<span class='notice'>It has a <b>flask of barkenpowder</b> tied around it.</span>"
 		. += "<span class='tutorial'>Use rightclick to remove it.</span>"
 
 /obj/item/clothing/neck/roguetown/gorget/update_icon()
@@ -139,8 +139,8 @@
 		icon_state = initial(icon_state)
 
 /obj/item/clothing/neck/roguetown/gorget/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/rogue/barkpowderflask))
-		var/obj/item/rogue/barkpowderflask/F = I
+	if(istype(I, /obj/item/rogue/barkenpowderflask))
+		var/obj/item/rogue/barkenpowderflask/F = I
 		to_chat(user, "<span class='info'>You tie \the [F] around \the [src] with a piece of string.</span>")
 		F.forceMove(src)
 		flask = F
@@ -161,7 +161,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross
 	name = "psycross"
-	desc = "For those who still want to believe."
+	desc = "A strange amulet, seems worthless."
 	icon_state = "psicrossw"
 	//dropshrink = 0.75
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS
@@ -283,14 +283,3 @@
 	icon_state = "surgcollar"
 	item_state = "surgcollar"
 	sellprice = 15
-
-//................Kaizoku Update.................
-/obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin
-	name = "karuta zukin"
-	desc = "A protective hood composed of rectangular plates sewn onto a fabric backing, offering a more solid \
-	defense while remaining flexible."
-	icon_state = "karuta_zukin"
-	item_state = "karuta_zukin"
-	icon = 'icons/roguetown/clothing/neck.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/neck.dmi'
-	adjustable = CAN_CADJUST

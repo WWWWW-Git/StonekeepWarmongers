@@ -334,18 +334,6 @@
 	new /obj/item/rogueweapon/surgery/cautery(src)
 	new /obj/item/rogueweapon/surgery/hammer(src)
 
-//...............Kaizoku Update..............
-/obj/item/storage/belt/rogue/kaizoku/leather/daisho
-	name = "daisho belt"
-	desc = "A oil-boiled reinforced silk or leather belt used by Abyssariads for practicing Daisho."
-	icon_state = "daisho"
-	sellprice = 5
-	icon = 'icons/roguetown/clothing/belts.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/belts.dmi'
-
-/obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	color = COLOR_ALMOST_BLACK	
-
 //.............Warmongers................
 /obj/item/storage/backpack/rogue/backpack/war/ppr
 	slot_flags = ITEM_SLOT_BACK_L|ITEM_SLOT_BACK_R

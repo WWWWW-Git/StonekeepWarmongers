@@ -25,7 +25,7 @@ SUBSYSTEM_DEF(warmongers)
 
 	var/respawning = FALSE
 
-	var/oneteammode = FALSE // players only allowed to choose grenzelhoft
+	var/oneteammode = FALSE // players only allowed to choose the regime
 
 /datum/controller/subsystem/warmongers/Initialize(start_timeofday)
 	red_airship = locate(/area/rogue/indoors/airship/red)
@@ -68,11 +68,6 @@ SUBSYSTEM_DEF(warmongers)
 
 		playsound_area(red_airship, 'sound/misc/airship_horn_inside.ogg')
 		playsound_area(blue_airship, 'sound/misc/airship_horn_inside.ogg')
-
-		for(var/mob/living/M in red_airship)
-			to_chat(M, "<span class='info'>WE'RE AT POSITION!!! GET THE FUCK OUT!!!</span>")
-		for(var/mob/living/M in blue_airship)
-			to_chat(M, "<span class='info'>WE'RE AT POSITION!!! GET THE FUCK OUT!!!</span>")
 
 		sleep(7 SECONDS)
 		respawn(red_airship)
@@ -163,7 +158,7 @@ SUBSYSTEM_DEF(warmongers)
 		new typepath(red.loc)
 		new typepath(blu.loc)
 
-/proc/GetMainGunForWarfareHeartfelt()
+/proc/GetMainGunForWarfarePPU()
 	switch(SSwarmongers.warfare_techlevel)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
@@ -174,7 +169,7 @@ SUBSYSTEM_DEF(warmongers)
 		if(WARMONGERS_TECHLEVEL_NONE)
 			return null
 
-/proc/GetMainGunForWarfareGrenzelhoft()
+/proc/GetMainGunForWarfareRegime()
 	switch(SSwarmongers.warfare_techlevel)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/carbine

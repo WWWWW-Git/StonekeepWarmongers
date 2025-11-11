@@ -4,8 +4,8 @@
 // #define EAST 4
 // #define WEST 8
 
-#define BLUE_WARTEAM "Grenzelhofts" // Grenzelhoft
-#define RED_WARTEAM "Heartfelts" // Heartfelt
+#define BLUE_WARTEAM "Regime" // Grenzelhoft
+#define RED_WARTEAM "PPU" // Heartfelt
 
 #define WARMONGERS_TECHLEVEL_FLINTLOCKS 1
 #define WARMONGERS_TECHLEVEL_NONE 2

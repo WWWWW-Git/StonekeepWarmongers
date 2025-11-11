@@ -35,5 +35,5 @@
 		return
 
 	var/mob/living/carbon/human/H = user
-	var/random_message = pick("you spin the globe!", "You land on Rockhill!", "You land on Zybantine!", "You land on port Ice cube!.", "You land on port Thornvale!", "You land on grenzelhoft!")
+	var/random_message = pick("you spin the globe!", "You land on Bogtown!", "You land on Zybus!", "You land on port Wrack!", "You land on port Frostbit!", "You land on Grenn!")
 	to_chat(H, "<span class='notice'>[random_message]</span>")

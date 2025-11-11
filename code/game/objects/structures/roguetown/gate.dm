@@ -199,7 +199,7 @@ GLOBAL_LIST_EMPTY(biggates)
 
 /obj/structure/winch
 	name = "winch"
-	desc = "A Gatekeeper's only, and most important responsibility."
+	desc = "A gatekeeper's only, and most important responsibility."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "winch"
 	density = TRUE
