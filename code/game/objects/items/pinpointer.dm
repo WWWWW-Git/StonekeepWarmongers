@@ -203,11 +203,11 @@
 /obj/item/pinpointer/crown/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/clothing/head/roguetown/warmongers/crownblu))
 		team = BLUE_WARTEAM
-		say("I HAVE ACQUIRED THE SMELL OF THE GRENZELHOFTS. TRACKING HEARTFELT SCUM'S CROWN!")
+		say("I HAVE ACQUIRED THE SMELL OF THE STATE. TRACKING PEASANT SCUM'S CROWN!")
 		playsound(src, 'sound/misc/machinetalk.ogg', 50, TRUE)
 	if(istype(I, /obj/item/clothing/head/roguetown/warmongers/crownred))
 		team = RED_WARTEAM
-		say("I HAVE ACQUIRED THE SMELL OF THE HEARTFELTS. TRACKING GRENZELHOFT SCUM'S CROWN!")
+		say("I HAVE ACQUIRED THE SMELL OF THE UNION. TRACKING LOONY SCUM'S CROWN!")
 		playsound(src, 'sound/misc/machinetalk.ogg', 50, TRUE)
 	scan_for_target()
 

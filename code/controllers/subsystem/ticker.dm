@@ -487,7 +487,7 @@ SUBSYSTEM_DEF(ticker)
 	SSdbcore.SetRoundStart()
 	pickaspect()
 
-	to_chat(world, "<span class='notice'><span class='typewrite'>♔ Praise the Crown! ♔</span></span>")
+	to_chat(world, "<span class='notice'><span class='typewrite'>Praise the Root!</span></span>")
 	
 	spawn(10)
 		to_chat(world, "<span class='notice'>This battle's aspect is: [round_aspect.name]</span>")

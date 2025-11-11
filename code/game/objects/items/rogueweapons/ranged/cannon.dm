@@ -2,7 +2,7 @@
 
 /obj/structure/cannon // cannon
 	name = "barkstone"
-	desc = "A large weapon mainly hoisted on warships."
+	desc = "A large weapon, mounted up on heavy-duty tracks, making it somewhat easy to move around even the roughest terrain."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "cannona"
 	anchored = FALSE
@@ -120,7 +120,7 @@
 
 /obj/structure/bombard
 	name = "bombardier"
-	desc = "Artiljerija! Load in a bomb and set the azirath, then light. Use your middle eye to check through the magnifying glass."
+	desc = "A motar capable of launching bombs high into the sky at an angle to come crashing down on the foe, even if they cower behind cover."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "bombardier"
 	anchored = FALSE
@@ -267,8 +267,8 @@
 // maxim bb gun
 
 /obj/structure/maxim
-	name = "\improper Maxwell's Barkenweapon"
-	desc = "Oh boy, this'll be complicated to operate, won't it? There is a scroll wheel on it."
+	name = "\improper Maxwell's Barker"
+	desc = "A rapid firing barker mounted on a wheeled carriage so it can be quickly moved around the battlefield."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "machina"
 	anchored = FALSE

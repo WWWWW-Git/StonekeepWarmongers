@@ -14,7 +14,7 @@
 	var/permanent
 
 /obj/machinery/light/rogue/lanternpost/fixed
-	desc = "The lamptern is permanently built into the structure of this one."
+	desc = "The lantern is permanently built into the structure of this one."
 	permanent = TRUE
 
 /obj/machinery/light/rogue/lanternpost/fixed/compact

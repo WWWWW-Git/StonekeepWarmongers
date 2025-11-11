@@ -49,7 +49,7 @@
 // Lord Procs
 
 /proc/getlordtitle()
-	return pick("of Wolvs", "the Tyrant", "the Idiot", "the Foolish", "the Bloody", "the Impaler", "the Discombobulater", "the Risktaker", "the Golden", "of Gold", "the Warmonger", "the Thief", "the Waterborn", "the Bloodborn", "the Barker", "the Wolv", "the Predator", "of Predators", "the Stealthy", "the Sneaky", "the Destroyer", "the Ambusher", "the Bomber", "the Strategist", "of Strategy", "of Bombing", "of Ambushing", "the Racist", "the Hater of Stringbeans", "the Suicidal", "the Buffoon", "the Baboon", "the Bear", "the Bringer of Death", "of Death", "the Ordinary", "the Boring", "the Peaceful", "the Negotiator", "the Actor", "the Funny", "the Jestful", "of Jesters", "of Heartfelt", "of Grenzelhoft", "of Life")
+	return pick("of Wolvs", "the Tyrant", "the Idiot", "the Foolish", "the Bloody", "the Impaler", "the Discombobulater", "the Risktaker", "the Golden", "of Gold", "the Warmonger", "the Warmongrel", "the Thief", "the Waterborn", "the Bloodborn", "the Barker", "the Wolv", "the Predator", "of Predators", "the Stealthy", "the Sneaky", "the Destroyer", "the Ambusher", "the Bomber", "the Strategist", "of Strategy", "of Bombing", "of Ambushing", "the Racist", "the Hater of Stringbeans", "the Suicidal", "the Buffoon", "the Baboon", "the Bear", "the Bringer of Death", "of Death", "the Ordinary", "the Boring", "the Peaceful", "the Negotiator", "the Actor", "the Funny", "the Jestful", "of Jesters", "of Peasantry", "of Zealotry", "of Life")
 
 /mob/living/carbon/human/proc/warfare_announce()
 	set name = "ANNOUNCE!"
@@ -122,7 +122,7 @@
 		if(C.reinforcementwave >= WS.reinforcement)
 			shippables[WS.name] = WS
 
-	var/choice = input(src, "URGENT AIRSHIP SHIPPING STRAIGHT FROM ENIGMA!", "BUY NOW!!!") as null|anything in shippables
+	var/choice = input(src, "URGENT AIRSHIP SHIPPING!", "BUY NOW!!!") as null|anything in shippables
 	var/datum/warshippable/shoppin = shippables[choice]
 	if(!shoppin)
 		return
@@ -183,7 +183,7 @@
 
 /datum/job/roguetown/warmongers/red/lord
 	title = "Heartfelt Lord"
-	tutorial = "Heartfelt is under attack. Your men are demoralized and little is left. But not all is lost just yet, with supplies coming in from the Foglands you might be able to push the Grenzelhoft barbarians off this land."
+	tutorial = "The loonies want this land, gather the lads and send the bastards packing before supper."
 	department_flag = REDSS
 	flag = REDKING
 	min_pq = 0
@@ -272,7 +272,7 @@
 
 /datum/job/roguetown/warmongers/red/soldier
 	title = "Heartfelt Infantry"
-	tutorial = "Every day feels as though its worst than the last, hope is dwindling and food is getting scarcer. You never wanted any of this, but even though no man wants war it will find him eventually regardless. You have two choices, die, or take up arms and drive these barbarians back into the sea! For Heartfelt!"
+	tutorial = "Peasant work takes the life out of you, luckily for you the bier you're paid in tends to make it easier to stomach. And you will admit, outright killing people can be fun."
 	department_flag = REDSS
 	flag = SOLDIER
 	total_positions = 99
@@ -327,9 +327,9 @@
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
 	beltr = /obj/item/quiver/bullets
-	backr = GetMainGunForWarfareHeartfelt()
+	backr = GetMainGunForWarfarePPU()
 	backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
-	neck = /obj/item/rogue/barkpowderflask
+	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm/alternate
@@ -348,224 +348,7 @@
 		H.change_stat("perception", 1)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
-//// SAMURAI ////
 
-/datum/advclass/red/samurai // Good health, armor, and a spear make for a stalwart defender. However, no gun skills, and slow.
-	name = "Zamurai"
-	tutorial = "Elite and stalwart melee combatants. While great with swords and polearms, they forego the use of firearms entirely."
-	outfit = /datum/outfit/job/roguetown/redsamurai
-	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = ALL_RACES_LIST_NAMES
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	category_tags = list(CTAG_REDSOLDIER)
-	maximum_possible_slots = -1
-	reinforcements_wave = 2
-
-/datum/outfit/job/roguetown/redsamurai/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	pants = /obj/item/clothing/under/roguetown/trou/tobi
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/heartfelt
-	armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad/heartfelt
-	backl = /obj/item/rogue/musicpack/heartfelt // Zamurai are mostly a unit only still trained because it boosts moral, they're a potent masculine figure in Heartfelt. Like lumberjacks!
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	beltl = /obj/item/rogueweapon/sword/short/wakizashi
-	backr = /obj/item/rogueweapon/halberd/naginata
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
-	gloves = /obj/item/clothing/gloves/roguetown/leather/abyssal
-	mask = /obj/item/clothing/mask/rogue/kaizoku/menpo/steel/half
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-		H.change_stat("strength", 1)
-		H.change_stat("perception", -1)
-		H.change_stat("endurance", 1)
-		H.change_stat("constitution", 2)
-		H.change_stat("speed", -6)
-	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
-
-//// SAPPER ////
-
-/datum/advclass/red/sapper
-	name = "Sapper"
-	tutorial = "Military engineers that are well equipped for construction, while also being strong enough to hold the line against incursions. Despite this they are not well armed when it comes to firearms."
-	outfit = /datum/outfit/job/roguetown/redsapper
-	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = ALL_RACES_LIST_NAMES
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	category_tags = list(CTAG_REDSOLDIER)
-	maximum_possible_slots = -1
-	reinforcements_wave = 0
-
-/datum/outfit/job/roguetown/redsapper/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	neck = /obj/item/rogue/barkpowderflask
-	pants = /obj/item/clothing/under/roguetown/trou/tobi
-	cloak = /obj/item/clothing/cloak/jinbaori/reddy
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/rattan
-	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	if(H.dna.species.id == "dwarf")
-		beltl = /obj/item/rogueweapon/woodcut/pick
-	else
-		beltl = /obj/item/rogueweapon/battle/ono
-	beltr = GetSidearmForWarfare()
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
-	backl = /obj/item/storage/backpack/rogue/backpack
-	head = /obj/item/clothing/head/roguetown/helmet/skullcap/rattan
-	if(prob(70))
-		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
-	backpack_contents = list(/obj/item/rogue/sandbagkit = 4, /obj/item/rogueweapon/shovel = 1)
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 5, TRUE)
-		H.change_stat("strength", 2)
-		H.change_stat("endurance", 1)
-		H.change_stat("constitution", 1)
-		H.change_stat("speed", -6)
-
-//// FIRELANCER ////
-
-/datum/advclass/red/firelancer
-	name = "Firelancer"
-	tutorial = "Heartfelts answer to Grenzelhofts Grenadiers. The Firelance, formerly 'Widowmaker' is a strange, difficult to operate, and most importantly dangerous weapon. Only Firelancers are trained in their operation."
-	outfit = /datum/outfit/job/roguetown/firelancer
-	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = ALL_RACES_LIST_NAMES
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	category_tags = list(CTAG_REDSOLDIER)
-	maximum_possible_slots = -1
-	reinforcements_wave = 3
-
-/datum/outfit/job/roguetown/firelancer/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
-	pants = /obj/item/clothing/under/roguetown/trou/tobi
-	cloak = /obj/item/clothing/cloak/jinbaori/reddy
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/sanmaido
-	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
-	backr = /obj/item/rogueweapon/spear/firelance
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	beltr = /obj/item/flint
-	beltl = /obj/item/rogueweapon/mace/ararebo
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
-	backl = /obj/item/storage/backpack/rogue/satchel
-	head = /obj/item/clothing/head/roguetown/helmet/zijinguan
-	if(prob(70))
-		mask = /obj/item/clothing/mask/cigarette/rollie/nicotine
-	backpack_contents = list(/obj/item/sanctiflux = 3)
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-		H.change_stat("strength", 2)
-		H.change_stat("endurance", 1)
-		H.change_stat("constitution", 1)
-	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
-
-//// HEARTFELT NINJA ////
-
-/datum/advclass/red/ninja
-	name = "Ninja"
-	tutorial = "Assassins hired into the military, fighting for coin. Utilizing bows, bombs, and knives they strike unseen where the enemy expects them the least."
-	outfit = /datum/outfit/job/roguetown/redninja
-	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = ALL_RACES_LIST_NAMES
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	category_tags = list(CTAG_REDSOLDIER)
-	maximum_possible_slots = -1
-	reinforcements_wave = 2
-
-/datum/outfit/job/roguetown/redninja/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	pants = /obj/item/clothing/under/roguetown/trou/leather/shinobizubon
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/shozoku
-	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-	head = /obj/item/clothing/head/roguetown/shinobi_zukin
-	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	beltr = /obj/item/quiver/arrows
-	beltl = /obj/item/rogueweapon/huntingknife/idagger/steel/tanto
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/khudagach
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/bomb/smoke = 1, /obj/item/bomb/poison = 1, /obj/item/rogue/caltrop = 2)
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-		H.change_stat("speed", 2)
-		H.change_stat("endurance", 1)
-	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_NINJA, TRAIT_GENERIC)
-
-//// RIFLEMEN ////
-
-/datum/advclass/red/riflemen //Forgoes head protection, physical stats, and weapon skills in exchange for better flintlock skills and more perception.
-	name = "Sharpbarker"
-	tutorial = "Far better trained compared to the common soldiery, and with a marksmans rifle as well. The only issue is lacking in melee combat even worse than Ashigaru."
-	outfit = /datum/outfit/job/roguetown/redriflemen
-	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = ALL_RACES_LIST_NAMES
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	category_tags = list(CTAG_REDSOLDIER)
-	maximum_possible_slots = -1
-	reinforcements_wave = 2
-
-/datum/outfit/job/roguetown/redriflemen/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	pants = /obj/item/clothing/under/roguetown/trou/tobi
-	cloak = /obj/item/clothing/cloak/raincloak/mino
-	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/tatami
-	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	beltl = /obj/item/rogueweapon/huntingknife/idagger/steel/tanto
-	beltr = /obj/item/quiver/bullets
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote
-	neck = /obj/item/rogue/barkpowderflask
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
-	head = /obj/item/clothing/head/roguetown/tengai/gasa
-	if(prob(70))
-		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 6, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-		H.change_stat("perception", 4)
-		H.change_stat("strength", -3)
-		H.change_stat("endurance", -4)
-		H.change_stat("speed", -2)
-		H.change_stat("constitution", -3)
-	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 //// OFFICER ////
 
 /datum/advclass/red/officer
@@ -600,7 +383,7 @@
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
 	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 	backr = /obj/item/quiver/bullets
-	neck = /obj/item/rogue/barkpowderflask
+	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhelm/alternate
@@ -631,10 +414,6 @@
 
 /datum/outfit/job/roguetown/redmedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
-	pants = /obj/item/clothing/under/roguetown/trou/tobi
-	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare
-	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	belt = /obj/item/storage/belt/rogue/leather/medic
@@ -657,36 +436,6 @@
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
 
-//// ELVEN SLAVE ////
-
-/datum/advclass/red/slave
-	name = "Elven Slave"
-	tutorial = "You got into this war either by force or a by treasonous act to your home, either way you're not coming back, they hate you, they all hate you."
-	outfit = /datum/outfit/job/roguetown/redslave
-	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = "Elf"
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	category_tags = list(CTAG_BLUSOLDIER)
-	maximum_possible_slots = -1
-	reinforcements_wave = 0
-
-/datum/outfit/job/roguetown/redslave/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/red
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	r_hand = pick(/obj/item/rogueweapon/woodstaff,/obj/item/rogueweapon/spear,/obj/item/rogueweapon/spear/billhook,/obj/item/rogueweapon/spear/stone,/obj/item/rogueweapon/copperspear)
-	belt = /obj/item/storage/belt/rogue/leather/cloth
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/bows, 5, TRUE)
-		H.change_stat("speed", 2)
-		H.change_stat("intelligence", -3)
-		H.change_stat("strength", -3)
-
 /////////////////////////////////////// BLU //////////////////////////////////////////////
 
 /datum/job/roguetown/warmongers/blu
@@ -695,7 +444,7 @@
 
 /datum/job/roguetown/warmongers/blu/lord
 	title = "Grenzelhoft Lord"
-	tutorial = "A middle-class noble with aspirations for something greater. You've been given charge of a small detachment and sent directly into the meat grinder. You will either return to Grenzelhoft a conquerer, or not at all."
+	tutorial = "A full-lifer through and through, you know which fork is which, and the best way to curtsy, and now you're in charge of the lives of hundreds if not thousands of men. The KAITZAR expects greatness, and you should sooner kill yourself than disappoint HIM."
 	department_flag = BLUES
 	flag = BLUKING
 	min_pq = 0
@@ -790,7 +539,7 @@
 
 /datum/job/roguetown/warmongers/blu/soldier
 	title = "Grenzelhoft Infantry"
-	tutorial = "Yours is a just task, to expand the borders of the Grenzelhoft Imperiate, the lack of food in your belly and pay in your pocket is easily ignored by knowing you're doing your part, in the unending colossus that is Grenzelhoft. For the Empire! For the KAISER! For the One True God!"
+	tutorial = "No-lifers and Some-lifers, pressed into service, given weaponry, and pointed at foe. The No-Lifers fight wanting to be Some-lifers, the Some-lifers fight wanting to be Full-Lifers, and the Full-Lifers are back at home relaxing while the former two do the dying. For the KAITZAR!"
 	department_flag = BLUES
 	flag = SOLDIER
 	total_positions = 99
@@ -846,9 +595,9 @@
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
 	beltr = /obj/item/quiver/bullets
-	backr = GetMainGunForWarfareGrenzelhoft()
+	backr = GetMainGunForWarfareRegime()
 	backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
-	neck = /obj/item/rogue/barkpowderflask
+	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm/alternate
@@ -934,7 +683,7 @@
 	beltr = /obj/item/quiver/bullets
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 	head = /obj/item/clothing/head/roguetown/helmet/hussarhelm
-	neck = /obj/item/rogue/barkpowderflask
+	neck = /obj/item/rogue/barkenpowderflask
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/hussar
 	backr = /obj/item/rogueweapon/halberd
 	if(H.mind)
@@ -983,7 +732,7 @@
 		beltl = /obj/item/rogueweapon/woodcut/steel
 	backr = /obj/item/quiver/woodbullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	neck = /obj/item/rogue/barkpowderflask
+	neck = /obj/item/rogue/barkenpowderflask
 	backl = /obj/item/storage/backpack/rogue/backpack
 	head = /obj/item/clothing/head/roguetown/helmet/kettle/steelhelm
 	mask = /obj/item/clothing/mask/rogue/platemask
@@ -1045,7 +794,7 @@
 
 /obj/item/rogue/caltrop
 	name = "caltrop"
-	desc = "Heartfeltians call this thing a tetsubishi. But when it's armed with a bomb theres only one thing you can call it, funny. "
+	desc = "."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "tetsubishi"
 	var/obj/item/bomb/loaded_bomb = null
@@ -1136,7 +885,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
 	beltr = /obj/item/quiver/bullets
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	neck = /obj/item/rogue/barkpowderflask
+	neck = /obj/item/rogue/barkenpowderflask
 	mask = /obj/item/clothing/mask/rogue/snipermask
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper
 	if(H.mind)
@@ -1161,7 +910,7 @@
 
 /datum/advclass/blu/officer
 	name = "Rabble-Rouser"
-	tutorial = "Coming from the upper strata of no-lifers, Rabble-Rousers are the officer class of the Regimer army, tasked with whipping the soldiers into a chaotic frenzy before battle."
+	tutorial = "Drawn from the Some-lifers, Rabble-Rousers are the officer class of the Regimer army, tasked with whipping the soldiers into a chaotic frenzy before battle."
 	outfit = /datum/outfit/job/roguetown/bluofficer
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -1191,7 +940,7 @@
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
 	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
 	backr = /obj/item/quiver/bullets
-	neck = /obj/item/rogue/barkpowderflask
+	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/kalpakhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/regime/kalpakhelm/alternate
@@ -1248,33 +997,3 @@
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
-
-//// ELVEN SLAVE ////
-
-/datum/advclass/blu/slave
-	name = "Elven Slave"
-	tutorial = "You got into this war either by force or a by treasonous act to your home, either way you're not coming back, they hate you, they all hate you."
-	outfit = /datum/outfit/job/roguetown/bluslave
-	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = "Elf"
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	category_tags = list(CTAG_BLUSOLDIER)
-	maximum_possible_slots = -1
-	reinforcements_wave = 0
-
-/datum/outfit/job/roguetown/bluslave/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	r_hand = pick(/obj/item/rogueweapon/woodstaff,/obj/item/rogueweapon/spear,/obj/item/rogueweapon/spear/billhook,/obj/item/rogueweapon/spear/stone,/obj/item/rogueweapon/copperspear)
-	belt = /obj/item/storage/belt/rogue/leather/cloth
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/bows, 5, TRUE)
-		H.change_stat("speed", 2)
-		H.change_stat("intelligence", -3)
-		H.change_stat("strength", -1)

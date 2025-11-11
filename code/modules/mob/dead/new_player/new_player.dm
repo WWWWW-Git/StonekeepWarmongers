@@ -579,9 +579,9 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 			var/cat_name = ""
 			switch (SSjob.name_occupations[category[1]].department_flag)
 				if (REDSS)
-					cat_name = "Heartfelts"
+					cat_name = "PPU"
 				if (BLUES)
-					cat_name = "Grenzelhofts"
+					cat_name = "Regime"
 				if (PEASANTS)
 					cat_name = "Filth"
 

@@ -109,7 +109,7 @@
 
 /obj/item/bomb/poison
 	name = "poison bomb"
-	desc = "Vile brimstone powder mixed with barkpowder inside a ceramic coating, heat over fire to begin an exothermic reaction gradually increasing pressure until releasing poisonous smoke."
+	desc = "Vile brimstone powder mixed with barkenpowder inside a ceramic coating, heat over fire to begin an exothermic reaction gradually increasing pressure until releasing poisonous smoke."
 	icon_state = "poison_bomb"
 	fuze = 25
 	light_impact = 0
