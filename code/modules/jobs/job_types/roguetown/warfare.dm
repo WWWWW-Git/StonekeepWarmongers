@@ -191,6 +191,8 @@
 	spawn_positions = 1
 	faction = "Station"
 	allowed_races = list(
+		"Fat",
+		"Standard",
 		"Fat"
 	)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
@@ -234,6 +236,8 @@
 /datum/outfit/job/roguetown/redking/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	var/datum/game_mode/warmongers/W = SSticker.mode
+
+	H.set_species(/datum/species/human/northern/fat)
 
 	neck = /obj/item/clothing/neck/roguetown/gorget/flasked
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/toffhelm

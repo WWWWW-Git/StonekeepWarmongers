@@ -396,7 +396,7 @@
 
 /atom/movable/screen/fullscreen/storm/sand
 	icon_state = "sand_storm"
-	alpha = 75
+	alpha = 50
 
 /atom/movable/screen/fullscreen/fog
 	icon = 'icons/effects/weather_effects.dmi'
