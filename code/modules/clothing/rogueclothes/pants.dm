@@ -202,38 +202,119 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-//....................Kaizoku Content...................
-/obj/item/clothing/under/roguetown/trou/tobi
-	name = "tobi pants"
-	desc = "Baggy pants of abyssariad design. Suitable for those who works the field and avoid horseback."
-	icon_state = "tobi"
-	item_state = "tobi"
+//............Warmongers..........
+/obj/item/clothing/under/roguetown/trou/war/pantaloons
+	name = "pantaloons"
+	icon_state = "pantaloons"
+	desc = "Cheaply made pantaloons. Itchy."
 	icon = 'icons/roguetown/clothing/pants.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("standard")
 
-/obj/item/clothing/under/roguetown/trou/leather/shinobizubon
-	name = "shinobi zubon"
-	desc = "Traditional flexible pants with loose fit around the legs with hardened leather tied under the cloth and ankles to prevent snagging and noise."
-	gender = PLURAL
+/obj/item/clothing/under/roguetown/trou/war/pantaloons/fat
+	name = "pantaloons"
+	icon_state = "pantaloonsfat"
+	item_state = "pantaloonsfat"
+	desc = "Cheaply made pantaloons. Itchy."
 	icon = 'icons/roguetown/clothing/pants.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
-	icon_state = "shinobizubon"
-	item_state = "shinobizubon"
-	blocksound = SOFTHIT
-	blade_dulling = DULLING_BASHCHOP
-	r_sleeve_status = SLEEVE_NORMAL
-	l_sleeve_status = SLEEVE_NORMAL	
+	allowed_race = list("fat")
 
-/obj/item/clothing/under/roguetown/tights/hakama
-	name = "hakama"
-	icon_state = "hakama"
-	alternate_worn_layer = SHOESLEEVE_LAYER
-	desc = "Suitable for the Abyssariad-cultured, in which large battle-skirts does not hurt their masculinity, differently of the frail Imperial counterpart."
+/obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky
+	name = "pantaloons"
+	icon_state = "pantaloonsbulky"
+	item_state = "pantaloonsbulky"
+	desc = "Cheaply made pantaloons. Itchy."
 	icon = 'icons/roguetown/clothing/pants.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("bulky")
 
-/obj/item/clothing/under/roguetown/tights/hakama/heartfelt
-    color = CLOTHING_HEARTFELT
+/obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
+	icon_state = "pantaloons2"
+	desc = "Cheaply made pantaloons. Itchy. The left leg has been hastily fixed from the looks of it."
+
+/obj/item/clothing/under/roguetown/trou/war/pantaloons/fat/alternate
+	name = "pantaloons"
+	icon_state = "pantaloons2fat"
+	item_state = "pantaloons2fat"
+	desc = "Cheaply made pantaloons. Itchy. The left leg has been hastily fixed from the looks of it."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("fat")
+
+/obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky/alternate
+	name = "pantaloons"
+	icon_state = "pantaloons2bulky"
+	item_state = "pantaloons2bulky"
+	desc = "Cheaply made pantaloons. Itchy. The left leg has been hastily fixed from the looks of it."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("bulky")
+
+/obj/item/clothing/under/roguetown/trou/war/panties
+	name = "panties"
+	icon_state = "panties"
+	desc = "Comfortable undergarments. Far too large to be worn by the less rotund."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("fat")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
+	name = "pantaloons"
+	icon_state = "darkpantaloons"
+	desc = "Cheaply made pantaloons. Itchy."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("standard")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat
+	name = "pantaloons"
+	icon_state = "darkpantaloonsfat"
+	item_state = "darkpantaloonsfat"
+	desc = "Cheaply made pantaloons. Itchy."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("fat")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky
+	name = "pantaloons"
+	icon_state = "darkpantaloonsbulky"
+	item_state = "darkpantaloonsbulky"
+	desc = "Cheaply made pantaloons. Itchy."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("bulky")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
+	icon_state = "darkpantaloons2"
+	desc = "Cheaply made pantaloons. Itchy. The legs are cut short."
+	allowed_race = list("standard")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
+	name = "pantaloons"
+	icon_state = "darkpantaloons2fat"
+	item_state = "darkpantaloons2fat"
+	desc = "Cheaply made pantaloons. Itchy. The legs are cut short."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("fat")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
+	name = "pantaloons"
+	icon_state = "darkpantaloons2bulky"
+	item_state = "darkpantaloons2bulky"
+	desc = "Cheaply made pantaloons. Itchy. The legs are cut short."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("bulky")

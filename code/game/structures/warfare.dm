@@ -35,8 +35,8 @@
 // CTF
 
 /obj/structure/warobjective/ponr
-	name = "Grenzelhofts Point of No Return"
-	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE HEARTFELTS TOUCH THIS! But if you're a Heartfelt... Eh, sure. Why not."
+	name = "Regimer Point of No Return"
+	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE UNIONISTS TOUCH THIS! But if you're a Unionist... Eh, sure. Why not."
 	icon = 'icons/shamelessly_stolen.dmi'
 	icon_state = "destruct"
 	anchored = TRUE
@@ -71,13 +71,13 @@
 		return
 
 	NR.blu_flag = H
-	to_chat(world, "<span class='userdanger'>GRENZELHOFTS FLAG TAKEN.</span>")
+	to_chat(world, "<span class='userdanger'>REGIME FLAG TAKEN.</span>")
 	if(aspect_chosen(/datum/round_aspect/halo))
 		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
 
 /obj/structure/warobjective/ponr/red
-	name = "Heartfelts Point of No Return"
-	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE GRENZELHOFTS TOUCH THIS! But if you're a Grenzelhoft... Eh, sure. Why not."
+	name = "Union's Point of No Return"
+	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE REGIME TOUCH THIS! But if you're a Regimer... Eh, sure. Why not."
 
 /obj/structure/warobjective/ponr/red/attack_hand(mob/user)
 	. = ..()
@@ -105,14 +105,14 @@
 		return
 
 	NR.red_flag = H
-	to_chat(world, "<span class='userdanger'>HEARTFELTS FLAG TAKEN.</span>")
+	to_chat(world, "<span class='userdanger'>UNION FLAG TAKEN.</span>")
 	if(aspect_chosen(/datum/round_aspect/halo))
 		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
 
 // LD
 
 /obj/structure/warobjective/assaultthrone
-	name = "throne of Heartfelt"
+	name = "throne"
 	desc = "Do not let the enemy sit on this with your crown."
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "throne"
@@ -212,7 +212,7 @@
 
 /obj/structure/shopkeep
 	name = "\improper Shopkeeper"
-	desc = "A merchant from the isle of Enigma, he has some things to sell. He is hanging from an airship by chain... he won't stick around for long."
+	desc = "A merchant, he has some things to sell. He is hanging from an airship by chain... he won't stick around for long."
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "shop"
 	layer = 4.26
@@ -308,7 +308,7 @@
 
 /obj/structure/capturepoint_shower
 	name = "\improper grand orb"
-	desc = "A relic of a former age. It hums with unstable magick."
+	desc = "A relic of a former age. It hums with the power of ancient quackery."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "ballooner"
 	var/area/rogue/assault/assault

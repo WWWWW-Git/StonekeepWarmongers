@@ -163,6 +163,14 @@
 					added_wound = /datum/wound/bite
 				if(1 to 10)
 					added_wound = /datum/wound/bite/small
+		if(BCLASS_BULLET)
+			switch(dam)
+				if(20 to INFINITY)
+					added_wound = pick(/datum/wound/puncture/large,/datum/wound/slash/large)
+				if(10 to 20)
+					added_wound = pick(/datum/wound/slash,/datum/wound/puncture)
+				if(1 to 10)
+					added_wound = pick(/datum/wound/puncture/small,/datum/wound/slash/small)
 	if(added_wound)
 		added_wound = add_wound(added_wound, silent, crit_message)
 	if(do_crit)
@@ -256,10 +264,9 @@
 			else if(istype(user.rmb_intent, /datum/rmb_intent/aimed))
 				used += 5
 		if(prob(used + 10))
-			if((zone_precise == BODY_ZONE_PRECISE_STOMACH || zone_precise == BODY_ZONE_CHEST) && !resistance)
+			if((zone_precise == BODY_ZONE_PRECISE_STOMACH || zone_precise == BODY_ZONE_CHEST) && !resistance && bclass != BCLASS_BULLET)
 				attempted_wounds += /datum/wound/slash/disembowel
 			attempted_wounds += /datum/wound/artery/chest
-
 	for(var/wound_type in shuffle(attempted_wounds))
 		var/datum/wound/applied = add_wound(wound_type, silent, crit_message)
 		if(applied)

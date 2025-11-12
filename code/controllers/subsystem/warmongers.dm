@@ -25,7 +25,7 @@ SUBSYSTEM_DEF(warmongers)
 
 	var/respawning = FALSE
 
-	var/oneteammode = FALSE // players only allowed to choose grenzelhoft
+	var/oneteammode = FALSE // players only allowed to choose the regime
 
 /datum/controller/subsystem/warmongers/Initialize(start_timeofday)
 	red_airship = locate(/area/rogue/indoors/airship/red)
@@ -39,6 +39,7 @@ SUBSYSTEM_DEF(warmongers)
 		sleep(rand(1,3))
 		H.blind_eyes(1)
 		H.emote("scream")
+		H.apply_status_effect(/datum/status_effect/buff/spawn_protection)
 		if(H.warfare_faction)
 			if(H.warfare_faction == RED_WARTEAM)
 				H.forceMove(red.loc)
@@ -68,11 +69,6 @@ SUBSYSTEM_DEF(warmongers)
 		playsound_area(red_airship, 'sound/misc/airship_horn_inside.ogg')
 		playsound_area(blue_airship, 'sound/misc/airship_horn_inside.ogg')
 
-		for(var/mob/living/M in red_airship)
-			to_chat(M, "<span class='info'>WE'RE AT POSITION!!! GET THE FUCK OUT!!!</span>")
-		for(var/mob/living/M in blue_airship)
-			to_chat(M, "<span class='info'>WE'RE AT POSITION!!! GET THE FUCK OUT!!!</span>")
-
 		sleep(7 SECONDS)
 		respawn(red_airship)
 		respawn(blue_airship)
@@ -95,7 +91,7 @@ SUBSYSTEM_DEF(warmongers)
 		// https://imgur.com/a/mzWBurl
 
 		for(var/mob/M in GLOB.player_list)
-			SEND_SOUND(M, 'sound/music/wolfintro.ogg')
+			SEND_SOUND(M, sound(null))
 			M.overlay_fullscreen("graghorror", /atom/movable/screen/fullscreen/graghorror)
 			M.clear_fullscreen("graghorror", 5 SECONDS)
 			M.client.verbs -= /client/verb/forcestartvote
@@ -154,7 +150,7 @@ SUBSYSTEM_DEF(warmongers)
 		if(aspect_chosen(/datum/round_aspect/halo))
 			SEND_SOUND(M, 'sound/vo/halo/reinforcements.mp3')
 		else
-			SEND_SOUND(M, 'sound/music/traitor.ogg')
+			SEND_SOUND(M, 'sound/misc/reinforcement.ogg')
 	new /obj/effect/telefog(red.loc)
 	new /obj/effect/telefog(blu.loc)
 	for(var/i in reinforcementinas)
@@ -162,7 +158,7 @@ SUBSYSTEM_DEF(warmongers)
 		new typepath(red.loc)
 		new typepath(blu.loc)
 
-/proc/GetMainGunForWarfareHeartfelt()
+/proc/GetMainGunForWarfarePPU()
 	switch(SSwarmongers.warfare_techlevel)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo
@@ -173,10 +169,10 @@ SUBSYSTEM_DEF(warmongers)
 		if(WARMONGERS_TECHLEVEL_NONE)
 			return null
 
-/proc/GetMainGunForWarfareGrenzelhoft()
+/proc/GetMainGunForWarfareRegime()
 	switch(SSwarmongers.warfare_techlevel)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/carbine
 		if(WARMONGERS_TECHLEVEL_COWBOY)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/repeater
 		if(WARMONGERS_TECHLEVEL_AUTO)

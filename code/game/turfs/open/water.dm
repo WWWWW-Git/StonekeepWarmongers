@@ -20,7 +20,7 @@
 	icon_state = "together"
 	baseturfs = /turf/open/water
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
-	slowdown = 20
+	slowdown = 5
 	var/obj/effect/overlay/water/water_overlay
 	var/obj/effect/overlay/water/top/water_top_overlay
 	bullet_sizzle = TRUE

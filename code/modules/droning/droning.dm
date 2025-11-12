@@ -64,7 +64,7 @@ SUBSYSTEM_DEF(droning)
 				used_gay = area_player.droning_sound
 
 		if(SSwarmongers.warfare_ready_to_die)
-			used_gay = list('sound/ambience/battle.ogg', 100)
+			used_gay = list('sound/blank.ogg', 100)
 		if(HAS_TRAIT(listener.mob, TRAIT_DRUQK))
 			used_gay = list('sound/music/spice.ogg', 100)
 		//our music for real
@@ -127,7 +127,7 @@ SUBSYSTEM_DEF(droning)
 		var/sound/droning = sound(pick(area_player.droning_sound_current), area_player.droning_repeat, area_player.droning_wait, area_player.droning_channel, listener?.prefs.musicvol)
 
 		if(SSwarmongers.warfare_ready_to_die)
-			droning.file = 'sound/ambience/battle.ogg'
+			droning.file = 'sound/blank.ogg'
 		if(HAS_TRAIT(listener.mob, TRAIT_DRUQK))
 			droning.file = 'sound/music/spice.ogg'
 

@@ -283,7 +283,7 @@
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
 	obj_flags = CAN_BE_HIT
-	woundclass = BCLASS_STAB
+	woundclass = BCLASS_BULLET
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	flag = "bullet"
 	armor_penetration = 75
@@ -348,30 +348,6 @@
 	variance = 25
 	projectile_type = /obj/projectile/bullet/fragment
 
-/obj/projectile/sanctiflux
-	name = "sanctiflux"
-	desc = "Oh shit."
-	damage = 300
-	damage_type = BURN
-	icon = 'icons/roguetown/items/misc.dmi'
-	icon_state = "gourd"
-	range = 999
-	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
-	spread = 0
-	woundclass = BCLASS_SMASH
-	impact_effect_type = /obj/effect/temp_visual/impact_effect
-	flag = "bullet"
-	hitscan = FALSE
-	armor_penetration = 100
-	speed = 0.8
-
-/obj/projectile/sanctiflux/on_hit(atom/target,blocked = FALSE)
-	if(iscarbon(target))
-		var/mob/living/carbon/M = target
-		M.fire_act(20, 40)
-	explosion(target, light_impact_range = 5, flame_range = 4, smoke = TRUE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
-	..(target, blocked)
-
 /obj/projectile/bullet/reusable/cannonball
 	name = "large lead ball"
 	desc = "A round lead ball. Complex and still spherical."
@@ -399,7 +375,7 @@
 		var/mob/living/carbon/M = target
 		M.visible_message("<span class='danger'>[M] explodes into a shower of gibs!</span>")
 		M.gib()
-	explosion(get_turf(target), heavy_impact_range = 4, light_impact_range = 6, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
+	explosion(get_turf(target), heavy_impact_range = 4, light_impact_range = 6, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg','sound/misc/explode/bottlebomb (3).ogg'))
 	..(target, blocked)
 
 /obj/item/ammo_casing/caseless/rogue/cball

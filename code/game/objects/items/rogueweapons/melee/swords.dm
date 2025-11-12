@@ -546,7 +546,7 @@
 
 /obj/item/rogueweapon/sword/iron/messer
 	name = "iron messer"
-	desc = "A single edged blade fashioned in the Grenzelhoft messer style."
+	desc = "A heavy single edged blade of an ancient design."
 	force = 18 // Can't be dual wielded, but shouldn't be higher than a steel equivalent.
 	icon_state = "imesser"
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/axe/chop)
@@ -721,100 +721,17 @@
 			if("onbelt")
 				return list("shrink" = 0.5,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
-//...........Kaizoku Content...........
-/obj/item/rogueweapon/sword/uchigatana
-	name = "uchigatana"
-	desc = "Shorter and simpler than the Tachi, the Uchigatana is the primary sidearm for the Abyssariad and Heartfelt footsoldiers. As a Zatana, the curved blade favor powerfull chopping strikes - but lacks a protective crossguard and the curve makes it less efficient in thrusting."
-	icon = 'icons/roguetown/weapons/64.dmi'
-	icon_state = "uchigatana"
-	pixel_y = -16
-	pixel_x = -16
-	inhand_x_dimension = 64
-	inhand_y_dimension = 64
-	bigboy = TRUE
-	gripsprite = TRUE
-	smeltresult = /obj/item/ingot/steel
-
-/obj/item/rogueweapon/sword/uchigatana/fire //Experimental weapon. Not to be found ingame.
-	name = "fire uchigatana"
-	desc = "Shorter and simpler than the Tachi, the Uchigatana is the primary sidearm for the Abyssariad and Heartfelt footsoldiers. Unlike other uchigatanas, this sword in specifically seems curiously improved with 'frigus' runes."
-
-/obj/item/rogueweapon/sword/uchigatana/fire/attack(mob/M, mob/living/carbon/human/user)
-	if(ismob(M))
-		fire_effect(M, user)
-		..()
-
-/obj/item/rogueweapon/sword/uchigatana/fire/proc/fire_effect(mob/living/L, mob/user)
-	L.adjust_fire_stacks(1)
-	L.IgniteMob()
-	addtimer(CALLBACK(L, TYPE_PROC_REF(/mob/living, ExtinguishMob)), 5 SECONDS)
-	if(user)
-		L.lastattacker = user.real_name
-		L.lastattackerckey = user.ckey
-		L.visible_message("<span class='danger'>[user] has ignited [L] with [src]!</span>", \
-								"<span class='danger'>[user] has ignited you with [src]!</span>")
-	playsound(loc, 'sound/blank.ogg', 50, TRUE, -1)
-	return
-
-/obj/item/rogueweapon/sword/long/tachi //this sword is all fucked. Oh God. Help me.
-	name = "tachi"
-	desc = "A long, curved Zatana of Abyssariad make, introduced when Wokou raiders returned to the Fog Isles with captured horses and began developing their own cavalry tactics."
-	icon = 'icons/roguetown/weapons/64.dmi'
-	icon_state = "tachi"
-	item_state = "tachi"
-	pixel_y = -16
-	pixel_x = -18
-
-/obj/item/rogueweapon/sword/long/greatsword/odachi
-	name = "odachi"
-	desc = "Greatsword traditionally wielded in open battlefields just as it is a ceremonial blade. Though impractical for duels, it breaks spearlines and shields on a whim, requiring momentum with each slash."
-	icon_state = "odachi"
-	icon = 'icons/roguetown/weapons/64.dmi'
-	parrysound = "bladedlarge"
-
-/obj/item/rogueweapon/sword/iron/jian
-	name = "iron jian"
-	desc = "A simple, double-edged iron straight sword of abyssariad design used in martial arts."
-	icon_state = "jian"
-	icon = 'icons/roguetown/weapons/32.dmi'
-
-/obj/item/rogueweapon/sword/scimitar/messer/dao
-	name = "iron dao"
-	desc = "A single edged iron saber of Abyssariad making for horseback use. Suitable for chopping."
-	icon_state = "dao"
-	icon = 'icons/roguetown/weapons/32.dmi'
-
-/obj/item/rogueweapon/sword/scimitar/falchion/yuntoudao //this sprite disappeared by reasons unknown
-	name = "Yuntoudao"
-	desc = "A expensive Abyssariad saber with wide middle and tapered ends in a 'willow-leaf' shape, it concentrates the force of a strike in an axe-like blow, while retaining the swiftness of a saber."
-	icon_state = "yuntoudao"
-	icon = 'icons/roguetown/weapons/32.dmi'
-
-/obj/item/rogueweapon/sword/short/jian
-	name = "short jian"
-	desc = "A simple, shortened version of the double-edged Jian. This is usually given to Abyssariad citizens as a right for self-defense by the emperor's will."
-	icon = 'icons/roguetown/weapons/32.dmi'
-	icon_state = "shortjian"
-
-/obj/item/rogueweapon/sword/short/wakizashi
-	name = "wakizashi"
-	desc = "A shorter design of a Zatana designed to replace the tanto as a zamurai's sidearm. The sorii makes it cut deeper - but is not efficient at thrusting, and can't handle much stress."
-	icon_state = "wakizashi"
-	icon = 'icons/roguetown/weapons/32.dmi'
-	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust)
-
-/obj/item/rogueweapon/sword/sabre/piandao
-	name = "piandao"
-	desc = "An curved abyssariad sword with a broad, single-edged blade that ends in a heavier curve for powerful and fast sweeping strikes."
-	icon_state = "piandao"
-	icon = 'icons/roguetown/weapons/32.dmi'
-
-/obj/item/rogueweapon/sword/sabre/piandao/dec
-	name = "decorated piandao"
-	desc = "The Abyssariad saber with the hilt covered in gold and letters reflecting the user's family lineage."
-	icon_state = "piandaodec"
-
 /obj/item/rogueweapon/sword/sabre/warcrime
 	name = "Metch"
 	desc = "It is a valecnycin."
 	icon_state = "warcrime"
+
+/obj/item/rogueweapon/sword/sabre/officer
+	name = "Saber"
+	desc = "The guard of this sword doesn't extend to the back of the blade. The reason given is to instill fearlessness when fighting the foe. The truth was it was cheaper."
+	icon_state = "sabre"
+
+/obj/item/rogueweapon/sword/sabre/shofficer
+	name = "Cutter"
+	desc = "A former tool, given new purpose."
+	icon_state = "shitsabre"

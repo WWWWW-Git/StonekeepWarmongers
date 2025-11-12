@@ -82,7 +82,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/eye_color = "000"				//Eye color
 	var/voice_color = "a0a0a0"
 	var/detail_color = "000"
-	var/datum/species/pref_species = new /datum/species/human/northern()	//Mutant race
+	var/datum/species/pref_species = new /datum/species/human/northern/standard()	//Mutant race
 	var/datum/patron/selected_patron
 	var/static/datum/patron/default_patron = /datum/patron/divine/astrata
 	var/list/features = list("mcolor" = "FFF", "ethcolor" = "9c3030", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "moth_wings" = "Plain", "moth_markings" = "None")
@@ -222,7 +222,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 			dat += "<td style='width:33%;text-align:right'>"
 			dat += "<a href='?_src_=prefs;preference=keybinds;task=menu'>Keybinds</a><br>"
-			dat += "[user.get_triumphs() ? "[user.get_triumphs()]" : "NULLA"] <a href='?_src_=prefs;preference=showoff;'><b>TRIUMPH(s)</b></a>"
+			dat += "[user.get_triumphs() ? "[user.get_triumphs()]" : "NULLA (ZERO)"] <a href='?_src_=prefs;preference=showoff;'><b>TRIUMPH(s)</b></a>"
 			dat += "</td>"
 
 			dat += "</table>"
@@ -253,7 +253,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a> <a href='?_src_=prefs;preference=name;task=random'>\[R\]</a>"
 
 			dat += "<BR>"
-			dat += "<b>RACE:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (&#5859)"]<BR>"
+			dat += "<b>BODYTYPE:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (&#5859)"]<BR>"
 //			dat += "<a href='?_src_=prefs;preference=species;task=random'>Random Species</A> "
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SPECIES]'>Always Random Species: [(randomise[RANDOM_SPECIES]) ? "Yes" : "No"]</A><br>"
 
@@ -397,7 +397,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 						dat += "<br>"
 					dat += "<b>Hair Color: </b>  <a href='?_src_=prefs;preference=hair;task=input'>Change</a>"
 					dat += "<br>"
-				dat += "<b>Face Detail:</b> <a href='?_src_=prefs;preference=detail;task=input'>[detail]</a>"
+				dat += "<b>Detail:</b> <a href='?_src_=prefs;preference=detail;task=input'>[detail]</a>"
+				dat += "<br>"
+				dat += "<b>Accessory:</b> <a href='?_src_=prefs;preference=accessory;task=input'>[accessory]</a>"
 				if(gender == FEMALE)
 					dat += "<br>"
 				dat += "<br></td>"
@@ -1613,8 +1615,6 @@ Slots: [job.spawn_positions]</span>
 						facial_hairstyle = "None"
 					else
 						facial_hairstyle = pref_species.random_facial_hairstyle(gender)
-				if("underwear")
-					underwear = pref_species.random_underwear(gender)
 				if("underwear_color")
 					underwear_color = random_short_color()
 				if("undershirt")
@@ -1830,7 +1830,7 @@ Slots: [job.spawn_positions]</span>
 					for(var/datum/sprite_accessory/X in spec_hair)
 						hairlist += X.name
 					var/new_hairstyle
-					new_hairstyle = input(user, "Choose your character's accessory:", "Jewelry and Trinkets")  as null|anything in hairlist //don't ask
+					new_hairstyle = input(user, "Choose your character's accessory:", "Bits and Bobs")  as null|anything in hairlist //don't ask
 					if(new_hairstyle)
 						accessory = new_hairstyle
 
@@ -1845,7 +1845,7 @@ Slots: [job.spawn_positions]</span>
 					for(var/datum/sprite_accessory/X in spec_detail)
 						detaillist += X.name
 					var/new_detail
-					new_detail = input(user, "Choose your character's detail:", "Make me unique")  as null|anything in detaillist //don't ask
+					new_detail = input(user, "Choose your character's detail:", "Marks and Mutations")  as null|anything in detaillist //don't ask
 					if(new_detail)
 						detail = new_detail
 
@@ -1881,7 +1881,7 @@ Slots: [job.spawn_positions]</span>
 							continue
 						crap += bla
 
-					var/result = input(user, "Select a race", "WARMONGERS") as null|anything in crap
+					var/result = input(user, "Select a bodytype", "WARMONGERS") as null|anything in crap
 
 					if(result)
 						//var/newtype = GLOB.species_list[result]
@@ -2359,13 +2359,13 @@ Slots: [job.spawn_positions]</span>
 	var/datum/species/chosen_species
 	chosen_species = pref_species.type
 	if(!(pref_species.name in GLOB.roundstart_races))
-		chosen_species = /datum/species/human/northern
-		pref_species = new /datum/species/human/northern
+		chosen_species = /datum/species/human/northern/standard
+		pref_species = new /datum/species/human/northern/standard
 		random_character(gender)
 	if(parent)
 		if(pref_species.patreon_req > parent.patreonlevel())
-			chosen_species = /datum/species/human/northern
-			pref_species = new /datum/species/human/northern
+			chosen_species = /datum/species/human/northern/standard
+			pref_species = new /datum/species/human/northern/standard
 			random_character(gender)
 
 	character.age = age
@@ -2413,7 +2413,7 @@ Slots: [job.spawn_positions]</span>
 	character.underwear = underwear
 //	character.underwear_color = underwear_color
 	character.undershirt = undershirt
-//	character.accessory = accessory
+	character.accessory = accessory
 	character.detail = detail
 	character.socks = socks
 	character.patron = selected_patron

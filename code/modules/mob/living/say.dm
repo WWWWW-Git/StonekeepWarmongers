@@ -257,15 +257,15 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	if(!client)
 		return
 	var/deaf_message
-	var/deaf_type
+	var/deaf_type = FALSE
 	if(speaker != src)
 		if(!radio_freq) //These checks have to be seperate, else people talking on the radio will make "You can't hear yourself!" appear when hearing people over the radio while deaf.
 			deaf_message = "<span class='name'>[speaker]</span> [speaker.verb_say] something but you cannot hear [speaker.p_them()]."
 			deaf_type = 1
 	else
-		deaf_message = "<span class='notice'>I can't hear yourself!</span>"
+		deaf_message = "<span class='notice'>I can't hear myself!</span>"
 		deaf_type = 2 // Since you should be able to hear myself without looking
-
+		
 	// Create map text prior to modifying message for goonchat
 	if(client?.prefs)
 		if (client?.prefs.chat_on_map && stat != UNCONSCIOUS && (client.prefs.see_chat_non_mob || ismob(speaker)) && can_hear())

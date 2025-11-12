@@ -261,12 +261,11 @@ GLOBAL_VAR(restart_counter)
 //	else
 //	to_chat(world, "<span class='boldannounce'><b><u><a href='byond://winset?command=.reconnect'>CLICK TO RECONNECT</a></u></b></span>")
 
-	var/quote = pick("When you see a rattlesnake poised to bite, you do not wait until he has struck to crush him.", "If the Grenzelhoft invaded the Zed's hell I would make at least a favorable reference to the devil in Royal Council House.", "Isn't it dreadful? Here we are, two officers of the Grenzelhoft general staff discussing how best to murder our commander-in-chief.", "I ask you, do you want total war? If necessary, do you want a war more total and radical than anything we can yet imagine?")
+	var/quote = pick("It is not enough to win, there are only two outcomes, total victory or total defeat, and a true victory can only ever be a total one.", "Only a commander such as ours could so bravely snatch defeat from the jaws of victory.", "Bury me by the Root, so that it can take my body and feast on whats left.", "The No-Lifers bleed for the state, the Some-lifers lead for the state, and the Full-lifers are the state. Hail KAITZAR.")
 	var/round_end_sound = pick('sound/roundend/mildenjoymentofwar.ogg',
 	'sound/roundend/abattlewon.ogg',
 	'sound/roundend/thatssoldiering.ogg',
 	'sound/roundend/nevermeetagain.ogg',
-	'sound/roundend/thiswarsgonnaend.ogg',
 	'sound/roundend/war.ogg')
 	
 	for(var/client/thing in GLOB.clients)

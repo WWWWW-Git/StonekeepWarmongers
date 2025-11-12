@@ -650,87 +650,51 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 													'sound/foley/footsteps/armor/fullplate (2).ogg',\
 													'sound/foley/footsteps/armor/fullplate (3).ogg'), 100)
 
-//..............Kaizoku Content.................
-/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad
-	name = "abyssariad kikko gusoku"
-	desc = "The Heartfelt design reforged in the ways of Fog Islands to better supply quick-moving zamurai cavalry, replacing the heavier and costier O-Yoroi lamellar."
-	body_parts_covered = CHEST|VITALS //does not protect the arms. Countering the Brigandine that protects the arms, but not legs.
-	icon_state = "kikkoabyssal"
-	item_state = "kikkoabyssal"
-	sellprice = 65 //not unique.
-
-/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad/heartfelt
-    color = CLOTHING_HEARTFELT
-
-/obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare
-	name = "yoroi hitatare"
-	desc = "A traditional Abyssariad padded robe with wide sleeves, made to be worn beneath armor. It is comfortable and thick, but not very protective compared to a ruankai, but can be used all the time without raising suspicion."
-	icon_state = "yoroihitatare"
+//..........Warmongers...........
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
+	name = "breastplate"
+	desc = "The finest dulliron hammered haphazardly into armor. Don't get your hopes up of it saving your life."
+	icon_state = "dullplate"
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
-	var/picked = FALSE
+	max_integrity = 200
+	smeltresult = /obj/item/ingot/iron
+	armor_class = ARMOR_CLASS_LIGHT
+	allowed_race = list("standard")
 
-/obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/heartfelt
-    color = CLOTHING_HEARTFELT
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
+	icon_state = "dullplate2"
+	allowed_race = list("standard")
 
-/obj/item/clothing/suit/roguetown/armor/leather/hide/shozoku
-	name = "shozoku"
-	desc = "The main garment used by Ninjas and Kunoichis to blend into the night. Not viable during daylight, but it is easy to store anywhere, and any time."
-	icon = 'icons/roguetown/clothing/armor.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
-	icon_state = "shinobi"
-	item_state = "shinobi"
-	blocksound = SOFTHIT
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
+	desc = "No expense was paid in acquiring these incredibly cheap, dulliron chestplates. 'NOT DESIGNED TO PROTECT' is etched on the inside."
+	icon_state = "dullplate3"
+	allowed_race = list("standard")
 
-/obj/item/clothing/suit/roguetown/armor/chainmail/tatami
-	name = "lamellae-tatami do"
-	desc = "a foldable, lightweight armor for convenient motion and manufacturing ease. \
-	It is made of rectangular steel lamellae sewn into chainmail and is a massforged armor. \
-	Considered the backbone of abyssariad military armor, often used below mirror-armor and o-yoroi."
-	icon = 'icons/roguetown/clothing/armor.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
-	icon_state = "laminartatami"
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
+	desc = "No expense was paid in acquiring these incredibly cheap, dulliron chestplates. 'NOT DESIGNED TO PROTECT' is etched on the inside."
+	icon_state = "dullplate4"
+	allowed_race = list("standard")
 
-/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/hand
-	name = "heartfelt kikko coat"
-	desc = "A coat of armor typicially worn by distinguished retainers of Heartfeltian nobles, using exotic silks adquired from Fog Island."
-	icon_state = "heartfelt_kikkocoat"
-	item_state = "heartfelt_kikkocoat"
-
-/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/hand/female
-	name = "heartfelt kikko dress"
-	desc = "A dress of armor typicially worn by distinguished retainers of Heartfeltian nobles, using exotic silks adquired from Fog Island."
-	icon_state = "heartfelt_kikkodress"
-	item_state = "heartfelt_kikkodress"	
-
-/obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt
-	name = "heartfelt kikko gusoku"
-	desc = "A lordly protection in Heartfelt colors. Masterfully crafted coat of hexagon plates, for important nobility."
-	icon = 'icons/roguetown/clothing/armor.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
-	icon_state = "heartfelt_kikko"
-	item_state = "heartfelt_kikko"
-	allowed_sex = list(MALE,FEMALE)
-	color = CLOTHING_HEARTFELT
-
-/obj/item/clothing/suit/roguetown/armor/cuirass/sanmaido
-	name = "san mai-do"
-	desc = "A cheap cuirass with three main plates riveted together with cloth. Flexible and dynamic, integral for many poor footsoldiers"
-	icon = 'icons/roguetown/clothing/armor.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
-	icon_state = "sanmaido"	
-
-/obj/item/clothing/suit/roguetown/armor/chainmail/rattan //New armor; Iron-to-steel tier.
+/obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "rattan armor"
-	desc = "A flexible and durable full body coat made from oil-boiled rattan and layered iron wires. Used by LinYou Raiders, it can be easily repaired."
+	name = "jammies"
+	desc = "A fine aristocratic uniform, perfect for the aspiring Warmonger. Only for those with a healthy rotundness."
+	body_parts_covered = CHEST|ARMS|VITALS
+	icon_state = "jammies"
 	icon = 'icons/roguetown/clothing/armor.dmi'
+	allowed_sex = list("female", "male")
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
-	icon_state = "rattan"
-	item_state = "rattan"
+	armor = list("melee" = 30, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT)
+	blocksound = SOFTHIT
+	blade_dulling = DULLING_BASHCHOP
+	break_sound = 'sound/foley/cloth_rip.ogg'
+	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
+	sewrepair = TRUE
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	armor_class = ARMOR_CLASS_LIGHT
+	allowed_race = list("fat")

@@ -10,6 +10,11 @@
 		return
 	if(user.incapacitated())
 		return
+	if(user == target)
+		to_chat(user, "<span class='danger'>I can't feint an attack on myself!</span>")
+		return
+	if(!istype(user.rmb_intent, /datum/rmb_intent/feint))
+		return
 	var/mob/living/L = target
 	user.changeNext_move(CLICK_CD_RAPID)
 	playsound(user, 'sound/combat/feint.ogg', 100, TRUE)
@@ -27,10 +32,7 @@
 				if(I?.associated_skill)
 					theirskill = L.mind.get_skill_level(I.associated_skill)
 		if(ourskill > theirskill)
-			if(istype(user.rmb_intent, /datum/rmb_intent/feint))
-				perc += (ourskill - theirskill)*15
-			else
-				perc += (ourskill - theirskill)*10
+			perc += (ourskill - theirskill)*15
 	if(user.STAINT < L.STAINT)
 		perc -= 15
 	if(L.d_intent == INTENT_DODGE)
@@ -39,6 +41,8 @@
 		perc = 0
 	if(L.has_status_effect(/datum/status_effect/debuff/feinted))
 		perc = 0
+	if(istype(L.rmb_intent,/datum/rmb_intent/riposte))
+		perc += 50
 	if(user.has_status_effect(/datum/status_effect/debuff/feintcd))
 		perc -= rand(10,30)
 	user.apply_status_effect(/datum/status_effect/debuff/feintcd)
@@ -60,7 +64,7 @@
 
 /datum/rmb_intent/strong
 	name = "strong"
-	desc = "Your attacks have +1 strength but use more stamina. Higher critrate with brutal attacks."
+	desc = "Your attacks have +2 strength but use more stamina, and longer recovery time. Higher critrate with brutal attacks."
 	icon_state = "rmbstrong"
 
 /datum/rmb_intent/swift

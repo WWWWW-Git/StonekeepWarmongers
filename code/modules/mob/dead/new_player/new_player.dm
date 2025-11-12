@@ -425,6 +425,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 	if(SSticker.late_join_disabled)
 		alert(src, "Something went bad.")
 		return FALSE
+
+	SEND_SOUND(src, sound('sound/misc/deploy.ogg', volume=45))
 /*
 	var/arrivals_docked = TRUE
 	if(SSshuttle.arrivals)
@@ -577,9 +579,9 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("string/rt/Lore_Primer.txt"))
 			var/cat_name = ""
 			switch (SSjob.name_occupations[category[1]].department_flag)
 				if (REDSS)
-					cat_name = "Heartfelts"
+					cat_name = "THE PEASANT UNION"
 				if (BLUES)
-					cat_name = "Grenzelhofts"
+					cat_name = "THE HOLY REGIME"
 				if (PEASANTS)
 					cat_name = "Filth"
 

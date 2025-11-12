@@ -588,9 +588,17 @@
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
-		SSticker.force_ending = 1
+		var/winner = alert("Who's the winner?", "End Round", "Grenzelhofts", "Heartfelts", "Stalemate")
+		var/datum/game_mode/warmongers/W = SSticker.mode
+		if(istype(W))
+			switch(winner)
+				if("Grenzelhofts")
+					W.do_war_end(null, BLUE_WARTEAM)
+				if("Heartfelts")
+					W.do_war_end(null, RED_WARTEAM)
+				if("Stalemate")
+					W.do_war_end()
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "End Round") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-
 
 /datum/admins/proc/announce()
 	set category = "Special Verbs"

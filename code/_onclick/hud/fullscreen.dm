@@ -164,11 +164,6 @@
 	layer = 20.511
 	plane = FULLSCREEN_PLANE
 
-/atom/movable/screen/fullscreen/crit/cmode
-	icon_state = "cmode"
-	layer = 20.09
-	plane = FULLSCREEN_PLANE
-
 /atom/movable/screen/fullscreen/crit/vision
 	icon_state = "oxydamageoverlay"
 	layer = BLIND_LAYER

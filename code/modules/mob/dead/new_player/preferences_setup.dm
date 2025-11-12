@@ -13,8 +13,6 @@
 		gender = pick(MALE,FEMALE)
 	if(randomise[RANDOM_AGE] || randomise[RANDOM_AGE_ANTAG] && antag_override)
 		age = AGE_ADULT
-	if(randomise[RANDOM_UNDERWEAR])
-		underwear = pref_species.random_underwear(gender)
 	if(randomise[RANDOM_UNDERWEAR_COLOR])
 		underwear_color = random_short_color()
 	if(randomise[RANDOM_UNDERSHIRT])

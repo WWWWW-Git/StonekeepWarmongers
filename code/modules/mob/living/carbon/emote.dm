@@ -56,29 +56,12 @@
 		var/mob/living/carbon/human/H = user
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
-				warcry = "For honor! For Heartfelt!"
-				if(H.gender == MALE)
-					if(prob(5))
-						sound2play = sound('sound/vo/wc/felt/warcry_male_rare1.ogg','sound/vo/wc/felt/warcry_male_rare2.ogg')
-					else
-						sound2play = sound(pick('sound/vo/wc/felt/warcry_male1.ogg','sound/vo/wc/felt/warcry_male2.ogg'))
-				else
-					if(prob(5))
-						sound2play = sound('sound/vo/wc/felt/warcry_female_rare1.ogg','sound/vo/wc/felt/warcry_female_rare2.ogg')
-					else
-						sound2play = sound(pick('sound/vo/wc/felt/warcry_female1.ogg','sound/vo/wc/felt/warcry_female2.ogg'))
+				warcry = "FOR DAH BEEZER!"
+				sound2play = sound('sound/vo/wc/speech_ppr_taunt.ogg')
 			if(BLUE_WARTEAM)
-				warcry = "Glory in the stars!"
-				if(H.gender == MALE)
-					if(prob(5))
-						sound2play = sound('sound/vo/wc/gren/warcry_male_rare1.ogg','sound/vo/wc/gren/warcry_male_rare2.ogg')
-					else
-						sound2play = sound(pick('sound/vo/wc/gren/warcry_male1.ogg','sound/vo/wc/gren/warcry_male2.ogg'))
-				else
-					if(prob(5))
-						sound2play = sound('sound/vo/wc/gren/warcry_female_rare1.ogg','sound/vo/wc/gren/warcry_female_rare2.ogg')
-					else
-						sound2play = sound(pick('sound/vo/wc/gren/warcry_female1.ogg','sound/vo/wc/gren/warcry_female2.ogg'))
+				warcry = "PRAISE IT!"
+				sound2play = sound('sound/vo/wc/speech_regimer_taunt.ogg')
+
 		if(aspect_chosen(/datum/round_aspect/explodeatwill))
 			user.say(warcry)
 			spawn(2 SECONDS)
@@ -108,7 +91,8 @@
 /mob/living/carbon/human/verb/emote_warcry()
 	set name = "WARCRY"
 	set category = "Noises"
-	emote("warcry", intentional = TRUE)
+	if(stat == CONSCIOUS)
+		emote("warcry", intentional = TRUE)
 
 /mob/living/carbon/human/verb/emote_warcry_f1()
 	set name = ".warcry"

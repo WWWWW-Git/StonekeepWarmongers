@@ -4,8 +4,8 @@
 // #define EAST 4
 // #define WEST 8
 
-#define BLUE_WARTEAM "Grenzelhofts" // Grenzelhoft
-#define RED_WARTEAM "Heartfelts" // Heartfelt
+#define BLUE_WARTEAM "Regime" // Grenzelhoft
+#define RED_WARTEAM "PPU" // Heartfelt
 
 #define WARMONGERS_TECHLEVEL_FLINTLOCKS 1
 #define WARMONGERS_TECHLEVEL_NONE 2
@@ -153,7 +153,7 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 #define MAX_SHOE_BLOODINESS			100
 #define BLOODY_FOOTPRINT_BASE_ALPHA	150
 #define BLOOD_GAIN_PER_STEP			100
-#define BLOOD_LOSS_PER_STEP			20
+#define BLOOD_LOSS_PER_STEP			10
 #define BLOOD_LOSS_IN_SPREAD		20
 #define BLOOD_AMOUNT_PER_DECAL		20
 

@@ -503,17 +503,146 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-//..............Kaizoku Update...............
-/obj/item/clothing/suit/roguetown/shirt/looseshirt
-	name = "kimono jinbei"
-	desc = "A summer shirt that goes along with a tobi, used during the hot summers on Fog islands."
-	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
+//.............Warmongers..................
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
+	name = "worker's shirt"
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red."
+	icon_state = "pprshirt"
+	item_state = "pprshirt"
 	icon = 'icons/roguetown/clothing/shirts.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
-	icon_state = "looseshirt"
-	item_state = "looseshirt"
-	boobed = TRUE
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
 	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("standard")
+
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
+	name = "worker's shirt"
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red."
+	icon_state = "pprshirtfat"
+	item_state = "pprshirtfat"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("fat")
+
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky
+	name = "worker's shirt"
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red."
+	icon_state = "pprshirtbulky"
+	item_state = "pprshirtbulky"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("bulky")
+
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red. This one has epaulettes signifying a rather prestigious career in raking muck."
+	icon_state = "pprshirt2"
+	item_state = "pprshirt2"
+	allowed_race = list("standard")
+
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat/alternate
+	name = "worker's shirt"
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red. This one has epaulettes signifying a rather prestigious career in raking muck."
+	icon_state = "pprshirt2fat"
+	item_state = "pprshirt2fat"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("fat")
+
+/obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky/alternate
+	name = "worker's shirt"
+	desc = "A blue shirt commonly worn by muckrakers and landworkers, detailed with red. This one has epaulettes signifying a rather prestigious career in raking muck."
+	icon_state = "pprshirt2bulky"
+	item_state = "pprshirt2bulky"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("bulky")
+
+/obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
+	name = "worn shirt"
+	desc = "It is not uncommon for things like uniforms to be reused. This shirt must have had a hundred now dead owners before you got your grubby mitts on it."
+	icon_state = "regimeshirt"
+	item_state = "regimeshirt"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("standard")
+
+/obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/fat
+	name = "worn shirt"
+	desc = "It is not uncommon for things like uniforms to be reused. This shirt must have had a hundred now dead owners before you got your grubby mitts on it."
+	icon_state = "regimeshirtfat"
+	item_state = "regimeshirtfat"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("fat")
+
+/obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/bulky
+	name = "worn shirt"
+	desc = "It is not uncommon for things like uniforms to be reused. This shirt must have had a hundred now dead owners before you got your grubby mitts on it."
+	icon_state = "regimeshirtbulky"
+	item_state = "regimeshirtbulky"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("bulky")
+
+/obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/alternate
+	name = "worn greatshirt"
+	desc = "It is not uncommon for things like uniforms to be reused. This shirt must have had a hundred now dead owners before you got your grubby mitts on it."
+	icon_state = "regimeshirt2"
+	item_state = "regimeshirt2"
+	allowed_race = list("standard")
+
+/obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/fat/alternate
+	name = "worn greatshirt"
+	desc = "It is not uncommon for things like uniforms to be reused. This shirt must have had a hundred now dead owners before you got your grubby mitts on it."
+	icon_state = "regimeshirt2fat"
+	item_state = "regimeshirt2fat"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("fat")
+
+/obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/bulky/alternate
+	name = "worn greatshirt"
+	desc = "It is not uncommon for things like uniforms to be reused. This shirt must have had a hundred now dead owners before you got your grubby mitts on it."
+	icon_state = "regimeshirt2bulky"
+	item_state = "regimeshirt2bulky"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("bulky")

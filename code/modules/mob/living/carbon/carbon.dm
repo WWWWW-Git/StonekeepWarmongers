@@ -559,7 +559,7 @@
 	add_nausea(-1)
 
 
-/mob/living/carbon/proc/vomit(lost_nutrition = 50, blood = FALSE, stun = TRUE, distance = 1, message = TRUE, toxic = FALSE, harm = FALSE, force = FALSE)
+/mob/living/carbon/proc/vomit(lost_nutrition = 50, blood = FALSE, stun = FALSE, distance = 1, message = TRUE, toxic = FALSE, harm = FALSE, force = FALSE)
 	if(HAS_TRAIT(src, TRAIT_TOXINLOVER) && !force)
 		return TRUE
 
@@ -811,10 +811,6 @@
 
 	if(!client)
 		return
-	if(cmode)
-		overlay_fullscreen("CMODE", /atom/movable/screen/fullscreen/crit/cmode)
-	else
-		clear_fullscreen("CMODE")
 
 	if(health <= crit_threshold || ((blood_volume in -INFINITY to BLOOD_VOLUME_SURVIVE) && !HAS_TRAIT(src, TRAIT_BLOODLOSS_IMMUNE)))
 		var/severity = 0

@@ -136,11 +136,11 @@
 		playsound(get_turf(H), 'sound/misc/salute.ogg', 50, TRUE, -1)
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
-				message = "puts a hand to their heart!"
-				message_param = "puts a hand to their heart to %t!"
+				message = "places their fist on their belly!"
+				message_param = "places their fist on their belly to %t!"
 			if(BLUE_WARTEAM)
-				message = "stomps down and holds up three fingers in shape of the Psy's Cross!"
-				message_param = "stomps down and holds up three fingers in shape of the Psy's Cross to %t!"
+				message = "stomps their heel down and stands upright!"
+				message_param = "stomps their heel down and stands upright to %t!"
 
 /datum/emote/living/carbon/human/shrug
 	key = "shrug"

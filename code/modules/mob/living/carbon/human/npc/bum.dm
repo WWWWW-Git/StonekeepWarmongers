@@ -1,6 +1,12 @@
 GLOBAL_LIST_INIT(bum_quotes, world.file2list("string/rt/bumlines.txt"))
 GLOBAL_LIST_INIT(bum_aggro, world.file2list("string/rt/bumaggrolines.txt"))
 
+/mob/living/carbon/human/species/human/northern/Initialize()
+	. = ..()
+	set_species(/datum/species/human/northern/standard)
+	spawn(10)
+		after_creation()
+
 /mob/living/carbon/human/species/human/northern/bum/propsoldier
 	aggressive=0
 	mode = AI_IDLE
@@ -66,7 +72,7 @@ GLOBAL_LIST_INIT(bum_aggro, world.file2list("string/rt/bumaggrolines.txt"))
 
 /mob/living/carbon/human/species/human/northern/bum/Initialize()
 	. = ..()
-	set_species(/datum/species/human/northern)
+	set_species(/datum/species/human/northern/standard)
 	spawn(10)
 		after_creation()
 	//addtimer(CALLBACK(src, PROC_REF(after_creation)), 10)

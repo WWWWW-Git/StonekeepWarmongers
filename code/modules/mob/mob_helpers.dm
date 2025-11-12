@@ -619,6 +619,7 @@
 		cmode = FALSE
 	else
 		cmode = TRUE
+		//SEND_SOUND(src, sound(null))
 		playsound_local(src, 'sound/misc/combon.ogg', 100)
 		if(L.cmode_music)
 			SSdroning.play_combat_music(L.cmode_music, client)
@@ -629,7 +630,7 @@
 /mob
 	var/last_aimhchange = 0
 	var/aimheight = 11
-	var/cmode_music = 'sound/music/practiceofwar.ogg'
+	var/cmode_music = 'sound/music/root.ogg'
 
 /mob/proc/aimheight_change(input)
 	var/old_zone = zone_selected

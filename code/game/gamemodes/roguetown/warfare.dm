@@ -41,9 +41,7 @@
 	if(whowon == null)
 		for(var/client/C in GLOB.clients)
 			C << sound(null) // Stop all sounds
-			SEND_SOUND(C, 'sound/music/tension2.ogg')
-			spawn(15 SECONDS)
-				SEND_SOUND(C, sound('sound/music/credits.ogg', volume=30))
+			SEND_SOUND(C, sound('sound/music/whocareswhowon.ogg', volume=50))
 	if(whowon == BLUE_WARTEAM)
 		for(var/client/C in grenzels)
 			if(ishuman(C.mob))
@@ -51,12 +49,12 @@
 				if(H.client?.equippedPerk.type == /datum/warperk)
 					H.adjust_triumphs(1)
 				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/gren/grenzvictorysong.ogg')
+				SEND_SOUND(H, 'sound/music/jukeboxes/regimeanthem.ogg')
 		for(var/client/C in heartfelts)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
 				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/felt/heartdefeatsong.ogg')
+				SEND_SOUND(H, 'sound/music/chesterfield.ogg')
 	if(whowon == RED_WARTEAM)
 		for(var/client/C in heartfelts)
 			if(ishuman(C.mob))
@@ -64,12 +62,12 @@
 				if(H.client?.equippedPerk.type == /datum/warperk)
 					H.adjust_triumphs(1)
 				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/felt/heartvictorysong.ogg')
+				SEND_SOUND(H, 'sound/music/jukeboxes/ppranthem.ogg')
 		for(var/client/C in grenzels)
 			if(ishuman(C.mob))
 				var/mob/living/carbon/human/H = C.mob
 				H << sound(null) // Stop all sounds
-				SEND_SOUND(H, 'sound/vo/wc/gren/grenzdefeatsong.ogg')
+				SEND_SOUND(H, 'sound/music/chesterfield.ogg')
 
 /datum/game_mode/warmongers/proc/do_war_end(var/mob/living/carbon/human/crownguy = null, var/team = null) // if you call this with zero arguments, its a stalemate.
 	whowon = team

@@ -206,21 +206,51 @@
 	blocksound = PLATEHIT
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
-//....................Kaizoku Content...................
-/obj/item/clothing/shoes/roguetown/boots/armor/suneate
-	name = "suneate boots"
-	desc = "Armored suneate made from steel offering heavy protection against both melee and ranged attacks."
+//......................Warmongers................
+/obj/item/clothing/shoes/roguetown/boots/war/stompers
+	name = "stompers"
+	desc = "These workboots are perfect for trudging through the mud of the PPR lands. And corpses too. There are a good amount of those in the mud."
+	gender = PLURAL
+	icon_state = "stompers"
+	item_state = "stompers"
 	icon = 'icons/roguetown/clothing/feet.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
-	icon_state = "suneate"
-	item_state = "suneate"
+	allowed_race = list("standard", "fat")
+	armor = list("melee" = 15, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
-/obj/item/clothing/shoes/roguetown/boots/jikatabi
-	name = "jikatabi"
-	desc = "A standard tabi that keeps the toes flexible and healthy, avoiding calluses of long expeditions. However, it looks rather goofy for the non-islanders."
+/obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
+	name = "stompers"
+	desc = "These workboots are perfect for trudging through the mud of the PPR lands. And corpses too. There are a good amount of those in the mud."
+	gender = PLURAL
+	icon_state = "stompersbulky"
+	item_state = "stompersbulky"
 	icon = 'icons/roguetown/clothing/feet.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
-	icon_state = "jikatabi"
-	item_state = "jikatabi"
+	allowed_race = list("bulky")
+	armor = list("melee" = 15, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/shoes/roguetown/boots/war/trompers
+	name = "trompers"
+	desc = "The soles of these boots almost have dealight coming through them."
+	gender = PLURAL
+	icon_state = "trompers"
+	item_state = "trompers"
+	icon = 'icons/roguetown/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
+	allowed_race = list("standard", "fat")
+	armor = list("melee" = 15, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
+	name = "trompers"
+	desc = "The soles of these boots almost have dealight coming through them."
+	gender = PLURAL
+	icon_state = "trompersbulky"
+	item_state = "trompersbulky"
+	icon = 'icons/roguetown/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
+	allowed_race = list("bulky")
+	armor = list("melee" = 15, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)

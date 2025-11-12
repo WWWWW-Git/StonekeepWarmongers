@@ -118,15 +118,34 @@
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "t1"
 	stump_type = /obj/structure/table/wood/treestump/burnt
+	var/obj/effect/dummy/whatthefuck
 	pixel_x = -32
+	opacity = FALSE
+
+/obj/structure/flora/roguetree/burnt/Destroy()
+	qdel(whatthefuck)
+	return ..()
 
 /obj/structure/flora/roguetree/burnt/Initialize()
 	. = ..()
 	icon_state = "t[rand(1,4)]"
 
+	var/matrix/M = matrix(1, 1, 0,
+                      0, 1,   0)
+
+	whatthefuck = new(get_turf(src))
+	whatthefuck.appearance = appearance
+	whatthefuck.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	whatthefuck.color = "#00000088"
+	whatthefuck.pixel_x = 20
+	whatthefuck.alpha = 45
+	whatthefuck.transform = M
+
+	whatthefuck.filters += GAUSSIAN_BLUR(1)
+
 /obj/structure/flora/roguetree/underworld
 	name = "screaming tree"
-	desc = "human faces everywhere."
+	desc = "Humin faces everywhere."
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
 	icon_state = "screaming1"
 	opacity = 1
@@ -140,7 +159,7 @@
 /*	.............  Treestump   ................ */	// Treestumps are now tables, so you can tablecraft with them and so on.
 /obj/structure/table/wood/treestump
 	name = "tree stump"
-	desc = "Someone cut this tree down."
+	desc = "At least it isn't burnt!"
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
 	icon_state = "t1stump"
 	max_integrity = 100
@@ -170,16 +189,34 @@
 
 /obj/structure/table/wood/treestump/burnt
 	name = "tree stump"
-	desc = "This stump is burnt. Maybe someone is trying to get coal the easy way."
+	desc = "Why did you cut down a burnt tree? That's not cool, dude. It suffered through enough."
 	static_debris = list(/obj/item/rogueore/coal = 1)
 	isunburnt = FALSE
 	icon_state = "st1"
-	icon = 'icons/roguetown/misc/tree.dmi'
+	pixel_x = -32
+	var/obj/effect/dummy/whatthefuck
+	icon = 'icons/roguetown/misc/96x96.dmi'
+
+/obj/structure/table/wood/treestump/burnt/Destroy()
+	qdel(whatthefuck)
+	return ..()
 
 /obj/structure/table/wood/treestump/burnt/Initialize()
 	. = ..()
 	icon_state = "st[rand(1,2)]"
 
+	var/matrix/M = matrix(1, 1, 0,
+					0, 1,   0)
+
+	whatthefuck = new(get_turf(src))
+	whatthefuck.appearance = appearance
+	whatthefuck.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	whatthefuck.color = "#00000088"
+	whatthefuck.pixel_x = 20
+	whatthefuck.alpha = 45
+	whatthefuck.transform = M
+
+	whatthefuck.filters += GAUSSIAN_BLUR(1)
 
 /*	.............   Ancient log   ................ */	// Functionally a sofa, slightly better than sleeping on the ground
 /obj/structure/chair/bench/ancientlog

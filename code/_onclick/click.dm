@@ -118,7 +118,7 @@
 		if(used_intent.get_chargetime())
 			if(used_intent.no_early_release && client?.chargedprog < 100)
 				var/adf = used_intent.clickcd
-				if(istype(rmb_intent, /datum/rmb_intent/aimed))
+				if(istype(rmb_intent, /datum/rmb_intent/aimed) || istype(rmb_intent, /datum/rmb_intent/strong))
 					adf = round(adf * 1.4)
 				if(istype(rmb_intent, /datum/rmb_intent/swift))
 					adf = round(adf * 0.6)
@@ -298,7 +298,7 @@
 						if(W)
 							playsound(get_turf(src), pick(W.swingsound), 100, FALSE)
 							var/adf = used_intent.clickcd
-							if(istype(rmb_intent, /datum/rmb_intent/aimed))
+							if(istype(rmb_intent, /datum/rmb_intent/aimed) || istype(rmb_intent, /datum/rmb_intent/strong))
 								adf = round(adf * 1.4)
 							if(istype(rmb_intent, /datum/rmb_intent/swift))
 								adf = round(adf * 0.6)
@@ -336,7 +336,7 @@
 	else
 		if(ismob(A))
 			var/adf = used_intent.clickcd
-			if(istype(rmb_intent, /datum/rmb_intent/aimed))
+			if(istype(rmb_intent, /datum/rmb_intent/aimed) || istype(rmb_intent, /datum/rmb_intent/strong))
 				adf = round(adf * 1.4)
 			if(istype(rmb_intent, /datum/rmb_intent/swift))
 				adf = round(adf * 0.6)

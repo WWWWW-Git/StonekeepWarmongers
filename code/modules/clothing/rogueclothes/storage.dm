@@ -242,14 +242,10 @@
 	var/curfile
 	var/playing = FALSE
 	var/curvol = 70
-	var/list/songs = list("The Knight's Song" = 'sound/music/jukeboxes/grenz_music1.ogg',
-	"Landsknecht und Würfel" = 'sound/music/jukeboxes/grenz_music2.ogg',
-	"Musketier Marsch" = 'sound/music/jukeboxes/grenz_music3.ogg')
+	var/list/songs = list("KAISER" = 'sound/music/jukeboxes/regimeanthem.ogg')
 
 /obj/item/rogue/musicpack/heartfelt
-	songs = list("Faiāransā e no ōdo" = 'sound/music/jukeboxes/heart_music1.ogg',
-	"Shōri e no kōshin" = 'sound/music/jukeboxes/heart_music2.ogg',
-	"Shi ka haji ka" = 'sound/music/jukeboxes/heart_music3.ogg')
+	songs = list("Bier For Beezer" = 'sound/music/jukeboxes/ppranthem.ogg')
 	faction = RED_WARTEAM
 
 /obj/item/rogue/musicpack/Initialize()
@@ -338,14 +334,21 @@
 	new /obj/item/rogueweapon/surgery/cautery(src)
 	new /obj/item/rogueweapon/surgery/hammer(src)
 
-//...............Kaizoku Update..............
-/obj/item/storage/belt/rogue/kaizoku/leather/daisho
-	name = "daisho belt"
-	desc = "A oil-boiled reinforced silk or leather belt used by Abyssariads for practicing Daisho."
-	icon_state = "daisho"
-	sellprice = 5
-	icon = 'icons/roguetown/clothing/belts.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/belts.dmi'
+//.............Warmongers................
+/obj/item/storage/backpack/rogue/backpack/war/ppr
+	slot_flags = ITEM_SLOT_BACK_L|ITEM_SLOT_BACK_R
+	name = "trashsack"
+	desc = "A cheaply made backpack worn by those in the PPR, topped with an itchy bedroll."
+	icon_state = "trashsack"
+	item_state = "trashsack"
+	icon = 'icons/roguetown/clothing/storage.dmi'
 
-/obj/item/storage/belt/rogue/kaizoku/leather/daisho/heartfelt
-	color = COLOR_ALMOST_BLACK	
+/obj/item/storage/belt/rogue/leather/rope/war
+	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
+	icon_state = "rope"
+	color = "#5f5c58"
+
+/obj/item/storage/belt/rogue/leather/rope/war/fat
+	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
+	icon_state = "ropefat"
+	color = "#5f5c58"

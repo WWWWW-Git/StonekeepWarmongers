@@ -73,7 +73,7 @@
 	items = list(/obj/structure/maxim)
 
 /datum/warshippable/caltrops
-	name = "TETSUBISHI CALTROPS"
+	name = "CALTROPS"
 	items = list(/obj/item/rogue/caltrop,
 			/obj/item/rogue/caltrop,
 			/obj/item/rogue/caltrop

@@ -1,7 +1,7 @@
 /obj/item/bomb
 	name = "bomb"
 	desc = "Dangerous explosion."
-	icon_state = "sticknade"
+	icon_state = "grenade"
 	icon = 'icons/roguetown/items/misc.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	//dropshrink = 0
@@ -63,7 +63,7 @@
 			if(!skipprob && prob(prob2fail))
 				snuff()
 			else
-				explosion(T, heavy_impact_range = heavy_impact, light_impact_range = light_impact, flame_range = flame_impact, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
+				explosion(T, heavy_impact_range = heavy_impact, light_impact_range = light_impact, flame_range = flame_impact, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg','sound/misc/explode/bottlebomb (3).ogg'))
 				new /obj/item/shard (T)
 		else
 			if(prob(prob2fail))
@@ -109,7 +109,7 @@
 
 /obj/item/bomb/poison
 	name = "poison bomb"
-	desc = "Vile brimstone powder mixed with barkpowder inside a ceramic coating, heat over fire to begin an exothermic reaction gradually increasing pressure until releasing poisonous smoke."
+	desc = "Vile brimstone powder mixed with barkenpowder inside a ceramic coating, heat over fire to begin an exothermic reaction gradually increasing pressure until releasing poisonous smoke."
 	icon_state = "poison_bomb"
 	fuze = 25
 	light_impact = 0

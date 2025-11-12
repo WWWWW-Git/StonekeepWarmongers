@@ -22,9 +22,7 @@ SUBSYSTEM_DEF(events)
 			continue				//don't want this one! leave it for the garbage collector
 		control += E				//add it to the list of all events (controls)
 	reschedule()
-//	getHoliday()
 	return ..()
-
 
 /datum/controller/subsystem/events/fire(resumed = 0)
 	if(!resumed)
@@ -151,9 +149,6 @@ SUBSYSTEM_DEF(events)
 
 //sets up the holidays and holidays list
 /datum/controller/subsystem/events/proc/getHoliday()
-	if(!CONFIG_GET(flag/allow_holidays))
-		return		// Holiday stuff was not enabled in the config!
-
 	var/YY = text2num(time2text(world.timeofday, "YY")) 	// get the current year
 	var/MM = text2num(time2text(world.timeofday, "MM")) 	// get the current month
 	var/DD = text2num(time2text(world.timeofday, "DD")) 	// get the current day
@@ -173,7 +168,7 @@ SUBSYSTEM_DEF(events)
 	if(holidays)
 		holidays = shuffle(holidays)
 		// regenerate station name because holiday prefixes.
-		set_station_name(new_station_name())
+		//set_station_name(new_station_name())
 		world.update_status()
 
 /datum/controller/subsystem/events/proc/toggleWizardmode()

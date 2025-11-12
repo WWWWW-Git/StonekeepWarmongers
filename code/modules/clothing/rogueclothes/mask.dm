@@ -178,17 +178,33 @@
 	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
 
-//...........Kaizoku Content...............
-/obj/item/clothing/mask/rogue/kaizoku/menpo/steel/half
-	name = "steel half menpo"
-	icon_state = "steelhalfmenpo"
-	desc = "The lower part of a menpo portraying the maws of a Ogrun's head. It covers only the neck and the mouth, often used by warriors that cares about their sight."
-	flags_cover = HEADCOVERSMOUTH | MASKCOVERSMOUTH
-	flags_inv = HIDEFACIALHAIR|HIDEFACE
+//.............Warmongers....................
+/obj/item/clothing/mask/rogue/war/mask
+	name = "mask"
+	icon_state = "mask"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = NECK|MOUTH
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
+	adjustable = CAN_CADJUST
+	toggle_icon_state = TRUE
+	experimental_onhip = TRUE
 
-/obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/colourable/oni
-	name = "ogrun mask"
-	icon_state = "c_menyoroi"
-	max_integrity = 200
-	desc = "A mask that glorifies a Ogrun warrior. It portrays the mostly perfect perception of the race, so efficiently it became the standards for Fog island military due to its intimidation value."
-
+/obj/item/clothing/mask/rogue/war/mask/AdjustClothes(mob/user)
+	if(loc == user)
+		if(adjustable == CAN_CADJUST)
+			adjustable = CADJUSTED
+			if(toggle_icon_state)
+				icon_state = "[initial(icon_state)]_down"
+			flags_inv = null
+			body_parts_covered = NECK
+			if(ishuman(user))
+				var/mob/living/carbon/H = user
+				H.update_inv_wear_mask()
+		else if(adjustable == CADJUSTED)
+			ResetAdjust(user)
+			flags_inv = HIDEFACE|HIDEFACIALHAIR
+			body_parts_covered = NECK|MOUTH
+			if(user)
+				if(ishuman(user))
+					var/mob/living/carbon/H = user
+					H.update_inv_wear_mask()

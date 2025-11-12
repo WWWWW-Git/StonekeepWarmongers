@@ -899,89 +899,18 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 
-//...............Kaizoku content................
-/obj/item/clothing/cloak/jinbaori
-	name = "jinbaori"
-	icon_state = "jinbaori"
-	alternate_worn_layer = TABARD_LAYER
-	body_parts_covered = CHEST|GROIN
-	boobed = TRUE
-	icon = 'icons/roguetown/clothing/cloaks.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
-	sleevetype = "shirt"
-	nodismemsleeves = TRUE
-	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
-	var/picked
+//................Warmongers..................
 
-/obj/item/clothing/cloak/jinbaori/update_icon()
-	cut_overlays()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		add_overlay(pic)
+/obj/item/clothing/cloak/war/ppr/scarf
+	name = "red scarf"
+	desc = "A red scarf worn by muckrakers and landworkers in the PPR, proudly covered in bier stains and dirt."
+	icon_state = "ppr_scarf"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_race = list("standard", "fat")
 
-/obj/item/clothing/cloak/jinbaori/attack_right(mob/user)
-	if(picked)
-		return
-	var/the_time = world.time
-	var/design = input(user, "Select a design.","Tabard Design") as null|anything in list("None", "Split", "Quadrants", "Boxes", "Diamonds", "Middle-split")
-	if(!design)
-		return
-	if(world.time > (the_time + 30 SECONDS))
-		return
-	if(design == "Symbol")
-		design = null
-		design = input(user, "Select a symbol.","Tabard Design") as null|anything in list("chalice","psy","peace","z","imp","skull","widow","arrow")
-		if(!design)
-			return
-		design = "_[design]"
-	var/colorone = input(user, "Select a primary color.","Tabard Design") as null|anything in CLOTHING_COLOR_NAMES
-	if(!colorone)
-		return
-	var/colortwo
-	if(design != "None")
-		colortwo = input(user, "Select a primary color.","Tabard Design") as null|anything in CLOTHING_COLOR_NAMES
-		if(!colortwo)
-			return
-	if(world.time > (the_time + 30 SECONDS))
-		return
-	picked = TRUE
-	if(design != "None")
-		detail_tag = design
-	switch(design)
-		if("Split")
-			detail_tag = "_spl"
-		if("Quadrants")
-			detail_tag = "_quad"
-		if("Boxes")
-			detail_tag = "_box"
-		if("Diamonds")
-			detail_tag = "_dim"
-		if("Middle-split")
-			detail_tag = "_spl2"
-	color = clothing_color2hex(colorone)
-	if(colortwo)
-		detail_color = clothing_color2hex(colortwo)
-	update_icon()
-	if(ismob(loc))
-		var/mob/L = loc
-		L.update_inv_cloak()
-
-/obj/item/clothing/cloak/jinbaori/reddy
-	detail_color = CLOTHING_HEARTFELT
-	detail_tag = "_box"
-	picked = TRUE
-
-/obj/item/clothing/cloak/raincloak/mino
-	name = "mino cloak"
-	desc = "An abyssariad raincoat made out of straw that covers the entire body."
-	icon_state = "mino"
-	inhand_mod = FALSE
-	hoodtype = null
-	icon = 'icons/roguetown/clothing/cloaks.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
-	body_parts_covered = CHEST|GROIN|VITALS|ARMS
+/obj/item/clothing/cloak/war/regime/scarf
+	name = "green scarf"
+	desc = "A green scarf. It was originally going to be a different coler but the dye union held a strike in protest. As such green was chosen."
+	icon_state = "regimer_scarf"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_race = list("standard", "fat")
