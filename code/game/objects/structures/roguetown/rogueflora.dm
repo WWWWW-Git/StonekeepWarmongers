@@ -193,12 +193,30 @@
 	static_debris = list(/obj/item/rogueore/coal = 1)
 	isunburnt = FALSE
 	icon_state = "st1"
+	pixel_x = -32
+	var/obj/effect/dummy/whatthefuck
 	icon = 'icons/roguetown/misc/96x96.dmi'
+
+/obj/structure/table/wood/treestump/burnt/Destroy()
+	qdel(whatthefuck)
+	return ..()
 
 /obj/structure/table/wood/treestump/burnt/Initialize()
 	. = ..()
 	icon_state = "st[rand(1,2)]"
 
+	var/matrix/M = matrix(1, 1, 0,
+					0, 1,   0)
+
+	whatthefuck = new(get_turf(src))
+	whatthefuck.appearance = appearance
+	whatthefuck.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	whatthefuck.color = "#00000088"
+	whatthefuck.pixel_x = 20
+	whatthefuck.alpha = 45
+	whatthefuck.transform = M
+
+	whatthefuck.filters += GAUSSIAN_BLUR(1)
 
 /*	.............   Ancient log   ................ */	// Functionally a sofa, slightly better than sleeping on the ground
 /obj/structure/chair/bench/ancientlog

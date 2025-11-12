@@ -36,7 +36,7 @@
 
 /obj/structure/warobjective/ponr
 	name = "Regimer Point of No Return"
-	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE PPU TOUCH THIS! But if you're PPU... Eh, sure. Why not."
+	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE UNIONISTS TOUCH THIS! But if you're a Unionist... Eh, sure. Why not."
 	icon = 'icons/shamelessly_stolen.dmi'
 	icon_state = "destruct"
 	anchored = TRUE
@@ -76,7 +76,7 @@
 		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
 
 /obj/structure/warobjective/ponr/red
-	name = "PPU's Point of No Return"
+	name = "Union's Point of No Return"
 	desc = "You feel like this was shamelessly stolen from some sort of different place. Oh well, DON'T LET THE REGIME TOUCH THIS! But if you're a Regimer... Eh, sure. Why not."
 
 /obj/structure/warobjective/ponr/red/attack_hand(mob/user)
@@ -105,7 +105,7 @@
 		return
 
 	NR.red_flag = H
-	to_chat(world, "<span class='userdanger'>PPU FLAG TAKEN.</span>")
+	to_chat(world, "<span class='userdanger'>UNION FLAG TAKEN.</span>")
 	if(aspect_chosen(/datum/round_aspect/halo))
 		SEND_SOUND(world, 'sound/vo/halo/flag_take.mp3')
 

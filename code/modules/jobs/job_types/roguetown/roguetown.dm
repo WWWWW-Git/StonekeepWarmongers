@@ -63,7 +63,7 @@
 		to_chat(H, "<span class='info'><b>[uppertext(J.title)]</b></span>")
 		to_chat(H, "<span class='info'>[J.tutorial]</span>")
 		if(H.warfare_faction == RED_WARTEAM && (istype(W.warmode, /datum/warmode/assault) || istype(W.warmode, /datum/warmode/lords)) && !SSwarmongers.warfare_ready_to_die)
-			to_chat(H, "<span class='notice'>YOU'RE PLAYING THE PPU! REMEMBER TO BUILD DEFENSES OR YOUR DEATH IS GUARANTEED!</span>")
+			to_chat(H, "<span class='notice'>YOU'RE PLAYING AS THE UNION! REMEMBER TO BUILD DEFENSES OR YOUR DEATH IS GUARANTEED!</span>")
 
 	for(var/list_key in SStriumphs.post_equip_calls)
 		var/datum/triumph_buy/thing = SStriumphs.post_equip_calls[list_key]

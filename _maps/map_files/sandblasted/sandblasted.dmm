@@ -9,6 +9,7 @@
 "gT" = (/turf/open/floor/rogue/grass,/area/rogue/outdoors/desert)
 "hb" = (/obj/machinery/light/rogue/firebowl/stump,/turf/open/floor/rogue/wood,/area/rogue/outdoors)
 "hC" = (/obj/structure/bombard{dir = 1},/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
+"hP" = (/obj/structure/table/wood/treestump/burnt{pixel_x = -32},/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "iJ" = (/obj/effect/landmark/start/grenzellord{dir = 1},/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "jn" = (/turf/open/floor/rogue/wood,/area/rogue/outdoors)
 "kK" = (/obj/structure/warfarebarrier/red,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
@@ -172,7 +173,7 @@ eFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFHHeFeFeFeF
 eFeFeFeFeFeFeFHHeFeFeFeFeFQKeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeF
 eFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFQKeFeFeFeFeFeFeFeFeFeFeFeFeF
 eFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFJmeFeFeFeFeFeFeFeFeFJmeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeF
-eFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeF
+eFeFeFeFeFeFeFeFeFeFeFeFhPeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeF
 eFeFeFeFeFeFhCeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFhCeFeFeFeFeFeFeFeFeF
 eFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeF
 eFeFhCeFeFeFeFeFeFeFeFeFeFeFhCeFeFeFeFeFeFeFeFeFeFeFeFeFeFhCeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeF

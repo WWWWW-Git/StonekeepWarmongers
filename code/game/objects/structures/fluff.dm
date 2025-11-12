@@ -353,7 +353,7 @@
 	opacity = FALSE
 
 /obj/structure/fluff/standingflag/red
-	desc = "A flag of the PPU. A full mug of Bier is on it, and it is topped with a fork. The motto 'Shake the ground with every step' is etched onto its design."
+	desc = "A flag of the People's Peasant Union. A full mug of Bier is on it, and it is topped with a fork. The motto 'Shake the ground with every step' is etched onto its design."
 	icon_state = "redflag"
 
 /obj/structure/fluff/railing/fence

@@ -56,11 +56,11 @@
 		var/mob/living/carbon/human/H = user
 		switch(H.warfare_faction)
 			if(RED_WARTEAM)
-				warcry = "For Bier and Beezer!"
-					sound2play = sound('sound/vo/wc/speech_ppr_taunt.ogg')
+				warcry = "FOR DAH BEEZER!"
+				sound2play = sound('sound/vo/wc/speech_ppr_taunt.ogg')
 			if(BLUE_WARTEAM)
-				warcry = "Praise it!"
-					sound2play = sound('sound/vo/wc/speech_regimer_taunt.ogg')
+				warcry = "PRAISE IT!"
+				sound2play = sound('sound/vo/wc/speech_regimer_taunt.ogg')
 
 		if(aspect_chosen(/datum/round_aspect/explodeatwill))
 			user.say(warcry)

@@ -164,7 +164,7 @@
 	..()
 
 /obj/structure/fluff/walldeco/customflag
-	name = "flag of the PPU"
+	name = "flag of the Union"
 	desc = ""
 	icon_state = "wallflag"
 
