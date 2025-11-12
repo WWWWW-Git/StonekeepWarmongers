@@ -267,8 +267,8 @@
 // maxim bb gun
 
 /obj/structure/maxim
-	name = "\improper Maxwell's Barkenweapon"
-	desc = "Oh boy, this'll be complicated to operate, won't it? There is a scroll wheel on it."
+	name = "\improper Gatlyn's Crankbox"
+	desc = "A rapid firing, crank-operated barker mounted on a wheeled carriage so it can be quickly moved around the battlefield."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "machina"
 	anchored = FALSE
