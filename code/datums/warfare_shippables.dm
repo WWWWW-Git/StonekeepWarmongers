@@ -69,7 +69,7 @@
 	items = list(/obj/structure/cannon)
 
 /datum/warshippable/maxim
-	name = "THE MAXWELL"
+	name = "GATLYN'S CRANKBOX"
 	items = list(/obj/structure/maxim)
 
 /datum/warshippable/caltrops
