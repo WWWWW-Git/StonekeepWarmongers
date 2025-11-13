@@ -100,6 +100,17 @@
 	sleep(4)
 	new /obj/effect/particle_effect/smoke(get_turf(src))
 
+	for(var/mob/M in GLOB.player_list)
+		if(!is_in_zweb(M.z,src.z))
+			continue
+		var/turf/M_turf = get_turf(M)
+		var/far_smith_sound = sound(pick('sound/ambience/distantcannon1.ogg','sound/ambience/distantcannon2.ogg'))
+		if(M_turf)
+			var/dist = get_dist(M_turf, loc)
+			if(dist < 7)
+				continue
+			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
+
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/handcannon // for the memes
 	name = "hand barkstone"
 	desc = "HOLY FUCK!"
@@ -238,7 +249,9 @@
 
 	var/obj/effect/warning/G = new(epicenter)
 
-	spawn(5 SECONDS)
+	playsound(epicenter, pick('sound/ambience/rocketfire.ogg','sound/ambience/rocketfire2.ogg'), 100, FALSE, 5)
+
+	spawn(2.1 SECONDS)
 		qdel(G)
 		loaded.forceMove(epicenter)
 		loaded.light()

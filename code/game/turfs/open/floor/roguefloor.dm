@@ -176,7 +176,7 @@
 	icon_state = "sand"
 	smooth = SMOOTH_TRUE
 	layer = MID_TURF_LAYER
-	footstep = FOOTSTEP_GRASS
+	footstep = FOOTSTEP_SAND
 	barefootstep = FOOTSTEP_SOFT_BAREFOOT
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE

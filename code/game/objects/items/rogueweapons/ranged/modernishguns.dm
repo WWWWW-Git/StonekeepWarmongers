@@ -141,6 +141,17 @@
 
 	SSticker.muskshots++
 
+	for(var/mob/M in GLOB.player_list)
+		if(!is_in_zweb(M.z,user.z))
+			continue
+		var/turf/M_turf = get_turf(M)
+		var/far_smith_sound = sound(pick('sound/ambience/distantshot1.ogg','sound/ambience/distantshot2.ogg','sound/ambience/distantshot3.ogg'))
+		if(M_turf)
+			var/dist = get_dist(M_turf, loc)
+			if(dist < 7)
+				continue
+			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
+
 /obj/item/ammo_box/magazine/internal/shot/peter // petah.. the saiga is here.
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
 	caliber = "musketball"
@@ -267,6 +278,17 @@
 	SSticker.muskshots++
 	update_icon()
 
+	for(var/mob/M in GLOB.player_list)
+		if(!is_in_zweb(M.z,user.z))
+			continue
+		var/turf/M_turf = get_turf(M)
+		var/far_smith_sound = sound(pick('sound/ambience/distantshot1.ogg','sound/ambience/distantshot2.ogg','sound/ambience/distantshot3.ogg'))
+		if(M_turf)
+			var/dist = get_dist(M_turf, loc)
+			if(dist < 7)
+				continue
+			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
+
 // STUPID
 /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot/getonmobprop(tag)
 	. = ..()
@@ -367,6 +389,17 @@
 	QDEL_NULL(chambered)
 	//new /obj/effect/particle_effect/smoke(get_turf(user))
 	SSticker.muskshots++
+
+	for(var/mob/M in GLOB.player_list)
+		if(!is_in_zweb(M.z,user.z))
+			continue
+		var/turf/M_turf = get_turf(M)
+		var/far_smith_sound = sound(pick('sound/ambience/distantshot1.ogg','sound/ambience/distantshot2.ogg','sound/ambience/distantshot3.ogg'))
+		if(M_turf)
+			var/dist = get_dist(M_turf, loc)
+			if(dist < 7)
+				continue
+			M.playsound_local(M_turf, null, 60, 1, get_rand_frequency(), falloff = 5, S = far_smith_sound)
 
 /obj/item/gun/grenadelauncher/granata
 	name = "barklauncher"

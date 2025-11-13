@@ -44,6 +44,10 @@
 	reagents.add_reagent(/datum/reagent/blood, 20)
 	pixel_x = rand(-8,8)
 	pixel_y = rand(8,8)
+	if(prob(50))
+		var/matrix/M = matrix()
+		M.Turn(rand(-20,20))
+		transform = M
 	blood_timer = addtimer(CALLBACK(src, PROC_REF(become_dry)), rand(5 MINUTES,15 MINUTES), TIMER_STOPPABLE)
 
 	alpha = 0

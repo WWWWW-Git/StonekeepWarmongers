@@ -63,8 +63,8 @@ SUBSYSTEM_DEF(warmongers)
 			respawn_cycle++
 		respawning = TRUE
 
-		playsound(blu.loc, 'sound/misc/airship_horn.ogg', 75, FALSE, -4)
-		playsound(red.loc, 'sound/misc/airship_horn.ogg', 75, FALSE, -4)
+		playsound(blu.loc, 'sound/misc/airship_horn.ogg', 75, FALSE, 8)
+		playsound(red.loc, 'sound/misc/airship_horn.ogg', 75, FALSE, 8)
 
 		playsound_area(red_airship, 'sound/misc/airship_horn_inside.ogg')
 		playsound_area(blue_airship, 'sound/misc/airship_horn_inside.ogg')
