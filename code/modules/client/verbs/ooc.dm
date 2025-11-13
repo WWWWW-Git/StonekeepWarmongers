@@ -329,19 +329,6 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	set category = "Options"
 	stop_sound_channel(CHANNEL_LOBBYMUSIC)
 
-/client/verb/reloading()
-	set name = "RELOADING"
-	set category = "HELP"
-	var/contents
-
-	usr.playsound_local(usr, 'sound/misc/keyboard_enter.ogg', 65, FALSE)
-	contents += "<center>Reloading a flintlock is easy!<BR>"
-	contents += "--------------</center><BR>"
-	contents += "Take a bullet from your ball pouch, if you have one (rclick), put in bullet (lclick), cock musket (rclick with hand not holding musket), middleclick musket to get ramrod, ram musket, middleclick to put back, click musket to wield, hold to aim and release to shoot, done you just killed a man! Good job! Oh, and for those new levershots? Just use the right click twice on 'em, load a bullet in the chamber. Really easy, really. The same for that small one."
-	var/datum/browser/popup = new(usr, "HELP", "", 420, 420)
-	popup.set_content(contents)
-	popup.open()
-
 /client/verb/medicating()
 	set name = "MEDICINE"
 	set category = "HELP"
