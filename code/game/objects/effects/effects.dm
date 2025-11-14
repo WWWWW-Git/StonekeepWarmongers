@@ -72,3 +72,15 @@
 /obj/effect/warning
 	name = "GET OUT! NOW!"
 	icon_state = "trap"
+
+/obj/effect/shadow
+	name = "shadow"
+	icon = 'icons/shamelessly_stolen.dmi'
+	icon_state = "shadow"
+	opacity = TRUE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
+
+/obj/effect/shadow/dense
+	density = TRUE

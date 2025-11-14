@@ -1122,10 +1122,6 @@
 /area/rogue/indoors)
 "rT" = (
 /obj/structure/table/wood/reinforced,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz{
-	pixel_x = -23;
-	pixel_y = -14
-	},
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors)
 "rV" = (
@@ -2082,6 +2078,10 @@
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
+"EB" = (
+/obj/effect/shadow,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "EI" = (
 /obj/structure/bed/rogue/inn/pileofshit,
 /obj/item/bedsheet/rogue/cloth,
@@ -2618,14 +2618,6 @@
 /area/rogue/indoors)
 "MB" = (
 /obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz{
-	pixel_x = -16;
-	pixel_y = -25
-	},
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/grenz{
-	pixel_x = -16;
-	pixel_y = -19
-	},
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors)
 "MC" = (
@@ -2877,6 +2869,10 @@
 /obj/item/rogueweapon/spear/billhook,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors)
+"QD" = (
+/obj/effect/shadow,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "QH" = (
 /obj/structure/bars/pipe{
 	dir = 4
@@ -4576,7 +4572,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (11,1,1) = {"
 ny
@@ -4677,7 +4673,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (12,1,1) = {"
 ny
@@ -4778,7 +4774,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (13,1,1) = {"
 ny
@@ -4879,7 +4875,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (14,1,1) = {"
 ny
@@ -4980,7 +4976,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (15,1,1) = {"
 ny
@@ -5081,7 +5077,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (16,1,1) = {"
 ny
@@ -5182,7 +5178,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (17,1,1) = {"
 ny
@@ -5283,7 +5279,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (18,1,1) = {"
 ny
@@ -5384,7 +5380,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (19,1,1) = {"
 ny
@@ -5485,7 +5481,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (20,1,1) = {"
 ny
@@ -5586,7 +5582,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (21,1,1) = {"
 ny
@@ -5687,7 +5683,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (22,1,1) = {"
 ny
@@ -5788,7 +5784,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (23,1,1) = {"
 ny
@@ -5889,7 +5885,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (24,1,1) = {"
 ny
@@ -5990,7 +5986,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (25,1,1) = {"
 ny
@@ -6091,7 +6087,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (26,1,1) = {"
 ny
@@ -6192,7 +6188,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (27,1,1) = {"
 ny
@@ -6293,7 +6289,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (28,1,1) = {"
 ny
@@ -6394,7 +6390,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (29,1,1) = {"
 ny
@@ -6495,7 +6491,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (30,1,1) = {"
 ny
@@ -6596,7 +6592,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (31,1,1) = {"
 ny
@@ -6697,7 +6693,7 @@ Vl
 Vl
 cq
 Vl
-Vl
+QD
 "}
 (32,1,1) = {"
 ny
@@ -6798,7 +6794,7 @@ bS
 Vl
 ef
 Vl
-Vl
+QD
 "}
 (33,1,1) = {"
 ny
@@ -6899,7 +6895,7 @@ Hj
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (34,1,1) = {"
 ny
@@ -7000,7 +6996,7 @@ Ts
 LH
 Vl
 cq
-Vl
+QD
 "}
 (35,1,1) = {"
 ny
@@ -7101,7 +7097,7 @@ BX
 LH
 fe
 ef
-Vl
+QD
 "}
 (36,1,1) = {"
 ny
@@ -7202,7 +7198,7 @@ mN
 LH
 Hj
 Vl
-Vl
+QD
 "}
 (37,1,1) = {"
 ny
@@ -7303,7 +7299,7 @@ Hj
 bS
 Hj
 uw
-Vl
+QD
 "}
 (38,1,1) = {"
 ny
@@ -7404,7 +7400,7 @@ mN
 LH
 Vl
 fe
-Vl
+QD
 "}
 (39,1,1) = {"
 ny
@@ -7505,7 +7501,7 @@ Ts
 LH
 Hj
 cq
-Vl
+QD
 "}
 (40,1,1) = {"
 ny
@@ -7606,7 +7602,7 @@ Mo
 LH
 Vl
 ef
-Vl
+QD
 "}
 (41,1,1) = {"
 ny
@@ -7707,7 +7703,7 @@ Hj
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (42,1,1) = {"
 ny
@@ -7808,7 +7804,7 @@ Hj
 Hj
 cq
 Vl
-Vl
+QD
 "}
 (43,1,1) = {"
 ny
@@ -7909,7 +7905,7 @@ fe
 Vl
 ef
 Vl
-Vl
+QD
 "}
 (44,1,1) = {"
 ny
@@ -8010,7 +8006,7 @@ Hj
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (45,1,1) = {"
 ny
@@ -8111,7 +8107,7 @@ Tf
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (46,1,1) = {"
 ny
@@ -8212,7 +8208,7 @@ bS
 Vl
 cq
 Vl
-Vl
+QD
 "}
 (47,1,1) = {"
 ny
@@ -8313,7 +8309,7 @@ OV
 Hj
 ef
 Vl
-Vl
+QD
 "}
 (48,1,1) = {"
 ny
@@ -8414,7 +8410,7 @@ Vl
 bS
 Hj
 Hj
-Vl
+QD
 "}
 (49,1,1) = {"
 ny
@@ -8515,7 +8511,7 @@ dJ
 Rf
 Gv
 Gv
-Rf
+EB
 "}
 (50,1,1) = {"
 ny
@@ -8616,7 +8612,7 @@ QI
 wS
 Gv
 Gv
-Rf
+EB
 "}
 (51,1,1) = {"
 ny
@@ -8717,7 +8713,7 @@ Hj
 Rf
 Gv
 Gv
-Rf
+EB
 "}
 (52,1,1) = {"
 ny
@@ -8818,7 +8814,7 @@ fe
 Hj
 Vl
 Hj
-Vl
+QD
 "}
 (53,1,1) = {"
 ny
@@ -8919,7 +8915,7 @@ Wu
 Hj
 cq
 Vl
-Vl
+QD
 "}
 (54,1,1) = {"
 ny
@@ -9020,7 +9016,7 @@ Hj
 Vl
 ef
 Vl
-Vl
+QD
 "}
 (55,1,1) = {"
 ny
@@ -9121,7 +9117,7 @@ Hj
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (56,1,1) = {"
 ny
@@ -9222,7 +9218,7 @@ Hj
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (57,1,1) = {"
 ny
@@ -9323,7 +9319,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (58,1,1) = {"
 ny
@@ -9424,7 +9420,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (59,1,1) = {"
 ny
@@ -9525,7 +9521,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (60,1,1) = {"
 ny
@@ -9626,7 +9622,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (61,1,1) = {"
 ny
@@ -9727,7 +9723,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (62,1,1) = {"
 ny
@@ -9828,7 +9824,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (63,1,1) = {"
 ny
@@ -9929,7 +9925,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (64,1,1) = {"
 ny
@@ -10030,7 +10026,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (65,1,1) = {"
 ny
@@ -10131,7 +10127,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (66,1,1) = {"
 ny
@@ -10232,7 +10228,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (67,1,1) = {"
 ny
@@ -10333,7 +10329,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (68,1,1) = {"
 ny
@@ -10434,7 +10430,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (69,1,1) = {"
 ny
@@ -10535,7 +10531,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (70,1,1) = {"
 ny
@@ -10636,7 +10632,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (71,1,1) = {"
 ny
@@ -10737,7 +10733,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (72,1,1) = {"
 ny
@@ -10838,7 +10834,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (73,1,1) = {"
 ny
@@ -10939,7 +10935,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (74,1,1) = {"
 ny
@@ -11040,7 +11036,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (75,1,1) = {"
 ny
@@ -11141,7 +11137,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (76,1,1) = {"
 ny
@@ -11242,7 +11238,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (77,1,1) = {"
 ny
@@ -11343,7 +11339,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (78,1,1) = {"
 ny
@@ -11444,7 +11440,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (79,1,1) = {"
 ny
@@ -11545,7 +11541,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (80,1,1) = {"
 ny
@@ -11646,7 +11642,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (81,1,1) = {"
 ny
@@ -11747,7 +11743,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (82,1,1) = {"
 ny
@@ -11848,7 +11844,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (83,1,1) = {"
 ny
@@ -11949,7 +11945,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (84,1,1) = {"
 ny
@@ -12050,7 +12046,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (85,1,1) = {"
 ny
@@ -12151,7 +12147,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (86,1,1) = {"
 ny
@@ -12252,7 +12248,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (87,1,1) = {"
 ny
@@ -12353,7 +12349,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (88,1,1) = {"
 ny
@@ -12454,7 +12450,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (89,1,1) = {"
 ny
@@ -12555,7 +12551,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (90,1,1) = {"
 ny
@@ -12656,7 +12652,7 @@ Vl
 Vl
 Vl
 Vl
-Vl
+QD
 "}
 (91,1,1) = {"
 ny

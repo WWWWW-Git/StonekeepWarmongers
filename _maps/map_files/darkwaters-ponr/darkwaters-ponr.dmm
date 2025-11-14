@@ -5,7 +5,7 @@
 "cq" = (/obj/effect/landmark/start/grenzellord{dir = 8},/obj/structure/chair/wood/rogue/fancy{dir = 8},/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
 "cN" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
 "cS" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"da" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/uchigatana{pixel_x = -20},/obj/item/rogueweapon/sword/uchigatana,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"da" = (/obj/structure/rack/rogue,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "dc" = (/obj/structure/rack/rogue,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/item/rogue/sandbagkit,/obj/machinery/light/rogue/torchholder/l,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
 "dU" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 9},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "eh" = (/obj/structure/fluff/railing/border{dir = 1},/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
@@ -21,6 +21,7 @@
 "hl" = (/obj/structure/fluff/railing/border{dir = 8},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "hG" = (/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
 "hI" = (/obj/structure/fluff/statue/knight,/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
+"hY" = (/obj/structure/warfarebarrier,/obj/effect/shadow{dir = 4},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
 "in" = (/obj/effect/landmark/observer_start,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "iD" = (/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "jj" = (/obj/structure/fluff/railing/border,/obj/effect/landmark/events/haunts,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
@@ -34,8 +35,10 @@
 "lC" = (/obj/structure/fluff/railing/border{dir = 6},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "lG" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
 "lH" = (/obj/structure/fluff/railing/border{dir = 6},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"mc" = (/obj/effect/shadow,/obj/effect/shadow{dir = 4},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
 "mK" = (/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "mO" = (/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
+"mX" = (/obj/structure/warfarebarrier,/obj/effect/shadow{dir = 8},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
 "mY" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 5},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "nB" = (/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
 "nF" = (/obj/structure/warfarebarrier/red,/turf/open/chasm,/area/rogue/outdoors/beach)
@@ -44,12 +47,13 @@
 "op" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/mace/spiked{pixel_y = 5},/obj/item/rogueweapon/mace/spiked{pixel_y = -2},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
 "oO" = (/obj/structure/closet/crate/chest,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/obj/item/grown/log/tree/small,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
 "pc" = (/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
+"pk" = (/obj/effect/shadow,/obj/effect/shadow{dir = 8},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
 "pF" = (/obj/structure/fluff/railing/border{dir = 5},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "pY" = (/obj/structure/fluff/grindwheel,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "rp" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border,/obj/structure/fluff/railing/border{dir = 6},/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "rK" = (/obj/structure/fluff/railing/border{dir = 5},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
 "sQ" = (/obj/structure/fluff/railing/border{dir = 9},/obj/structure/warfarebarrier/red,/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
-"ti" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/mace/ararebo{pixel_x = -5},/obj/item/rogueweapon/mace/ararebo,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"ti" = (/obj/effect/shadow{dir = 8},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
 "ub" = (/obj/structure/barricade/sandbags/rogue,/obj/structure/warfarebarrier/red,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "us" = (/turf/closed/wall/mineral/rogue/wooddark,/area/rogue/outdoors/beach/boat)
 "uu" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/spear{pixel_x = -22},/obj/item/rogueweapon/spear,/obj/item/rogueweapon/spear{pixel_x = -10},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
@@ -79,10 +83,11 @@
 "Cn" = (/obj/structure/stairs{dir = 4},/obj/structure/fluff/railing/border,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "CA" = (/obj/structure/cannon{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
 "CQ" = (/obj/machinery/light/rogue/firebowl/standing,/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
+"Dm" = (/obj/effect/shadow,/turf/open/chasm,/area/rogue/outdoors/beach)
 "Dq" = (/obj/structure/cannon,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"El" = (/obj/structure/rack/rogue,/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{pixel_x = -5; pixel_y = -28},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{pixel_y = -20; pixel_x = -5},/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/grenz{pixel_y = -10; pixel_x = -5},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"El" = (/obj/structure/warfarebarrier/red,/obj/effect/shadow{dir = 4},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
 "ET" = (/obj/machinery/light/rogue/torchholder/r,/obj/machinery/light/rogue/hearth,/obj/item/cooking/pan,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"Fh" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/woodcut/changfu{pixel_x = 5},/obj/item/rogueweapon/woodcut/changfu,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Fh" = (/obj/effect/shadow,/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
 "FI" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/transparent/openspace,/area/rogue/outdoors/beach/boat)
 "Gh" = (/obj/structure/fluff/railing/border{dir = 9},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "GU" = (/obj/structure/stairs{dir = 4},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
@@ -90,8 +95,8 @@
 "Ie" = (/obj/machinery/light/rogue/torchholder/l,/obj/structure/roguemachine/musicbox,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
 "IR" = (/obj/effect/landmark/blureinforcement,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "Jk" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/cutlass,/obj/item/rogueweapon/sword/cutlass{pixel_x = 5},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
-"Jp" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/spear/yari,/obj/item/rogueweapon/spear/yari{pixel_x = -10},/obj/item/rogueweapon/spear/yari{pixel_x = -23},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
-"JF" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/sword/uchigatana{pixel_x = -10},/obj/item/rogueweapon/sword/uchigatana{pixel_x = -23},/obj/item/rogueweapon/sword/uchigatana,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Jp" = (/obj/effect/shadow{dir = 1},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
+"JF" = (/obj/effect/shadow{dir = 4},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
 "Ly" = (/obj/structure/fluff/statue/knight,/turf/open/floor/carpet/red,/area/rogue/outdoors/beach/boat)
 "MF" = (/obj/structure/mineral_door/wood/deadbolt{dir = 4},/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
 "MM" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
@@ -102,6 +107,8 @@
 "Pb" = (/obj/structure/closet/crate/chest,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/obj/item/ammo_casing/caseless/rogue/cball,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
 "PE" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/wool,/obj/effect/landmark/start/grenzelinfantry{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
 "PI" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/pelt,/obj/effect/landmark/start/heartfeltinfantry{dir = 1},/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"QB" = (/obj/effect/shadow{dir = 1},/obj/effect/shadow{dir = 4},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
+"QD" = (/obj/structure/warfarebarrier/red,/obj/effect/shadow{dir = 8},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
 "QZ" = (/obj/structure/table/wood/nice,/turf/open/floor/carpet/royalblack,/area/rogue/outdoors/beach/boat)
 "Rb" = (/obj/structure/fluff/railing/border{dir = 4},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 5},/turf/open/transparent/openspace,/area/rogue/outdoors/beach)
 "Rm" = (/obj/structure/bed/rogue/inn/wool,/obj/item/bedsheet/rogue/wool,/obj/effect/landmark/start/grenzelinfantry,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
@@ -124,47 +131,48 @@
 "Yz" = (/obj/structure/fluff/railing/border{dir = 4},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "YE" = (/obj/structure/stairs{dir = 4},/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "Ze" = (/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
+"Zr" = (/obj/effect/shadow{dir = 8},/obj/effect/shadow{dir = 1},/turf/open/water/river{dir = 8},/area/rogue/outdoors/beach)
 "Zz" = (/obj/effect/landmark/redreinforcement,/turf/open/floor/rogue/wood,/area/rogue/outdoors/beach/boat)
 "ZW" = (/obj/machinery/light/rogue/torchholder/l,/obj/machinery/light/rogue/hearth,/obj/item/cooking/pan,/turf/open/floor/rogue/wood/nosmooth,/area/rogue/outdoors/beach/boat)
 
 (1,1,1) = {"
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususususususususususususususususususususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususzcamusPbIbZeZeZeIbZeZeZeIbZeusZeZeIbZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususJpJFZeZeOqusZeZeZeZeZeZeZeZeZeZeZeusZeZeZeZeZeNzNzNzusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfustiZeZeZeZeZeZeZeZeZeZeGUususZeZeusNgZeZeZeNgusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusdcZeZeZeZeZeZecSZeZeZeGUususZebQusZWZeWkZeZWusIefXNzNzNzususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusFhZeZeZeZeZeZeZeZeZeZeGUususZeZeuscNZeZeZecNusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususJpJFZeZeOqusZeZeZeZeZeZeZeZeZeZeZeusZeZeZeZeZePIPIPIusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususoOoOusPbAMDqZeDqAMDqZeDqAMZeusZeZeAMZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-nFUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQususususususZeusZeusZeusZeususususususususususUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQ
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-lBSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNususususususZeusZeusZeusZeususususususususususSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSN
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususElamusPbIbCAZeCAIbCAZeCAIbZeusZeZeIbZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususuuXdSSZeOqusZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeRmRmRmusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusArZeZeZeZeZeZeZeZeZeZeGUususZeZeusNgZeZeZeNgusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusfZZeZeZeZeZeZecSZeZeZeGUususZebQusZWZeojZeETusIeXePEPEPEususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusopZeZeZeZeZeZeZeZeZeZeGUususZeZeuscNZeZeZecNusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususuuXdSSZeOqusZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZePEPEPEusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususElamusPbAMZeZeZeAMZeZeZeAMZeusZeZeAMZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususususususususususususususususususususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
-xtUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUf
+xtZrJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpJpQB
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususususususususususususususususususususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususzcamusPbIbZeZeZeIbZeZeZeIbZeusZeZeIbZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususSSSSZeZeOqusZeZeZeZeZeZeZeZeZeZeZeusZeZeZeZeZeNzNzNzusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusSSZeZeZeZeZeZeZeZeZeZeGUususZeZeusNgZeZeZeNgusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusdcZeZeZeZeZeZecSZeZeZeGUususZebQusZWZeWkZeZWusIefXNzNzNzususUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusSSZeZeZeZeZeZeZeZeZeZeGUususZeZeuscNZeZeZecNusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususSSSSZeZeOqusZeZeZeZeZeZeZeZeZeZeZeusZeZeZeZeZePIPIPIusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususoOoOusPbAMDqZeDqAMDqZeDqAMZeusZeZeAMZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+nFQDUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQususususususZeusZeusZeusZeususususususususususUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQEl
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUQUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+lBmXSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNususususususZeusZeusZeusZeususususususususususSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNhY
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususSSamusPbIbCAZeCAIbCAZeCAIbZeusZeZeIbZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususuuXdSSZeOqusZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeRmRmRmusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusArZeZeZeZeZeZeZeZeZeZeGUususZeZeusNgZeZeZeNgusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusfZZeZeZeZeZeZecSZeZeZeGUususZebQusZWZeojZeETusIeXePEPEPEususUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusopZeZeZeZeZeZeZeZeZeZeGUususZeZeuscNZeZeZecNusZeZeZeZeOqusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususuuXdSSZeOqusZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZePEPEPEusUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfususususSSamusPbAMZeZeZeAMZeZeZeAMZeusZeZeAMZeZeususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfusususususususususususususususususususususususUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+xttiUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfUfJF
+DmpkFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhFhmc
 "}
 (1,1,2) = {"
 mKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmKmK
