@@ -18,7 +18,7 @@
 "mq" = (/obj/structure/closet/crate/chest,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "my" = (/turf/open/floor/rogue/grass{dir = 1},/area/rogue/outdoors/desert)
 "mZ" = (/obj/structure/flora/roguetree,/turf/open/floor/rogue/grass,/area/rogue/outdoors/desert)
-"np" = (/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
+"np" = (/mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "oe" = (/obj/effect/shadow{dir = 4},/obj/effect/shadow{dir = 1},/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "oC" = (/obj/structure/warfarebarrier,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "pn" = (/obj/structure/closet/crate/chest,/obj/item/bomb,/obj/item/bomb,/obj/item/bomb,/obj/item/bomb,/obj/item/bomb,/obj/item/bomb,/obj/item/bomb,/obj/item/bomb,/obj/item/bomb,/obj/item/bomb,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)

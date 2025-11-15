@@ -1,7 +1,7 @@
 //Please use mob or src (not usr) in these procs. This way they can be called in the same fashion as procs.
 /client/verb/wiki()
 	set name = "WIKIPEDIA"
-	set desc = "HELP"
+	set category = "HELP"
 	var/wikiurl = CONFIG_GET(string/wikiurl)
 	if(wikiurl)
 		src << link(wikiurl)

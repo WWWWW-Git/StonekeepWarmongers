@@ -73,7 +73,7 @@
 
 /datum/round_aspect/superiorbreeds
 	name = "The Superior Breed"
-	description = "Saigas have twice as health or twice the speed!"
+	description = "Hearses have twice as health or twice the speed!"
 
 /datum/round_aspect/rationsurplus
 	name = "Ration Surplus"

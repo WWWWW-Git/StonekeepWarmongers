@@ -151,7 +151,7 @@
 "vN" = (/turf/open/water/river{dir = 4},/area/rogue/outdoors/woods)
 "wo" = (/obj/structure/closet/crate/chest/old_crate,/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors)
 "wv" = (/turf/closed/wall/mineral/rogue/wooddark/end{dir = 8},/area/rogue/indoors)
-"wA" = (/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled,/turf/open/floor/rogue/grass,/area/rogue/indoors)
+"wA" = (/mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled,/turf/open/floor/rogue/grass,/area/rogue/indoors)
 "wE" = (/obj/structure/fluff/railing/border{dir = 8},/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors/rtfield)
 "wJ" = (/obj/structure/chair/wood/rogue{dir = 8},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors)
 "wM" = (/obj/structure/fermenting_barrel/random/water,/turf/open/floor/rogue/wood,/area/rogue/indoors)

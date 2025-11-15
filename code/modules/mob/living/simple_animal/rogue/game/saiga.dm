@@ -364,3 +364,88 @@
 		move_to_delay = 4
 		health = 200
 		maxHealth = 200
+
+/mob/living/simple_animal/hostile/retaliate/rogue/horse
+	icon = 'icons/roguetown/mob/monster/horse.dmi'
+	name = "hearse"
+	desc = ""
+	icon_state = "horse"
+	icon_living = "horse"
+	icon_dead = "horse_dead"
+	icon_gib = "horse_gib"
+	gender = FEMALE
+	mob_biotypes = MOB_ORGANIC|MOB_BEAST
+	emote_see = list("looks around.", "chews some leaves.")
+	speak_chance = 1
+	turns_per_move = 5
+	see_in_dark = 6
+	move_to_delay = 8
+	animal_species = /mob/living/simple_animal/hostile/retaliate/rogue/saigabuck
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 1,
+						/obj/item/reagent_containers/food/snacks/fat = 1,
+						/obj/item/natural/hide = 1)
+	base_intents = list(/datum/intent/simple/headbutt)
+	health = 100
+	maxHealth = 100
+	food_type = list(/obj/item/reagent_containers/food/snacks/grown/wheat,/obj/item/reagent_containers/food/snacks/grown/oat,/obj/item/reagent_containers/food/snacks/grown/apple)
+	tame_chance = 25
+	bonus_tame_chance = 15
+	footstep_type = FOOTSTEP_MOB_SHOE
+	pooptype = /obj/item/natural/poo/horse
+	faction = list("saiga")
+	attack_verb_continuous = "headbutts"
+	attack_verb_simple = "headbutt"
+	melee_damage_lower = 10
+	melee_damage_upper = 20
+	retreat_distance = 10
+	minimum_distance = 10
+	STASPD = 15
+	STACON = 8
+	STASTR = 9
+	childtype = list(/mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigakid = 70, /mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigaboy = 30)
+	pixel_x = -8
+	attack_sound = list('sound/vo/mobs/saiga/attack (1).ogg','sound/vo/mobs/saiga/attack (2).ogg')
+	can_buckle = TRUE
+	buckle_lying = 0
+	can_saddle = TRUE
+	aggressive = 1
+	remains_type = /obj/effect/decal/remains/saiga
+
+/mob/living/simple_animal/hostile/retaliate/rogue/horse/tame
+	tame = TRUE
+
+/mob/living/simple_animal/hostile/retaliate/rogue/horse/tamed()
+	..()
+	deaggroprob = 30
+	if(can_buckle)
+		var/datum/component/riding/D = LoadComponent(/datum/component/riding)
+		D.set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0, 8), TEXT_SOUTH = list(0, 8), TEXT_EAST = list(-2, 8), TEXT_WEST = list(2, 8)))
+		D.set_vehicle_dir_layer(SOUTH, OBJ_LAYER)
+		D.set_vehicle_dir_layer(NORTH, OBJ_LAYER)
+		D.set_vehicle_dir_layer(EAST, OBJ_LAYER)
+		D.set_vehicle_dir_layer(WEST, OBJ_LAYER)
+
+/mob/living/simple_animal/hostile/retaliate/rogue/horse/update_icon()
+	cut_overlays()
+	..()
+	if(stat != DEAD)
+		if(ssaddle)
+			var/mutable_appearance/saddlet = mutable_appearance(icon, "saddle-f-above", 4.3)
+			add_overlay(saddlet)
+			saddlet = mutable_appearance(icon, "saddle-f")
+			add_overlay(saddlet)
+		if(has_buckled_mobs())
+			var/mutable_appearance/mounted = mutable_appearance(icon, "saiga_mounted", 4.3)
+			add_overlay(mounted)
+
+/mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled/Initialize()
+	. = ..()
+	var/obj/item/natural/saddle/S = new(src)
+	ssaddle = S
+	update_icon()
+	ADD_TRAIT(src, TRAIT_IGNOREDAMAGESLOWDOWN, TRAIT_GENERIC)
+	if(aspect_chosen(/datum/round_aspect/superiorbreeds))
+		turns_per_move = 7
+		move_to_delay = 4
+		health = 200
+		maxHealth = 200

@@ -74,7 +74,7 @@
 "im" = (/obj/structure/chair/stool/rogue{pixel_x = 3},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "ip" = (/obj/structure/curtain/bounty{color = "grey"},/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue/indoors/town)
 "iu" = (/obj/machinery/light/rogue/oven/south,/turf/open/floor/rogue/ruinedwood,/area/rogue/indoors/town)
-"iw" = (/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
+"iw" = (/mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled,/turf/open/floor/rogue/dirt/road,/area/rogue/outdoors)
 "iD" = (/obj/structure/chair/wood/rogue{dir = 4},/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/rogue/ruinedwood{icon_state = "weird1"},/area/rogue/indoors/town)
 "iE" = (/obj/machinery/light/rogue/torchholder/c,/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/town)
 "iI" = (/obj/structure/cannon{dir = 1},/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
