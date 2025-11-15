@@ -136,7 +136,7 @@
 // -------------- SALUMOI (dwarven smoked sausage) -----------------
 /obj/item/reagent_containers/food/snacks/rogue/meat/salami
 	name = "salumoi"
-	desc = "Traveling food invented by dwarves. Said to last for ten yils before spoiling"
+	desc = "Traveling food invented by a long gone peoples. Said to last for ten yeeurs before spoiling"
 	icon_state = "salumoi5"
 	eat_effect = null
 	fried_type = null

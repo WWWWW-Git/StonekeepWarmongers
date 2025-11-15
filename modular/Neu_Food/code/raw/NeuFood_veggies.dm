@@ -38,7 +38,7 @@
 
 /*	..................   Potato   ................... */
 /obj/item/reagent_containers/food/snacks/grown/potato/rogue
-	desc = "A spud, dwarven icon of growth."
+	desc = "A spud, peasant icon of girth."
 	eat_effect = null
 	slices_num = 1
 	slice_path = /obj/item/reagent_containers/food/snacks/rogue/potato_sliced

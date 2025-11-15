@@ -69,3 +69,87 @@
 	desc = "It's holy priest Seraphina, first of her name, blessed be her name."
 	icon_state = "seraphinapainting_deployed"
 	stolen_painting = /obj/item/rogue/painting/seraphina
+
+/obj/item/rogue/painting/beer
+	icon_state = "beerpainting"
+	desc = "Remember what you're fighting for."
+	dropshrink = 0.5
+	sellprice = 40
+	deployed_structure = /obj/structure/fluff/walldeco/painting/beer
+
+/obj/structure/fluff/walldeco/painting/beer
+	desc = "Remember what you're fighting for."
+	icon_state = "beerpainting_deployed"
+	stolen_painting = /obj/item/rogue/painting/beer
+
+/obj/item/rogue/painting/beezer
+	icon_state = "beezerpainting"
+	desc = "The big man himself."
+	dropshrink = 0.5
+	sellprice = 40
+	deployed_structure = /obj/structure/fluff/walldeco/painting/beezer
+
+/obj/structure/fluff/walldeco/painting/beezer
+	desc = "The big man himself."
+	icon_state = "beezerpainting_deployed"
+	stolen_painting = /obj/item/rogue/painting/beezer
+
+/obj/item/rogue/painting/fatfuck
+	icon_state = "fatfuckpainting"
+	desc = "Evidently a self portrait."
+	dropshrink = 0.5
+	sellprice = 40
+	deployed_structure = /obj/structure/fluff/walldeco/painting/fatfuck
+
+/obj/structure/fluff/walldeco/painting/fatfuck
+	desc = "Evidently a self portrait."
+	icon_state = "fatfuckpainting_deployed"
+	stolen_painting = /obj/item/rogue/painting/fatfuck
+
+/obj/item/rogue/painting/regimer
+	icon_state = "regimerpainting"
+	desc = "A noble soldier of the KAITZAR."
+	dropshrink = 0.5
+	sellprice = 40
+	deployed_structure = /obj/structure/fluff/walldeco/painting/regimer
+
+/obj/structure/fluff/walldeco/painting/regimer
+	desc = "A noble soldier of the KAITZAR."
+	icon_state = "regimerpainting_deployed"
+	stolen_painting = /obj/item/rogue/painting/regimer
+
+/obj/item/rogue/painting/officers
+	icon_state = "officerspainting"
+	desc = "A bunch of officers planning their next move."
+	dropshrink = 0.5
+	sellprice = 40
+	deployed_structure = /obj/structure/fluff/walldeco/painting/officers
+
+/obj/structure/fluff/walldeco/painting/officers
+	desc = "A bunch of officers planning their next move."
+	icon_state = "officerspainting_deployed"
+	stolen_painting = /obj/item/rogue/painting/officers
+
+/obj/item/rogue/painting/wench
+	icon_state = "wenchpainting"
+	desc = "A lovely wench holding up a bier."
+	dropshrink = 0.5
+	sellprice = 40
+	deployed_structure = /obj/structure/fluff/walldeco/painting/wench
+
+/obj/structure/fluff/walldeco/painting/wench
+	desc = "A lovely wench holding up a bier."
+	icon_state = "wenchpainting_deployed"
+	stolen_painting = /obj/item/rogue/painting/wench
+
+/obj/item/rogue/painting/massacre
+	icon_state = "aftermathpainting"
+	desc = "A whole lot of corpses in this painting. Some of the eyes seem to follow you."
+	dropshrink = 0.5
+	sellprice = 40
+	deployed_structure = /obj/structure/fluff/walldeco/painting/massacre
+
+/obj/structure/fluff/walldeco/painting/massacre
+	desc = "A whole lot of corpses in this painting. Some of the eyes seem to follow you."
+	icon_state = "aftermathpainting_deployed"
+	stolen_painting = /obj/item/rogue/painting/massacre

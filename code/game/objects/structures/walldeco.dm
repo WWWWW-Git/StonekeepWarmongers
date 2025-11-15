@@ -142,6 +142,12 @@
 /obj/structure/fluff/walldeco/bigpainting/lake
 	icon_state = "lake"
 
+/obj/structure/fluff/walldeco/bigpainting/beasts
+	icon_state = "massivebeasts"
+
+/obj/structure/fluff/walldeco/bigpainting/beast
+	icon_state = "massivebeast"
+
 /obj/structure/fluff/walldeco/mona
 	name = "painting"
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
@@ -186,6 +192,11 @@
 	M.color = secondary
 	add_overlay(M)
 	GLOB.lordcolor -= src
+
+/obj/structure/fluff/walldeco/beerflag
+	name = "flag of the Union"
+	desc = ""
+	icon_state = "beerflag"
 
 /obj/structure/fluff/walldeco/moon
 	name = "banner"

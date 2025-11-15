@@ -252,8 +252,8 @@
 	eat_effect = null
 
 /obj/item/reagent_containers/food/snacks/rogue/crackerscooked
-	name = "knaeckebrot" // boom 4001
-	desc = "A staple of the Grenzelhoftian military diet. Adopted by many militaries around the world because it's easy to make and never spoils along with it having nutritional value!"
+	name = "Hardtack" // boom 4001
+	desc = "The vast majority of meals in the Regime is this dry, hardtack. Its all the No-lifers can afford, and is the staple ration for Regime soldiery."
 	icon_state = "tack6"
 	list_reagents = list(/datum/reagent/consumable/nutriment = DOUGH_NUTRITION)
 	w_class = WEIGHT_CLASS_NORMAL
@@ -312,7 +312,7 @@
 /*	.................   Breadslice & Toast   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/breadslice
 	name = "sliced bread"
-	desc = "A bit of comfort to start your dae."
+	desc = "A bit of comfort to start your dea."
 	icon_state = "loaf_slice"
 	w_class = WEIGHT_CLASS_NORMAL
 	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/breadslice/toast
@@ -450,7 +450,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/cheesebun
 	name = "fresh cheese bun"
-	desc = "A treat from the Grenzelhoft kitchen."
+	desc = "A treat from the kitchens of the Regime's upper crust."
 	icon_state = "cheesebun"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SMALLDOUGH_NUTRITION+FRESHCHEESE_NUTRITION)
 	w_class = WEIGHT_CLASS_NORMAL
@@ -461,7 +461,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/frybread
 	name = "frybread"
-	desc = "Flatbread fried at high heat with butter to give it a crispy outside. Staple of the elven kitchen."
+	desc = "Flatbread fried at high heat with butter to give it a crispy outside."
 	icon_state = "frybread"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	tastes = list("crispy bread with a soft inside" = 1)
@@ -652,7 +652,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/hcake
 	name = "zybantine cake"
-	desc = "Cake glazed with honey, in the famous Zybantu fashion, a delicious sweet treat."
+	desc = "Cake glazed with honey, in the famous Zybus fashion, a delicious sweet treat."
 	icon_state = "honeycake"
 	slices_num = 8
 	slice_path = /obj/item/reagent_containers/food/snacks/rogue/hcakeslice
@@ -697,7 +697,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/ccake
 	name = "cheesecake"
-	desc = "Humenity's favored creation."
+	desc = "Huminity's favored creation."
 	icon_state = "cheesecake"
 	slices_num = 8
 	slice_path = /obj/item/reagent_containers/food/snacks/rogue/ccakeslice
