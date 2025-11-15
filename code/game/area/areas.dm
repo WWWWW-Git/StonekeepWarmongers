@@ -639,6 +639,13 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 			found = TRUE
 		if(found)
 			SSdroning.play_rain(src, living_arrived.client)
+	
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(outdoors)
+			H.add_coldbreath()
+		else
+			H.remove_coldbreath()
 
 //	L.play_ambience(src)
 

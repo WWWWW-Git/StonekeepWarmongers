@@ -66,6 +66,24 @@ There are several things that need to be remembered:
 /mob/living/carbon/human/proc/update_mutant_bodyparts()
 	dna.species.handle_mutant_bodyparts(src)
 
+/mob/living/carbon/human/proc/add_coldbreath(var/update_icons=1)
+	if(coldbreath)	return //We alreayd have coldbreath don't add it again.
+	if(stat == DEAD)	return //Don't need this if we're dead
+
+	var/mutable_appearance/standing = mutable_appearance('icons/roguetown/mob/misc.dmi', "breath_m", -COLDBREATH_LAYER)
+	standing.appearance_flags = RESET_COLOR
+	overlays_standing[COLDBREATH_LAYER] = standing
+	apply_overlay(COLDBREATH_LAYER)
+
+	coldbreath = TRUE
+
+	if(update_icons)	update_icons()
+
+/mob/living/carbon/human/proc/remove_coldbreath()
+	remove_overlay(COLDBREATH_LAYER)
+	coldbreath = FALSE
+
+	update_icons()
 
 /mob/living/carbon/human/update_body()
 	dna.species.handle_body(src)

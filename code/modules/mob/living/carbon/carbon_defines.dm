@@ -16,6 +16,8 @@
 
 	var/disgust = 0
 
+	var/coldbreath = FALSE // IS12 is cool. Might aswell copy a bit off their homework.
+
 //inventory slots
 	var/obj/item/back = null
 	var/obj/item/backr = null
