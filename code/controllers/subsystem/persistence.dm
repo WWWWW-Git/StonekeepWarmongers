@@ -304,6 +304,9 @@ SUBSYSTEM_DEF(persistence)
 			if(RED_WARTEAM)
 				file_data["heart_wins"] = ++cached_heart_wins
 				file_data["grenz_wins"] = cached_grenz_wins
+			else
+				file_data["heart_wins"] = cached_heart_wins
+				file_data["grenz_wins"] = cached_grenz_wins
 
 	fdel(json_file)
 	WRITE_FILE(json_file, json_encode(file_data))
