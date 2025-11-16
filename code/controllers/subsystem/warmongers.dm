@@ -60,11 +60,12 @@ SUBSYSTEM_DEF(warmongers)
 
 	if(round_duration_in_ticks >= next_respawn || !next_respawn)
 		if(!respawn_cycle)
+			message_admins("respawn cycle activated")
 			respawn_cycle++
 		respawning = TRUE
 
-		playsound(blu.loc, 'sound/misc/airship_horn.ogg', 75, FALSE, 8)
-		playsound(red.loc, 'sound/misc/airship_horn.ogg', 75, FALSE, 8)
+		playsound(blu.loc, 'sound/misc/airship_horn.ogg', 100, FALSE, 8)
+		playsound(red.loc, 'sound/misc/airship_horn.ogg', 100, FALSE, 8)
 
 		playsound_area(red_airship, 'sound/misc/airship_horn_inside.ogg')
 		playsound_area(blue_airship, 'sound/misc/airship_horn_inside.ogg')
@@ -128,8 +129,8 @@ SUBSYSTEM_DEF(warmongers)
 			reinforcementinas += "/obj/item/bomb/poison"
 			reinforcementinas += "/obj/item/bomb"
 			reinforcementinas += "/obj/item/bomb"
+			to_chat(world, "<span class='notice'>This battle is getting too heated for these shopkeepers! They're leaving!</span>")
 			for(var/obj/structure/shopkeep/SHP in world)
-				to_chat(world, "<span class='notice'>This battle is getting too heated for these shopkeepers! They're leaving!</span>")
 				SHP.leave()
 		if(4)
 			reinforcementinas += "/obj/item/bomb/fire"

@@ -88,6 +88,7 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/admin_cancel_shuttle,	/*allows us to cancel the emergency shuttle, sending it back to centcom*/
 	/client/proc/cmd_admin_direct_narrate,	/*send text directly to a player with no padding. Useful for narratives and fluff-text*/
 	/client/proc/cmd_admin_world_narrate,	/*sends text to all players with no padding*/
+	/client/proc/cmd_admin_world_narrate_faction,
 	/client/proc/cmd_admin_local_narrate,	/*sends text to all mobs within view of atom*/
 	/client/proc/cmd_admin_create_centcom_report,
 	/client/proc/cmd_change_command_name,
@@ -235,6 +236,7 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/client/proc/admin_cancel_shuttle,
 	/client/proc/cmd_admin_direct_narrate,
 	/client/proc/cmd_admin_world_narrate,
+	/client/proc/cmd_admin_world_narrate_faction,
 	/client/proc/cmd_admin_local_narrate,
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,

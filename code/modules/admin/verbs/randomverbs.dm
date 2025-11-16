@@ -37,7 +37,7 @@
 	if(usr)
 		if (usr.client)
 			if(usr.client.holder)
-				to_chat(M, "<i>I hear a voice in your head... <b>[msg]</i></b>")
+				to_chat(M, "<i>I hear a voice in my head... <b>[msg]</i></b>")
 
 	log_admin("SubtlePM: [key_name(usr)] -> [key_name(M)] : [msg]")
 	msg = "<span class='adminnotice'><b> SubtleMessage: [key_name_admin(usr)] -> [key_name_admin(M)] :</b> [msg]</span>"
@@ -143,6 +143,40 @@
 	log_admin("GlobalNarrate: [key_name(usr)] : [msg]")
 	message_admins("<span class='adminnotice'>[key_name_admin(usr)] Sent a global narrate</span>")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Global Narrate") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/proc/cmd_admin_world_narrate_faction()
+	set category = "Special Verbs"
+	set name = "Factional Narrate"
+	var/datum/game_mode/warmongers/W = SSticker.mode
+
+	if(!check_rights(R_ADMIN))
+		return
+
+	var/team = input("WHAT FACTION?","WARMONGERS") as null|anything in list(RED_WARTEAM,BLUE_WARTEAM)
+
+	if(!team)
+		return
+
+	var/msg = input("Message:", text("Enter the text you wish to appear to [team]:")) as text|null
+
+	if (!msg)
+		return
+	switch(team)
+		if(BLUE_WARTEAM)
+			for(var/client/C in W.grenzels)
+				SEND_SOUND(C, 'sound/misc/highcommand.ogg')
+				spawn(5 SECONDS)
+					to_chat(C, "<span class='userdanger'>THE KAISER'S RIGHT HAND MAN [pick("HAS THE PODIUM", "IS NOW SPEAKING", "SPEAKS TO YOU")]!</span><br>")
+					to_chat(C, "<span class='danger'>[msg]</span><br>")
+		if(RED_WARTEAM)
+			for(var/client/C in W.heartfelts)
+				SEND_SOUND(C, 'sound/misc/highcommand.ogg')
+				spawn(5 SECONDS)
+					to_chat(C, "<span class='userdanger'>THE BEEZER'S LEFT HAND MAN [pick("HAS THE PODIUM", "IS NOW SPEAKING", "SPEAKS TO YOU")]!</span><br>")
+					to_chat(C, "<span class='danger'>[msg]</span><br>")
+	log_admin("TeamNarrate: [key_name(usr)] : [msg]")
+	message_admins("<span class='adminnotice'>[key_name_admin(usr)] Sent a team narrate</span>")
+	SSblackbox.record_feedback("tally", "admin_verb", 1, "Team Narrate") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_direct_narrate(mob/M)
 	set category = "Special Verbs"

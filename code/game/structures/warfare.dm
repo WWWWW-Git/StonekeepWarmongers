@@ -237,10 +237,6 @@
 	playsound(src, 'sound/misc/gate.ogg', 50, FALSE)
 	QDEL_IN(src, 35)
 
-/obj/structure/shopkeep/Initialize()
-	. = ..()
-	SSwarmongers.warfare_barriers += src
-
 /obj/structure/shopkeep/examine(mob/user)
 	. = ..()
 	if(istype(get_area(src), /area/rogue/indoors))
