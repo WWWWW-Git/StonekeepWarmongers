@@ -115,7 +115,7 @@
 	name = "throne"
 	desc = "Do not let the enemy sit on this with your crown."
 	icon = 'icons/roguetown/misc/96x96.dmi'
-	icon_state = "throne"
+	icon_state = "throne2"
 	density = FALSE
 	can_buckle = 1
 	pixel_x = -32
@@ -154,10 +154,10 @@
 // LD
 
 /obj/structure/warobjective/warthrone
-	name = "throne of Heartfelt"
+	name = "throne of the Union"
 	desc = "Do not let the enemy sit on this with your crown."
 	icon = 'icons/roguetown/misc/96x96.dmi'
-	icon_state = "throne"
+	icon_state = "throne2"
 	density = FALSE
 	can_buckle = 1
 	pixel_x = -32

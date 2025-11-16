@@ -181,7 +181,7 @@
 // -------------- POWDER (flour) -----------------
 /obj/item/reagent_containers/powder/flour
 	name = "powder"
-	desc = "With this ambition, we build an empire."
+	desc = "From this, you fill the bellies of a hundred men."
 	gender = PLURAL
 	icon_state = "flour"
 	list_reagents = list(/datum/reagent/floure = 1)

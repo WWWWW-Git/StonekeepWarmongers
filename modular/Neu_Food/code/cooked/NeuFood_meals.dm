@@ -12,7 +12,7 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_MEAGRE)
 	tastes = list("steak" = 1, "pepper" = 1)
 	name = "peppersteak"
-	desc = "Roasted flesh flanked with a generous coating of ground pepper for intense flavor."
+	desc = "A delicacy in the PPU, steak with a very healthy seasoning of ground pepper."
 	icon_state = "peppersteak"
 	foodtype = MEAT
 	warming = 5 MINUTES
@@ -34,7 +34,7 @@
 /*	..................   Onion steak   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/onionsteak
 	name = "onion steak"
-	desc = "Roasted flesh garnished with tender fried onions. Fragrant and slathered with juices of both ingredients to a perfect mouth-watering sauce."
+	desc = "Roasted flesh garnished with tender fried onions. Some-lifers swear by it."
 	icon_state = "onionsteak"
 	tastes = list("steak" = 1, "onions" = 1)
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT+3)
@@ -59,8 +59,8 @@
 /obj/item/reagent_containers/food/snacks/rogue/wienercabbage
 	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_MEAGRE)
 	tastes = list("savory sausage" = 1, "cabbage" = 1)
-	name = "wiener on cabbage"
-	desc = "A rich and heavy meal, a perfect ration for a soldier on the march."
+	name = "wiener-cabbage"
+	desc = "A rich and heavy meal, only the lucky in the Regime can get their hands on such a thing."
 	icon_state = "wienercabbage"
 	foodtype = VEGETABLES | MEAT
 	warming = 3 MINUTES
@@ -82,7 +82,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/wienerpotato
 	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_MEAGRE)
 	tastes = list("savory sausage" = 1, "potato" = 1)
-	name = "wiener on tato"
+	name = "wiener-potato"
 	desc = "Stout and nourishing."
 	icon_state = "wienerpotato"
 	foodtype = VEGETABLES | MEAT
@@ -131,7 +131,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/wienerpotatonions
 	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_MEAGRE)
 	tastes = list("savory sausage" = 1, "potato" = 1)
-	name = "wiener meal"
+	name = "wiener-meal"
 	desc = "Stout and nourishing."
 	icon_state = "wpotonion"
 	foodtype = VEGETABLES | MEAT
@@ -153,8 +153,8 @@
 /obj/item/reagent_containers/food/snacks/rogue/frybirdtato
 	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_MEAGRE)
 	tastes = list("frybird" = 1, "tato" = 1)
-	name = "frybird with a tato"
-	desc = "Hearty, comforting and rich - Alleged favorite dish of Ravox."
+	name = "frybird-tato"
+	desc = "Hearty, comforting and rich. Everything you are not."
 	icon_state = "frybirdtato"
 	foodtype = VEGETABLES | MEAT
 	warming = 3 MINUTES
@@ -177,7 +177,7 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_MEAGRE)
 	tastes = list("fried cackleberries" = 1, "cheese" = 1)
 	name = "valerian omelette"
-	desc = "Fried cackleberries on a bed of half-melted cheese, a dish from distant lands."
+	desc = "Fried cackleberries on a bed of half-melted cheese."
 	icon_state = "omelette"
 	eat_effect = /datum/status_effect/buff/foodbuff
 	rotprocess = SHELFLIFE_DECENT
@@ -194,7 +194,7 @@
 
 /*	.................   Plated fryfish   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = "Fish is the only thing most coastal settlements can afford to eat. Pity!"
 	icon_state = "carpcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -206,7 +206,7 @@
 	rotprocess = SHELFLIFE_LONG
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/clownfish/plated
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = "Fish is the only thing most coastal settlements can afford to eat. Pity!"
 	icon_state = "clownfishcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -218,7 +218,7 @@
 	rotprocess = SHELFLIFE_LONG
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/angler/plated
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = "Fish is the only thing most coastal settlements can afford to eat. Pity!"
 	icon_state = "anglercooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -230,7 +230,7 @@
 	rotprocess = SHELFLIFE_LONG
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/eel/plated
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = "Fish is the only thing most coastal settlements can afford to eat. Pity!"
 	icon_state = "eelcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -267,7 +267,7 @@
 
 /*	.................   Cooked rat   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/friedrat/plated
-	desc = "The beggar's feast."
+	desc = "No-lifer delicacy."
 	icon_state = "cookedrat_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'

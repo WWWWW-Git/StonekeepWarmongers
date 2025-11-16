@@ -20,6 +20,14 @@
 	. = ..()
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer,300)
 
+/obj/structure/fermenting_barrel/wine/Initialize()
+	. = ..()
+	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/wine,300)
+
+/obj/structure/fermenting_barrel/waterwine/Initialize()
+	. = ..()
+	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/waterwine,300)
+
 /obj/item/roguebin/water/Initialize()
 	. = ..()
 	reagents.add_reagent(/datum/reagent/water,500)

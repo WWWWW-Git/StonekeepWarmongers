@@ -882,6 +882,15 @@
 /obj/structure/fluff/statue/knightalt/r
 	icon_state = "knightstatue2_r"
 
+/obj/structure/fluff/gallows
+	name = "gallows"
+	icon_state = "hanged"
+	icon = 'icons/roguetown/misc/tallandwide.dmi'
+
+/obj/structure/fluff/hangman
+	name = "hangman"
+	icon_state = "hangedsingle"
+	icon = 'icons/roguetown/misc/tallstructure.dmi'
 
 /obj/structure/fluff/statue/myth
 	icon_state = "myth"

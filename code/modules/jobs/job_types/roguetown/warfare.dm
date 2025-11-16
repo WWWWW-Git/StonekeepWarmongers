@@ -501,8 +501,6 @@
 	..()
 	var/datum/game_mode/warmongers/W = SSticker.mode
 
-	H.set_species(/datum/species/human/northern/fat)
-
 	H.patron = GLOB.patronlist[/datum/patron/divine/psydon]
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light
 	neck = /obj/item/clothing/neck/roguetown/gorget/flasked

@@ -72,13 +72,13 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	return ..()
 
 /datum/reagent/consumable/ethanol/beer
-	name = "Beer"
+	name = "Bier"
 	description = ""
 	color = "#8e6c06" // rgb: 102, 67, 0
 	nutriment_factor = 0.1
 	boozepwr = 25
-	taste_description = "beer"
-	glass_name = "glass of beer"
+	taste_description = "bier"
+	glass_name = "glass of bier"
 	glass_desc = ""
 	hydration_factor = 10
 
@@ -2180,6 +2180,12 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	boozepwr = 20
 	taste_description = "sour wine"
 	color = "#583650"
+
+/datum/reagent/consumable/ethanol/beer/waterwine
+	name = "Water Wine"
+	boozepwr = 10
+	taste_description = "mostly water"
+	color = "#7c5386ff"
 
 /datum/reagent/consumable/ethanol/beer/whitewine
 	name = "White Wine"

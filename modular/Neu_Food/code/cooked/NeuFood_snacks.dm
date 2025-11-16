@@ -59,8 +59,8 @@
 /obj/item/reagent_containers/food/snacks/rogue/bun_grenz
 	list_reagents = list(/datum/reagent/consumable/nutriment = SAUSAGE_NUTRITION+SMALLDOUGH_NUTRITION)
 	tastes = list("savory sausage" = 1, "bread" = 1)
-	name = "grenzelbun"
-	desc = "Originally an elven cuisine composed of mortal races flesh and bread, the classic wiener in a bun, now modified and staple food of Grenzelhoft cuisine."
+	name = "regimebun"
+	desc = "This dish has existed as long as the Regime has. And in spite of that it is rare to see on the tables of those but the affluent."
 	icon_state = "grenzbun"
 	foodtype = GRAIN | MEAT
 	warming = 5 MINUTES
@@ -84,7 +84,7 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	tastes = list("fried cackleberry" = 1)
 	name = "fried cackleberry"
-	desc = "A favorite dish among Astratans."
+	desc = "Which came first?"
 	icon_state = "friedegg"
 	foodtype = MEAT
 	warming = 5 MINUTES
@@ -143,7 +143,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/meat/bacon/fried
 	eat_effect = null
 	name = "fried bacon"
-	desc = "A trufflepig's retirement plan."
+	desc = "A peasant's breakfast."
 	icon_state = "friedbacon"
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	rotprocess = SHELFLIFE_DECENT
@@ -201,7 +201,7 @@
 /*	.............   Baked potato   ................ */
 /obj/item/reagent_containers/food/snacks/rogue/preserved/potato_baked
 	name = "baked potatos"
-	desc = "A dwarven favorite, as a meal or a game of hot potato."
+	desc = "A peasant's dessert."
 	icon_state = "potato_baked"
 	bitesize = 4
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
