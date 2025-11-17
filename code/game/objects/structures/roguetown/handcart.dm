@@ -12,6 +12,12 @@
 	facepull = FALSE
 	throw_range = 1
 
+/obj/structure/handcart/examine(mob/user)
+	. = ..()
+	. += "<span class='tutorial'>Insert items by clicking the handcart while holding them, or dragging them over.</span>"
+	. += "<span class='tutorial'>Use rightclick to dump everything inside the handcart on the floor.</span>"
+	. += "<span class='tutorial'>Use middleclick to take out a special item.</span>"
+
 /obj/structure/handcart/container_resist(mob/living/user)
 	var/turf/T = get_turf(src)
 	for(var/atom/movable/AM in stuff_shit)
@@ -48,6 +54,7 @@
 		playsound(loc, 'sound/foley/cartadd.ogg', 100, FALSE, -1)
 		return
 	..()
+
 /obj/structure/handcart/attack_hand(mob/living/user)
 	. = ..()
 	if(.)
@@ -65,11 +72,10 @@
 			playsound(loc, 'sound/foley/cartadd.ogg', 100, FALSE, -1)
 
 /obj/structure/handcart/proc/put_in(atom/movable/O)
-	if(isitem(O))
-		var/obj/item/I = O
-		if((total_capacity + I.w_class) > 60)
+	if(isobj(O))
+		if((total_capacity + O.w_class) > 60)
 			return FALSE
-		total_capacity += I.w_class
+		total_capacity += O.w_class
 		O.forceMove(src)
 		stuff_shit += O
 	if(isliving(O))
@@ -119,6 +125,29 @@
 		stuff_shit = list()
 		total_capacity = 0
 		visible_message("<span class='info'>[user] dumps out [src]!</span>")
+		playsound(loc, 'sound/foley/cartdump.ogg', 100, FALSE, -1)
+	update_icon()
+
+/obj/structure/handcart/MiddleClick(mob/user, params)
+	. = ..()
+	var/list/removables = list()
+	var/turf/T = get_turf(src)
+	for(var/atom/movable/AM in stuff_shit)
+		removables += AM
+	var/input = input(user, "What will you take out?", "WARMONGERS") as null|anything in removables
+	if(isobj(input))
+		var/obj/O = input
+		total_capacity -= O.w_class
+		stuff_shit -= O
+		O.forceMove(T)
+		visible_message("<span class='info'>[user] takes something out of [src].</span>")
+		playsound(loc, 'sound/foley/cartdump.ogg', 100, FALSE, -1)
+	if(ismob(input))
+		var/mob/M = input
+		total_capacity -= 10
+		stuff_shit -= M
+		M.forceMove(T)
+		visible_message("<span class='info'>[user] takes something out of [src].</span>")
 		playsound(loc, 'sound/foley/cartdump.ogg', 100, FALSE, -1)
 	update_icon()
 
