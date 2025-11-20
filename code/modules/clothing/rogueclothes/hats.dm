@@ -1194,6 +1194,46 @@
 	item_state = "hood"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
+/obj/item/clothing/head/roguetown/war/hood/red
+	name = "hood"
+	icon_state = "hoodred"
+	item_state = "hoodred"
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask
+	name = "hooded helmet"
+	desc = "A dulliron helmet hidden beneath a red hood."
+	icon_state = "hoodredmask"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+
+/obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask/alternate
+	icon_state = "hoodredmask1"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+
+/obj/item/clothing/head/roguetown/war/stitchhood
+	name = "stitched-hood"
+	desc = "A makeshift hood worn by the truly worthy."
+	icon_state = "stitchhood"
+	item_state = "stitchhood"
+	bloody_icon_state = "helmetblood_big"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/head/roguetown/war/stitchhood/alternate
+	name = "stitched-hood"
+	icon_state = "stitchhood2"
+	item_state = "stitchhood2"
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
 /obj/item/clothing/head/roguetown/war/wickerhelm
 	name = "wickerhelm"
 	desc = "A padded helmet worn by those who work the hives, adequate against stingers, not so much against bullets."

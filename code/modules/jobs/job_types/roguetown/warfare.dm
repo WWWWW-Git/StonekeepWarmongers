@@ -311,29 +311,48 @@
 	reinforcements_wave = 0
 	allowed_races = list(
 		"Fat",
-		"Standard"
+		"Standard",
+		"Bulky"
 	)
 /datum/outfit/job/roguetown/redsoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
 	if(H.dna.species.id == "fat")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat/alternate
+	if(H.dna.species.id == "bulky")
+		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky/alternate
 	cloak = /obj/item/clothing/cloak/war/ppr/scarf
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
 	if(H.dna.species.id == "fat")
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat
+	if(H.dna.species.id == "bulky")
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	if(H.dna.species.id == "bulky")
+		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	if(H.dna.species.id == "fat")
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
+	if(H.dna.species.id == "bulky")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/rogueweapon/huntingknife/bayonet
+	if(H.dna.species.id == "bulky")
+		beltl = /obj/item/reagent_containers/powder/ozium
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
 	beltr = /obj/item/quiver/bullets
+	if(H.dna.species.id == "bulky")
+		beltr = /obj/item/rogueweapon/woodcut/war
 	backr = GetMainGunForWarfarePPU()
+	if(H.dna.species.id == "bulky")
+		backr = /obj/item/rogueweapon/shield/tower/war
 	backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
+	if(H.dna.species.id == "bulky")
+		backl = null
 	neck = /obj/item/rogue/barkenpowderflask
+	if(H.dna.species.id == "bulky")
+		backl = null
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm/alternate
@@ -368,19 +387,30 @@
 	min_pq = -5
 	allowed_races = list(
 		"Fat",
-		"Standard"
+		"Standard",
+		"Bulky"
 	)
 /datum/outfit/job/roguetown/redofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 	if(H.dna.species.id == "fat")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat
+	if(H.dna.species.id == "bulky")
+		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky
 	cloak = /obj/item/clothing/cloak/war/ppr/scarf
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
 	if(H.dna.species.id == "fat")
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat/alternate
+	if(H.dna.species.id == "bulky")
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/bulky/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	if(H.dna.species.id == "bulky")
+		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	if(H.dna.species.id == "fat")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
+	if(H.dna.species.id == "bulky")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/rogueweapon/sword/sabre/shofficer
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	if(prob(50))
@@ -402,6 +432,55 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.change_stat("intelligence", 3)
 	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
+
+//// FIRESTARTER ////
+
+/datum/advclass/red/firestarter
+	name = "Firestarter"
+	tutorial = "Unwashed land workers armed with muskets. The bulk of any PPR army."
+	outfit = /datum/outfit/job/roguetown/redfirestarter
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = 3
+	reinforcements_wave = 0
+	allowed_races = list(
+		"Standard"
+	)
+/datum/outfit/job/roguetown/redfirestarter/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
+	cloak = /obj/item/clothing/cloak/war/ppr/cloak
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	beltl = /obj/item/flint
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
+	if(prob(50))
+		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
+	beltr = /obj/item/rogueweapon/woodcut/war
+	backl = /obj/item/storage/backpack/rogue/satchel/booze
+	backr = /obj/item/storage/backpack/rogue/satchel/booze
+	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask
+	if(prob(50))
+		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask/alternate
+	backpack_contents = list(/obj/item/bomb/mollie=6)
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
+		H.change_stat("strength", 1)
+		H.change_stat("perception", 1)
+		H.change_stat("endurance", 1)
+		H.change_stat("constitution", 1)
 
 //// MEDIC ////
 
@@ -579,28 +658,48 @@
 	reinforcements_wave = 0
 	allowed_races = list(
 		"Fat",
-		"Standard"
+		"Standard",
+		"Bulky"
 	)
 /datum/outfit/job/roguetown/blusoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
-	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
+	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 	if(H.dna.species.id == "fat")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
+		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/fat/alternate
+	if(H.dna.species.id == "bulky")
+		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
 	cloak = /obj/item/clothing/cloak/war/regime/scarf
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
 	if(H.dna.species.id == "fat")
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/fat
-	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
+	if(H.dna.species.id == "bulky")
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/bulky
+	shoes = 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
+	if(H.dna.species.id == "bulky")
+		shoes = 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers/bulky
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	if(H.dna.species.id == "fat")
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
+	if(H.dna.species.id == "bulky")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/rogueweapon/huntingknife/bayonet
+	if(H.dna.species.id == "bulky")
+		beltl = /obj/item/reagent_containers/powder/ozium
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
 	beltr = /obj/item/quiver/bullets
+	if(H.dna.species.id == "bulky")
+		beltr = /obj/item/rogueweapon/woodcut/war
 	backr = GetMainGunForWarfareRegime()
+	if(H.dna.species.id == "bulky")
+		backr = /obj/item/rogueweapon/shield/tower/war
 	backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
+	if(H.dna.species.id == "bulky")
+		backl = null
+	neck = /obj/item/rogue/barkenpowderflask
+	if(H.dna.species.id == "bulky")
+		backl = null
 	neck = /obj/item/rogue/barkenpowderflask
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm
 	if(prob(50))
@@ -621,34 +720,36 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 
-//// ZWEIHANDER ////
+//// ZEALOT ////
 
-/datum/advclass/blu/zweihander //High stamina, speed, and damage. However, no gun skills, and really not that well armored.
-	name = "Zweihander"
+/datum/advclass/blu/zealot //High stamina, speed, and damage. However, no gun skills, and really not that well armored.
+	name = "Zealot"
 	tutorial = "Elite shocktroops which excel with dicing apart enemies with ferocity, but they are poorly armored, and unable to use firearms due to lack of training."
-	outfit = /datum/outfit/job/roguetown/bluzweihander
+	outfit = /datum/outfit/job/roguetown/bluzealot
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = -1
-	reinforcements_wave = 2
+	reinforcements_wave = 0
+	allowed_races = list(
+		"Standard",
+		"Bulky"
+	)
 
-/datum/outfit/job/roguetown/bluzweihander/pre_equip(mob/living/carbon/human/H, visualsOnly)
+/datum/outfit/job/roguetown/bluzealot/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
-	pants = /obj/item/clothing/under/roguetown/grenzelpants
-	shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft
-	gloves = /obj/item/clothing/gloves/roguetown/grenzelgloves
-	belt = /obj/item/storage/belt/rogue/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft/warfare
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
-	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/grenzelhoft
-	backr = /obj/item/rogueweapon/sword/long/reskin
-	head = /obj/item/clothing/head/roguetown/grenzelhofthat
-	if(prob(10))
-		mask = /obj/item/clothing/mask/rogue/chainmask
+	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
+	if(H.dna.species.id == "bulky")
+		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
+	cloak = /obj/item/clothing/cloak/war/regime/parchment
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	if(H.dna.species.id == "bulky")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
+	backr = /obj/item/rogueweapon/flail/bigflail
+	head = /obj/item/clothing/head/roguetown/war/stitchhood
 	if(prob(50))
-		mouth = /obj/item/clothing/mask/cigarette/pipe
+		head = /obj/item/clothing/head/roguetown/war/stitchhood/alternate
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -925,7 +1026,8 @@
 	min_pq = -5
 	allowed_races = list(
 		"Fat",
-		"Standard"
+		"Standard",
+		"Bulky"
 	)
 /datum/outfit/job/roguetown/bluofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -938,6 +1040,10 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/fat/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	if(H.dna.species.id == "fat")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
+	if(H.dna.species.id == "bulky")
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/rogueweapon/sword/sabre/officer
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	if(prob(50))

@@ -197,3 +197,53 @@
 	pickup_sound = 'sound/foley/equip/rummaging-03.ogg'
 	gripped_intents = list(/datum/intent/axe/chop/stone)
 	axe_cut = 8
+
+//...................Warmongers...............
+
+/obj/item/rogueweapon/woodcut/war
+	slot_flags = ITEM_SLOT_HIP
+	force = 20
+	force_wielded = 25
+	possible_item_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop)
+	name = "hatchet"
+	desc = "The difference between a tool and a weapon is intent."
+	icon_state = "hatchet"
+	icon = 'icons/roguetown/weapons/32.dmi'
+	max_blade_int = 130
+	max_integrity = 200
+	smeltresult = /obj/item/ingot/iron
+	gripped_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop)
+	parrysound = list('sound/combat/parry/wood/parrywood (1).ogg', 'sound/combat/parry/wood/parrywood (2).ogg', 'sound/combat/parry/wood/parrywood (3).ogg')
+	swingsound = BLADEWOOSH_MED
+	associated_skill = /datum/skill/combat/axesmaces
+	wdefense = 2
+	minstr = 6
+	axe_cut = 10
+
+/obj/item/rogueweapon/woodcut/steel/war
+	slot_flags = ITEM_SLOT_BACK
+	name = "war axe"
+	desc = "A heavy axe for cutting down barricades, and cutting up the unworthy."
+	icon_state = "warcutter"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	force = 20
+	force_wielded = 25
+	possible_item_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop)
+	max_blade_int = 180
+	max_integrity = 300
+	smeltresult = /obj/item/ingot/steel
+	gripped_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop)
+	parrysound = list('sound/combat/parry/wood/parrywood (1).ogg', 'sound/combat/parry/wood/parrywood (2).ogg', 'sound/combat/parry/wood/parrywood (3).ogg')
+	swingsound = BLADEWOOSH_MED
+	associated_skill = /datum/skill/combat/axesmaces
+	wdefense = 3
+	minstr = 6
+
+/obj/item/rogueweapon/woodcut/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.6,"sx" = -12,"sy" = -10,"nx" = 12,"ny" = -10,"wx" = -8,"wy" = -7,"ex" = 3,"ey" = -9,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 90,"sturn" = -90,"wturn" = -90,"eturn" = 90,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("wielded")
+				return list("shrink" = 0.6,"sx" = -12,"sy" = 3,"nx" = 12,"ny" = 2,"wx" = -8,"wy" = 2,"ex" = 4,"ey" = 2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)

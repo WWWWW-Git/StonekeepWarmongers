@@ -225,6 +225,22 @@
 		CP.rmb_show(user)
 		return TRUE
 
+/obj/item/storage/backpack/rogue/satchel/booze
+	name = "satchel"
+	desc = ""
+	icon_state = "boozesack"
+	item_state = "boozesack"
+	icon = 'icons/roguetown/clothing/storage.dmi'
+	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	resistance_flags = NONE
+	max_integrity = 300
+	equip_sound = 'sound/blank.ogg'
+	bloody_icon_state = "bodyblood"
+	alternate_worn_layer = UNDER_CLOAK_LAYER
+
 /obj/item/rogue/musicpack
 	name = "musicpack device"
 	desc = "It goes on your back. Use your middle finger to reach into the hole to turn it on."
@@ -242,7 +258,7 @@
 	var/curfile
 	var/playing = FALSE
 	var/curvol = 70
-	var/list/songs = list("KAISER" = 'sound/music/jukeboxes/regimeanthem.ogg')
+	var/list/songs = list("KAITZAR" = 'sound/music/jukeboxes/regimeanthem.ogg')
 
 /obj/item/rogue/musicpack/heartfelt
 	songs = list("Bier For Beezer" = 'sound/music/jukeboxes/ppranthem.ogg')
@@ -346,9 +362,14 @@
 /obj/item/storage/belt/rogue/leather/rope/war
 	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
 	icon_state = "rope"
-	color = "#5f5c58"
+	color = "#35322fff"
 
 /obj/item/storage/belt/rogue/leather/rope/war/fat
 	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
 	icon_state = "ropefat"
-	color = "#5f5c58"
+	color = "#35322fff"
+
+/obj/item/storage/belt/rogue/leather/rope/war/bulky
+	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
+	icon_state = "ropebulky"
+	color = "#35322fff"
