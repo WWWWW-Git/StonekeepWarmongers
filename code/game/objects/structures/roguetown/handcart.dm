@@ -73,9 +73,10 @@
 
 /obj/structure/handcart/proc/put_in(atom/movable/O)
 	if(isobj(O))
-		if((total_capacity + O.w_class) > 60)
+		var/obj/item/I = O
+		if((total_capacity + I.w_class) > 60)
 			return FALSE
-		total_capacity += O.w_class
+		total_capacity += I.w_class
 		O.forceMove(src)
 		stuff_shit += O
 	if(isliving(O))

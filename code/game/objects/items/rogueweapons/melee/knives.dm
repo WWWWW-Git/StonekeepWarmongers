@@ -284,7 +284,8 @@
 	wdefense = 3
 	smeltresult = /obj/item/ingot/copper
 
-//..............................Bayonet.......................
+//..............................Warmongers.......................
+
 /obj/item/rogueweapon/huntingknife/bayonet
 	possible_item_intents = list(/datum/intent/dagger/thrust)
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH

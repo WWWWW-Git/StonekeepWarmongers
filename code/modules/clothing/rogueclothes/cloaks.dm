@@ -903,14 +903,30 @@
 
 /obj/item/clothing/cloak/war/ppr/scarf
 	name = "red scarf"
-	desc = "A red scarf worn by muckrakers and landworkers in the PPR, proudly covered in bier stains and dirt."
+	desc = "A red scarf worn by muckrakers and landworkers in the PPU, proudly covered in bier stains and dirt."
 	icon_state = "ppr_scarf"
 	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
-	allowed_race = list("standard", "fat")
+	allowed_race = list("standard", "fat", "bulky")
+
+/obj/item/clothing/cloak/war/ppr/cloak
+	name = "red cloak"
+	desc = "A long red cloak worn by firestarters, criminals accused of burning down farmland, now pressed into PPU service."
+	icon_state = "ppucloak"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_sex = list(MALE, FEMALE)
+	allowed_race = list("standard")
 
 /obj/item/clothing/cloak/war/regime/scarf
 	name = "green scarf"
 	desc = "A green scarf. It was originally going to be a different coler but the dye union held a strike in protest. As such green was chosen."
 	icon_state = "regimer_scarf"
 	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
-	allowed_race = list("standard", "fat")
+	allowed_race = list("standard", "fat", "bulky")
+
+/obj/item/clothing/cloak/war/regime/parchment
+	name = "parchment"
+	desc = "Sacred texts of the Regime, the only armor you will ever need."
+	icon_state = "parchmentcloak"
+	allowed_sex = list("female", "male")
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_race = list("bulky", "standard", "fat")

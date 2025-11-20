@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
 	name = "longbark"
-	desc = "."
+	desc = "A heavy barker with a magnifying lens, desiged to kill at great distances."
 	icon = 'icons/roguetown/weapons/64.dmi'
 	icon_state = "musket"
 	item_state = "musket"
@@ -255,12 +255,13 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed // i axed you a question
 	name = "barkaxe"
-	desc = "An abomination devised by the bearded menace themselves. The name is being workshopped currently."
+	desc = "A hefty barkpistol equipped with an axe for close combat."
 	icon = 'icons/roguetown/weapons/32.dmi'
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
 	icon_state = "pistolaxe"
 	item_state = "pistolaxe"
+	slot_flags = ITEM_SLOT_HIP
 	walking_stick = FALSE
 	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/axe/chop, /datum/intent/axe/cut)
 
@@ -366,12 +367,40 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/axed/alternate
 	name = "barkaxe"
-	desc = "An abomination devised by the bearded menace themselves. The name is being workshopped currently."
 	icon = 'icons/roguetown/weapons/32.dmi'
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
 	icon_state = "pistolaxe1"
 	item_state = "pistolaxe1"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded // i sword what you did there
+	name = "barksword"
+	desc = "A sleek sabre with a miniaturized barkpistol attached, an especially complex and valuable weapon."
+	icon = 'icons/roguetown/weapons/32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "shitsabregun"
+	item_state = "shitsabregun"
+	slot_flags = ITEM_SLOT_HIP
+	walking_stick = FALSE
+	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/sword/cut/sabre, /datum/intent/sword/chop)
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.6,"sx" = -10,"sy" = -8,"nx" = 13,"ny" = -8,"wx" = -8,"wy" = -7,"ex" = 7,"ey" = -8,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 90,"sturn" = -90,"wturn" = -80,"eturn" = 81,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.5,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate
+	name = "barksword"
+	icon = 'icons/roguetown/weapons/32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon_state = "sabregun"
+	item_state = "sabregun"
 
 /obj/item/ammo_box/magazine/internal/shot/musk
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
