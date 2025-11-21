@@ -76,4 +76,3 @@
 		U.attach_accessory(new /obj/item/clothing/accessory/medal/gold/admin(U))
 	if(check_bypasslist(H.ckey))
 		U.attach_accessory(new /obj/item/clothing/accessory/medal/silver/veteran(U))
-	return

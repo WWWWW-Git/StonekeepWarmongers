@@ -123,7 +123,8 @@
 	return attack_hand(user)
 
 /turf/closed/attack_hand(mob/user)
-	if(wallclimb)
+	var/obj/structure/wallladder/WL = locate() in user.loc
+	if(wallclimb || WL)
 		if(isliving(user))
 			var/mob/living/L = user
 			var/climbsound = 'sound/foley/climb.ogg'
@@ -159,7 +160,6 @@
 					var/obj/structure/chair/CH = locate() in L.loc
 					if(CH)
 						myskill += 1
-					var/obj/structure/wallladder/WL = locate() in L.loc
 					if(WL)
 						if(get_dir(WL.loc,src) == WL.dir)
 							myskill += 8
@@ -174,9 +174,39 @@
 			user.visible_message("<span class='warning'>[user] starts to climb [src].</span>", "<span class='warning'>I start to climb [src]...</span>")
 			if(do_after(L, used_time, target = src))
 				var/pulling = user.pulling
+				var/mob/living/carbon/human/climber = user
+				var/baseline_stamina_cost = 20 // have to disable stamina regen while on wall bruh in energystamina.dm
+				var/climb_gear_bonus = 1
+				if((istype(climber.backr, /obj/item/clothing/climbing_gear)) || (istype(climber.backl, /obj/item/clothing/climbing_gear)))
+					climb_gear_bonus = 2
+				var/climbing_skill = max(climber.mind.get_skill_level(/datum/skill/misc/climbing), SKILL_LEVEL_NOVICE)
+				var/stamina_cost_final = round(((baseline_stamina_cost / climbing_skill) / climb_gear_bonus), 1)
 				if(ismob(pulling))
 					user.pulling.forceMove(target)
+				var/obj/item/clothing/CL = climber.wear_armor
+				var/climber_armor_class = CL?.armor_class
+				if((climber_armor_class <= 1) && !(ismob(pulling))) // 1 means light
+					user.movement_type = FLYING
+				L.rogstam_add(stamina_cost_final)
 				user.forceMove(target)
+				user.movement_type = GROUND
+				if(istype(user.loc, /turf/open/transparent/openspace)) // basically only apply this slop after we moved. if we are hovering on the openspace turf, then good, we are doing an 'active climb' instead of the usual vaulting action
+					var/climber2wall_dir = get_dir(climber, src)
+					climber.wallpressed = climber2wall_dir
+					switch(climber2wall_dir)// we are pressed against the wall after all that shit and are facing it, also hugging it too bcoz sou
+						if(NORTH)
+							climber.setDir(NORTH)
+							climber.set_mob_offsets("wall_press", _x = 0, _y = 20)
+						if(SOUTH)
+							climber.setDir(SOUTH)
+							climber.set_mob_offsets("wall_press", _x = 0, _y = -10)
+						if(EAST)
+							climber.setDir(EAST)
+							climber.set_mob_offsets("wall_press", _x = 12, _y = 0)
+						if(WEST)
+							climber.setDir(WEST)
+							climber.set_mob_offsets("wall_press", _x = -12, _y = 0)
+					L.apply_status_effect(/datum/status_effect/debuff/climbing)
 				user.start_pulling(pulling,supress_message = TRUE)
 				if(user.m_intent != MOVE_INTENT_SNEAK)
 					playsound(user, 'sound/foley/climb.ogg', 100, TRUE)

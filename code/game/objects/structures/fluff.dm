@@ -886,11 +886,16 @@
 	name = "gallows"
 	icon_state = "hanged"
 	icon = 'icons/roguetown/misc/tallandwide.dmi'
+	bound_width = 64
+	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
 
 /obj/structure/fluff/hangman
 	name = "hangman"
 	icon_state = "hangedsingle"
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
+	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
 
 /obj/structure/fluff/statue/myth
 	icon_state = "myth"
