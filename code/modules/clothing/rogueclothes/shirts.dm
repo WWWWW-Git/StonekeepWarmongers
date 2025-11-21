@@ -646,3 +646,16 @@
 	l_sleeve_status = SLEEVE_NORMAL
 	body_parts_covered = CHEST|ARMS|VITALS
 	allowed_race = list("bulky")
+
+/obj/item/clothing/suit/roguetown/shirt/war/regime/hussarshirt
+	name = "fancy shirt"
+	desc = "A nice shirt with white piping."
+	icon_state = "hussarshirt"
+	item_state = "hussarshirt"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("standard")

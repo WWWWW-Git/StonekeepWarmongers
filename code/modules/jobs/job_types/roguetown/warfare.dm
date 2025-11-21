@@ -372,6 +372,54 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 
+
+//// OUTRIDER ////
+
+/datum/advclass/red/outrider
+	name = "Outrider"
+	tutorial = "Fast moving, heavy cavalry capable of breaking lines of infantry like they were twigs."
+	outfit = /datum/outfit/job/roguetown/redoutrider
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	horse = /mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled
+	maximum_possible_slots = -1
+	reinforcements_wave = 0
+	allowed_races = list(
+		"Standard"
+	)
+
+/datum/outfit/job/roguetown/redoutrider/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	beltl = GetSidearmForWarfare()
+	beltr = /obj/item/quiver/bullets
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
+	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/outriderhelm
+	if(prob(50))
+		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/outriderhelm/alternate
+	neck = /obj/item/rogue/barkenpowderflask
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/outrider
+	backr = /obj/item/rogueweapon/spear/pike
+	cloak = /obj/item/clothing/cloak/war/ppr/scarf
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+		H.change_stat("strength", 1)
+		H.change_stat("perception", -1)
+		H.change_stat("endurance", 1)
+		H.change_stat("constitution", 1)
+	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+
 //// OFFICER ////
 
 /datum/advclass/red/officer
@@ -397,7 +445,7 @@
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/fat
 	if(H.dna.species.id == "bulky")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/bulky
-	cloak = /obj/item/clothing/cloak/war/ppr/scarf
+	cloak = /obj/item/clothing/cloak/war/ppr/cloak
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
 	if(H.dna.species.id == "fat")
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/fat/alternate
@@ -437,7 +485,7 @@
 
 /datum/advclass/red/firestarter
 	name = "Firestarter"
-	tutorial = "Unwashed land workers armed with muskets. The bulk of any PPR army."
+	tutorial = "Firewater-cocktail slinging skirmishers who can deny large areas to the enemy."
 	outfit = /datum/outfit/job/roguetown/redfirestarter
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -451,7 +499,7 @@
 /datum/outfit/job/roguetown/redfirestarter/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
-	cloak = /obj/item/clothing/cloak/war/ppr/cloak
+	cloak = /obj/item/clothing/cloak/war/ppr/scarf
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
@@ -733,7 +781,6 @@
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
 	allowed_races = list(
-		"Standard",
 		"Bulky"
 	)
 
@@ -768,29 +815,33 @@
 
 /datum/advclass/blu/hussar
 	name = "Hussar"
-	tutorial = "Elite cavalry troops who can quickly turn the battle in favor of the Imperiate."
+	tutorial = "Light, fast moving cavalry armed with pistols and sabres capable of outflanking the foe."
 	outfit = /datum/outfit/job/roguetown/bluhussar
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_BLUSOLDIER)
-	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled
+	horse = /mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled
 	maximum_possible_slots = -1
-	reinforcements_wave = 3
+	reinforcements_wave = 0
+	allowed_races = list(
+		"Standard"
+	)
 
 /datum/outfit/job/roguetown/bluhussar/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shoes = /obj/item/clothing/shoes/roguetown/nobleboot
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
-	belt = /obj/item/storage/belt/rogue/leather
-	beltl = GetSidearmForWarfare()
-	beltr = /obj/item/quiver/bullets
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
-	head = /obj/item/clothing/head/roguetown/helmet/hussarhelm
+	pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	beltr = GetSidearmForWarfare()
+	beltl = /obj/item/rogueweapon/sword/sabre/officer
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/hussarshirt
+	head = /obj/item/clothing/head/roguetown/helmet/war/hussarhelm
+	if(prob(50))
+		head = /obj/item/clothing/head/roguetown/helmet/war/hussarhelm/alternate
+	cloak = /obj/item/clothing/cloak/hussarcloak
 	neck = /obj/item/rogue/barkenpowderflask
-	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/hussar
-	backr = /obj/item/rogueweapon/halberd
+	backr = /obj/item/quiver/bullets
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
@@ -858,113 +909,6 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 		H.change_stat("speed", -6)
-
-////// JESTER //////
-
-/datum/advclass/blu/blujester ///Mostly a joke class. They do move fast though and can use knives.
-	name = "Jester"
-	tutorial = "You don't remember how the hell you got pulled into a war, but you may as well make a mockery of it."
-	outfit = /datum/outfit/job/roguetown/blujester
-	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = ALL_RACES_LIST_NAMES
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	category_tags = list(CTAG_BLUSOLDIER)
-	maximum_possible_slots = -1
-	reinforcements_wave = 2
-
-/datum/outfit/job/roguetown/blujester/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	shoes = /obj/item/clothing/shoes/roguetown/jester
-	pants = /obj/item/clothing/under/roguetown/tights
-	armor = /obj/item/clothing/suit/roguetown/shirt/jester
-	backl = /obj/item/rogue/musicpack
-	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/rogue/caltrop/bombed
-	beltl = pick(/obj/item/rogueweapon/huntingknife/cleaver/combat, /obj/item/rogueweapon/sword/rapier)
-	head = /obj/item/clothing/head/roguetown/jester
-	neck = /obj/item/reagent_containers/glass/bottle/waterskin
-	playsound(H, 'sound/foley/honk.ogg', 100, FALSE, 2)
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/music, pick(1,2), TRUE)
-		H.change_stat("speed", 6)
-	ADD_TRAIT(H, TRAIT_JESTER, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
-
-/obj/item/rogue/caltrop
-	name = "caltrop"
-	desc = "."
-	icon = 'icons/roguetown/items/misc.dmi'
-	icon_state = "tetsubishi"
-	var/obj/item/bomb/loaded_bomb = null
-	w_class = WEIGHT_CLASS_TINY
-	slot_flags = ITEM_SLOT_HIP
-	embedding = list("embedded_unsafe_removal_time" = 40, "embedded_pain_chance" = 40, "embedded_pain_multiplier" = 1, "embed_chance" = 100, "embedded_fall_chance" = 0)
-
-/obj/item/rogue/caltrop/attackby(obj/item/I, mob/user, params)
-	. = ..()
-	if(istype(I, /obj/item/bomb))
-		I.forceMove(src)
-		loaded_bomb = I
-		to_chat(user, "<span class='notice'>You attach \the [I] on \the [src].</span>")
-		icon_state = "mine"
-		playsound(src, 'sound/foley/trap_arm.ogg', 65)
-
-/obj/item/rogue/caltrop/bombed/Initialize()
-	. = ..()
-	var/obj/item/bomb/B = new(src)
-	loaded_bomb = B
-	icon_state = "mine"
-
-/obj/item/rogue/caltrop/Crossed(AM as mob|obj)
-	if(isturf(loc))
-		if(isliving(AM))
-			var/mob/living/L = AM
-			var/snap = TRUE
-			if(istype(L.buckled, /obj/vehicle))
-				var/obj/vehicle/ridden_vehicle = L.buckled
-				if(!ridden_vehicle.are_legs_exposed)
-					return ..()
-
-			if(L.throwing)
-				return ..()
-
-			if(L.movement_type & (FLYING|FLOATING))
-				return ..()
-
-			var/def_zone = BODY_ZONE_CHEST
-			if(ishuman(L))
-				var/mob/living/carbon/human/C = L
-				if(C.mobility_flags & MOBILITY_STAND)
-					def_zone = pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
-					var/obj/item/bodypart/BP = C.get_bodypart(def_zone)
-					if(BP)
-						add_mob_blood(C)
-						if(!BP.is_object_embedded(src))
-							BP.add_embedded_object(src)
-						C.emote("agony")
-						if(icon_state != "[icon_state]-bloody")
-							icon_state = "[icon_state]-bloody"
-						if(loaded_bomb)
-							loaded_bomb.forceMove(get_turf(C))
-							loaded_bomb.light()
-							loaded_bomb.explode()
-							QDEL_NULL(loaded_bomb)
-							loaded_bomb = null
-			else if(isanimal(L))
-				var/mob/living/simple_animal/SA = L
-				if(SA.mob_size <= MOB_SIZE_TINY) //don't close the trap if they're as small as a mouse.
-					snap = FALSE
-			if(snap)
-				L.apply_damage(50, BRUTE, def_zone)
-				L.Stun(20)
-	..()
 
 //// RIFLEMEN ////
 
@@ -1107,3 +1051,72 @@
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_RIVERSWIMMER, TRAIT_GENERIC)
+
+/obj/item/rogue/caltrop
+	name = "caltrop"
+	desc = "."
+	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "tetsubishi"
+	var/obj/item/bomb/loaded_bomb = null
+	w_class = WEIGHT_CLASS_TINY
+	slot_flags = ITEM_SLOT_HIP
+	embedding = list("embedded_unsafe_removal_time" = 40, "embedded_pain_chance" = 40, "embedded_pain_multiplier" = 1, "embed_chance" = 100, "embedded_fall_chance" = 0)
+
+/obj/item/rogue/caltrop/attackby(obj/item/I, mob/user, params)
+	. = ..()
+	if(istype(I, /obj/item/bomb))
+		I.forceMove(src)
+		loaded_bomb = I
+		to_chat(user, "<span class='notice'>You attach \the [I] on \the [src].</span>")
+		icon_state = "mine"
+		playsound(src, 'sound/foley/trap_arm.ogg', 65)
+
+/obj/item/rogue/caltrop/bombed/Initialize()
+	. = ..()
+	var/obj/item/bomb/B = new(src)
+	loaded_bomb = B
+	icon_state = "mine"
+
+/obj/item/rogue/caltrop/Crossed(AM as mob|obj)
+	if(isturf(loc))
+		if(isliving(AM))
+			var/mob/living/L = AM
+			var/snap = TRUE
+			if(istype(L.buckled, /obj/vehicle))
+				var/obj/vehicle/ridden_vehicle = L.buckled
+				if(!ridden_vehicle.are_legs_exposed)
+					return ..()
+
+			if(L.throwing)
+				return ..()
+
+			if(L.movement_type & (FLYING|FLOATING))
+				return ..()
+
+			var/def_zone = BODY_ZONE_CHEST
+			if(ishuman(L))
+				var/mob/living/carbon/human/C = L
+				if(C.mobility_flags & MOBILITY_STAND)
+					def_zone = pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+					var/obj/item/bodypart/BP = C.get_bodypart(def_zone)
+					if(BP)
+						add_mob_blood(C)
+						if(!BP.is_object_embedded(src))
+							BP.add_embedded_object(src)
+						C.emote("agony")
+						if(icon_state != "[icon_state]-bloody")
+							icon_state = "[icon_state]-bloody"
+						if(loaded_bomb)
+							loaded_bomb.forceMove(get_turf(C))
+							loaded_bomb.light()
+							loaded_bomb.explode()
+							QDEL_NULL(loaded_bomb)
+							loaded_bomb = null
+			else if(isanimal(L))
+				var/mob/living/simple_animal/SA = L
+				if(SA.mob_size <= MOB_SIZE_TINY) //don't close the trap if they're as small as a mouse.
+					snap = FALSE
+			if(snap)
+				L.apply_damage(50, BRUTE, def_zone)
+				L.Stun(20)
+	..()

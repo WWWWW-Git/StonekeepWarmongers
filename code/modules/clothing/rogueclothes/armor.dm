@@ -667,6 +667,12 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 	icon_state = "dullplate2"
 	allowed_race = list("standard")
 
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/outrider
+	name = "winged plate"
+	desc = "A fine dullarmor breastplate with affixed wings, the feathers being from plucked geese."
+	icon_state = "wingedplate"
+	allowed_race = list("standard")
+
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	desc = "No expense was paid in acquiring these incredibly cheap, dulliron chestplates. 'NOT DESIGNED TO PROTECT' is etched on the inside."
 	icon_state = "dullplate3"

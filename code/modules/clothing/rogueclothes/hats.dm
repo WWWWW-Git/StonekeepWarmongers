@@ -490,24 +490,6 @@
 	will_cover = HEAD|HAIR|EARS
 	will_hide = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/roguetown/helmet/hussarhelm
-	icon = 'icons/roguetown/clothing/head.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
-	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
-	name = "hussar helm"
-	desc = "A helmet worn by Grenzelhoftian cavalry, provides excellent protection without sacrificing vision."
-	will_cover = HEAD|HAIR|NOSE
-	icon_state = "hussarhelm"
-	sleevetype = null
-	sleeved = null
-	armor = list("melee" = 100, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
-	dynamic_hair_suffix = "+generic"
-	bloody_icon_state = "helmetblood"
-	anvilrepair = /datum/skill/craft/armorsmithing
-	blocksound = PLATEHIT
-	max_integrity = 200
-
 /obj/item/clothing/head/roguetown/helmet/sallet
 	name = "sallet"
 	icon_state = "sallet"
@@ -1251,3 +1233,42 @@
 	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
 	will_cover = HEAD|EARS|HAIR|NOSE|EYES
 	block2add = FOV_BEHIND
+
+/obj/item/clothing/head/roguetown/helmet/war/hussarhelm
+	icon = 'icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
+	name = "hussar helm"
+	desc = "A helmet worn by light Regimer cavalry, topped with a hat bearing the Deathhead insignia and feather."
+	will_cover = HEAD|HAIR|NOSE
+	icon_state = "hussarhelm"
+	sleevetype = null
+	sleeved = null
+	armor = list("melee" = 100, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
+	dynamic_hair_suffix = "+generic"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	anvilrepair = /datum/skill/craft/armorsmithing
+	blocksound = PLATEHIT
+	max_integrity = 200
+
+/obj/item/clothing/head/roguetown/helmet/war/hussarhelm/alternate
+	icon_state = "hussarhelm2"
+
+/obj/item/clothing/head/roguetown/helmet/war/ppr/outriderhelm
+	name = "outrider helmet"
+	desc = "Heavy helmets meant to protect riders and drunkards who can't walk home at night."
+	icon_state = "outriderhelm"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+
+/obj/item/clothing/head/roguetown/helmet/war/ppr/outriderhelm/alternate
+	icon_state = "outriderhelm2"
