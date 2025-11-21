@@ -910,7 +910,7 @@
 
 /obj/item/clothing/cloak/war/ppr/cloak
 	name = "red cloak"
-	desc = "A long red cloak worn by firestarters, criminals accused of burning down farmland, now pressed into PPU service."
+	desc = "A long red cloak, the height of patriotism."
 	icon_state = "ppucloak"
 	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
 	allowed_sex = list(MALE, FEMALE)
@@ -930,3 +930,16 @@
 	allowed_sex = list("female", "male")
 	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
 	allowed_race = list("bulky", "standard", "fat")
+
+/obj/item/clothing/cloak/hussarcloak
+	name = "hussar coat"
+	desc = "A heavy coat commonly worn hanging over the shoulder by Hussars."
+	icon_state = "hussarcoat"
+	item_state = "hussarcoat"
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	boobed = TRUE
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	inhand_mod = TRUE

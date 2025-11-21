@@ -318,3 +318,12 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
 	allowed_race = list("bulky")
+
+/obj/item/clothing/under/roguetown/trou/war/regime/fancypants
+	name = "fancy pants"
+	icon_state = "hussarpants"
+	desc = "Clean, fine pants with white piping."
+	icon = 'icons/roguetown/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+	allowed_race = list("standard")

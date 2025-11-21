@@ -1,26 +1,26 @@
-Draftee
-Partisan
-Dragoon
-Cuirassier
-Chasseur
-Grenadier
-Skirmisher
-Sapper
-Artillerist
-Adjutant-major
-Sergeant-major
-Sergeant
-Quartermaster
-Corporal-Sir
-Corporal
-Lieutenant
-Militant-Major
-Kapitain
-Second Lieutenant
-Major
-Brigadier General
-Divisional General
-Corps General
-Army General
-Lord of Heartfelt
-Lord of Grenzelhoft
+Muckraker
+Cap'n
+Zealot
+Loon
+Drunk
+Left hand of Beezer
+Right hand of KAITZAR
+Root Culter
+Stringbean
+Cannon Pusher
+Militiaman
+Unpaid Help
+Hussar
+Officer
+No-Lifer
+Some-Lifer
+Full-Lifer
+Landlord
+Peasant
+Pondscum
+Coward
+Warmonger
+Warmongrel
+Three Barrel Commander
+Conscript
+Boozehead

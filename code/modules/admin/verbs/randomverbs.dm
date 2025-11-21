@@ -166,7 +166,7 @@
 			for(var/client/C in W.grenzels)
 				SEND_SOUND(C, 'sound/misc/highcommand.ogg')
 				spawn(5 SECONDS)
-					to_chat(C, "<span class='userdanger'>THE KAISER'S RIGHT HAND MAN [pick("HAS THE PODIUM", "IS NOW SPEAKING", "SPEAKS TO YOU")]!</span><br>")
+					to_chat(C, "<span class='userdanger'>THE KAITZAR'S RIGHT HAND MAN [pick("HAS THE PODIUM", "IS NOW SPEAKING", "SPEAKS TO YOU")]!</span><br>")
 					to_chat(C, "<span class='danger'>[msg]</span><br>")
 		if(RED_WARTEAM)
 			for(var/client/C in W.heartfelts)
