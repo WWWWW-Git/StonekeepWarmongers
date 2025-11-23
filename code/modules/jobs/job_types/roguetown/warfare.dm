@@ -190,11 +190,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
-	allowed_races = list(
-		"Fat",
-		"Standard",
-		"Fat"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	outfit = /datum/outfit/job/roguetown/redking
 
@@ -304,7 +300,6 @@
 	tutorial = "Unwashed land workers armed with muskets. The bulk of any PPR army."
 	outfit = /datum/outfit/job/roguetown/redsoldier
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = ALL_RACES_LIST_NAMES
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = -1
@@ -314,6 +309,7 @@
 		"Standard",
 		"Bulky"
 	)
+
 /datum/outfit/job/roguetown/redsoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
@@ -386,12 +382,13 @@
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
-	allowed_races = list(
-		"Standard"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/redoutrider/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
+
+	H.set_species(/datum/species/human/northern/standard)
+
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
@@ -433,11 +430,8 @@
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
 	min_pq = -5
-	allowed_races = list(
-		"Fat",
-		"Standard",
-		"Bulky"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
+
 /datum/outfit/job/roguetown/redofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
@@ -493,11 +487,13 @@
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = 3
 	reinforcements_wave = 0
-	allowed_races = list(
-		"Standard"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
+
 /datum/outfit/job/roguetown/redfirestarter/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
+
+	H.set_species(/datum/species/human/northern/fat)
+
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
 	cloak = /obj/item/clothing/cloak/war/ppr/scarf
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
@@ -545,6 +541,9 @@
 
 /datum/outfit/job/roguetown/redmedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
+
+	H.set_species(/datum/species/human/northern/standard)
+
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
 	belt = /obj/item/storage/belt/rogue/leather/medic
@@ -780,12 +779,13 @@
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
-	allowed_races = list(
-		"Bulky"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/bluzealot/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
+
+	H.set_species(/datum/species/human/northern/bulky)
+
 	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 	if(H.dna.species.id == "bulky")
 		pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/bulky/alternate
@@ -824,12 +824,13 @@
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
-	allowed_races = list(
-		"Standard"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/bluhussar/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
+
+	H.set_species(/datum/species/human/northern/standard)
+
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
@@ -973,6 +974,7 @@
 		"Standard",
 		"Bulky"
 	)
+
 /datum/outfit/job/roguetown/bluofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
@@ -1025,6 +1027,9 @@
 
 /datum/outfit/job/roguetown/blumedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
+
+	H.set_species(/datum/species/human/northern/standard)
+
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
