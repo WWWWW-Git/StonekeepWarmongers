@@ -41,7 +41,7 @@
 			)
 
 /datum/warshippable/woodammo
-	name = "WOODEN BALL POUCHES"
+	name = "FRAGMENTATION AMMUNITION POUCHES"
 	items = list(/obj/item/quiver/woodbullets,
 			/obj/item/quiver/woodbullets
 			)

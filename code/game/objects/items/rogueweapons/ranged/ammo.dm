@@ -341,8 +341,8 @@
 	projectile_type = /obj/projectile/bullet/reusable/bullet/iron
 
 /obj/item/ammo_casing/caseless/rogue/bullet/wood
-	name = "wooden ball"
-	desc = "A small wooden ball. You're the biggest fucking idiot I have ever heard of. But it does shatter when it's fired, so that's something."
+	name = "fragmentation ball"
+	desc = "A small wooden ball. It shatters into multiple pellets when shot."
 	icon_state = "woodenball"
 	pellets = 7
 	variance = 25
