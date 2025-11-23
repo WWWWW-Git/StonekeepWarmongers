@@ -1677,7 +1677,7 @@ Slots: [job.spawn_positions]</span>
 							ghost_others = GHOST_OTHERS_SIMPLE
 
 				if("name")
-					var/new_name = input(user, "Choose your character's name:", "Identity")  as text|null
+					var/new_name = browser_input_text(user, "Choose your character's name:", "DRAFT NOTICE")
 					if(new_name)
 						new_name = reject_bad_name(new_name)
 						if(new_name)
@@ -2329,7 +2329,7 @@ Slots: [job.spawn_positions]</span>
 								if(!name)
 									name = "Slot[i]"
 								choices[name] = i
-					var/choice = input(user, "CHOOSE A WAR HERO","WARMONGERS") as null|anything in choices
+					var/choice = browser_input_list(user, "CHOOSE A WAR HERO", "WARMONGERS", choices)
 					if(choice)
 						choice = choices[choice]
 						if(!load_character(choice))
@@ -2470,7 +2470,7 @@ Slots: [job.spawn_positions]</span>
 	if(!namedata)
 		return
 
-	var/raw_name = input(user, "Choose your character's [namedata["qdesc"]]:","Character Preference") as text|null
+	var/raw_name = browser_input_text(user, "Choose your soldier's [namedata["qdesc"]]:", "DRAFT NOTICE")
 	if(!raw_name)
 		if(namedata["allow_null"])
 			custom_names[name_id] = get_default_name(name_id)

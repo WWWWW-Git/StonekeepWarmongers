@@ -197,7 +197,6 @@
 
 /datum/browser/modal
 	var/opentime = 0
-	var/timeout
 	var/selectedbutton = 0
 	var/stealfocus
 
@@ -234,10 +233,6 @@
 				break
 	if (timeout)
 		addtimer(CALLBACK(src, PROC_REF(close)), timeout)
-
-/datum/browser/modal/proc/wait()
-	while (opentime && selectedbutton <= 0 && (!timeout || opentime+timeout > world.time))
-		stoplag(1)
 
 /datum/browser/modal/listpicker
 	var/valueslist = list()

@@ -69,6 +69,8 @@ GLOBAL_LIST_INIT(our_forest_sex, typecacheof(list(
 
 #define ishuman(A) (istype(A, /mob/living/carbon/human))
 
+#define isclient(A) (istype(A, /client))
+
 //Human sub-species
 #define isabductor(A) (is_species(A, /datum/species/abductor))
 #define isgolem(A) (is_species(A, /datum/species/golem))

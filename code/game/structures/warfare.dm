@@ -264,7 +264,7 @@
 		if(C.reinforcementwave >= WS.reinforcement)
 			shippables[WS.name] = WS
 
-	var/choice = input(user, "AIRSHIP ENIGMATIVITIES STRAIGHT FROM ENIGMA!", "BUY NOW!!!") as null|anything in shippables
+	var/choice = browser_input_list(user, "AIRSHIP ENIGMATIVITIES STRAIGHT FROM ENIGMA!", "BUY NOW!!!", shippables)
 	var/datum/warshippable/shoppin = shippables[choice]
 	if(!shoppin)
 		return
