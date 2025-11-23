@@ -119,7 +119,10 @@
 
 	for(var/s in subtypesof(/datum/warshippable))
 		var/datum/warshippable/WS = new s()
-		if(C.reinforcementwave >= WS.reinforcement)
+		var/faction_check = TRUE
+		if(WS.faction && WS.faction != warfare_faction)
+			faction_check = FALSE
+		if(C.reinforcementwave >= WS.reinforcement && faction_check)
 			shippables[WS.name] = WS
 
 	var/choice = input(src, "URGENT AIRSHIP SHIPPING!", "BUY NOW!!!") as null|anything in shippables

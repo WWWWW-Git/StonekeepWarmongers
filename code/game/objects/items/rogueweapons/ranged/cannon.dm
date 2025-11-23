@@ -291,12 +291,31 @@
 	w_class = WEIGHT_CLASS_GIGANTIC // INSTANTLY crushed
 	var/list/firesounds = list('sound/combat/Ranged/firebow-shot-01.ogg', 'sound/combat/Ranged/firebow-shot-02.ogg', 'sound/combat/Ranged/firebow-shot-03.ogg')
 	var/bullets = 0 // starts with zero
+	var/maxima_bulletina = 50
 	var/fireangle = 0 // straight forward
 
 	var/obj/effect/point/indicator
 	var/last_scroll_time = 0
 
+/obj/structure/maxim/alt
+	name = "\improper Gratlyn's Boxcrank"
+	desc = "A six-shot firing, crank-operated barker mounted on a wheeled carriage so it can be quickly moved around the battlefield. This one is devised by the evil twin of Gatlyn. You can tell it is evil because it is silver."
+	icon_state = "machina2"
+	maxima_bulletina = 18
+
+/obj/structure/maxim/alt/attack_hand(mob/user)
+	if(prob(1))
+		to_chat(user, "<span class='info'>The trigger got stuck... try again!</span>")
+		playsound(src.loc, 'sound/combat/Ranged/muskclick.ogg', 100, FALSE)
+		return
+	for(var/i=0,i<6,i++)
+		sleep(rand(1,4))
+		fire(user)
+
 /obj/structure/maxim/attackby(obj/item/I, mob/user, params)
+	if(bullets >= maxima_bulletina)
+		to_chat(user, "<span class='info'>None fit anymore.</span>")
+		return
 	if(istype(I, /obj/item/ammo_casing/caseless/rogue/bullet))
 		to_chat(user, "<span class='notice'>You begin crushing up the ball...</span>")
 		if(do_after(user, 5 SECONDS, TRUE, src))
@@ -309,6 +328,7 @@
 	if(istype(I, /obj/item/rogue/maxim_ammo))
 		playsound(src, 'sound/foley/trap_arm.ogg', 65)
 		bullets += 25
+		bullets = min(bullets,maxima_bulletina)
 		qdel(I)
 
 /obj/structure/maxim/examine(mob/user)
@@ -329,7 +349,7 @@
 	A.muzzle_type = null // Fuck you.
 	
 	var/true_angle = fireangle + dir2angle(dir)
-	flick("machina_firea", src)
+	flick("[initial(icon_state)]_firea", src)
 	playsound(src.loc, pick(firesounds), 100, FALSE)
 
 	if(ishuman(user))

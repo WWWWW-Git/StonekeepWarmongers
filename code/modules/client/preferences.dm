@@ -201,7 +201,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/used_title
 	switch(current_tab)
 		if (0) // Character Settings#
-			used_title = "Draft Notice"
+			used_title = "DRAFT NOTICE"
 
 			// Top-level menu table
 
@@ -1830,7 +1830,7 @@ Slots: [job.spawn_positions]</span>
 					for(var/datum/sprite_accessory/X in spec_hair)
 						hairlist += X.name
 					var/new_hairstyle
-					new_hairstyle = input(user, "Choose your character's accessory:", "Bits and Bobs")  as null|anything in hairlist //don't ask
+					new_hairstyle = browser_input_list(user, "Choose your character's accessory:", "Bits and Bobs", hairlist)
 					if(new_hairstyle)
 						accessory = new_hairstyle
 
@@ -1845,7 +1845,7 @@ Slots: [job.spawn_positions]</span>
 					for(var/datum/sprite_accessory/X in spec_detail)
 						detaillist += X.name
 					var/new_detail
-					new_detail = input(user, "Choose your character's detail:", "Marks and Mutations")  as null|anything in detaillist //don't ask
+					new_detail = browser_input_list(user, "Choose your character's detail:", "Marks and Mutations", detaillist)
 					if(new_detail)
 						detail = new_detail
 
@@ -1881,7 +1881,7 @@ Slots: [job.spawn_positions]</span>
 							continue
 						crap += bla
 
-					var/result = input(user, "Select a bodytype", "WARMONGERS") as null|anything in crap
+					var/result = browser_input_list(user, "Select a bodytype", "WARMONGERS", crap)
 
 					if(result)
 						//var/newtype = GLOB.species_list[result]
@@ -1903,7 +1903,7 @@ Slots: [job.spawn_positions]</span>
 					for(var/thing in subtypesof(/datum/warperk))//Populate possible aspects list.
 						var/datum/warperk/A = new thing
 						buyables[A.name] = A
-					var/chosen = input(user, "Choose a perk", "WARMONGERS") as null|anything in buyables
+					var/chosen = browser_input_list(user, "Choose a perk", "WARMONGERS", buyables)
 					var/datum/warperk/WP = buyables[chosen]
 					if(WP)
 						var/full_desc = "[WP.desc] ([WP.cost] TRI)"

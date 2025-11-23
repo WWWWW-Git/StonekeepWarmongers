@@ -2,6 +2,7 @@
 	var/name = "shippable"
 	var/list/items = list()
 	var/reinforcement = 1 // on what wave this becomes available on
+	var/faction
 
 /datum/warshippable/smokebombs
 	name = "FIVE SMOKE BOMBS"
@@ -71,6 +72,12 @@
 /datum/warshippable/maxim
 	name = "GATLYN'S CRANKBOX"
 	items = list(/obj/structure/maxim)
+	faction = RED_WARTEAM
+
+/datum/warshippable/maxim/alt
+	name = "GRATLYN'S BOXCRANK"
+	items = list(/obj/structure/maxim/alt)
+	faction = BLUE_WARTEAM
 
 /datum/warshippable/caltrops
 	name = "CALTROPS"
