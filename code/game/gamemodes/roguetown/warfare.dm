@@ -22,7 +22,7 @@
 	var/list/heartfelts = list() // clients
 	var/list/grenzels = list()
 
-	var/warfare_start_time = 5 // in minutes
+	var/warfare_start_time = 15 // in minutes
 	var/warfare_reinforcement_time = 5 // in minutes
 	
 	var/stalematecooldown // a cooldown before another stalemate can be held
@@ -100,7 +100,7 @@
 /datum/game_mode/warmongers/proc/begin_countDown()
 	set waitfor = 0
 	while(1)
-		sleep(1 MINUTES)
+		sleep(30 SECONDS)
 		CHECK_TICK
 		if(SSwarmongers.warfare_ready_to_die)
 			break
