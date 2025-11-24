@@ -659,3 +659,16 @@
 	l_sleeve_status = SLEEVE_NORMAL
 	body_parts_covered = CHEST|ARMS|VITALS
 	allowed_race = list("standard")
+
+/obj/item/clothing/suit/roguetown/shirt/war/regime/butchershirt
+	name = "butcher vest"
+	desc = "A vest used by butchers, the lack of sleeves makes it easier to work among the guts."
+	icon_state = "butchershirt"
+	item_state = "butchershirt"
+	icon = 'icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	allowed_race = list("standard")

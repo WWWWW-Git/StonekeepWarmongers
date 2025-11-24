@@ -1047,7 +1047,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/war/regime/kalpakhelm
 	name = "imperial kalpak"
-	desc = "A skull emblazoned kalpak worn by rabble-rousers, well versed in the art of whipping the masses into a frenzy."
+	desc = "A kalpak worn by rabble-rousers, well versed in the art of whipping the masses into a frenzy."
 	icon_state = "kalpak"
 	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
@@ -1113,11 +1113,10 @@
 	worn_x_dimension = 64
 	worn_y_dimension = 64
 
-/obj/item/clothing/head/roguetown/helmet/war/heavy/ppr/beak
+/obj/item/clothing/head/roguetown/helmet/war/ppr/beak
 	name = "beaked helmet"
 	icon_state = "beak"
 	item_state = "beak"
-	adjustable = CAN_CADJUST
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
@@ -1126,32 +1125,6 @@
 	emote_environment = 3
 	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR
 	block2add = FOV_RIGHT|FOV_LEFT
-	smeltresult = /obj/item/ingot/steel
-
-/obj/item/clothing/head/roguetown/helmet/war/heavy/ppr/beak/AdjustClothes(mob/user)
-	if(loc == user)
-		playsound(user, "sound/items/visor.ogg", 100, TRUE, -1)
-		if(adjustable == CAN_CADJUST)
-			adjustable = CADJUSTED
-			icon_state = "[initial(icon_state)]_up"
-			body_parts_covered = HEAD|HAIR|EARS
-			flags_inv = HIDEEARS|HIDEHAIR
-			flags_cover = null
-			prevent_crits -= list(BCLASS_STAB) // Vulnerable to eye stabs with the cover up
-			emote_environment = 0
-			if(ishuman(user))
-				var/mob/living/carbon/H = user
-				H.update_inv_head()
-			block2add = null
-		else if(adjustable == CADJUSTED)
-			ResetAdjust(user)
-			prevent_crits += list(BCLASS_STAB)
-			emote_environment = 3
-			if(user)
-				if(ishuman(user))
-					var/mob/living/carbon/H = user
-					H.update_inv_head()
-		user.update_fov_angles()
 
 /obj/item/clothing/head/roguetown/helmet/war/ppr/toffhelm
 	name = "toff's helmet"
@@ -1272,3 +1245,13 @@
 
 /obj/item/clothing/head/roguetown/helmet/war/ppr/outriderhelm/alternate
 	icon_state = "outriderhelm2"
+
+/obj/item/clothing/head/roguetown/war/tallhat
+	name = "high hat"
+	desc = "A tall hat, worn to establish an air of professionalism."
+	icon_state = "tallhat"
+	item_state = "tallhat"
+	bloody_icon_state = "helmetblood_big"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64

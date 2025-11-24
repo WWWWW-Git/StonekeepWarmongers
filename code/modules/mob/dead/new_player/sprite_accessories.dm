@@ -564,63 +564,71 @@
 	icon_state = "brows"
 	color_src = HAIR
 	use_static = FALSE
+	specuse = list("fat", "standard", "bulky")
 
 /datum/sprite_accessory/detail/brows/dark
 	name = "Dark Eyebrows"
 	icon_state = "darkbrows"
-
+	specuse = list("fat", "standard", "bulky")
+	
 /datum/sprite_accessory/detail/scar
 	name = "Scar"
 	icon_state = "scar"
-
+	specuse = list("fat", "standard", "bulky")
+	
 /datum/sprite_accessory/detail/scart
 	name = "Scar2"
 	icon_state = "scar2"
-
+	specuse = list("fat", "standard", "bulky")
+	
 /datum/sprite_accessory/detail/burnface_r
 	name = "Burns (r)"
 	icon_state = "burnface_r"
-
+	specuse = list("fat", "standard", "bulky")
+	
 /datum/sprite_accessory/detail/burnface_l
 	name = "Burns (l)"
 	icon_state = "burnface_l"
-
+	specuse = list("fat", "standard", "bulky")
+	
 /datum/sprite_accessory/detail/deadeye_r
 	name = "Dead Eye (r)"
 	icon_state = "deadeye_r"
-
+	specuse = list("fat", "standard", "bulky")
+	
 /datum/sprite_accessory/detail/deadeye_l
 	name = "Dead Eye (l)"
 	icon_state = "deadeye_l"
-
-/datum/sprite_accessory/detail/snaileyes
+	specuse = list("fat", "standard", "bulky")
+	
+/datum/sprite_accessory/detail
 	name = "Snail Eyes"
 	gender = PLURAL
 	icon_state = "snaileyes"
 
-/datum/sprite_accessory/detail/mandibles
+/datum/sprite_accessory/detail
 	name = "Mandibles"
 	gender = PLURAL
 	icon_state = "mandibles"
 
-/datum/sprite_accessory/detail/tentacles
+/datum/sprite_accessory/detail
 	name = "Tentacles"
 	gender = PLURAL
 	icon_state = "tentacles"
 
-/datum/sprite_accessory/detail/growth_r
+/datum/sprite_accessory/detail
 	name = "Unnatural Growth (r)"
 	icon_state = "unnaturalgrowth_r"
 
-/datum/sprite_accessory/detail/growth_l
+/datum/sprite_accessory/detail
 	name = "Unnatural Growth (l)"
 	icon_state = "unnaturalgrowth_l"
 
-/datum/sprite_accessory/detail/branch_r
+/datum/sprite_accessory/detail
 	name = "Branch (r)"
 	icon_state = "branch_r"
 
-/datum/sprite_accessory/detail/branch_l
+/datum/sprite_accessory/detail
 	name = "Branch (l)"
 	icon_state = "branch_l"
 

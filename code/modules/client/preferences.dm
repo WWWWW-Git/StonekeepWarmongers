@@ -1845,7 +1845,7 @@ Slots: [job.spawn_positions]</span>
 					for(var/datum/sprite_accessory/X in spec_detail)
 						detaillist += X.name
 					var/new_detail
-					new_detail = browser_input_list(user, "Choose your character's detail:", "Marks and Mutations", detaillist)
+					new_detail = browser_input_list(user, "Choose your character's detail:", "Scars and Stains", detaillist)
 					if(new_detail)
 						detail = new_detail
 

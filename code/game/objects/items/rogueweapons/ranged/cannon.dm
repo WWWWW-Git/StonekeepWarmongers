@@ -298,8 +298,8 @@
 	var/last_scroll_time = 0
 
 /obj/structure/maxim/alt
-	name = "\improper Gratlyn's Boxcrank"
-	desc = "A six-shot firing, crank-operated barker mounted on a wheeled carriage so it can be quickly moved around the battlefield. This one is devised by the evil twin of Gatlyn. You can tell it is evil because it is silver."
+	name = "\improper KAITZAR's Organ"
+	desc = "A six-shot firing, crank-operated barker mounted on a wheeled carriage so it can be quickly moved around the battlefield. Nicknamed the 'One man firing squad' by Regimers. Popular method of execution in the capital."
 	icon_state = "machina2"
 	maxima_bulletina = 18
 

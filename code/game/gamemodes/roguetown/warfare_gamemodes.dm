@@ -111,7 +111,7 @@
 	blu_spawns = clamp(round(50 * (player_count / base_player_count)), min_blu_spawns, max_blu_spawns)
 
 	START_PROCESSING(SSprocessing, src)
-	blurb = "Grenzelhoft must capture both points! Heartfelt must defend! GRENZELHOFT GETS ONLY [blu_spawns] AVAILABLE SOLDIERS, DEATH IS BAD!!!"
+	blurb = "The Regime must capture both points! The PPU must defend! THE REGIME GETS ONLY [blu_spawns] AVAILABLE SOLDIERS, DEATH IS BAD!!!"
 
 	for(var/area/rogue/assault/cp in world)
 		if(istype(cp))

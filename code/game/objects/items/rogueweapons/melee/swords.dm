@@ -737,3 +737,7 @@
 	name = "Cutter"
 	desc = "A former tool, given new purpose."
 	icon_state = "shitsabre"
+
+/obj/item/rogueweapon/sword/iron/messer/war
+	name = "messer"
+	desc = "A heavy single edged blade designed for chopping off limbs."

@@ -75,7 +75,7 @@
 	faction = RED_WARTEAM
 
 /datum/warshippable/maxim/alt
-	name = "GRATLYN'S BOXCRANK"
+	name = "KAITZAR'S ORGAN"
 	items = list(/obj/structure/maxim/alt)
 	faction = BLUE_WARTEAM
 
