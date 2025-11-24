@@ -435,7 +435,7 @@
 			saddlet = mutable_appearance(icon, "saddle-f")
 			add_overlay(saddlet)
 		if(has_buckled_mobs())
-			var/mutable_appearance/mounted = mutable_appearance(icon, "saiga_mounted", 4.3)
+			var/mutable_appearance/mounted = mutable_appearance(icon, "horse_mounted", 4.3)
 			add_overlay(mounted)
 
 /mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled/Initialize()
