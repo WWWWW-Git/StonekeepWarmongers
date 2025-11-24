@@ -943,3 +943,17 @@
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
 	inhand_mod = TRUE
+
+/obj/item/clothing/cloak/quackcloak
+	name = "quack cloak"
+	desc = "A thick red cloak worn by quacks who practice medicine."
+	icon_state = "quackcoat"
+	item_state = "quackcoat"
+	gender = PLURAL
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	boobed = TRUE
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	inhand_mod = TRUE

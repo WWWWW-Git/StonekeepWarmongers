@@ -403,7 +403,7 @@
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/outriderhelm/alternate
 	neck = /obj/item/rogue/barkenpowderflask
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/outrider
-	backr = /obj/item/rogueweapon/spear/pike
+	backr = /obj/item/rogueweapon/woodcut/steel/war
 	cloak = /obj/item/clothing/cloak/war/ppr/scarf
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
@@ -532,8 +532,8 @@
 //// MEDIC ////
 
 /datum/advclass/red/medic
-	name = "Medic"
-	tutorial = "The task of a Medic is a difficult one, with far more corpses than wounded soldiers. They do their bit regardless and ensure those who do survive will last longer."
+	name = "Quack"
+	tutorial = "With dubious credentials you were welcomed with open arms into the PPU, never expecting to actually have to try keep these fat bastards alive. Now here you are, having to do just that."
 	outfit = /datum/outfit/job/roguetown/redmedic
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_RACES_LIST_NAMES
@@ -541,19 +541,27 @@
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
-
+	allowed_races = list(
+		"Standard"
+	)
 /datum/outfit/job/roguetown/redmedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 
 	H.set_species(/datum/species/human/northern/standard)
 
+	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
+	cloak = /obj/item/clothing/cloak/quackcloak
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	head = /obj/item/clothing/head/roguetown/war/tallhat
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
-	belt = /obj/item/storage/belt/rogue/leather/medic
 	beltl = /obj/item/rogue/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	cloak = /obj/item/clothing/cloak/apron/cook/medical
+	mask = /obj/item/clothing/mask/rogue/beakmask
+	if(prob(50))
+		mask = /obj/item/clothing/mask/rogue/war/mask/red
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
@@ -837,15 +845,15 @@
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	beltr = GetSidearmForWarfare()
-	beltl = /obj/item/rogueweapon/sword/sabre/officer
+	beltl = GetSidearmForWarfare()
+	beltr = /obj/item/quiver/bullets
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/hussarshirt
 	head = /obj/item/clothing/head/roguetown/helmet/war/hussarhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/hussarhelm/alternate
 	cloak = /obj/item/clothing/cloak/hussarcloak
 	neck = /obj/item/rogue/barkenpowderflask
-	backr = /obj/item/quiver/bullets
+	backr = /obj/item/rogueweapon/spear/pike
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
@@ -1027,24 +1035,23 @@
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
-
+	allowed_races = list(
+		"Standard"
+	)
 /datum/outfit/job/roguetown/blumedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 
 	H.set_species(/datum/species/human/northern/standard)
 
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/blue
-	shoes = /obj/item/clothing/shoes/roguetown/boots
+	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/butchershirt
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
 	neck = /obj/item/reagent_containers/glass/bottle/waterskin
-	belt = /obj/item/storage/belt/rogue/leather/medic
 	beltl = /obj/item/rogue/cranker
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/healthpot
-	gloves = /obj/item/clothing/gloves/roguetown/leather/black
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	cloak = /obj/item/clothing/cloak/apron/cook/medical
+	mask = /obj/item/clothing/mask/rogue/butcher
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)

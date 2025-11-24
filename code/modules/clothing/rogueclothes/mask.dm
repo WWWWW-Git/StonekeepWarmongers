@@ -208,3 +208,25 @@
 				if(ishuman(user))
 					var/mob/living/carbon/H = user
 					H.update_inv_wear_mask()
+
+/obj/item/clothing/mask/rogue/beakmask
+	name = "beak mask"
+	desc = "A beaked mask worn by practitioners of the medicinal arts."
+	icon_state = "beakmask"
+	item_state = "beakmask"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
+
+/obj/item/clothing/mask/rogue/war/mask/red
+	name = "mask"
+	icon_state = "redmask"
+
+/obj/item/clothing/mask/rogue/butcher
+	name = "butcher mask"
+	desc = "A high collar to protect from blood splatters."
+	icon_state = "butchermask"
+	item_state = "butchermask"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP

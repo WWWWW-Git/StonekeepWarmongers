@@ -52,13 +52,13 @@
 	switch(choice)
 		if("STR")
 			H.STASTR += 2
-			to_chat(H, "<span class='info'>ᛉ STR enpowered to [H.STASTR]!</span>")
+			to_chat(H, "<span class='info'>⏀ STR enpowered to [H.STASTR]!</span>")
 		if("END")
 			H.STAEND += 2
-			to_chat(H, "<span class='info'>ᛉ END enpowered to [H.STAEND]!</span>")
+			to_chat(H, "<span class='info'>⏀ END enpowered to [H.STAEND]!</span>")
 		if("CON")
 			H.STACON += 2
-			to_chat(H, "<span class='info'>ᛉ CON enpowered to [H.STACON]!</span>")
+			to_chat(H, "<span class='info'>⏀ CON enpowered to [H.STACON]!</span>")
 
 /datum/warperk/vampire
 	name = "Vladimir"

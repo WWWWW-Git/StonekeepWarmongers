@@ -126,7 +126,7 @@
 					if(H.client?.hasPerk(/datum/warperk/headhunter))
 						gib()
 						H.playsound_local(get_turf(H), 'sound/misc/notice.ogg')
-						to_chat(H, "<span class='info'>ᛉ PERK ACTIVATED.</span>")
+						to_chat(H, "<span class='info'>⏀ PERK ACTIVATED.</span>")
 			flash_color(client, flash_color = "#af0000ff", flash_time = 3 SECONDS)
 			if(hud_used)
 				var/matrix/skew = matrix()

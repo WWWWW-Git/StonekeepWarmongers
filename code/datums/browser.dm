@@ -199,6 +199,12 @@
 	var/opentime = 0
 	var/selectedbutton = 0
 	var/stealfocus
+	var/timeout = 0
+
+/datum/browser/modal/proc/wait()
+	set waitfor = 0
+	while(src && opentime && world.time < (opentime + 60000))
+		sleep(100)
 
 /datum/browser/modal/New(nuser, nwindow_id, ntitle = 0, nwidth = 0, nheight = 0, atom/nref = null, StealFocus = 1, Timeout = 6000)
 	..()
@@ -477,3 +483,13 @@
 	// so just reset the user mob's machine var
 	if(src && src.mob)
 		src.mob.unset_machine()
+
+/proc/browser_input_text(mob/user, message = "", title = "", default = "", max_length = MAX_MESSAGE_LEN)
+	if(!user || !user.client)
+		return
+	return input(user, message, title, default) as text
+
+/proc/browser_input_list(mob/user, message = "", title = "", list/choices)
+	if(!user || !user.client || !islist(choices))
+		return
+	return input(user, message, title) in choices
