@@ -331,9 +331,6 @@
 	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
-	if(user.mind.get_skill_level(/datum/skill/combat/flintlocks) <= 0)
-		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
-		return
 	..()
 	var/angle
 	switch(user.dir)

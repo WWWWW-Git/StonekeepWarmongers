@@ -307,11 +307,7 @@
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
-	allowed_races = list(
-		"Fat",
-		"Standard",
-		"Bulky"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/redsoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -541,9 +537,8 @@
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
-	allowed_races = list(
-		"Standard"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
+
 /datum/outfit/job/roguetown/redmedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 
@@ -592,11 +587,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	faction = "Station"
-	allowed_races = list(
-		"Fat",
-		"Standard",
-		"Bulky"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
 	outfit = /datum/outfit/job/roguetown/bluking
 
 /datum/job/roguetown/warmongers/blu/lord/after_spawn(mob/living/carbon/human/H, mob/M, latejoin)
@@ -714,11 +705,8 @@
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
-	allowed_races = list(
-		"Fat",
-		"Standard",
-		"Bulky"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
+
 /datum/outfit/job/roguetown/blusoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
@@ -980,11 +968,7 @@
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
 	min_pq = -5
-	allowed_races = list(
-		"Fat",
-		"Standard",
-		"Bulky"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/bluofficer/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -1035,9 +1019,8 @@
 	category_tags = list(CTAG_BLUSOLDIER)
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
-	allowed_races = list(
-		"Standard"
-	)
+	allowed_races = ALL_RACES_LIST_NAMES
+
 /datum/outfit/job/roguetown/blumedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 

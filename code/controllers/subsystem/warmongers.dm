@@ -43,11 +43,20 @@ SUBSYSTEM_DEF(warmongers)
 		if(H.warfare_faction)
 			if(H.warfare_faction == RED_WARTEAM)
 				H.forceMove(red.loc)
+				if(H.buckling)
+					H.buckling.forceMove(red.loc)
 			else
 				H.forceMove(blu.loc)
+				if(H.buckling)
+					H.buckling.forceMove(red.loc)
 			H.lay_down()
+
 			H.pixel_y = 200
 			animate(H, 1 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)
+
+			H.buckling.pixel_y = 200
+			animate(H.buckling, 1 SECONDS, easing = BOUNCE_EASING, pixel_y = 0)
+
 			spawn(0.35 SECONDS)
 				playsound(H.loc, 'sound/misc/fall.ogg', 100, FALSE, -1)
 

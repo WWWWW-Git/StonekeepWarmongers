@@ -116,9 +116,6 @@
 	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/repeater/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
-	if(user.mind.get_skill_level(/datum/skill/combat/flintlocks) <= 0)
-		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
-		return
 	..()
 	QDEL_NULL(chambered)
 	var/angle
@@ -251,9 +248,6 @@
 	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
-	if(user.mind.get_skill_level(/datum/skill/combat/flintlocks) <= 0)
-		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
-		return
 	..()
 	QDEL_NULL(chambered)
 	
@@ -382,9 +376,6 @@
 	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/supermachine/shoot_live_shot(mob/living/user, pointblank, mob/pbtarget, message)
-	if(user.mind.get_skill_level(/datum/skill/combat/flintlocks) <= 0)
-		to_chat(user, "<span class='danger'>I do not know how to use this.</span>")
-		return
 	..()
 	QDEL_NULL(chambered)
 	//new /obj/effect/particle_effect/smoke(get_turf(user))

@@ -49,7 +49,7 @@
 	var/turf/TU = get_turf(H)
 	if(TU)
 		if(horse)
-			var/mob/living/simple_animal/hostile/retaliate/rogue/saiga/S = new horse(TU)
+			var/mob/living/simple_animal/hostile/retaliate/rogue/S = new horse(TU)
 			S.user_buckle_mob(H, H)
 
 /*	for(var/trait in traits_applied)
