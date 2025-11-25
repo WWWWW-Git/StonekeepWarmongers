@@ -483,13 +483,3 @@
 	// so just reset the user mob's machine var
 	if(src && src.mob)
 		src.mob.unset_machine()
-
-/proc/browser_input_text(mob/user, message = "", title = "", default = "", max_length = MAX_MESSAGE_LEN)
-	if(!user || !user.client)
-		return
-	return input(user, message, title, default) as text
-
-/proc/browser_input_list(mob/user, message = "", title = "", list/choices)
-	if(!user || !user.client || !islist(choices))
-		return
-	return input(user, message, title) in choices
