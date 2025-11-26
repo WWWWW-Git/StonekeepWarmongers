@@ -124,8 +124,6 @@ SUBSYSTEM_DEF(droning)
 		listener.last_droning_sound = null
 		var/sound/droning = sound(pick(area_player.droning_sound_current), area_player.droning_repeat, area_player.droning_wait, area_player.droning_channel, listener?.prefs.musicvol)
 
-		if(SSwarmongers.warfare_ready_to_die)
-			droning.file = 'sound/blank.ogg'
 		if(HAS_TRAIT(listener.mob, TRAIT_DRUQK))
 			droning.file = 'sound/music/spice.ogg'
 
