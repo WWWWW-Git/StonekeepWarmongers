@@ -199,12 +199,6 @@
 	var/opentime = 0
 	var/selectedbutton = 0
 	var/stealfocus
-	var/timeout = 0
-
-/datum/browser/modal/proc/wait()
-	set waitfor = 0
-	while(src && opentime && world.time < (opentime + 60000))
-		sleep(100)
 
 /datum/browser/modal/New(nuser, nwindow_id, ntitle = 0, nwidth = 0, nheight = 0, atom/nref = null, StealFocus = 1, Timeout = 6000)
 	..()

@@ -142,11 +142,17 @@
 
 /area/rogue/assault/throneroom
 	name = "Thronesroom"
+	droning_sound = 'sound/music/powderdry.ogg'
+	droning_sound_dusk = 'sound/music/powderdry.ogg'
+	droning_sound_night = 'sound/music/powderdry.ogg'
 	capture_rate = 1.5
 	capture_order = 2
 
 /area/rogue/assault/gates
 	name = "Gateshouse"
+	droning_sound = 'sound/music/beforedeath.ogg'
+	droning_sound_dusk = 'sound/music/beforedeath.ogg'
+	droning_sound_night = 'sound/music/beforedeath.ogg'
 	capture_rate = 0.5
 	tocapture_points = 150
 	capture_order = 1

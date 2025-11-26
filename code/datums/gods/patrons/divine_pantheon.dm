@@ -3,6 +3,54 @@
 	associated_faith = /datum/faith/divine_pantheon
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
 
+/datum/patron/divine/kaitzar // stupid shit that wont be seen lol
+	name = "The KAITZAR"
+	domain = "Godhead of the Regimist Pantheon"
+	desc = "A man turned god. A nation turned believers."
+	flaws = "Learned helplessness"
+	worshippers = "The Holy Regime of the KAITZAR the True God."
+	sins = "A lack of complete and total obedience, physically, mentally and spiritually"
+
+/datum/patron/divine/root
+	name = "The Great Root"
+	domain = "God of Below"
+	desc = "Like veins in ones body, the Great Root delivers fertilizing Root Essence all across the Clump."
+	flaws = "Brings about Subhuminity"
+	worshippers = "Landowners, Peasants, Root Culters"
+	sins = "Disrespecting the Great Root, and its lesser Roots"
+
+/datum/patron/divine/maw
+	name = "The Maw"
+	domain = "God of Hunger"
+	desc = "Dig a hole, it doesn't matter where. Put your most prized possession into it and you will be rewarded. Feed the Maw that which belongs to the Maw."
+	flaws = "You may be consumed yourself"
+	worshippers = "Desperate People, The Greedy, Gamblers"
+	sins = "Frugality, Doubt, Worthless Offerings"
+
+/datum/patron/divine/sow
+	name = "The Sow"
+	domain = "Goddess of Abundance"
+	desc = "Laugh and grow fat."
+	flaws = "Disregard for difficulties"
+	worshippers = "Fats, Pigmen, Farmers"
+	sins = "Fasting, Sharing, Small Portions"
+
+/datum/patron/divine/bierson
+	name = "Bierson"
+	domain = "God of Alcohol"
+	desc = "Where would we be without Bier? Without Bierson?"
+	flaws= "Needs alcohol to function."
+	worshippers = "Drunks, The PPU, Tavern Owners"
+	sins = "Being a lightweight, Teetotalling, Prohibition"
+
+/datum/patron/divine/tork
+	name = "Tork"
+	domain = "God of Machinery"
+	desc = "Prayers to Tork are uttered almost every minute at peak working hours in the factories."
+	flaws = "Incorrigible in their zeal."
+	worshippers = "Workers, Cannoneers, Factory Owners"
+	sins = "Laziness, Low Productivity, Unauthorized Workplace Accidents"
+
 /datum/patron/divine/psydon // stupid shit that wont be seen lol
 	name = "Psydon"
 	domain = "The Weeper"
