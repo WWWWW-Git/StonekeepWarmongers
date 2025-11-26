@@ -267,7 +267,7 @@
 		if(C.reinforcementwave >= WS.reinforcement && faction_check)
 			shippables[WS.name] = WS
 
-	var/choice = browser_input_list(user, "AIRSHIP ENIGMATIVITIES STRAIGHT FROM ENIGMA!", "BUY NOW!!!", shippables)
+	var/choice = browser_input_list(user, "AIRSHIPPED GOODS!", "BUY NOW!!!", shippables)
 	var/datum/warshippable/shoppin = shippables[choice]
 	if(!shoppin)
 		return
