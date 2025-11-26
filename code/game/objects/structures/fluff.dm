@@ -795,6 +795,18 @@
 					icon_state = "signwrote"
 	..()
 
+/obj/structure/fluff/signgood
+	icon_state = "signgood"
+	name = "sign"
+	desc = "Safety."
+	icon = 'icons/roguetown/misc/signs.dmi'
+
+/obj/structure/fluff/signbad
+	icon_state = "signbad"
+	name = "sign"
+	desc = "Danger."
+	icon = 'icons/roguetown/misc/signs.dmi'
+
 /obj/structure/fluff/dryingrack
 	name = "drying rack"
 	desc = ""

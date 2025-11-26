@@ -64,7 +64,7 @@
 
 /datum/round_aspect/supplypoints
 	name = "Favors in the Right Places"
-	description = "Because the Lords both have favors to the Quartermaster of Enigma, they both get five supply points on the start of the battle."
+	description = "Because the Lords both have favors to the qartermaster guilds, they both get five supply points on the start of the battle."
 
 /datum/round_aspect/supplypoints/apply()
 	var/datum/game_mode/warmongers/W = SSticker.mode
@@ -81,7 +81,7 @@
 
 /datum/round_aspect/poorbastards
 	name = "Poor Bastards"
-	description = "We didn't have enough of a budget to pay Enigma for our firearms."
+	description = "We didn't have enough of a budget to pay for our firearms."
 
 /datum/round_aspect/poorbastards/apply()
 	SSwarmongers.warfare_techlevel = WARMONGERS_TECHLEVEL_NONE

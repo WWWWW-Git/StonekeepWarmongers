@@ -159,7 +159,7 @@
 	set name = "GAIN SUPPORT POINTS"
 	set category = "LORD"
 	var/datum/game_mode/warmongers/C = SSticker.mode
-	to_chat(src, "<span class='info'>You call forward an airship from Enigma and you begin donating your blood plasme.</span>")
+	to_chat(src, "<span class='info'>You call forward an airship and you begin donating your blood plasme.</span>")
 	flash_fullscreen("redflash1")
 	emote("embed")
 	playsound(loc, 'sound/misc/sucking.ogg', 100, FALSE, -1)
@@ -269,6 +269,7 @@
 		H.change_stat("speed", 1)
 		H.change_stat("perception", 4)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
+		H.cmode_music = 'sound/music/soberandhatingit.ogg'
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 
 ////////////// RED SOLDIERS AND CLASSES /////////////////
@@ -380,7 +381,7 @@
 	category_tags = list(CTAG_REDSOLDIER)
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled
 	maximum_possible_slots = -1
-	reinforcements_wave = 0
+	reinforcements_wave = 2
 	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/redoutrider/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -406,7 +407,7 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
@@ -414,6 +415,7 @@
 		H.change_stat("perception", -1)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
+		H.cmode_music = 'sound/music/soberandhatingit.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
 //// OFFICER ////
@@ -485,7 +487,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_REDSOLDIER)
 	maximum_possible_slots = 3
-	reinforcements_wave = 0
+	reinforcements_wave = 3
 	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/redfirestarter/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -524,6 +526,7 @@
 		H.change_stat("perception", 1)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
+		H.cmode_music = 'sound/music/soberandhatingit.ogg'
 
 //// MEDIC ////
 
@@ -566,7 +569,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 6, TRUE)
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
-		H.change_stat("strength", -4)
+		H.change_stat("strength", -2)
 	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
@@ -629,7 +632,7 @@
 	..()
 	var/datum/game_mode/warmongers/W = SSticker.mode
 
-	H.patron = GLOB.patronlist[/datum/patron/divine/psydon]
+	H.patron = GLOB.patronlist[/datum/patron/divine/kaitzar]
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light
 	neck = /obj/item/clothing/neck/roguetown/gorget/flasked
 	backl = /obj/item/storage/backpack/rogue/satchel
@@ -665,6 +668,7 @@
 		H.change_stat("speed", 1)
 		H.change_stat("perception", 4)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
+		H.cmode_music = 'sound/music/makeamartyrofme.ogg'
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 
 /////// BLU SOLDIERS AND CLASSES /////////////////
@@ -686,7 +690,7 @@
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
-		H.patron = GLOB.patronlist[/datum/patron/divine/psydon] // Grenzelhoft worships Psydon in lore. Why wouldn't they here?
+		H.patron = GLOB.patronlist[/datum/patron/divine/kaitzar] // Grenzelhoft worships Psydon in lore. Why wouldn't they here? Thats right because they worship KAITZAR now.
 		H.advsetup = TRUE
 		H.status_flags |= GODMODE
 		H.invisibility = INVISIBILITY_MAXIMUM
@@ -776,8 +780,8 @@
 	allowed_races = ALL_RACES_LIST_NAMES
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	category_tags = list(CTAG_BLUSOLDIER)
-	maximum_possible_slots = -1
-	reinforcements_wave = 0
+	maximum_possible_slots = 3
+	reinforcements_wave = 3
 	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/bluzealot/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -808,6 +812,7 @@
 		H.change_stat("perception", -1)
 		H.change_stat("endurance", 4)
 		H.change_stat("constitution", 1)
+		H.cmode_music = 'sound/music/makeamartyrofme.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
 //// HUSSAR ////
@@ -822,7 +827,7 @@
 	category_tags = list(CTAG_BLUSOLDIER)
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/horse/tame/saddled
 	maximum_possible_slots = -1
-	reinforcements_wave = 0
+	reinforcements_wave = 2
 	allowed_races = ALL_RACES_LIST_NAMES
 
 /datum/outfit/job/roguetown/bluhussar/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -847,7 +852,7 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
@@ -855,105 +860,8 @@
 		H.change_stat("perception", -1)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
+		H.cmode_music = 'sound/music/makeamartyrofme.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
-
-////// GRENADIER //////
-
-/datum/advclass/blu/grenadier ///Less gun related skills in exchange for some bombs, higher strength, and an axe with accompanying skill for it
-	name = "Grenadier"
-	tutorial = "Specialized heavy grenade throwers and axe wielders. Slow, but strong."
-	outfit = /datum/outfit/job/roguetown/blugrenadier
-	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = ALL_RACES_LIST_NAMES
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	category_tags = list(CTAG_BLUSOLDIER)
-	maximum_possible_slots = -1
-	reinforcements_wave = 0
-
-/datum/outfit/job/roguetown/blugrenadier/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	cloak = /obj/item/clothing/cloak/stabard/guard/bluey
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	belt = /obj/item/storage/belt/rogue/leather
-	if(SSwarmongers.warfare_techlevel >= WARMONGERS_TECHLEVEL_COWBOY)
-		beltr = /obj/item/gun/grenadelauncher/granata
-	else
-		beltr = GetSidearmForWarfare()
-	if(H.dna.species.id == "dwarf")
-		beltl = /obj/item/rogueweapon/woodcut/pick
-	else
-		beltl = /obj/item/rogueweapon/woodcut/steel
-	backr = /obj/item/quiver/woodbullets
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	neck = /obj/item/rogue/barkenpowderflask
-	backl = /obj/item/storage/backpack/rogue/backpack
-	head = /obj/item/clothing/head/roguetown/helmet/kettle/steelhelm
-	mask = /obj/item/clothing/mask/rogue/platemask
-	if(prob(70))
-		mouth = /obj/item/clothing/mask/cigarette/rollie/nicotine
-	backpack_contents = list(/obj/item/bomb = 3, /obj/item/bomb/poison = 1, /obj/item/flint = 1)
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 5, TRUE)
-		H.change_stat("strength", 2)
-		H.change_stat("endurance", 1)
-		H.change_stat("constitution", 1)
-		H.change_stat("speed", -6)
-
-//// RIFLEMEN ////
-
-/datum/advclass/blu/riflemen
-	name = "Sharpbarker"
-	tutorial = "Marksmen trained to handle firearms more efficiently than the common infantry, though fare even worse in melee."
-	outfit = /datum/outfit/job/roguetown/bluriflemen
-	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = ALL_RACES_LIST_NAMES
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	category_tags = list(CTAG_BLUSOLDIER)
-	maximum_possible_slots = -1
-	reinforcements_wave = 2
-
-/datum/outfit/job/roguetown/bluriflemen/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	cloak = /obj/item/clothing/cloak/raincloak/mortus
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/rogueweapon/huntingknife/cleaver/combat
-	beltr = /obj/item/quiver/bullets
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	neck = /obj/item/rogue/barkenpowderflask
-	mask = /obj/item/clothing/mask/rogue/snipermask
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 6, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-		H.change_stat("perception", 4)
-		H.change_stat("strength", -3)
-		H.change_stat("endurance", -4)
-		H.change_stat("speed", -2)
-		H.change_stat("constitution", -3)
-	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// OFFICER ////
 
@@ -1044,7 +952,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 6, TRUE)
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
-		H.change_stat("strength", -4)
+		H.change_stat("strength", -2)
 	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)

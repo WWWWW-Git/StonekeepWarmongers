@@ -1500,8 +1500,11 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town/dwarfin)
 "hf" = (
-/obj/structure/bed/rogue/shit,
 /obj/effect/landmark/bluairship,
+/obj/structure/chair/bench/church/smallbench{
+	dir = 8;
+	pixel_x = 5
+	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/airship/blue)
 "hQ" = (
@@ -1940,8 +1943,11 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
 "vT" = (
-/obj/structure/bed/rogue/shit,
 /obj/effect/landmark/redairship,
+/obj/structure/chair/bench/church/smallbench{
+	dir = 4;
+	pixel_x = -5
+	},
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -2374,6 +2380,24 @@
 /obj/item/rogueweapon/spear/billhook,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"LU" = (
+/obj/effect/landmark/bluairship,
+/obj/structure/chair/bench/church/smallbench{
+	dir = 4;
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/airship/blue)
+"Ma" = (
+/obj/effect/landmark/redairship,
+/obj/structure/chair/bench/church/smallbench{
+	dir = 8;
+	pixel_x = 5
+	},
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/rogue/indoors/airship/red)
 "Mk" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/mace,
@@ -2558,6 +2582,15 @@
 /obj/item/quiver/arrows,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
+"Un" = (
+/obj/structure/floordoor{
+	desc = null
+	},
+/obj/machinery/light/rogue/lanternpost/fixed/compact{
+	pixel_y = 30
+	},
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/airship/blue)
 "Ut" = (
 /obj/effect/proc_holder/spell/invoked/heal,
 /obj/structure/table/wood{
@@ -2773,6 +2806,17 @@
 "Zl" = (
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors)
+"Zx" = (
+/obj/structure/floordoor{
+	desc = null
+	},
+/obj/machinery/light/rogue/lanternpost/fixed/compact{
+	pixel_y = 30
+	},
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/rogue/indoors/airship/red)
 "ZC" = (
 /obj/structure/mineral_door/wood/donjon{
 	dir = 1;
@@ -12305,9 +12349,9 @@ Sl
 BB
 Ye
 Ye
-hf
-hf
-hf
+LU
+LU
+LU
 Sl
 bX
 gS
@@ -12432,7 +12476,7 @@ rQ
 rQ
 bX
 Sl
-Ye
+Un
 Ye
 Ae
 Ye
@@ -12441,7 +12485,7 @@ rn
 Sl
 bX
 gS
-mf
+Zx
 mf
 RN
 mf
@@ -12574,9 +12618,9 @@ gS
 wL
 mf
 mf
-vT
-vT
-vT
+Ma
+Ma
+Ma
 gS
 bX
 rQ
