@@ -63,8 +63,6 @@ SUBSYSTEM_DEF(droning)
 			else
 				used_gay = area_player.droning_sound
 
-		if(SSwarmongers.warfare_ready_to_die)
-			used_gay = list('sound/blank.ogg', 100)
 		if(HAS_TRAIT(listener.mob, TRAIT_DRUQK))
 			used_gay = list('sound/music/spice.ogg', 100)
 		//our music for real
