@@ -159,7 +159,7 @@
 	set name = "GAIN SUPPORT POINTS"
 	set category = "LORD"
 	var/datum/game_mode/warmongers/C = SSticker.mode
-	to_chat(src, "<span class='info'>You call forward an airship from and you begin donating your blood plasme.</span>")
+	to_chat(src, "<span class='info'>You call forward an airship and you begin donating your blood plasme.</span>")
 	flash_fullscreen("redflash1")
 	emote("embed")
 	playsound(loc, 'sound/misc/sucking.ogg', 100, FALSE, -1)
