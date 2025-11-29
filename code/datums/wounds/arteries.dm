@@ -63,8 +63,9 @@
 	var/mob/living/carbon/carbon_owner = owner
 	if(!carbon_owner.stat && prob(10))
 		carbon_owner.Jitter(10)
+		carbon_owner.losebreath += 5
 		if(prob(50))
-			playsound(carbon_owner, pick('sound/vo/throat.ogg','sound/vo/throat2.ogg','sound/vo/throat3.ogg'), 100, FALSE)
+			carbon_owner.emote(pick("gasp","choke","breathgasp"))
 		else
 			carbon_owner.emote("deathgurgle")
 

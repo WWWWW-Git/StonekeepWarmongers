@@ -37,6 +37,6 @@
 				rogfat_add(1)
 		var/turf/above_turf = get_step_multiz(src, UP)
 		if(above_turf && istransparentturf(above_turf))
-			hud_used.restup_icon?.icon_state = "act_rest_up_block"
+			hud_used?.restup_icon?.icon_state = "act_rest_up_block"
 		else
-			hud_used.restup_icon?.icon_state = "act_rest_up"
+			hud_used?.restup_icon?.icon_state = "act_rest_up"

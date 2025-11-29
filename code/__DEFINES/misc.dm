@@ -160,7 +160,7 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 
 //Bloody shoe blood states
 #define BLOOD_STATE_MUD				"mud"
-#define BLOOD_STATE_HUMAN			"blood"
+#define BLOOD_STATE_HUMAN			"tracks"
 #define BLOOD_STATE_XENO			"xeno"
 #define BLOOD_STATE_OIL				"oil"
 #define BLOOD_STATE_GREEN			"green"

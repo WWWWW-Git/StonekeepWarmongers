@@ -281,8 +281,8 @@
 /obj/effect/decal/cleanable/blood/footprints
 	name = "footprints"
 	desc = ""
-	icon = 'icons/effects/footprints.dmi'
-	icon_state = "blood1"
+	icon = 'icons/effects/blood.dmi'
+	icon_state = "tracks"
 	random_icon_states = null
 	blood_state = BLOOD_STATE_HUMAN //the icon state to load images from
 	var/entered_dirs = 0
@@ -350,13 +350,13 @@
 		if(entered_dirs & Ddir)
 			var/image/bloodstep_overlay = GLOB.bloody_footprints_cache["entered-[blood_state]-[Ddir]"]
 			if(!bloodstep_overlay)
-				GLOB.bloody_footprints_cache["entered-[blood_state]-[Ddir]"] = bloodstep_overlay = image(icon, "[blood_state]1", dir = Ddir)
+				GLOB.bloody_footprints_cache["entered-[blood_state]-[Ddir]"] = bloodstep_overlay = image(icon, blood_state, dir = Ddir)
 			bloodstep_overlay.alpha = alpha
 			add_overlay(bloodstep_overlay)
 		if(exited_dirs & Ddir)
 			var/image/bloodstep_overlay = GLOB.bloody_footprints_cache["exited-[blood_state]-[Ddir]"]
 			if(!bloodstep_overlay)
-				GLOB.bloody_footprints_cache["exited-[blood_state]-[Ddir]"] = bloodstep_overlay = image(icon, "[blood_state]2", dir = Ddir)
+				GLOB.bloody_footprints_cache["exited-[blood_state]-[Ddir]"] = bloodstep_overlay = image(icon, blood_state, dir = Ddir)
 			bloodstep_overlay.alpha = alpha
 			add_overlay(bloodstep_overlay)
 

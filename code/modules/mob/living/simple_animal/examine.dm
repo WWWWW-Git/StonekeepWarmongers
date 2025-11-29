@@ -20,6 +20,9 @@
 	var/list/msg = list()
 
 	var/temp = getBruteLoss() + getFireLoss()
+
+	msg += "[desc]"
+
 	// Damage
 	switch(temp)
 		if(5 to 25)

@@ -100,7 +100,7 @@
 /datum/game_mode/warmongers/proc/begin_countDown()
 	set waitfor = 0
 	while(1)
-		sleep(30 SECONDS)
+		sleep(5 SECONDS)
 		CHECK_TICK
 		if(SSwarmongers.warfare_ready_to_die)
 			break

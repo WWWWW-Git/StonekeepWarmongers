@@ -70,6 +70,7 @@
 
 /mob/living/carbon/human/check_projectile_wounding(obj/projectile/P, def_zone, blocked)
 	..()
+	camera_bullshit(1.25, -100, ELASTIC_EASING, 2, 2)
 	if(ishuman(P.firer))
 		var/mob/living/carbon/human/H = P.firer
 		if(warfare_faction == H.warfare_faction)
