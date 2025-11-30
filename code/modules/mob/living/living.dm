@@ -910,7 +910,7 @@
 	if(active_storage)
 		active_storage.close(src)
 
-	if(!(mobility_flags & MOBILITY_STAND) && !buckled && prob(getBruteLoss()*200/maxHealth))
+	if(!(mobility_flags & MOBILITY_STAND) && !buckled)
 		makeTrail(newloc, T, old_direction)
 
 /mob/living/setDir(newdir)

@@ -217,7 +217,7 @@
 			else if(istype(user.rmb_intent, /datum/rmb_intent/aimed))
 				used += 10
 		if(prob(used))
-			attempted_wounds += /datum/wound/artery
+			attempted_wounds +=	pick(/datum/wound/artery,/datum/wound/tendon)
 
 	for(var/wound_type in shuffle(attempted_wounds))
 		var/datum/wound/applied = add_wound(wound_type, silent, crit_message)

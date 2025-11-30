@@ -254,6 +254,8 @@
 		return
 	if(istype(loc, /obj/machinery/atmospherics/components/unary/cryo_cell))
 		return
+	if(has_wound(/datum/wound/artery/neck))
+		return
 
 	var/datum/gas_mixture/environment
 	if(loc)
