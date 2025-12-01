@@ -107,23 +107,6 @@
 		animate(T, alpha = 255, time = 2, easing = EASE_IN)
 		addtimer(CALLBACK(src, PROC_REF(clear_area_text), T), rand(10,15))
 
-/mob/living/carbon/verb/fuck()
-	var/align = pick("center","left","right")
-	var/vert = pick("bottom","middle","top")
-	var/text_to_show = pick_list("stress_messages.json", "insanity")
-
-	var/atom/movable/screen/area_text/T = new()
-	client.screen += T
-	T.maptext = {"<span style='vertical-align:[vert]; text-align:[align];
-				color: "#ff0000"; font-size: 125%;
-				font-family: "GenericTypewriter", Pterra;'>[text_to_show]</span>"}
-	T.maptext_width = rand(200,250)
-	T.maptext_height = rand(200,300)
-	T.maptext_x = rand(12,40)
-	T.maptext_y = rand(-120,-200)
-	animate(T, alpha = 255, time = 2, easing = EASE_IN)
-	addtimer(CALLBACK(src, PROC_REF(clear_area_text), T), rand(10,15))
-
 /mob/living/carbon/get_stress_amount()
 	if(HAS_TRAIT(src, TRAIT_NOMOOD))
 		return 0
