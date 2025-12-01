@@ -90,16 +90,19 @@
 
 	oldstress = stress
 
-	if(stress >= STRESS_INSANE && prob(5))
+	if(stress >= STRESS_INSANE && prob(30))
 		var/text = pick_list("stress_messages.json", "insanity")
-		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(show_blurb), list(
-			targets = src, \
-			duration = 3 SECONDS, \
-			message = text, \
-			fade_time = 3 SECONDS, \
-			screen_position = "WEST+[rand(2,13)], SOUTH+[rand(1,12)]", \
-			text_alignment = pick("left", "right", "center"), \
-			text_color = "red"))
+		var/screen_location = "WEST+[rand(2,13)], SOUTH+[rand(1,12)]"
+		var/text_align = pick("left", "right", "center")
+		show_blurb(src, 3 SECONDS, text, 3 SECONDS, screen_location, text_align, "red")
+
+/mob/living/carbon/verb/test()
+	set name = "test"
+	
+	var/text = pick_list("stress_messages.json", "insanity")
+	var/screen_location = "WEST+[rand(2,13)], SOUTH+[rand(1,12)]"
+	var/text_align = pick("left", "right", "center")
+	show_blurb(src, 3 SECONDS, text, 3 SECONDS, screen_location, text_align, "red")
 
 /mob/living/carbon/get_stress_amount()
 	if(HAS_TRAIT(src, TRAIT_NOMOOD))
