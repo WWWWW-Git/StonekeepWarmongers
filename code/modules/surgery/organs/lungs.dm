@@ -11,7 +11,7 @@
 	healing_factor = STANDARD_ORGAN_HEALING
 	decay_factor = STANDARD_ORGAN_DECAY
 
-	high_threshold_passed = "<span class='warning'>I feel some sort of constriction around my chest as my breathing becomes shallow and rapid.</span>"
+	high_threshold_passed = "<span class='warning'>BREATHING... HARDER...</span>"
 	now_fixed = "<span class='warning'>My lungs seem to once again be able to hold air.</span>"
 	high_threshold_cleared = "<span class='info'>The constriction around my chest loosens as my breathing calms down.</span>"
 

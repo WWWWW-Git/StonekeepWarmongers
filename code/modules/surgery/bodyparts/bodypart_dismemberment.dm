@@ -23,7 +23,7 @@
 /obj/item/bodypart/proc/dismember(dam_type = BRUTE, bclass = BCLASS_CUT, mob/living/user, zone_precise = src.body_zone)
 	if(!owner)
 		return FALSE
-	var/mob/living/carbon/C = owner
+	var/mob/living/carbon/human/C = owner
 	if(!dismemberable)
 		if(zone_precise != BODY_ZONE_PRECISE_NECK)
 			return FALSE
@@ -69,7 +69,9 @@
 				if(C.real_name in GLOB.excommunicated_players)
 					stress2give = /datum/stressevent/viewsinpunish
 	if(stress2give)
-		for(var/mob/living/carbon/CA in hearers(world.view, C))
+		for(var/mob/living/carbon/human/CA in hearers(world.view, C))
+			if(CA.warfare_faction != C.warfare_faction) continue // I like seeing the enemy get turned into ash, BUDDY
+			
 			if(CA != C && !HAS_TRAIT(CA, TRAIT_BLIND))
 				if(stress2give == /datum/stressevent/viewdismember)
 					if(HAS_TRAIT(CA, TRAIT_STEELHEARTED))

@@ -9,7 +9,7 @@
 	decay_factor = 5 * STANDARD_ORGAN_DECAY		//designed to fail about 5 minutes after death
 
 	low_threshold_passed = "<span class='info'>Prickles of pain appear then die out from within my chest...</span>"
-	high_threshold_passed = "<span class='warning'>Something inside my chest hurts, and the pain isn't subsiding. You notice myself breathing far faster than before.</span>"
+	high_threshold_passed = "<span class='warning'>MY HEART! OH GROUND!! IT HURTS!!!</span>"
 	now_fixed = "<span class='info'>My heart begins to beat again.</span>"
 	high_threshold_cleared = "<span class='info'>The pain in my chest has died down, and my breathing becomes more relaxed.</span>"
 

@@ -1686,42 +1686,17 @@
 			to_chat(M, "*----*")
 			to_chat(M, "<span class='info'>I'm indifferent. I hate myself, here's all that's bugging me right now. Life sucks.</span>")
 			to_chat(M, "*--------*")
-			var/list/already_printed = list()
-			for(var/datum/stressevent/S in M.positive_stressors)
-				if(S in already_printed)
+			if(!length(M.stressors))
+				to_chat(M, "<span class='info'>I'm not feeling much of anything right now.</span>")
+			for(var/datum/stressevent/stressevent in M.stressors)
+				if(!stressevent.can_show())
 					continue
-				var/cnt = 1
-				for(var/datum/stressevent/CS in M.positive_stressors)
-					if(CS == S)
-						continue
-					if(CS.type == S.type)
-						cnt++
-						already_printed += CS
-				var/ddesc = S.desc
-				if(islist(S.desc))
-					ddesc = pick(S.desc)
-				if(cnt > 1)
-					to_chat(M, "[ddesc] (x[cnt])")
+				var/count = stressevent.stacks
+				var/ddesc = islist(stressevent.desc) ? pick(stressevent.desc) : stressevent.desc
+				if(count > 1)
+					to_chat(M, "[ddesc] (x[count])")
 				else
 					to_chat(M, "[ddesc]")
-			for(var/datum/stressevent/S in M.negative_stressors)
-				if(S in already_printed)
-					continue
-				var/cnt = 1
-				for(var/datum/stressevent/CS in M.negative_stressors)
-					if(CS == S)
-						continue
-					if(CS.type == S.type)
-						cnt++
-						already_printed += CS
-				var/ddesc = S.desc
-				if(islist(S.desc))
-					ddesc = pick(S.desc)
-				if(cnt > 1)
-					to_chat(M, "[ddesc] (x[cnt])")
-				else
-					to_chat(M, "[ddesc]")
-			already_printed = list()
 			to_chat(M, "*--------*")
 		if(modifiers["right"])
 			if(M.get_triumphs() < 2)

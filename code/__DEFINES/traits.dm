@@ -77,6 +77,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_SNIPER = "Helmets won't stop that lead ball getting inside your noggin, I'll make sure of that.",
 	TRAIT_RIVERSWIMMER = "I am one Hell of a swimmer.",
 	TRAIT_NINJA = "I am an elite ninja of Heartfelt.",
+	TRAIT_NOMOOD = "I just can't bother to care anymore.",
 	TRAIT_SOUL_EXAMINE = "<span class='deadsay'>I know when someone's soul has departed.</span>",
 	TRAIT_CYCLOPS_RIGHT = "<span class='warning'>My right eye has been poked out...</span>",
 	TRAIT_LEECHIMMUNE = "Leeches are reluctant to bite me.",

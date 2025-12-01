@@ -155,6 +155,22 @@
 					added_wound = /datum/wound/puncture
 				if(1 to 10)
 					added_wound = /datum/wound/puncture/small
+					//Organ damage
+
+			if(owner.getorganszone(zone_precise) && prob(35 + max(dam, -12.5)))
+				var/newdam = dam
+				if(newdam > 0)
+					var/list/victims = list()
+					var/list/possible_victims = shuffle(owner.getorganszone(zone_precise).Copy())
+					for(var/obj/item/organ/I in possible_victims)
+						if(I.damage < I.maxHealth && (prob((I.w_class * rand(20,30)) * (1 / max(1, victims.len)))))
+							victims += I
+					if(victims.len)
+						for(var/obj/item/organ/victim in victims)
+							newdam /= 2
+							newdam -= rand(10,40)
+							victim.applyOrganDamage(newdam)
+							testing("[victim]: damage [victim.damage]")
 		if(BCLASS_BITE)
 			switch(dam)
 				if(20 to INFINITY)
@@ -166,7 +182,7 @@
 		if(BCLASS_BULLET)
 			switch(dam)
 				if(20 to INFINITY)
-					added_wound = pick(/datum/wound/puncture/large,/datum/wound/slash/large)
+					added_wound = /datum/wound/puncture/large
 				if(10 to 20)
 					added_wound = pick(/datum/wound/slash,/datum/wound/puncture)
 				if(1 to 10)
@@ -212,7 +228,7 @@
 	if(bclass in GLOB.artery_bclasses)
 		used = round(damage_dividend * 20 + (dam / 6), 1)
 		if(user)
-			else if(istype(user.rmb_intent, /datum/rmb_intent/aimed))
+			if(istype(user.rmb_intent, /datum/rmb_intent/aimed))
 				used += 10
 		if(prob(used))
 			attempted_wounds += /datum/wound/artery
