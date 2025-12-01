@@ -90,7 +90,7 @@
 
 	oldstress = stress
 
-	if(stress >= STRESS_INSANE && prob(90))
+	if(stress >= STRESS_INSANE)
 		var/align = pick("center","left","right")
 		var/vert = pick("bottom","middle","top")
 		var/text_to_show = pick_list("stress_messages.json", "insanity")
@@ -101,7 +101,7 @@
 					color: "#ff0000"; font-size: 125%;
 					font-family: "GenericTypewriter", Pterra;'>[text_to_show]</span>"}
 		T.maptext_width = rand(200,250)
-		T.maptext_height = rand(200,300)
+		T.maptext_height = rand(190,200)
 		T.maptext_x = rand(12,40)
 		T.maptext_y = rand(-120,-200)
 		animate(T, alpha = 255, time = 2, easing = EASE_IN)
