@@ -605,6 +605,8 @@
 	sellprice = 140
 
 /obj/item/rogueweapon/sword/sabre/dec/alt
+	name = "Naypoleoeo"
+	possible_item_intents = list(/datum/intent/sword/cut/sabre, /datum/intent/sword/chop, /datum/intent/sword/thrust/rapier)
 	icon_state = "napoleon"
 
 /obj/item/rogueweapon/sword/sabre/messer //not IRL sabre, but its a one handed cutting weapon, way lower defense, but has higher damage and the axe chop intent

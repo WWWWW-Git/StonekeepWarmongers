@@ -78,8 +78,6 @@
 	applyOrganDamage(maxHealth * decay_factor)
 
 /obj/item/organ/proc/on_life()	//repair organ damage if the organ is not failing
-	if(organ_flags & ORGAN_FAILING)
-		return
 	///Damage decrements by a percent of its maxhealth
 	var/healing_amount = -(maxHealth * healing_factor)
 	///Damage decrements again by a percent of its maxhealth, up to a total of 4 extra times depending on the owner's health
@@ -155,10 +153,10 @@
 	if(maximum < damage)
 		return
 	damage = CLAMP(damage + d, 0, maximum)
-//	var/mess = check_damage_thresholds(owner)
+	var/mess = check_damage_thresholds(owner)
 	prev_damage = damage
-//	if(mess && owner)
-//		to_chat(owner, mess)
+	if(mess && owner)
+		to_chat(owner, mess)
 
 ///SETS an organ's damage to the amount "d", and in doing so clears or sets the failing flag, good for when you have an effect that should fix an organ if broken
 /obj/item/organ/proc/setOrganDamage(d)	//use mostly for admin heals

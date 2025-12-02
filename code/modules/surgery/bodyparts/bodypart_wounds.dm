@@ -155,10 +155,11 @@
 					added_wound = /datum/wound/puncture
 				if(1 to 10)
 					added_wound = /datum/wound/puncture/small
-					//Organ damage
-
+			
+			//Organ damage
 			if(owner.getorganszone(zone_precise) && prob(35 + max(dam, -12.5)))
 				var/newdam = dam
+				to_chat(world, "origin: [newdam]")
 				if(newdam > 0)
 					var/list/victims = list()
 					var/list/possible_victims = shuffle(owner.getorganszone(zone_precise).Copy())
@@ -169,7 +170,8 @@
 						for(var/obj/item/organ/victim in victims)
 							newdam /= 2
 							newdam -= rand(10,40)
-							victim.applyOrganDamage(newdam)
+							victim.applyOrganDamage(abs(newdam))
+							to_chat(world, "absolute: [abs(newdam)]")
 							testing("[victim]: damage [victim.damage]")
 		if(BCLASS_BITE)
 			switch(dam)

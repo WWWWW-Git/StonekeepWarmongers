@@ -138,7 +138,7 @@
 	healing_factor = STANDARD_ORGAN_HEALING
 	decay_factor = STANDARD_ORGAN_DECAY
 
-	low_threshold_passed = "<span class='info'>My guts flashes with pain before subsiding.</span>"
-	high_threshold_passed = "<span class='warning'>My guts flares up with constant pain.</span>"
+	low_threshold_passed = "<span class='info'>My guts flash with pain before subsiding.</span>"
+	high_threshold_passed = "<span class='warning'>My guts flare up with constant pain.</span>"
 	high_threshold_cleared = "<span class='info'>The pain in my guts die down for now.</span>"
 	low_threshold_cleared = "<span class='info'>The last bouts of pain in my guts have died out.</span>"

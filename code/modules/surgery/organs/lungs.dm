@@ -12,7 +12,6 @@
 	decay_factor = STANDARD_ORGAN_DECAY
 
 	high_threshold_passed = "<span class='warning'>BREATHING... HARDER...</span>"
-	now_fixed = "<span class='warning'>My lungs seem to once again be able to hold air.</span>"
 	high_threshold_cleared = "<span class='info'>The constriction around my chest loosens as my breathing calms down.</span>"
 
 	//Breath damage
@@ -390,12 +389,15 @@
 
 /obj/item/organ/lungs/on_life()
 	..()
-	if((!failed) && ((organ_flags & ORGAN_FAILING)))
-		if(owner.stat == CONSCIOUS)
-			owner.visible_message("<span class='danger'>[owner] grabs [owner.p_their()] throat, struggling for breath!</span>", \
-								"<span class='danger'>I suddenly feel like you can't breathe!</span>")
-		failed = TRUE
-	else if(!(organ_flags & ORGAN_FAILING))
+	if(organ_flags & ORGAN_FAILING)
+		owner.losebreath += 25
+		if((!failed))
+			if(owner.stat == CONSCIOUS)
+				owner.visible_message("<span class='danger'>[owner] grabs [owner.p_their()] throat, struggling for breath!</span>", \
+									"<span class='danger'>I suddenly feel like you can't breathe!</span>")
+			failed = TRUE
+			owner.adjustOxyLoss(25)
+	else
 		failed = FALSE
 	return
 
