@@ -287,4 +287,4 @@
 /datum/stressevent/deadlord
 	timer = 10 MINUTES
 	stressadd = 12
-	desc = "<span class='red>OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>"
+	desc = "<span class='red>⏃ OUR LORD IS DEAD! WE ARE DOOMED! DOOMED!</span>"

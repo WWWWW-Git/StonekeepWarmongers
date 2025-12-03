@@ -67,6 +67,7 @@
 		var/obj/item/rogue/musicpack/MP = IT
 		MP.soundloop.stop()
 
+	remove_coldbreath()
 	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		var/datum/game_mode/warmongers/C = SSticker.mode
 		if(istype(C.warmode, /datum/warmode/noreturn))
