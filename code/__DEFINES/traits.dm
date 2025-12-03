@@ -44,7 +44,7 @@
 #define TRAIT_SHOCKIMMUNE "Shock Immunity"
 
 #define TRAIT_BASHDOORS "bashdoors"
-#define TRAIT_NOMOOD "no_mood"
+#define TRAIT_NOMOOD "Moodless"
 #define TRAIT_SIMPLE_WOUNDS "simple_wounds"
 #define TRAIT_BANDITCAMP "banditcamp"
 #define TRAIT_VAMPMANSION "vampiremansion"

@@ -851,11 +851,16 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	H.STACON = 20
 	H.STAEND = 20
 
+	H.status_flags |= GODMODE
+	H.dna.species.species_traits |= NOBLOOD
+	H.speech_sound = list('sound/vo/alien_speech.ogg','sound/vo/alien_speech2.ogg')
+
 	to_chat(H, "<span class='info'>This is a role for scaring people IC and kidnapping griefers and shit.</span>")
 
 	ADD_TRAIT(H, TRAIT_ABDUCTOR_TRAINING, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ABDUCTOR_SCIENTIST_TRAINING, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_BLOODLOSS_IMMUNE, TRAIT_GENERIC)
 	var/obj/item/implant/abductor/beamplant = new /obj/item/implant/abductor(H)
 	beamplant.implant(H)
 	for(var/obj/effect/landmark/abductor/LM in GLOB.landmarks_list)

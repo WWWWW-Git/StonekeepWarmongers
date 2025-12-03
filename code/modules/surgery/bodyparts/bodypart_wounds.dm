@@ -159,7 +159,7 @@
 			//Organ damage
 			if(owner.getorganszone(zone_precise) && prob(35 + max(dam, -12.5)))
 				var/newdam = dam
-				to_chat(world, "origin: [newdam]")
+				//to_chat(world, "origin: [newdam]")
 				if(newdam > 0)
 					var/list/victims = list()
 					var/list/possible_victims = shuffle(owner.getorganszone(zone_precise).Copy())
