@@ -171,7 +171,7 @@
 							newdam /= 2
 							newdam -= rand(10,40)
 							victim.applyOrganDamage(abs(newdam))
-							to_chat(world, "absolute: [abs(newdam)]")
+							//to_chat(world, "absolute: [abs(newdam)]")
 							testing("[victim]: damage [victim.damage]")
 		if(BCLASS_BITE)
 			switch(dam)
