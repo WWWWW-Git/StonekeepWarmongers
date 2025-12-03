@@ -297,6 +297,9 @@
 			to_chat(user, "<span class='info'>I dry fire \the [src]!</span>")
 			cocked = FALSE
 			return
+		if(HAS_TRAIT(user, TRAIT_BIGHANDS))
+			to_chat(user, "<span class='info'>I can't use this!</span>")
+			return
 		if(user.client.chargedprog >= 100)
 			spread = 0
 		else
