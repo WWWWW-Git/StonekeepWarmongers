@@ -139,7 +139,7 @@
 	begin_month = NOVEMBER
 
 /datum/holiday/peace/celebrate()
-	SSticker.login_music = pick('sound/music/parade.ogg','sound/music/beauty.ogg','sound/music/calm.ogg')
+	SSticker.login_music = 'sound/music/rainbow.ogg'
 	for(var/i in GLOB.new_player_list)
 		var/mob/dead/new_player/P = i
 		if(P.client)
@@ -154,7 +154,7 @@
 	begin_month = JULY
 
 /datum/holiday/peace2/celebrate()
-	SSticker.login_music = pick('sound/music/thomas.ogg','sound/music/beauty.ogg','sound/music/drama.ogg')
+	SSticker.login_music = pick('sound/music/rainbow.ogg','sound/music/thomas.ogg')
 	for(var/i in GLOB.new_player_list)
 		var/mob/dead/new_player/P = i
 		if(P.client)
