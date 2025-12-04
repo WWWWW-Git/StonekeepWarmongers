@@ -914,7 +914,7 @@
 	icon_state = "ppucloak"
 	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
 	allowed_sex = list(MALE, FEMALE)
-	allowed_race = list("standard")
+	allowed_race = list("standard", "bulky")
 
 /obj/item/clothing/cloak/war/regime/scarf
 	name = "green scarf"
@@ -929,7 +929,7 @@
 	icon_state = "parchmentcloak"
 	allowed_sex = list("female", "male")
 	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
-	allowed_race = list("bulky", "standard", "fat")
+	allowed_race = list("standard", "fat", "bulky")
 
 /obj/item/clothing/cloak/hussarcloak
 	name = "hussar coat"
@@ -957,3 +957,4 @@
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
 	inhand_mod = TRUE
+	allowed_race = list("standard")

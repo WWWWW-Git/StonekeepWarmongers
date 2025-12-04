@@ -333,7 +333,7 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/rogueweapon/huntingknife/bayonet
 	if(H.dna.species.id == "bulky")
-		beltl = /obj/item/reagent_containers/powder/ozium
+		beltl = null
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
@@ -348,7 +348,7 @@
 		backl = null
 	neck = /obj/item/rogue/barkenpowderflask
 	if(H.dna.species.id == "bulky")
-		backl = null
+		neck = null
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm/alternate
@@ -462,8 +462,14 @@
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
 	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	if(H.dna.species.id == "bulky")
+		beltr = null
 	backr = /obj/item/quiver/bullets
+	if(H.dna.species.id == "bulky")
+		backr = /obj/item/rogueweapon/woodcut/steel/war
 	neck = /obj/item/rogue/barkenpowderflask
+	if(H.dna.species.id == "bulky")
+		neck = null
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhelm/alternate
@@ -742,23 +748,22 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/rogueweapon/huntingknife/bayonet
 	if(H.dna.species.id == "bulky")
-		beltl = /obj/item/reagent_containers/powder/ozium
+		beltl = null
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
 	beltr = /obj/item/quiver/bullets
 	if(H.dna.species.id == "bulky")
-		beltr = /obj/item/rogueweapon/woodcut/war
+		beltr = /obj/item/rogueweapon/mace/cudgel/war
 	backr = GetMainGunForWarfareRegime()
 	if(H.dna.species.id == "bulky")
-		backr = /obj/item/rogueweapon/shield/tower/war
+		backr = /obj/item/rogueweapon/shield/woodwar
 	backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
 	if(H.dna.species.id == "bulky")
 		backl = null
 	neck = /obj/item/rogue/barkenpowderflask
 	if(H.dna.species.id == "bulky")
-		backl = null
-	neck = /obj/item/rogue/barkenpowderflask
+		neck = null
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm/alternate
@@ -906,12 +911,20 @@
 	if(H.dna.species.id == "bulky")
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/bulky
 	beltl = /obj/item/rogueweapon/sword/sabre/officer
+	if(H.dna.species.id == "bulky")
+		beltl = /obj/item/rogueweapon/whip/pulverizer
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
 	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	if(H.dna.species.id == "bulky")
+		beltr = /obj/item/rogueweapon/mace/cudgel/war
 	backr = /obj/item/quiver/bullets
+	if(H.dna.species.id == "bulky")
+		backr = null
 	neck = /obj/item/rogue/barkenpowderflask
+	if(H.dna.species.id == "bulky")
+		neck = null
 	head = /obj/item/clothing/head/roguetown/helmet/war/regime/kalpakhelm
 	if(prob(50))
 		head = /obj/item/clothing/head/roguetown/helmet/war/regime/kalpakhelm/alternate
