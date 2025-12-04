@@ -19,7 +19,6 @@
 		else
 			for(var/mob/living/carbon/human/M in GLOB.player_list)
 				SEND_SOUND(M, 'sound/misc/warstart.ogg')
-				SEND_SOUND(M, 'sound/music/peopledie.ogg')
 
 /datum/warmode/Destroy()
 	. = QDEL_HINT_IWILLGC

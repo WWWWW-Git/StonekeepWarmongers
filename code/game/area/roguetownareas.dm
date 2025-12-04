@@ -54,8 +54,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	spookysounds = SPOOKY_WAR
 	spookynight = SPOOKY_WAR
 	droning_sound = 'sound/music/beforedeath.ogg'
-	droning_sound_dusk = 'sound/music/beforedeath.ogg'
-	droning_sound_night = 'sound/music/beforedeath.ogg'
+	droning_sound_dusk = 'sound/music/ghostlycalls.ogg'
+	droning_sound_night = 'sound/music/yourconditionisntservicerelated.ogg'
 	converted_type = /area/rogue/indoors/shelter
 	var/sandy = FALSE // ???
 
