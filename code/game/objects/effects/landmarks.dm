@@ -322,27 +322,27 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/heartfeltinfantry
-	name = "Heartfelt Infantry"
+	name = "Peasantry Militian"
 	icon_state = "arrow"
-	jobspawn_override = list("Heartfelt Infantry")
+	jobspawn_override = list("Peasantry Militian")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/heartfeltlord
-	name = "Heartfelt Lord"
+	name = "High Rouser"
 	icon_state = "arrow"
-	jobspawn_override = list("Heartfelt Lord")
+	jobspawn_override = list("High Rouser")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/grenzelinfantry
-	name = "Grenzelhoft Infantry"
+	name = "Regimian Regiman"
 	icon_state = "arrow_blu"
-	jobspawn_override = list("Grenzelhoft Infantry")
+	jobspawn_override = list("Regimian Regiman")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/grenzellord
-	name = "Grenzelhoft Lord"
+	name = "Regimian Low-Lord"
 	icon_state = "arrow_blu"
-	jobspawn_override = list("Grenzelhoft Lord")
+	jobspawn_override = list("Regimian Low-Lord")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/colonizer

@@ -208,7 +208,7 @@ SUBSYSTEM_DEF(ticker)
 				return
 			timeLeft -= wait
 
-			if(timeLeft <= 300 && !tipped)
+			if(timeLeft <= 150 && !tipped)
 #ifdef MATURESERVER
 				send_tip_of_the_round()
 #endif

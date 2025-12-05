@@ -185,7 +185,7 @@
 	selection_color = CLOTHING_RED
 
 /datum/job/roguetown/warmongers/red/lord
-	title = "Heartfelt Lord"
+	title = "High Rouser"
 	tutorial = "The loonies want this land, gather the lads and send the bastards packing before supper."
 	department_flag = REDSS
 	flag = REDKING
@@ -217,6 +217,7 @@
 
 	if(aspect_chosen(/datum/round_aspect/veteranlords))
 		H.change_stat("strength", 3)
+		H.STACON = 25
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -229,7 +230,7 @@
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 
 /datum/outfit/job/roguetown/redking
-	name = "Heartfelt Lord"
+	name = "High Rouser"
 	jobtype = /datum/job/roguetown/warmongers/red/lord
 
 /datum/outfit/job/roguetown/redking/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -275,7 +276,7 @@
 ////////////// RED SOLDIERS AND CLASSES /////////////////
 
 /datum/job/roguetown/warmongers/red/soldier
-	title = "Heartfelt Infantry"
+	title = "Peasantry Militian"
 	tutorial = "Peasant work takes the life out of you, luckily for you the bier you're paid in tends to make it easier to stomach. And you will admit, outright killing people can be fun."
 	department_flag = REDSS
 	flag = SOLDIER
@@ -596,7 +597,7 @@
 	selection_color = CLOTHING_BLUE
 
 /datum/job/roguetown/warmongers/blu/lord
-	title = "Grenzelhoft Lord"
+	title = "Regimian Low-Lord"
 	tutorial = "A full-lifer through and through, you know which fork is which, and the best way to curtsy, and now you're in charge of the lives of hundreds if not thousands of men. The KAITZAR expects greatness, and you should sooner kill yourself than disappoint HIM."
 	department_flag = BLUES
 	flag = BLUKING
@@ -639,7 +640,7 @@
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 
 /datum/outfit/job/roguetown/bluking
-	name = "Grenzelhoft Lord"
+	name = "Regimian Low-Lord"
 	jobtype = /datum/job/roguetown/warmongers/blu/lord
 
 /datum/outfit/job/roguetown/bluking/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -688,7 +689,7 @@
 /////// BLU SOLDIERS AND CLASSES /////////////////
 
 /datum/job/roguetown/warmongers/blu/soldier
-	title = "Grenzelhoft Infantry"
+	title = "Regimian Regiman"
 	tutorial = "No-lifers and Some-lifers, pressed into service, given weaponry, and pointed at foe. The No-Lifers fight wanting to be Some-lifers, the Some-lifers fight wanting to be Full-Lifers, and the Full-Lifers are back at home relaxing while the former two do the dying. For the KAITZAR!"
 	department_flag = BLUES
 	flag = SOLDIER

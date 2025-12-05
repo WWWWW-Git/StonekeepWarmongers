@@ -153,13 +153,13 @@ GLOBAL_LIST_INIT(roguefight_positions, list(
 	))
 
 GLOBAL_LIST_INIT(red_positions, list(
-	"Heartfelt Lord",
-	"Heartfelt Infantry"
+	"High Rouser",
+	"Peasantry Militian"
 	))
 
 GLOBAL_LIST_INIT(blue_positions, list(
-	"Grenzelhoft Lord",
-	"Grenzelhoft Infantry"
+	"Regimian Low-Lord",
+	"Regimian Regiman"
 	))
 
 GLOBAL_LIST_INIT(test_positions, list(

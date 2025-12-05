@@ -436,7 +436,7 @@
 /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander/blue
 	color = "#ffffff"
 	name = "lords coat"
-	desc = "A heavy dark coat worn by Grenzelhoft lords, decorated with epaulettes and various medals earned over the yils."
+	desc = "A heavy dark coat worn by Regimian Low-Lords, decorated with epaulettes and various medals earned over the yils."
 	icon_state = "grenzcommcoat"
 	item_state = "grenzcommcoat"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
