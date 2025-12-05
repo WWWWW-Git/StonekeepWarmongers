@@ -9,9 +9,12 @@ body {
 
 #top_handwriting {
 	font-weight: 400;
+	font-family: 'GenericTypewriter', Pterra;
+	text-shadow: #ff0000 1px 0 10px;
 	font-style: normal;
-	font-size: 30px;
-	color:#ab2020;
+	text-align: center;
+	font-size: 25px;
+	color:#ff0000;
 }
 
 #class_select_box_div
@@ -38,6 +41,7 @@ a.vagrant:link, a.vagrant:visited, a.vagrant:active, .linkOn, .linkOff
 {
   	font-weight: 700;
   	font-style: normal;
+	font-family: 'GenericTypewriter', Pterra;
 	font-size: 20px;
 
 	color: #9a9b70;
@@ -48,13 +52,17 @@ a.vagrant:link, a.vagrant:visited, a.vagrant:active, .linkOn, .linkOff
 	padding: 1px 1px 1px 1px;
 	margin: 0 2px 0 0;
 	cursor:default;
+	transition: 0.3s;
 }
 
 a.vagrant:hover
 {
 	color: #ffffff;
-	font-size: 30px;
-
+	cursor: pointer;
+	text-shadow:
+		1px 1px 2px red,
+		0 0 1em blue,
+		0 0 0.2em blue;
 }
 
 a.vagrant:hover img.ninetysskull {
@@ -74,12 +82,17 @@ a.bottom_buttons, a.bottom_buttons:link, a.bottom_buttons:visited, a.bottom_butt
 	padding: 1px 4px 1px 4px;
 	margin: 0 2px 0 0;
 	cursor:default;
+	transition: 0.3s;
 }
 
 a.bottom_buttons:hover
 {
 	color: #ffffff;
-
+	cursor: pointer;
+	text-shadow:
+		1px 1px 2px red,
+		0 0 1em blue,
+		0 0 0.2em blue;
 }
 
 a.mo_bottom_buttons, a.mo_bottom_buttons:link, a.mo_bottom_buttons:visited, a.mo_bottom_buttons:active {
@@ -95,12 +108,17 @@ a.mo_bottom_buttons, a.mo_bottom_buttons:link, a.mo_bottom_buttons:visited, a.mo
 	padding: 1px 4px 1px 4px;
 	margin: 0 2px 0 0;
 	cursor:default;
+	transition: 0.3s;
 }
 
 a.mo_bottom_buttons:hover
 {
 	color: #ffffff;
-
+	cursor: pointer;
+	text-shadow:
+		1px 1px 2px red,
+		0 0 1em blue,
+		0 0 0.2em blue;
 }
 
 .bottom_button_cost {
@@ -124,12 +142,17 @@ a.class_desc_YES_LINK, a.class_desc_YES_LINK:link, a.class_desc_YES_LINK:visited
 	padding: 1px 4px 1px 4px;
 	margin: 0 2px 0 0;
 	cursor:default;
+	transition: 0.3s;
 }
 
 a.class_desc_YES_LINK:hover
 {
 	color: #ffffff;
-
+	cursor: pointer;
+	text-shadow:
+		1px 1px 2px red,
+		0 0 1em blue,
+		0 0 0.2em blue;
 }
 
 .footer {
@@ -148,13 +171,15 @@ a.class_desc_YES_LINK:hover
 .title_shit {
 	font-weight: 700;
 	font-style: normal;
-	font-size: 30px;
+	font-size: 25px;
+	font-family: 'GenericTypewriter', Pterra;
 	color: #570000;
 }
 
 .post_title_shit{
 	font-weight: 400;
 	font-size: 20px;
+	font-family: 'GenericTypewriter', Pterra;
 	font-style: normal;
 	color: #bc0000;
 }
