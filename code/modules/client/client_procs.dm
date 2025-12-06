@@ -1096,7 +1096,6 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 	#ifndef TESTING
 	fullscreen()
 	#endif
-	preload_sounds()
 
 /client/proc/give_award(achievement_type, mob/user)
 	return	player_details.achievements.unlock(achievement_type, mob/user)

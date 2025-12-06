@@ -88,10 +88,10 @@
 
 #define AMB_TOWNDAY list('sound/ambience/townday.ogg')
 
-#define MUSIC_COMBAT list('sound/music/combatgrenzelhoft.ogg',\
-						'sound/music/combatheartfelt.ogg',\
-						'sound/music/combatelite.ogg',\
-						'sound/music/combatspecial.ogg')
+#define MUSIC_COMBAT list('sound/music/root.ogg',\
+						'sound/music/drunkandlovingit.ogg',\
+						'sound/music/prayformoreammo.ogg',\
+						'sound/music/soberandhatingit.ogg')
 
 #define AMB_MOUNTAIN list('sound/ambience/MOUNTAIN (1).ogg',\
 						'sound/ambience/MOUNTAIN (2).ogg')

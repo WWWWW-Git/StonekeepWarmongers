@@ -127,7 +127,7 @@
 			// a  .. z
 			if(97 to 122)			//Lowercase Letters
 				if(last_char_group<2)
-//					t_out += ascii2text(ascii_char-32)	//Force uppercase first character
+					t_out += ascii2text(ascii_char-32)	//Force uppercase first character
 					t_out += ascii2text(ascii_char)
 				else
 					t_out += ascii2text(ascii_char)
@@ -175,7 +175,7 @@
 	if(last_char_group == 1)
 		t_out = copytext(t_out,1,length(t_out))	//removes the last character (in this case a space)
 
-	for(var/bad_name in list("space","floor","wall","r-wall","monkey","unknown","inactive ai"))	//prevents these common metagamey names
+	for(var/bad_name in list("space","floor","wall","r-wall","monkey","unknown","inactive ai","warmongers","zape",""))	//prevents these common metagamey names
 		if(cmptext(t_out,bad_name))
 			return	//(not case sensitive)
 

@@ -217,6 +217,8 @@
 	set category = "Options"
 	set name = "Preload Music (!)"
 
+	var/i = 1
 	for(var/music in MUSIC_COMBAT)
 		mob.playsound_local(mob, music, 0.1)
-		sleep(10)
+		to_chat(mob, "[i]")
+		i++

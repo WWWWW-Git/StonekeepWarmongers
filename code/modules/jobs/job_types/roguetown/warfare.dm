@@ -36,15 +36,17 @@
 		//HU.add_client_colour(/datum/client_colour/sepia)
 		switch(HU.warfare_faction)
 			if(RED_WARTEAM)
-				if(HU.cmode != 'sound/music/soberandhatingit.ogg')
+				if(HU.cmode_music == 'sound/music/root.ogg')
 					HU.cmode_music = 'sound/music/drunkandlovingit.ogg'
 				HU.speech_sound = list('sound/vo/wc/speech_ppr1.ogg', 'sound/vo/wc/speech_ppr2.ogg', 'sound/vo/wc/speech_ppr3.ogg')
 			if(BLUE_WARTEAM)
-				if(HU.cmode != 'sound/music/makeamartyrofme.ogg')
+				if(HU.cmode_music == 'sound/music/root.ogg')
 					HU.cmode_music = 'sound/music/prayformoreammo.ogg'
 				HU.speech_sound = list('sound/vo/wc/speech_regimer1.ogg', 'sound/vo/wc/speech_regimer2.ogg', 'sound/vo/wc/speech_regimer3.ogg')
+		// root.ogg is the default combat music for every mob. it basically checks if combat music was set already, and if not, it sets it. Possibly dumb, but it works and nobody is a coder for this codebase except me :)
 		if(HAS_TRAIT(HU, TRAIT_NOBLE))
 			HU.speech_sound = 'sound/vo/speech_lord.ogg'
+		HU.client.preload_sounds()
 
 // Lord Procs
 
@@ -57,7 +59,7 @@
 	if(stat != CONSCIOUS)
 		to_chat(src, "<span class='warning'>You're incapable.</span>")
 		return
-	var/ann = input(usr, "ANNOUNCE TO YOUR FLOCK!", "WARMONGERS") as null|text
+	var/ann = browser_input_text(src, "ANNOUNCE TO YOUR FLOCK!","BRASS HORN",max_length=MAX_BROADCAST_LEN, multiline=TRUE)
 
 	if(ann)
 		shoutbubble()
@@ -74,7 +76,7 @@
 	if(stat != CONSCIOUS)
 		to_chat(src, "<span class='warning'>You're incapable.</span>")
 		return
-	var/ann = input(usr, "COMMAND YOUR FLOCK!", "WARMONGERS") as null|text
+	var/ann = browser_input_text(src, "COMMAND YOUR FLOCK!","BRASS HORN",max_length=MAX_BROADCAST_LEN, multiline=TRUE)
 
 	if(ann)
 		shoutbubble()
@@ -272,6 +274,7 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.cmode_music = 'sound/music/soberandhatingit.ogg'
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_BLOODLOSS_IMMUNE, TRAIT_GENERIC)
 
 ////////////// RED SOLDIERS AND CLASSES /////////////////
 
@@ -685,6 +688,7 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/inspire)
 		H.cmode_music = 'sound/music/makeamartyrofme.ogg'
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_BLOODLOSS_IMMUNE, TRAIT_GENERIC)
 
 /////// BLU SOLDIERS AND CLASSES /////////////////
 

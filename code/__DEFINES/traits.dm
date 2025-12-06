@@ -76,6 +76,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_JESTER = "I AM JESTER BLOODED! HONK HONK!!! HAHAHAHAHAAAAAAAAAA!",
 	TRAIT_OFFICER = "I know how to see the battlefield and judge it so I can improve our chances of winning.",
 	TRAIT_SNIPER = "Helmets won't stop that lead ball getting inside your noggin, I'll make sure of that.",
+	TRAIT_BLOODLOSS_IMMUNE = "Some measly loss of blood will not stop me from <span class='warning'>enforcing the will of my empire.</span>",
 	TRAIT_RIVERSWIMMER = "I am one Hell of a swimmer.",
 	TRAIT_NINJA = "I am an elite ninja of Heartfelt.",
 	TRAIT_NOMOOD = "I just can't bother to care anymore.",
@@ -243,7 +244,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_NOPAIN			"no_pain"
 #define TRAIT_DRUQK				"druqk"
 #define TRAIT_BURIED_COIN_GIVEN "buried_coin_given" // prevents a human corpse from being used for a corpse multiple times
-#define TRAIT_BLOODLOSS_IMMUNE "bloodloss_immune" // can bleed, but will never die from blood loss
+#define TRAIT_BLOODLOSS_IMMUNE "Perpetual" // can bleed, but will never die from blood loss
 #define TRAIT_ROTMAN "rotman" //you are a rotman and need occasional maintenance
 #define TRAIT_ZOMBIE_IMMUNE "zombie_immune" //immune to zombie infection
 #define TRAIT_NO_BITE "no_bite" //prevents biting
