@@ -104,19 +104,19 @@ GLOBAL_VAR_INIT(dayspassed, FALSE)
 		var/text_to_show
 		switch(GLOB.dayspassed)
 			if(1)
-				text_to_show = "DAWN OF THE FIRST DAE\nMOON'S DAE"
+				text_to_show = "DAWN OF THE FIRST DEA\nMOONSDEA"
 			if(2)
-				text_to_show = "DAWN OF THE SECOND DAE\nTIW'S DAE"
+				text_to_show = "DAWN OF THE SECOND DEA\nCHEWSDEA"
 			if(3)
-				text_to_show = "DAWN OF THE THIRD DAE\nWEDDING'S DAE"
+				text_to_show = "DAWN OF THE THIRD DEA\nWHENSDEA"
 			if(4)
-				text_to_show = "DAWN OF THE FOURTH DAE\nTHULE'S DAE"
+				text_to_show = "DAWN OF THE FOURTH DEA\nTHERESDEA"
 			if(5)
-				text_to_show = "DAWN OF THE FIFTH DAE\nFREYJA'S DAE"
+				text_to_show = "DAWN OF THE FIFTH DEA\nFRIESDEA"
 			if(6)
-				text_to_show = "DAWN OF THE SIXTH DAE\nSATURN'S DAE"
+				text_to_show = "DAWN OF THE SIXTH DEA\nSATERDEA"
 			if(7)
-				text_to_show = "DAWN OF THE SEVENTH DAE\nSUN'S DAE"
+				text_to_show = "DAWN OF THE SEVENTH DEA\nSUNSDEA"
 		if(!text_to_show)
 			return
 		if(text_to_show in mind.areas_entered)
@@ -125,7 +125,7 @@ GLOBAL_VAR_INIT(dayspassed, FALSE)
 		var/atom/movable/screen/area_text/T = new()
 		client.screen += T
 		T.maptext = {"<span style='vertical-align:top; text-align:center;
-					color: #7c5b10; font-size: 150%;
+					color: #6b9976ff; font-size: 150%;
 					text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 					font-family: "Nosfer", "Pterra";'>[text_to_show]</span>"}
 		T.maptext_width = 205
