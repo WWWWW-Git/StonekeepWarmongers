@@ -303,7 +303,6 @@
 "Gt" = (/turf/closed/wall/mineral/rogue/craftstone,/area/rogue/assault/gates{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
 "GD" = (/obj/structure/stairs/stone/church{dir = 4},/turf/open/transparent/openspace,/area/rogue/indoors/town)
 "GF" = (/obj/structure/rack/rogue,/obj/item/rogueweapon/shield/woodwar{pixel_x = 10},/obj/item/rogueweapon/shield/woodwar{pixel_x = 5},/obj/item/rogueweapon/shield/woodwar{pixel_x = -10},/obj/item/rogueweapon/shield/woodwar,/obj/item/rogueweapon/shield/woodwar{pixel_x = -5},/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
-"GH" = (/obj/item/rogue/ramrodbig{pixel_y = -10},/obj/item/rogue/ramrodbig,/obj/item/rogue/ramrodbig{pixel_y = -25},/turf/open/floor/rogue/cobblerock,/area/rogue/outdoors)
 "GJ" = (/obj/structure/roguewindow,/obj/structure/barricade/wooden/rogue/crude,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "GK" = (/obj/structure/mineral_door/wood/deadbolt{dir = 1},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "GT" = (/turf/open/floor/rogue/carpet/lord/center,/area/rogue/assault/throneroom{droning_sound_current = 'sound/blank.ogg'; droning_sound_dawn = 'sound/blank.ogg'})
@@ -396,7 +395,6 @@
 "QN" = (/obj/structure/fluff/walldeco/bigpainting/beast{pixel_x = -15},/turf/open/floor/rogue/tile,/area/rogue/indoors/town)
 "QQ" = (/obj/structure/fluff/railing/fence{dir = 8},/turf/open/floor/rogue/grass,/area/rogue/outdoors)
 "Rb" = (/obj/item/ammo_casing/caseless/rogue/cball{pixel_y = -12; pixel_x = -6},/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
-"Ri" = (/obj/item/rogue/ramrodbig{pixel_y = -10; pixel_x = 0},/obj/item/rogue/ramrodbig{pixel_x = -18; pixel_y = -10},/obj/item/rogue/ramrodbig{pixel_y = -10; pixel_x = -10},/obj/structure/rack/rogue,/turf/open/floor/rogue/blocks,/area/rogue/indoors/town)
 "Rr" = (/obj/structure/fluff/railing/wood,/obj/structure/warfarebarrier,/turf/open/transparent/openspace,/area/rogue/outdoors)
 "RC" = (/obj/structure/closet/crate/chest,/obj/item/reagent_containers/glass/bottle/rogue/beer,/turf/open/floor/rogue/woodturned/nosmooth,/area/rogue/indoors/town)
 "RD" = (/obj/item/rogue/sandbagkit,/turf/open/floor/rogue/ruinedwood,/area/rogue/indoors/town)
@@ -574,7 +572,7 @@ QQbcuUfCuUbcuUuUfCuUuUfCfCfCuUbcuUfCfCbceWSBSBSBQQbcfCfCfCbcmomomomoOhmomomomoiS
 momomocimomomoNAfCfCfCfCuUxmmomomocimomomoqzSBSBmomomocimomomohXgUpzpzWHTZhXmomomocimomomo
 KwfJTZpzTZfJyFfCfCfCfCfCfCuUKwfJTZpzTZfJyFSBSBSBKwfJTZpzTZfJyFpzpzYaYaYapzpzKwfJTZpzTZfJyF
 KwfJpzfJpzfJyFuUfCfCfCuUfCuUKwfJpzfJpzfJyFSBSBahKwfJpzfJpzfJyFUOYaBzBedfYapzKwfJpzfJpzfJyF
-KwfJpzfJpzfJyFuUGWuUGWfCWxuUKwfJpzfJpzfJyFGHhTsxKwfJpzfJpzfJyFJCpzYaYaYapzuLKwfJpzfJpzfJyF
+KwfJpzfJpzfJyFuUGWuUGWfCWxuUKwfJpzfJpzfJyFSBhTsxKwfJpzfJpzfJyFJCpzYaYaYapzuLKwfJpzfJpzfJyF
 bmbmbmbmbmbmbmxmxmNAxmxmxmxmbmbmbmbmbmbmbmSBSBVNbmbmbmbmbmbmbmbmTXbmbmbmTXbmbmbmbmbmbmbmbm
 "}
 (1,1,2) = {"
@@ -627,7 +625,7 @@ ININhUrkrkrkrkrkhUUIUIUIhUhULthUhUhULthUhUUhUhUhhUhULthUhUhULthUhUUIUIUIhUhUhULt
 ININUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIrCUIrCUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIUIININ
 ININUIUIUIUIUIUIwZwZwZwZwZUIUIUIUIUIUIUIUIrCUIrCUIUIUIUIUIUIUIUIwZwZwZwZwZUIUIUIUIUIUIININ
 ININUIUIUIUIUIUIoBWbWbWbhhUIUIUIdDdDBMBMdDIodDIodDBMBMdDdDUIUIUIoBWbWbWbhhUIUIUIUIUIUIININ
-dDdDdDdDdDwZwZwZjeMyMyMyaIwZwZwZdDxTRiIoIoCxFUCxIoIoRixTdDwZwZwZjeMyMyMyaIwZwZwZdDdDdDdDdD
+dDdDdDdDdDwZwZwZjeMyMyMyaIwZwZwZdDxTIoIoIoCxFUCxIoIoIoxTdDwZwZwZjeMyMyMyaIwZwZwZdDdDdDdDdD
 dDdDdDdDdDAFWbWbWbWbWbWbWbWbWbCUdDIoIoIoParkrkrkfOIoIoIodDhFWbWbWbWbWbWbWbWbWbAFdDdDdDdDdD
 dDdDdDdDdDUlWbWbWbWbWbWbWbWbWbWbVhIoIooARSrkrkrkfOoAIoIookWbWbWbWbWbWbWbWbWbWbrKdDdDdDdDdD
 dDdDdDdDdDdZWbWbWbWbWbWbWbWbWbWbdDRbIoIoRSrkrkrkfOIoIoQFdDWbWbWbWbWbWbWbWbWbWbdZdDdDdDdDdD
