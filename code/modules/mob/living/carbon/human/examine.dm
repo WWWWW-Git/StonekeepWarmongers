@@ -233,7 +233,7 @@
 				msg += "<span class='bloody'>[capitalize(m2)] [english_list(bleeding_limbs)] [bleeding_limbs.len > 1 ? "are" : "is"] [bleed_wording]!</span>"
 		else
 			if(bleed_rate >= 5)
-				msg += "<span class='bloody'><B>[m1] [bleed_wording]</B>!</span>"
+				msg += "<span class='bloody'><B>[m1] [bleed_wording]!</B></span>"
 			else
 				msg += "<span class='bloody'>[m1] [bleed_wording]!</span>"
 
