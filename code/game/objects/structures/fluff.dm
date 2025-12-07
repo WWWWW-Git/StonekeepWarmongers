@@ -356,6 +356,16 @@
 	desc = "A flag of the People's Peasant Union. A full mug of Bier is on it, and it is topped with a fork. The motto 'Shake the ground with every step' is etched onto its design."
 	icon_state = "redflag"
 
+/obj/structure/fluff/wheel
+	name = "helm"
+	desc = "Steers the boat."
+	icon = 'icons/roguetown/misc/structure.dmi'
+	icon_state = "wheel"
+	anchored = TRUE
+	climbable = FALSE
+	density = TRUE
+	opacity = FALSE
+
 /obj/structure/fluff/railing/fence
 	name = "palisade"
 	desc = ""
@@ -1101,6 +1111,11 @@
 	name = "wooden pantheon cross"
 	icon_state = "psycrosscrafted"
 	chance2hear = 10
+
+/obj/structure/fluff/psycross/regime
+	name = "KAITZARKROSS"
+	desc = "A KAITZARKROSS, a symbol of religious worship within the Regime. Represents the body of the KAITZAR and how integral he is to holding the Regime together. Praise be."
+	icon_state = "regimecross"
 
 /obj/structure/fluff/psycross/attackby(obj/item/W, mob/user, params)
 	if(user.mind)

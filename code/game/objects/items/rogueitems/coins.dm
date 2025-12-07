@@ -1,6 +1,7 @@
 #define CTYPE_GOLD "g"
 #define CTYPE_SILV "s"
 #define CTYPE_COPP "c"
+#define CTYPE_MONGREL "m"
 #define MAX_COIN_STACK_SIZE 20
 
 /obj/item/roguecoin
@@ -195,6 +196,16 @@
 	base_type = CTYPE_COPP
 	plural_name = "zennies"
 
+
+// MONGREL COIN
+/obj/item/roguecoin/mongrel
+	name = "mongrel"
+	desc = "Copper, silver, and gold coinage went out of use in favor of dulliron. The means to mint the former coins were lost, and the majority were smelted down for use in other things. The coin got its nickname from what most people call dulliron, 'Mongrel metal', due to its cheap nature."
+	icon_state = "m1"
+	sellprice = 1
+	base_type = CTYPE_COPP
+	plural_name = "mongrels"
+
 /obj/item/roguecoin/copper/pile/Initialize()
 	. = ..()
 	set_quantity(rand(4,19))
@@ -222,4 +233,5 @@
 #undef CTYPE_GOLD
 #undef CTYPE_SILV
 #undef CTYPE_COPP
+#undef CTYPE_MONGREL
 #undef MAX_COIN_STACK_SIZE

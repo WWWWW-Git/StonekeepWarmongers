@@ -1,0 +1,17689 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ad" = (
+/obj/structure/closet/crate/drawer/inn,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"ak" = (
+/obj/structure/bars/pipe{
+	pixel_x = 14
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"ap" = (
+/obj/structure/bars/pipe{
+	dir = 1
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"aG" = (
+/obj/structure/bars/pipe{
+	pixel_x = 14
+	},
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = -30
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"aI" = (
+/obj/structure/chair/wood/rogue{
+	dir = 1
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"aP" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood/gibs/limb,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"aQ" = (
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"bo" = (
+/obj/structure/well{
+	desc = "You see bodies piled up at the bottom. Dead eyes stare back at you."
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"bB" = (
+/obj/machinery/light/rogue/lanternpost/fixed,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"bC" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood/gibs/limb,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"bH" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 4
+	},
+/area/rogue/indoors/town/dungeon)
+"bM" = (
+/obj/structure/bearpelt{
+	pixel_x = -16
+	},
+/turf/open/floor/carpet/inn,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"bS" = (
+/obj/item/natural/stone,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"cc" = (
+/obj/effect/decal/remains/human{
+	pixel_x = -13;
+	pixel_y = 11
+	},
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/spawner/roguemap/warmongers/lootgood,
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"ck" = (
+/obj/effect/landmark/events/haunts,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"co" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8
+	},
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"cv" = (
+/obj/machinery/light/rogue/lanternpost/fixed{
+	dir = 1
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"cC" = (
+/obj/structure/chair/bench{
+	dir = 4
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"cF" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8;
+	pixel_y = 10
+	},
+/obj/structure/fluff/railing/wood,
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"cM" = (
+/obj/structure/bars/pipe,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"cN" = (
+/obj/structure/table/wood/large/corner{
+	dir = 1
+	},
+/obj/item/reagent_containers/food/snacks/rogue/pieslice,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"cO" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/rope{
+	pixel_x = -5
+	},
+/obj/item/rope{
+	pixel_x = 4
+	},
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"cP" = (
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey{
+	dir = 4
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"cU" = (
+/turf/open/water/river{
+	dir = 1
+	},
+/area/rogue/indoors/town/dungeon)
+"cY" = (
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"db" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"de" = (
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"dj" = (
+/obj/structure/fluff/standingflag,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"dx" = (
+/obj/structure/bars/pipe{
+	dir = 4
+	},
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"dA" = (
+/turf/open/floor/rogue/tile/bfloorz,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"dE" = (
+/obj/item/natural/rock,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"dG" = (
+/obj/structure/stairs{
+	dir = 8
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"dI" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"dJ" = (
+/obj/item/natural/stone,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"dK" = (
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"ed" = (
+/obj/structure/table/wood/large/corner{
+	dir = 9
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"ee" = (
+/obj/structure/flora/roguetree/burnt,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"ef" = (
+/obj/structure/fluff/railing/fence{
+	dir = 1
+	},
+/obj/structure/fluff/railing/fence{
+	dir = 4
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"es" = (
+/obj/structure/bars/pipe{
+	dir = 1
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"ew" = (
+/obj/structure/stairs/stone{
+	dir = 8
+	},
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"ex" = (
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"ez" = (
+/obj/structure/bars/pipe{
+	dir = 4
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"eM" = (
+/obj/structure/bars/pipe{
+	dir = 6
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"eP" = (
+/obj/structure/roguemachine/scomm,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"eQ" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/natural/cloth,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"eR" = (
+/obj/structure/table/wood/reinforced,
+/obj/item/cooking/pan,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"eZ" = (
+/obj/machinery/light/rogue/torchholder/r,
+/obj/structure/bars/pipe{
+	dir = 4
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"fe" = (
+/obj/item/natural/stone,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"fA" = (
+/obj/structure/table/wood/large/corner_alt{
+	dir = 6
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"fU" = (
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"fV" = (
+/obj/structure/mineral_door/wood/donjon/stone,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"fZ" = (
+/obj/structure/teambarrier/blue,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"gc" = (
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"gj" = (
+/obj/effect/spawner/roguemap/warmongers/lootbasic,
+/obj/structure/table/wood/large/corner{
+	dir = 6
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"gm" = (
+/obj/structure/chair/wood/rogue,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"gu" = (
+/obj/structure/gate/vertical/bars/left{
+	redstone_id = "innergate2";
+	gid = "innergate2"
+	},
+/turf/open/floor/rogue/metal,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"gK" = (
+/obj/structure/table/wood/plain,
+/obj/item/storage/backpack/rogue/satchel/surgbag{
+	pixel_y = 5
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"gV" = (
+/obj/effect/landmark/events/haunts,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"gX" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4;
+	pixel_y = 10
+	},
+/obj/structure/fluff/railing/wood,
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"he" = (
+/turf/closed/wall/mineral/rogue/craftstone,
+/area/rogue/indoors/town/dungeon)
+"hj" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/mace/cudgel/war{
+	pixel_x = -5
+	},
+/obj/item/rogueweapon/mace/cudgel/war,
+/obj/item/rogueweapon/mace/cudgel/war{
+	pixel_x = 5
+	},
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"hk" = (
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"hs" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8;
+	pixel_y = 5
+	},
+/obj/structure/fluff/railing/wood,
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"ht" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = -1;
+	pixel_x = -5
+	},
+/obj/structure/fluff/statue/pillar{
+	name = "post";
+	desc = "You can only guess how many unfortunates were tied to this and shot dead."
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"hv" = (
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = -32
+	},
+/obj/structure/bars/pipe,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"hw" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"hC" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = -12;
+	pixel_x = 40
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"hF" = (
+/obj/structure/bars/pipe{
+	dir = 5;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"hH" = (
+/obj/structure/bars/pipe{
+	dir = 8
+	},
+/obj/structure/warfarebarrier/red,
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"hI" = (
+/obj/structure/table/wood/large/corner,
+/obj/item/reagent_containers/food/snacks/rogue/pieslice{
+	pixel_y = 8;
+	pixel_x = 3
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"hT" = (
+/obj/structure/chair/stool/rogue,
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"hY" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = 10;
+	pixel_x = 13
+	},
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"ie" = (
+/turf/closed/wall/mineral/rogue/stone,
+/area/rogue/indoors/town/dungeon)
+"ik" = (
+/obj/machinery/light/rogue/hearth,
+/obj/item/cooking/pan,
+/obj/item/reagent_containers/food/snacks/rogue/meat/poultry/cutlet/fried,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"iv" = (
+/obj/structure/table/wood/large/corner,
+/obj/item/reagent_containers/glass/bottle/rogue/wine/waterwine{
+	pixel_y = 14;
+	pixel_x = 6
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"iA" = (
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey{
+	dir = 4
+	},
+/area/rogue/indoors/town/dungeon)
+"iO" = (
+/obj/structure/bars/pipe,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"iU" = (
+/obj/structure/bars/pipe{
+	dir = 8
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"iW" = (
+/obj/structure/closet/crate/chest/old_crate,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/obj/item/reagent_containers/food/snacks/rogue/meat/steak,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"iY" = (
+/obj/effect/landmark/events/haunts,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"jc" = (
+/obj/structure/fluff/railing/border{
+	dir = 6
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"jd" = (
+/obj/structure/mineral_door/bars{
+	door_opened = 1
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"ju" = (
+/obj/structure/table/wood/large/corner_alt{
+	dir = 5
+	},
+/obj/item/reagent_containers/glass/cup{
+	pixel_x = -7;
+	pixel_y = -8
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"jy" = (
+/obj/structure/barricade/sandbags/rogue,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"jz" = (
+/obj/structure/bed/rogue/inn/wool,
+/obj/item/bedsheet/rogue/wool,
+/obj/effect/landmark/start/grenzelinfantry{
+	dir = 8
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"jT" = (
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_x = -19
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"ke" = (
+/obj/structure/bars/pipe{
+	dir = 1;
+	pixel_y = -17
+	},
+/obj/structure/bars/pipe{
+	dir = 10;
+	pixel_y = -16
+	},
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_x = 4
+	},
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/outdoors)
+"kg" = (
+/obj/item/reagent_containers/food/snacks/smallrat,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"kl" = (
+/obj/structure/stairs{
+	dir = 8
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"kp" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"kt" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = 30
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"kv" = (
+/obj/structure/stairs/stone,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"kJ" = (
+/obj/structure/warfarebarrier/red,
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"kN" = (
+/obj/item/natural/rock,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"kO" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = 9;
+	pixel_x = 4
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"kR" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = 30
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"kU" = (
+/obj/structure/fluff/psycross/regime,
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"le" = (
+/obj/structure/bars/pipe{
+	dir = 5
+	},
+/turf/open/floor/rogue/ruinedwood,
+/area/rogue/outdoors)
+"lg" = (
+/obj/structure/bed/rogue/inn/double,
+/obj/item/bedsheet/rogue/double_pelt,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"lh" = (
+/obj/effect/landmark/events/haunts,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"ll" = (
+/obj/structure/bars/pipe{
+	dir = 4;
+	pixel_y = 15
+	},
+/obj/structure/bars/pipe{
+	dir = 10;
+	pixel_x = 19;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"lo" = (
+/obj/structure/bars/pipe{
+	dir = 8;
+	pixel_y = 17
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"lw" = (
+/obj/structure/roguemachine/scomm,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"lA" = (
+/obj/structure/table/wood/large/corner_alt,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"lC" = (
+/obj/structure/closet/crate/chest/old_crate,
+/obj/item/quiver/bullets{
+	pixel_x = -7
+	},
+/obj/item/quiver/bullets{
+	pixel_x = 7
+	},
+/obj/item/quiver/bullets{
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"ma" = (
+/obj/structure/warfarebarrier,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"mh" = (
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = 0;
+	dir = 1
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"mo" = (
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"mt" = (
+/obj/structure/winch{
+	redstone_id = "innergate1";
+	gid = "innergate1"
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"mu" = (
+/obj/structure/bars/pipe{
+	dir = 1
+	},
+/turf/open/floor/rogue/plank/h,
+/area/rogue/outdoors)
+"mB" = (
+/obj/structure/bars/pipe{
+	dir = 4;
+	pixel_y = -15
+	},
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"mH" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = 30
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"mJ" = (
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"mM" = (
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/rogue/outdoors)
+"mP" = (
+/obj/effect/landmark/redreinforcement,
+/obj/item/natural/stone,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"mS" = (
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"mU" = (
+/obj/item/natural/dirtclod,
+/obj/structure/barricade/sandbags/rogue,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"mV" = (
+/obj/structure/bars/pipe{
+	pixel_x = 11
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"ne" = (
+/obj/structure/warfarebarrier/red,
+/obj/structure/teambarrier/red,
+/obj/structure/teambarrier/red,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"nf" = (
+/obj/structure/bars/pipe{
+	dir = 8
+	},
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"np" = (
+/obj/effect/landmark/start/heartfeltinfantry{
+	dir = 1
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"ny" = (
+/turf/closed/mineral/rogue/bedrock,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"nE" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = 30
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"nF" = (
+/obj/structure/bars/pipe{
+	dir = 5;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"nP" = (
+/obj/structure/roguemachine/scomm/l,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"nT" = (
+/obj/item/natural/stone,
+/obj/structure/barricade/sandbags/rogue,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"oc" = (
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"op" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/woodcut/war{
+	pixel_x = -5
+	},
+/obj/item/rogueweapon/woodcut/war,
+/obj/item/rogueweapon/woodcut/war{
+	pixel_x = 5
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"ox" = (
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"oF" = (
+/obj/structure/mineral_door/wood/window,
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"oX" = (
+/obj/structure/fluff/railing/border{
+	dir = 1
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"pa" = (
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"pf" = (
+/obj/machinery/light/rogue/wallfire/candle{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"pI" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = -30
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"pR" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_x = -14
+	},
+/obj/structure/fluff/statue/pillar{
+	name = "post";
+	desc = "You can only guess how many unfortunates were tied to this and shot dead."
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"pU" = (
+/obj/effect/landmark/start/heartfeltlord{
+	dir = 1
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors)
+"pW" = (
+/obj/effect/landmark/events/haunts,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"pZ" = (
+/obj/structure/roguemachine/scomm{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"qg" = (
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey,
+/area/rogue/indoors/town/dungeon)
+"qk" = (
+/obj/machinery/light/rogue/firebowl/standing,
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"qr" = (
+/obj/structure/bars/pipe{
+	dir = 4
+	},
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"qw" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/rogue/sandbagkit{
+	pixel_x = -7
+	},
+/obj/item/rogue/sandbagkit{
+	pixel_x = 5
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"qB" = (
+/obj/structure/fluff/railing/border{
+	dir = 6
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"qH" = (
+/obj/structure/bars/pipe{
+	dir = 1;
+	pixel_y = -17
+	},
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 4
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"qO" = (
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors/town/dungeon)
+"qP" = (
+/obj/structure/flora/roguetree/burnt,
+/obj/structure/fluff/railing/border,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"qY" = (
+/obj/machinery/light/rogue/torchholder/c,
+/obj/structure/bars/pipe{
+	dir = 1
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"rc" = (
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/indoors/town/dungeon)
+"ri" = (
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"rn" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"rs" = (
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"rz" = (
+/obj/structure/bars,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"rF" = (
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"rP" = (
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey{
+	dir = 1
+	},
+/area/rogue/indoors/town/dungeon)
+"rT" = (
+/obj/structure/table/wood/reinforced,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/dungeon)
+"rV" = (
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"se" = (
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/outdoors)
+"sf" = (
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"ss" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = -16
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"st" = (
+/obj/structure/bars/pipe{
+	dir = 4
+	},
+/turf/open/floor/rogue/plank,
+/area/rogue/outdoors)
+"sC" = (
+/obj/structure/bars/pipe{
+	dir = 4
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"sL" = (
+/obj/structure/fluff/railing/wood,
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"sO" = (
+/obj/structure/teambarrier/blue,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"sT" = (
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_y = -15
+	},
+/obj/structure/bars/pipe{
+	dir = 1;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/outdoors)
+"sU" = (
+/obj/structure/fluff/standingflag,
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"sX" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/structure/bars,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"tm" = (
+/obj/structure/stairs/stone{
+	dir = 8
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"tp" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = 30
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"tD" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/rope/chain,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"tF" = (
+/obj/structure/fluff/standingflag,
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"tI" = (
+/obj/structure/bars/pipe{
+	dir = 5;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"tM" = (
+/obj/structure/table/wood/large/corner,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"tP" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_x = 15;
+	pixel_y = 1
+	},
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"tX" = (
+/obj/structure/bars/pipe{
+	dir = 10
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"uk" = (
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/tile/bfloorz,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"us" = (
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/metal,
+/area/rogue/indoors/town/dungeon)
+"uz" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1
+	},
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"uE" = (
+/obj/structure/table/wood/large/corner_alt{
+	dir = 1
+	},
+/obj/item/reagent_containers/glass/bottle/rogue/wine/waterwine{
+	pixel_y = -7;
+	pixel_x = -9
+	},
+/obj/item/roguecoin/mongrel{
+	pixel_y = -10;
+	pixel_x = -1;
+	quantity = 19
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"uI" = (
+/obj/structure/table/wood/reinforced_alt,
+/obj/effect/spawner/roguemap/warmongers/lootbasic,
+/turf/open/floor/rogue/church,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"uV" = (
+/obj/structure/mineral_door/bars{
+	door_opened = 1
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"vd" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/reagent_containers/food/snacks/grown/potato/rogue,
+/obj/item/reagent_containers/food/snacks/grown/potato/rogue,
+/obj/item/reagent_containers/food/snacks/grown/potato/rogue,
+/obj/item/reagent_containers/food/snacks/grown/potato/rogue,
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"vg" = (
+/obj/effect/landmark/events/haunts,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"vi" = (
+/obj/structure/winch{
+	redstone_id = "innergate2";
+	gid = "innergate2"
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"vj" = (
+/obj/structure/bars/pipe{
+	dir = 8;
+	pixel_y = -15
+	},
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"vm" = (
+/obj/structure/fluff/railing/border{
+	dir = 4
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"vF" = (
+/obj/structure/roguemachine/scomm/l,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"vH" = (
+/obj/structure/warfarebarrier,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"vN" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = -30
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"vR" = (
+/obj/structure/table/wood/large/corner_alt{
+	dir = 10
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"vX" = (
+/obj/machinery/light/rogue/wallfire{
+	pixel_y = -1
+	},
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"we" = (
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors/town/dungeon)
+"wm" = (
+/obj/structure/bars/pipe{
+	dir = 9;
+	pixel_x = 19;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"wG" = (
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"wH" = (
+/obj/machinery/light/rogue/torchholder/l{
+	dir = 8
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"wO" = (
+/obj/structure/warobjective/bloodstatue,
+/turf/open/floor/rogue/concrete,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"wR" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = 19;
+	pixel_x = 4
+	},
+/obj/structure/fluff/statue/pillar{
+	name = "post";
+	desc = "You can only guess how many unfortunates were tied to this and shot dead."
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"wS" = (
+/obj/structure/fluff/statue/pillar{
+	name = "post";
+	desc = "You can only guess how many unfortunates were tied to this and shot dead."
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"wY" = (
+/obj/effect/landmark/events/haunts,
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"xa" = (
+/obj/structure/table/wood/plain,
+/obj/effect/spawner/roguemap/warmongers/lootgood,
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"xd" = (
+/obj/structure/flora/roguegrass/bush/wall/tall,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"xe" = (
+/obj/structure/roguemachine/musicbox,
+/obj/structure/table/wood/plain,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"xf" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = 9;
+	pixel_x = -3
+	},
+/obj/structure/fluff/statue/pillar{
+	name = "post";
+	desc = "You can only guess how many unfortunates were tied to this and shot dead."
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"xt" = (
+/obj/structure/fluff/standingflag,
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"xB" = (
+/obj/machinery/light/rogue/torchholder/r,
+/obj/structure/bed/rogue/inn/pileofshit,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"xE" = (
+/obj/structure/stairs/stone{
+	dir = 8
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"xF" = (
+/obj/structure/barricade/sandbags/rogue,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"xJ" = (
+/obj/structure/stairs/stone{
+	dir = 8
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"xQ" = (
+/obj/structure/bars/pipe{
+	pixel_x = -15
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"xR" = (
+/obj/structure/bars/grille,
+/turf/open/transparent/openspace/airless,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"xS" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = 18
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"yh" = (
+/obj/structure/mineral_door/wood/donjon{
+	dir = 4
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/dungeon)
+"yj" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_x = 30
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"yt" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/reagent_containers/food/snacks/grown/onion/rogue,
+/obj/item/reagent_containers/food/snacks/grown/onion/rogue,
+/obj/item/reagent_containers/food/snacks/grown/onion/rogue,
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"yD" = (
+/obj/structure/table/wood/reinforced,
+/obj/structure/fluff/millstone,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"yG" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_x = -30
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"yH" = (
+/obj/structure/bars/pipe{
+	dir = 5;
+	pixel_y = -17;
+	pixel_x = 10
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"yO" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = 30;
+	pixel_x = 22
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"yR" = (
+/obj/item/natural/stone,
+/obj/structure/warfarebarrier/red,
+/obj/structure/teambarrier/red,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"yS" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood/gibs/limb{
+	pixel_y = 10;
+	dir = 2;
+	pixel_x = 5
+	},
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"yT" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_x = 14
+	},
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"yU" = (
+/obj/structure/table/wood/reinforced,
+/obj/item/reagent_containers/food/snacks/rogue/doughslice,
+/obj/item/reagent_containers/food/snacks/rogue/doughslice{
+	pixel_y = 7
+	},
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"yV" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 1
+	},
+/area/rogue/indoors/town/dungeon)
+"yW" = (
+/obj/structure/fluff/railing/border{
+	dir = 10
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"zg" = (
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = 0;
+	dir = 1
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"zo" = (
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"zB" = (
+/obj/structure/table/wood/large/corner_alt{
+	dir = 1
+	},
+/obj/effect/spawner/roguemap/warmongers/lootbasic,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"zC" = (
+/obj/structure/fluff/railing/border{
+	dir = 6
+	},
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"zD" = (
+/obj/structure/closet/crate/chest/wicker,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"zN" = (
+/obj/structure/bars/pipe{
+	dir = 10;
+	pixel_y = 18;
+	pixel_x = 18
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"zO" = (
+/obj/item/reagent_containers/glass/bucket/wooden,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"zV" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 4
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"zZ" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/kitchen/spoon{
+	pixel_x = -8
+	},
+/obj/item/kitchen/spoon,
+/obj/item/kitchen/spoon{
+	pixel_x = 8
+	},
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ac" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood/gibs/limb,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"Ad" = (
+/obj/effect/landmark/events/haunts,
+/obj/effect/landmark/blureinforcement,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ae" = (
+/turf/closed/wall/mineral/rogue/roofwall/center/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ak" = (
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"Au" = (
+/obj/effect/landmark/events/haunts,
+/turf/open/floor/rogue/tile/bfloorz,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Az" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"AB" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_x = 30
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"AC" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/reagent_containers/food/snacks/grown/cabbage/rogue,
+/obj/item/reagent_containers/food/snacks/grown/cabbage/rogue,
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"AO" = (
+/obj/structure/table/wood/plain,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"AU" = (
+/obj/structure/bars/pipe,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Be" = (
+/obj/structure/mineral_door/wood,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Br" = (
+/obj/structure/bars/pipe{
+	dir = 9;
+	pixel_x = 19
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Bv" = (
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Bz" = (
+/obj/structure/bars/pipe{
+	dir = 9;
+	pixel_x = 19;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"BJ" = (
+/obj/effect/landmark/events/testportal{
+	aportalloc = "thebattle"
+	},
+/obj/effect/landmark/observer_start,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"BS" = (
+/obj/structure/bars/pipe{
+	dir = 10;
+	pixel_y = 17
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"BX" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"BY" = (
+/obj/machinery/light/rogue/firebowl,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"Cb" = (
+/obj/structure/table/wood/reinforced,
+/obj/item/quiver/bullets{
+	pixel_x = -2;
+	pixel_y = 17
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/dungeon)
+"Cf" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"Cx" = (
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"CC" = (
+/obj/structure/bars/pipe{
+	dir = 4
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"CF" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/cooking/platter{
+	pixel_y = -5
+	},
+/obj/item/cooking/platter{
+	pixel_y = -3
+	},
+/obj/item/cooking/platter{
+	pixel_y = -1
+	},
+/obj/item/cooking/platter{
+	pixel_y = 1
+	},
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"CO" = (
+/obj/structure/bars/pipe{
+	dir = 5;
+	pixel_x = -19
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"CQ" = (
+/turf/open/chasm/jungle,
+/area/rogue/indoors/town/dungeon)
+"CY" = (
+/obj/structure/table/wood/plain,
+/obj/item/flint{
+	pixel_x = -5
+	},
+/obj/item/flint{
+	pixel_x = 4;
+	pixel_y = 2
+	},
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Dh" = (
+/obj/structure/table/wood/reinforced,
+/obj/item/reagent_containers/food/snacks/rogue/dough,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Dm" = (
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey{
+	dir = 1
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Dp" = (
+/obj/structure/bars/pipe{
+	pixel_x = -16
+	},
+/obj/structure/bars/pipe{
+	pixel_x = 15
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ds" = (
+/obj/structure/bars/pipe{
+	dir = 5;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"Dv" = (
+/obj/structure/table/wood/large/corner{
+	dir = 1
+	},
+/obj/item/reagent_containers/glass/cup{
+	pixel_x = -7;
+	pixel_y = -8
+	},
+/obj/item/reagent_containers/glass/bottle/rogue/wine/waterwine{
+	pixel_y = 4;
+	pixel_x = -17
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"DE" = (
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"DO" = (
+/obj/structure/mineral_door/wood/violet,
+/turf/open/floor/rogue/church,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"DR" = (
+/obj/structure/table/wood/large/corner{
+	dir = 6
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"DU" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_x = 30
+	},
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"DX" = (
+/obj/structure/table/wood/large/corner_alt,
+/obj/item/roguecoin/mongrel{
+	pixel_y = 8;
+	pixel_x = -1;
+	quantity = 5
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"DZ" = (
+/obj/structure/chair/wood/rogue{
+	dir = 1
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"Ea" = (
+/obj/structure/bars/pipe{
+	dir = 9
+	},
+/turf/open/floor/rogue/plank,
+/area/rogue/outdoors)
+"Eg" = (
+/obj/structure/fluff/railing/border{
+	dir = 9
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"El" = (
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Es" = (
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_x = -19
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"EB" = (
+/obj/effect/shadow,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"EI" = (
+/obj/structure/bed/rogue/inn/pileofshit,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"EO" = (
+/obj/structure/bars/pipe{
+	dir = 10;
+	pixel_x = 19
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"EW" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_x = -30
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Fh" = (
+/obj/effect/decal/cleanable/food/flour,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Fi" = (
+/turf/open/floor/rogue/concrete,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Fk" = (
+/obj/structure/mineral_door/swing_door,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Fn" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4;
+	pixel_y = 5
+	},
+/obj/structure/fluff/railing/wood,
+/turf/open/floor/rogue/blocks,
+/area/rogue/outdoors)
+"Fs" = (
+/turf/open/floor/rogue/metal,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Fz" = (
+/obj/structure/flora/roguetree/burnt,
+/obj/structure/warfarebarrier/red,
+/obj/structure/teambarrier/red,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"FK" = (
+/obj/structure/bars/pipe{
+	dir = 1;
+	pixel_y = -17
+	},
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"FM" = (
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey{
+	dir = 4
+	},
+/area/rogue/indoors/town/dungeon)
+"FN" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/kitchen/fork{
+	pixel_x = -8
+	},
+/obj/item/kitchen/fork,
+/obj/item/kitchen/fork{
+	pixel_x = 8
+	},
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"FP" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors/town/dungeon)
+"FT" = (
+/obj/effect/decal/cleanable/blood/gibs/body,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"FV" = (
+/obj/structure/table/wood,
+/obj/item/paper{
+	pixel_y = 5;
+	pixel_x = 10;
+	info = "As Low-lord in charge of this fortress, you are expected to repel any attack, and weather any disaster. If you are unable to defend the fortress, please return to the capitol for summary execution followed by the cursing of your lineage. - Speaker Tufel";
+	icon_state = "paperwrite"
+	},
+/obj/item/natural/feather{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/obj/item/roguecoin/mongrel{
+	pixel_y = 8;
+	pixel_x = -1
+	},
+/obj/item/candle/yellow/lit/infinite{
+	pixel_y = 2;
+	pixel_x = -4
+	},
+/obj/item/roguecoin/mongrel,
+/obj/item/roguecoin/mongrel,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Gf" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/reagent_containers/food/snacks/butter,
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Gk" = (
+/obj/structure/warfarebarrier/red,
+/obj/structure/teambarrier/red,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"Gv" = (
+/obj/effect/landmark/start/heartfeltinfantry{
+	dir = 1
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"GL" = (
+/obj/structure/table/optable,
+/obj/effect/decal/cleanable/blood/gibs/old{
+	pixel_y = 10
+	},
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = 5
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"GY" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/obj/machinery/light/rogue/firebowl,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"Hj" = (
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"Hm" = (
+/obj/effect/decal/cleanable/food/flour,
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Hq" = (
+/obj/machinery/light/rogue/oven{
+	pixel_y = 31
+	},
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ht" = (
+/obj/structure/fluff/statue/gargoyle,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Hv" = (
+/obj/structure/cannon,
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Hz" = (
+/obj/effect/landmark/events/haunts,
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"HC" = (
+/obj/structure/bars/pipe{
+	dir = 8
+	},
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/plank,
+/area/rogue/outdoors)
+"HE" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = 25;
+	pixel_x = 24
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"HN" = (
+/obj/structure/fluff/railing/border{
+	dir = 5
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"HR" = (
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"HT" = (
+/obj/item/natural/stone,
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/rogue/outdoors)
+"Ie" = (
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Io" = (
+/obj/machinery/light/rogue/hearth,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"IA" = (
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = 0;
+	dir = 1
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"IG" = (
+/obj/structure/roguemachine/scomm,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/dungeon)
+"IH" = (
+/obj/structure/closet/crate/chest/wicker,
+/obj/item/reagent_containers/powder/salt,
+/obj/item/reagent_containers/powder/salt,
+/obj/item/reagent_containers/powder/salt,
+/obj/item/reagent_containers/powder/salt,
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"IR" = (
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Jf" = (
+/obj/structure/gate{
+	redstone_id = "outergate1";
+	gid = "outergate1"
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ji" = (
+/obj/structure/mirror/fancy{
+	pixel_x = 30
+	},
+/obj/structure/chair/wood/rogue/fancy,
+/obj/effect/landmark/start/grenzellord,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Jm" = (
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_y = 17
+	},
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/outdoors)
+"Jq" = (
+/obj/structure/closet/crate/chest/old_crate,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/dungeon)
+"Jr" = (
+/obj/structure/bars/pipe{
+	dir = 1
+	},
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"Js" = (
+/obj/structure/table/wood/reinforced,
+/obj/structure/fluff/millstone,
+/obj/item/reagent_containers/powder/flour,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ju" = (
+/obj/structure/table/wood/large/corner_alt{
+	dir = 9
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Jv" = (
+/obj/structure/table/wood/reinforced_alt,
+/obj/item/reagent_containers/glass/cup/golden,
+/turf/open/floor/rogue/church,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Jw" = (
+/turf/open/transparent/openspace/airless,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"JA" = (
+/obj/structure/warfarebarrier/red,
+/obj/structure/teambarrier/red,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"JD" = (
+/obj/structure/bars/pipe{
+	dir = 1
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"JS" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"JT" = (
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"JY" = (
+/obj/effect/decal/cleanable/cobweb,
+/obj/structure/bars/pipe{
+	dir = 1
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"JZ" = (
+/obj/structure/table/wood/large/corner,
+/obj/effect/spawner/roguemap/warmongers/lootbasic,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ka" = (
+/obj/machinery/light/rogue/wallfire{
+	pixel_y = -1;
+	pixel_x = -15
+	},
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Kb" = (
+/obj/item/natural/stone,
+/obj/structure/warfarebarrier/red,
+/obj/structure/teambarrier/red,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"Kh" = (
+/obj/structure/bars/pipe{
+	pixel_x = 12
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Kk" = (
+/obj/structure/bars/pipe{
+	dir = 1;
+	pixel_y = -17
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"Km" = (
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Kn" = (
+/obj/structure/bars/pipe{
+	dir = 8
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ku" = (
+/obj/structure/barricade/sandbags/rogue,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"KA" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/flashlight/flare/torch/lantern,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"KF" = (
+/obj/structure/bars/pipe{
+	dir = 8
+	},
+/obj/structure/fluff/railing/border{
+	dir = 6
+	},
+/turf/open/floor/rogue/plank,
+/area/rogue/outdoors)
+"KM" = (
+/obj/structure/bars/pipe{
+	pixel_x = 19
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"KS" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Le" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/spawner/roguemap/warmongers/lootgood{
+	pixel_y = 32
+	},
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"Lj" = (
+/obj/structure/bars/pipe{
+	dir = 9;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Lo" = (
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Lu" = (
+/obj/item/natural/stone,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors)
+"LA" = (
+/obj/structure/bars/pipe{
+	dir = 9;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"LB" = (
+/obj/structure/fluff/railing/border,
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"LC" = (
+/obj/structure/barricade/sandbags/rogue,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"LH" = (
+/obj/effect/landmark/start/heartfeltinfantry{
+	dir = 1
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"LL" = (
+/obj/structure/bars/pipe{
+	dir = 9;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"LX" = (
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey{
+	dir = 4
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"LY" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = 30
+	},
+/obj/structure/fermenting_barrel/waterwine,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Mc" = (
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_y = 17
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"Me" = (
+/obj/structure/table/wood/large/corner{
+	dir = 5
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Mo" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = -11;
+	pixel_x = 4
+	},
+/obj/structure/fluff/statue/pillar{
+	name = "post";
+	desc = "You can only guess how many unfortunates were tied to this and shot dead."
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"Mt" = (
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"MB" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = -23
+	},
+/obj/item/rogueweapon/spear/pike,
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = -10
+	},
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"MC" = (
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"MD" = (
+/obj/structure/fluff/statue/pillar{
+	name = "post";
+	desc = "You can only guess how many unfortunates were tied to this and shot dead."
+	},
+/obj/effect/decal/cleanable/blood/old{
+	pixel_x = 4
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"MM" = (
+/obj/structure/mineral_door/wood/red,
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"MW" = (
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"MX" = (
+/obj/structure/stairs/stone,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"Nc" = (
+/obj/structure/closet/crate/chest/old_crate,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch,
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ni" = (
+/obj/structure/chair/bench/coucha,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Nm" = (
+/obj/structure/chair/pew/left{
+	dir = 4
+	},
+/turf/open/floor/rogue/church,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Nw" = (
+/obj/structure/table/wood/reinforced,
+/obj/item/rogueweapon/huntingknife/cleaver,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"NI" = (
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/dungeon)
+"NP" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/spawner/roguemap/warmongers/lootgood,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"NS" = (
+/obj/machinery/light/rogue/torchholder/r,
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"NV" = (
+/obj/machinery/light/rogue/wallfire/candle,
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"NZ" = (
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Og" = (
+/obj/structure/mineral_door/wood/fancywood,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ok" = (
+/obj/structure/bars/pipe{
+	dir = 4;
+	pixel_y = -15
+	},
+/obj/structure/bars/pipe{
+	dir = 5;
+	pixel_y = 17
+	},
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Oo" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_x = -10;
+	pixel_y = -10
+	},
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Or" = (
+/turf/open/floor/rogue/church,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"OB" = (
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"OD" = (
+/obj/machinery/light/rogue/wallfire/candle,
+/turf/open/floor/carpet/inn,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"OJ" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"OM" = (
+/obj/machinery/light/rogue/lanternpost/fixed{
+	dir = 1
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"OX" = (
+/obj/structure/closet/crate/chest/old_crate,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/obj/item/ammo_casing/caseless/rogue/cball,
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Pb" = (
+/obj/structure/fluff/railing/border,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"Pe" = (
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey,
+/area/rogue/outdoors)
+"Pj" = (
+/obj/structure/bars/pipe{
+	dir = 4;
+	pixel_y = 15
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Pm" = (
+/obj/structure/table/wood/large/corner_alt,
+/obj/effect/spawner/roguemap/warmongers/lootbasic,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Pz" = (
+/obj/structure/table/wood/large/corner_alt{
+	dir = 1
+	},
+/obj/item/reagent_containers/food/snacks/rogue/meat/salami/slice{
+	pixel_x = -9
+	},
+/obj/item/reagent_containers/food/snacks/rogue/meat/salami/slice{
+	pixel_y = -4
+	},
+/obj/item/roguecoin/mongrel{
+	pixel_y = -10;
+	pixel_x = -1;
+	quantity = 5
+	},
+/obj/item/toy/cards/deck{
+	pixel_y = -5;
+	pixel_x = 22
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"PI" = (
+/obj/structure/mineral_door/wood/violet,
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"PX" = (
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Qg" = (
+/obj/structure/bars/pipe{
+	dir = 10;
+	pixel_y = 17
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Qk" = (
+/obj/structure/bars/pipe{
+	dir = 8
+	},
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/ruinedwood,
+/area/rogue/outdoors)
+"Qn" = (
+/obj/structure/bars/pipe{
+	pixel_x = -14
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Qv" = (
+/obj/structure/table/wood/large/corner{
+	dir = 1
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Qy" = (
+/obj/structure/bars,
+/obj/structure/roguewindow,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/dungeon)
+"QD" = (
+/obj/effect/shadow,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"QH" = (
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"QI" = (
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors)
+"QK" = (
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"QR" = (
+/obj/structure/table/wood/large/corner{
+	dir = 1
+	},
+/obj/item/reagent_containers/food/snacks/rogue/pie/cooked/meat/fish,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"QU" = (
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"QV" = (
+/obj/structure/bars/pipe{
+	dir = 9
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Rf" = (
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"Ri" = (
+/obj/structure/stairs/stone{
+	dir = 4
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"Rk" = (
+/obj/structure/bars/pipe{
+	dir = 4
+	},
+/obj/structure/warfarebarrier/red,
+/turf/open/floor/rogue/plank,
+/area/rogue/outdoors)
+"Rq" = (
+/obj/structure/closet/crate/chest/neu,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Rr" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/sword/iron/messer/war{
+	pixel_x = -5
+	},
+/obj/item/rogueweapon/sword/iron/messer/war,
+/obj/item/rogueweapon/sword/iron/messer/war{
+	pixel_x = 5
+	},
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ru" = (
+/turf/open/floor/rogue/ruinedwood,
+/area/rogue/outdoors)
+"RC" = (
+/obj/structure/table/wood/reinforced_alt,
+/obj/item/book/rogue/bibble,
+/obj/effect/spawner/roguemap/warmongers/lootmagic,
+/turf/open/floor/rogue/church,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"RE" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = -30
+	},
+/obj/structure/fermenting_barrel/waterwine,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"RF" = (
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"RG" = (
+/obj/structure/gate/vertical/bars/right/preopen{
+	gid = "innergate3";
+	redstone_id = "innergate3"
+	},
+/turf/open/floor/rogue/metal,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"RJ" = (
+/obj/structure/mineral_door/wood/donjon/stone,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"RQ" = (
+/obj/structure/warfarebarrier,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"RR" = (
+/obj/structure/bed/rogue/inn/wool,
+/obj/item/bedsheet/rogue/wool,
+/obj/effect/landmark/start/grenzelinfantry{
+	dir = 4
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"RX" = (
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Sb" = (
+/obj/item/grown/log/tree/small{
+	pixel_y = -4;
+	pixel_x = -9
+	},
+/obj/item/grown/log/tree/small{
+	pixel_y = -4;
+	pixel_x = -2
+	},
+/obj/item/grown/log/tree/small{
+	pixel_y = -4;
+	pixel_x = 5
+	},
+/obj/item/grown/log/tree/small{
+	pixel_y = 2;
+	pixel_x = -6
+	},
+/obj/item/grown/log/tree/small{
+	pixel_y = 2;
+	pixel_x = 1
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Sh" = (
+/obj/structure/bars/pipe{
+	dir = 10;
+	pixel_y = 17
+	},
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/outdoors)
+"Sl" = (
+/obj/structure/table/wood/plain,
+/obj/item/natural/cloth{
+	pixel_x = 8;
+	pixel_y = 7
+	},
+/obj/item/natural/cloth{
+	pixel_y = 1
+	},
+/obj/item/natural/cloth{
+	pixel_y = 5;
+	pixel_x = -3
+	},
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"SC" = (
+/turf/closed/wall/mineral/rogue/roofwall/middle/alt/grey{
+	dir = 1
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"SD" = (
+/obj/structure/table/wood/large/corner{
+	dir = 10
+	},
+/obj/item/reagent_containers/glass/bottle/rogue/wine/waterwine{
+	pixel_x = 9;
+	pixel_y = 26
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"SG" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey,
+/area/rogue/indoors/town/dungeon)
+"SO" = (
+/obj/structure/gate{
+	redstone_id = "innergate1";
+	gid = "innergate1"
+	},
+/turf/open/floor/rogue/metal,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"SQ" = (
+/obj/structure/fluff/railing/border{
+	dir = 8
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"ST" = (
+/obj/structure/table/wood/large/corner,
+/obj/item/reagent_containers/glass/bottle/rogue/wine/waterwine{
+	pixel_x = 16;
+	pixel_y = 13
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Te" = (
+/obj/structure/bars/pipe{
+	dir = 8
+	},
+/turf/open/floor/rogue/plank,
+/area/rogue/outdoors)
+"Tf" = (
+/obj/item/natural/dirtclod,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
+"Tm" = (
+/obj/structure/table/wood/large/corner{
+	dir = 10
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Tv" = (
+/obj/structure/table/wood/large/corner{
+	dir = 5
+	},
+/obj/effect/spawner/roguemap/warmongers/lootbasic,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Tw" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/reagent_containers/food/snacks/rogue/cheddarwedge/aged,
+/obj/item/reagent_containers/food/snacks/rogue/cheddarwedge/aged,
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"TA" = (
+/obj/structure/warfarebarrier/red,
+/obj/structure/teambarrier/red,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
+"TC" = (
+/obj/structure/chair/pew/left{
+	dir = 4
+	},
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"TK" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 1
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"TM" = (
+/obj/structure/winch{
+	redstone_id = "innergate3";
+	gid = "innergate3"
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"TP" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"TQ" = (
+/obj/structure/bars/pipe{
+	pixel_x = 13
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"TV" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = -30
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"TW" = (
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_y = 17
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Ur" = (
+/obj/structure/bars/pipe{
+	dir = 10;
+	pixel_x = 19
+	},
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/outdoors)
+"UO" = (
+/obj/structure/stairs{
+	dir = 8
+	},
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/rogue/outdoors)
+"Vc" = (
+/obj/effect/decal/cleanable/blood/gibs/limb,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"Vd" = (
+/obj/structure/bars/pipe{
+	dir = 9;
+	pixel_x = 19;
+	pixel_y = -17
+	},
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"Vg" = (
+/obj/structure/mineral_door/wood/window,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Vj" = (
+/obj/machinery/light/rogue/torchholder/l,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"Vl" = (
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"Vo" = (
+/obj/structure/table/wood/large/corner{
+	dir = 1
+	},
+/obj/item/reagent_containers/food/snacks/rogue/bun_grenz/plated,
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Vq" = (
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Vt" = (
+/obj/structure/roguemachine/scomm/r,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town/dungeon)
+"VC" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_y = 9;
+	pixel_x = 4
+	},
+/obj/structure/fluff/statue/pillar{
+	name = "post";
+	desc = "You can only guess how many unfortunates were tied to this and shot dead."
+	},
+/turf/open/floor/rogue/churchrough,
+/area/rogue/outdoors)
+"VG" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"VK" = (
+/obj/machinery/light/rogue/firebowl/church,
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"VO" = (
+/obj/effect/spawner/roguemap/warmongers/lootgood,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"VP" = (
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_y = 17
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"VT" = (
+/obj/structure/warfarebarrier,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"VU" = (
+/obj/structure/fluff/railing/fence{
+	dir = 1
+	},
+/obj/structure/fluff/railing/fence{
+	dir = 8
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"Wd" = (
+/obj/structure/bars/pipe,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Wh" = (
+/obj/structure/bars/pipe{
+	dir = 9
+	},
+/turf/open/floor/rogue/ruinedwood,
+/area/rogue/outdoors)
+"Wu" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/woodcut/steel/war{
+	pixel_x = -22
+	},
+/obj/item/rogueweapon/woodcut/steel/war,
+/obj/item/rogueweapon/woodcut/steel/war{
+	pixel_x = -10
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"Wy" = (
+/obj/structure/table/wood/large/corner_alt{
+	dir = 1
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"WB" = (
+/obj/structure/fluff/grindwheel,
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"WG" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = 30
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"WP" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/reagent_containers/glass/cup{
+	pixel_x = -5
+	},
+/obj/item/reagent_containers/glass/cup{
+	pixel_x = 5
+	},
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Xa" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_x = 30
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Xb" = (
+/obj/structure/winch{
+	redstone_id = "outergate1";
+	gid = "outergate1"
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Xc" = (
+/obj/structure/table/wood/reinforced,
+/obj/item/reagent_containers/food/snacks/rogue/dough_base{
+	pixel_y = 6
+	},
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Xk" = (
+/obj/structure/closet/crate/chest/neu,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/dungeon)
+"Xn" = (
+/obj/structure/chair/wood/rogue{
+	dir = 4
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"XA" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/effect/spawner/roguemap/warmongers/lootbasic,
+/turf/open/floor/rogue/wood/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"XD" = (
+/obj/structure/fluff/psycross/regime,
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"XE" = (
+/obj/structure/bars/pipe{
+	dir = 6;
+	pixel_x = -19
+	},
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/outdoors)
+"XU" = (
+/obj/structure/chair/pew/right{
+	dir = 4
+	},
+/turf/open/floor/rogue/churchmarble,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Yb" = (
+/obj/structure/chair/bench/coucha/r,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Yg" = (
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Yk" = (
+/obj/structure/table/wood/reinforced,
+/obj/item/reagent_containers/food/snacks/rogue/meat/poultry,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Yn" = (
+/obj/machinery/light/rogue/wallfire{
+	pixel_y = -1;
+	pixel_x = -15
+	},
+/turf/closed/wall/mineral/rogue/roofwall/outercorner/alt/grey{
+	dir = 8
+	},
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Yp" = (
+/obj/structure/bars/pipe{
+	dir = 1
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Yr" = (
+/turf/open/floor/rogue/metal,
+/area/rogue/indoors/town/dungeon)
+"Yv" = (
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = 0;
+	dir = 1
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"Yx" = (
+/obj/structure/bars/pipe{
+	dir = 10;
+	pixel_y = 17
+	},
+/turf/open/transparent/openspace/airless,
+/area/rogue/outdoors)
+"YA" = (
+/turf/closed/wall/mineral/rogue/roofwall/innercorner/alt/grey{
+	dir = 1
+	},
+/area/rogue/indoors/town/dungeon)
+"YD" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/reagent_containers/food/snacks/rogue/cheddar/aged,
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"YF" = (
+/obj/item/reagent_containers/food/snacks/rogue/prezzel,
+/obj/structure/table/wood/large/corner{
+	dir = 1
+	},
+/turf/open/floor/rogue/tile,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"YH" = (
+/obj/structure/chair/wood/rogue,
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town/dungeon)
+"YK" = (
+/obj/structure/bars/pipe{
+	dir = 8
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"YL" = (
+/turf/open/floor/carpet/inn,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"YS" = (
+/obj/item/natural/rock,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors)
+"YT" = (
+/obj/structure/bars/pipe{
+	dir = 4
+	},
+/turf/open/floor/rogue/ruinedwood,
+/area/rogue/outdoors)
+"YW" = (
+/obj/structure/roguemachine/scomm/r,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"YZ" = (
+/obj/structure/mineral_door/wood,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Zn" = (
+/obj/structure/cannon{
+	dir = 8
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/dungeon)
+"Zq" = (
+/obj/structure/fermenting_barrel/wine,
+/turf/open/floor/rogue/woodturned/nosmooth,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"Zy" = (
+/obj/structure/table/wood/reinforced,
+/obj/item/reagent_containers/food/snacks/rogue/meat/sausage,
+/obj/item/reagent_containers/food/snacks/rogue/meat/sausage{
+	pixel_y = 8
+	},
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"ZF" = (
+/obj/structure/table/wood/reinforced,
+/obj/item/reagent_containers/food/snacks/rogue/meat/bacon,
+/obj/item/reagent_containers/food/snacks/rogue/meat/bacon{
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/food/snacks/rogue/meat/bacon{
+	pixel_y = 10
+	},
+/turf/open/floor/rogue/tile/checker,
+/area/rogue/indoors{
+	droning_sound = 'sound/music/bounty.ogg';
+	droning_sound_current = 'sound/music/bounty.ogg';
+	droning_sound_dawn = 'sound/music/bounty.ogg';
+	droning_sound_dusk = 'sound/music/bounty.ogg';
+	droning_sound_night = 'sound/music/bounty.ogg'
+	})
+"ZJ" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"ZX" = (
+/obj/structure/fluff/walldeco/regimeflag{
+	pixel_y = 30
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+
+(1,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(2,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(3,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(4,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(5,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(6,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(7,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+qg
+iA
+iA
+iA
+FM
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+qg
+iA
+iA
+iA
+FM
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(8,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+dj
+sf
+MX
+rP
+ny
+ny
+qg
+iA
+iA
+iA
+iA
+iA
+FM
+qg
+iA
+iA
+iA
+iA
+iA
+FM
+qg
+iA
+iA
+iA
+iA
+iA
+FM
+rc
+Cx
+Cx
+iO
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(9,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+sf
+sf
+MX
+yV
+iA
+iA
+FP
+QH
+Cx
+Mt
+Cx
+Cx
+yV
+FP
+Cx
+Cx
+Mt
+Cx
+Cx
+yV
+FP
+QH
+Cx
+Mt
+Cx
+Cx
+yV
+FP
+Cx
+Cx
+iO
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(10,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+ew
+xJ
+ie
+sf
+RQ
+RJ
+Cx
+Cx
+Cx
+lh
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+lh
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+iO
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(11,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+sf
+sf
+aQ
+sf
+Vd
+SG
+bH
+sC
+sC
+qr
+sC
+sC
+SG
+bH
+sC
+sC
+eZ
+sC
+sC
+SG
+bH
+zN
+sf
+sf
+sf
+sf
+SG
+bH
+Cx
+Cx
+iO
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(12,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+sf
+sf
+aQ
+Vt
+KM
+rP
+YA
+qO
+qO
+qO
+qO
+qO
+we
+YA
+qO
+qO
+qO
+qO
+qO
+we
+YA
+qO
+bH
+Ri
+SG
+qO
+we
+rc
+Cx
+Cx
+Ds
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+LX
+LX
+LX
+LX
+LX
+"}
+(13,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+YA
+qO
+qO
+qO
+qO
+qO
+we
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+qg
+FP
+yh
+yV
+FM
+ny
+YA
+bH
+Cx
+SG
+we
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+op
+Vl
+Vl
+Vl
+QD
+"}
+(14,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+NI
+NI
+Xk
+rP
+ny
+qg
+FP
+Cx
+yV
+FM
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Wu
+Vl
+Vl
+Vl
+QD
+"}
+(15,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+NI
+NI
+Cb
+rP
+ny
+rc
+BS
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+cP
+Ae
+Ae
+Ae
+IR
+VG
+bS
+Vl
+Vl
+Vl
+QD
+"}
+(16,1,1) = {"
+ny
+ny
+qg
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+iA
+FP
+IG
+NI
+rT
+rP
+ny
+rc
+Jr
+lh
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+Fi
+Fi
+Fi
+ny
+ny
+ny
+ny
+ny
+Bv
+Rf
+Rf
+Rf
+Rf
+gV
+Rf
+Gk
+ee
+Vl
+Vl
+SC
+Ae
+Ae
+Ae
+QI
+Tf
+Hj
+Vl
+Vl
+Vl
+QD
+"}
+(17,1,1) = {"
+ny
+ny
+rc
+CQ
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+Qy
+Yr
+Yr
+Yr
+rP
+ny
+rc
+es
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+Fi
+wO
+Fi
+ny
+ny
+ny
+ny
+ny
+Bv
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Gk
+BY
+Hj
+Tf
+SC
+QI
+Ae
+YS
+Lu
+QI
+xF
+LH
+Vl
+VU
+QD
+"}
+(18,1,1) = {"
+ny
+ny
+rc
+CQ
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+Qy
+Yr
+Yr
+us
+rP
+ny
+YA
+bH
+Cx
+SG
+we
+ny
+ny
+ny
+ny
+ny
+ny
+Fi
+Fi
+Fi
+ny
+ny
+ny
+ny
+ny
+Bv
+Vl
+Vl
+Vl
+Rf
+Rf
+Rf
+Gk
+fe
+Hj
+YS
+Lu
+QI
+QI
+QI
+Lu
+QI
+mU
+LH
+fe
+ef
+QD
+"}
+(19,1,1) = {"
+ny
+ny
+YA
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+bH
+NI
+NI
+NI
+rP
+ny
+qg
+FP
+Cx
+yV
+FM
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Vl
+Vl
+OM
+Rf
+Rf
+Rf
+JA
+Hj
+Hj
+Vl
+QI
+Lu
+Lu
+Lu
+Lu
+Lu
+jy
+LH
+Hj
+Vl
+QD
+"}
+(20,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Zn
+Jq
+Zn
+rP
+ny
+rc
+JY
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+MW
+MW
+Vl
+Rf
+Rf
+Rf
+JA
+Hj
+Vl
+QI
+Lu
+Lu
+Lu
+YS
+QI
+fe
+Hj
+bS
+Hj
+Cf
+QD
+"}
+(21,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+YA
+qO
+qO
+qO
+we
+ny
+rc
+es
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+MW
+MW
+Vl
+Rf
+Rf
+Rf
+yR
+Hj
+Tf
+QI
+Lu
+Lu
+Lu
+QI
+Lu
+bS
+jy
+LH
+Vl
+fe
+QD
+"}
+(22,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+qY
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+zV
+Vl
+Vl
+Rf
+Rf
+Rf
+Gk
+Hj
+kN
+fe
+Lu
+Lu
+QI
+Lu
+Lu
+QI
+xF
+LH
+Hj
+VU
+QD
+"}
+(23,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+es
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+VG
+Vl
+Vl
+Rf
+Rf
+Rf
+Gk
+Hj
+Hj
+QI
+QI
+QI
+YS
+QI
+Lu
+fe
+nT
+LH
+Vl
+ef
+QD
+"}
+(24,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+qg
+iA
+iA
+iA
+FM
+ny
+rc
+es
+Cx
+Cx
+rP
+ny
+qg
+iA
+iA
+iA
+FM
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+xd
+Vl
+Vl
+Rf
+Rf
+Rf
+Gk
+Vl
+bS
+Tf
+YS
+Ae
+Ae
+QI
+YS
+Tf
+Hj
+Vl
+Vl
+Vl
+QD
+"}
+(25,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+BX
+Mt
+VO
+rP
+ny
+YA
+bH
+Cx
+SG
+we
+ny
+rc
+VO
+Vj
+aP
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+xd
+Vl
+Vl
+Rf
+Rf
+Rf
+Gk
+ee
+Hj
+rn
+mJ
+Ae
+Ae
+Ae
+Dm
+zV
+JS
+Hj
+VU
+Vl
+QD
+"}
+(26,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+qg
+FP
+Ac
+Cx
+bC
+yV
+FM
+qg
+FP
+Cx
+yV
+FM
+qg
+FP
+TP
+Cx
+kp
+yV
+FM
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+zV
+MW
+Vl
+Rf
+Rf
+Rf
+Gk
+BY
+HT
+SC
+Ae
+Ae
+Ae
+Ae
+Ae
+Bv
+fe
+Vl
+ef
+Vl
+QD
+"}
+(27,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+rz
+rz
+jd
+sX
+rz
+yV
+FP
+QH
+Cx
+Cx
+yV
+FP
+rz
+rz
+jd
+sX
+rz
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+VG
+MW
+Vl
+Rf
+Rf
+Rf
+Gk
+jc
+mM
+SC
+Ae
+ny
+ny
+ny
+Ae
+Bv
+Hj
+Vl
+Vl
+Vl
+QD
+"}
+(28,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Xn
+kp
+kp
+Cx
+Cx
+fV
+Cx
+kg
+Cx
+Cx
+Cx
+fV
+Cx
+kp
+Cx
+Cx
+DZ
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+xd
+Vl
+Vl
+Rf
+gV
+Rf
+Gk
+qP
+UO
+SC
+Ae
+ny
+ny
+ny
+Ae
+Bv
+Tf
+Vl
+Vl
+Vl
+QD
+"}
+(29,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+rz
+rz
+uV
+rz
+rz
+SG
+bH
+Ak
+Cx
+Yv
+SG
+bH
+rz
+rz
+uV
+rz
+rz
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+xd
+Vl
+Vl
+Rf
+Rf
+Rf
+Gk
+Pb
+dG
+SC
+Ae
+ny
+ny
+ny
+Ae
+Bv
+bS
+Vl
+VU
+Vl
+QD
+"}
+(30,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+YA
+bH
+kp
+kp
+kp
+SG
+we
+rc
+Cx
+Cx
+Cx
+rP
+YA
+bH
+kp
+kp
+NP
+SG
+we
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+zV
+BY
+Vl
+Rf
+Rf
+Rf
+Gk
+Hj
+Hj
+SC
+Ae
+Ae
+Ae
+Ae
+Ae
+Bv
+Hj
+Hj
+ef
+Vl
+QD
+"}
+(31,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+kp
+hw
+Vc
+rP
+ny
+rc
+Cx
+Cx
+Cx
+rP
+ny
+rc
+FT
+Le
+Vc
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+zV
+ZX
+Rf
+Rf
+Rf
+JA
+Vl
+bS
+TK
+YS
+LX
+LX
+Lu
+Lu
+QI
+Vl
+bS
+LH
+LH
+QD
+"}
+(32,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+YA
+qO
+qO
+qO
+we
+ny
+rc
+Cx
+Cx
+Cx
+rP
+ny
+YA
+qO
+qO
+qO
+we
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Pe
+fU
+fU
+Rf
+Rf
+Rf
+Rf
+TA
+Rf
+QI
+Lu
+Hj
+QI
+Tf
+Rf
+QI
+Hj
+dJ
+Gv
+Gv
+Gv
+EB
+"}
+(33,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Ak
+Cx
+Yv
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Pe
+fU
+fU
+Rf
+Rf
+gV
+Rf
+TA
+Rf
+Tf
+QI
+Lu
+dJ
+mP
+QI
+Lu
+Rf
+pU
+Gv
+Gv
+Gv
+EB
+"}
+(34,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+qg
+iA
+iA
+iA
+FM
+ny
+rc
+Cx
+Cx
+Cx
+rP
+ny
+qg
+iA
+iA
+iA
+FM
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Pe
+fU
+fU
+Rf
+Rf
+Rf
+Rf
+Kb
+Rf
+dJ
+dE
+Rf
+dJ
+Lu
+Lu
+Tf
+Lu
+Hj
+Gv
+Gv
+Gv
+EB
+"}
+(35,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+db
+Mt
+Cx
+rP
+ny
+rc
+Cx
+Cx
+Cx
+rP
+ny
+rc
+BX
+Mt
+VO
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+VG
+ZX
+Rf
+Rf
+Rf
+Gk
+Hj
+Hj
+rn
+Lu
+YS
+mS
+YS
+mS
+zV
+fe
+Hj
+np
+LH
+QD
+"}
+(36,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+qg
+FP
+db
+Cx
+aP
+yV
+FM
+rc
+kg
+Cx
+Cx
+rP
+qg
+FP
+Ac
+Cx
+bC
+yV
+FM
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+VG
+BY
+Vl
+Rf
+Rf
+Rf
+Gk
+Vl
+bS
+SC
+Ae
+Ae
+Ae
+Ae
+Ae
+Bv
+Wu
+Hj
+Vl
+Vl
+QD
+"}
+(37,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+rz
+rz
+jd
+sX
+rz
+yV
+FP
+Ak
+Cx
+Yv
+yV
+FP
+rz
+rz
+jd
+sX
+rz
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+xd
+Vl
+Vl
+Rf
+Rf
+Rf
+Gk
+fe
+Vl
+SC
+Ae
+Ae
+Ae
+Ae
+Ae
+Bv
+op
+Vl
+Vl
+Vl
+QD
+"}
+(38,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+YH
+kp
+kp
+Cx
+Cx
+fV
+Cx
+Cx
+Cx
+Cx
+Cx
+fV
+Cx
+kp
+kp
+Cx
+DZ
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+xd
+Vl
+Vl
+Rf
+gV
+Rf
+ne
+ee
+Hj
+SC
+Ae
+Ae
+Ae
+Ae
+Ae
+Dm
+mS
+mS
+mS
+mS
+mS
+"}
+(39,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+rz
+rz
+uV
+rz
+rz
+SG
+bH
+Cx
+Cx
+Cx
+SG
+bH
+rz
+rz
+uV
+rz
+rz
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+zV
+MW
+Vl
+Rf
+Rf
+Rf
+Gk
+BY
+Vl
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(40,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+YA
+bH
+kp
+kp
+kp
+SG
+we
+YA
+bH
+Cx
+SG
+we
+YA
+bH
+kp
+kp
+kp
+SG
+we
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+VG
+MW
+Vl
+Rf
+Rf
+Rf
+Gk
+Vl
+Vl
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(41,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+FT
+cc
+Vc
+rP
+ny
+qg
+FP
+Cx
+yV
+FM
+ny
+rc
+FT
+cc
+Vc
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+xd
+Vl
+Vl
+Rf
+Rf
+Rf
+ne
+Fz
+Gk
+TK
+cP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(42,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+YA
+qO
+qO
+qO
+we
+ny
+rc
+QH
+Cx
+Cx
+rP
+ny
+YA
+qO
+qO
+qO
+we
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+xd
+Vl
+Vl
+Rf
+Rf
+Rf
+Vl
+Vl
+Vl
+Vl
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(43,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+kg
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+zV
+Vl
+Vl
+Rf
+Rf
+Rf
+Vl
+Vl
+Vl
+xd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(44,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Ak
+Cx
+Yv
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+VG
+BY
+Vl
+Rf
+Rf
+Rf
+Vl
+ee
+Vl
+xd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(45,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Cx
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+LX
+LX
+LX
+LX
+LX
+LX
+VG
+MW
+MW
+Vl
+Rf
+Rf
+Rf
+Vl
+Vl
+Vl
+xd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(46,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Cx
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+MW
+Vl
+Vl
+Vl
+Vl
+Vl
+BY
+MW
+MW
+Vl
+Rf
+Rf
+Rf
+Vl
+Vl
+Vl
+Vl
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(47,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+YA
+bH
+Cx
+SG
+we
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+zV
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+bB
+Rf
+Rf
+Rf
+Vl
+ee
+Vl
+xd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(48,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+qg
+FP
+Cx
+yV
+FM
+IR
+LX
+LX
+LX
+LX
+LX
+cP
+IR
+VG
+kR
+Rf
+cC
+cC
+cC
+Rf
+Vl
+Vl
+Vl
+Rf
+Rf
+Rf
+Vl
+Vl
+Vl
+xd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(49,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Cx
+Cx
+Cx
+yV
+FP
+QH
+kg
+Mt
+Cx
+Cx
+yV
+FP
+QK
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Vl
+Vl
+Vl
+xd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(50,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Ak
+lh
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+Cx
+ma
+fV
+Rf
+gV
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+gV
+Rf
+Vl
+ee
+Vl
+Vl
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(51,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Cx
+Cx
+Cx
+SG
+bH
+Cx
+Cx
+rs
+kg
+Cx
+SG
+bH
+QK
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Rf
+Vl
+Vl
+Vl
+rn
+mJ
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(52,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+YA
+bH
+Cx
+SG
+we
+Dm
+mS
+mS
+mS
+mS
+mS
+mJ
+Dm
+zV
+mH
+ZJ
+ZJ
+ZJ
+ZJ
+ZJ
+ZJ
+ZJ
+ZJ
+ZJ
+Hj
+ZJ
+GY
+ZJ
+ZJ
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(53,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+qg
+FP
+Cx
+yV
+FM
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+Vl
+Hj
+Hj
+Hj
+Vl
+Vl
+Vl
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(54,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Cx
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Vl
+Vl
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Vl
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(55,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Cx
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+bo
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(56,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Ak
+kg
+Yv
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+ex
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+ex
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(57,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+kg
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ss
+ex
+kO
+ex
+ex
+ex
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(58,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+Cx
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+ex
+ex
+cv
+ht
+Mo
+pR
+VC
+xf
+VC
+wS
+wR
+MD
+cv
+ex
+ex
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(59,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+YA
+bH
+Cx
+SG
+we
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mJ
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(60,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+fV
+yV
+iA
+FM
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(61,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+ma
+Cx
+Cx
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(62,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+qg
+iA
+FP
+Cx
+Cx
+pZ
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(63,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+xE
+xE
+he
+Ri
+Ri
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(64,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+sf
+sf
+aQ
+sf
+sf
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(65,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+rc
+dj
+sf
+NS
+sf
+sf
+rP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(66,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+YA
+qO
+qO
+qO
+qO
+qO
+we
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(67,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(68,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(69,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(70,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(71,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(72,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(73,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(74,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(75,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(76,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(77,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(78,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(79,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(80,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(81,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(82,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(83,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(84,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(85,1,1) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+
+(1,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(2,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+cP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(3,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+pa
+pa
+pa
+Ie
+pa
+pa
+pa
+Ku
+OB
+CO
+iU
+iU
+iU
+iU
+iU
+Kn
+Kn
+Kn
+Kn
+Kn
+Kn
+jT
+OB
+OB
+OB
+OB
+Vq
+cM
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(4,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+Ku
+OB
+OB
+iY
+OB
+OB
+OB
+OB
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+OB
+OB
+OB
+OB
+iY
+cM
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(5,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+DU
+OB
+OB
+Xa
+pa
+YW
+pa
+pa
+Ku
+OB
+OB
+OB
+OB
+OB
+dK
+OB
+pa
+pa
+AB
+pa
+AB
+pa
+pa
+OB
+OB
+OB
+OB
+OB
+cM
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(6,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+mS
+zV
+OB
+rn
+mS
+mS
+mS
+mS
+mS
+zV
+WG
+OB
+OB
+rn
+mS
+mS
+mS
+mS
+zV
+pa
+rn
+mS
+mS
+mS
+mS
+zV
+WG
+OB
+cM
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(7,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+LX
+LX
+LX
+LX
+VG
+OB
+SC
+ny
+ny
+ny
+ny
+ny
+Bv
+Fs
+Fs
+gu
+SC
+IR
+LX
+LX
+LX
+VG
+oF
+TK
+LX
+LX
+LX
+cP
+Bv
+wG
+wG
+AU
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(8,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Jw
+Jw
+Jw
+kv
+vH
+wG
+SC
+ny
+ny
+ny
+ny
+IR
+VG
+OB
+OB
+OB
+SC
+Bv
+yU
+Dh
+zD
+dA
+dA
+dA
+Gf
+Tw
+YD
+SC
+Bv
+Ht
+wG
+AU
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(9,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Jw
+Jw
+Jw
+kv
+vH
+wG
+SC
+ny
+ny
+ny
+ny
+Bv
+vi
+OB
+wG
+LA
+SC
+Bv
+Hq
+RF
+zo
+dA
+dA
+dA
+zo
+zo
+zo
+SC
+Bv
+wG
+wG
+AU
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(10,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Jw
+Jw
+rn
+mS
+zV
+wG
+SC
+ny
+ny
+ny
+ny
+Dm
+zV
+wG
+wG
+AU
+SC
+Bv
+Io
+RF
+zo
+dA
+dA
+dA
+AC
+vd
+yt
+SC
+Bv
+Ht
+wG
+AU
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(11,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+mS
+mS
+mJ
+ny
+Bv
+wG
+SC
+ny
+ny
+ny
+ny
+ny
+Bv
+wG
+wG
+cM
+SC
+Bv
+Hq
+Fh
+Hm
+dA
+dA
+dA
+rn
+mS
+mS
+mJ
+Bv
+wG
+wG
+AU
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(12,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+VG
+MM
+TK
+LX
+LX
+LX
+LX
+cP
+Bv
+wG
+wG
+cM
+SC
+Bv
+eR
+Js
+Xc
+dA
+Au
+uk
+SC
+ny
+ny
+ny
+Bv
+Ht
+wG
+AU
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+LX
+LX
+LX
+LX
+LX
+"}
+(13,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+MC
+JT
+MC
+Yg
+MC
+MC
+MC
+SC
+Bv
+ri
+wG
+cM
+SC
+Bv
+Yk
+yD
+ZF
+dA
+dA
+dA
+SC
+ny
+ny
+ny
+Bv
+ri
+wG
+nF
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+"}
+(14,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Hv
+JT
+JT
+JT
+JT
+JT
+MC
+TK
+VG
+wG
+wG
+cM
+SC
+Bv
+Hq
+RF
+zo
+dA
+dA
+dA
+TK
+LX
+LX
+cP
+Bv
+Ht
+wG
+wG
+TK
+LX
+LX
+LX
+LX
+LX
+cP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+"}
+(15,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Hv
+JT
+JT
+JT
+wY
+JT
+JT
+MM
+wG
+wG
+wG
+cM
+SC
+Bv
+ik
+iW
+zo
+dA
+dA
+dA
+WP
+WP
+CF
+SC
+Bv
+wG
+wG
+wG
+wG
+wG
+OB
+OB
+Vq
+OB
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+cP
+Ae
+Ae
+Ae
+IR
+VG
+gc
+gc
+gc
+gc
+gc
+"}
+(16,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Hv
+JT
+JT
+JT
+JT
+JT
+MC
+rn
+zV
+wG
+wG
+cM
+SC
+Bv
+Hq
+RF
+zo
+dA
+dA
+dA
+zo
+zo
+zo
+SC
+Bv
+Ht
+wG
+wG
+wG
+wG
+OB
+OB
+iY
+OB
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+SC
+Ae
+Ae
+QI
+QI
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(17,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+MC
+OX
+OX
+OX
+Nc
+CY
+xa
+SC
+Bv
+Qg
+OB
+cM
+SC
+Bv
+Zy
+Nw
+IH
+dA
+dA
+dA
+OJ
+FN
+zZ
+SC
+Bv
+wG
+wG
+wG
+wG
+wG
+OB
+OB
+OB
+OB
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+QI
+Ae
+QI
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(18,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mJ
+Bv
+Yp
+OB
+cM
+SC
+Dm
+mS
+mS
+mS
+zV
+dA
+rn
+mS
+mS
+mS
+mJ
+Dm
+mS
+mS
+mS
+mS
+mS
+zV
+OB
+OB
+mh
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(19,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+cP
+Ae
+Bv
+Yp
+OB
+cM
+SC
+IR
+LX
+LX
+LX
+VG
+Fk
+TK
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+cP
+Bv
+pa
+pa
+LL
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+zC
+vm
+vm
+HN
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(20,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+VG
+VK
+MB
+tF
+lC
+lC
+tF
+MB
+VK
+TK
+cP
+Bv
+Yp
+OB
+hF
+SC
+Bv
+LY
+PX
+PX
+rV
+PX
+PX
+PX
+ck
+yG
+vF
+PX
+rV
+PX
+PX
+TV
+SC
+Bv
+pa
+pa
+Wd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Ur
+se
+oX
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(21,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Rr
+MC
+JT
+JT
+JT
+JT
+JT
+JT
+MC
+Rr
+SC
+Bv
+Yp
+OB
+Lj
+SC
+Bv
+gm
+ed
+SD
+aI
+PX
+gm
+Ju
+vR
+aI
+PX
+gm
+ed
+Tm
+aI
+PX
+TK
+VG
+pa
+pa
+Wd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+vj
+ke
+Sh
+oX
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(22,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+MC
+JT
+JT
+dI
+dI
+dI
+dI
+JT
+wY
+MC
+SC
+Bv
+VP
+OB
+cM
+SC
+Bv
+gm
+YF
+tM
+aI
+PX
+gm
+Wy
+Pm
+aI
+PX
+gm
+Dv
+tM
+aI
+PX
+Vg
+pa
+pa
+pa
+Wd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+qH
+mu
+Eg
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(23,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+tF
+JT
+sL
+MC
+tP
+MC
+MC
+uz
+JT
+tF
+TK
+VG
+wG
+wG
+cM
+SC
+Bv
+gm
+Me
+gj
+aI
+PX
+gm
+Pz
+lA
+aI
+PX
+gm
+QR
+JZ
+aI
+PX
+rn
+zV
+pa
+pa
+Wd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+FK
+mu
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(24,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JT
+JT
+MC
+MC
+MC
+yT
+MC
+MC
+JT
+JT
+JT
+wG
+wG
+wG
+cM
+SC
+Bv
+PX
+PX
+PX
+PX
+PX
+gm
+zB
+DX
+aI
+PX
+gm
+Qv
+hI
+aI
+PX
+SC
+Bv
+pa
+pa
+tI
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Kk
+mu
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+gc
+QI
+Ae
+QI
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(25,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JT
+JT
+MC
+MC
+yS
+KS
+hY
+MC
+JT
+JT
+JT
+wG
+wG
+wG
+hv
+SC
+Ka
+PX
+ck
+PX
+PX
+PX
+gm
+uE
+lA
+aI
+PX
+gm
+cN
+iv
+aI
+PX
+SC
+Bv
+pa
+pa
+pa
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+dx
+eM
+mu
+gc
+gc
+gc
+gc
+kJ
+qB
+vm
+rn
+mJ
+Ae
+Ae
+Ae
+Dm
+zV
+gc
+gc
+gc
+gc
+gc
+"}
+(26,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+tF
+JT
+sL
+Oo
+MC
+MC
+MC
+uz
+JT
+tF
+rn
+zV
+kt
+wG
+cM
+SC
+Bv
+gm
+ed
+Tm
+aI
+PX
+gm
+ju
+fA
+aI
+PX
+gm
+Me
+DR
+aI
+PX
+SC
+Bv
+lw
+pa
+pa
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+zV
+le
+st
+st
+st
+st
+Rk
+st
+YT
+SC
+Ae
+Ae
+Ae
+Ae
+Ae
+Bv
+gc
+gc
+gc
+gc
+gc
+"}
+(27,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+MC
+wY
+JT
+co
+co
+co
+co
+JT
+JT
+WB
+SC
+Bv
+wG
+wG
+AU
+SC
+Bv
+gm
+Vo
+ST
+aI
+PX
+PX
+PX
+PX
+yj
+El
+PX
+PX
+ck
+PX
+RE
+SC
+Bv
+OB
+OB
+OB
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+VG
+Wh
+Te
+Te
+Te
+Te
+HC
+KF
+Qk
+SC
+Ae
+ny
+ny
+ny
+Ae
+Bv
+gc
+gc
+gc
+gc
+gc
+"}
+(28,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+MC
+MC
+JT
+JT
+JT
+JT
+JT
+JT
+MC
+hT
+SC
+Bv
+wG
+wG
+AU
+SC
+Bv
+gm
+Tv
+DR
+aI
+PX
+PX
+PX
+PX
+rn
+mS
+mS
+mS
+mS
+mS
+mS
+mJ
+Bv
+de
+OB
+mh
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+mB
+gc
+Mc
+gc
+gc
+gc
+gc
+kJ
+LB
+kl
+SC
+Ae
+ny
+ny
+ny
+Ae
+Bv
+gc
+gc
+gc
+gc
+gc
+"}
+(29,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+zV
+VK
+hj
+tF
+JT
+JT
+tF
+hj
+VK
+rn
+mJ
+Bv
+wG
+wG
+AU
+SC
+Bv
+nE
+PX
+PX
+PX
+PX
+PX
+xe
+AO
+SC
+ny
+ny
+ny
+ny
+ny
+IR
+LX
+VG
+WG
+OB
+pI
+TK
+LX
+cP
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+SC
+Ae
+ny
+ny
+ny
+Ae
+Bv
+gc
+gc
+gc
+gc
+gc
+"}
+(30,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Ae
+Dm
+mS
+mS
+zV
+JT
+JT
+rn
+mS
+mS
+mJ
+Ae
+Bv
+eP
+OB
+hF
+SC
+Dm
+mS
+mS
+mS
+zV
+Vg
+rn
+mS
+mS
+mJ
+IR
+LX
+cP
+ny
+IR
+VG
+PX
+PX
+PX
+PX
+PX
+PX
+PX
+SC
+ny
+ny
+IR
+LX
+LX
+VG
+hs
+gc
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+SC
+Ae
+Ae
+Ae
+Ae
+Ae
+QI
+gc
+gc
+gc
+gc
+gc
+"}
+(31,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+LX
+LX
+LX
+LX
+VG
+OB
+OB
+TK
+LX
+LX
+LX
+LX
+VG
+OB
+OB
+OB
+TK
+LX
+LX
+LX
+LX
+VG
+wG
+TK
+LX
+LX
+LX
+VG
+mt
+TK
+LX
+VG
+PX
+PX
+PX
+PX
+PX
+PX
+PX
+OB
+TK
+LX
+LX
+VG
+kU
+oc
+rF
+xt
+cF
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+TK
+cP
+Ae
+QI
+QI
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(32,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+QV
+YK
+Es
+cY
+OB
+OB
+OB
+OB
+OB
+OB
+LC
+OB
+OB
+OB
+OB
+OB
+OB
+OB
+wG
+wG
+wG
+wG
+wG
+OB
+OB
+EW
+OB
+OB
+OB
+Vq
+SO
+OB
+PX
+PX
+PX
+PX
+PX
+PX
+PX
+OB
+OB
+Vq
+VT
+Jf
+rF
+rF
+hk
+gc
+gc
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+SC
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(33,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JD
+Hz
+wG
+wG
+OB
+OB
+OB
+BJ
+OB
+OB
+LC
+OB
+OB
+OB
+Ad
+OB
+OB
+OB
+wG
+wG
+wG
+wG
+wG
+OB
+OB
+OB
+OB
+OB
+OB
+OB
+Fs
+OB
+PX
+PX
+PX
+PX
+ck
+PX
+PX
+OB
+OB
+OB
+VT
+OB
+rF
+rF
+hk
+gc
+gc
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(34,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JD
+wG
+wm
+wG
+ll
+OB
+OB
+OB
+OB
+OB
+LC
+OB
+OB
+OB
+Xa
+dK
+Br
+CC
+ez
+ez
+ez
+CC
+EO
+OB
+OB
+Xa
+OB
+OB
+OB
+dK
+Fs
+OB
+PX
+PX
+PX
+PX
+PX
+PX
+PX
+OB
+OB
+dK
+VT
+OB
+rF
+rF
+hk
+gc
+gc
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+"}
+(35,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JD
+wG
+wG
+rn
+mS
+mS
+zV
+pa
+rn
+mS
+mS
+zV
+OB
+OB
+rn
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+zV
+sO
+rn
+mS
+mS
+mS
+mS
+mS
+zV
+PX
+PX
+PX
+PX
+PX
+PX
+PX
+Xb
+rn
+mS
+mS
+zV
+kU
+wH
+rF
+xt
+gX
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+QI
+QI
+Ae
+QI
+gc
+QI
+QI
+gc
+gc
+gc
+gc
+gc
+"}
+(36,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JD
+wG
+Qn
+SC
+IR
+LX
+VG
+DO
+TK
+LX
+cP
+Bv
+OB
+OB
+SC
+IR
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+VG
+YZ
+TK
+LX
+LX
+LX
+cP
+ny
+Dm
+zV
+PX
+PX
+PX
+PX
+PX
+PX
+PX
+SC
+ny
+ny
+Dm
+mS
+mS
+zV
+Fn
+gc
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+SC
+Ae
+Ae
+Ae
+QI
+Ae
+QI
+gc
+gc
+gc
+gc
+gc
+"}
+(37,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JD
+wG
+xQ
+SC
+Bv
+QU
+Or
+Or
+Or
+QU
+SC
+Bv
+OB
+OB
+SC
+Bv
+RR
+HR
+RR
+HR
+RR
+NZ
+HR
+HR
+HR
+NZ
+RR
+HR
+RR
+SC
+ny
+ny
+Dm
+mS
+zV
+WG
+OB
+pI
+rn
+mS
+mJ
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+SC
+Ae
+Ae
+Ae
+Ae
+Ae
+Bv
+gc
+gc
+gc
+gc
+gc
+"}
+(38,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JD
+wG
+Dp
+SC
+Bv
+NV
+Or
+Or
+Or
+pf
+SC
+Bv
+OB
+OB
+TK
+VG
+Rq
+pW
+Rq
+HR
+Rq
+HR
+HR
+HR
+HR
+HR
+Rq
+HR
+Rq
+SC
+IR
+LX
+LX
+cP
+Bv
+de
+OB
+mh
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+lo
+Yx
+gc
+gc
+gc
+gc
+kJ
+gc
+gc
+SC
+Ae
+Ae
+Ae
+Ae
+Ae
+Dm
+mS
+mS
+mS
+mS
+mS
+"}
+(39,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JD
+wG
+aG
+SC
+Bv
+QU
+QU
+Or
+QU
+QU
+SC
+Bv
+WG
+OB
+sO
+Be
+HR
+HR
+HR
+HR
+HR
+HR
+rn
+zV
+HR
+HR
+HR
+HR
+HR
+SC
+Bv
+eQ
+XA
+TK
+VG
+OB
+OB
+OB
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+zV
+le
+st
+st
+st
+st
+Rk
+st
+st
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(40,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JD
+wG
+TQ
+SC
+Bv
+XU
+TC
+Or
+XU
+TC
+SC
+Bv
+OB
+OB
+rn
+zV
+HR
+HR
+HR
+HR
+HR
+HR
+TK
+Yn
+HR
+HR
+HR
+HR
+HR
+SC
+Bv
+ox
+mo
+Be
+pa
+pa
+pa
+pa
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+VG
+Wh
+Te
+Te
+Te
+Te
+hH
+Te
+Te
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(41,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JD
+wG
+Kh
+SC
+Bv
+QU
+QU
+Or
+QU
+QU
+SC
+Bv
+OB
+Lj
+SC
+Bv
+Rq
+HR
+Rq
+HR
+Rq
+HR
+HR
+HR
+HR
+HR
+Rq
+pW
+Rq
+SC
+Bv
+XA
+zO
+rn
+zV
+pa
+pa
+pa
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+nf
+tX
+mu
+gc
+gc
+gc
+gc
+kJ
+kJ
+kJ
+TK
+cP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(42,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+JD
+wG
+mV
+SC
+Bv
+XU
+TC
+Or
+XU
+TC
+SC
+Bv
+OB
+cM
+SC
+Bv
+jz
+HR
+jz
+HR
+jz
+RX
+HR
+HR
+HR
+HR
+jz
+HR
+jz
+SC
+Dm
+mS
+mS
+mJ
+Bv
+pa
+pa
+LL
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Kk
+mu
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(43,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+TW
+wG
+yH
+SC
+Bv
+NV
+QU
+Or
+QU
+pf
+SC
+Bv
+OB
+cM
+SC
+Dm
+mS
+mS
+mS
+mS
+mS
+zV
+HR
+rn
+mS
+mS
+mS
+mS
+mS
+mJ
+IR
+LX
+LX
+cP
+Bv
+pa
+pa
+Wd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+qH
+mu
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(44,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+IR
+VG
+wG
+wG
+IA
+SC
+Bv
+XU
+TC
+Or
+XU
+TC
+SC
+Bv
+OB
+hF
+SC
+IR
+LX
+LX
+LX
+LX
+cP
+Bv
+YZ
+TK
+cP
+IR
+LX
+LX
+LX
+cP
+Bv
+KA
+cO
+TK
+VG
+pa
+pa
+Wd
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+IR
+FK
+mu
+HN
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(45,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+Bv
+TM
+OB
+wG
+wG
+SC
+Bv
+QU
+QU
+Or
+QU
+QU
+SC
+Bv
+OB
+OB
+SC
+Bv
+Ni
+HR
+HR
+Zq
+SC
+Bv
+HR
+HR
+SC
+Bv
+Az
+NZ
+qw
+SC
+Bv
+ox
+mo
+Be
+pa
+pa
+pa
+Wd
+SC
+IR
+LX
+LX
+LX
+LX
+LX
+LX
+Ok
+sT
+Jm
+oX
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(46,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+Dm
+zV
+OB
+OB
+OB
+SC
+Bv
+XU
+TC
+Or
+XU
+Nm
+SC
+Bv
+de
+Lj
+SC
+Bv
+Yb
+HR
+HR
+HR
+SC
+Bv
+HR
+HR
+SC
+Bv
+Sb
+HR
+qw
+SC
+Bv
+tD
+XA
+rn
+zV
+pa
+pa
+tI
+SC
+Bv
+Ru
+Ea
+Te
+Te
+Te
+Te
+Te
+XE
+se
+oX
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(47,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Fs
+Fs
+RG
+SC
+Bv
+QU
+QU
+Or
+QU
+QU
+SC
+Bv
+OB
+cM
+SC
+Bv
+OD
+YL
+YL
+vN
+TK
+VG
+Km
+HR
+SC
+Dm
+zV
+YZ
+rn
+mJ
+Dm
+mS
+mS
+mJ
+Bv
+pa
+pa
+zg
+SC
+Dm
+zV
+ap
+gc
+gc
+gc
+gc
+yW
+SQ
+SQ
+Eg
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(48,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+OB
+OB
+OB
+SC
+Bv
+XU
+TC
+Or
+XU
+Nm
+SC
+Bv
+OB
+cM
+SC
+vX
+YL
+YL
+bM
+HR
+Og
+HR
+HR
+HR
+SC
+IR
+VG
+OB
+TK
+LX
+LX
+LX
+LX
+LX
+VG
+OB
+pa
+pa
+SC
+ny
+Bv
+ap
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(49,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+OB
+OB
+OB
+SC
+Bv
+NV
+QU
+Or
+QU
+pf
+SC
+Bv
+OB
+cM
+SC
+Bv
+OD
+YL
+YL
+vN
+rn
+zV
+Km
+HR
+TK
+VG
+sO
+OB
+OB
+Vq
+nP
+OB
+OB
+OB
+OB
+OB
+pa
+pa
+SC
+ny
+Bv
+ap
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(50,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+OB
+iY
+OB
+SC
+Bv
+XU
+TC
+Or
+XU
+Nm
+SC
+Bv
+OB
+cM
+SC
+Bv
+ad
+HR
+HR
+HR
+SC
+Bv
+HR
+HR
+YZ
+OB
+sO
+OB
+OB
+xR
+xR
+OB
+OB
+xR
+xR
+OB
+vg
+pa
+SC
+ny
+Bv
+ap
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(51,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+OB
+OB
+OB
+SC
+Bv
+QU
+QU
+Or
+QU
+QU
+SC
+Bv
+OB
+hF
+SC
+Bv
+lg
+HR
+Ji
+FV
+SC
+Bv
+YZ
+rn
+mS
+zV
+sO
+OB
+Bz
+OB
+Pj
+Pj
+Pj
+Pj
+ll
+OB
+Lo
+pa
+SC
+ny
+Bv
+ap
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+rn
+mJ
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(52,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+OB
+pI
+rn
+mJ
+Bv
+QU
+Or
+Or
+Or
+QU
+SC
+Bv
+tp
+pa
+SC
+Dm
+mS
+mS
+mS
+mS
+mJ
+Bv
+HR
+TK
+cP
+Dm
+zV
+OB
+OB
+rn
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mJ
+ny
+Bv
+Mc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(53,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+OB
+OB
+TK
+LX
+VG
+QU
+Jv
+RC
+uI
+QU
+TK
+VG
+pa
+pa
+TK
+LX
+LX
+LX
+LX
+LX
+LX
+VG
+HR
+gK
+SC
+ny
+Bv
+wG
+Qn
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(54,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+OB
+OB
+OB
+PI
+QU
+QU
+Or
+Or
+Or
+QU
+PI
+pa
+pa
+pa
+fZ
+YZ
+HR
+HE
+hC
+pW
+HR
+yO
+HR
+GL
+SC
+ny
+Bv
+kt
+xQ
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(55,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+OB
+OB
+rn
+mS
+zV
+qk
+sU
+XD
+sU
+qk
+rn
+zV
+pa
+pa
+rn
+zV
+EI
+HR
+EI
+HR
+xB
+xS
+HR
+Sl
+SC
+ny
+Bv
+wG
+Dp
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(56,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+OB
+pI
+SC
+ny
+Dm
+mS
+mS
+mS
+mS
+mS
+mJ
+Bv
+pa
+pa
+SC
+Dm
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mJ
+ny
+Bv
+ri
+ak
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(57,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+wG
+wG
+TK
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+VG
+pa
+pa
+TK
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+LX
+VG
+wG
+TQ
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(58,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+wG
+wG
+wG
+wG
+OB
+OB
+OB
+OB
+OB
+pa
+Ku
+pa
+pa
+vg
+pa
+OB
+OB
+OB
+OB
+OB
+OB
+nP
+OB
+OB
+OB
+OB
+wG
+Hz
+Kh
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+gc
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(59,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+wG
+DE
+wG
+wG
+Br
+CC
+CC
+CC
+EO
+pa
+Ku
+pa
+pa
+Lo
+pa
+Br
+CC
+CC
+CC
+CC
+CC
+CC
+CC
+CC
+CC
+EO
+wG
+wG
+mV
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mJ
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(60,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+mS
+zV
+wG
+yH
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(61,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+vH
+vH
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(62,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+tm
+tm
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(63,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Jw
+Jw
+TK
+cP
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(64,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Jw
+Jw
+Jw
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(65,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Bv
+Jw
+Jw
+Jw
+SC
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(66,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+Dm
+mS
+mS
+mS
+mJ
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(67,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(68,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(69,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(70,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(71,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(72,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(73,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(74,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(75,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(76,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(77,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(78,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(79,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(80,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(81,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(82,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(83,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(84,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}
+(85,1,2) = {"
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+"}

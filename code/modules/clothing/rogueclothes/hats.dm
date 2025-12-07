@@ -1074,7 +1074,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/war/regime/heavyhelm
 	name = "holed helmet"
-	desc = "Dulliron battered into the vague shape of a pointed helmet. You can barely see out of it."
+	desc = "A heavy dulliron helmet."
 	icon_state = "holey"
 	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
@@ -1255,3 +1255,46 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	worn_x_dimension = 64
 	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/helmet/war/ppr/nimrodhelm
+	name = "nimrod helmet"
+	desc = "A helmet underneath a tall red hood."
+	icon_state = "nimrod1"
+	item_state = "nimrod1"
+	bloody_icon_state = "helmetblood_big"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+
+/obj/item/clothing/head/roguetown/helmet/war/ppr/nimrodhelm/alternate
+	name = "nimrod helmet"
+	desc = "A helmet underneath a tall red hood."
+	icon_state = "nimrod2"
+	item_state = "nimrod2"
+
+/obj/item/clothing/head/roguetown/helmet/war/regime/morion
+	name = "morion"
+	desc = "A regal looking helmet with a faceplate supposedly made in the KAITZAR's own image."
+	icon_state = "morion1"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+/obj/item/clothing/head/roguetown/helmet/war/regime/morion/alternate
+	name = "morion"
+	desc = "A regal looking helmet with a caged faceplate."
+	icon_state = "morion2"

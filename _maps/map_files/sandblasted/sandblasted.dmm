@@ -4,7 +4,6 @@
 "dT" = (/obj/machinery/light/rogue/forge,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "eF" = (/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "fb" = (/obj/item/cooking/pan,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
-"fc" = (/obj/item/rogueweapon/woodcut/steel,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "fK" = (/obj/item/rogueweapon/hammer,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "gl" = (/obj/structure/warfarebarrier/red,/obj/effect/shadow{dir = 4},/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "gT" = (/turf/open/floor/rogue/grass,/area/rogue/outdoors/desert)
@@ -50,7 +49,6 @@
 "Jt" = (/obj/structure/warobjective/ponr/red,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "KB" = (/obj/effect/shadow{dir = 8},/obj/effect/shadow,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "KO" = (/obj/effect/shadow{dir = 1},/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
-"Lk" = (/obj/item/rogueweapon/woodcut/steel,/turf/open/floor/rogue/twig,/area/rogue/outdoors/desert)
 "LY" = (/obj/item/flint,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
 "MM" = (/turf/open/transparent/openspace,/area/rogue/outdoors/desert)
 "NM" = (/obj/machinery/light/rogue/hearth,/turf/open/floor/rogue/sand,/area/rogue/outdoors/desert)
@@ -80,12 +78,12 @@ AEeFeFeFeFeFeFeFeFqqeFqqqqqqqqeFeFeFeFmlnpmleFeFeFeFeFtVDneFeFeFeFeFeFeFeFeFeFeF
 AEeFeFeFeFeFeFeFqqqqqqqqqqPNPNqqeFeFeFeFmleFeFeFeFeFeFNMtVeFeFeFeFeFeFeFeFeFJmeFeFeFeFmlnpmleFeFeFwa
 AEeFeFeFeFeFeFqqqqqqPNqqqqwGPNPNPNeFeFeFeFeFzJeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFHHeFeFeFeFeFmleFeFeFeFwa
 AEeFeFeFeFeFeFeFeFqqPNPNqqqqqqUqPNeFeFeFeFeFeFeFeFeFeFeFeFeFeFIleFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
-AEeFeFeFeFeFeFeFeFeFeFPNbUqqLkqqPNPNeFeFeFeFeFeFeFeFeFmleFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
+AEeFeFeFeFeFeFeFeFeFeFPNbUqqqqqqPNPNeFeFeFeFeFeFeFeFeFmleFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
 AEeFeFeFeFeFeFeFeFeFeFPNPNqqqqqqwGPNpneFeFeFeFeFeFeFmlnpmleFeFeFeFmleFeFeFeFeFeFeFeFeFdTeFSYeFeFeFwa
 AEeFHHeFeFeFeFeFeFeFeFeFPNPNZvqqqqPNeFeFeFeFeFeFeFeFeFmleFeFIleFmlnpmlIleFeFeFmleFmqGZeFeFTNeFeFeFwa
 AEeFeFeFeFeFeFeFeFeFeFeFeFCEOlqqqqeFeFeFeFJmeFeFeFeFeFIleFeFeFsjeFmleFeFeFeFmlnpmleFeFfKeFeFeFeFeFwa
 AEeFeFeFJmeFeFeFeFeFeFeFeFeFeFqqeFeFeFeFeFeFeFeFeFeFeFeFsjeFeFIleFeFIleFeFeFeFmleFeFPAeFGZeFHHeFeFwa
-AEeFeFeFeFeFeFeFeFeFeFeFeFLYeFeFeFfceFeFeFeFJteFeFeFeFIleFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
+AEeFeFeFeFeFeFeFeFeFeFeFeFLYeFeFeFeFeFeFeFeFJteFeFeFeFIleFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
 AEeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFIleFeFeFeFeFeFeFeFeFeFeFeFwa
 AEeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFIleFeFIleFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
 AEeFeFeFeFeFeFeFeFJmeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFvueFeFeFwa
@@ -193,10 +191,10 @@ AEeFhCeFeFeFeFeFeFeFeFeFeFeFhCeFeFeFeFeFeFeFeFeFeFeFeFeFeFhCeFeFeFeFeFeFeFeFeFeF
 AEeFeFeFeFeFeFeFeFdxeFeFeFeFeFeFeFeFeFiJeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFhCeFeFeFwa
 AEeFeFdTeFSYeFeFdxnpdxeFtVDneFLYeFeFeFeFeFeFeFrSeFeFeFpneFeFqqqqeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
 AEmqGZeFeFTNeFeFeFdxeFeFNMtVeFeFdxeFeFeFeFHkeFeFeFeFWwPNPNPNPNqqqqdxeFeFeFeFeFeFHHeFeFeFeFeFeFeFeFwa
-AEeFeFfKeFeFeFeFeFeFeFfbeFeFeFdxnpdxeFeFeFeFHkeFeFeFqqqqwGqqLkqqdxnpdxeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
+AEeFeFfKeFeFeFeFeFeFeFfbeFeFeFdxnpdxeFeFeFeFHkeFeFeFqqqqwGqqqqqqdxnpdxeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
 AEeFPAeFGZeFeFeFeFeFeFeFeFeFeFeFdxeFeFeFeFeFeFeFqqqqqqqqqqqqZvqqqqdxeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
-AEeFeFeFeFeFeFeFeFeFeFeFIleFeFeFeFeFHkeFeFeFeFeFeFLkqqqqqqqqqqPNqqqqeFeFeFeFeFeFeFeFJmeFeFeFeFeFeFwa
-AEeFeFeFeFeFeFeFeFeFeFeFeFsjeFIleFeFeFeFeFeFeFYneFeFCEPNLkwGbUPNeFdxeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
+AEeFeFeFeFeFeFeFeFeFeFeFIleFeFeFeFeFHkeFeFeFeFeFeFqqqqqqqqqqqqPNqqqqeFeFeFeFeFeFeFeFJmeFeFeFeFeFeFwa
+AEeFeFeFeFeFeFeFeFeFeFeFeFsjeFIleFeFeFeFeFeFeFYneFeFCEPNqqwGbUPNeFdxeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
 AEeFeFeFeFeFeFJmeFeFIleFIleFeFeFsjeFIleFdxeFeFeFeFeFeFPNPNPNPNPNdxnpdxeFeFeFeFeFeFeFeFeFeFeFeFeFeFwa
 AEeFeFeFeFvueFeFeFeFeFeFeFeFIleFeFIleFdxnpdxeFeFeFLYeFeFeFeFXFeFeFdxeFeFeFeFeFeFeFeFeFeFeFeFeFeFJmwa
 KBGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNErGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNGNrw

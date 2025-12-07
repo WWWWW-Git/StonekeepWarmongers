@@ -2,8 +2,8 @@
 	name = "longbark"
 	desc = "A heavy barker with a magnifying lens, desiged to kill at great distances."
 	icon = 'icons/roguetown/weapons/64.dmi'
-	icon_state = "musket"
-	item_state = "musket"
+	icon_state = "musketsniper"
+	item_state = "musketsniper"
 	possible_item_intents = list(INTENT_GENERIC)
 	gripped_intents = list(/datum/intent/shoot/musket/rifle, /datum/intent/shoot/musket/arc, /datum/intent/mace/smash/wood)
 	wieldsound = 'sound/combat/musket_wield.ogg'
