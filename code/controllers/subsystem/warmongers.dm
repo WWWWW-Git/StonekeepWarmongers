@@ -190,10 +190,19 @@ SUBSYSTEM_DEF(warmongers)
 		if(WARMONGERS_TECHLEVEL_NONE)
 			return null
 
-/proc/GetSidearmForWarfare()
+/proc/GetSidearmForWarfarePPU()
 	switch(SSwarmongers.warfare_techlevel)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+		if(WARMONGERS_TECHLEVEL_COWBOY)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
+		if(WARMONGERS_TECHLEVEL_NONE)
+			return null
+
+/proc/GetSidearmForWarfareRegime()
+	switch(SSwarmongers.warfare_techlevel)
+		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
+			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/alternate
 		if(WARMONGERS_TECHLEVEL_COWBOY)
 			return /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
 		if(WARMONGERS_TECHLEVEL_NONE)

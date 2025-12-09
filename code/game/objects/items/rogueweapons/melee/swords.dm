@@ -731,15 +731,21 @@
 	icon_state = "warcrime"
 
 /obj/item/rogueweapon/sword/sabre/officer
-	name = "Saber"
+	name = "sabre"
 	desc = "The guard of this sword doesn't extend to the back of the blade. The reason given is to instill fearlessness when fighting the foe. The truth was it was cheaper."
 	icon_state = "sabre"
 
 /obj/item/rogueweapon/sword/sabre/shofficer
-	name = "Cutter"
+	name = "cutter"
 	desc = "A former tool, given new purpose."
 	icon_state = "shitsabre"
 
 /obj/item/rogueweapon/sword/iron/messer/war
 	name = "messer"
 	desc = "A heavy single edged blade designed for chopping off limbs."
+	icon_state = "imesserwar"
+
+/obj/item/rogueweapon/sword/iron/messer/falchwar
+	name = "falchion"
+	desc = "A heavy sword for chopping and hacking."
+	icon_state = "falchionwar"

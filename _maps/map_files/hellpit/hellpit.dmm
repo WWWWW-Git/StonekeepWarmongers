@@ -47,6 +47,29 @@
 	droning_sound_dusk = 'sound/music/calm.ogg';
 	droning_sound_night = 'sound/music/calm.ogg'
 	})
+"bN" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar,
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/churchbrick,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
 "bS" = (
 /obj/structure/warfarebarrier,
 /turf/open/lava,
@@ -126,12 +149,23 @@
 	})
 "ev" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/flail/bigflail{
-	pixel_x = -9
+/obj/structure/fluff/railing/fence{
+	dir = 8
 	},
-/obj/item/rogueweapon/flail/bigflail,
-/obj/item/rogueweapon/flail/bigflail{
-	pixel_x = -23
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = 0
+	},
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = -5
+	},
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = -15
+	},
+/obj/item/rogueweapon/spear/pike{
+	pixel_x = -20
 	},
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/underworld{
@@ -254,12 +288,18 @@
 	})
 "js" = (
 /obj/structure/rack/rogue,
-/obj/item/quiver/bullets{
-	pixel_x = -4
+/obj/item/quiver/bolts{
+	pixel_x = 10
 	},
-/obj/item/quiver/bullets,
-/obj/item/quiver/bullets{
-	pixel_x = 4
+/obj/item/quiver/bolts{
+	pixel_x = 5
+	},
+/obj/item/quiver/bolts,
+/obj/item/quiver/bolts{
+	pixel_x = -10
+	},
+/obj/item/quiver/bolts{
+	pixel_x = -5
 	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/underworld{
@@ -335,12 +375,19 @@
 	})
 "me" = (
 /obj/structure/rack/rogue,
-/obj/item/rogueweapon/scythe{
-	pixel_x = -24
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_x = 10
 	},
-/obj/item/rogueweapon/scythe,
-/obj/item/rogueweapon/scythe{
-	pixel_x = -8
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_y = 0;
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/huntingknife/idagger/war,
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_x = -5
 	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/underworld{
@@ -401,12 +448,18 @@
 	})
 "nP" = (
 /obj/structure/rack/rogue,
-/obj/item/quiver/bullets{
-	pixel_x = -4
+/obj/item/quiver/bolts{
+	pixel_x = 10
 	},
-/obj/item/quiver/bullets,
-/obj/item/quiver/bullets{
-	pixel_x = 4
+/obj/item/quiver/bolts{
+	pixel_x = 5
+	},
+/obj/item/quiver/bolts,
+/obj/item/quiver/bolts{
+	pixel_x = -5
+	},
+/obj/item/quiver/bolts{
+	pixel_x = -10
 	},
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/underworld{
@@ -582,6 +635,30 @@
 	dynamic_lighting = 0;
 	droning_sound_current = 'sound/music/root.ogg';
 	droning_sound_dawn = 'sound/music/root.ogg'
+	})
+"xZ" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/shield/woodbuckler,
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = -10;
+	pixel_y = 0
+	},
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/churchbrick,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
 	})
 "zP" = (
 /turf/closed/mineral/rogue/bedrock,
@@ -782,13 +859,26 @@
 	droning_sound_night = 'sound/music/calm.ogg'
 	})
 "JH" = (
-/obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/carbine{
-	pixel_x = -10
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = 5;
+	pixel_x = 10
 	},
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/carbine,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo/carbine{
-	pixel_x = -13
+/obj/structure/rack/rogue,
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = -5;
+	pixel_x = 5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = -10;
+	pixel_x = -5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow{
+	pixel_y = -10;
+	pixel_x = 10
 	},
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/underworld{
@@ -808,16 +898,18 @@
 	})
 "KL" = (
 /obj/structure/rack/rogue,
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
-	pixel_y = -20;
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
+	pixel_x = 10
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
+	pixel_x = 5
+	},
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow,
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
 	pixel_x = -10
 	},
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
-	pixel_y = -10;
-	pixel_x = -10
-	},
-/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/bayo{
-	pixel_x = -10
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow{
+	pixel_x = -5
 	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/underworld{
@@ -1129,6 +1221,29 @@
 "YO" = (
 /obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/churchbrick,
+/area/rogue/underworld{
+	droning_sound = 'sound/music/calm.ogg';
+	droning_sound_current = 'sound/music/calm.ogg';
+	droning_sound_dawn = 'sound/music/calm.ogg';
+	droning_sound_dusk = 'sound/music/calm.ogg';
+	droning_sound_night = 'sound/music/calm.ogg'
+	})
+"Zv" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/shield/pavise{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/shield/pavise{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/shield/pavise{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/shield/pavise,
+/obj/item/rogueweapon/shield/pavise{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/churchmarble,
 /area/rogue/underworld{
 	droning_sound = 'sound/music/calm.ogg';
 	droning_sound_current = 'sound/music/calm.ogg';
@@ -2437,7 +2552,7 @@ me
 OC
 OC
 OC
-OC
+xZ
 OC
 OC
 OC
@@ -2479,11 +2594,11 @@ JH
 jZ
 jZ
 jZ
+Zv
 jZ
 jZ
 jZ
-jZ
-RF
+ev
 oI
 oI
 oI
@@ -2508,7 +2623,7 @@ tI
 OC
 OC
 OC
-OC
+xZ
 OC
 OC
 OC
@@ -2550,7 +2665,7 @@ nP
 jZ
 jZ
 jZ
-jZ
+Zv
 jZ
 jZ
 jZ
@@ -2579,8 +2694,8 @@ bA
 OC
 OC
 LL
-LL
-LL
+bN
+bN
 OC
 OC
 js
@@ -2622,7 +2737,7 @@ jZ
 jZ
 RF
 RF
-RF
+Gn
 jZ
 jZ
 dI
@@ -3147,8 +3262,8 @@ bA
 OC
 OC
 LL
-LL
-LL
+bN
+bN
 OC
 OC
 js
@@ -3190,7 +3305,7 @@ jZ
 jZ
 RF
 RF
-RF
+Gn
 jZ
 jZ
 dI
@@ -3218,7 +3333,7 @@ tI
 OC
 OC
 OC
-OC
+xZ
 OC
 OC
 OC
@@ -3260,7 +3375,7 @@ nP
 jZ
 jZ
 jZ
-jZ
+Zv
 jZ
 jZ
 jZ
@@ -3289,7 +3404,7 @@ me
 OC
 OC
 OC
-OC
+xZ
 OC
 OC
 OC
@@ -3331,11 +3446,11 @@ JH
 jZ
 jZ
 jZ
+Zv
 jZ
 jZ
 jZ
-jZ
-RF
+ev
 oI
 oI
 oI

@@ -248,7 +248,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 	pants = /obj/item/clothing/under/roguetown/trou/war/panties
 	belt = /obj/item/storage/belt/rogue/leather/rope/war/fat
-	beltr = GetSidearmForWarfare()
+	beltr = GetSidearmForWarfarePPU()
 	beltl = /obj/item/rogueweapon/sword/sabre/warcrime
 	armor = /obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies
 	if(istype(W.warmode, /datum/warmode/lords))
@@ -346,7 +346,7 @@
 		beltr = /obj/item/rogueweapon/woodcut/war
 	backr = GetMainGunForWarfarePPU()
 	if(H.dna.species.id == "bulky")
-		backr = /obj/item/rogueweapon/shield/tower/war
+		backr = /obj/item/rogueweapon/shield/woodbuckler
 	backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
 	if(H.dna.species.id == "bulky")
 		backl = null
@@ -397,7 +397,7 @@
 	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	beltl = GetSidearmForWarfare()
+	beltl = GetSidearmForWarfarePPU()
 	beltr = /obj/item/quiver/bullets
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/outriderhelm
@@ -515,7 +515,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
-	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	beltr = GetSidearmForWarfarePPU()
 	if(H.dna.species.id == "bulky")
 		beltr = null
 	backr = /obj/item/quiver/bullets
@@ -700,23 +700,23 @@
 	..()
 	var/datum/game_mode/warmongers/W = SSticker.mode
 
-	H.patron = GLOB.patronlist[/datum/patron/divine/kaitzar]
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light
-	neck = /obj/item/clothing/neck/roguetown/gorget/flasked
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backr = /obj/item/quiver/bullets
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
-	pants = /obj/item/clothing/under/roguetown/trou
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/warfare/commander/blue
-	belt = /obj/item/storage/belt/rogue/leather/black
-	beltr = GetSidearmForWarfare()
+	H.set_species(/datum/species/human/northern/standard)
+
+	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
+	cloak = /obj/item/clothing/cloak/war/regime/scarf
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/alternate
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
 	beltl = /obj/item/rogueweapon/sword/sabre/dec/alt
-	gloves = /obj/item/clothing/gloves/roguetown/leather/black
+	beltr = GetSidearmForWarfareRegime()
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
+	backl = /obj/item/quiver/bullets
+	cloak = /obj/item/clothing/cloak/war/regime/cloak
+	neck = /obj/item/clothing/neck/roguetown/gorget/flasked
 	if(istype(W.warmode, /datum/warmode/lords))
-		cloak = /obj/item/clothing/cloak/half
 		head = /obj/item/clothing/head/roguetown/warmongers/crownblu
 	else
-		head = /obj/item/clothing/head/roguetown/commander
+		head = /obj/item/clothing/head/roguetown/helmet/war/regime/groghelm
 	if(!(findtext(H.real_name, " of ") || findtext(H.real_name, " the ")))
 		H.change_name("[H.real_name] [getlordtitle()]")
 	if(H.mind)
@@ -812,7 +812,7 @@
 		beltr = /obj/item/rogueweapon/mace/cudgel/war
 	backr = GetMainGunForWarfareRegime()
 	if(H.dna.species.id == "bulky")
-		backr = /obj/item/rogueweapon/shield/woodwar
+		backr = /obj/item/rogueweapon/shield/pavise
 	backl = /obj/item/storage/backpack/rogue/backpack/war/regime
 	if(H.dna.species.id == "bulky")
 		backl = null
@@ -908,7 +908,7 @@
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/fancypants
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	beltl = GetSidearmForWarfare()
+	beltl = GetSidearmForWarfareRegime()
 	beltr = /obj/item/quiver/bullets
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/hussarshirt
 	head = /obj/item/clothing/head/roguetown/helmet/war/hussarhelm
@@ -1021,7 +1021,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	if(prob(50))
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
-	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+	beltr = GetSidearmForWarfareRegime()
 	if(H.dna.species.id == "bulky")
 		beltr = /obj/item/rogueweapon/mace/cudgel/war
 	backr = /obj/item/quiver/bullets
