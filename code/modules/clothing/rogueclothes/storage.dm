@@ -359,6 +359,14 @@
 	item_state = "trashsack"
 	icon = 'icons/roguetown/clothing/storage.dmi'
 
+/obj/item/storage/backpack/rogue/backpack/war/regime
+	slot_flags = ITEM_SLOT_BACK_L|ITEM_SLOT_BACK_R
+	name = "trashsack"
+	desc = "A cheaply made backpack worn by those in the Regime, topped with an itchy bedroll."
+	icon_state = "trashsack1"
+	item_state = "trashsack1"
+	icon = 'icons/roguetown/clothing/storage.dmi'
+
 /obj/item/storage/belt/rogue/leather/rope/war
 	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
 	icon_state = "rope"

@@ -153,7 +153,7 @@ GLOBAL_LIST_INIT(roguefight_positions, list(
 	))
 
 GLOBAL_LIST_INIT(red_positions, list(
-	"High Rouser",
+	"Fat Official",
 	"Peasantry Militian"
 	))
 

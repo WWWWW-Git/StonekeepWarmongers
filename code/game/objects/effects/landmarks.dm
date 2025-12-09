@@ -328,9 +328,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/heartfeltlord
-	name = "High Rouser"
+	name = "Fat Official"
 	icon_state = "arrow"
-	jobspawn_override = list("High Rouser")
+	jobspawn_override = list("Fat Official")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/grenzelinfantry

@@ -198,6 +198,11 @@
 	desc = ""
 	icon_state = "beerflag"
 
+/obj/structure/fluff/walldeco/regimeflag
+	name = "flag of the Regime"
+	desc = ""
+	icon_state = "regimeflag"
+
 /obj/structure/fluff/walldeco/moon
 	name = "banner"
 	icon_state = "moon"

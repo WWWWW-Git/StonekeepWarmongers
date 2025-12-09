@@ -187,7 +187,7 @@
 	selection_color = CLOTHING_RED
 
 /datum/job/roguetown/warmongers/red/lord
-	title = "High Rouser"
+	title = "Fat Official"
 	tutorial = "The loonies want this land, gather the lads and send the bastards packing before supper."
 	department_flag = REDSS
 	flag = REDKING
@@ -232,7 +232,7 @@
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Desensitized through thousand campaigns
 
 /datum/outfit/job/roguetown/redking
-	name = "High Rouser"
+	name = "Fat Official"
 	jobtype = /datum/job/roguetown/warmongers/red/lord
 
 /datum/outfit/job/roguetown/redking/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -424,6 +424,56 @@
 		H.change_stat("constitution", 1)
 		H.cmode_music = 'sound/music/soberandhatingit.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+
+//// SNIPER ////
+
+/datum/advclass/red/sniper
+	name = "Nimrod"
+	tutorial = "Marksmen in service to the Union, hired on for their skill with longbarks."
+	outfit = /datum/outfit/job/roguetown/redsniper
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_REDSOLDIER)
+	maximum_possible_slots = -1
+	reinforcements_wave = 0
+	allowed_races = ALL_RACES_LIST_NAMES
+
+/datum/outfit/job/roguetown/redsniper/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+
+	H.set_species(/datum/species/human/northern/standard)
+
+	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
+	cloak = /obj/item/clothing/cloak/war/ppr/scarf
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	beltl = null
+	beltr = /obj/item/quiver/bullets
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock
+	backl = null
+	neck = /obj/item/rogue/barkenpowderflask
+	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/nimrodhelm
+	if(prob(50))
+		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/nimrodhelm/alternate
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.change_stat("strength", 1)
+		H.change_stat("perception", 3)
+		H.change_stat("endurance", 1)
+		H.change_stat("constitution", 1)
+	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// OFFICER ////
 
@@ -763,15 +813,15 @@
 	backr = GetMainGunForWarfareRegime()
 	if(H.dna.species.id == "bulky")
 		backr = /obj/item/rogueweapon/shield/woodwar
-	backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
+	backl = /obj/item/storage/backpack/rogue/backpack/war/regime
 	if(H.dna.species.id == "bulky")
 		backl = null
 	neck = /obj/item/rogue/barkenpowderflask
 	if(H.dna.species.id == "bulky")
 		neck = null
-	head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm
+	head = /obj/item/clothing/head/roguetown/helmet/war/regime/morion
 	if(prob(50))
-		head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm/alternate
+		head = /obj/item/clothing/head/roguetown/helmet/war/regime/morion/alternate
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 3, TRUE)
@@ -884,6 +934,56 @@
 		H.change_stat("constitution", 1)
 		H.cmode_music = 'sound/music/makeamartyrofme.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+
+//// SNIPER ////
+
+/datum/advclass/blu/sniper
+	name = "Smonk Whisperer"
+	tutorial = "Long ranged marksmen, said to be able to forsee their target dying in the billowing of the smonk."
+	outfit = /datum/outfit/job/roguetown/blusniper
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = ALL_RACES_LIST_NAMES
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
+	category_tags = list(CTAG_BLUSOLDIER)
+	maximum_possible_slots = -1
+	reinforcements_wave = 0
+	allowed_races = ALL_RACES_LIST_NAMES
+
+/datum/outfit/job/roguetown/blusniper/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	..()
+
+	H.set_species(/datum/species/human/northern/standard)
+
+	pants = pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
+	cloak = /obj/item/clothing/cloak/war/regime/scarf
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	beltl = null
+	beltr = /obj/item/quiver/bullets
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper/alternate
+	backl = null
+	neck = /obj/item/rogue/barkenpowderflask
+	head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm
+	if(prob(50))
+		head = /obj/item/clothing/head/roguetown/helmet/war/regime/tallhelm/alternate
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
+		H.change_stat("strength", 1)
+		H.change_stat("perception", 3)
+		H.change_stat("endurance", 1)
+		H.change_stat("constitution", 1)
+	ADD_TRAIT(H, TRAIT_SNIPER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_OFFICER, TRAIT_GENERIC)
 
 //// OFFICER ////
 
