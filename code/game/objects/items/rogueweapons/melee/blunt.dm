@@ -396,7 +396,7 @@
 	force_wielded = 20
 	name = "masher"
 	icon_state = "masher"
-	desc = "For mashing up brains."
+	desc = "A stick with a leather grip and a spiked head, good for mashing up brains."
 	gripped_intents = null
 	smeltresult = /obj/item/ash
 	wlength = WLENGTH_SHORT

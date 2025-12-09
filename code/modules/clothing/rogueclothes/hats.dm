@@ -1142,6 +1142,22 @@
 	will_cover = HEAD|EARS|HAIR|NOSE|EYES
 	block2add = FOV_BEHIND
 
+/obj/item/clothing/head/roguetown/helmet/war/regime/groghelm
+	name = "bearskin helm"
+	desc = "A heavy dulliron helmet with a very large bearskin hat sitting on top to signify the wearer as being VERY important."
+	icon_state = "grog"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+
 /obj/item/clothing/head/roguetown/war/hood
 	name = "hood"
 	desc = "A sack haphazardly made into a hood."

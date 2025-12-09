@@ -178,6 +178,56 @@
 		var/mob/M = loc
 		M.update_inv_hands()
 
+//............Warmongers............
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow
+	name = "crossbow"
+	desc = "A classic weapon."
+	icon = 'icons/roguetown/weapons/32.dmi'
+	icon_state = "warbow0"
+	item_state = "warbow"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/warbow/update_icon()
+	. = ..()
+	if(cocked)
+		icon_state = "warbow1"
+	else
+		icon_state = "warbow0"
+	cut_overlays()
+	if(chambered)
+		var/obj/item/I = chambered
+		I.pixel_x = 0
+		I.pixel_y = 0
+		add_overlay(new /mutable_appearance(I))
+	if(ismob(loc))
+		var/mob/M = loc
+		M.update_inv_hands()
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow
+	name = "handbow"
+	desc = "A lightweight version of the crossbow of old, easily stored."
+	slot_flags = ITEM_SLOT_HIP
+	w_class = WEIGHT_CLASS_SMALL
+	icon = 'icons/roguetown/weapons/32.dmi'
+	icon_state = "handbow0"
+	item_state = "handbow"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/handbow/update_icon()
+	. = ..()
+	if(cocked)
+		icon_state = "handbow1"
+	else
+		icon_state = "handbow0"
+	cut_overlays()
+	if(chambered)
+		var/obj/item/I = chambered
+		I.pixel_x = 0
+		I.pixel_y = 0
+		add_overlay(new /mutable_appearance(I))
+	if(ismob(loc))
+		var/mob/M = loc
+		M.update_inv_hands()
+
 /obj/item/ammo_box/magazine/internal/shot/xbow
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt
 	caliber = "regbolt"

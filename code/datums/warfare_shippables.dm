@@ -100,6 +100,26 @@
 			/obj/item/rogue/sandbagkit
 			)
 
+/datum/warshippable/pistolsword
+	name = "FIVE BARKSWORDS"
+	items = list(/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded
+			)
+	faction = RED_WARTEAM
+
+/datum/warshippable/pistolsword/alt
+	name = "FIVE BARKSWORDS"
+	items = list(/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate,
+			/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate
+			)
+	faction = BLUE_WARTEAM
+
 /datum/warshippable/wood
 	name = "WOOD SUPPLIES"
 	items = list(/obj/structure/closet/crate/chest/woodsupps)

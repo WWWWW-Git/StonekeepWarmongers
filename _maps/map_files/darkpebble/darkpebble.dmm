@@ -468,6 +468,24 @@
 	droning_sound_dusk = 'sound/music/bounty.ogg';
 	droning_sound_night = 'sound/music/bounty.ogg'
 	})
+"gG" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar,
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = -5
+	},
+/obj/machinery/light/rogue/torchholder/r,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "gK" = (
 /obj/structure/table/wood/plain,
 /obj/item/storage/backpack/rogue/satchel/surgbag{
@@ -728,6 +746,24 @@
 	droning_sound_dusk = 'sound/music/bounty.ogg';
 	droning_sound_night = 'sound/music/bounty.ogg'
 	})
+"jw" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_y = 0;
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/huntingknife/idagger/war,
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/huntingknife/idagger/war{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "jy" = (
 /obj/structure/barricade/sandbags/rogue,
 /turf/open/floor/rogue/dirt/road,
@@ -1496,6 +1532,24 @@
 	},
 /turf/open/transparent/openspace/airless,
 /area/rogue/outdoors)
+"ug" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar,
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = -10
+	},
+/obj/item/rogueweapon/sword/iron/messer/falchwar{
+	pixel_x = -5
+	},
+/obj/machinery/light/rogue/torchholder/l,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "uk" = (
 /obj/machinery/light/rogue/torchholder/c{
 	pixel_y = -32
@@ -2003,6 +2057,24 @@
 	droning_sound_dusk = 'sound/music/bounty.ogg';
 	droning_sound_night = 'sound/music/bounty.ogg'
 	})
+"zk" = (
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = 10
+	},
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = 5
+	},
+/obj/item/rogueweapon/shield/woodbuckler,
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = -10;
+	pixel_y = 0
+	},
+/obj/item/rogueweapon/shield/woodbuckler{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "zo" = (
 /turf/open/floor/rogue/tile/checker,
 /area/rogue/indoors{
@@ -4191,6 +4263,23 @@
 	droning_sound_dusk = 'sound/music/bounty.ogg';
 	droning_sound_night = 'sound/music/bounty.ogg'
 	})
+"VS" = (
+/obj/structure/rack/rogue,
+/obj/item/flashlight/flare/torch/lantern{
+	pixel_x = 10
+	},
+/obj/item/flashlight/flare/torch/lantern{
+	pixel_x = 5
+	},
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern{
+	pixel_x = -10
+	},
+/obj/item/flashlight/flare/torch/lantern{
+	pixel_x = -5
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "VT" = (
 /obj/structure/warfarebarrier,
 /turf/open/floor/rogue/metal/barograte,
@@ -5592,9 +5681,9 @@ ny
 ny
 Bv
 op
-Vl
-Vl
-Vl
+jw
+ug
+zk
 QD
 "}
 (14,1,1) = {"
@@ -5671,7 +5760,7 @@ Bv
 Wu
 Vl
 Vl
-Vl
+VS
 QD
 "}
 (15,1,1) = {"
@@ -7365,7 +7454,7 @@ Bv
 Wu
 Hj
 Vl
-Vl
+VS
 QD
 "}
 (37,1,1) = {"
@@ -7440,9 +7529,9 @@ Ae
 Ae
 Bv
 op
-Vl
-Vl
-Vl
+jw
+gG
+zk
 QD
 "}
 (38,1,1) = {"

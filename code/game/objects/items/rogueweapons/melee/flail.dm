@@ -79,8 +79,64 @@
 	gripped_intents = list(/datum/intent/flail/strike, /datum/intent/flail/strike/smash)
 	icon_state = "bigflail"
 	icon = 'icons/roguetown/weapons/64.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "itemblood"
 
 /obj/item/rogueweapon/flail/bigflail/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.6,"sx" = -7,"sy" = 2,"nx" = 7,"ny" = 3,"wx" = -2,"wy" = 1,"ex" = 1,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("wielded")
+				return list("shrink" = 0.6,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+
+/datum/intent/flail/bellstrike
+	name = "strike"
+	blade_class = BCLASS_BLUNT
+	attack_verb = list("strikes", "hits")
+	hitsound = list('sound/combat/hits/blunt/shovel_hit2.ogg')
+	swingdelay = 5
+	penfactor = 5
+	icon_state = "instrike"
+	misscost = 5
+
+/datum/intent/flail/strike/bellsmash
+	name = "smash"
+	chargetime = 5
+	no_early_release = TRUE
+	penfactor = 80
+	recovery = 10
+	damfactor = 1.2
+	chargedloop = /datum/looping_sound/flailswing
+	keep_looping = TRUE
+	icon_state = "insmash"
+	blade_class = BCLASS_SMASH
+	attack_verb = list("smashes")
+	hitsound = list('sound/misc/deadbell.ogg')
+	misscost = 5
+
+/obj/item/rogueweapon/flail/bigbell
+	name = "scourging bell"
+	desc = "A sacred bell fitted to a chain, for killing heretics, infidels, and the unworthy."
+	wlength = WLENGTH_LONG
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	walking_stick = TRUE
+	pixel_y = -16
+	pixel_x = -16
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	bigboy = TRUE
+	gripsprite = TRUE
+	possible_item_intents = list(/datum/intent/flail/bellstrike, /datum/intent/flail/strike/bellsmash)
+	gripped_intents = list(/datum/intent/flail/bellstrike, /datum/intent/flail/strike/bellsmash)
+	icon_state = "bell"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "itemblood"
+
+/obj/item/rogueweapon/flail/bigbell/getonmobprop(tag)
 	. = ..()
 	if(tag)
 		switch(tag)

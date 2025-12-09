@@ -294,3 +294,11 @@
 	force = 12
 	icon_state = "bayonet"
 	smeltresult = null
+
+/obj/item/rogueweapon/huntingknife/idagger/war
+	possible_item_intents = list(/datum/intent/dagger/thrust,/datum/intent/dagger/cut)
+	name = "sapper knife"
+	desc = "A heavy sapper knife for stabbing foes and cutting lumber to size with its serrated edge."
+	force = 15
+	icon_state = "sapperknife"
+	smeltresult = null

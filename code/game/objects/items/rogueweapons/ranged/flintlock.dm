@@ -67,6 +67,11 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper/alternate
 	icon_state = "musketsniper1"
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/sniper/scythed
+	desc = "A heavy barker with a magnifying lens, desiged to kill at great distances. This one haphazardly has a scythehead attached to the end of the barrel."
+	icon_state = "musketsniperscythe"
+	gripped_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, /datum/intent/mace/heavy/strike, /datum/intent/spear/halberd/chop)
+
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/equipped(mob/living/user, slot)
 	. = ..()
 	playsound(loc, 'sound/foley/gun_equip.ogg', 100, TRUE)

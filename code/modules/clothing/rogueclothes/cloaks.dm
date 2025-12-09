@@ -916,6 +916,14 @@
 	allowed_sex = list(MALE, FEMALE)
 	allowed_race = list("standard", "bulky")
 
+/obj/item/clothing/cloak/war/regime/cloak
+	name = "green cloak"
+	desc = "A long green cloak, the height of zealotry."
+	icon_state = "regimecloak"
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_NECK
+	allowed_sex = list(MALE, FEMALE)
+	allowed_race = list("standard", "bulky")
+
 /obj/item/clothing/cloak/war/regime/scarf
 	name = "green scarf"
 	desc = "A green scarf. It was originally going to be a different coler but the dye union held a strike in protest. As such green was chosen."
