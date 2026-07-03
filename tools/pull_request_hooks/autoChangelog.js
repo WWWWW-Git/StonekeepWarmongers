@@ -29,7 +29,7 @@ export async function processAutoChangelog({ github, context }) {
 
 	const yml = changelogToYml(
 		changelog,
-		context.payload.pull_request.user.login
+		context.payload.pull_request.user.login,
 	);
 
 	github.rest.repos.createOrUpdateFileContents({

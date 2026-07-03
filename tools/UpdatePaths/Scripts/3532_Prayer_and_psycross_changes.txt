@@ -1,0 +1,2 @@
+/obj/item/clothing/neck/psycross/noc : /obj/item/clothing/neck/psycross/silver/divine/noc{@OLD}
+/obj/item/clothing/neck/psycross/silver/divine/malum_steel : /obj/item/clothing/neck/psycross/silver/divine/malum/steel{@OLD}
