@@ -7,7 +7,7 @@
 	//dropshrink = 0
 	throwforce = 0
 	slot_flags = ITEM_SLOT_HIP
-	throw_speed = 2
+	throw_speed = 0.95
 	var/light_impact = 4
 	var/flame_impact = 0
 	var/heavy_impact = 2
