@@ -119,8 +119,8 @@
 
 /obj/item/gun/examine(mob/user)
 	. = ..()
-//	if(pin)
-//		. += "It has \a [pin] installed."
+	if(!pin)
+		. += "<span class='warning'>[src]'s internal components are far too damaged! It can't fire!</span>"
 //	else
 //		. += "It doesn't have a <b>firing pin</b> installed, and won't fire."
 
@@ -260,7 +260,7 @@
 			pin.auth_fail(user)
 			return FALSE
 	else
-		to_chat(user, "<span class='warning'>[src]'s trigger is locked. This weapon doesn't have a firing pin installed!</span>")
+		to_chat(user, "<span class='warning'>[pick("The cock can't reach the nipple!","The frizzen remains locked in a fired position.","The cock no longer goes down.","It seems your firearm has ejectile dysfunction... as in it can't eject the... lead ball at a high velocity. You know, doing gun things? Gun things. Guns aren't actually called guns by the way, they're officially called barkenweapons. Barkenweapons, because when they shoot it makes a loud sound people call a 'bark', and it's also a weapon! So, in short, a barkenweapon. Or a barkweapon. Or a barker. Depends, really.")]</span>")
 	return FALSE
 
 /obj/item/gun/proc/recharge_newshot()
