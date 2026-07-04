@@ -389,7 +389,7 @@
 		backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
 		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/war/pprpeaked
-		backpack_contents = list(/obj/item/natural/cloth=1, /obj/item/reagent_containers/food/snacks/rogue/crackerscooked = 1, /obj/item/reagent_containers/glass/bottle/rogue/beer = 1)
+		backpack_contents = list(/obj/item/natural/cloth=1, /obj/item/reagent_containers/food/snacks/rogue/meat/steak = 1, /obj/item/reagent_containers/glass/bottle/rogue/beer = 1)
 	else if(loadout == "flanker")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 		cloak = /obj/item/clothing/cloak/war/ppr/scarf
