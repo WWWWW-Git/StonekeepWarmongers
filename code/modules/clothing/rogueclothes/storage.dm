@@ -252,6 +252,22 @@
 	bloody_icon_state = "bodyblood"
 	alternate_worn_layer = UNDER_CLOAK_LAYER
 
+/obj/item/storage/backpack/rogue/bombdolier/ppr
+	name = "Boomsling"
+	desc = "A sling for your explosives, could shove some other stuff in the sling too."
+	icon_state = "bombdolier1"
+	item_state = "bombdolier1"
+	icon = 'icons/roguetown/clothing/storage.dmi'
+	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	resistance_flags = NONE
+	max_integrity = 300
+	equip_sound = 'sound/blank.ogg'
+	bloody_icon_state = "bodyblood"
+	alternate_worn_layer = UNDER_CLOAK_LAYER
+
 /obj/item/storage/backpack/rogue/bombdolier/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)

@@ -402,6 +402,7 @@
 		backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
 		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/war/suncap
+		backpack_contents = list(/obj/item/bomb/poison=1,/obj/item/bomb/smoke=2)
 	else if(loadout == "irregular")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
 		cloak = /obj/item/clothing/cloak/war/ppr/scarf
@@ -480,6 +481,7 @@
 	assign_red_shotgunner_loadout()
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
@@ -724,6 +726,7 @@
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask
 		beltr = /obj/item/rogueweapon/flail/war/ppu
 		beltl = /obj/item/flint
+		backr = /obj/item/storage/backpack/rogue/bombdolier/ppr
 		backl = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/bomb=5,/obj/item/bomb/smoke=3)
 	else if(loadout == "arsonist")
@@ -731,15 +734,16 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		beltl = /obj/item/flint
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask/alternate
-		beltr = /obj/item/rogueweapon/flail/war/ppu
+		beltr = /obj/item/rogueweapon/woodcut/war
 		beltl = /obj/item/flint
-		backl = /obj/item/storage/backpack/rogue/satchel
-		backpack_contents = list(/obj/item/bomb/fire/weak=3)
+		backl = /obj/item/storage/backpack/rogue/bombdolier/ppr
+		backpack_contents = list(/obj/item/bomb/mollie=3,/obj/item/bomb/smoke=2)
 
 /datum/outfit/job/roguetown/redfirestarter/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	assign_red_firestarter_loadout()
 	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
@@ -809,6 +813,7 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
 		if(aspect_chosen(/datum/round_aspect/suprememedics))
@@ -858,6 +863,7 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		beltl = /obj/item/rogueweapon/sword/iron/messer/war/ppu
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/pointhelm
 		backr = /obj/item/rogueweapon/spear/pike/ppu
@@ -1053,6 +1059,7 @@
 		backr = GetMainGunForWarfareRegime()
 		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/roguehood/war/klava
+		backpack_contents = list(/obj/item/bomb/poison=1,/obj/item/bomb/smoke=2)
 	if(loadout == "fodder")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
@@ -1131,6 +1138,7 @@
 	assign_blue_zealot_loadout()
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/flintlocks, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 5, TRUE)
@@ -1305,17 +1313,19 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
 		beltl = /obj/item/rogueweapon/flail/war/regime
 		beltr = /obj/item/flint
+		backr = /obj/item/storage/backpack/rogue/bombdolier
 		backl = /obj/item/storage/backpack/rogue/satchel
+		head = /obj/item/clothing/head/roguetown/war/pickle
 		backpack_contents = list(/obj/item/bomb=5,/obj/item/bomb/smoke=3)
 	else if(loadout == "lightstarter")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		beltl = /obj/item/rogueweapon/flail/war/regime
+		beltl = /obj/item/rogueweapon/woodcut/war/regime
 		beltr = /obj/item/flint
-		backl = /obj/item/storage/backpack/rogue/satchel
+		backl = /obj/item/storage/backpack/rogue/bombdolier
 		head = /obj/item/clothing/head/roguetown/war/pickle
-		backpack_contents = list(/obj/item/bomb/fire/weak=3)
+		backpack_contents = list(/obj/item/bomb/fire=3,/obj/item/bomb/smoke=2)
 
 /datum/outfit/job/roguetown/blugrenadier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -1323,6 +1333,7 @@
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE) //it's j-man cause flails can't parry LOL
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE) // lower cuz this can parry
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
@@ -1447,6 +1458,7 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.change_stat("speed", 4)
 		H.change_stat("intelligence", 3)
 		if(aspect_chosen(/datum/round_aspect/suprememedics))
@@ -1496,6 +1508,7 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		beltl = /obj/item/rogueweapon/sword/iron/messer/war
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
 		head = /obj/item/clothing/head/roguetown/helmet/war/regimetallhelm
 		backr = /obj/item/rogueweapon/spear/pike
