@@ -153,7 +153,7 @@
 /datum/reagent/smonkium/on_mob_life(mob/living/carbon/M)
 	if(prob(1))
 		M.flash_fullscreen("whiteflash")
-	M.apply_status_effect(/datum/status_effect/buff/ozium)
+	M.apply_status_effect(/datum/status_effect/buff/smonkium)
 	..()
 
 // OZ

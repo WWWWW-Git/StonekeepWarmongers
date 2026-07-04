@@ -483,8 +483,8 @@
 	icon='icons/roguetown/weapons/32.dmi'
 	lefthand_file='icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file='icons/mob/inhands/weapons/guns_righthand.dmi'
-	icon_state = "shitsabregun"
-	item_state = "shitsabregun"
+	icon_state = "sabergunp"
+	item_state = "sabergunp"
 	slot_flags = ITEM_SLOT_HIP
 	walking_stick = FALSE
 	associated_skill = /datum/skill/combat/swords
@@ -534,8 +534,8 @@
 				)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate
-	icon_state = "sabregun"
-	item_state = "sabregun"
+	icon_state = "sabergunr"
+	item_state = "sabergunr"
 
 
 // = ===========================================================
