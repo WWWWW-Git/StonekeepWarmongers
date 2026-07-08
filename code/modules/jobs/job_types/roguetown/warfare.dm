@@ -402,6 +402,7 @@
 		backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
 		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/war/suncap
+		mask = /obj/item/clothing/mask/rogue/war/mask/ppu
 		backpack_contents = list(/obj/item/bomb/poison=1,/obj/item/bomb/smoke=2)
 	else if(loadout == "irregular")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
@@ -414,7 +415,7 @@
 		beltr = /obj/item/rogueweapon/woodcut/war
 		backr = /obj/item/quiver/bullets
 		neck = /obj/item/rogue/barkenpowderflask
-		head = /obj/item/clothing/head/roguetown/war/shakohat
+		head = /obj/item/clothing/head/roguetown/helmet/war/ppufunnelmask
 
 /datum/outfit/job/roguetown/redsoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -464,17 +465,17 @@
 		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun
 		backl = /obj/item/quiver/shitgunner
 		neck = /obj/item/rogue/barkenpowderflask
-		head = /obj/item/clothing/head/roguetown/war/hood/red
+		head = /obj/item/clothing/head/roguetown/helmet/war/ppufunnelmask
 	else if(loadout == "slinger")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/greatcoat
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		backl = /obj/item/quiver/bullets
-		beltl = GetSidearmForWarfarePPU()
-		beltr = GetSidearmForWarfarePPU()
+		beltl = /obj/item/quiver/bullets
+		beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded
 		neck = /obj/item/rogue/barkenpowderflask
-		head = /obj/item/clothing/head/roguetown/war/pprpeaked
+		mask = /obj/item/clothing/mask/rogue/war/mask/ppu
+		head = /obj/item/clothing/head/roguetown/war/pputricorn
 
 /datum/outfit/job/roguetown/redshotgunner/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -774,35 +775,25 @@
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
 	allowed_races = ALL_RACES_LIST_NAMES
-	loadout_options = list("Limb Snatcher", "Quack")
-	loadout_prompt = "Choose your corpseman loadout"
 
-/datum/outfit/job/roguetown/redmedic/proc/assign_red_medic_loadout()
-	var/loadout = loadout_choice
-	if(!loadout)
-		loadout = pick("limb snatcher", "quack")
-	if(loadout == "limb snatcher")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
-		backr = /obj/item/rogueweapon/sword/iron/messer/war/ppu
-	else if(loadout == "quack")
-		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		backl = /obj/item/storage/backpack/rogue/satchel/surgbag
-		neck = /obj/item/needle/blessed
-		beltl = /obj/item/rogue/cranker
-		beltr = /obj/item/rogueweapon/surgery/limbgrabber
-		cloak = /obj/item/clothing/cloak/war/apron/cook/medical
-		backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1)
+/datum/outfit/job/roguetown/redmedic
+	name = "Corpseman"
+	jobtype = /datum/outfit/job/roguetown/redmedic
 
 /datum/outfit/job/roguetown/redmedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
-	assign_red_medic_loadout()
+
+	pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
+	neck = /obj/item/needle/blessed
+	beltl = /obj/item/rogue/cranker
+	beltr = /obj/item/rogueweapon/surgery/limbgrabber
+	cloak = /obj/item/clothing/cloak/war/apron/cook/medical
+	mask = /obj/item/clothing/mask/rogue/war/mask/medical
+	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
@@ -1058,7 +1049,8 @@
 		beltr = /obj/item/quiver/bullets
 		backr = GetMainGunForWarfareRegime()
 		neck = /obj/item/rogue/barkenpowderflask
-		head = /obj/item/clothing/head/roguetown/roguehood/war/klava
+		mask = /obj/item/clothing/mask/rogue/war/mask/regime
+		head = /obj/item/clothing/head/roguetown/war/regimepeaked
 		backpack_contents = list(/obj/item/bomb/poison=1,/obj/item/bomb/smoke=2)
 	if(loadout == "fodder")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
@@ -1070,7 +1062,7 @@
 		beltr = /obj/item/rogueweapon/woodcut/war/regime
 		backr = /obj/item/quiver/bullets
 		neck = /obj/item/rogue/barkenpowderflask
-		head = /obj/item/clothing/head/roguetown/war/pickle
+		head = /obj/item/clothing/head/roguetown/helmet/war/regibasketmask
 
 /datum/outfit/job/roguetown/blusoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -1119,17 +1111,17 @@
 		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/alternate
 		backl = /obj/item/quiver/shitgunner
 		neck = /obj/item/rogue/barkenpowderflask
-		head = /obj/item/clothing/head/roguetown/helmet/war/regime/morion
+		head = /obj/item/clothing/head/roguetown/helmet/war/regibasketmask
 	else if(loadout == "judge")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 		cloak = /obj/item/clothing/cloak/war/regime/cloak
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
-		backl = /obj/item/quiver/bullets
-		beltl = GetSidearmForWarfareRegime()
-		beltr = GetSidearmForWarfareRegime()
+		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/greatcoat
+		beltl = /obj/item/quiver/bullets
+		beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate
 		neck = /obj/item/rogue/barkenpowderflask
+		mask = /obj/item/clothing/mask/rogue/war/mask/regime
 		head = /obj/item/clothing/head/roguetown/war/regimepeaked
 
 
@@ -1420,34 +1412,25 @@
 	maximum_possible_slots = -1
 	reinforcements_wave = 0
 	allowed_races = ALL_RACES_LIST_NAMES
-	loadout_options = list("Body Snatcher", "Sawbones")
-	loadout_prompt = "Choose your harmacist loadout"
 
-/datum/outfit/job/roguetown/blumedic/proc/assign_blue_medic_loadout()
-	var/loadout = loadout_choice
-	if(!loadout)
-		loadout = pick("body snatcher", "sawbones")
-	if(loadout == "body snatcher")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/butchershirt
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		backl = /obj/item/storage/backpack/rogue/backpack/war/regime
-		backr = /obj/item/rogueweapon/sword/iron/messer/war
-	else if(loadout == "sawbones")
-		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
-		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
-		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		backl = /obj/item/storage/backpack/rogue/satchel/surgbag
-		neck = /obj/item/needle/blessed
-		beltl = /obj/item/rogue/cranker
-		beltr = /obj/item/rogueweapon/surgery/limbgrabber
-		cloak = /obj/item/clothing/cloak/war/apron/cook/medical
-		backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1)
+/datum/outfit/job/roguetown/blumedic
+	name = "Harmacist"
+	jobtype = /datum/outfit/job/roguetown/blumedic
 
 /datum/outfit/job/roguetown/blumedic/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	assign_blue_medic_loadout()
+	..()
+
+	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
+	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
+	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
+	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
+	neck = /obj/item/needle/blessed
+	beltl = /obj/item/rogue/cranker
+	beltr = /obj/item/rogueweapon/surgery/limbgrabber
+	cloak = /obj/item/clothing/cloak/war/apron/cook/medical
+	mask = /obj/item/clothing/mask/rogue/war/mask/medical
+	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
