@@ -535,7 +535,7 @@
 		cloak = /obj/item/clothing/cloak/war/ppr/scarf
 		beltl = /obj/item/rogueweapon/sword/cutlass/cutwar/ppu
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
-		neck = /obj/item/rogue/barkenpowderflask
+		neck = /obj/item/clothing/neck/roguetown/gorget/ppu
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/cuirass/winged
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/outriderhelm/alternate
 	else if(loadout == "uhlan")
