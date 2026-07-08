@@ -209,6 +209,21 @@
 					var/mob/living/carbon/H = user
 					H.update_inv_wear_mask()
 
+/obj/item/clothing/mask/rogue/war/mask/ppu
+	name = "mask"
+	icon_state = "ppubandan"
+	item_state = "ppubandan"
+
+/obj/item/clothing/mask/rogue/war/mask/regime
+	name = "mask"
+	icon_state = "regimebandan"
+	item_state = "regimebandan"
+
+/obj/item/clothing/mask/rogue/war/mask/medical
+	name = "medical mask"
+	icon_state = "medicalmask"
+	item_state = "medicalmask"
+
 /obj/item/clothing/mask/rogue/war/beakmask
 	name = "beak mask"
 	desc = "A beaked mask worn by practitioners of the medicinal arts."
@@ -266,21 +281,3 @@
 	flags_inv = HIDEFACE|HIDEFACIALHAIR
 	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
-
-/obj/item/clothing/mask/rogue/war/ppufunnelmask
-	name = "funnel mask"
-	desc = "Originally conceived as a good way to drink copious amounts of bier, the funnel mask somehow found its way into military service."
-	icon_state = "ppufunnel"
-	item_state = "ppufunnel"
-	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
-	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
-	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
-
-/obj/item/clothing/mask/rogue/war/regibasketmask
-	name = "basket mask"
-	desc = "A lightweight mask designed not to constrict vision too much."
-	icon_state = "regimebasket"
-	item_state = "regimebasket"
-	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
-	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK
-	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP

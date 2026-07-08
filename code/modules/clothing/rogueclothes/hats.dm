@@ -1482,6 +1482,14 @@
 	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
 
+/obj/item/clothing/head/roguetown/war/pputricorn
+	name = "tricorn"
+	desc = "A sharp blue tricorn, popular in the PPU."
+	icon_state = "pputricorn"
+	item_state = "pputricorn"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+
 /obj/item/clothing/head/roguetown/roguehood/war/klava
 	name = "klava"
 	desc = "A hood worn by those expecting to tromp through the underbrush. Can be worn over the head or in a more open position."
@@ -1496,3 +1504,31 @@
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE
 	max_integrity = 100
+
+/obj/item/clothing/head/roguetown/helmet/war/ppufunnelmask
+	name = "funnel mask"
+	desc = "Originally conceived as a good way to drink copious amounts of bier, the funnel mask somehow found its way into military service."
+	icon_state = "ppufunnel"
+	item_state = "ppufunnel"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+
+/obj/item/clothing/head/roguetown/helmet/war/regibasketmask
+	name = "basket mask"
+	desc = "A lightweight mask designed not to constrict vision too much."
+	icon_state = "regimebasket"
+	item_state = "regimebasket"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	will_hide = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDEFACIALHAIR|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB)
+	will_cover = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
