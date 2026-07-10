@@ -683,6 +683,27 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 			W.forcestartcooldown = world.time + 10 MINUTES
 			SSvote.initiate_vote("forcestart", "The God of War")
 
+/client/verb/forcemapvote()
+	set name = "Propose MAP CHANGE"
+	set category = "Control"
+	set desc = ""
+	if(SSwarmongers.warfare_ready_to_die)
+		to_chat(usr, "<B>FOOL</B>")
+		return
+	
+	var/sure = alert(usr, "Are you sure?", "WARMONGERS", "Yes", "No")
+	if(sure == "No")
+		to_chat(usr, "<span class='warning'>The Okay.</span>")
+		return
+
+	var/datum/game_mode/warmongers/W = SSticker.mode
+	if(istype(W))
+		if(W.forcestartcooldown >= world.time)
+			to_chat(src, "\n<font color='red'>It is too early for that, try again later.</font>")
+		else
+			W.forcestartcooldown = world.time + 5 MINUTES
+			SSvote.initiate_vote("map", "The God of War")
+
 /client/verb/fit_viewport()
 	set name = "Fit Viewport"
 	set category = "Options"
