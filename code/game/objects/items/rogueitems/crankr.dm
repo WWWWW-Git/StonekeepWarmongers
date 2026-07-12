@@ -43,7 +43,6 @@
 		playsound(get_turf(M), 'sound/magic/heal.ogg', 75, TRUE)
 
 /obj/item/rogue/cranker/MiddleClick(mob/user, params)
-	. = ..()
 	if(user.mind.get_skill_level(/datum/skill/misc/medicine) <= 1)
 		to_chat(user, "<span class='warning'>I don't know how to use this.</span>")
 		return
@@ -62,7 +61,6 @@
 		return
 
 /obj/item/rogue/cranker/attack_right(mob/user)
-	. = ..()
 	var/chosen = input(user, "What are we cooking today?", "WARMONGERS") as null|anything in CRANKER_CHEMS
 	if(!chosen)
 		return

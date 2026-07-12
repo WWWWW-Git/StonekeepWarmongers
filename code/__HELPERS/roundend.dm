@@ -203,7 +203,6 @@
 
 	to_chat(world, "<BR><BR><BR><span class='reallybig'>If there be any glory in war, let it rest on us.</span>")
 	get_end_reason()
-	SSvote.initiate_vote("map", "The God of War")
 
 	if(istype(SSticker.mode, /datum/game_mode/warmongers))
 		var/datum/game_mode/warmongers/C = SSticker.mode
@@ -301,6 +300,7 @@
 	
 	//stop collecting feedback during grifftime
 	SSblackbox.Seal()
+	SSvote.initiate_vote("map", "The God of War")
 
 	sleep(10 SECONDS)
 	ready_for_reboot = TRUE
