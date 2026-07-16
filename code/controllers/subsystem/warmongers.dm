@@ -253,9 +253,9 @@ SUBSYSTEM_DEF(warmongers)
 
 	switch(SSwarmongers.warfare_techlevel)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol
+			return /obj/item/storage/backpack/rogue/holster/lockpistppr
 		if(WARMONGERS_TECHLEVEL_COWBOY)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot
+			return /obj/item/storage/backpack/rogue/holster/volvappr
 		if(WARMONGERS_TECHLEVEL_NONE)
 			return null
 
@@ -269,8 +269,8 @@ SUBSYSTEM_DEF(warmongers)
 
 	switch(SSwarmongers.warfare_techlevel)
 		if(WARMONGERS_TECHLEVEL_FLINTLOCKS)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/alternate
+			return /obj/item/storage/backpack/rogue/holster/regime/lockpistregi
 		if(WARMONGERS_TECHLEVEL_COWBOY)
-			return /obj/item/gun/ballistic/revolver/grenadelauncher/boltashot
+			return /obj/item/storage/backpack/rogue/holster/regime/volvaregi
 		if(WARMONGERS_TECHLEVEL_NONE)
 			return null

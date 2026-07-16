@@ -297,15 +297,13 @@
 	..()
 	var/datum/game_mode/warmongers/W = SSticker.mode
 
-	neck = /obj/item/clothing/neck/roguetown/gorget/flasked
 	head = /obj/item/clothing/head/roguetown/helmet/war/ppr/toffhelm
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 	pants = /obj/item/clothing/under/roguetown/trou/war/panties
-	belt = /obj/item/storage/belt/rogue/leather/rope/war
-	beltl = GetSidearmForWarfarePPU()
-	backr = /obj/item/quiver/bullets
-	backl = /obj/item/storage/backpack/rogue/satchel/booze
-	beltr = /obj/item/rogueweapon/sword/sabre/warcrime
+	belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
+	beltl = /obj/item/rogueweapon/sword/sabre/warcrime
+	beltr = /obj/item/quiver/bullets
+	backr = GetSidearmForWarfarePPU()
 	armor = /obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies
 	if(istype(W.warmode, /datum/warmode/lords))
 		head = /obj/item/clothing/head/roguetown/warmongers/crownred
@@ -382,8 +380,7 @@
 		cloak = /obj/item/clothing/cloak/war/ppr/scarf
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		beltl = /obj/item/rogueweapon/huntingknife/bayonet
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/soldier
 		beltr = /obj/item/quiver/bullets
 		backr = GetMainGunForWarfarePPU()
 		backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
@@ -395,8 +392,7 @@
 		cloak = /obj/item/clothing/cloak/war/ppr/scarf
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		beltl = /obj/item/rogueweapon/huntingknife/bayonet
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/soldier
 		beltr = /obj/item/quiver/bullets
 		backr = GetMainGunForWarfarePPU()
 		backl = /obj/item/storage/backpack/rogue/backpack/war/ppr
@@ -409,11 +405,11 @@
 		cloak = /obj/item/clothing/cloak/war/ppr/scarf
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/alternate
-		beltl = GetSidearmForWarfareRegime()
-		beltr = /obj/item/rogueweapon/woodcut/war
-		backr = /obj/item/quiver/bullets
+		backr = GetSidearmForWarfarePPU()
+		beltl = /obj/item/rogueweapon/woodcut/war
+		beltr = /obj/item/quiver/bullets
 		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppufunnelmask
 
@@ -461,19 +457,17 @@
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons/alternate
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun
 		backl = /obj/item/quiver/shitgunner
-		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppufunnelmask
 	else if(loadout == "slinger")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/greatcoat
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		beltl = /obj/item/quiver/bullets
-		beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded
-		neck = /obj/item/rogue/barkenpowderflask
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
+		beltr = /obj/item/quiver/bullets
+		beltl = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded
 		mask = /obj/item/clothing/mask/rogue/war/mask/ppu
 		head = /obj/item/clothing/head/roguetown/war/pputricorn
 
@@ -509,7 +503,7 @@
 	maximum_possible_slots = -1
 	reinforcements_wave = 3
 	allowed_races = ALL_RACES_LIST_NAMES
-	loadout_options = list("kossak", "Katafract", "Uhlan")
+	loadout_options = list("Kossak", "Katafract", "Uhlan")
 	loadout_prompt = "Choose your outrider loadout"
 
 /datum/outfit/job/roguetown/redoutrider/proc/assign_red_outrider_loadout()
@@ -519,16 +513,14 @@
 	if(loadout == "kossak")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		cloak = /obj/item/clothing/cloak/war/ppr/cloak
 		beltl = /obj/item/rogueweapon/sword/sabre/shofficer
-		beltr = GetSidearmForWarfarePPU()
+		beltr = /obj/item/quiver/bullets
+		backr = GetSidearmForWarfarePPU()
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
-		head = /obj/item/clothing/head/roguetown/war/muckhat
-		head = /obj/item/clothing/mask/rogue/war/pprnosemask
-		neck = /obj/item/rogue/barkenpowderflask
-		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/ppr/cuirass/winged
-		backr = /obj/item/rogueweapon/woodcut/steel/war
+		head = /obj/item/clothing/head/roguetown/war/pputricorn
+		mask = /obj/item/clothing/mask/rogue/war/pprnosemask
 	else if(loadout == "katafract")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
@@ -596,7 +588,7 @@
 		cloak = /obj/item/clothing/cloak/war/ppr/cloak
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		beltr = /obj/item/quiver/bullets
 		beltl = /obj/item/rogueweapon/huntingknife/idagger/war
 		backr = GetSniperForWarfarePPU()
@@ -608,7 +600,7 @@
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/soldier
 		beltr = /obj/item/quiver/bullets
 		beltl = /obj/item/rogueweapon/huntingknife/idagger/war
 		backr = GetMainGunForWarfarePPU()
@@ -663,20 +655,20 @@
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt/alternate
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		beltl = /obj/item/rogueweapon/sword/sabre/shofficer
-		beltr = GetSidearmForWarfarePPU()
-		backr = /obj/item/quiver/bullets
+		backr = GetSidearmForWarfarePPU()
+		beltr = /obj/item/quiver/bullets
 		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/war/pprpeaked
 	else if(loadout == "freeholder")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/greatcoat
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		beltl = /obj/item/rogueweapon/sword/iron/messer/falchwar
-		beltr = GetSidearmForWarfarePPU()
-		backr = /obj/item/quiver/bullets
+		beltr = /obj/item/quiver/bullets
+		backr = GetSidearmForWarfarePPU()
 		neck = /obj/item/rogue/barkenpowderflask
 		mask = /obj/item/clothing/mask/rogue/war/pproffmask
 		head = /obj/item/clothing/head/roguetown/war/shakohat
@@ -726,8 +718,8 @@
 		beltl = /obj/item/flint
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask
 		beltr = /obj/item/rogueweapon/flail/war/ppu
-		beltl = /obj/item/flint
 		backr = /obj/item/storage/backpack/rogue/bombdolier/ppr
+		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 		backl = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/bomb=5,/obj/item/bomb/smoke=3)
 	else if(loadout == "arsonist")
@@ -736,8 +728,8 @@
 		beltl = /obj/item/flint
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppr/redhoodmask/alternate
 		beltr = /obj/item/rogueweapon/woodcut/war
-		beltl = /obj/item/flint
 		backl = /obj/item/storage/backpack/rogue/bombdolier/ppr
+		shoes = /obj/item/clothing/shoes/roguetown/boots/war/stompers
 		backpack_contents = list(/obj/item/bomb/mollie=3,/obj/item/bomb/smoke=2)
 
 /datum/outfit/job/roguetown/redfirestarter/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -945,14 +937,12 @@
 	pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 	shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/alternate
 	shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-	belt = /obj/item/storage/belt/rogue/leather/rope/war
+	belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 	beltl = /obj/item/rogueweapon/sword/sabre/dec/alt
-	beltr = GetSidearmForWarfareRegime()
+	beltr = /obj/item/quiver/bullets/regime
+	backr = GetSidearmForWarfareRegime()
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
-	backl = /obj/item/quiver/bullets
-	backr = /obj/item/storage/backpack/rogue/satchel
 	cloak = /obj/item/clothing/cloak/war/regime/cloak
-	neck = /obj/item/clothing/neck/roguetown/gorget/flasked
 	if(istype(W.warmode, /datum/warmode/lords))
 		head = /obj/item/clothing/head/roguetown/warmongers/crownblu
 	else
@@ -1032,23 +1022,19 @@
 		cloak = /obj/item/clothing/cloak/war/regime/scarf
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		beltl = /obj/item/rogueweapon/huntingknife/bayonet
-		beltr = /obj/item/quiver/bullets
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/soldier
+		beltr = /obj/item/quiver/bullets/regime
 		backr = GetMainGunForWarfareRegime()
 		backl = /obj/item/storage/backpack/rogue/backpack/war/regime
-		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/war/regimepeaked
 		backpack_contents = list(/obj/item/natural/cloth=1, /obj/item/reagent_containers/food/snacks/rogue/crackerscooked = 1, /obj/item/reagent_containers/glass/bottle/rogue/wine/waterwine = 1)
 	else if(loadout == "cultist")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		beltl = /obj/item/rogueweapon/huntingknife/bayonet
-		beltr = /obj/item/quiver/bullets
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/soldier
+		beltr = /obj/item/quiver/bullets/regime
 		backr = GetMainGunForWarfareRegime()
-		neck = /obj/item/rogue/barkenpowderflask
 		mask = /obj/item/clothing/mask/rogue/war/mask/regime
 		head = /obj/item/clothing/head/roguetown/war/regimepeaked
 		backpack_contents = list(/obj/item/bomb/poison=1,/obj/item/bomb/smoke=2)
@@ -1057,11 +1043,10 @@
 		armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime/alternate
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/alternate
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		beltl = GetSidearmForWarfareRegime()
-		beltr = /obj/item/rogueweapon/woodcut/war/regime
-		backr = /obj/item/quiver/bullets
-		neck = /obj/item/rogue/barkenpowderflask
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
+		beltr = /obj/item/quiver/bullets/regime
+		backr = GetSidearmForWarfareRegime()
+		beltl = /obj/item/rogueweapon/woodcut/war/regime
 		head = /obj/item/clothing/head/roguetown/helmet/war/regibasketmask
 
 /datum/outfit/job/roguetown/blusoldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
@@ -1107,23 +1092,19 @@
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun/alternate
 		backl = /obj/item/quiver/shitgunner
-		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/helmet/war/regibasketmask
 	else if(loadout == "judge")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		cloak = /obj/item/clothing/cloak/war/regime/cloak
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/greatcoat
-		beltl = /obj/item/quiver/bullets
-		beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate
-		neck = /obj/item/rogue/barkenpowderflask
+		beltr = /obj/item/quiver/bullets/regime
+		beltl = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/sworded/alternate
 		mask = /obj/item/clothing/mask/rogue/war/mask/regime
 		head = /obj/item/clothing/head/roguetown/war/regimepeaked
-
 
 /datum/outfit/job/roguetown/bluzealot/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -1169,11 +1150,10 @@
 		cloak = /obj/item/clothing/cloak/hussarcloak
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/hussarshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		beltl = /obj/item/rogueweapon/sword/sabre/officer
-		backr = /obj/item/quiver/bullets
-		beltr = GetSidearmForWarfareRegime()
-		neck = /obj/item/rogue/barkenpowderflask
+		beltr = /obj/item/quiver/bullets/regime
+		backr = GetSidearmForWarfareRegime()
 		head = /obj/item/clothing/head/roguetown/war/hussarkalpak
 		mask = /obj/item/clothing/mask/rogue/war/regideathmask
 	else if(loadout == "cuirassier")
@@ -1190,7 +1170,6 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
 		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		beltr = /obj/item/rogueweapon/woodcut/war/regime
 		backr = /obj/item/rogueweapon/spear/war
 		head = /obj/item/clothing/head/roguetown/war/pickle
 
@@ -1237,8 +1216,8 @@
 		cloak = /obj/item/clothing/cloak/war/regime/cloak
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		beltr = /obj/item/quiver/bullets
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
+		beltr = /obj/item/quiver/bullets/regime
 		beltl = /obj/item/rogueweapon/huntingknife/idagger/war/regime
 		backr = GetSniperForWarfareRegime()
 		backl = /obj/item/storage/backpack/rogue/satchel
@@ -1249,8 +1228,8 @@
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons/alternate
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/alternate
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
-		beltr = /obj/item/quiver/bullets
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/soldier
+		beltr = /obj/item/quiver/bullets/regime
 		beltl = /obj/item/rogueweapon/huntingknife/idagger/war/regime
 		backr = GetMainGunForWarfareRegime()
 		backl = /obj/item/storage/backpack/rogue/satchel
@@ -1365,20 +1344,20 @@
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/wornshirt/alternate
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		beltl = /obj/item/rogueweapon/sword/sabre/officer
-		beltr = GetSidearmForWarfareRegime()
-		backr = /obj/item/quiver/bullets
+		beltr = /obj/item/quiver/bullets/regime
+		backr = GetSidearmForWarfareRegime()
 		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/war/regimepeaked
 	else if(loadout == "bishop")
 		pants = /obj/item/clothing/under/roguetown/trou/war/regime/darkpantaloons
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/regime/greatcoat
 		shoes = /obj/item/clothing/shoes/roguetown/boots/war/trompers
-		belt = /obj/item/storage/belt/rogue/leather/rope/war
+		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		beltl = /obj/item/rogueweapon/sword/iron/messer/falchwar
-		beltr = GetSidearmForWarfareRegime()
-		backr = /obj/item/quiver/bullets
+		beltr = /obj/item/quiver/bullets/regime
+		backr = GetSidearmForWarfareRegime()
 		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/war/officerkalpak
 		mask = /obj/item/clothing/mask/rogue/war/regimoffmask

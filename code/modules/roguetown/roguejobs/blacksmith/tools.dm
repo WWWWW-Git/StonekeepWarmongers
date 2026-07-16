@@ -4,7 +4,7 @@
 	possible_item_intents = list(/datum/intent/mace/strike,/datum/intent/mace/smash)
 	name = "hammer"
 	desc = ""
-	icon_state = "hammer"
+	icon_state = "hammerwar"
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	sharpness = IS_BLUNT
 	//dropshrink = 0.8
@@ -70,7 +70,7 @@
 	..()
 
 /obj/item/rogueweapon/hammer/claw
-	icon_state = "clawh"
+	icon_state = "clawhwar"
 
 /*
 /obj/item/rogueweapon/hammer/claw/attack_turf(turf/T, mob/living/user)
@@ -106,7 +106,7 @@
 	possible_item_intents = list(/datum/intent/mace/strike)
 	name = "tongs"
 	desc = ""
-	icon_state = "tongs"
+	icon_state = "tongswar"
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	sharpness = IS_BLUNT
 	//dropshrink = 0.8
@@ -136,12 +136,12 @@
 /obj/item/rogueweapon/tongs/update_icon()
 	. = ..()
 	if(!hingot)
-		icon_state = "tongs"
+		icon_state = "tongswar"
 	else
 		if(hott)
-			icon_state = "tongsi1"
+			icon_state = "tongswar1"
 		else
-			icon_state = "tongsi0"
+			icon_state = "tongswar0"
 
 /obj/item/rogueweapon/tongs/proc/make_unhot(input)
 	if(hott == input)

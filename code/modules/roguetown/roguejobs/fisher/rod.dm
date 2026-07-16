@@ -3,7 +3,7 @@
 	possible_item_intents = list(SPEAR_BASH,ROD_CAST)
 	name = "fishing rod"
 	desc = ""
-	icon_state = "rod"
+	icon_state = "rodwar"
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	sharpness = IS_BLUNT
 	wlength = 33

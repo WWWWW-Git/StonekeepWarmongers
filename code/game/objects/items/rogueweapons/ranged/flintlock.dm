@@ -623,4 +623,4 @@
 	desc = "A leather pouch containing barkenpowder."
 	icon='icons/roguetown/items/misc.dmi'
 	icon_state = "powderflask"
-	slot_flags = ITEM_SLOT_NECK
+	w_class = WEIGHT_CLASS_SMALL
