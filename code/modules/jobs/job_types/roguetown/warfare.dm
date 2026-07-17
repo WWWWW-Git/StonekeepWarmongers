@@ -304,6 +304,7 @@
 	beltl = /obj/item/rogueweapon/sword/sabre/warcrime
 	beltr = /obj/item/quiver/bullets
 	backr = GetSidearmForWarfarePPU()
+	neck = /obj/item/clothing/neck/roguetown/gorget/flasked
 	armor = /obj/item/clothing/suit/roguetown/armor/armordress/ppr/jammies
 	if(istype(W.warmode, /datum/warmode/lords))
 		head = /obj/item/clothing/head/roguetown/warmongers/crownred
@@ -460,6 +461,7 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/shotgun
 		backl = /obj/item/quiver/shitgunner
+		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/helmet/war/ppufunnelmask
 	else if(loadout == "slinger")
 		pants = /obj/item/clothing/under/roguetown/trou/war/pantaloons
@@ -518,6 +520,7 @@
 		beltl = /obj/item/rogueweapon/sword/sabre/shofficer
 		beltr = /obj/item/quiver/bullets
 		backr = GetSidearmForWarfarePPU()
+		neck = /obj/item/rogue/barkenpowderflask
 		shirt = /obj/item/clothing/suit/roguetown/shirt/war/ppr/basicshirt
 		head = /obj/item/clothing/head/roguetown/war/pputricorn
 		mask = /obj/item/clothing/mask/rogue/war/pprnosemask
@@ -940,6 +943,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 	beltl = /obj/item/rogueweapon/sword/sabre/dec/alt
 	beltr = /obj/item/quiver/bullets/regime
+	neck = /obj/item/clothing/neck/roguetown/gorget/flasked
 	backr = GetSidearmForWarfareRegime()
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/war/regime
 	cloak = /obj/item/clothing/cloak/war/regime/cloak
@@ -1025,6 +1029,7 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/soldier
 		beltr = /obj/item/quiver/bullets/regime
 		backr = GetMainGunForWarfareRegime()
+		neck = /obj/item/rogue/barkenpowderflask
 		backl = /obj/item/storage/backpack/rogue/backpack/war/regime
 		head = /obj/item/clothing/head/roguetown/war/regimepeaked
 		backpack_contents = list(/obj/item/natural/cloth=1, /obj/item/reagent_containers/food/snacks/rogue/crackerscooked = 1, /obj/item/reagent_containers/glass/bottle/rogue/wine/waterwine = 1)
@@ -1035,6 +1040,7 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/soldier
 		beltr = /obj/item/quiver/bullets/regime
 		backr = GetMainGunForWarfareRegime()
+		neck = /obj/item/rogue/barkenpowderflask
 		mask = /obj/item/clothing/mask/rogue/war/mask/regime
 		head = /obj/item/clothing/head/roguetown/war/regimepeaked
 		backpack_contents = list(/obj/item/bomb/poison=1,/obj/item/bomb/smoke=2)
@@ -1046,6 +1052,7 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope/war/offic
 		beltr = /obj/item/quiver/bullets/regime
 		backr = GetSidearmForWarfareRegime()
+		neck = /obj/item/rogue/barkenpowderflask
 		beltl = /obj/item/rogueweapon/woodcut/war/regime
 		head = /obj/item/clothing/head/roguetown/helmet/war/regibasketmask
 
@@ -1154,6 +1161,7 @@
 		beltl = /obj/item/rogueweapon/sword/sabre/officer
 		beltr = /obj/item/quiver/bullets/regime
 		backr = GetSidearmForWarfareRegime()
+		neck = /obj/item/rogue/barkenpowderflask
 		head = /obj/item/clothing/head/roguetown/war/hussarkalpak
 		mask = /obj/item/clothing/mask/rogue/war/regideathmask
 	else if(loadout == "cuirassier")
