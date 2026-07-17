@@ -693,6 +693,7 @@ obj/item/clothing/suit/roguetown/armor/chainmail/iron/orc
 	icon_state = "jammies"
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	allowed_sex = list("female", "male")
+	allowed_race = list("standard", "bulky", "fat")
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
 	armor = list("melee" = 30, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)

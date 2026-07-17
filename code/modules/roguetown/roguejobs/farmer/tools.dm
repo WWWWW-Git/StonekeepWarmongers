@@ -5,7 +5,7 @@
 	gripped_intents = list(MACE_STRIKE,/datum/intent/flailthresh)
 	name = "thresher"
 	desc = ""
-	icon_state = "thresher"
+	icon_state = "thresherwar"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	sharpness = IS_BLUNT
 	dropshrink = 0.8
@@ -67,11 +67,8 @@
 	possible_item_intents = list(DAGGER_CUT)
 	name = "sickle"
 	desc = ""
-	icon_state = "sickle"
+	icon_state = "sicklewar"
 	icon = 'icons/roguetown/weapons/tools.dmi'
-	item_state = "crysknife"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	wlength = WLENGTH_SHORT
 	w_class = WEIGHT_CLASS_SMALL
 	wdefense = 1
@@ -111,7 +108,7 @@
 	gripped_intents = list(/datum/intent/pick,SPEAR_BASH,TILL_INTENT)
 	name = "hoe"
 	desc = ""
-	icon_state = "hoe"
+	icon_state = "hoewar"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	pixel_y = -16
 	pixel_x = -16
@@ -122,7 +119,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = null
 	minstr = 6
-	item_state = "hoe"
+	item_state = "hoewar"
 	sharpness = IS_BLUNT
 	walking_stick = TRUE
 	wdefense = 2
@@ -195,8 +192,8 @@
 	gripped_intents = list(SPEAR_BASH,SPEAR_THRUST,DUMP_INTENT)
 	name = "pitchfork"
 	desc = ""
-	icon_state = "pitchfork"
-	item_state = "pitchfork"
+	icon_state = "pitchforkwar"
+	item_state = "pitchforkwar"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	pixel_y = -16
 	pixel_x = -16
@@ -264,7 +261,7 @@
 
 /obj/item/rogueweapon/pitchfork/update_icon()
 	if(forked.len)
-		icon_state = "pitchforkstuff"
+		icon_state = "pitchforkwarstuff"
 	else
 		icon_state = initial(icon_state)
 	..()

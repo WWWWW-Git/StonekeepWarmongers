@@ -93,17 +93,42 @@
 
 /obj/item/quiver/bullets
 	name = "ammunition pouch"
-	icon = 'icons/roguetown/items/misc.dmi'
-	icon_state = "sack_rope"
-	item_state = "quiver"
+	icon_state = "pouchppr"
+	item_state = "pouchppr"
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	slot_flags = ITEM_SLOT_HIP
+	lefthand_file = 'icons/roguetown/clothing/onmob/belt_l.dmi'
+	righthand_file = 'icons/roguetown/clothing/onmob/belt_r.dmi'
 
 /obj/item/quiver/bullets/update_icon()
 	if(ammo_list.len)
-		icon_state = "sack_rope"
+		icon_state = "pouchppr"
 	else
-		icon_state = "cbag"
+		icon_state = "pouchppr_e"
 
 /obj/item/quiver/bullets/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/bullet/A = new()
+		ammo_list += A
+	update_icon()
+
+/obj/item/quiver/bullets/regime
+	name = "ammunition pouch"
+	icon_state = "pouchregime"
+	item_state = "pouchregime"
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	slot_flags = ITEM_SLOT_HIP
+	lefthand_file = 'icons/roguetown/clothing/onmob/belt_l.dmi'
+	righthand_file = 'icons/roguetown/clothing/onmob/belt_r.dmi'
+
+/obj/item/quiver/bullets/regime/update_icon()
+	if(ammo_list.len)
+		icon_state = "pouchregime"
+	else
+		icon_state = "pouchregime_e"
+
+/obj/item/quiver/bullets/regime/Initialize()
 	..()
 	for(var/i in 1 to max_storage)
 		var/obj/item/ammo_casing/caseless/rogue/bullet/A = new()

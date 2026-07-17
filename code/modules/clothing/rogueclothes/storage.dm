@@ -45,7 +45,6 @@
 		for(var/obj/item/I in things)
 			STR.remove_from_storage(I, get_turf(src))
 
-// Until ninja stars are fixed (able to be removed from embedding), replacing them with poison berries for arrow crafting.
 /obj/item/storage/belt/rogue/leather/assassin/PopulateContents()
 	new /obj/item/reagent_containers/food/snacks/grown/berries/rogue/poison(src)
 	new /obj/item/reagent_containers/food/snacks/grown/berries/rogue/poison(src)
@@ -425,4 +424,71 @@
 /obj/item/storage/belt/rogue/leather/rope/war
 	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
 	icon_state = "rope"
-	color = "#35322fff"
+	heldz_items = 2
+	color = "#5a5551"
+
+/obj/item/storage/belt/rogue/leather/rope/war/soldier
+	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
+	icon_state = "rope"
+	heldz_items = 2
+	color = "#5a5551"
+
+/obj/item/storage/belt/rogue/leather/rope/war/soldier/PopulateContents()
+	new /obj/item/rogue/barkenpowderflask(src)
+	new /obj/item/rogueweapon/huntingknife/bayonet(src)
+
+/obj/item/storage/belt/rogue/leather/rope/war/offic
+	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
+	icon_state = "rope"
+	heldz_items = 2
+	color = "#5a5551"
+
+/obj/item/storage/belt/rogue/leather/rope/war/offic/PopulateContents()
+	new /obj/item/rogue/barkenpowderflask(src)
+
+/obj/item/storage/backpack/rogue/holster
+	name = "holster"
+	desc = "A holster for carrying sidearms. Can carry practically any pistol, save for specialized pistols like barkaxes and barkswords."
+	icon_state = "holsterppr"
+	item_state = "holsterppr"
+	icon = 'icons/roguetown/clothing/storage.dmi'
+	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	resistance_flags = NONE
+	max_integrity = 300
+	equip_sound = 'sound/blank.ogg'
+	bloody_icon_state = "bodyblood"
+	alternate_worn_layer = UNDER_CLOAK_LAYER
+
+/obj/item/storage/backpack/rogue/holster/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 1
+	STR.rustle_sound = FALSE
+	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.set_holdable(list(
+		/obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot,
+		/obj/item/gun/ballistic/revolver/grenadelauncher/boltashot,
+		/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol,
+		/obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/alternate
+		))
+
+/obj/item/storage/backpack/rogue/holster/volvappr/PopulateContents()
+	new /obj/item/gun/ballistic/revolver/grenadelauncher/revolvashot(src)
+
+/obj/item/storage/backpack/rogue/holster/lockpistppr/PopulateContents()
+	new /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol(src)
+
+/obj/item/storage/backpack/rogue/holster/regime
+	name = "holster"
+	desc = "A holster for carrying sidearms. Can carry practically any pistol, save for specialized pistols like barkaxes and barkswords."
+	icon_state = "holsterregime"
+	item_state = "holsterregime"
+
+/obj/item/storage/backpack/rogue/holster/regime/volvaregi/PopulateContents()
+	new /obj/item/gun/ballistic/revolver/grenadelauncher/boltashot(src)
+
+/obj/item/storage/backpack/rogue/holster/regime/lockpistregi/PopulateContents()
+	new /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/pistol/alternate(src)
