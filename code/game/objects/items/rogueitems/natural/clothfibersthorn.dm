@@ -186,11 +186,13 @@
 	var/obj/item/bodypart/affecting = H.get_bodypart(check_zone(user.zone_selected))
 	if(!affecting)
 		return
+	/*
 	// Don't allow bandaging over clothing/armor that covers the selected zone
 	var/zone = check_zone(user.zone_selected)
 	if(!get_location_accessible(H, zone))
 		to_chat(user, "<span class='warning'>That area is covered by clothing or armor.</span>")
 		return
+	*/
 	if(affecting.bandage)
 		to_chat(user, "<span class='warning'>There is already a bandage.</span>")
 		return

@@ -1857,7 +1857,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 						if(affecting.dismember())
 							playsound(get_turf(target), "desceration", 80, TRUE)
 
-			if(prob(damage/2 * user.STASTR/3))
+			if(prob(damage/3 * user.STASTR/3))
 				switch(hit_area)
 					if(BODY_ZONE_HEAD)
 						var/hitcheck = rand(1,5)
