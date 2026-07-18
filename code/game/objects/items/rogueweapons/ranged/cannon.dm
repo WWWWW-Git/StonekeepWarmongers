@@ -13,6 +13,51 @@
 	var/shootingdown = FALSE // if we are shooting one tile infront of us below (if its an open space)
 	var/obj/item/ammo_casing/caseless/rogue/cball/loaded
 
+	var/fireangle = 0 // straight forward
+
+	var/obj/effect/point/indicator
+	var/last_scroll_time = 0
+
+/obj/structure/cannon/proc/update_indicator()
+	if(!indicator || QDELETED(indicator))
+		indicator = new(src)
+	indicator.forceMove(get_turf(src))
+	indicator.alpha = 255
+	indicator.pixel_y = 10
+
+	var/matrix/M = matrix()
+	var/true_angle = fireangle + dir2angle(dir)
+
+	M.Turn(true_angle)
+	indicator.transform = M
+
+/obj/structure/cannon/proc/start_indicator_timeout()
+	var/current_scroll_time = last_scroll_time
+
+	spawn(3 SECONDS)
+		if(last_scroll_time == current_scroll_time)
+			animate(indicator, 10, alpha = 0)
+			sleep(10)
+			qdel(indicator)
+
+/obj/structure/cannon/MouseWheel(delta_x, delta_y, location, control, params)
+	. = ..()
+	var/mob/M = usr
+	if(!M)
+		return
+
+	if(delta_y > 0)
+		fireangle += 5
+	else
+		fireangle -= 5
+	fireangle = clamp(fireangle, -30, 30)
+	last_scroll_time = world.time
+
+	update_indicator()
+	start_indicator_timeout()
+
+	to_chat(M, "<span class='info'>...[fireangle]...</span>")
+
 /obj/structure/cannon/examine(mob/user)
 	. = ..()
 	if(loaded)
@@ -117,10 +162,15 @@
 	playsound(src.loc, 'sound/misc/explode/explosion.ogg', 100, FALSE, 6)
 	new /obj/effect/particle_effect/smoke(get_turf(src))
 	sleep(4)
+
+	var/true_angle = fireangle + dir2angle(dir)
+
 	var/obj/projectile/fired_projectile = new loaded.projectile_type(turfina)
+
+	fired_projectile.preparePixelProjectile(get_step(src, dir), src)
 	fired_projectile.firer = firer
 	fired_projectile.fired_from = src
-	fired_projectile.fire(dir2angle(dir))
+	fired_projectile.fire(true_angle)
 	QDEL_NULL(loaded)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/flintlock/handcannon // for the memes
