@@ -64,6 +64,7 @@
 		. += "<span class='info'>It is loaded.</span>"
 	if(shootingdown)
 		. += "<span class='danger'>It will shoot the things below.</span>"
+	. += "<span class='tutorial'>Use mouse wheel to change direction you're firing in.</span>"
 	. += "<span class='tutorial'>Load with big lead balls, then use a torch, lantern or flint to fire.</span>"
 	. += "<span class='tutorial'>Use rightclick to make it shoot at the tile below if infront of an open space.</span>"
 
