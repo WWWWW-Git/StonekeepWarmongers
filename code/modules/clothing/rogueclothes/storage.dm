@@ -427,22 +427,6 @@
 	heldz_items = 2
 	color = "#5a5551"
 
-/obj/item/storage/belt/rogue/leather/rope/war/soldier
-	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
-	icon_state = "rope"
-	heldz_items = 2
-	color = "#5a5551"
-
-/obj/item/storage/belt/rogue/leather/rope/war/soldier/PopulateContents()
-	new /obj/item/rogue/barkenpowderflask(src)
-	new /obj/item/rogueweapon/huntingknife/bayonet(src)
-
-/obj/item/storage/belt/rogue/leather/rope/war/offic
-	desc = "Rope haphazardly tied around the waist. You're lucky it can even hold your pants up."
-	icon_state = "rope"
-	heldz_items = 2
-	color = "#5a5551"
-
 /obj/item/storage/belt/rogue/leather/rope/war/offic/PopulateContents()
 	new /obj/item/rogue/barkenpowderflask(src)
 
