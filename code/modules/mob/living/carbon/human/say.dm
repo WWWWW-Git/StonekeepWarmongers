@@ -149,12 +149,3 @@
 					playsound(get_turf(src), path, 100, FALSE, -1, frequency = freq2use)
 			sleep(1)
 */
-
-/mob/living/carbon/human/proc/send_voice(message, skip_thingy)
-	if(!message || !length(message))
-		return
-	if(dna.species)
-		dna.species.send_voice(src)
-
-/datum/species/proc/send_voice(mob/living/carbon/human/H)
-	playsound(get_turf(H), 'sound/blank.ogg', 100, FALSE, -1)

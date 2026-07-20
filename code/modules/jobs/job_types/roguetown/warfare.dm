@@ -39,11 +39,9 @@
 			if(RED_WARTEAM)
 				if(HU.cmode_music == 'sound/music/root.ogg')
 					HU.cmode_music = SSwarmongers.red_warteam_cmode_music
-				HU.speech_sound = list('sound/vo/wc/speech_ppu.ogg')
 			if(BLUE_WARTEAM)
 				if(HU.cmode_music == 'sound/music/root.ogg')
 					HU.cmode_music = SSwarmongers.blu_warteam_cmode_music
-				HU.speech_sound = list('sound/vo/wc/speech_regimer.ogg')
 
 				if(istype(C.warmode, /datum/warmode/assault))
 					var/datum/warmode/assault/ASS = C.warmode // hehe
