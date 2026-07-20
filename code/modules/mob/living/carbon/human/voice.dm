@@ -15,7 +15,7 @@
 
 	var/base_sound
 	if(istype(H.wear_mask, /obj/item/clothing/mask/gas)) //i have plans that i cannot share with you right now because john will try to sabotage me
-		base_sound = list('sound/vo/voice/gasmask1.wav', 'sound/vo/voice/gasmask2.wav', 'sound/vo/voice/gasmask3.wav')
+		base_sound = list('sound/blank.ogg', 'sound/blank.ogg', 'sound/blank.ogg')
 	else
 		switch(H.job)
 			if("Fat Official")
