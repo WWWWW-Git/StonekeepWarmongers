@@ -1,6 +1,6 @@
-#define CHAT_MESSAGE_SPAWN_TIME		0.2 SECONDS
+#define CHAT_MESSAGE_SPAWN_TIME		1
 #define CHAT_MESSAGE_LIFESPAN		5 SECONDS
-#define CHAT_MESSAGE_EOL_FADE		0.7 SECONDS
+#define CHAT_MESSAGE_EOL_FADE		0.3 SECONDS
 #define CHAT_MESSAGE_EXP_DECAY		0.7
 #define CHAT_MESSAGE_HEIGHT_DECAY	0.9
 #define CHAT_MESSAGE_APPROX_LHEIGHT	11
@@ -99,34 +99,37 @@
 	if (!ismob(target))
 		extra_classes |= "small"
 
+	var/emote = extra_classes?.Find("emote")
+	var/virtual_speaker = extra_classes?.Find("virtual-speaker")
+	var/italics = extra_classes?.Find("italics")
+
 	// Append radio icon if from a virtual speaker
-	if (extra_classes.Find("virtual-speaker"))
+	if (virtual_speaker)
 		var/image/r_icon = image('icons/UI_Icons/chat/chat_icons.dmi', icon_state = "radio")
 		text = "\icon[r_icon]&nbsp;" + text
-	else if (extra_classes.Find("emote"))
+	else if (emote)
 		var/image/r_icon = image('icons/ui_icons/chat/chat_icons.dmi', icon_state = "emote")
 		text = "\icon[r_icon]&nbsp;" + text
 
 	// We dim italicized text
-	var/tgt_color = extra_classes.Find("italics") ? target.chat_color_darkened : target.chat_color
+	var/tgt_color = italics ? target.chat_color_darkened : target.chat_color
 
-	var/font_size = 10
-	if(extra_classes.Find("emote"))
-		font_size = 9
+	var/font_size = emote ? 9 : 10
+	if(emote)
 		tgt_color = "#c8d148"
 
 	// Construct text
-	var/static/regex/html_metachars = new(@"&[A-Za-z]{1,7};", "g")
-	var/complete_text = {"<span style='font-size:[font_size]pt;font-family:"Pterra";color:[tgt_color];text-shadow:0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;' class='center maptext [extra_classes != null ? extra_classes.Join(" ") : ""]'>[text]</span>"}
+	var/class_list = extra_classes ? extra_classes.Join(" ") : ""
+	var/complete_text = {"<span style='font-size:[font_size]pt;font-family:"Pterra";color:[tgt_color];text-shadow:0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;' class='center maptext [class_list]'>[text]</span>"}
 
 	var/mheight
 	WXH_TO_HEIGHT(owned_by.MeasureText(complete_text, null, CHAT_MESSAGE_WIDTH), mheight)
 	if(!VERB_SHOULD_YIELD)
-		return finish_image_generation(mheight, target, owner, complete_text, lifespan, text, extra_classes)
-	var/datum/callback/our_callback = CALLBACK(src, PROC_REF(finish_image_generation), mheight, target, owner, complete_text, lifespan, text, extra_classes)
+		return finish_image_generation(mheight, target, owner, complete_text, lifespan, text, extra_classes, emote)
+	var/datum/callback/our_callback = CALLBACK(src, PROC_REF(finish_image_generation), mheight, target, owner, complete_text, lifespan, text, extra_classes, emote)
 	SSrunechat.message_queue += our_callback
 
-/datum/chatmessage/proc/finish_image_generation(mheight, atom/target, mob/owner, complete_text, lifespan, text_inner, list/extra_classes)
+/datum/chatmessage/proc/finish_image_generation(mheight, atom/target, mob/owner, complete_text, lifespan, text_inner, list/extra_classes, emote = FALSE)
 	if(!owned_by || QDELETED(owned_by))
 		return qdel(src)
 	if(!target || QDELETED(target))
@@ -141,7 +144,7 @@
 			qdel(m)
 
 	// Check if this is an emote
-	is_emote = extra_classes?.Find("emote") ? TRUE : FALSE
+	is_emote = emote ? TRUE : FALSE
 
 	// Build message image
 	message = image(loc = message_loc, layer = ABOVE_HUD_LAYER)
@@ -164,7 +167,7 @@
 		message.maptext = complete_text
 	else
 		// For speech: start with empty content for typewriter effect
-		message.maptext = "[prefix][suffix]"
+		message.maptext = prefix + suffix
 
 	// View the message
 	LAZYADDASSOC(owned_by.seen_messages, message_loc, src)
@@ -220,8 +223,13 @@
 	if(!istext(content) || !length_char(content))
 		return tokens
 
-	var/i = 1
 	var/len = length_char(content)
+	if(findtextEx(content, "&") == 0 && findtextEx(content, "<") == 0 && findtextEx(content, "\\") == 0)
+		for(var/i = 1, i <= len, i++)
+			tokens += copytext_char(content, i, i + 1)
+		return tokens
+
+	var/i = 1
 
 	while(i <= len)
 		var/ch = copytext_char(content, i, i + 1)
@@ -310,8 +318,8 @@
 		addtimer(CALLBACK(src, PROC_REF(end_of_life)), lifespan - CHAT_MESSAGE_EOL_FADE, TIMER_UNIQUE|TIMER_OVERRIDE)
 		return
 
-	// Calculate timing - 0.3-1.5 seconds total for reveal
-	var/reveal_total = clamp(n * 0.3, 5, 15)
+	// Calculate timing - 0.1-0.4 seconds total for reveal
+	var/reveal_total = clamp(n * 0.1, 0.1, 0.4)
 	var/step_delay = max(1, round(reveal_total / n))
 
 	var/revealed_text = ""
@@ -319,7 +327,7 @@
 		if(QDELETED(src) || !message || !owned_by)
 			return
 		revealed_text += tokens[i]
-		message.maptext = "[prefix][revealed_text][suffix]"
+		message.maptext = prefix + revealed_text + suffix
 		sleep(step_delay)
 
 	// Schedule end of life after text is fully revealed
@@ -353,7 +361,12 @@
 #define CM_COLOR_LUM_MAX	0.75
 
 /datum/chatmessage/proc/colorize_string(name, sat_shift = 1, lum_shift = 1)
+	var/static/list/color_cache = list()
 	var/static/rseed = rand(1,26)
+
+	var/cache_key = "[name]_[GLOB.round_id]_[sat_shift]_[lum_shift]"
+	if(color_cache[cache_key])
+		return color_cache[cache_key]
 
 	var/hash = copytext_char(md5(name + GLOB.round_id), rseed, rseed + 6)
 	var/h = hex2num(copytext_char(hash, 1, 3)) * (360 / 255)
@@ -372,14 +385,20 @@
 	m *= 255
 	switch(h_int)
 		if(0)
-			return "#[num2hex(c, 2)][num2hex(x, 2)][num2hex(m, 2)]"
+			color_cache[cache_key] = "#[num2hex(c, 2)][num2hex(x, 2)][num2hex(m, 2)]"
+			return color_cache[cache_key]
 		if(1)
-			return "#[num2hex(x, 2)][num2hex(c, 2)][num2hex(m, 2)]"
+			color_cache[cache_key] = "#[num2hex(x, 2)][num2hex(c, 2)][num2hex(m, 2)]"
+			return color_cache[cache_key]
 		if(2)
-			return "#[num2hex(m, 2)][num2hex(c, 2)][num2hex(x, 2)]"
+			color_cache[cache_key] = "#[num2hex(m, 2)][num2hex(c, 2)][num2hex(x, 2)]"
+			return color_cache[cache_key]
 		if(3)
-			return "#[num2hex(m, 2)][num2hex(x, 2)][num2hex(c, 2)]"
+			color_cache[cache_key] = "#[num2hex(m, 2)][num2hex(x, 2)][num2hex(c, 2)]"
+			return color_cache[cache_key]
 		if(4)
-			return "#[num2hex(x, 2)][num2hex(m, 2)][num2hex(c, 2)]"
+			color_cache[cache_key] = "#[num2hex(x, 2)][num2hex(m, 2)][num2hex(c, 2)]"
+			return color_cache[cache_key]
 		if(5)
-			return "#[num2hex(c, 2)][num2hex(m, 2)][num2hex(x, 2)]"
+			color_cache[cache_key] = "#[num2hex(c, 2)][num2hex(m, 2)][num2hex(x, 2)]"
+			return color_cache[cache_key]

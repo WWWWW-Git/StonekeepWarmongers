@@ -14,30 +14,32 @@
 		return
 
 	var/base_sound
+	/*
 	if(istype(H.wear_mask, /obj/item/clothing/mask/gas)) //i have plans that i cannot share with you right now because john will try to sabotage me
 		base_sound = list('sound/vo/voice/gasmask1.wav', 'sound/vo/voice/gasmask2.wav', 'sound/vo/voice/gasmask3.wav')
 	else
-		switch(H.job)
-			if("Fat Official")
-				if(H.gender == MALE)
-					base_sound = list('sound/vo/wc/ppulordspeech1.ogg', 'sound/vo/wc/ppulordspeech2.ogg')
-				else if(H.gender == FEMALE)
-					base_sound = list('sound/vo/wc/ppulordspeech1f.ogg', 'sound/vo/wc/ppulordspeech2f.ogg')
-			if("Peasantry Militian")
-				if(H.gender == MALE)
-					base_sound = list('sound/vo/wc/ppuspeech1.ogg', 'sound/vo/wc/ppuspeech2.ogg', 'sound/vo/wc/ppuspeech3.ogg')
-				else if(H.gender == FEMALE)
-					base_sound = list('sound/vo/wc/ppuspeech1f.ogg', 'sound/vo/wc/ppuspeech2f.ogg', 'sound/vo/wc/ppuspeech3f.ogg')
-			if("Regimian Low-Lord")
-				if(H.gender == MALE)
-					base_sound = list('sound/vo/wc/regimelordspeech1.ogg', 'sound/vo/wc/regimelordspeech2.ogg')
-				else if(H.gender == FEMALE)
-					base_sound = list('sound/vo/wc/regimelordspeech1f.ogg', 'sound/vo/wc/regimelordspeech2f.ogg')
-			if("Regimian Regiman")
-				if(H.gender == MALE)
-					base_sound = list('sound/vo/wc/regimespeech1.ogg', 'sound/vo/wc/regimespeech2.ogg', 'sound/vo/wc/regimespeech3.ogg')
-				else if(H.gender == FEMALE)
-					base_sound = list('sound/vo/wc/regimespeech1f.ogg', 'sound/vo/wc/regimespeech2f.ogg', 'sound/vo/wc/regimespeech3f.ogg')
+	*/
+	switch(H.job)
+		if("Fat Official")
+			if(H.gender == MALE)
+				base_sound = list('sound/vo/wc/ppulordspeech1.ogg', 'sound/vo/wc/ppulordspeech2.ogg')
+			else if(H.gender == FEMALE)
+				base_sound = list('sound/vo/wc/ppulordspeech1f.ogg', 'sound/vo/wc/ppulordspeech2f.ogg')
+		if("Peasantry Militian")
+			if(H.gender == MALE)
+				base_sound = list('sound/vo/wc/ppuspeech1.ogg', 'sound/vo/wc/ppuspeech2.ogg', 'sound/vo/wc/ppuspeech3.ogg')
+			else if(H.gender == FEMALE)
+				base_sound = list('sound/vo/wc/ppuspeech1f.ogg', 'sound/vo/wc/ppuspeech2f.ogg', 'sound/vo/wc/ppuspeech3f.ogg')
+		if("Regimian Low-Lord")
+			if(H.gender == MALE)
+				base_sound = list('sound/vo/wc/regimelordspeech1.ogg', 'sound/vo/wc/regimelordspeech2.ogg')
+			else if(H.gender == FEMALE)
+				base_sound = list('sound/vo/wc/regimelordspeech1f.ogg', 'sound/vo/wc/regimelordspeech2f.ogg')
+		if("Regimian Regiman")
+			if(H.gender == MALE)
+				base_sound = list('sound/vo/wc/regimespeech1.ogg', 'sound/vo/wc/regimespeech2.ogg', 'sound/vo/wc/regimespeech3.ogg')
+			else if(H.gender == FEMALE)
+				base_sound = list('sound/vo/wc/regimespeech1f.ogg', 'sound/vo/wc/regimespeech2f.ogg', 'sound/vo/wc/regimespeech3f.ogg')
 
 	var/initial_voice_time = world.time
 	last_voice_time = initial_voice_time
