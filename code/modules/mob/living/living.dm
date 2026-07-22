@@ -2024,4 +2024,4 @@
 	regenerate_icons()
 	client?.change_view(CONFIG_GET(string/default_view))
 	hud_used?.backhudl.alpha = 255
-//	UnregisterSignal(src, COMSIG_MOVABLE_PRE_MOVE)
+	UnregisterSignal(src, COMSIG_MOVABLE_PRE_MOVE)

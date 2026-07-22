@@ -193,7 +193,7 @@
 // artillery (fucking OP)
 
 /obj/structure/bombard
-	name = "bombardier"
+	name = "bombtard"
 	desc = "A metal tube capable of launching bombs high into the sky at an angle to come crashing down on the foe, even if they cower behind cover."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "bombardier"
@@ -245,6 +245,7 @@
 			// these vars are reset automatically when a person tries to move
 			user.client.eye = epicenter
 			user.client.perspective = EYE_PERSPECTIVE
+			user.RegisterSignal(user, COMSIG_MOVABLE_PRE_MOVE, TYPE_PROC_REF(/mob/living, stop_looking))
 
 /obj/structure/bombard/examine(mob/user)
 	. = ..()

@@ -68,7 +68,7 @@
 	items = list(/obj/structure/healther)
 
 /datum/warshippable/bombard
-	name = "BOMBARDIER"
+	name = "BOMBTARD"
 	items = list(/obj/structure/bombard)
 	faction = RED_WARTEAM
 

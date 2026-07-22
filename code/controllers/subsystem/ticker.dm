@@ -595,7 +595,7 @@ SUBSYSTEM_DEF(ticker)
 		return
 	for(var/mob/M in GLOB.player_list)
 		to_chat(M, "<span class='notice'>You can now vote to forcefully start the round.</span>")
-		M.playsound_local(get_turf(mob), 'sound/achievement.ogg', 70, FALSE, pressure_affected=FALSE)
+		M.playsound_local(get_turf(M), 'sound/achievement.ogg', 70, FALSE, pressure_affected=FALSE)
 		M.client.verbs += /client/proc/forcestartvote
 		window_flash(M.client, TRUE)
 
