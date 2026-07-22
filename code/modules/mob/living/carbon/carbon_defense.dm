@@ -478,7 +478,7 @@
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
 	if(on_fire)
 		visible_message("<span class='notice'>[M] pats the flames on [src] to extinguish them.</span>")
-		fire_stacks -= 20
+		fire_stacks -= 40
 		//sleep(30) // what was the point of this again?
 		if(fire_stacks <= 0)
 			ExtinguishMob(TRUE)
