@@ -235,11 +235,23 @@ SUBSYSTEM_DEF(vote)
 			if("gamemode")
 				choices.Add(config.votable_modes)
 			if("map")
-				for(var/map in global.config.maplist)
-					var/datum/map_config/VM = config.maplist[map]
+				var/list/shuffled_maps = shuffle(global.config.maplist)
+				var/chosen = 0
+				var/max_chosen = 3
+				for(var/i=0,i<4,i++) // More map choices based on RNG, because why not?
+					if(prob(40))
+						max_chosen++
+					else
+						break
+		
+				for(var/map in shuffled_maps)
+					if(chosen >= max_chosen)
+						break
+					var/datum/map_config/VM = shuffled_maps[map]
 					if(!VM.votable)
 						continue
 					choices.Add(VM.map_name)
+					chosen++
 			if("custom")
 				question = stripped_input(usr,"What is the vote for?")
 				if(!question)
