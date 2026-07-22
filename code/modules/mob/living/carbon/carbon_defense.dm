@@ -480,7 +480,7 @@
 		visible_message("<span class='notice'>[M] pats the flames on [src] to extinguish them.</span>")
 		fire_stacks -= 40
 		//sleep(30) // what was the point of this again?
-		if(fire_stacks <= 0)
+		if(fire_stacks <= 0 || stat == DEAD)
 			ExtinguishMob(TRUE)
 		return
 
