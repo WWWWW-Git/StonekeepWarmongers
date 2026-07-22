@@ -349,11 +349,11 @@
 		buckled.user_unbuckle_mob(src,src)
 
 /mob/living/carbon/resist_fire()
-	fire_stacks -= 5
+	fire_stacks -= 10
 	if(fire_stacks > 10)
 		Paralyze(60, TRUE, TRUE)
 		spin(32,2)
-		fire_stacks -= 5
+		fire_stacks -= 40
 		visible_message("<span class='warning'>[src] rolls on the ground, trying to put [p_them()]self out!</span>")
 	else
 		visible_message("<span class='notice'>[src] pats the flames to extinguish them.</span>")
