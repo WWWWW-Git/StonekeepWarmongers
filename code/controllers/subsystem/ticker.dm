@@ -456,6 +456,8 @@ SUBSYSTEM_DEF(ticker)
 
 	to_chat(world, "<span class='notice'><span class='typewrite'>⏚ Praise the Earth! ⏚</span></span>")
 
+	addtimer(CALLBACK(src, PROC_REF(allow_forcestart_vote)), 5 MINUTES)
+
 	CHECK_TICK
 
 	var/datum/game_mode/warmongers/W = SSticker.mode
@@ -588,22 +590,14 @@ SUBSYSTEM_DEF(ticker)
 			player.new_player_panel()
 		CHECK_TICK
 
-/datum/controller/subsystem/ticker/proc/select_ruler()
-	switch(rulertype)
-		if("King")
-			for(var/mob/living/carbon/human/K in world)
-				if(istype(K, /mob/living/carbon/human/dummy))
-					continue
-				if(K.job == "King")
-					rulermob = K
-					return
-		if("Queen")
-			for(var/mob/living/carbon/human/Q in world)
-				if(istype(Q, /mob/living/carbon/human/dummy))
-					continue
-				if(Q.job == "Queen")
-					rulermob = Q
-					return
+/datum/controller/subsystem/ticker/proc/allow_forcestart_vote()
+	if(SSwarmongers.warfare_ready_to_die)
+		return
+	for(var/mob/M in GLOB.player_list)
+		to_chat(M, "<span class='notice'>You can now vote to forcefully start the round.</span>")
+		M.playsound_local(get_turf(mob), 'sound/achievement.ogg', 70, FALSE, pressure_affected=FALSE)
+		M.client.verbs += /client/proc/forcestartvote
+		window_flash(M.client, TRUE)
 
 /datum/controller/subsystem/ticker/proc/collect_minds()
 	for(var/i in GLOB.new_player_list)

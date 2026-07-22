@@ -134,7 +134,7 @@ SUBSYSTEM_DEF(warmongers)
 			SEND_SOUND(M, sound(null))
 			M.overlay_fullscreen("kill", /atom/movable/screen/fullscreen/kill)
 			M.clear_fullscreen("kill", 5 SECONDS)
-			M.client.verbs -= /client/verb/forcestartvote
+			M.client.verbs -= /client/proc/forcestartvote
 			SSdroning.area_entered(get_area(M), M.client)
 
 		for(var/obj/O in warfare_barriers)

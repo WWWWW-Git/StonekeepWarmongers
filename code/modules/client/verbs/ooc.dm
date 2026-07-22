@@ -662,7 +662,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 			W.stalematecooldown = world.time + 10 MINUTES
 			SSvote.initiate_vote("stalemate", "The God of War")
 
-/client/verb/forcestartvote()
+/client/proc/forcestartvote()
 	set name = "Propose FORCE START"
 	set category = "Control"
 	set desc = ""

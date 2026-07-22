@@ -257,7 +257,7 @@
 	. = ..()
 
 /obj/structure/flora/roguegrass/update_icon()
-	icon_state = "grass[rand(1, 6)]"
+	icon_state = "grass[rand(1, 8)]"
 
 /obj/structure/flora/roguegrass/water
 	name = "grass"
@@ -299,7 +299,7 @@
 /obj/structure/flora/roguegrass/bush
 	name = "bush"
 	desc = "A bush, a den for critters and treasures."
-	icon_state = "bush"
+	icon_state = "bush1"
 	layer = ABOVE_ALL_MOB_LAYER
 	var/res_replenish
 	max_integrity = 35
@@ -316,6 +316,7 @@
 					/obj/item/reagent_containers/food/snacks/grown/rogue/pipeweed=2))
 	loot_replenish()
 	pixel_x += rand(-3,3)
+	icon_state = "bush[rand(1,4)]"
 	return ..()
 
 /obj/structure/flora/roguegrass/bush/proc/loot_replenish()
