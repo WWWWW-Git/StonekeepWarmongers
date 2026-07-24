@@ -456,7 +456,7 @@ SUBSYSTEM_DEF(ticker)
 
 	to_chat(world, "<span class='notice'><span class='typewrite'>⏚ Praise the Earth! ⏚</span></span>")
 
-	addtimer(CALLBACK(src, PROC_REF(allow_forcestart_vote)), 5 MINUTES)
+	//addtimer(CALLBACK(src, PROC_REF(allow_forcestart_vote)), 5 MINUTES)
 
 	CHECK_TICK
 
@@ -596,7 +596,7 @@ SUBSYSTEM_DEF(ticker)
 	for(var/mob/M in GLOB.player_list)
 		to_chat(M, "<span class='notice'>You can now vote to forcefully start the round.</span>")
 		M.playsound_local(get_turf(M), 'sound/achievement.ogg', 70, FALSE, pressure_affected=FALSE)
-		M.client.verbs += /client/proc/forcestartvote
+		//M.client.verbs += /client/proc/forcestartvote
 		window_flash(M.client, TRUE)
 
 /datum/controller/subsystem/ticker/proc/collect_minds()
